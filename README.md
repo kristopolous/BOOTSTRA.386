@@ -11,9 +11,9 @@
   There's a lot of micros and a lot of        the future has arrived.
   graphics modes. Today there's CGA,          
   Hercules, MDA, and EGA. And that's only     Using primitives like buttons, navbars,
-  on the IBM-PC.                              and various other things to express
+  on the IBM-PC.                              and various other "widgets" to express
                                               your application, we handle rendering
-  If you want a Tandy, CDC, Honeywell,        thes abstractions on screen for you.
+  If you want a Tandy, CDC, Honeywell,        these abstractions on screen for you.
   DEC, or Zenith; it's a whole new            
   problem. And who's to say what's on         All you need to think of is terms
   the horizon tomorrow. Do you support        of Windows, Icons, Menus, and
