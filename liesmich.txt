@@ -1,0 +1,42 @@
+Diese Schriftart ist freie Software. Sie koennen sie unter den Bedingungen
+der GNU General Public License, wie von der Free Software Foundation
+veroeffentlicht, weitergeben und/oder modifizieren, entweder gemaess
+Version 2 der Lizenz oder (nach Ihrer Option) jeder spaeteren Version.
+
+Die Veroeffentlichung dieser Schriftart erfolgt in der Hoffnung, dass sie
+Ihnen von Nutzen sein wird, aber OHNE IRGENDEINE GARANTIE, sogar ohne
+die implizite Garantie der MARKTREIFE oder der VERWENDBARKEIT FUER EINEN
+BESTIMMTEN ZWECK. Details finden Sie in der GNU General Public License.
+
+Sie sollten eine Kopie der GNU General Public License zusammen mit dieser
+Schriftart erhalten haben. Falls nicht, schreiben Sie an die Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307, USA.
+
+------------------------------------------------------------------------------
+
+Bekannte Probleme:
+In einigen Faellen und Schriftgroessen wirkt die Schrift pixelig und koernig.
+Der Zeilenabstand ist groesser als bei der .fon-Variante.
+
+Wer hier helfen kann, ist herzlich willkommen, sich an der Verbesserung
+zu beteiligen.
+
+Version 5.00c (17.02.2003):
+Das Zeichen 0x96 ist nun einem Symbol zugeordnet.
+
+Version 5.00b (27.01.2003):
+Beim Zeichen 0xE5 (å) ist nun der Ring nicht mehr geschlossen.
+Die Null ist nun korrekt platziert und nicht mehr zu weit rechts.
+
+Version 5.00a (04.12.2002):
+Die erste nahezu vollstaendige Version von mir.
+Als Bonus gibt´s das Euro-Zeichen.
+
+Bis Version 4:
+Markus Gebhards Versionen von fixedsys.ttf mit vielen neuen Zeichen
+gegenueber der Ursprungsversion.
+
+Ursprung:
+Die erste Version dieser fixedsys.ttf stammt von Travis Owens. Er meint,
+dass er sie nie fertigstellen wird und hat die Schrift darum zur
+Weiterentwicklung freigegeben.
