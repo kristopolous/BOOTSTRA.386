@@ -8,27 +8,27 @@
       The Definitive All-in-one Graphical Tool-Kit for Micros and Terminals.  
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-  There's a lot of micros and a lot of        the future has arrived.
+  There's a lot of micros and a lot of        this future has arrived.
   graphics modes. Today there's CGA,          
-  Hercules, MDA, and EGA. And that's only     Use primitives like buttons, navbars,
+  Hercules, MDA, and EGA. And that's only     Use primitives like buttons, "toolbars"
   on the IBM-PC.                              and various "widgets" that will control
                                               your application. We handle rendering
-  If you want a Tandy, CDC, Honeywell,        these abstractions on screen for you.
-  DEC, or Zenith; it's a whole new            
-  problem. And who's to say what's on         All you need to think of is terms
-  the horizon tomorrow. Do you support        of Windows, Icons, Menus, and
-  the Osbourne and the Compaq-1?              Pull-Downs. Even a WIMP can do it (TM).
+  What about Tandy, CDC, Honeywell,           these abstractions on screen for you.
+  DEC, and Zenith? That's a different          
+  problem. How about the portables on         Think of your software in terms of
+  tomorrows' horizon? Plan to ignore the      Windows, Icons, Menus, and Pull-Downs.
+  Compaq-1? Your customers won't.             Even a WIMP can do it (TM).
                                               
-  This should not be your concern. You        It's the new paradigm of full-screen
-  need to focus on the business of making     interactive applications. Give your
+  Such incompatibilities shouldn't be         That's the new paradigm of full-screen
+  your concern. You focus on making           interactive applications. Give your
   great microcomputer applications. We        customers the rich interface that are
-  take all the guesswork of the display       easy to use and also, easy to create.
-  capabilities out of the equation.           Give yourself that one-leg up on your
-                                              competition. REPLs are dead.
-  This is called a graphical toolkit.         
-  They have been in development for years     Just look at how beautiful
-  at places like XEROX Parc Research and      your application can look with
-  Carnegie Mellon University. And now,        BOOTSTRAP/386:
+  focus on making your application work       easy to use and also, easy to create.
+  on tomorrow's computer.                     Give yourself that one-leg up on your
+                                              competition. GUI is Good. GUI is God.
+  It's called a "Graphical User Interface"    
+  They've been in development for years       Just look at how beautiful
+  at places like XEROX Parc in Palo Alto      your application can look with
+  and Carnegie Mellon. And now, finally       BOOTSTRAP/386:
 
 </pre>
 
