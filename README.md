@@ -10,9 +10,9 @@
 
   There's a lot of micros and a lot of        the future has arrived.
   graphics modes. Today there's CGA,          
-  Hercules, MDA, and EGA. And that's only     Using primitives like buttons, navbars,
-  on the IBM-PC.                              and various other "widgets" to express
-                                              your application, we handle rendering
+  Hercules, MDA, and EGA. And that's only     Use primitives like buttons, navbars,
+  on the IBM-PC.                              and various "widgets" that will control
+                                              your application. We handle rendering
   If you want a Tandy, CDC, Honeywell,        these abstractions on screen for you.
   DEC, or Zenith; it's a whole new            
   problem. And who's to say what's on         All you need to think of is terms
@@ -21,13 +21,13 @@
                                               
   This should not be your concern. You        It's the new paradigm of full-screen
   need to focus on the business of making     interactive applications. Give your
-  great microcomputer applications. We        customers the rich interface that will
-  take all the guesswork of the display       Wow them with ease simplicity. And
-  capabilities out of the equation.           give yourself that one-leg up on your
+  great microcomputer applications. We        customers the rich interface that are
+  take all the guesswork of the display       easy to use and also, easy to create.
+  capabilities out of the equation.           Give yourself that one-leg up on your
                                               competition. REPLs are dead.
   This is called a graphical toolkit.         
   They have been in development for years     Just look at how beautiful
-  at places like XEROX Parc research and      your application can look with
+  at places like XEROX Parc Research and      your application can look with
   Carnegie Mellon University. And now,        BOOTSTRAP/386:
 
 </pre>
