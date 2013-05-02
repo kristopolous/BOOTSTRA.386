@@ -7,24 +7,17 @@
 .label,
 .badge {
   display: inline-block;
-  padding: 2px 4px;
-  font-size: @baseFontSize * .846;
-  font-weight: bold;
-  line-height: 14px; // ensure proper line-height if floated
+  padding: 0 @baseWidth;
+  font-size: @baseFontSize;
+  line-height: @baseLineHeight; // ensure proper line-height if floated
   color: @white;
   vertical-align: baseline;
   white-space: nowrap;
-  text-shadow: 0 -1px 0 rgba(0,0,0,.25);
   background-color: @grayLight;
 }
-// Set unique padding and border-radii
-.label {
-  .border-radius(3px);
-}
 .badge {
-  padding-left: 9px;
-  padding-right: 9px;
-  .border-radius(9px);
+  padding-left: @baseWidth;
+  padding-right: @baseWidth;
 }
 
 // Empty labels/badges collapse
@@ -53,19 +46,19 @@ a {
 .badge {
   // Important (red)
   &-important         { background-color: @errorText; }
-  &-important[href]   { background-color: darken(@errorText, 10%); }
+  &-important[href]   { background-color: @errorText; }
   // Warnings (orange)
   &-warning           { background-color: @orange; }
-  &-warning[href]     { background-color: darken(@orange, 10%); }
+  &-warning[href]     { background-color: @orange; }
   // Success (green)
   &-success           { background-color: @successText; }
-  &-success[href]     { background-color: darken(@successText, 10%); }
+  &-success[href]     { background-color: @successText; }
   // Info (turquoise)
   &-info              { background-color: @infoText; }
-  &-info[href]        { background-color: darken(@infoText, 10%); }
+  &-info[href]        { background-color: @infoText; }
   // Inverse (black)
   &-inverse           { background-color: @grayDark; }
-  &-inverse[href]     { background-color: darken(@grayDark, 10%); }
+  &-inverse[href]     { background-color: @grayDark; }
 }
 
 // Quick fix for labels/badges in buttons
