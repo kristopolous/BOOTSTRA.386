@@ -119,7 +119,6 @@ input[type="color"],
 .uneditable-input {
   background-color: @inputBackground;
   border: 1px solid @inputBorder;
-  .box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
   .transition(~"border linear .2s, box-shadow linear .2s");
 
   // Focus state
@@ -127,7 +126,6 @@ input[type="color"],
     border-color: rgba(82,168,236,.8);
     outline: 0;
     outline: thin dotted \9; /* IE6-9 */
-    .box-shadow(~"inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6)");
   }
 }
 
@@ -190,7 +188,6 @@ input[type="checkbox"]:focus {
   color: @grayLight;
   background-color: darken(@inputBackground, 1%);
   border-color: @inputBorder;
-  .box-shadow(inset 0 1px 2px rgba(0,0,0,.025));
   cursor: not-allowed;
 }
 
