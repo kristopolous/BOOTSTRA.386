@@ -72,7 +72,7 @@ html {
 }
 
 a:focus {
-  outline: thin dotted #333;
+  outline: thin solid #333;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -223,10 +223,10 @@ textarea {
 
 @font-face {
   font-family: 'DOS';
+  font-style: normal;
+  font-weight: normal;
   src: url('fonts/Fixedsys500c.eot');
   src: local('☺'), url('fonts/Fixedsys500c.woff') format('woff'), url('fonts/Fixedsys500c.ttf') format('truetype'), url('fonts/Fixedsys500c.svg') format('svg');
-  font-weight: normal;
-  font-style: normal;
 }
 
 body {
@@ -672,7 +672,7 @@ p {
 }
 
 small {
-  font-size: 85%;
+  font-size: 100%;
 }
 
 strong {
@@ -687,6 +687,30 @@ em {
 
 cite {
   font-style: normal;
+}
+
+i,
+cite,
+em,
+var,
+address,
+dfn {
+  font-style: normal;
+}
+
+i:before,
+cite:before,
+em:before,
+var:before,
+address:before,
+dfn:before,
+i:after,
+cite:after,
+em:after,
+var:after,
+address:after,
+dfn:after {
+  content: '/';
 }
 
 .muted {
@@ -890,7 +914,7 @@ dd {
 }
 
 dt {
-  font-weight: bold;
+  font-weight: normal;
 }
 
 dd {
@@ -936,7 +960,6 @@ hr {
 abbr[title],
 abbr[data-original-title] {
   cursor: help;
-  border-bottom: 1px dotted #bbbbbb;
 }
 
 abbr.initialism {
@@ -1024,15 +1047,15 @@ pre {
   display: block;
   padding: 6.5px;
   margin: 0 0 7px;
-  font-size: 12px;
+  font-size: 13px;
+  font-weight: normal;
   line-height: 14px;
   word-break: break-all;
   word-wrap: break-word;
   white-space: pre;
   white-space: pre-wrap;
-  background-color: #f5f5f5;
+  background-color: #000000;
   border: 1px solid #ccc;
-  border: 1px solid rgba(0, 0, 0, 0.15);
   -webkit-border-radius: 0;
      -moz-border-radius: 0;
           border-radius: 0;
@@ -1187,9 +1210,6 @@ input[type="color"]:focus,
 .uneditable-input:focus {
   border-color: rgba(82, 168, 236, 0.8);
   outline: 0;
-  outline: thin dotted \9;
-  /* IE6-9 */
-
 }
 
 input[type="radio"],
@@ -1236,7 +1256,7 @@ select:focus,
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
-  outline: thin dotted #333;
+  outline: thin solid #333;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -2027,7 +2047,7 @@ table {
 }
 
 .table th {
-  font-weight: bold;
+  font-weight: normal;
 }
 
 .table thead th {
@@ -2151,7 +2171,7 @@ table {
 
 .table-striped tbody > tr:nth-child(odd) > td,
 .table-striped tbody > tr:nth-child(odd) > th {
-  background-color: #f9f9f9;
+  background-color: transparent;
 }
 
 .table-hover tbody tr:hover > td,
@@ -2931,13 +2951,13 @@ table th[class*="span"],
   margin: 6px 4px 8px 8px;
   list-style: none;
   background-color: #bbbbbb;
-  border: 1px solid #000000;
+  border: 1px solid #ffffff;
   -webkit-border-radius: 0;
      -moz-border-radius: 0;
           border-radius: 0;
-  -webkit-box-shadow: 0px 0px 0 8px #bbbbbb;
-     -moz-box-shadow: 0px 0px 0 8px #bbbbbb;
-          box-shadow: 0px 0px 0 8px #bbbbbb;
+  -webkit-box-shadow: 0px 0px 0 5px #bbbbbb;
+     -moz-box-shadow: 0px 0px 0 5px #bbbbbb;
+          box-shadow: 0px 0px 0 5px #bbbbbb;
   -webkit-background-clip: padding-box;
      -moz-background-clip: padding;
           background-clip: padding-box;
@@ -3163,11 +3183,10 @@ table th[class*="span"],
 
 .close {
   float: right;
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 13px;
+  font-weight: normal;
   line-height: 14px;
   color: #000000;
-  text-shadow: 0 1px 0 #ffffff;
   opacity: 0.2;
   filter: alpha(opacity=20);
 }
@@ -3177,8 +3196,6 @@ table th[class*="span"],
   color: #000000;
   text-decoration: none;
   cursor: pointer;
-  opacity: 0.4;
-  filter: alpha(opacity=40);
 }
 
 button.close {
@@ -3240,7 +3257,7 @@ button.close {
 }
 
 .btn:focus {
-  outline: thin dotted #333;
+  outline: thin solid #333;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -3914,7 +3931,7 @@ input[type="submit"].btn.btn-mini {
 
 .nav-header {
   display: block;
-  font-weight: bold;
+  font-weight: normal;
   line-height: 14px;
   color: #bbbbbb;
   text-transform: uppercase;
@@ -5458,15 +5475,16 @@ input[type="submit"].btn.btn-mini {
 
 .thumbnail {
   display: block;
-  padding: 4px;
+  padding: 3px 6px;
+  margin: 4px 3px;
   line-height: 14px;
   border: 1px solid #ddd;
   -webkit-border-radius: 0;
      -moz-border-radius: 0;
           border-radius: 0;
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
-     -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
-          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
+  -webkit-box-shadow: 0;
+     -moz-box-shadow: 0;
+          box-shadow: 0;
   -webkit-transition: all 0.2s ease-in-out;
      -moz-transition: all 0.2s ease-in-out;
        -o-transition: all 0.2s ease-in-out;
@@ -5476,9 +5494,9 @@ input[type="submit"].btn.btn-mini {
 a.thumbnail:hover,
 a.thumbnail:focus {
   border-color: #fefe54;
-  -webkit-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
-     -moz-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
-          box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+  -webkit-box-shadow: 0;
+     -moz-box-shadow: 0;
+          box-shadow: 0;
 }
 
 .thumbnail > img {

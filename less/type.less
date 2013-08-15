@@ -25,11 +25,21 @@ p {
 // -------------------------
 
 // Ex: 14px base font * 85% = about 12px
-small   { font-size: 85%; }
+small   { font-size: 100%; }
 
 strong  { color: @white; font-weight: normal}
 em      { color: @white; font-weight: normal }
 cite    { font-style: normal; }
+
+i, cite, em, var, address, dfn {
+  font-style: normal;
+}
+
+i:before, cite:before, em:before, var:before, address:before, dfn:before,
+i:after, cite:after, em:after, var:after, address:after, dfn:after 
+{
+  content: '/';
+}
 
 // Utility classes
 .muted               { color: @gray; }
@@ -165,7 +175,7 @@ dd {
   line-height: @baseLineHeight;
 }
 dt {
-  font-weight: bold;
+  font-weight: normal;
 }
 dd {
   margin-left: @baseLineHeight;
@@ -201,7 +211,6 @@ abbr[title],
 // Added data-* attribute to help out our tooltip plugin, per https://github.com/twitter/bootstrap/issues/5257
 abbr[data-original-title] {
   cursor: help;
-  border-bottom: 1px dotted @gray;
 }
 abbr.initialism {
   font-size: 90%;
