@@ -801,14 +801,14 @@
 
 @media (max-width: 767px) {
   body {
-    padding-right: 13px;
-    padding-left: 13px;
+    padding-right: 9px;
+    padding-left: 9px;
   }
   .navbar-fixed-top,
   .navbar-fixed-bottom,
   .navbar-static-top {
-    margin-right: -13px;
-    margin-left: -13px;
+    margin-right: -9px;
+    margin-left: -9px;
   }
   .container-fluid {
     padding: 0;
@@ -893,7 +893,7 @@
     top: -100px;
   }
   .modal.fade.in {
-    top: 13px;
+    top: 9px;
   }
 }
 
