@@ -101,3 +101,54 @@ one of the channels
 So this means that 1100 (color 12) is a bright red. You can see the [colors here](http://en.wikipedia.org/wiki/Enhanced_Graphics_Adapter#Color_palette).
 
 For all intents and purposes, the background color was always dark.
+
+## Box drawing
+
+
+### Lines
+Borders back in the day relied on box-drawing ASCII characters which, on the PC were part of the 8-bit Microsoft extension to the official
+7-bit ASCII.
+
+There were single and double borders.  Your computer can very likely still render them. Here they are in modern unicode, now also part of 
+something called WGL 4.0.
+
+We have 
+
+  * corners: &#9484; &#9488; &#9492; &#9496;
+  * intersections: &#9500; &#9508; &#9516; &#9525; &#9532;
+  * lines: &#9472; &#2500;
+
+Then there were double versions fo them, for example, &#9574; or &#9567;.
+
+The important thing here is that because these were characters, you didn't get clean backgrounds using them. Here's an example:
+
+<img src=http://techpubs.sgi.com/library/dynaweb_docs/0530/SGI_EndUser/books/SWin_UG/sgi_html/figures/57a.exitdosedit.gif>
+
+
+So this means that when drawing a box, if we are using a different color background, it has to overflow a bit in order to be accurate.
+
+### Solids and Shading
+
+There are partially filled solids that could be one of the EGA colors. These are: 
+
+ * the full character: &#9608;
+ * half characters: &#9600; &#9604; &#9612; &#9616;
+
+There's also 3 "greys" which are full boxes with "shading": &#9617; &#9618; &#9619;
+
+### All together now!
+
+What this means is that if you want say, a 3d popup box with a shadow, like this:
+
+<img src=http://www.operating-system.org/betriebssystem/bsgfx/microsoft/msdos/msdos50-scr-02.jpg>
+
+inside of a div, things can get tricky.  You have 
+
+  * the margin to the border
+  * The grey border itself at 1px
+  * a box-shadow that extends beyond the div
+  * a second box shadow that extends beyond the first
+
+Or you need to wrap these things artificially in code. Additionally, look at the border above.  On the right hand you have
+a border that is the width of 2 characters, offset down by a full character.  But in our world, all offsets go off the center
+of the border, so the math has to be done differently to make this work and have everything line up.
