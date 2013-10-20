@@ -34,7 +34,7 @@
 .input-block-level {
   display: block;
   width: 100%;
-  min-height: 24px;
+  min-height: 14px;
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
@@ -222,7 +222,7 @@
     display: block;
     float: left;
     width: 100%;
-    min-height: 24px;
+    min-height: 14px;
     margin-left: 2.127659574468085%;
     *margin-left: 2.07469347277317%;
     -webkit-box-sizing: border-box;
@@ -572,7 +572,7 @@
     display: block;
     float: left;
     width: 100%;
-    min-height: 24px;
+    min-height: 14px;
     margin-left: 2.4390243902439024%;
     *margin-left: 2.386058288548987%;
     -webkit-box-sizing: border-box;
@@ -866,7 +866,7 @@
   .uneditable-input {
     display: block;
     width: 100%;
-    min-height: 24px;
+    min-height: 14px;
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box;

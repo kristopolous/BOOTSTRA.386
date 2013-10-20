@@ -4,21 +4,21 @@
 
 
 .hero-unit {
-  padding: 42px 64px 28px;
-  margin-bottom: 28px;
-  font-size: 13px;
+  padding: @baseLineHeight * 3 @baseWidth * 6 @baseLineHeight * 2;
+  margin-bottom: @baseLineHeight;
+  font-size: @baseFontSize;
   line-height: @baseLineHeight * 2;
   color: @heroUnitLeadColor;
   background-color: @heroUnitBackground;
   .border-radius(0);
   h1 {
-    margin-bottom: 14px;
-    font-size: 13px;
+    margin-bottom: @baseLineHeight;
+    font-size: @baseFontSize;
     line-height: 1;
     text-align: center;
     color: @heroUnitHeadingColor;
   }
   li {
-    line-height: @baseLineHeight * 1.5; // Reset since we specify in type.less
+    line-height: @baseLineHeight; // Reset since we specify in type.less
   }
 }

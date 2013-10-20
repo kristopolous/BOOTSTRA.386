@@ -9,20 +9,20 @@
   z-index: @zindexTooltip;
   display: block;
   visibility: visible;
-  font-size: 11px;
-  line-height: 1.4;
+  font-size: @baseFontSize;
+  line-height: 1;
   .opacity(0);
   &.in     { .opacity(80); }
-  &.top    { margin-top:  -3px; padding: 5px 0; }
-  &.right  { margin-left:  3px; padding: 0 5px; }
-  &.bottom { margin-top:   3px; padding: 5px 0; }
-  &.left   { margin-left: -3px; padding: 0 5px; }
+  &.top    { margin-top:  -3px; padding: @ts 0 @bs; }
+  &.right  { margin-left:  3px; padding: 0 @rhs 0 @lhs; }
+  &.bottom { margin-top:   3px; padding: @ts 0 @bs; }
+  &.left   { margin-left: -3px; padding: 0 @rhs 0 @lhs; }
 }
 
 // Wrapper for the tooltip content
 .tooltip-inner {
-  max-width: 200px;
-  padding: 8px;
+  max-width: @baseWidth * 25;
+  padding: @ts @rhs @bs @lhs;
   color: @tooltipColor;
   text-align: center;
   text-decoration: none;
