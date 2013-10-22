@@ -1001,9 +1001,6 @@
     padding: 9px 15px;
     font-weight: bold;
     color: #ffffff;
-    -webkit-border-radius: 3px;
-       -moz-border-radius: 3px;
-            border-radius: 3px;
   }
   .nav-collapse .btn {
     padding: 4px 10px 4px;
