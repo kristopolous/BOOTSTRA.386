@@ -8,6 +8,7 @@
     // oh how stylish! no semicolons. I'm not hipster enough for that.
     // Keep your stumptown coffee and pbr, twats.
     // real-javascript {{
+    /*
       document.body.appendChild(document.createElement('div')).setAttribute('style', [
         'position:fixed',
         'z-index:1000',
@@ -17,6 +18,7 @@
         'height:100%',
         'background:url("../img/8x5overlay.png") repeat'
       ].join(';'));
+      */
     // }}
     var $window = $(window)
 
