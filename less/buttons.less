@@ -23,7 +23,7 @@
   display: inline-block;
   .ie7-inline-block();
   padding: 0 14px;
-  margin-bottom: 14px; // For input.btn
+  margin-bottom: @baseLineHeight; // For input.btn
   font-size: @baseFontSize;
   line-height: @baseLineHeight;
   text-align: center;
@@ -41,7 +41,6 @@
   &:focus {
     color: @white;
     text-decoration: none;
-    background-position: 0 -15px;
 
     // transition is only when going to hover/focus, otherwise the background
     // behind the gradient (there for IE<=9 fallback) gets mismatched
@@ -230,8 +229,8 @@ input[type="submit"].btn {
 .btn-link:hover,
 .btn-link:focus {
   color: @linkColorHover;
-  text-decoration: underline;
-  background-color: transparent;
+  text-decoration: none;
+  background-color: @greenDark;
 }
 .btn-link[disabled]:hover,
 .btn-link[disabled]:focus {

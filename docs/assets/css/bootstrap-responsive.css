@@ -34,7 +34,7 @@
 .input-block-level {
   display: block;
   width: 100%;
-  min-height: 16px;
+  min-height: 24.8px;
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
@@ -222,7 +222,7 @@
     display: block;
     float: left;
     width: 100%;
-    min-height: 16px;
+    min-height: 24.8px;
     margin-left: 2.127659574468085%;
     *margin-left: 2.07469347277317%;
     -webkit-box-sizing: border-box;
@@ -572,7 +572,7 @@
     display: block;
     float: left;
     width: 100%;
-    min-height: 16px;
+    min-height: 24.8px;
     margin-left: 2.4390243902439024%;
     *margin-left: 2.386058288548987%;
     -webkit-box-sizing: border-box;
@@ -801,14 +801,14 @@
 
 @media (max-width: 767px) {
   body {
-    padding-right: 9px;
-    padding-left: 9px;
+    padding-right: 14px;
+    padding-left: 14px;
   }
   .navbar-fixed-top,
   .navbar-fixed-bottom,
   .navbar-static-top {
-    margin-right: -9px;
-    margin-left: -9px;
+    margin-right: -14px;
+    margin-left: -14px;
   }
   .container-fluid {
     padding: 0;
@@ -866,7 +866,7 @@
   .uneditable-input {
     display: block;
     width: 100%;
-    min-height: 16px;
+    min-height: 24.8px;
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box;
@@ -883,9 +883,9 @@
   }
   .modal {
     position: fixed;
-    top: 16px;
-    right: 16px;
-    left: 16px;
+    top: 24.8px;
+    right: 24.8px;
+    left: 24.8px;
     width: auto;
     margin: 0;
   }
@@ -893,7 +893,7 @@
     top: -100px;
   }
   .modal.fade.in {
-    top: 9px;
+    top: 14px;
   }
 }
 
@@ -903,7 +903,7 @@
   }
   .page-header h1 small {
     display: block;
-    line-height: 16px;
+    line-height: 24.8px;
   }
   input[type="checkbox"],
   input[type="radio"] {
@@ -958,10 +958,10 @@
     position: static;
   }
   .navbar-fixed-top {
-    margin-bottom: 16px;
+    margin-bottom: 24.8px;
   }
   .navbar-fixed-bottom {
-    margin-top: 16px;
+    margin-top: 24.8px;
   }
   .navbar-fixed-top .navbar-inner,
   .navbar-fixed-bottom .navbar-inner {
@@ -981,7 +981,7 @@
   }
   .nav-collapse .nav {
     float: none;
-    margin: 0 0 8px;
+    margin: 0 0 12.4px;
   }
   .nav-collapse .nav > li {
     float: none;
@@ -1067,8 +1067,8 @@
   .nav-collapse .navbar-form,
   .nav-collapse .navbar-search {
     float: none;
-    padding: 8px 15px;
-    margin: 8px 0;
+    padding: 12.4px 15px;
+    margin: 12.4px 0;
     border-top: 1px solid #bbbbbb;
     border-bottom: 1px solid #bbbbbb;
   }
