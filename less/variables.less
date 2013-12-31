@@ -70,7 +70,8 @@
 @bs:                    10.8px;
 
 @baseFontFamily:        @sansFontFamily;
-@baseLineHeight:        24.8px;
+@baseLineHeight:        20px;
+@baseLineWidth:         @baseLineHeight * 3 / 4;
 @altFontFamily:         @serifFontFamily;
 
 @headingsFontFamily:    inherit; // empty to use BS default, @baseFontFamily
@@ -236,7 +237,7 @@
 
 // Pagination
 // -------------------------
-@paginationBackground:                #fff;
+@paginationBackground:                @greenDark;
 @paginationBorder:                    #ddd;
 @paginationActiveBackground:          #f5f5f5;
 

@@ -34,7 +34,7 @@
 .input-block-level {
   display: block;
   width: 100%;
-  min-height: 24.8px;
+  min-height: 20px;
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
@@ -222,7 +222,7 @@
     display: block;
     float: left;
     width: 100%;
-    min-height: 24.8px;
+    min-height: 20px;
     margin-left: 2.127659574468085%;
     *margin-left: 2.07469347277317%;
     -webkit-box-sizing: border-box;
@@ -572,7 +572,7 @@
     display: block;
     float: left;
     width: 100%;
-    min-height: 24.8px;
+    min-height: 20px;
     margin-left: 2.4390243902439024%;
     *margin-left: 2.386058288548987%;
     -webkit-box-sizing: border-box;
@@ -866,7 +866,7 @@
   .uneditable-input {
     display: block;
     width: 100%;
-    min-height: 24.8px;
+    min-height: 20px;
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box;
@@ -883,9 +883,9 @@
   }
   .modal {
     position: fixed;
-    top: 24.8px;
-    right: 24.8px;
-    left: 24.8px;
+    top: 20px;
+    right: 20px;
+    left: 20px;
     width: auto;
     margin: 0;
   }
@@ -903,7 +903,7 @@
   }
   .page-header h1 small {
     display: block;
-    line-height: 24.8px;
+    line-height: 20px;
   }
   input[type="checkbox"],
   input[type="radio"] {
@@ -958,10 +958,10 @@
     position: static;
   }
   .navbar-fixed-top {
-    margin-bottom: 24.8px;
+    margin-bottom: 20px;
   }
   .navbar-fixed-bottom {
-    margin-top: 24.8px;
+    margin-top: 20px;
   }
   .navbar-fixed-top .navbar-inner,
   .navbar-fixed-bottom .navbar-inner {
@@ -981,7 +981,7 @@
   }
   .nav-collapse .nav {
     float: none;
-    margin: 0 0 12.4px;
+    margin: 0 0 10px;
   }
   .nav-collapse .nav > li {
     float: none;
@@ -1067,8 +1067,8 @@
   .nav-collapse .navbar-form,
   .nav-collapse .navbar-search {
     float: none;
-    padding: 12.4px 15px;
-    margin: 12.4px 0;
+    padding: 10px 15px;
+    margin: 10px 0;
     border-top: 1px solid #bbbbbb;
     border-bottom: 1px solid #bbbbbb;
   }
