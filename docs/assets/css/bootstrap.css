@@ -1179,8 +1179,9 @@ input[type="search"],
 input[type="tel"],
 input[type="color"],
 .uneditable-input {
-  background-color: #ffffff;
-  border: 1px solid #cccccc;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid #cccccc;
   -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
      -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
        -o-transition: border linear 0.2s, box-shadow linear 0.2s;
@@ -1203,7 +1204,6 @@ input[type="search"]:focus,
 input[type="tel"]:focus,
 input[type="color"]:focus,
 .uneditable-input:focus {
-  border-color: rgba(82, 168, 236, 0.8);
   outline: 0;
 }
 
@@ -3221,6 +3221,7 @@ button.close {
 .btn:focus {
   color: #ffffff;
   text-decoration: none;
+  background: #aa5500;
 }
 
 .btn:focus {
@@ -3239,8 +3240,6 @@ button.close {
 .btn[disabled] {
   cursor: default;
   background-image: none;
-  opacity: 0.65;
-  filter: alpha(opacity=65);
   -webkit-box-shadow: none;
      -moz-box-shadow: none;
           box-shadow: none;
@@ -3261,7 +3260,7 @@ button.close {
 }
 
 .btn-small {
-  padding: 18px;
+  padding: 0;
   font-size: 18px;
   -webkit-border-radius: 0;
      -moz-border-radius: 0;
@@ -3304,15 +3303,6 @@ input[type="submit"].btn-block,
 input[type="reset"].btn-block,
 input[type="button"].btn-block {
   width: 100%;
-}
-
-.btn-primary.active,
-.btn-warning.active,
-.btn-danger.active,
-.btn-success.active,
-.btn-info.active,
-.btn-inverse.active {
-  color: rgba(255, 255, 255, 0.75);
 }
 
 .btn-primary {
@@ -4019,7 +4009,7 @@ input[type="submit"].btn.btn-mini {
 .nav-pills > .active > a,
 .nav-pills > .active > a:hover,
 .nav-pills > .active > a:focus {
-  color: #ffffff;
+  color: #000000;
   background-color: #fefe54;
 }
 
@@ -4990,7 +4980,7 @@ input[type="submit"].btn.btn-mini {
 
 .pagination-small ul > li > a,
 .pagination-small ul > li > span {
-  padding: 18px;
+  padding: 0;
   font-size: 18px;
 }
 

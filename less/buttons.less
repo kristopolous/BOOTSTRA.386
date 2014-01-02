@@ -41,6 +41,7 @@
   &:focus {
     color: @white;
     text-decoration: none;
+    background: @brown;
 
     // transition is only when going to hover/focus, otherwise the background
     // behind the gradient (there for IE<=9 fallback) gets mismatched
@@ -64,7 +65,6 @@
   &[disabled] {
     cursor: default;
     background-image: none;
-    .opacity(65);
     .box-shadow(none);
   }
 
@@ -139,16 +139,6 @@ input[type="button"] {
 
 // Alternate buttons
 // --------------------------------------------------
-
-// Provide *some* extra contrast for those who can get it
-.btn-primary.active,
-.btn-warning.active,
-.btn-danger.active,
-.btn-success.active,
-.btn-info.active,
-.btn-inverse.active {
-  color: rgba(255,255,255,.75);
-}
 
 // Set the backgrounds
 // -------------------------

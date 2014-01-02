@@ -117,13 +117,13 @@ input[type="search"],
 input[type="tel"],
 input[type="color"],
 .uneditable-input {
-  background-color: @inputBackground;
-  border: 1px solid @inputBorder;
+  background-color: transparent;
+  border:0;
+  border-bottom: 1px solid @inputBorder;
   .transition(~"border linear .2s, box-shadow linear .2s");
 
   // Focus state
   &:focus {
-    border-color: rgba(82,168,236,.8);
     outline: 0;
   }
 }
