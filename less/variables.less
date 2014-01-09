@@ -64,14 +64,14 @@
 // and padding can go bottom left top right
 //
 // do the math, it works.
-@lhs:                   4.6px;
-@rhs:                   6.2px;
-@ts:                    9.3px;
-@bs:                    10.8px;
+@lhs:                   4.5px;
+@rhs:                   4.5px;
+@ts:                    10.5px;
+@bs:                    10.5px;
 
 @baseFontFamily:        @sansFontFamily;
 @baseLineHeight:        20px;
-@baseLineWidth:         @baseLineHeight * 3 / 4;
+@baseLineWidth:         @baseLineHeight / 2;
 @altFontFamily:         @serifFontFamily;
 
 @headingsFontFamily:    inherit; // empty to use BS default, @baseFontFamily
@@ -106,11 +106,11 @@
 // Buttons
 // -------------------------
 @btnBackground:                     @white;
-@btnBackgroundHighlight:            darken(@white, 10%);
+@btnBackgroundHighlight:            @brown;
 @btnBorder:                         @white;
 
 @btnPrimaryBackground:              @linkColor;
-@btnPrimaryBackgroundHighlight:     spin(@btnPrimaryBackground, 20%);
+@btnPrimaryBackgroundHighlight:     @brown;
 
 @btnInfoBackground:                 #5bc0de;
 @btnInfoBackgroundHighlight:        #2f96b4;

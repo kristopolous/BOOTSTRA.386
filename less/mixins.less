@@ -492,7 +492,7 @@
 // Horizontal dividers
 // -------------------------
 // Dividers (basically an hr) within dropdowns and nav lists
-.nav-divider(@top: #e5e5e5, @bottom: @white) {
+.nav-divider(@top: @black, @bottom: @black) {
   // IE7 needs a set width since we gave a height. Restricting just
   // to IE7 to keep the 1px left/right space in other browsers.
   // It is unclear where IE is getting the extra space that we need
@@ -503,7 +503,7 @@
   *margin: -5px 0 5px;
   overflow: hidden;
   background-color: @top;
-  border-bottom: 1px solid @bottom;
+  border-bottom: 1px solid @black;
 }
 
 // Button backgrounds
@@ -517,14 +517,11 @@
   // in these cases the gradient won't cover the background, so we override
   &:hover, &:focus, &:active, &.active, &.disabled, &[disabled] {
     color: @textColor;
-    background-color: @endColor;
-    *background-color: darken(@endColor, 5%);
   }
 
   // IE 7 + 8 can't handle box-shadow to show active, so we darken a bit ourselves
   &:active,
   &.active {
-    background-color: darken(@endColor, 10%) e("\9");
   }
 }
 
@@ -543,7 +540,7 @@
 
 // Centered container element
 .container-fixed() {
-  margin-left: 16px;
+  margin-left: (@baseLineWidth * 2);
   .clearfix();
 }
 

@@ -14,8 +14,8 @@
   .navbar-fixed-top,
   .navbar-fixed-bottom,
   .navbar-static-top {
-    margin-left: -@baseFontSize;
-    margin-right: -@baseFontSize;
+    margin-left: -@baseLineWidth;
+    margin-right: -@baseLineWidth;
   }
   // Remove padding on container given explicit padding set on body
   .container-fluid {
@@ -166,7 +166,7 @@
   .media .pull-right  {
     float: none;
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: @baseLineHeight;
   }
   // Remove side margins since we stack instead of indent
   .media-object {

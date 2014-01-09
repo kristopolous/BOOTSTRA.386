@@ -51,11 +51,11 @@
   display: none; // none by default, but block on "open" of the menu
   float: left;
   min-width: 160px;
-  margin: @ts @rhs 8px 8px;
-  padding: @bs 3px @ts 2px;
+  margin: -(15.5px) @rhs 8px @lhs;
+  padding: @bs @rhs @ts @lhs;
   list-style: none;
   background-color: @gray;
-  border: 1px solid @white;
+  border: 1px solid @black;
   .border-radius(0);
   .box-shadow(0px 0px 0 5px @gray);
   -webkit-background-clip: padding-box;
@@ -76,7 +76,7 @@
   // Links within the dropdown menu
   > li > a {
     display: block;
-    padding: 0 8px;
+    padding: 0 @baseLineWidth;
     clear: both;
     font-weight: normal;
     line-height: @baseLineHeight;

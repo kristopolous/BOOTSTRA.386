@@ -807,8 +807,8 @@
   .navbar-fixed-top,
   .navbar-fixed-bottom,
   .navbar-static-top {
-    margin-right: -18px;
-    margin-left: -18px;
+    margin-right: -10px;
+    margin-left: -10px;
   }
   .container-fluid {
     padding: 0;
@@ -929,7 +929,7 @@
   .media .pull-right {
     display: block;
     float: none;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   .media-object {
     margin-right: 0;

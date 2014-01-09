@@ -19,7 +19,7 @@ p {
 }
 .lead {
   margin: @ts @rhs @bs @lhs;
-  padding: @bs 11px @ts 10px;
+  padding: @bs (@rhs + @baseLineWidth) @ts (@lhs + @baseLineWidth);
   font-size: @baseFontSize;
   color: @white;
   border: 1px solid @grayLight;
@@ -119,7 +119,7 @@ h4 small { font-size: @baseFontSize; }
 
 .page-header {
   background: @cyanDark;
-  padding: 14px 24px;
+  padding: @baseLineHeight (@baseLineWidth * 2);
   margin: @baseLineHeight 0 (@baseLineHeight);
   h1 {
     color: @black;
