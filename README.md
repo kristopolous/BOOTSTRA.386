@@ -34,6 +34,8 @@
 
 <img src=http://i.imgur.com/CZKrANV.png>
 
+[Demo](http://9ol.es/BOOTSTRA.386/)
+
 ## Less sarcastic introduction
 
 Bootstrap/386 is a [Twitter bootstrap](http://twitter.github.io/bootstrap/) theme intended to make
