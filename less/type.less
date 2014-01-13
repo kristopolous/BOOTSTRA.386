@@ -22,7 +22,7 @@ p {
   padding: @bs (@rhs + @baseLineWidth) @ts (@lhs + @baseLineWidth);
   font-size: @baseFontSize;
   color: @white;
-  border: 1px solid @grayLight;
+  border: @borderWidth solid @grayLight;
 }
 
 
@@ -206,7 +206,7 @@ hr {
   margin: 6px 0 7px;
   border: 0;
   border-top: 0px solid @hrBorder;
-  border-bottom: 1px solid @white;
+  border-bottom: @borderWidth solid @white;
 }
 
 // Abbreviations and acronyms
@@ -224,7 +224,7 @@ abbr.initialism {
 blockquote {
   padding: 0 0 0 15px;
   margin: 0 0 @baseLineHeight;
-  border-left: 5px solid @gray;
+  border-left: (@baseLineWidth / 2) solid @gray;
   p {
     margin-bottom: 0;
     font-size: @baseFontSize;
@@ -244,7 +244,7 @@ blockquote {
     float: right;
     padding-right: 1em;
     padding-left: 0;
-    border-right: 5px solid @gray;
+    border-right: (@baseLineWidth / 2) solid @gray;
     border-left: 0;
     p,
     small {

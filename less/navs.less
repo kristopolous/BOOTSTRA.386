@@ -9,7 +9,7 @@
 .nav {
   margin-left: 0;
   margin-bottom: @baseLineHeight;
-  background: @grayDark;
+  background: @grayLight;
   list-style: none;
 }
 
@@ -20,8 +20,8 @@
 .nav > li > a:hover,
 .nav > li > a:focus {
   text-decoration: none;
-  color: @black;
-  background-color: @gray;
+  color: @gray;
+  background-color: @black;
 }
 
 // Prevent IE8 from misplacing imgs
@@ -54,9 +54,11 @@
 // --------
 
 .nav-list {
-  padding: 0px @baseLineWidth;
-  margin-bottom: 0;
-  .box-shadow(~"8px 10px 0 0 rgb(0,0,0)");
+  padding: (@baseLineHeight / 2) (@baseLineWidth * 1.5);
+  margin: (@baseLineHeight / 2) (@baseLineWidth / 2);
+  margin-left: -(@baseLineWidth / 2);
+  border: 2px solid @black;
+  .box-shadow(~"0 0 0 5px, 11px 13px 0 4px black");
 }
 .nav-list > li > a,
 .nav-list .nav-header {
@@ -65,7 +67,7 @@
 }
 .nav-list > li > a {
   padding: 0 8px;
-  color: @white;
+  color: @black;
 }
 .nav-list > .active > a,
 .nav-list > .active > a:hover,
@@ -131,7 +133,7 @@
 .nav-tabs > .active > a:focus {
   color: @gray;
   background-color: @bodyBackground;
-  border: 1px solid #ddd;
+  border: 0;
   border-bottom-color: transparent;
   cursor: default;
 }
@@ -154,7 +156,7 @@
 .nav-pills > .active > a,
 .nav-pills > .active > a:hover,
 .nav-pills > .active > a:focus {
-  color: @black;
+  color: @gray;
   background-color: @linkColor;
 }
 

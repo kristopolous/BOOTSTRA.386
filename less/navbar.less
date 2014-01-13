@@ -48,10 +48,10 @@
   float: left;
   display: block;
   // Vertically center the text given @navbarHeight
-  padding: 0 @baseLineHeight;
-  margin-left: -@baseWidth; // negative indent to left-align the text down the page
+  padding: 0 @baseLineWidth;
+  margin-left: -@baseLineWidth; // negative indent to left-align the text down the page
   font-size: @baseFontSize;
-  color: @magenta;
+  color: @blueDark;
   text-shadow: 0;
   &:hover,
   &:focus {
@@ -240,7 +240,7 @@
 .navbar .nav > li > a {
   float: none;
   // Vertically center the text given @navbarHeight
-  padding: 0 @baseWidth;
+  padding: 0 @baseLineWidth;
   color: @navbarLinkColor;
   text-decoration: none;
   text-shadow: 0;
@@ -387,23 +387,23 @@
 .navbar-inverse {
 
   .navbar-inner {
-    background:@black;
+    background:@gray;
   }
 
   .brand,
   .nav > li > a {
-    color: @white;
-    background: @black;
+    color: @black;
+    background: @gray;
     text-shadow: 0;
     &:hover,
     &:focus {
-      color: @black;
-      background: @grayLight;
+      color: @gray;
+      background: @black;
     }
   }
 
   .brand {
-    color: @navbarInverseBrandColor;
+    color: @blueDark;
   }
 
   .navbar-text {
@@ -412,15 +412,16 @@
 
   .nav > li > a:focus,
   .nav > li > a:hover {
-    color: @black;
-    background: @grayLight;
+    color: @gray;
+    background: @black;
   }
 
   .nav .active > a,
   .nav .active > a:hover,
   .nav .active > a:focus {
-    color: @black;
-    background: @grayLight;
+    color: @gray;
+    background: @black;
+    text-decoration: underline;
   }
 
   // Inline text links

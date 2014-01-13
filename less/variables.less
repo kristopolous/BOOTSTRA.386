@@ -64,14 +64,16 @@
 // and padding can go bottom left top right
 //
 // do the math, it works.
-@lhs:                   4.5px;
-@rhs:                   4.5px;
-@ts:                    10.5px;
-@bs:                    10.5px;
-
-@baseFontFamily:        @sansFontFamily;
+@borderWidth:           2px;
 @baseLineHeight:        20px;
 @baseLineWidth:         @baseLineHeight / 2;
+
+@lhs:                   (@baseLineWidth - @borderWidth) / 2;
+@rhs:                   @lhs;
+@ts:                    (@baseLineHeight - @borderWidth) / 2;
+@bs:                    @ts;
+
+@baseFontFamily:        @sansFontFamily;
 @altFontFamily:         @serifFontFamily;
 
 @headingsFontFamily:    inherit; // empty to use BS default, @baseFontFamily

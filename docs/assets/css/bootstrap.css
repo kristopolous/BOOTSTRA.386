@@ -663,11 +663,11 @@ p {
 }
 
 .lead {
-  padding: 10.5px 14.5px 10.5px 14.5px;
-  margin: 10.5px 4.5px 10.5px 4.5px;
+  padding: 9px 14px 9px 14px;
+  margin: 9px 4px 9px 4px;
   font-size: 18px;
   color: #ffffff;
-  border: 1px solid #bbbbbb;
+  border: 2px solid #bbbbbb;
 }
 
 small {
@@ -949,7 +949,7 @@ hr {
   margin: 6px 0 7px;
   border: 0;
   border-top: 0px solid #bbbbbb;
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
 }
 
 abbr[title],
@@ -2005,7 +2005,7 @@ table {
   line-height: 20px;
   text-align: left;
   vertical-align: top;
-  border-top: 1px solid #dddddd;
+  border-top: 2px solid #dddddd;
 }
 
 .table th {
@@ -2039,7 +2039,7 @@ table {
 }
 
 .table-bordered {
-  border: 1px solid #dddddd;
+  border: 2px solid #dddddd;
   border-collapse: separate;
   *border-collapse: collapse;
   border-left: 0;
@@ -2050,7 +2050,7 @@ table {
 
 .table-bordered th,
 .table-bordered td {
-  border-left: 1px solid #dddddd;
+  border-left: 2px solid #dddddd;
 }
 
 .table-bordered caption + thead tr:first-child th,
@@ -2909,8 +2909,8 @@ table th[class*="span"],
   display: none;
   float: left;
   min-width: 160px;
-  padding: 10.5px 4.5px 10.5px 4.5px;
-  margin: -15.5px 4.5px 8px 4.5px;
+  padding: 9px 4px 9px 4px;
+  margin: -15.5px 4px 8px 4px;
   list-style: none;
   background-color: #bbbbbb;
   border: 1px solid #000000;
@@ -3816,7 +3816,7 @@ input[type="submit"].btn.btn-mini {
   margin-bottom: 20px;
   margin-left: 0;
   list-style: none;
-  background: #555555;
+  background: #bbbbbb;
 }
 
 .nav > li > a {
@@ -3825,9 +3825,9 @@ input[type="submit"].btn.btn-mini {
 
 .nav > li > a:hover,
 .nav > li > a:focus {
-  color: #000000;
+  color: #bbbbbb;
   text-decoration: none;
-  background-color: #bbbbbb;
+  background-color: #000000;
 }
 
 .nav > li > a > img {
@@ -3851,11 +3851,13 @@ input[type="submit"].btn.btn-mini {
 }
 
 .nav-list {
-  padding: 0 10px;
-  margin-bottom: 0;
-  -webkit-box-shadow: 8px 10px 0 0 #000000;
-     -moz-box-shadow: 8px 10px 0 0 #000000;
-          box-shadow: 8px 10px 0 0 #000000;
+  padding: 10px 15px;
+  margin: 10px 5px;
+  margin-left: -5px;
+  border: 2px solid #000000;
+  -webkit-box-shadow: 0 0 0 5px, 11px 13px 0 4px black;
+     -moz-box-shadow: 0 0 0 5px, 11px 13px 0 4px black;
+          box-shadow: 0 0 0 5px, 11px 13px 0 4px black;
 }
 
 .nav-list > li > a,
@@ -3866,7 +3868,7 @@ input[type="submit"].btn.btn-mini {
 
 .nav-list > li > a {
   padding: 0 8px;
-  color: #ffffff;
+  color: #000000;
 }
 
 .nav-list > .active > a,
@@ -3950,7 +3952,7 @@ input[type="submit"].btn.btn-mini {
   color: #bbbbbb;
   cursor: default;
   background-color: #000084;
-  border: 1px solid #ddd;
+  border: 0;
   border-bottom-color: transparent;
 }
 
@@ -3968,7 +3970,7 @@ input[type="submit"].btn.btn-mini {
 .nav-pills > .active > a,
 .nav-pills > .active > a:hover,
 .nav-pills > .active > a:focus {
-  color: #000000;
+  color: #bbbbbb;
   background-color: #fefe54;
 }
 
@@ -4266,10 +4268,10 @@ input[type="submit"].btn.btn-mini {
 .navbar .brand {
   display: block;
   float: left;
-  padding: 0 20px;
-  margin-left: -12.4px;
+  padding: 0 10px;
+  margin-left: -10px;
   font-size: 18px;
-  color: #ff55ff;
+  color: #000084;
   text-shadow: 0;
 }
 
@@ -4464,7 +4466,7 @@ input[type="submit"].btn.btn-mini {
 
 .navbar .nav > li > a {
   float: none;
-  padding: 0 12.4px;
+  padding: 0 10px;
   color: #ffffff;
   text-decoration: none;
   text-shadow: 0;
@@ -4627,26 +4629,26 @@ input[type="submit"].btn.btn-mini {
 }
 
 .navbar-inverse .navbar-inner {
-  background: #000000;
+  background: #bbbbbb;
 }
 
 .navbar-inverse .brand,
 .navbar-inverse .nav > li > a {
-  color: #ffffff;
+  color: #000000;
   text-shadow: 0;
-  background: #000000;
+  background: #bbbbbb;
 }
 
 .navbar-inverse .brand:hover,
 .navbar-inverse .nav > li > a:hover,
 .navbar-inverse .brand:focus,
 .navbar-inverse .nav > li > a:focus {
-  color: #000000;
-  background: #bbbbbb;
+  color: #bbbbbb;
+  background: #000000;
 }
 
 .navbar-inverse .brand {
-  color: #ff55ff;
+  color: #000084;
 }
 
 .navbar-inverse .navbar-text {
@@ -4655,15 +4657,16 @@ input[type="submit"].btn.btn-mini {
 
 .navbar-inverse .nav > li > a:focus,
 .navbar-inverse .nav > li > a:hover {
-  color: #000000;
-  background: #bbbbbb;
+  color: #bbbbbb;
+  background: #000000;
 }
 
 .navbar-inverse .nav .active > a,
 .navbar-inverse .nav .active > a:hover,
 .navbar-inverse .nav .active > a:focus {
-  color: #000000;
-  background: #bbbbbb;
+  color: #bbbbbb;
+  text-decoration: underline;
+  background: #000000;
 }
 
 .navbar-inverse .navbar-link {
@@ -5117,28 +5120,28 @@ input[type="submit"].btn.btn-mini {
 }
 
 .tooltip.top {
-  padding: 10.5px 0 10.5px;
+  padding: 9px 0 9px;
   margin-top: -3px;
 }
 
 .tooltip.right {
-  padding: 0 4.5px 0 4.5px;
+  padding: 0 4px 0 4px;
   margin-left: 3px;
 }
 
 .tooltip.bottom {
-  padding: 10.5px 0 10.5px;
+  padding: 9px 0 9px;
   margin-top: 3px;
 }
 
 .tooltip.left {
-  padding: 0 4.5px 0 4.5px;
+  padding: 0 4px 0 4px;
   margin-left: -3px;
 }
 
 .tooltip-inner {
   max-width: 310px;
-  padding: 10.5px 4.5px 10.5px 4.5px;
+  padding: 9px 4px 9px 4px;
   color: #ffffff;
   text-align: center;
   text-decoration: none;
