@@ -3202,9 +3202,9 @@ button.close {
      -moz-border-radius: 0;
           border-radius: 0;
   *zoom: 1;
-  -webkit-box-shadow: 8px 7px 0 #000000;
-     -moz-box-shadow: 8px 7px 0 #000000;
-          box-shadow: 8px 7px 0 #000000;
+  -webkit-box-shadow: 10px 10px 0 #000000;
+     -moz-box-shadow: 10px 10px 0 #000000;
+          box-shadow: 10px 10px 0 #000000;
 }
 
 .btn:first-child {
@@ -3240,7 +3240,7 @@ button.close {
 }
 
 .btn-large {
-  padding: 10px 18px;
+  padding: 10px 10px;
   font-size: 18px;
   color: #000000;
   -webkit-border-radius: 0;

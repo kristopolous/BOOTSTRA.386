@@ -32,7 +32,7 @@
   background: @gray;
   .border-radius(@baseBorderRadius);
   .ie7-restore-left-whitespace(); // Give IE7 some love
-  .box-shadow(~"8px 7px 0 rgb(0,0,0)");
+  .box-shadow(~"@{baseLineWidth} @{halfbaseLineHeight} 0 rgb(0,0,0)");
   border: 0;
   border-width: 0;
 
@@ -78,9 +78,9 @@
 // Large
 .btn-large {
   color: @black;
-  padding: @baseLineHeight/2 @baseFontSize;
+  padding: @baseLineHeight/2 @baseLineWidth;
   font-size: @fontSizeLarge;
-  .border-radius(@borderRadiusLarge);
+  .border-radius(0);
 }
 .btn-large [class^="icon-"],
 .btn-large [class*=" icon-"] {
