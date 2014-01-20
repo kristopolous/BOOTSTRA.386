@@ -80,8 +80,8 @@ input[type="color"],
 .uneditable-input {
   display: inline-block;
   height: @baseLineHeight;
-  padding: 4px 6px;
-  margin-bottom: @baseLineHeight / 2;
+  padding: 0 6px @bs 0;
+  margin-bottom: @ts;
   font-size: @baseFontSize;
   line-height: @baseLineHeight;
   color: @gray;
@@ -119,8 +119,7 @@ input[type="color"],
 .uneditable-input {
   background-color: transparent;
   border:0;
-  border-bottom: 1px solid @inputBorder;
-  .transition(~"border linear .2s, box-shadow linear .2s");
+  border-bottom: 2px solid @inputBorder;
 
   // Focus state
   &:focus {

@@ -1142,8 +1142,8 @@ input[type="color"],
 .uneditable-input {
   display: inline-block;
   height: 20px;
-  padding: 4px 6px;
-  margin-bottom: 10px;
+  padding: 0 6px 9px 0;
+  margin-bottom: 9px;
   font-size: 18px;
   line-height: 20px;
   color: #bbbbbb;
@@ -1181,11 +1181,7 @@ input[type="color"],
 .uneditable-input {
   background-color: transparent;
   border: 0;
-  border-bottom: 1px solid #cccccc;
-  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
-     -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
-       -o-transition: border linear 0.2s, box-shadow linear 0.2s;
-          transition: border linear 0.2s, box-shadow linear 0.2s;
+  border-bottom: 2px solid #cccccc;
 }
 
 textarea:focus,
@@ -2954,14 +2950,14 @@ table th[class*="span"],
 .dropdown-menu > li > a:focus,
 .dropdown-submenu:hover > a,
 .dropdown-submenu:focus > a {
-  color: #ffffff;
+  color: #bbbbbb;
   text-decoration: none;
 }
 
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
 .dropdown-menu > .active > a:focus {
-  color: #ffffff;
+  color: #bbbbbb;
   text-decoration: none;
   background-color: #fefe4a;
   background-image: -moz-linear-gradient(top, #fefe54, #fefe3b);
@@ -3059,7 +3055,7 @@ table th[class*="span"],
 }
 
 .dropdown-submenu:hover > a:after {
-  border-left-color: #ffffff;
+  border-left-color: #bbbbbb;
 }
 
 .dropdown-submenu.pull-left {
@@ -4283,11 +4279,11 @@ input[type="submit"].btn.btn-mini {
 .navbar-text {
   margin-bottom: 0;
   line-height: 20px;
-  color: #ffffff;
+  color: #000000;
 }
 
 .navbar-link {
-  color: #ffffff;
+  color: #000000;
 }
 
 .navbar-link:hover,
@@ -4467,7 +4463,7 @@ input[type="submit"].btn.btn-mini {
 .navbar .nav > li > a {
   float: none;
   padding: 0 10px;
-  color: #ffffff;
+  color: #000000;
   text-decoration: none;
   text-shadow: 0;
 }
@@ -4588,8 +4584,8 @@ input[type="submit"].btn.btn-mini {
 }
 
 .navbar .nav li.dropdown > .dropdown-toggle .caret {
-  border-top-color: #ffffff;
-  border-bottom-color: #ffffff;
+  border-top-color: #000000;
+  border-bottom-color: #000000;
 }
 
 .navbar .nav li.dropdown.open > .dropdown-toggle .caret,

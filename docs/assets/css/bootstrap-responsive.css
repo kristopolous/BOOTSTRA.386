@@ -993,14 +993,14 @@
     display: none;
   }
   .nav-collapse .nav .nav-header {
-    color: #ffffff;
+    color: #000000;
     text-shadow: none;
   }
   .nav-collapse .nav > li > a,
   .nav-collapse .dropdown-menu a {
     padding: 9px 15px;
     font-weight: bold;
-    color: #ffffff;
+    color: #000000;
   }
   .nav-collapse .btn {
     padding: 4px 10px 4px;
