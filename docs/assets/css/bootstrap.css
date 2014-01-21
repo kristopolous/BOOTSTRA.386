@@ -4762,11 +4762,15 @@ input[type="submit"].btn.btn-mini {
   color: #ffffff;
 }
 
+.breadcrumb:before {
+  content: ">>";
+}
+
 .breadcrumb {
-  padding: 8px 15px;
+  padding: 0 20px;
   margin: 0 0 20px;
   list-style: none;
-  background-color: #f5f5f5;
+  background-color: #000000;
   -webkit-border-radius: 0;
      -moz-border-radius: 0;
           border-radius: 0;
@@ -4780,8 +4784,8 @@ input[type="submit"].btn.btn-mini {
 }
 
 .breadcrumb > li > .divider {
-  padding: 0 5px;
-  color: #ccc;
+  padding: 0 10px;
+  color: #bbbbbb;
 }
 
 .breadcrumb > .active {

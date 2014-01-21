@@ -3,19 +3,22 @@
 // --------------------------------------------------
 
 
+.breadcrumb:before {
+  content: ">>";
+}
 .breadcrumb {
-  padding: 8px 15px;
+  padding: 0 @baseLineWidth * 2;
   margin: 0 0 @baseLineHeight;
   list-style: none;
-  background-color: #f5f5f5;
+  background-color: @black;
   .border-radius(@baseBorderRadius);
   > li {
     display: inline-block;
     .ie7-inline-block();
     text-shadow: 0;
     > .divider {
-      padding: 0 5px;
-      color: #ccc;
+      padding: 0 @baseLineWidth;
+      color: @grayLight;
     }
   }
   > .active {
