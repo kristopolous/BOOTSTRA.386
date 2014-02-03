@@ -3847,6 +3847,7 @@ input[type="submit"].btn.btn-mini {
 }
 
 .nav-list {
+  display: inline-block;
   padding: 10px 15px;
   margin: 10px 5px;
   margin-left: -5px;
