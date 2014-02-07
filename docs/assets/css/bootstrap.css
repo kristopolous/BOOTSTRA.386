@@ -894,8 +894,8 @@ ul.inline > li,
 ol.inline > li {
   display: inline-block;
   *display: inline;
-  padding-right: 5px;
-  padding-left: 5px;
+  padding-right: 9.5px;
+  padding-left: 10.7px;
   *zoom: 1;
 }
 
@@ -955,6 +955,7 @@ hr {
 abbr[title],
 abbr[data-original-title] {
   cursor: help;
+  border: 0;
 }
 
 abbr.initialism {
