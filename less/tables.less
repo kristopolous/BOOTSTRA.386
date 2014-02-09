@@ -76,10 +76,12 @@ table {
   border-collapse: separate; // Done so we can round those corners!
   *border-collapse: collapse; // IE7 can't round corners anyway
   border-left: 0;
-  .border-radius(@baseBorderRadius);
+  margin-left: @lhs;
+
   th,
   td {
     border-left: @borderWidth solid @tableBorder;
+    padding: inherit 5.2px;
   }
   // Prevent a double border
   caption + thead tr:first-child th,

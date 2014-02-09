@@ -913,7 +913,7 @@ dt {
 }
 
 dd {
-  margin-left: 20px;
+  margin-left: 21px;
 }
 
 .dl-horizontal {
@@ -933,7 +933,7 @@ dd {
 
 .dl-horizontal dt {
   float: left;
-  width: 160px;
+  width: 162px;
   overflow: hidden;
   clear: left;
   text-align: right;
@@ -942,7 +942,7 @@ dd {
 }
 
 .dl-horizontal dd {
-  margin-left: 180px;
+  margin-left: 182px;
 }
 
 hr {
@@ -1951,7 +1951,7 @@ legend + .control-group {
 
 .form-horizontal .control-label {
   float: left;
-  width: 160px;
+  width: 162px;
   padding-top: 5px;
   text-align: right;
 }
@@ -1959,12 +1959,12 @@ legend + .control-group {
 .form-horizontal .controls {
   *display: inline-block;
   *padding-left: 20px;
-  margin-left: 180px;
+  margin-left: 182px;
   *margin-left: 0;
 }
 
 .form-horizontal .controls:first-child {
-  *padding-left: 180px;
+  *padding-left: 182px;
 }
 
 .form-horizontal .help-block {
@@ -1981,7 +1981,7 @@ legend + .control-group {
 }
 
 .form-horizontal .form-actions {
-  padding-left: 180px;
+  padding-left: 182px;
 }
 
 table {
@@ -2036,17 +2036,16 @@ table {
 }
 
 .table-bordered {
+  margin-left: 4px;
   border: 2px solid #dddddd;
   border-collapse: separate;
   *border-collapse: collapse;
   border-left: 0;
-  -webkit-border-radius: 0;
-     -moz-border-radius: 0;
-          border-radius: 0;
 }
 
 .table-bordered th,
 .table-bordered td {
+  padding: inherit 5.2px;
   border-left: 2px solid #dddddd;
 }
 
