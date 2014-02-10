@@ -154,3 +154,17 @@ inside of a div, things can get tricky.  You have
 Or you need to wrap these things artificially in code. Additionally, look at the border above.  On the right hand you have
 a border that is the width of 2 characters, offset down by a full character.  But in our world, all offsets go off the center
 of the border, so the math has to be done differently to make this work and have everything line up.
+
+### Gallery
+This is a gallery of dos app screen shots for my own personal inspiration
+
+<img src=http://i.imgur.com/mqBCFHm.png>
+<img src=http://i.imgur.com/ESwso02.png>
+<img src=http://i.imgur.com/lpt9clH.gif>
+<img src=http://i.imgur.com/TSneArL.jpg>
+<img src=http://i.imgur.com/z1v7V8v.jpg>
+<img src=http://i.imgur.com/rzPDExq.png>
+<img src=http://i.imgur.com/3gz95qK.png>
+<img src=http://i.imgur.com/68KJDZ1.gif>
+<img src=http://i.imgur.com/yHuFO4G.jpg>
+<img src=http://i.imgur.com/8uWnw3G.png>
