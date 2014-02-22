@@ -217,7 +217,7 @@
 @navbarLinkColorHover:            @grayDark;
 @navbarLinkColorActive:           @gray;
 @navbarLinkBackgroundHover:       transparent;
-@navbarLinkBackgroundActive:      darken(@navbarBackground, 5%);
+@navbarLinkBackgroundActive:      @navbarBackground;
 
 @navbarBrandColor:                @navbarLinkColor;
 
@@ -259,19 +259,19 @@
 // -------------------------
 @warningText:             @white;
 @warningBackground:       @cyanDark;
-@warningBorder:           darken(spin(@warningBackground, -10), 3%);
+@warningBorder:           spin(@warningBackground, -10);
 
 @errorText:               @white;
 @errorBackground:         @redDark;
-@errorBorder:             darken(spin(@errorBackground, -10), 3%);
+@errorBorder:             spin(@errorBackground, -10);
 
 @successText:             @green;
 @successBackground:       @black;
-@successBorder:           darken(spin(@successBackground, -10), 5%);
+@successBorder:           spin(@successBackground, -10);
 
 @infoText:                @black;
 @infoBackground:          @black;
-@infoBorder:              darken(spin(@infoBackground, -10), 7%);
+@infoBorder:              spin(@infoBackground, -10);
 
 
 // Tooltips and popovers
@@ -284,7 +284,7 @@
 @popoverBackground:       #fff;
 @popoverArrowWidth:       10px;
 @popoverArrowColor:       #fff;
-@popoverTitleBackground:  darken(@popoverBackground, 3%);
+@popoverTitleBackground:  @popoverBackground;
 
 // Special enhancement for popovers
 @popoverArrowOuterWidth:  @popoverArrowWidth + 1;

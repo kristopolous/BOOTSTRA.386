@@ -23,17 +23,22 @@ legend {
   width: 100%;
   padding: 0;
   margin-bottom: @baseLineHeight;
-  font-size: @baseFontSize * 1.5;
+  font-size: @baseFontSize;
   line-height: @baseLineHeight * 2;
-  color: @grayDark;
+  color: @white;
   border: 0;
-  border-bottom: 1px solid #e5e5e5;
 
   // Small
   small {
-    font-size: @baseLineHeight * .75;
-    color: @grayLight;
+    font-size: @baseLineHeight;
+    color: @gray;
   }
+}
+legend:before {
+  content: "## ";
+}
+legend:after {
+  content: " ##";
 }
 
 // Set font for forms
@@ -80,13 +85,15 @@ input[type="color"],
 .uneditable-input {
   display: inline-block;
   height: @baseLineHeight;
-  padding: 0 6px @bs 0;
-  margin-bottom: @ts;
+  padding: (@baseLineHeight / 2) (@baseLineWidth / 2);
+  margin: (@baseLineHeight / 2) (@baseLineWidth / 2);
   font-size: @baseFontSize;
+  border: @borderWidth solid @black;
   line-height: @baseLineHeight;
-  color: @gray;
-  .border-radius(@inputBorderRadius);
+  color: @black;
+  background: @gray;
   vertical-align: middle;
+  box-shadow:0 0 0 5px @gray;
 }
 
 // Reset appearance properties for textual inputs and textarea
@@ -117,9 +124,9 @@ input[type="search"],
 input[type="tel"],
 input[type="color"],
 .uneditable-input {
-  background-color: transparent;
+  background-color: @gray;
   border:0;
-  border-bottom: 2px solid @inputBorder;
+  border-bottom: @borderWidth solid black;
 
   // Focus state
   &:focus {
