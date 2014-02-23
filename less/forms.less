@@ -85,7 +85,7 @@ input[type="color"],
 .uneditable-input {
   display: inline-block;
   height: @baseLineHeight;
-  padding: (@baseLineHeight / 2) (@baseLineWidth / 2);
+  padding: 0 0;
   margin: (@baseLineHeight / 2) (@baseLineWidth / 2);
   font-size: @baseFontSize;
   border: @borderWidth solid @black;
@@ -93,7 +93,12 @@ input[type="color"],
   color: @black;
   background: @gray;
   vertical-align: middle;
-  box-shadow:0 0 0 5px @gray;
+}
+input[type="text"]:before {
+  content: "[";
+}
+input[type="text"]:after {
+  content: "]";
 }
 
 // Reset appearance properties for textual inputs and textarea
