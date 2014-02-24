@@ -41,6 +41,26 @@
 Bootstrap/386 is a [Twitter bootstrap](http://twitter.github.io/bootstrap/) theme intended to make
 webpages look like they are from the 80s.  Here's a few things that are utilized to get it there:
 
+### Status
+
+I've been working on this more or less for a year or so --- there's a lot to do. If you'd like to contribute,
+please try to hack the components section.
+
+Here's some rules:
+
+  * All text must be vertically aligned.  The letters should start at the same horizontal offset down the page, as a grid
+  * All text must be horizontally aligned.  Borders, margins, and paddings must be a function of the height of the font or
+    the height of the font / 2 if you are doing some special ascii-like thing.
+  * Foreground colors can be any of the EGA 16 - background can only be the first 8.
+  * Things like shadows, darken, lighten, border-radius, underline, italics, bold - none of this is allowed.
+
+TODO:
+
+  * You can use some ASCII shaded characters for background &#9617; &#9618; &#9619; and make a repeating image out of them. But **be careful** as you have to have the background cut off when the text starts in order to maintain the grid rules.
+
+Yes, this is harder than you think.
+
+
 ### EGA-16 color palette
 
 This color palette was available on color terminals as far as back as the IBM XT and AT. It was known
