@@ -34,12 +34,16 @@
 
 <img src=http://i.imgur.com/CZKrANV.png>
 
-[Demo](http://9ol.es/BOOTSTRA.386/)
+# [Demo](http://9ol.es/BOOTSTRA.386/)
 
 ## Less sarcastic introduction
 
 Bootstrap/386 is a [Twitter bootstrap](http://twitter.github.io/bootstrap/) theme intended to make
 webpages look like they are from the 80s.  Here's a few things that are utilized to get it there:
+
+### Contact
+
+ * [Mailing list](https://groups.google.com/forum/#!forum/bootstra-386)
 
 ### Status
 
