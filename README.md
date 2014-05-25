@@ -39,7 +39,7 @@
 ## Less sarcastic introduction
 
 Bootstrap/386 is a [Twitter bootstrap](http://twitter.github.io/bootstrap/) theme intended to make
-webpages look like they are from the 80s.  Here's a few things that are utilized to get it there:
+webpages look like they are from the 1980s. 
 
 ### Contact
 
@@ -65,7 +65,10 @@ TODO:
 Yes, this is harder than you think.
 
 
-### EGA-16 color palette
+
+### About the colors.
+
+##### The EGA-16 color palette
 
 This color palette was available on color terminals as far as back as the IBM XT and AT. It was known
 as the 16 color EGA palette.  These 16 colors were available for character mode graphics on CGA cards
@@ -142,7 +145,7 @@ We have
 
   * corners: &#9484; &#9488; &#9492; &#9496;
   * intersections: &#9500; &#9508; &#9516; &#9525; &#9532;
-  * lines: &#9472; &#2500;
+  * lines: &#9472; &#9474;
 
 Then there were double versions fo them, for example, &#9574; or &#9567;.
 
@@ -152,6 +155,12 @@ The important thing here is that because these were characters, you didn't get c
 
 
 So this means that when drawing a box, if we are using a different color background, it has to overflow a bit in order to be accurate.
+
+Here is a diagram pulled from the net:
+
+<img src="http://i.imgur.com/JtnxeDy.gif">
+
+These are part of something that is now called the "WGL4" character set. You can see a list with the modern Unicode equivalents [following this link](http://www.alanwood.net/demos/wgl4.html). They are used sparingly in the code.
 
 ### Solids and Shading
 
