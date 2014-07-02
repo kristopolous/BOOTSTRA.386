@@ -138,7 +138,7 @@ For all intents and purposes, the background color was always dark.
 Borders back in the day relied on box-drawing ASCII characters which, on the PC were part of the 8-bit Microsoft extension to the official
 7-bit ASCII.
 
-There were single and double borders.  Your computer can very likely still render them. Here they are in modern unicode, now also part of 
+There were single and double borders.  Your computer can very likely still render them. Here they are in modern Unicode, now also part of 
 something called WGL 4.0.
 
 We have 
