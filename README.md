@@ -83,7 +83,7 @@ pixels here weren't squares.
 <q>
 <b>Why weren't they squares?</b>
 The monitors themselves were 4:3.  Across this was 640 pixels and top to bottom it was 200.  Pretend you had a 15 inch
-monitor.  This means that the hypotenuese is 15 inches.  We can use the pythagorean theorem here:
+monitor.  This means that the hypotenuese is 15 inches.  We can use the Pythagorean theorem here:
 
     (4x)^2 + (3x)^2 = 15^2 ... x = 3
 
