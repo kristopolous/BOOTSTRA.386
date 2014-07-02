@@ -54,7 +54,7 @@ Here's some rules:
 
   * All text must be vertically aligned.  The letters should start at the same horizontal offset down the page, as a grid
   * All text must be horizontally aligned.  Borders, margins, and paddings must be a function of the height of the font or
-    the height of the font / 2 if you are doing some special ascii-like thing.
+    the height of the font / 2 if you are doing some special ASCII-like thing.
   * Foreground colors can be any of the EGA 16 - background can only be the first 8.
   * Things like shadows, darken, lighten, border-radius, underline, italics, bold - none of this is allowed.
 
