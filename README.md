@@ -54,7 +54,7 @@ Here's some rules:
 
   * All text must be vertically aligned.  The letters should start at the same horizontal offset down the page, as a grid
   * All text must be horizontally aligned.  Borders, margins, and paddings must be a function of the height of the font or
-    the height of the font / 2 if you are doing some special ascii-like thing.
+    the height of the font / 2 if you are doing some special ASCII-like thing.
   * Foreground colors can be any of the EGA 16 - background can only be the first 8.
   * Things like shadows, darken, lighten, border-radius, underline, italics, bold - none of this is allowed.
 
@@ -83,7 +83,7 @@ pixels here weren't squares.
 <q>
 <b>Why weren't they squares?</b>
 The monitors themselves were 4:3.  Across this was 640 pixels and top to bottom it was 200.  Pretend you had a 15 inch
-monitor.  This means that the hypotenuese is 15 inches.  We can use the pythagorean theorem here:
+monitor.  This means that the hypotenuese is 15 inches.  We can use the Pythagorean theorem here:
 
     (4x)^2 + (3x)^2 = 15^2 ... x = 3
 
@@ -138,7 +138,7 @@ For all intents and purposes, the background color was always dark.
 Borders back in the day relied on box-drawing ASCII characters which, on the PC were part of the 8-bit Microsoft extension to the official
 7-bit ASCII.
 
-There were single and double borders.  Your computer can very likely still render them. Here they are in modern unicode, now also part of 
+There were single and double borders.  Your computer can very likely still render them. Here they are in modern Unicode, now also part of 
 something called WGL 4.0.
 
 We have 
@@ -147,7 +147,7 @@ We have
   * intersections: &#9500; &#9508; &#9516; &#9525; &#9532;
   * lines: &#9472; &#9474;
 
-Then there were double versions fo them, for example, &#9574; or &#9567;.
+Then there were double versions of them, for example, &#9574; or &#9567;.
 
 The important thing here is that because these were characters, you didn't get clean backgrounds using them. Here's an example:
 
