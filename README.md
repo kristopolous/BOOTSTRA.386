@@ -46,6 +46,7 @@ webpages look like they are from the 1980s.
 ### Contact
 
  * [Mailing list](https://groups.google.com/forum/#!forum/bootstra-386)
+ * Also try my github username on your messaging platform of choice 
 
 ### Status
 
@@ -66,7 +67,14 @@ TODO:
 
 Yes, this is harder than you think.
 
+### Filing Bugs
 
+Preferably, I like a screen shot and context. Here's an example of a good bug:
+
+> The calculations for a span4 are done in a way that centering text doesn't follow the grid rules:
+> <img src=http://i.imgur.com/hTiYHSB.png>
+
+These are how I knock them out when I work on it.  Thanks
 
 ### About the colors.
 
