@@ -147,7 +147,7 @@ We have
   * intersections: &#9500; &#9508; &#9516; &#9525; &#9532;
   * lines: &#9472; &#9474;
 
-Then there were double versions fo them, for example, &#9574; or &#9567;.
+Then there were double versions of them, for example, &#9574; or &#9567;.
 
 The important thing here is that because these were characters, you didn't get clean backgrounds using them. Here's an example:
 
