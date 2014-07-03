@@ -1,9 +1,9 @@
 {
-    "name": "twitter/bootstrap"
-  , "description": "Sleek, intuitive, and powerful front-end framework for faster and easier web development."
+    "name": "kristopolous/bootstra.386"
+  , "description": "Replacing your HTTP with ATD"
   , "keywords": ["bootstrap", "css"]
-  , "homepage": "http://twitter.github.com/bootstrap/"
-  , "author": "Twitter Inc."
+  , "homepage": "https://github.com/kristopolous/BOOTSTRA.386"
+  , "author": "Twitter Inc. and then, Chris McKenzie and friends"
   , "license": "Apache-2.0"
 
 }
