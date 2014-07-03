@@ -4,10 +4,14 @@ $(function(){
       height: 20,
       width: 12.4
     },
-    wrap = document.body.appendChild(document.createElement('div')),
+    wrap = document.createElement('div'),
     bar = wrap.appendChild(document.createElement('div')),
+
     cursor = document.createElement('div'),
-    pass = 0,
+    // If the user specified that the visibility is hidden, then we
+    // start at the first pass ... otherwise we just do the 
+    // cursor fly-by
+    pass = ($(document.body).css('visibility') == 'visible') ? 1 : 0,
     height = $(window).height(),
     width = $(window).width(),
 
@@ -21,6 +25,17 @@ $(function(){
   cursor.setAttribute('style', 'z-index:9999999;color:#fff;font-weight:bold;position:fixed;bottom:0;right:0');
 
   cursor.innerHTML = bar.innerHTML = '&#9604;';
+
+  // only inject the wrap if the pass is 0
+  if(pass === 0) {
+    document.body.appendChild(wrap);
+    document.body.style.visibility='visible';
+  } else {
+    document.body.appendChild(cursor);
+    rounds /= 2;
+    character.height *= 4;
+  }
+
   var ival = setInterval(function(){
     for(var m = 0; m < rounds; m++) {
       column -= character.width;
