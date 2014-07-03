@@ -13,6 +13,7 @@ File a bug, send me an email, hit me up on facebook, send me something in the ma
 Preferably, I like a screen shot and context. Here's an example of a good bug:
 
 > The calculations for a span4 are done in a way that centering text doesn't follow the grid rules:
+>
 > <img src=http://i.imgur.com/hTiYHSB.png>
 
 
@@ -61,6 +62,7 @@ Bootstrap sez:
 - "Attractive"
 
 I say:
+### semicolons
 Ok, look, use semi-colons, or don't - in fact, you can pad everything with semicolons for all I care.  
 I mean, if the browser takes it, then that's really fine by me. Want to submit code like this?
 
@@ -78,8 +80,31 @@ I mean, if the browser takes it, then that's really fine by me. Want to submit c
       ;;};;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-
 That's fine. Really. I know sed. don't worry.
+
+### commas
+whatever you want.  If  you want to write:
+
+    if ( n === (  
+                  (0,0)
+                   ,7,  
+                    v)
+    ) {
+
+I will consider you an awesome and creative human being and gladly accept your madness.
+
+### spaces
+
+Be creative, have fun.
+
+### strict mode 
+
+eh, don't care.
+
+### Attractive
+
+Different strokes ... have a good time - make the code awesome and fun to read.
+
 
 ## License
 
