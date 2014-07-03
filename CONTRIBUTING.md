@@ -2,14 +2,21 @@
 
 Looking to contribute something to BOOTSTRA.386?
 
-Don't you worry! It's a whole lot fucking easier than the laundry list of rules for contributing to Bootstrap!
+Don't you worry! It's Easy!
 
 **Here's how you can help.**
 
-## Reporting issues
+## Issues
 
-File a bug, send me an email, hit me up on facebook, send me something in the mail with letters cut out from magazines ... I don't care ... I'll address your concerns if I can.
+To file a bug you could 
 
+ * file an issue on github.
+ * hit up the mailing list.
+ * send me an email.
+ * hit me up on facebook.
+ * mail me something with letters cut out from magazines.
+ * knock on my door at 4am and place into my palm, a dutifully hand-written description with annotated diagrams.
+ 
 Preferably, I like a screen shot and context. Here's an example of a good bug:
 
 > The calculations for a span4 are done in a way that centering text doesn't follow the grid rules:
@@ -17,26 +24,7 @@ Preferably, I like a screen shot and context. Here's an example of a good bug:
 > <img src=http://i.imgur.com/hTiYHSB.png>
 
 
-## Key branches
-
-- `master` is the latest, deployed version.
-- `gh-pages` is the hosted docs (not to be used for pull requests).
-
-
-## Notes on the repo
-
-Bootstrap sez: As of v2.0.0, Bootstrap's documentation is powered by Mustache templates and built via `make` before each commit and release. This was done to enable internationalization (translation) in a future release by uploading our strings to the [Twitter Translation Center](http://translate.twttr.com/). Any edits to the docs should be first done in the Mustache files and then recompiled into the HTML.
-
-Alright, I'm not going to change that I guess.
-
-
-## Pull requests
-
-You know what? bootstrap has all these rules. I assume you know what you are doing. I mean for the love of God, you are Reading Documentation - who does that now? really? Exactly. Trust me, you're fine.
-
-## Coding standards: CSS
-
-Bootstrap had all these rules here - they don't matter. These do:
+## CSS guidelines
 
   * All generated text must be vertically aligned.  The letters should start at the same horizontal offset down the page, as a grid
   * All generated text must be horizontally aligned.  Borders, margins, and paddings must be a function of the height of the font or
@@ -44,26 +32,14 @@ Bootstrap had all these rules here - they don't matter. These do:
   * Foreground colors can be any of the EGA 16 - background can only be the first 8.
   * Things like shadows, darken, lighten, border-radius, underline, italics, bold - none of this is allowed - it has to have been able to have been generated in a generic ANSI terminal - think IBM AT era.
 
-## Coding standards: HTML
+## HTML guidelines
 
-- Whatever kind of whitespace you want
-- Whatever kind of quotes you want
-- It can be indented like the IOCCC for all I care.
-- Use tags and elements appropriate for an HTML5 doctype (e.g., self-closing tags) or don't ... the browser will figure it out - really.
+( * attractive intentional dust * )
 
+## JS guidelines
 
-## Coding standards: JS
-
-Bootstrap sez: 
-- No semicolons
-- Comma first
-- 2 spaces (no tabs)
-- strict mode
-- "Attractive"
-
-I say:
 ### semicolons
-Ok, look, use semi-colons, or don't - in fact, you can pad everything with semicolons for all I care.  
+use semi-colons, or don't - in fact, you can pad everything with semicolons.
 I mean, if the browser takes it, then that's really fine by me. Want to submit code like this?
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -97,14 +73,11 @@ I will consider you an awesome and creative human being and gladly accept your m
 
 Be creative, have fun.
 
-### strict mode 
+### other styles
 
-eh, don't care.
+Different strokes ... have a good time - make the code awesome and fun to read - like a zine self-published at a co-op. 
 
-### Attractive
-
-Different strokes ... have a good time - make the code awesome and fun to read.
-
+be more awesomer!
 
 ## License
 

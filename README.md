@@ -1,3 +1,10 @@
+### Download the current [bootstrap.css](https://raw.githubusercontent.com/kristopolous/BOOTSTRA.386/master/docs/assets/css/bootstrap.css) and [bootstrap-responsive.css](https://raw.githubusercontent.com/kristopolous/BOOTSTRA.386/master/docs/assets/css/bootstrap-responsive.css) to use it right away.
+
+Bootstrap/386 is a [Twitter bootstrap v2](http://twitter.github.io/bootstrap/) theme to make webpages look like they are from the 1980s. 
+
+# [Demo Link](http://kristopolous.github.io/BOOTSTRA.386/)
+
+<a href=http://i.imgur.com/chWpJfb.jpg><img src=http://i.imgur.com/chWpJfbl.jpg></a>
 <pre>
      ____  ____  ____  _____________________  ___    ____        __   _____ ____  _____
     / __ )/ __ \/ __ \/_  __/ ___/_  __/ __ \/   |  / __ \     _/_/  |__  /( __ )/ ___/
@@ -34,16 +41,7 @@
 
 <img src=http://i.imgur.com/CZKrANV.png>
 
-# [Demonstration Site](http://kristopolous.github.io/BOOTSTRA.386/)
 
-<a href=http://i.imgur.com/chWpJfb.jpg><img src=http://i.imgur.com/chWpJfbl.jpg></a>
-
-### Download the current [bootstrap.css](https://raw.githubusercontent.com/kristopolous/BOOTSTRA.386/master/docs/assets/css/bootstrap.css) and [bootstrap-responsive.css](https://raw.githubusercontent.com/kristopolous/BOOTSTRA.386/master/docs/assets/css/bootstrap-responsive.css) to use it right away.
-
-## Formal Intro
-
-Bootstrap/386 is a [Twitter bootstrap v2](http://twitter.github.io/bootstrap/) theme intended to make
-webpages look like they are from the 1980s. 
 
 ### Bugs and Stuff
 
