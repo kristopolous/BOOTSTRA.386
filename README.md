@@ -34,7 +34,7 @@
 
 <img src=http://i.imgur.com/CZKrANV.png>
 
-# [Demo Site](http://9ol.es/BOOTSTRA.386/) 
+# [Demo Site](http://kristopolous.github.io/BOOTSTRA.386/)
 
 ### Download the current [bootstrap.css](https://raw.githubusercontent.com/kristopolous/BOOTSTRA.386/master/docs/assets/css/bootstrap.css) and [bootstrap-responsive.css](https://raw.githubusercontent.com/kristopolous/BOOTSTRA.386/master/docs/assets/css/bootstrap-responsive.css) to use it right away.
 
