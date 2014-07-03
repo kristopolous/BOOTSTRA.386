@@ -36,7 +36,7 @@
 
 # [Demonstration Site](http://kristopolous.github.io/BOOTSTRA.386/)
 
-<a href=http://i.imgur.com/47lUP4T.jpg><img src=http://i.imgur.com/47lUP4Tl.jpg></a>
+<a href=http://i.imgur.com/chWpJfb.jpg><img src=http://i.imgur.com/chWpJfbl.jpg></a>
 
 ### Download the current [bootstrap.css](https://raw.githubusercontent.com/kristopolous/BOOTSTRA.386/master/docs/assets/css/bootstrap.css) and [bootstrap-responsive.css](https://raw.githubusercontent.com/kristopolous/BOOTSTRA.386/master/docs/assets/css/bootstrap-responsive.css) to use it right away.
 
