@@ -45,7 +45,7 @@ webpages look like they are from the 1980s.
 
 ### Bugs and Stuff
 
-Check out the [contibution](https://github.com/kristopolous/BOOTSTRA.386/blob/master/CONTRIBUTING.md) page.
+Check out the [contribution](https://github.com/kristopolous/BOOTSTRA.386/blob/master/CONTRIBUTING.md) doc - it's easy, I swear.
 
 ### Contact
 
