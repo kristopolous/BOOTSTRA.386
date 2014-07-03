@@ -6,9 +6,7 @@
 // Base styles
 // --------------------------------------------------
 
-.btn:hover:before {
-  color: @white;
-}
+.btn:hover:before,
 .btn:hover:after {
   color: @white;
 }
@@ -35,13 +33,15 @@
   .box-shadow(~"@{baseLineWidth} @{halfbaseLineHeight} 0 rgb(0,0,0)");
   border: 0;
   border-width: 0;
+  color: @black;
 
   // Hover/focus state
   &:hover,
   &:focus {
-    color: @white;
+    color: @black;
     text-decoration: none;
-    background: @brown;
+    background: @gray;
+    outline: 0;
 
     // transition is only when going to hover/focus, otherwise the background
     // behind the gradient (there for IE<=9 fallback) gets mismatched
@@ -56,6 +56,8 @@
   // Active state
   &.active,
   &:active {
+    margin: @halfbaseLineHeight 0 @halfbaseLineHeight @halfbaseLineHeight;
+    .box-shadow(~"0 0 0");
     background-image: none;
     outline: 0;
   }
