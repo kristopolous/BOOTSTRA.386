@@ -3222,7 +3222,7 @@ button.close {
 
 .btn:hover,
 .btn:focus {
-  color: #000000;
+  color: #ffffff;
   text-decoration: none;
   background: #bbbbbb;
   outline: 0;
@@ -5057,10 +5057,6 @@ input[type="submit"].btn.btn-mini {
 
 .modal.fade {
   top: -25%;
-  -webkit-transition: opacity 0.3s linear, top 0.3s ease-out;
-     -moz-transition: opacity 0.3s linear, top 0.3s ease-out;
-       -o-transition: opacity 0.3s linear, top 0.3s ease-out;
-          transition: opacity 0.3s linear, top 0.3s ease-out;
 }
 
 .modal.fade.in {
@@ -5385,10 +5381,6 @@ input[type="submit"].btn.btn-mini {
   -webkit-box-shadow: 0;
      -moz-box-shadow: 0;
           box-shadow: 0;
-  -webkit-transition: all 0.2s ease-in-out;
-     -moz-transition: all 0.2s ease-in-out;
-       -o-transition: all 0.2s ease-in-out;
-          transition: all 0.2s ease-in-out;
 }
 
 a.thumbnail:hover,
@@ -5781,10 +5773,6 @@ a.badge:focus {
 .carousel-inner > .item {
   position: relative;
   display: none;
-  -webkit-transition: 0.6s ease-in-out left;
-     -moz-transition: 0.6s ease-in-out left;
-       -o-transition: 0.6s ease-in-out left;
-          transition: 0.6s ease-in-out left;
 }
 
 .carousel-inner > .item > img,
