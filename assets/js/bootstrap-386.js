@@ -20,6 +20,7 @@ $(function(){
     rounds = (height * width / 165000),
     column = width, row = height - character.height;
     // TODO: externalize this
+    //
   wrap.setAttribute('style', 'z-index:9999999;background:#000084;position:fixed;bottom:0;right:0;height:100%;width:100%');
   bar.setAttribute('style', 'color:#fff;font-weight:bold;float:right;background:#000084;height:20px;margin-top:-20px;width:100%');
   cursor.setAttribute('style', 'z-index:9999999;color:#fff;font-weight:bold;position:fixed;bottom:0;right:0');
