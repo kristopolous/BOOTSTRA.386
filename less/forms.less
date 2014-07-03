@@ -142,10 +142,32 @@ input[type="color"],
 // Position radios and checkboxes better
 input[type="radio"],
 input[type="checkbox"] {
-  margin: 4px 0 0;
-  *margin-top: 0; /* IE7 */
-  margin-top: 1px \9; /* IE8-9 */
   line-height: normal;
+  visibility: hidden;
+}
+
+input[type="radio"]::before,
+input[type="checkbox"]::before {
+  visibility: visible;
+}
+
+input[type="checkbox"]::before {
+  display: inline-block;
+  content: '[\00a0]';
+  color: @gray;
+}
+input[type="checkbox"]:checked::before {
+  content: '[X]';
+  color: @gray;
+}
+
+input[type="radio"]::before {
+  content: '(\00a0)';
+  color: @gray;
+}
+input[type="radio"]:checked::before {
+  content: '(X)';
+  color: @gray;
 }
 
 // Reset width of input images, buttons, radios, checkboxes
