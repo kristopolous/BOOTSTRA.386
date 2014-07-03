@@ -38,7 +38,7 @@
 
 ### Download the current [bootstrap.css](https://raw.githubusercontent.com/kristopolous/BOOTSTRA.386/master/docs/assets/css/bootstrap.css) and [bootstrap-responsive.css](https://raw.githubusercontent.com/kristopolous/BOOTSTRA.386/master/docs/assets/css/bootstrap-responsive.css) to use it right away.
 
-## Less fun intro
+## Less Fun Intro
 
 Bootstrap/386 is a [Twitter bootstrap v2](http://twitter.github.io/bootstrap/) theme intended to make
 webpages look like they are from the 1980s. 
@@ -72,3 +72,4 @@ These are how I knock them out when I work on it.  Thanks
  * [Mailing list](https://groups.google.com/forum/#!forum/bootstra-386)
  * Also try my github username on your messaging platform of choice 
 
+### See [the wiki](https://github.com/kristopolous/BOOTSTRA.386/wiki/) for more documentation.
