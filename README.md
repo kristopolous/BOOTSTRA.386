@@ -43,29 +43,9 @@
 Bootstrap/386 is a [Twitter bootstrap v2](http://twitter.github.io/bootstrap/) theme intended to make
 webpages look like they are from the 1980s. 
 
-### Status
+### Bugs and Stuff
 
-I've been working on this more or less for a year or so --- there's a lot to do. If you'd like to contribute,
-please try to hack the components section.
-
-Here's some rules:
-
-  * All text must be vertically aligned.  The letters should start at the same horizontal offset down the page, as a grid
-  * All text must be horizontally aligned.  Borders, margins, and paddings must be a function of the height of the font or
-    the height of the font / 2 if you are doing some special ASCII-like thing.
-  * Foreground colors can be any of the EGA 16 - background can only be the first 8.
-  * Things like shadows, darken, lighten, border-radius, underline, italics, bold - none of this is allowed.
-
-There is more written up in [the wiki](https://github.com/kristopolous/BOOTSTRA.386/wiki/).
-
-### Filing Bugs
-
-Preferably, I like a screen shot and context. Here's an example of a good bug:
-
-> The calculations for a span4 are done in a way that centering text doesn't follow the grid rules:
-> <img src=http://i.imgur.com/hTiYHSB.png>
-
-These are how I knock them out when I work on it.  Thanks
+Check out the [contibution](https://github.com/kristopolous/BOOTSTRA.386/blob/master/CONTRIBUTING.md) page.
 
 ### Contact
 
