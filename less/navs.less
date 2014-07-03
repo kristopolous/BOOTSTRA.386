@@ -101,6 +101,7 @@
 }
 .nav-tabs > li > a,
 .nav-pills > li > a {
+  color: @black;
   padding-right: 8px;
   padding-left: 8px;
   margin-right: 0;
@@ -121,11 +122,10 @@
 // Actual tabs (as links)
 .nav-tabs > li > a {
   line-height: @baseLineHeight;
-  border: 1px solid transparent;
-  .border-radius(0px 0px 0 0);
+  .border-radius(0);
   &:hover,
   &:focus {
-    border-color: @grayLight @grayLight #ddd;
+    background: @black;
   }
 }
 // Active state, and it's :hover/:focus to override normal :hover/:focus
