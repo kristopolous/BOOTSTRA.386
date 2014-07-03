@@ -3179,10 +3179,7 @@ button.close {
   -webkit-appearance: none;
 }
 
-.btn:hover:before {
-  color: #ffffff;
-}
-
+.btn:hover:before,
 .btn:hover:after {
   color: #ffffff;
 }
@@ -3203,6 +3200,7 @@ button.close {
   *margin-left: .3em;
   font-size: 18px;
   line-height: 20px;
+  color: #000000;
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
@@ -3224,9 +3222,10 @@ button.close {
 
 .btn:hover,
 .btn:focus {
-  color: #ffffff;
+  color: #000000;
   text-decoration: none;
-  background: #aa5500;
+  background: #bbbbbb;
+  outline: 0;
 }
 
 .btn:focus {
@@ -3237,8 +3236,12 @@ button.close {
 
 .btn.active,
 .btn:active {
+  margin: 10px 0 10px 10px;
   background-image: none;
   outline: 0;
+  -webkit-box-shadow: 0 0 0;
+     -moz-box-shadow: 0 0 0;
+          box-shadow: 0 0 0;
 }
 
 .btn.disabled,
@@ -4355,6 +4358,9 @@ input[type="submit"].btn.btn-mini {
 .navbar-form .btn {
   display: inline-block;
   margin-bottom: 0;
+  -webkit-box-shadow: 0 0;
+     -moz-box-shadow: 0 0;
+          box-shadow: 0 0;
 }
 
 .navbar-form input[type="image"],
