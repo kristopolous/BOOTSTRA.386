@@ -1,0 +1,26 @@
+{
+    "name": "bootstra.386"
+  , "description": "Replacing your HTTP with ATD"
+  , "version": "2.3.1"
+  , "keywords": ["bootstrap", "css"]
+  , "homepage": "https://github.com/kristopolous/BOOTSTRA.386"
+  , "author": "Twitter Inc. and then, Chris McKenzie and friends"
+  , "scripts": { "test": "make test" }
+  , "repository": {
+      "type": "git"
+    , "url": "https://github.com/kristopolous/BOOTSTRA.386.git"
+  }
+  , "licenses": [
+    {
+        "type": "Apache-2.0"
+      , "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ]
+  , "devDependencies": {
+      "uglify-js": "1.3.4"
+    , "jshint": "0.9.1"
+    , "recess": "1.1.6"
+    , "connect": "2.1.3"
+    , "hogan.js": "2.0.0"
+  }
+}

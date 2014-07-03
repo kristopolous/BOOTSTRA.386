@@ -1,0 +1,9 @@
+{
+    "name": "kristopolous/bootstra.386"
+  , "description": "Take your HTM from HTTP to ATD"
+  , "keywords": ["bootstrap", "css"]
+  , "homepage": "https://github.com/kristopolous/BOOTSTRA.386"
+  , "author": "Twitter Inc. and then, Chris McKenzie and friends"
+  , "license": "Apache-2.0"
+
+}
