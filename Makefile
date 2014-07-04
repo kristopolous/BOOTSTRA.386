@@ -63,6 +63,7 @@ clean:
 #
 
 zipfile:
+	cp -ur ./docs/assets/css/fonts bootstrap/css/
 	zip -r -9 bootstra.386-latest.zip bootstrap
 
 bootstrap: bootstrap-img bootstrap-css bootstrap-js zipfile
