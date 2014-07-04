@@ -42,6 +42,20 @@ Bootstrap/386 is a [Twitter bootstrap v2](http://twitter.github.io/bootstrap/) t
 <img src=http://i.imgur.com/CZKrANV.png>
 
 
+### Configuration
+
+Javascript settings are set via a global `_386` object.
+
+#### Animation
+The loading animation can be configured through the following values:
+
+  * fastLoad `[bool]` (default: false) - disable all animation.
+  * onePass `[bool]` (default: false) - when set, this will disable the second flyby cursor
+  * speedFactor `[float]` (default: 1.0) - This controls how fast the animation happens. Higher values mean faster animation.
+
+Example:
+
+    _386 = { onePass: true, speedFactor: 1.25 };
 
 ### Bugs and Stuff
 
