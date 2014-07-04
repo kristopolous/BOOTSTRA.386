@@ -1,4 +1,4 @@
-### Download the current [bootstrap.css](https://raw.githubusercontent.com/kristopolous/BOOTSTRA.386/master/docs/assets/css/bootstrap.css) and [bootstrap-responsive.css](https://raw.githubusercontent.com/kristopolous/BOOTSTRA.386/master/docs/assets/css/bootstrap-responsive.css) to use it right away.
+### Download the [latest zip file](https://github.com/kristopolous/BOOTSTRA.386/blob/master/bootstra.386-latest.zip?raw=true) with all the necessary JS and CSS to get started right away.
 
 Bootstrap/386 is a [Twitter bootstrap v2](http://twitter.github.io/bootstrap/) theme to make webpages look like they are from the 1980s. 
 

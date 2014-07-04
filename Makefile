@@ -62,8 +62,10 @@ clean:
 # recess & uglifyjs are required
 #
 
-bootstrap: bootstrap-img bootstrap-css bootstrap-js
-	zip -r -9 bootstrap-latest.zip bootstrap
+zipfile:
+	zip -r -9 bootstra.386-latest.zip bootstrap
+
+bootstrap: bootstrap-img bootstrap-css bootstrap-js zipfile
 
 
 #
