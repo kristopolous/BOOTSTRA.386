@@ -57,6 +57,8 @@ Example:
 
     _386 = { onePass: true, speedFactor: 1.25 };
 
+> Note: For the progressive animation to work you may need to set this stanza in your regular CSS: `body { visibility: hidden }`.
+
 ### Bugs and Stuff
 
 Check out the [contribution](https://github.com/kristopolous/BOOTSTRA.386/blob/master/CONTRIBUTING.md) doc - it's easy, I swear.
