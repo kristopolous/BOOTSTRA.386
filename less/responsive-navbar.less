@@ -26,7 +26,7 @@
   }
   .navbar-fixed-top .navbar-inner,
   .navbar-fixed-bottom .navbar-inner {
-    padding: 5px;
+    padding: 0;
   }
   .navbar .container {
     width: auto;
@@ -34,9 +34,8 @@
   }
   // Account for brand name
   .navbar .brand {
-    padding-left: 10px;
-    padding-right: 10px;
-    margin: 0 0 0 -5px;
+    padding: @baseLineHeight/2 @baseLineWidth;
+    margin: 0;
   }
 
   // COLLAPSIBLE NAVBAR
@@ -54,7 +53,7 @@
     float: none;
   }
   .nav-collapse .nav > li > a {
-    margin-bottom: 2px;
+    margin-bottom: 0;
   }
   .nav-collapse .nav > .divider-vertical {
     display: none;
@@ -66,23 +65,26 @@
   // Nav and dropdown links in navbar
   .nav-collapse .nav > li > a,
   .nav-collapse .dropdown-menu a {
-    padding: 9px 15px;
-    font-weight: bold;
+    padding: 0 @baseLineWidth;
     color: @navbarLinkColor;
+  }
+  .nav-collapse .nav > li.active > a {
+    color: @gray;
   }
   // Buttons
   .nav-collapse .btn {
-    padding: 4px 10px 4px;
+    padding: @baseLineHeight/2 @baseLineWidth;
     font-weight: normal;
     .border-radius(@baseBorderRadius);
   }
   .nav-collapse .dropdown-menu li + li a {
-    margin-bottom: 2px;
+    margin-bottom: 0;
   }
   .nav-collapse .nav > li > a:hover,
   .nav-collapse .nav > li > a:focus,
   .nav-collapse .dropdown-menu a:hover,
   .nav-collapse .dropdown-menu a:focus {
+    color: @gray;
     background-color: @navbarBackground;
   }
   .navbar-inverse .nav-collapse .nav > li > a,
@@ -93,6 +95,7 @@
   .navbar-inverse .nav-collapse .nav > li > a:focus,
   .navbar-inverse .nav-collapse .dropdown-menu a:hover,
   .navbar-inverse .nav-collapse .dropdown-menu a:focus {
+    color: @gray;
     background-color: @navbarInverseBackground;
   }
   // Buttons in the navbar
@@ -108,7 +111,7 @@
     float: none;
     display: none;
     max-width: none;
-    margin: 0 15px;
+    margin: 0;
     padding: 0;
     background-color: transparent;
     border: none;
@@ -136,7 +139,7 @@
   .nav-collapse .navbar-form,
   .nav-collapse .navbar-search {
     float: none;
-    padding: (@baseLineHeight / 2) 15px;
+    padding: (@baseLineHeight / 2) @baseLineWidth;
     margin: (@baseLineHeight / 2) 0;
     border-top: 1px solid @navbarBackground;
     border-bottom: 1px solid @navbarBackground;
@@ -157,6 +160,9 @@
     overflow: hidden;
     height: 0;
   }
+  .nav-collapse > ul.nav > li.active > a{
+    color: @gray;
+  }
   // Navbar button
   .navbar .btn-navbar {
     display: block;
@@ -171,6 +177,7 @@
     }
     &.active,
     &:active {
+      color: @white;
       background: @black;
       margin-bottom: @baseLineHeight;
       outline: 0;
@@ -180,8 +187,8 @@
   // STATIC NAVBAR
   // -------------
   .navbar-static .navbar-inner {
-    padding-left:  10px;
-    padding-right: 10px;
+    padding-left: @baseLineWidth;
+    padding-right: @baseLineWidth;
   }
 
 

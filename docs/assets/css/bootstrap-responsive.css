@@ -936,9 +936,9 @@
     margin-left: 0;
   }
   .modal {
-    top: 10px;
-    right: 10px;
-    left: 10px;
+    top: 9px;
+    right: 4px;
+    left: 4px;
   }
   .modal-header .close {
     padding: 10px;
@@ -965,16 +965,15 @@
   }
   .navbar-fixed-top .navbar-inner,
   .navbar-fixed-bottom .navbar-inner {
-    padding: 5px;
+    padding: 0;
   }
   .navbar .container {
     width: auto;
     padding: 0;
   }
   .navbar .brand {
-    padding-right: 10px;
-    padding-left: 10px;
-    margin: 0 0 0 -5px;
+    padding: 10px 10px;
+    margin: 0;
   }
   .nav-collapse {
     clear: both;
@@ -987,7 +986,7 @@
     float: none;
   }
   .nav-collapse .nav > li > a {
-    margin-bottom: 2px;
+    margin-bottom: 0;
   }
   .nav-collapse .nav > .divider-vertical {
     display: none;
@@ -998,24 +997,27 @@
   }
   .nav-collapse .nav > li > a,
   .nav-collapse .dropdown-menu a {
-    padding: 9px 15px;
-    font-weight: bold;
+    padding: 0 10px;
     color: #000000;
   }
+  .nav-collapse .nav > li.active > a {
+    color: #bbbbbb;
+  }
   .nav-collapse .btn {
-    padding: 4px 10px 4px;
+    padding: 10px 10px;
     font-weight: normal;
     -webkit-border-radius: 0;
        -moz-border-radius: 0;
             border-radius: 0;
   }
   .nav-collapse .dropdown-menu li + li a {
-    margin-bottom: 2px;
+    margin-bottom: 0;
   }
   .nav-collapse .nav > li > a:hover,
   .nav-collapse .nav > li > a:focus,
   .nav-collapse .dropdown-menu a:hover,
   .nav-collapse .dropdown-menu a:focus {
+    color: #bbbbbb;
     background-color: #bbbbbb;
   }
   .navbar-inverse .nav-collapse .nav > li > a,
@@ -1026,6 +1028,7 @@
   .navbar-inverse .nav-collapse .nav > li > a:focus,
   .navbar-inverse .nav-collapse .dropdown-menu a:hover,
   .navbar-inverse .nav-collapse .dropdown-menu a:focus {
+    color: #bbbbbb;
     background-color: #000000;
   }
   .nav-collapse.in .btn-group {
@@ -1040,7 +1043,7 @@
     float: none;
     max-width: none;
     padding: 0;
-    margin: 0 15px;
+    margin: 0;
     background-color: transparent;
     border: none;
     -webkit-border-radius: 0;
@@ -1067,7 +1070,7 @@
   .nav-collapse .navbar-form,
   .nav-collapse .navbar-search {
     float: none;
-    padding: 10px 15px;
+    padding: 10px 10px;
     margin: 10px 0;
     border-top: 1px solid #bbbbbb;
     border-bottom: 1px solid #bbbbbb;
@@ -1086,6 +1089,9 @@
     height: 0;
     overflow: hidden;
   }
+  .nav-collapse > ul.nav > li.active > a {
+    color: #bbbbbb;
+  }
   .navbar .btn-navbar {
     display: block;
     color: #ffffff;
@@ -1103,6 +1109,7 @@
   .navbar .btn-navbar.active,
   .navbar .btn-navbar:active {
     margin-bottom: 20px;
+    color: #ffffff;
     background: #000000;
     outline: 0;
   }
