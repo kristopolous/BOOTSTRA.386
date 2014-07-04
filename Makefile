@@ -63,6 +63,7 @@ clean:
 #
 
 bootstrap: bootstrap-img bootstrap-css bootstrap-js
+	zip -r -9 bootstrap-latest.zip bootstrap
 
 
 #
