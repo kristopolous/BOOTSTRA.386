@@ -1089,6 +1089,12 @@
   .navbar .btn-navbar {
     display: block;
   }
+  .navbar .btn-navbar:after {
+    content: "";
+  }
+  .navbar .btn-navbar:before {
+    content: "";
+  }
   .navbar-static .navbar-inner {
     padding-right: 10px;
     padding-left: 10px;

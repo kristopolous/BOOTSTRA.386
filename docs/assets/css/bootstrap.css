@@ -650,7 +650,6 @@ a:focus {
 }
 
 img {
-  display: none;
   -webkit-filter: contrast(800%);
      -moz-filter: contrast(1000%);
       -ms-filter: contrast(800%);
