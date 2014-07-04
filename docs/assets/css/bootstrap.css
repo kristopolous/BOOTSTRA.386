@@ -5821,15 +5821,17 @@ a.badge:focus {
 }
 
 .hero-unit {
-  padding: 60px 74.4px 40px;
+  padding: 16px 20.8px;
   margin-bottom: 20px;
   font-size: 18px;
-  line-height: 40px;
+  line-height: 20px;
   color: #ffffff;
-  background-color: #00aa00;
+  background-color: #00aaaa;
+  border: 4px double #ffffff;
   -webkit-border-radius: 0;
      -moz-border-radius: 0;
           border-radius: 0;
+  box-shadow: 0 0 0 4px #00aaaa;
 }
 
 .hero-unit h1 {
@@ -5838,6 +5840,7 @@ a.badge:focus {
   line-height: 1;
   color: #ffffff;
   text-align: center;
+  text-decoration: blink;
 }
 
 .hero-unit li {

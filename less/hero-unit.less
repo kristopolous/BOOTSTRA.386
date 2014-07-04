@@ -4,17 +4,20 @@
 
 
 .hero-unit {
-  padding: @baseLineHeight * 3 @baseWidth * 6 @baseLineHeight * 2;
+  padding: (@baseLineHeight - 4) (@baseWidth * 2 - 4);
+  border: 4px double @white;
   margin-bottom: @baseLineHeight;
   font-size: @baseFontSize;
-  line-height: @baseLineHeight * 2;
+  line-height: @baseLineHeight;
   color: @heroUnitLeadColor;
   background-color: @heroUnitBackground;
+  box-shadow: 0 0 0 4px @heroUnitBackground;
   .border-radius(0);
   h1 {
     margin-bottom: @baseLineHeight;
     font-size: @baseFontSize;
     line-height: 1;
+    text-decoration: blink;
     text-align: center;
     color: @heroUnitHeadingColor;
   }
