@@ -5870,3 +5870,32 @@ a.badge:focus {
 .affix {
   position: fixed;
 }
+
+#wrap386 {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 9999999;
+  width: 100%;
+  height: 100%;
+  background: #000084;
+}
+
+#bar386 {
+  float: right;
+  width: 100%;
+  height: 20px;
+  margin-top: -20px;
+  font-weight: bold;
+  color: #ffffff;
+  background: #000084;
+}
+
+#cursor386 {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 9999999;
+  font-weight: bold;
+  color: #ffffff;
+}
