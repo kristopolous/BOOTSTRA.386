@@ -160,6 +160,21 @@
   // Navbar button
   .navbar .btn-navbar {
     display: block;
+    background: @grayDark;
+    color: @white;
+    .box-shadow(~"0 0 0");
+    &:after {
+      content: "";
+    }
+    &:before {
+      content: "▼";
+    }
+    &.active,
+    &:active {
+      background: @black;
+      margin-bottom: @baseLineHeight;
+      outline: 0;
+    }
   }
 
   // STATIC NAVBAR

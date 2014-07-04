@@ -3236,7 +3236,6 @@ button.close {
 .btn.active,
 .btn:active {
   margin: 10px 0 10px 10px;
-  background-image: none;
   outline: 0;
   -webkit-box-shadow: 0 0 0;
      -moz-box-shadow: 0 0 0;

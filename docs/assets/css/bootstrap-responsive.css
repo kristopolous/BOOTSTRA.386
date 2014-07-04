@@ -1088,12 +1088,23 @@
   }
   .navbar .btn-navbar {
     display: block;
+    color: #ffffff;
+    background: #555555;
+    -webkit-box-shadow: 0 0 0;
+       -moz-box-shadow: 0 0 0;
+            box-shadow: 0 0 0;
   }
   .navbar .btn-navbar:after {
     content: "";
   }
   .navbar .btn-navbar:before {
-    content: "";
+    content: "▼";
+  }
+  .navbar .btn-navbar.active,
+  .navbar .btn-navbar:active {
+    margin-bottom: 20px;
+    background: #000000;
+    outline: 0;
   }
   .navbar-static .navbar-inner {
     padding-right: 10px;
