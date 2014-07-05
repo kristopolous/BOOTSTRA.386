@@ -1,4 +1,4 @@
-### Download the current [bootstrap.css](https://raw.githubusercontent.com/kristopolous/BOOTSTRA.386/master/docs/assets/css/bootstrap.css) and [bootstrap-responsive.css](https://raw.githubusercontent.com/kristopolous/BOOTSTRA.386/master/docs/assets/css/bootstrap-responsive.css) to use it right away.
+### Download the [latest zip file](https://github.com/kristopolous/BOOTSTRA.386/blob/master/bootstra.386-latest.zip?raw=true) with all the necessary JS and CSS to get started right away.
 
 Bootstrap/386 is a [Twitter bootstrap v2](http://twitter.github.io/bootstrap/) theme to make webpages look like they are from the 1980s. 
 
@@ -42,6 +42,22 @@ Bootstrap/386 is a [Twitter bootstrap v2](http://twitter.github.io/bootstrap/) t
 <img src=http://i.imgur.com/CZKrANV.png>
 
 
+### Configuration
+
+Javascript settings are set via a global `_386` object.
+
+#### Animation
+The loading animation can be configured through the following values:
+
+  * fastLoad `[bool]` (default: false) - disable all animation.
+  * onePass `[bool]` (default: false) - when set, this will disable the second flyby cursor
+  * speedFactor `[float]` (default: 1.0) - This controls how fast the animation happens. Higher values mean faster animation.
+
+Example:
+
+    _386 = { onePass: true, speedFactor: 1.25 };
+
+> Note: For the progressive animation to work you may need to set this stanza in your regular CSS: `body { visibility: hidden }`.
 
 ### Bugs and Stuff
 
