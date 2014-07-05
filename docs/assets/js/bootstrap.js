@@ -2305,6 +2305,7 @@ $(function(){
   function loading() {
 
     if(_386.fastLoad) {
+      document.body.style.visibility='visible';
       return;
     }
 
