@@ -3,6 +3,8 @@
 Bootstrap/386 is a [Twitter bootstrap v2](http://twitter.github.io/bootstrap/) theme to make webpages look like they are from the 1980s. 
 A bootstrap v3 version is in the works and this copy will be changed as things progress (July 5 2014).
 
+> Psstt! If you love the terminal you may like a spankin' new animated image viewer of mine: [ascsee](https://github.com/kristopolous/ascsee).
+
 # [Demo Link](http://kristopolous.github.io/BOOTSTRA.386/)
 
 <a href=http://i.imgur.com/chWpJfb.jpg><img src=http://i.imgur.com/chWpJfbl.jpg></a>
