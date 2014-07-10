@@ -4,6 +4,9 @@ abort() {
   exit $1
 }
 
+{
+  cd v2.3.1
+
 [ -e ~/temp/docs ] && rm -r ~/temp/docs
 cp -r docs ~/temp
 
@@ -19,3 +22,4 @@ git push
 [ $? -eq 0 ] || abort $? "Failed to push"
 
 git checkout master
+}
