@@ -1,18 +1,9 @@
 {
-  "name": "bootstrap",
-  "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
-  "version": "3.2.0",
-  "keywords": [
-    "css",
-    "less",
-    "mobile-first",
-    "responsive",
-    "front-end",
-    "framework",
-    "web"
-  ],
-  "homepage": "http://getbootstrap.com",
-  "author": "Twitter, Inc.",
+  "name": "bootstra.386",
+  "description": "Replacing your HTTP with ATD",
+  "keywords": ["bootstrap", "css"],
+  "homepage": "https://github.com/kristopolous/BOOTSTRA.386",
+  "author": "Twitter Inc. and then, Chris McKenzie and friends",
   "scripts": {
     "test": "grunt test"
   },
@@ -20,10 +11,10 @@
   "less": "less/bootstrap.less",
   "repository": {
     "type": "git",
-    "url": "https://github.com/twbs/bootstrap.git"
+    "url": "https://github.com/kristopolous/BOOTSTRA.386.git"
   },
   "bugs": {
-    "url": "https://github.com/twbs/bootstrap/issues"
+    "url": "https://github.com/kristopolous/BOOTSTRA.386.git/issues"
   },
   "license": {
     "type": "MIT",

@@ -9,6 +9,7 @@
 *.vi
 *~
 *.sass-cache
+*.map
 
 # OS or Editor folders
 .DS_Store
@@ -33,4 +34,3 @@ nbproject
 .CVS
 .idea
 node_modules
-dist

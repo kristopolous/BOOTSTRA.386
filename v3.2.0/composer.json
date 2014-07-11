@@ -1,17 +1,8 @@
 {
-  "name": "twbs/bootstrap",
-  "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
-  "keywords": [
-    "css",
-    "js",
-    "less",
-    "mobile-first",
-    "responsive",
-    "front-end",
-    "framework",
-    "web"
-  ],
-  "homepage": "http://getbootstrap.com",
+  "name": "kristopolous/bootstra.386",
+  "description": "Replacing your HTTP with ATD",
+  "keywords": ["bootstrap", "css", "Robert'); DROP TABLE Students;--"],
+  "homepage": "https://github.com/kristopolous/BOOTSTRA.386"
   "authors": [
     {
       "name": "Mark Otto",
@@ -20,18 +11,17 @@
     {
       "name": "Jacob Thornton",
       "email": "jacobthornton@gmail.com"
+    },
+    {
+      "name": "Chris McKenzie",
+      "email": "no@thanks.example.com"
     }
   ],
   "support": {
-    "issues": "https://github.com/twbs/bootstrap/issues"
+    "issues": "https://github.com/kristopolous/BOOTSTRA.386/issues"
   },
   "license": "MIT",
-  "extra": {
-    "branch-alias": {
-      "dev-master": "3.2.x-dev"
-    }
-  },
   "replace": {
-    "twitter/bootstrap": "self.version"
+    "kristopolous/bootstra.386": "self.version"
   }
 }
