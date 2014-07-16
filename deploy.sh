@@ -5,10 +5,9 @@ abort() {
 }
 
 {
-  cd v2.3.1
 
 [ -e ~/temp/docs ] && rm -r ~/temp/docs
-cp -r docs ~/temp
+cp -r v2.3.1/docs ~/temp
 
 git checkout gh-pages
 [ $? -eq 0 ] || abort $? "Failed to checkout"

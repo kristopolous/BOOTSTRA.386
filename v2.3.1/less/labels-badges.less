@@ -13,7 +13,7 @@
   color: @white;
   vertical-align: baseline;
   white-space: nowrap;
-  background-color: @grayLight;
+  background-color: @grayDark;
 }
 .badge {
   padding-left: @baseWidth;
@@ -45,8 +45,8 @@ a {
 .label,
 .badge {
   // Important (red)
-  &-important         { background-color: @errorText; }
-  &-important[href]   { background-color: @errorText; }
+  &-important         { background-color: @errorBackground; }
+  &-important[href]   { background-color: @errorBackground; }
   // Warnings (orange)
   &-warning           { background-color: @orange; }
   &-warning[href]     { background-color: @orange; }
