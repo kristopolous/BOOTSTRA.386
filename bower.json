@@ -1,0 +1,20 @@
+{
+  "name": "bootstra.386",
+  "version": "0.0.0",
+  "description": "A Twitter Bootstrap theme to make webpages look like they are from the 1980s.",
+  "keywords": ["bootstrap", "theme"],
+  "authors": [ 
+    { "name": "Chris McKenzie", "homepage": "http://getpostdelete.com" }
+  ],
+  "homepage": "http://kristopolous.github.io/BOOTSTRA.386/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kristopolous/BOOTSTRA.386.git"
+  },
+  "license": "Apache-2.0",
+  "ignore": [
+    "CONTRIBUTING.md",
+    "deploy.sh",
+    "convert-image.sh"
+  ]
+}
