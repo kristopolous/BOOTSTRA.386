@@ -1056,7 +1056,7 @@ th {
   box-sizing: border-box;
 }
 html {
-  font-size: 10px;
+  font-size: 18px;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
@@ -1473,14 +1473,14 @@ samp {
 }
 code {
   padding: 2px 4px;
-  font-size: 90%;
+  font-size: 18px;
   color: #c7254e;
   background-color: #f9f2f4;
   border-radius: 0;
 }
 kbd {
   padding: 2px 4px;
-  font-size: 90%;
+  font-size: 18px;
   color: #ffffff;
   background-color: #333333;
   border-radius: 0;
@@ -1488,7 +1488,7 @@ kbd {
 }
 kbd kbd {
   padding: 0;
-  font-size: 100%;
+  font-size: 18px;
   font-weight: bold;
   box-shadow: none;
 }
@@ -1496,7 +1496,7 @@ pre {
   display: block;
   padding: 179.5px;
   margin: 0 0 180px;
-  font-size: 17px;
+  font-size: 18px;
   line-height: 20px;
   word-break: break-all;
   word-wrap: break-word;
@@ -2435,7 +2435,7 @@ legend {
   width: 100%;
   padding: 0;
   margin-bottom: 360px;
-  font-size: 27px;
+  font-size: 18px;
   line-height: inherit;
   color: #555555;
   border: 0;
@@ -4676,7 +4676,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .label {
   display: inline;
   padding: .2em .6em .3em;
-  font-size: 75%;
+  font-size: 18px;
   font-weight: bold;
   line-height: 1;
   color: #ffffff;
@@ -6188,7 +6188,7 @@ button.close {
     width: 30px;
     height: 30px;
     margin-top: -15px;
-    font-size: 30px;
+    font-size: 18px;
   }
   .carousel-control .glyphicon-chevron-left,
   .carousel-control .icon-prev {
