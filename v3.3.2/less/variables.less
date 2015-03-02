@@ -34,14 +34,17 @@
 @orange:                #A85400;
 @pink:                  #FE54FE;
 @purple:                #FE5454;
+
+@lhsNB:                 6px;
+@rhsNB:                 5px;
+
 // end colors
 
 @gray-base:              @gray;
-@gray-darker:            @grayDark; // lighten(@gray-base, 13.5%); // #222
+@gray-darker:            @grayDark; 
 @gray-dark:              @grayDark;
-@gray:                   orange; // lighten(@gray-base, 33.5%); // #555
 @gray-light:             @grayLight;
-@gray-lighter:           brown; // lighten(@gray-base, 93.5%); // #eee
+@gray-lighter:           @grayLight;
 
 @brand-primary:         darken(#428bca, 6.5%); // #337ab7
 @brand-success:         @greenDark;
@@ -64,7 +67,7 @@
 //** Link hover color set via `darken()` function.
 @link-hover-color:      darken(@link-color, 15%);
 //** Link hover decoration.
-@link-hover-decoration: underline;
+@link-hover-decoration: none;
 
 
 //== Typography
@@ -96,8 +99,13 @@
 //** By default, this inherits from the `<body>`.
 @headings-font-family:    inherit;
 @headings-font-weight:    normal;
-@headings-line-height:    1.1;
+@headings-line-height:    @line-height-base; 
 @headings-color:          inherit;
+
+@lhs:                   (@baseLineWidth - @borderWidth) / 2;
+@rhs:                   @lhs;
+@ts:                    (@line-height-base - @borderWidth) / 2;
+@bs:                    @ts;
 
 
 //== Iconography

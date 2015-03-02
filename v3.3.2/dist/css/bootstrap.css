@@ -1489,7 +1489,7 @@ kbd {
 kbd kbd {
   padding: 0;
   font-size: 18px;
-  font-weight: bold;
+  font-weight: normal;
   box-shadow: none;
 }
 pre {
@@ -2445,7 +2445,7 @@ label {
   display: inline-block;
   max-width: 100%;
   margin-bottom: 5px;
-  font-weight: bold;
+  font-weight: normal;
 }
 input[type="search"] {
   -webkit-box-sizing: border-box;
@@ -4677,7 +4677,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   display: inline;
   padding: .2em .6em .3em;
   font-size: 18px;
-  font-weight: bold;
+  font-weight: normal;
   line-height: 1;
   color: #ffffff;
   text-align: center;
