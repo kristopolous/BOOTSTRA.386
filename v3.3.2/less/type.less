@@ -29,7 +29,6 @@ h3, .h3 {
 
   small,
   .small {
-    font-size: 65%;
   }
 }
 h4, .h4,
@@ -40,7 +39,6 @@ h6, .h6 {
 
   small,
   .small {
-    font-size: 75%;
   }
 }
 
@@ -61,12 +59,12 @@ p {
 
 .lead {
   margin-bottom: @line-height-computed;
-  font-size: floor((@font-size-base * 1.15));
+  font-size: @font-size-base;
   font-weight: 300;
   line-height: 1.4;
 
   @media (min-width: @screen-sm-min) {
-    font-size: (@font-size-base * 1.5);
+    font-size: @font-size-base;
   }
 }
 
@@ -77,7 +75,7 @@ p {
 // Ex: (12px small font / 14px base font) * 100% = about 85%
 small,
 .small {
-  font-size: floor((100% * @font-size-small / @font-size-base));
+  font-size: @font-size-small;
 }
 
 mark,
@@ -237,7 +235,7 @@ abbr[data-original-title] {
   border-bottom: 1px dotted @abbr-border-color;
 }
 .initialism {
-  font-size: 90%;
+  font-size: @font-size-base;
   text-transform: uppercase;
 }
 
@@ -262,7 +260,7 @@ blockquote {
   small,
   .small {
     display: block;
-    font-size: 80%; // back to default font-size
+    font-size: @font-size-base;
     line-height: @line-height-base;
     color: @blockquote-small-color;
 
