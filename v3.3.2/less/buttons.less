@@ -40,7 +40,6 @@
   &.active {
     outline: 0;
     background-image: none;
-    .box-shadow(inset 0 3px 5px rgb(0,0,0));
   }
 
   &.disabled,
@@ -48,7 +47,6 @@
   fieldset[disabled] & {
     cursor: @cursor-disabled;
     pointer-events: none; // Future-proof disabling of clicks
-    .opacity(.65);
     .box-shadow(none);
   }
 }

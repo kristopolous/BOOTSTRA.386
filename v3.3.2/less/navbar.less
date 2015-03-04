@@ -52,7 +52,6 @@
   padding-right: @navbar-padding-horizontal;
   padding-left:  @navbar-padding-horizontal;
   border-top: 1px solid transparent;
-  box-shadow: inset 0 1px 0 rgb(255,255,255);
   &:extend(.clearfix all);
   -webkit-overflow-scrolling: touch;
 
@@ -63,7 +62,6 @@
   @media (min-width: @grid-float-breakpoint) {
     width: auto;
     border-top: 0;
-    box-shadow: none;
 
     &.collapse {
       display: block !important;
@@ -248,7 +246,6 @@
       margin-top: 0;
       background-color: transparent;
       border: 0;
-      box-shadow: none;
       > li > a,
       .dropdown-header {
         padding: 5px 15px 5px 25px;
@@ -291,7 +288,6 @@
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
   @shadow: inset 0 1px 0 rgb(255,255,255), 0 1px 0 rgb(255,255,255);
-  .box-shadow(@shadow);
 
   // Mixin behavior for optimum display
   .form-inline();
@@ -317,7 +313,6 @@
     margin-right: 0;
     padding-top: 0;
     padding-bottom: 0;
-    .box-shadow(none);
   }
 }
 

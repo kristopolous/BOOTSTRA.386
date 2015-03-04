@@ -515,8 +515,8 @@
 //
 //##
 
-@jumbotron-padding:              30px;
-@jumbotron-color:                inherit;
+@jumbotron-padding:              (@ts * 2) (@rhs * 2) (@bs * 2) (@lhs * 2);
+@jumbotron-color:                @black;
 @jumbotron-bg:                   @gray-lighter;
 @jumbotron-heading-color:        inherit;
 @jumbotron-font-size:            @font-size-base;
@@ -833,7 +833,7 @@
 //
 //##
 
-@carousel-text-shadow:                        0 1px 2px rgb(0,0,0);
+@carousel-text-shadow:                        none;
 
 @carousel-control-color:                      #fff;
 @carousel-control-width:                      15%;
@@ -852,7 +852,7 @@
 
 @close-font-weight:           normal;
 @close-color:                 #000;
-@close-text-shadow:           0 1px 0 #fff;
+@close-text-shadow:           none;
 
 
 //== Code

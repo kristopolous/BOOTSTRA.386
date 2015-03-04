@@ -5,24 +5,22 @@
 
 // Base class
 .well {
-  min-height: 20px;
   padding: 19px;
-  margin-bottom: 20px;
+  margin-bottom: @baseLineHeight;
   background-color: @well-bg;
   /*border: 1px solid @well-border;*/
   border-radius: @border-radius-base;
-  .box-shadow(inset 0 1px 1px rgb(0,0,0));
   blockquote {
-    border-color: #ddd;
+    border-color: @white;
   }
 }
 
 // Sizes
 .well-lg {
-  padding: 24px;
+  padding: (@ts * 2) (@rhs * 2) (@bs * 2) (@lhs * 2);
   border-radius: @border-radius-large;
 }
 .well-sm {
-  padding: 9px;
+  padding: @ts @rhs @bs @lhs;
   border-radius: @border-radius-small;
 }

@@ -18,14 +18,11 @@
 .btn-info,
 .btn-warning,
 .btn-danger {
-  text-shadow: 0 -1px 0 rgb(0,0,0);
   @shadow: inset 0 1px 0 rgb(255,255,255), 0 1px 1px rgb(0,0,0);
-  .box-shadow(@shadow);
 
   // Reset the shadow
   &:active,
   &.active {
-    .box-shadow(inset 0 3px 5px rgb(0,0,0));
   }
 
   .badge {
@@ -70,7 +67,7 @@
 }
 
 // Apply the mixin to the buttons
-.btn-default { .btn-styles(@btn-default-bg); text-shadow: 0 1px 0 #fff; border-color: #ccc; }
+.btn-default { .btn-styles(@btn-default-bg); border-color: #ccc; }
 .btn-primary { .btn-styles(@btn-primary-bg); }
 .btn-success { .btn-styles(@btn-success-bg); }
 .btn-info    { .btn-styles(@btn-info-bg); }
@@ -84,7 +81,6 @@
 
 .thumbnail,
 .img-thumbnail {
-  .box-shadow(0 1px 2px rgb(0,0,0));
 }
 
 
@@ -115,17 +111,14 @@
   .reset-filter(); // Remove gradient in IE<10 to fix bug where dropdowns don't get triggered
   border-radius: @navbar-border-radius;
   @shadow: inset 0 1px 0 rgb(255,255,255), 0 1px 5px rgb(0,0,0);
-  .box-shadow(@shadow);
 
   .navbar-nav > .open > a,
   .navbar-nav > .active > a {
     #gradient > .vertical(@start-color: darken(@navbar-default-link-active-bg, 5%); @end-color: darken(@navbar-default-link-active-bg, 2%));
-    .box-shadow(inset 0 3px 9px rgb(0,0,0));
   }
 }
 .navbar-brand,
 .navbar-nav > li > a {
-  text-shadow: 0 1px 0 rgb(255,255,255);
 }
 
 // Inverted navbar
@@ -136,12 +129,10 @@
   .navbar-nav > .open > a,
   .navbar-nav > .active > a {
     #gradient > .vertical(@start-color: @navbar-inverse-link-active-bg; @end-color: lighten(@navbar-inverse-link-active-bg, 2.5%));
-    .box-shadow(inset 0 3px 9px rgb(0,0,0));
   }
 
   .navbar-brand,
   .navbar-nav > li > a {
-    text-shadow: 0 -1px 0 rgb(0,0,0);
   }
 }
 
@@ -171,9 +162,7 @@
 
 // Common styles
 .alert {
-  text-shadow: 0 1px 0 rgb(255,255,255);
   @shadow: inset 0 1px 0 rgb(255,255,255), 0 1px 2px rgb(0,0,0);
-  .box-shadow(@shadow);
 }
 
 // Mixin for generating new styles
@@ -220,12 +209,10 @@
 
 .list-group {
   border-radius: @border-radius-base;
-  .box-shadow(0 1px 2px rgb(0,0,0));
 }
 .list-group-item.active,
 .list-group-item.active:hover,
 .list-group-item.active:focus {
-  text-shadow: 0 -1px 0 darken(@list-group-active-bg, 10%);
   border-color: @list-group-active-border;
 
   .badge {
@@ -240,7 +227,6 @@
 
 // Common styles
 .panel {
-  .box-shadow(0 1px 2px rgb(0,0,0));
 }
 
 // Mixin for generating new styles
@@ -264,5 +250,4 @@
   #gradient > .vertical(@start-color: darken(@well-bg, 5%); @end-color: @well-bg);
   border-color: darken(@well-bg, 10%);
   @shadow: inset 0 1px 3px rgb(0,0,0), 0 1px 0 rgb(255,255,255);
-  .box-shadow(@shadow);
 }
