@@ -102,6 +102,9 @@
 @headings-line-height:    @line-height-base; 
 @headings-color:          inherit;
 
+@baseLineHeight:        20px;
+@borderWidth:           2px;
+@baseLineWidth:         @baseLineHeight / 2;
 @lhs:                   (@baseLineWidth - @borderWidth) / 2;
 @rhs:                   @lhs;
 @ts:                    (@line-height-base - @borderWidth) / 2;
@@ -136,8 +139,8 @@
 @padding-xs-vertical:       1px;
 @padding-xs-horizontal:     5px;
 
-@line-height-large:         1.3333333; // extra decimals for Win 8.1 Chrome
-@line-height-small:         1.5;
+@line-height-large:         20px;
+@line-height-small:         20px;
 
 @border-radius-base:        0;
 @border-radius-large:       0;
@@ -195,11 +198,11 @@
 
 @btn-info-color:                 #fff;
 @btn-info-bg:                    @brand-info;
-@btn-info-border:                darken(@btn-info-bg, 5%);
+@btn-info-border:                @btn-info-bg;
 
 @btn-warning-color:              #fff;
 @btn-warning-bg:                 @brand-warning;
-@btn-warning-border:             darken(@btn-warning-bg, 5%);
+@btn-warning-border:             @btn-warning-bg;
 
 @btn-danger-color:               #fff;
 @btn-danger-bg:                  @brand-danger;
@@ -263,7 +266,7 @@
 //** Background for the dropdown menu.
 @dropdown-bg:                    #fff;
 //** Dropdown menu `border-color`.
-@dropdown-border:                rgba(0,0,0,.15);
+@dropdown-border:                rgb(0,0,0);
 //** Dropdown menu `border-color` **for IE8**.
 @dropdown-fallback-border:       #ccc;
 //** Divider color for between dropdown items.
@@ -567,7 +570,7 @@
 //** Popover maximum width
 @popover-max-width:                   276px;
 //** Popover border color
-@popover-border-color:                rgba(0,0,0,.2);
+@popover-border-color:                rgb(0,0,0);
 //** Popover fallback border color
 @popover-fallback-border-color:       #ccc;
 
@@ -625,7 +628,7 @@
 //** Background color of modal content area
 @modal-content-bg:                             #fff;
 //** Modal content border color
-@modal-content-border-color:                   rgba(0,0,0,.2);
+@modal-content-border-color:                   rgb(0,0,0);
 //** Modal content border color **for IE8**
 @modal-content-fallback-border-color:          #999;
 
@@ -830,7 +833,7 @@
 //
 //##
 
-@carousel-text-shadow:                        0 1px 2px rgba(0,0,0,.6);
+@carousel-text-shadow:                        0 1px 2px rgb(0,0,0);
 
 @carousel-control-color:                      #fff;
 @carousel-control-width:                      15%;
