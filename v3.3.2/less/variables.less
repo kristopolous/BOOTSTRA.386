@@ -105,9 +105,9 @@
 
 @space:                 20px;
 @baseLineHeight:        20px;
-@halfbaseLineHeight:    @baseLineHeight / 2;
+@halfbaseLineHeight:    (@baseLineHeight / 2);
 @borderWidth:           2px;
-@baseLineWidth:         @baseLineHeight / 2;
+@baseLineWidth:         (@baseLineHeight / 2);
 @lhsNB:                 6px;
 @rhsNB:                 5px;
 @lhs:                   4px;
@@ -240,7 +240,7 @@
 @input-border-radius-small:      @border-radius-small;
 
 //** Border color for inputs on focus
-@input-border-focus:             #66afe9;
+@input-border-focus:             @black;
 
 //** Placeholder text color
 @input-color-placeholder:        #999;
@@ -455,7 +455,7 @@
 //##
 
 //=== Shared nav styles
-@nav-link-padding:                          10px 15px;
+@nav-link-padding:                          0 @baseWidth;
 @nav-link-hover-bg:                         @gray-lighter;
 
 @nav-disabled-link-color:                   @gray-light;
@@ -737,9 +737,9 @@
 //
 //##
 
-@panel-bg:                    #fff;
-@panel-body-padding:          15px;
-@panel-heading-padding:       10px 15px;
+@panel-bg:                    @gray;
+@panel-body-padding:          @ts @rhsNB 0 @lhsNB;
+@panel-heading-padding:       0 @rhsNB 0 @lhsNB;
 @panel-footer-padding:        @panel-heading-padding;
 @panel-border-radius:         @border-radius-base;
 

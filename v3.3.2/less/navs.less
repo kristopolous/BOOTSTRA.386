@@ -33,7 +33,7 @@
 
       &:hover,
       &:focus {
-        color: @nav-disabled-link-hover-color;
+        color: @black;
         text-decoration: none;
         background-color: transparent;
         cursor: @cursor-disabled;
@@ -82,7 +82,7 @@
 
     // Actual tabs (as links)
     > a {
-      margin-right: 2px;
+      margin-right: @rhsNB;
       line-height: @line-height-base;
       border: 1px solid transparent;
       border-radius: @border-radius-base @border-radius-base 0 0;
@@ -123,7 +123,7 @@
       border-radius: @nav-pills-border-radius;
     }
     + li {
-      margin-left: 2px;
+      margin-left: @lhsNB;
     }
 
     // Active state
@@ -144,7 +144,7 @@
   > li {
     float: none;
     + li {
-      margin-top: 2px;
+      margin-top: 0;
       margin-left: 0; // no need for this gap between nav items
     }
   }
@@ -164,7 +164,7 @@
     float: none;
     > a {
       text-align: center;
-      margin-bottom: 5px;
+      margin-bottom: 0;
     }
   }
 
@@ -204,7 +204,7 @@
 
   @media (min-width: @screen-sm-min) {
     > li > a {
-      border-bottom: 1px solid @nav-tabs-justified-link-border-color;
+      border-bottom: 0px solid @nav-tabs-justified-link-border-color;
       border-radius: @border-radius-base @border-radius-base 0 0;
     }
     > .active > a,

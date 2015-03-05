@@ -5,10 +5,10 @@
 
 // Base class
 .panel {
+  color: @black;
   margin-bottom: @line-height-computed;
   background-color: @panel-bg;
-  border: 1px solid transparent;
-  border-radius: @panel-border-radius;
+  border: 0px solid transparent;
 }
 
 // Panel contents
@@ -20,8 +20,7 @@
 // Optional heading
 .panel-heading {
   padding: @panel-heading-padding;
-  border-bottom: 1px solid transparent;
-  .border-top-radius((@panel-border-radius - 1));
+  border-bottom: 0px solid transparent;
 
   > .dropdown .dropdown-toggle {
     color: inherit;
@@ -48,8 +47,7 @@
 .panel-footer {
   padding: @panel-footer-padding;
   background-color: @panel-footer-bg;
-  border-top: 1px solid @panel-inner-border;
-  .border-bottom-radius((@panel-border-radius - 1));
+  border-top: 0px solid @panel-inner-border;
 }
 
 
@@ -64,7 +62,7 @@
     margin-bottom: 0;
 
     .list-group-item {
-      border-width: 1px 0;
+      border-width: 0px 0;
       border-radius: 0;
     }
 
@@ -72,14 +70,12 @@
     &:first-child {
       .list-group-item:first-child {
         border-top: 0;
-        .border-top-radius((@panel-border-radius - 1));
       }
     }
     // Add border bottom radius for last one
     &:last-child {
       .list-group-item:last-child {
         border-bottom: 0;
-        .border-bottom-radius((@panel-border-radius - 1));
       }
     }
   }
@@ -113,21 +109,16 @@
   // Add border top radius for first one
   > .table:first-child,
   > .table-responsive:first-child > .table:first-child {
-    .border-top-radius((@panel-border-radius - 1));
 
     > thead:first-child,
     > tbody:first-child {
       > tr:first-child {
-        border-top-left-radius: (@panel-border-radius - 1);
-        border-top-right-radius: (@panel-border-radius - 1);
 
         td:first-child,
         th:first-child {
-          border-top-left-radius: (@panel-border-radius - 1);
         }
         td:last-child,
         th:last-child {
-          border-top-right-radius: (@panel-border-radius - 1);
         }
       }
     }
@@ -135,21 +126,16 @@
   // Add border bottom radius for last one
   > .table:last-child,
   > .table-responsive:last-child > .table:last-child {
-    .border-bottom-radius((@panel-border-radius - 1));
 
     > tbody:last-child,
     > tfoot:last-child {
       > tr:last-child {
-        border-bottom-left-radius: (@panel-border-radius - 1);
-        border-bottom-right-radius: (@panel-border-radius - 1);
 
         td:first-child,
         th:first-child {
-          border-bottom-left-radius: (@panel-border-radius - 1);
         }
         td:last-child,
         th:last-child {
-          border-bottom-right-radius: (@panel-border-radius - 1);
         }
       }
     }
@@ -158,7 +144,7 @@
   > .panel-body + .table-responsive,
   > .table + .panel-body,
   > .table-responsive + .panel-body {
-    border-top: 1px solid @table-border-color;
+    border-top: 0px solid @table-border-color;
   }
   > .table > tbody:first-child > tr:first-child th,
   > .table > tbody:first-child > tr:first-child td {
@@ -221,7 +207,7 @@
     border-radius: @panel-border-radius;
 
     + .panel {
-      margin-top: 5px;
+      margin-top: 0px;
     }
   }
 
@@ -230,14 +216,14 @@
 
     + .panel-collapse > .panel-body,
     + .panel-collapse > .list-group {
-      border-top: 1px solid @panel-inner-border;
+      border-top: 0px solid @panel-inner-border;
     }
   }
 
   .panel-footer {
     border-top: 0;
     + .panel-collapse .panel-body {
-      border-bottom: 1px solid @panel-inner-border;
+      border-bottom: 0px solid @panel-inner-border;
     }
   }
 }
