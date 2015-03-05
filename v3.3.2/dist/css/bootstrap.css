@@ -1044,6 +1044,13 @@ th {
 .glyphicon-menu-up:before {
   content: "\e260";
 }
+@font-face {
+  font-family: 'DOS';
+  src: url('fonts/Fixedsys500c.eot');
+  src: local('☺'), url('fonts/Fixedsys500c.woff') format('woff'), url('fonts/Fixedsys500c.ttf') format('truetype'), url('fonts/Fixedsys500c.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
