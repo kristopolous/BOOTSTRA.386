@@ -10,9 +10,8 @@
 
 .navbar {
   position: relative;
-  min-height: @navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
   margin-bottom: @navbar-margin-bottom;
-  border: 1px solid transparent;
+  border: 0px solid transparent;
 
   // Prevent floats from breaking the navbar
   &:extend(.clearfix all);
@@ -51,7 +50,7 @@
   overflow-x: visible;
   padding-right: @navbar-padding-horizontal;
   padding-left:  @navbar-padding-horizontal;
-  border-top: 1px solid transparent;
+  border-top: 0px solid transparent;
   &:extend(.clearfix all);
   -webkit-overflow-scrolling: touch;
 
@@ -126,7 +125,7 @@
 // Static top (unfixed, but 100% wide) navbar
 .navbar-static-top {
   z-index: @zindex-navbar;
-  border-width: 0 0 1px;
+  border-width: 0 0 0px;
 
   @media (min-width: @grid-float-breakpoint) {
     border-radius: 0;
@@ -148,12 +147,12 @@
 }
 .navbar-fixed-top {
   top: 0;
-  border-width: 0 0 1px;
+  border-width: 0 0 0px;
 }
 .navbar-fixed-bottom {
   bottom: 0;
   margin-bottom: 0; // override .navbar defaults
-  border-width: 1px 0 0;
+  border-width: 0px 0 0;
 }
 
 
@@ -164,7 +163,6 @@
   padding: @navbar-padding-vertical @navbar-padding-horizontal;
   font-size: @font-size-large;
   line-height: @line-height-computed;
-  height: @navbar-height;
 
   &:hover,
   &:focus {
@@ -211,7 +209,7 @@
     display: block;
     width: 22px;
     height: 2px;
-    border-radius: 1px;
+    border-radius: 0px;
   }
   .icon-bar + .icon-bar {
     margin-top: 4px;
@@ -232,8 +230,8 @@
   margin: (@navbar-padding-vertical / 2) -@navbar-padding-horizontal;
 
   > li > a {
-    padding-top:    10px;
-    padding-bottom: 10px;
+    padding-top:    0px;
+    padding-bottom: 0px;
     line-height: @line-height-computed;
   }
 
@@ -268,8 +266,8 @@
     > li {
       float: left;
       > a {
-        padding-top:    @navbar-padding-vertical;
-        padding-bottom: @navbar-padding-vertical;
+        padding-top:    0;
+        padding-bottom: 0;
       }
     }
   }
