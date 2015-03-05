@@ -6,6 +6,12 @@
 // Base styles
 // --------------------------------------------------
 
+.btn:before {
+  content:"< ";
+}
+.btn:after {
+  content:" >";
+}
 .btn {
   display: inline-block;
   margin-bottom: 0; // For input.btn
@@ -15,8 +21,7 @@
   touch-action: manipulation;
   cursor: pointer;
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
-  padding: 0 @space;// @rhs @bs @lhs;
-  //border: 1px solid transparent;
+  padding: 0 @baseLineWidth;
   white-space: nowrap;
   .button-size(@padding-base-vertical; @padding-base-horizontal; @font-size-base; @line-height-base; @border-radius-base);
   .user-select(none);
