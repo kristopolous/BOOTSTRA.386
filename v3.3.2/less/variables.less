@@ -80,6 +80,7 @@
 @font-family-monospace:   DOS, Monaco, Menlo, Consolas, "Courier New", monospace;
 @font-family-base:        @font-family-sans-serif;
 
+@baseWidth:             12.4px;
 @font-size-base:          18px;
 @font-size-large:         @font-size-base;
 @font-size-small:         @font-size-base;
@@ -102,10 +103,13 @@
 @headings-line-height:    @line-height-base; 
 @headings-color:          inherit;
 
-@space:                  20px;
+@space:                 20px;
 @baseLineHeight:        20px;
+@halfbaseLineHeight:    @baseLineHeight / 2;
 @borderWidth:           2px;
 @baseLineWidth:         @baseLineHeight / 2;
+@lhsNB:                 6px;
+@rhsNB:                 5px;
 @lhs:                   4px;
 @rhs:                   @lhs;
 @ts:                    9px;
@@ -265,20 +269,20 @@
 //## Dropdown menu container and contents.
 
 //** Background for the dropdown menu.
-@dropdown-bg:                    #fff;
+@dropdown-bg:                    @gray;
 //** Dropdown menu `border-color`.
 @dropdown-border:                rgb(0,0,0);
 //** Dropdown menu `border-color` **for IE8**.
 @dropdown-fallback-border:       #ccc;
 //** Divider color for between dropdown items.
-@dropdown-divider-bg:            #e5e5e5;
+@dropdown-divider-bg:            @black;
 
 //** Dropdown link text color.
-@dropdown-link-color:            @gray-dark;
+@dropdown-link-color:            @black;
 //** Hover color for dropdown links.
-@dropdown-link-hover-color:      darken(@gray-dark, 5%);
+@dropdown-link-hover-color:      @gray;
 //** Hover background for dropdown links.
-@dropdown-link-hover-bg:         #f5f5f5;
+@dropdown-link-hover-bg:         @brown;
 
 //** Active dropdown menu item text color.
 @dropdown-link-active-color:     @component-active-color;

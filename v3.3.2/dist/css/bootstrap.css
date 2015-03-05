@@ -3324,14 +3324,19 @@ tbody.collapse.in {
   z-index: 1000;
   display: none;
   float: left;
-  min-width: 160px;
-  padding: 0px 0 0;
-  margin: 0px 0 0 0;
+  min-width: 20px / 2 * 10;
+  padding: 9px 4px 9px 4px;
+  margin: -(15.5px) 4px 8px 4px;
   list-style: none;
   font-size: 18px;
   text-align: left;
-  background-color: #ffffff;
+  background-color: #bbbbbb;
   border-radius: 0;
+  border: 1px solid #000000;
+  -webkit-box-shadow: 0px 0px 0 5px #bbbbbb;
+  box-shadow: 0px 0px 0 5px #bbbbbb;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
   background-clip: padding-box;
 }
 .dropdown-menu.pull-right {
@@ -3342,22 +3347,22 @@ tbody.collapse.in {
   height: 1px;
   margin: 9px 0;
   overflow: hidden;
-  background-color: #e5e5e5;
+  background-color: #000000;
 }
 .dropdown-menu > li > a {
   display: block;
-  padding: 3px 20px;
+  padding: 0 12.4px;
   clear: both;
   font-weight: normal;
   line-height: 20px;
-  color: #555555;
+  color: #000000;
   white-space: nowrap;
 }
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
   text-decoration: none;
-  color: #484848;
-  background-color: #f5f5f5;
+  color: #bbbbbb;
+  background-color: #aa5500;
 }
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
@@ -3396,7 +3401,7 @@ tbody.collapse.in {
 }
 .dropdown-header {
   display: block;
-  padding: 3px 20px;
+  padding: 0px 12.4px;
   font-size: 18px;
   line-height: 20px;
   color: #bbbbbb;
