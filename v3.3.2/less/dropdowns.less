@@ -8,7 +8,7 @@
   display: inline-block;
   width: 0;
   height: 0;
-  margin-left: 2px;
+  margin-left: 0;
   vertical-align: middle;
   border-top:   @caret-width-base solid;
   border-right: @caret-width-base solid transparent;
@@ -35,14 +35,12 @@
   display: none; // none by default, but block on "open" of the menu
   float: left;
   min-width: 160px;
-  padding: 5px 0;
-  margin: 2px 0 0; // override default ul
+  padding: 0px 0 0;
+  margin: 0px 0 0 0; // override default ul
   list-style: none;
   font-size: @font-size-base;
   text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
   background-color: @dropdown-bg;
-  border: 1px solid @dropdown-fallback-border; // IE8 fallback
-  border: 1px solid @dropdown-border;
   border-radius: @border-radius-base;
   background-clip: padding-box;
 
@@ -190,7 +188,7 @@
   .dropdown-menu {
     top: auto;
     bottom: 100%;
-    margin-bottom: 2px;
+    margin-bottom: 0;
   }
 }
 
