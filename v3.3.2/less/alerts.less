@@ -9,7 +9,7 @@
 .alert {
   padding: @alert-padding;
   margin-bottom: @line-height-computed;
-  border: 1px solid transparent;
+  border: 0px solid transparent;
   border-radius: @alert-border-radius;
 
   // Headings for larger alerts
@@ -31,7 +31,7 @@
   }
   
   > p + p {
-    margin-top: 5px;
+    margin-top: 0;
   }
 }
 
@@ -41,7 +41,7 @@
 
 .alert-dismissable, // The misspelled .alert-dismissable was deprecated in 3.2.0.
 .alert-dismissible {
-  padding-right: (@alert-padding + 20);
+  padding-right: @rhsNB;
 
   // Adjust close link position
   .close {

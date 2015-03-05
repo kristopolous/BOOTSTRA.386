@@ -6,8 +6,8 @@
 // Base class
 .badge {
   display: inline-block;
-  min-width: 10px;
-  padding: 3px 7px;
+  min-width: @baseWidth;
+  padding: 0 @rhsNB 0 @lhsNB;
   font-size: @font-size-small;
   font-weight: @badge-font-weight;
   color: @badge-color;
@@ -16,7 +16,6 @@
   white-space: nowrap;
   text-align: center;
   background-color: @badge-bg;
-  border-radius: @badge-border-radius;
 
   // Empty badges collapse automatically (not available in IE8)
   &:empty {
@@ -31,7 +30,7 @@
   
   .btn-xs & {
     top: 0;
-    padding: 1px 5px;
+    padding: 0px 0px;
   }
 
   // Hover state, but only for links
@@ -56,10 +55,10 @@
   }
   
   .list-group-item > & + & {
-    margin-right: 5px;
+    margin-right: @rhsNB;
   }
   
   .nav-pills > li > a > & {
-    margin-left: 3px;
+    margin-left: @lhsNB;
   }
 }
