@@ -2746,7 +2746,7 @@ select[multiple].form-group-lg .form-control {
   border-color: #ffffff;
 }
 .has-success .form-control:focus {
-  border-color: #e6e6e6;
+  border-color: #ffffff;
 }
 .has-success .input-group-addon {
   color: #ffffff;
@@ -2772,7 +2772,7 @@ select[multiple].form-group-lg .form-control {
   border-color: #ffffff;
 }
 .has-warning .form-control:focus {
-  border-color: #e6e6e6;
+  border-color: #ffffff;
 }
 .has-warning .input-group-addon {
   color: #ffffff;
@@ -2798,7 +2798,7 @@ select[multiple].form-group-lg .form-control {
   border-color: #ff5555;
 }
 .has-error .form-control:focus {
-  border-color: #ff2222;
+  border-color: #ff5555;
 }
 .has-error .input-group-addon {
   color: #ff5555;
@@ -2914,7 +2914,7 @@ select[multiple].form-group-lg .form-control {
 }
 .btn {
   display: inline-block;
-  margin-bottom: 0;
+  margin-bottom: 20px;
   font-weight: normal;
   text-align: center;
   vertical-align: middle;
@@ -2922,6 +2922,9 @@ select[multiple].form-group-lg .form-control {
   cursor: pointer;
   background-image: none;
   padding: 0 10px;
+  -webkit-box-shadow: 10px 10px 0 rgb(0,0,0);
+  box-shadow: 10px 10px 0 rgb(0,0,0);
+  cursor: default;
   white-space: nowrap;
   font-size: 18px;
   line-height: 20px;
@@ -2951,6 +2954,9 @@ select[multiple].form-group-lg .form-control {
 .btn.active {
   outline: 0;
   background-image: none;
+  margin: 10px 0 10px 10px;
+  -webkit-box-shadow: 0 0 0;
+  box-shadow: 0 0 0;
 }
 .btn.disabled,
 .btn[disabled],
@@ -4751,7 +4757,7 @@ a.badge:focus {
   font-weight: normal;
 }
 .jumbotron > hr {
-  border-top-color: #a2a2a2;
+  border-top-color: #bbbbbb;
 }
 .container .jumbotron,
 .container-fluid .jumbotron {
@@ -4830,11 +4836,11 @@ a.thumbnail.active {
 }
 .alert-success {
   background-color: #00aa00;
-  border-color: #189100;
+  border-color: #00aa00;
   color: #ffffff;
 }
 .alert-success hr {
-  border-top-color: #189100;
+  border-top-color: #00aa00;
 }
 .alert-success .alert-link {
   color: #ffffff;
@@ -4852,11 +4858,11 @@ a.thumbnail.active {
 }
 .alert-warning {
   background-color: #aa00aa;
-  border-color: #780091;
+  border-color: #aa00aa;
   color: #ffffff;
 }
 .alert-warning hr {
-  border-top-color: #780091;
+  border-top-color: #aa00aa;
 }
 .alert-warning .alert-link {
   color: #ffffff;
@@ -4975,14 +4981,21 @@ a.thumbnail.active {
 .list-group {
   margin-bottom: 20px;
   padding-left: 0;
+  border: 1px solid #000000;
+  -webkit-box-shadow: 0px 0px 0 5px #bbbbbb;
+  box-shadow: 0px 0px 0 5px #bbbbbb;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
 }
 .list-group-item {
+  color: #000000;
   position: relative;
   display: block;
   padding: 10px 15px;
   margin-bottom: -1px;
-  background-color: #ffffff;
-  border: 1px solid #dddddd;
+  background-color: #bbbbbb;
+  border: 0px solid #dddddd;
 }
 .list-group-item:first-child {
   border-top-right-radius: 0;
@@ -5003,7 +5016,7 @@ a.list-group-item:hover,
 a.list-group-item:focus {
   text-decoration: none;
   color: #555555;
-  background-color: #f5f5f5;
+  background-color: #aa5500;
 }
 .list-group-item.disabled,
 .list-group-item.disabled:hover,
@@ -5044,7 +5057,7 @@ a.list-group-item:focus {
 .list-group-item.active .list-group-item-text,
 .list-group-item.active:hover .list-group-item-text,
 .list-group-item.active:focus .list-group-item-text {
-  color: #ffffff;
+  color: #bbbbbb;
 }
 .list-group-item-success {
   color: #ffffff;
@@ -5136,11 +5149,11 @@ a.list-group-item-danger.active:focus {
 }
 .list-group-item-heading {
   margin-top: 0;
-  margin-bottom: 5px;
+  margin-bottom: 0px;
 }
 .list-group-item-text {
   margin-bottom: 0;
-  line-height: 1.3;
+  line-height: 20px;
 }
 .panel {
   color: #000000;
@@ -5336,22 +5349,22 @@ a.list-group-item-danger.active:focus {
   border-bottom-color: #bbbbbb;
 }
 .panel-success {
-  border-color: #189100;
+  border-color: #00aa00;
 }
 .panel-success > .panel-heading {
   color: #ffffff;
   background-color: #00aa00;
-  border-color: #189100;
+  border-color: #00aa00;
 }
 .panel-success > .panel-heading + .panel-collapse > .panel-body {
-  border-top-color: #189100;
+  border-top-color: #00aa00;
 }
 .panel-success > .panel-heading .badge {
   color: #00aa00;
   background-color: #ffffff;
 }
 .panel-success > .panel-footer + .panel-collapse > .panel-body {
-  border-bottom-color: #189100;
+  border-bottom-color: #00aa00;
 }
 .panel-info {
   border-color: #000000;
@@ -5372,22 +5385,22 @@ a.list-group-item-danger.active:focus {
   border-bottom-color: #000000;
 }
 .panel-warning {
-  border-color: #780091;
+  border-color: #aa00aa;
 }
 .panel-warning > .panel-heading {
   color: #ffffff;
   background-color: #aa00aa;
-  border-color: #780091;
+  border-color: #aa00aa;
 }
 .panel-warning > .panel-heading + .panel-collapse > .panel-body {
-  border-top-color: #780091;
+  border-top-color: #aa00aa;
 }
 .panel-warning > .panel-heading .badge {
   color: #aa00aa;
   background-color: #ffffff;
 }
 .panel-warning > .panel-footer + .panel-collapse > .panel-body {
-  border-bottom-color: #780091;
+  border-bottom-color: #aa00aa;
 }
 .panel-danger {
   border-color: #000000;
@@ -5718,9 +5731,9 @@ button.close {
   margin: 0;
   padding: 8px 14px;
   font-size: 18px;
-  background-color: #f7f7f7;
-  border-bottom: 1px solid #ebebeb;
-  border-radius: -1 -1 0 0;
+  background-color: #ffffff;
+  border-bottom: 0px solid #ffffff;
+  border-radius: 0;
 }
 .popover-content {
   padding: 9px 14px;
@@ -5745,7 +5758,7 @@ button.close {
   left: 50%;
   margin-left: -11px;
   border-bottom-width: 0;
-  border-top-color: #999999;
+  border-top-color: #cccccc;
   border-top-color: #000000;
   bottom: -11px;
 }
@@ -5761,7 +5774,7 @@ button.close {
   left: -11px;
   margin-top: -11px;
   border-left-width: 0;
-  border-right-color: #999999;
+  border-right-color: #cccccc;
   border-right-color: #000000;
 }
 .popover.right > .arrow:after {
@@ -5775,7 +5788,7 @@ button.close {
   left: 50%;
   margin-left: -11px;
   border-top-width: 0;
-  border-bottom-color: #999999;
+  border-bottom-color: #cccccc;
   border-bottom-color: #000000;
   top: -11px;
 }
@@ -5791,7 +5804,7 @@ button.close {
   right: -11px;
   margin-top: -11px;
   border-right-width: 0;
-  border-left-color: #999999;
+  border-left-color: #cccccc;
   border-left-color: #000000;
 }
 .popover.left > .arrow:after {

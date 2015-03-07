@@ -14,7 +14,7 @@
 }
 .btn {
   display: inline-block;
-  margin-bottom: 0; // For input.btn
+  margin-bottom: @baseLineHeight;
   font-weight: @btn-font-weight;
   text-align: center;
   vertical-align: middle;
@@ -22,6 +22,8 @@
   cursor: pointer;
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
   padding: 0 @baseLineWidth;
+  .box-shadow(~"@{baseLineWidth} @{halfbaseLineHeight} 0 rgb(0,0,0)");
+  cursor: default;
   white-space: nowrap;
   .button-size(@padding-base-vertical; @padding-base-horizontal; @font-size-base; @line-height-base; @border-radius-base);
   .user-select(none);
@@ -46,6 +48,8 @@
   &.active {
     outline: 0;
     background-image: none;
+    margin: @halfbaseLineHeight 0 @halfbaseLineHeight @halfbaseLineHeight;
+    .box-shadow(~"0 0 0");
   }
 
   &.disabled,

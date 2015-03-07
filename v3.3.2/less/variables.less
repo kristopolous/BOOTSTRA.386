@@ -428,7 +428,7 @@
 // Reset inverted navbar basics
 @navbar-inverse-color:                      @gray;
 @navbar-inverse-bg:                         @black;
-@navbar-inverse-border:                     darken(@navbar-inverse-bg, 10%);
+@navbar-inverse-border:                     @navbar-inverse-bg;
 
 // Inverted navbar links
 @navbar-inverse-link-color:                 lighten(@gray-light, 15%);
@@ -533,19 +533,19 @@
 
 @state-success-text:             @white;
 @state-success-bg:               @greenDark;
-@state-success-border:           darken(spin(@state-success-bg, -10), 5%);
+@state-success-border:           @state-success-bg;
 
 @state-info-text:                @white;
 @state-info-bg:                  @black;
-@state-info-border:              darken(spin(@state-info-bg, -10), 7%);
+@state-info-border:              @state-info-bg;
 
 @state-warning-text:             @white;
 @state-warning-bg:               @magentaDark;
-@state-warning-border:           darken(spin(@state-warning-bg, -10), 5%);
+@state-warning-border:           @state-warning-bg;
 
 @state-danger-text:              @red;
 @state-danger-bg:                @black;
-@state-danger-border:            darken(spin(@state-danger-bg, -10), 5%);
+@state-danger-border:            @state-danger-bg;
 
 
 //== Tooltips
@@ -580,7 +580,7 @@
 @popover-fallback-border-color:       #ccc;
 
 //** Popover title background color
-@popover-title-bg:                    darken(@popover-bg, 3%);
+@popover-title-bg:                    @popover-bg;
 
 //** Popover arrow width
 @popover-arrow-width:                 10px;
@@ -592,7 +592,7 @@
 //** Popover outer arrow color
 @popover-arrow-outer-color:           fadein(@popover-border-color, 5%);
 //** Popover outer arrow fallback color
-@popover-arrow-outer-fallback-color:  darken(@popover-fallback-border-color, 20%);
+@popover-arrow-outer-fallback-color:  @popover-fallback-border-color;
 
 
 //== Labels
@@ -704,14 +704,14 @@
 //##
 
 //** Background color on `.list-group-item`
-@list-group-bg:                 #fff;
+@list-group-bg:                 @gray;
 //** `.list-group-item` border color
 @list-group-border:             #ddd;
 //** List group border radius
 @list-group-border-radius:      @border-radius-base;
 
 //** Background color of single list items on hover
-@list-group-hover-bg:           #f5f5f5;
+@list-group-hover-bg:           @brown;
 //** Text color of active list items
 @list-group-active-color:       @component-active-color;
 //** Background color of active list items
@@ -719,7 +719,7 @@
 //** Border color of active list elements
 @list-group-active-border:      @list-group-active-bg;
 //** Text color for content within active list items
-@list-group-active-text-color:  lighten(@list-group-active-bg, 40%);
+@list-group-active-text-color:  @list-group-active-bg;
 
 //** Text color of disabled list items
 @list-group-disabled-color:      @gray-light;
@@ -796,7 +796,7 @@
 //##
 
 @well-bg:                     @greenDark;
-@well-border:                 darken(@well-bg, 7%);
+@well-border:                 @well-bg;
 
 
 //== Badges
