@@ -10,7 +10,7 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: @headings-font-family;
   font-weight: @headings-font-weight;
-  line-height: @headings-line-height;
+  line-height: @baseLineHeight;
   color: @headings-color;
 
   small,
@@ -21,33 +21,30 @@ h1, h2, h3, h4, h5, h6,
   }
 }
 
-h1, .h1,
-h2, .h2,
-h3, .h3 {
-  margin-top: @line-height-computed;
-  margin-bottom: (@line-height-computed / 2);
-
-  small,
-  .small {
-  }
+h1,
+h2,
+h3 { line-height: @baseLineHeight; }
+h3:before {
+  content: "[";
 }
-h4, .h4,
-h5, .h5,
-h6, .h6 {
-  margin-top: (@line-height-computed / 2);
-  margin-bottom: (@line-height-computed / 2);
-
-  small,
-  .small {
-  }
+h3:after {
+  content: "]";
 }
 
-h1, .h1 { font-size: @font-size-h1; }
-h2, .h2 { font-size: @font-size-h2; }
-h3, .h3 { font-size: @font-size-h3; }
-h4, .h4 { font-size: @font-size-h4; }
-h5, .h5 { font-size: @font-size-h5; }
-h6, .h6 { font-size: @font-size-h6; }
+h1 { font-size: @font-size-base; 
+text-transform: uppercase;} // ~38px
+h2 { font-size: @font-size-base; 
+white-space:nowrap;
+} // ~32px
+h3 { font-size: @font-size-base; } // ~24px
+h4 { font-size: @font-size-base; color: @pink} // ~18px
+h5 { font-size: @font-size-base; }
+h6 { font-size: @font-size-base; } // ~12px
+
+h1 small { font-size: @font-size-base; } // ~24px
+h2 small { font-size: @font-size-base; } // ~18px
+h3 small { font-size: @font-size-base; }
+h4 small { font-size: @font-size-base; }
 
 
 // Body text
@@ -145,7 +142,7 @@ mark,
 .page-header {
   padding-bottom: ((@line-height-computed / 2) - 1);
   margin: (@line-height-computed * 2) 0 @line-height-computed;
-  border-bottom: 1px solid @page-header-border-color;
+  border-bottom: @borderWidth solid @page-header-border-color;
 }
 
 
@@ -232,7 +229,7 @@ abbr[title],
 // Add data-* attribute to help out our tooltip plugin, per https://github.com/twbs/bootstrap/issues/5257
 abbr[data-original-title] {
   cursor: help;
-  border-bottom: 1px dotted @abbr-border-color;
+  border-bottom: 0px dotted @abbr-border-color;
 }
 .initialism {
   font-size: @font-size-base;
