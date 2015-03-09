@@ -80,7 +80,7 @@
 @font-family-monospace:   DOS, Monaco, Menlo, Consolas, "Courier New", monospace;
 @font-family-base:        @font-family-sans-serif;
 
-@baseWidth:               12.4px;
+@baseWidth:               11.4px;
 @font-size-base:          18px;
 @font-size-large:         @font-size-base;
 @font-size-small:         @font-size-base;
@@ -93,7 +93,8 @@
 @font-size-h6:            @font-size-base;
 
 //** Unit-less `line-height` for use in components like buttons.
-@line-height-base:        20px;
+@baseLineHeight:        20px;
+@line-height-base:        @baseLineHeight;
 //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
 @line-height-computed:    @line-height-base;
 
@@ -104,19 +105,17 @@
 @headings-color:          inherit;
 
 @space:                 @baseWidth;
-@baseLineHeight:        20px;
 @halfbaseLineHeight:    (@baseLineHeight / 2);
 @borderWidth:           2px;
 @baseLineWidth:         (@baseLineHeight / 2);
-@lhsNB:                 6px;
-@rhsNB:                 5px;
-@lhs:                   4px;
-@rhs:                   @lhs;
-@ts:                    9px;
-@tsNB:                  (@ts - @borderWidth);
+@lhsNB:                 6.2px;
+@rhsNB:                 5.2px;
+@lhs:                   (@lhsNB - (@borderWidth / 2));
+@rhs:                   (@rhsNB - (@borderWidth / 2));
+@tsNB:                  (@baseLineHeight / 2);
+@bsNB:                  @tsNB;
+@ts:                    (@tsNB - (@borderWidth / 2));
 @bs:                    @ts;
-@bsBD:                  (@bs - @borderWidth);
-@bsNB:                  @bsBD;
 
 
 //== Iconography
@@ -147,8 +146,8 @@
 @padding-xs-vertical:       0px;
 @padding-xs-horizontal:     0px;
 
-@line-height-large:         20px;
-@line-height-small:         20px;
+@line-height-large:         @baseLineHeight;
+@line-height-small:         @baseLineHeight;
 
 @border-radius-base:        0;
 @border-radius-large:       0;
@@ -741,7 +740,7 @@
 //##
 
 @panel-bg:                    @gray;
-@panel-body-padding:          @ts @rhsNB 0 @lhsNB;
+@panel-body-padding:          0 @rhsNB 0 @lhsNB;
 @panel-heading-padding:       0 @rhsNB 0 @lhsNB;
 @panel-footer-padding:        @panel-heading-padding;
 @panel-border-radius:         @border-radius-base;
@@ -806,7 +805,7 @@
 //
 //##
 
-@badge-color:                 #fff;
+@badge-color:                 @black;
 //** Linked badge text color on hover
 @badge-link-hover-color:      #fff;
 @badge-bg:                    @gray-light;
@@ -814,10 +813,10 @@
 //** Badge text color in active nav link
 @badge-active-color:          @link-color;
 //** Badge background color in active nav link
-@badge-active-bg:             #fff;
+@badge-active-bg:             @black;
 
 @badge-font-weight:           normal;
-@badge-line-height:           1;
+@badge-line-height:           @line-height-base;
 @badge-border-radius:         0;
 
 

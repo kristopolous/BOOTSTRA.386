@@ -22,6 +22,7 @@
       padding: @nav-link-padding;
       &:hover,
       &:focus {
+        color: @black;
         text-decoration: none;
         background-color: @nav-link-hover-bg;
       }
@@ -85,7 +86,6 @@
       margin-right: @rhsNB;
       line-height: @line-height-base;
       border: @borderWidth solid transparent;
-      border-radius: @border-radius-base @border-radius-base 0 0;
       &:hover {
         border-color: @nav-tabs-link-hover-border-color @nav-tabs-link-hover-border-color @nav-tabs-border-color;
       }
@@ -120,10 +120,9 @@
 
     // Links rendered as pills
     > a {
-      border-radius: @nav-pills-border-radius;
     }
     + li {
-      margin-left: @lhsNB;
+      margin-left: @baseWidth;
     }
 
     // Active state
@@ -193,19 +192,17 @@
   > li > a {
     // Override margin from .nav-tabs
     margin-right: 0;
-    border-radius: @border-radius-base;
   }
 
   > .active > a,
   > .active > a:hover,
   > .active > a:focus {
-    border: 1px solid @nav-tabs-justified-link-border-color;
+    border: @borderWidth solid @nav-tabs-justified-link-border-color;
   }
 
   @media (min-width: @screen-sm-min) {
     > li > a {
       border-bottom: 0px solid @nav-tabs-justified-link-border-color;
-      border-radius: @border-radius-base @border-radius-base 0 0;
     }
     > .active > a,
     > .active > a:hover,
@@ -240,5 +237,4 @@
   // make dropdown border overlap tab border
   margin-top: -1px;
   // Remove the top rounded corners here since there is a hard edge above the menu
-  .border-top-radius(0);
 }

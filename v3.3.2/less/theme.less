@@ -18,7 +18,6 @@
 .btn-info,
 .btn-warning,
 .btn-danger {
-  @shadow: inset 0 1px 0 rgb(255,255,255), 0 1px 1px rgb(0,0,0);
 
   // Reset the shadow
   &:active,
@@ -105,8 +104,6 @@
 // Default navbar
 .navbar-default {
   .reset-filter(); // Remove gradient in IE<10 to fix bug where dropdowns don't get triggered
-  border-radius: @navbar-border-radius;
-  @shadow: inset 0 1px 0 rgb(255,255,255), 0 1px 5px rgb(0,0,0);
 
   .navbar-nav > .open > a,
   .navbar-nav > .active > a {
@@ -133,7 +130,6 @@
 .navbar-static-top,
 .navbar-fixed-top,
 .navbar-fixed-bottom {
-  border-radius: 0;
 }
 
 // Fix active state of dropdown items in collapsed mode
@@ -154,7 +150,6 @@
 
 // Common styles
 .alert {
-  @shadow: inset 0 1px 0 rgb(255,255,255), 0 1px 2px rgb(0,0,0);
 }
 
 // Mixin for generating new styles
@@ -199,7 +194,6 @@
 // --------------------------------------------------
 
 .list-group {
-  border-radius: @border-radius-base;
 }
 .list-group-item.active,
 .list-group-item.active:hover,
@@ -239,5 +233,4 @@
 
 .well {
   border-color: @well-bg;
-  @shadow: inset 0 1px 3px rgb(0,0,0), 0 1px 0 rgb(255,255,255);
 }

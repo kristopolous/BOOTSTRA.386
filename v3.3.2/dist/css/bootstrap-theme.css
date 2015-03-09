@@ -148,15 +148,9 @@
 }
 .navbar-default {
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-  border-radius: 0;
 }
 .navbar-inverse {
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-}
-.navbar-static-top,
-.navbar-fixed-top,
-.navbar-fixed-bottom {
-  border-radius: 0;
 }
 @media (max-width: 767px) {
   .navbar .navbar-nav .open .dropdown-menu > .active > a,
@@ -176,9 +170,6 @@
 }
 .alert-danger {
   border-color: #000000;
-}
-.list-group {
-  border-radius: 0;
 }
 .list-group-item.active,
 .list-group-item.active:hover,

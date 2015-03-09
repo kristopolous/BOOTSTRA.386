@@ -13,20 +13,18 @@ samp {
 
 // Inline code
 code {
-  padding: 2px 4px;
+  padding: 0;
   font-size: @font-size-base;
   color: @code-color;
   background-color: @code-bg;
-  border-radius: @border-radius-base;
 }
 
 // User input typically entered via keyboard
 kbd {
-  padding: 2px 4px;
+  padding: 0;
   font-size: @font-size-base;
   color: @kbd-color;
   background-color: @kbd-bg;
-  border-radius: @border-radius-small;
 
   kbd {
     padding: 0;
@@ -46,8 +44,7 @@ pre {
   word-wrap: break-word;
   color: @pre-color;
   background-color: @pre-bg;
-  border: 1px solid @pre-border-color;
-  border-radius: @border-radius-base;
+  border: @borderWidth solid @pre-border-color;
 
   // Account for some code outputs that place code tags in pre tags
   code {
@@ -56,7 +53,6 @@ pre {
     color: inherit;
     white-space: pre-wrap;
     background-color: transparent;
-    border-radius: 0;
   }
 }
 

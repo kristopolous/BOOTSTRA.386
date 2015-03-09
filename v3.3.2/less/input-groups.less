@@ -57,7 +57,6 @@
   display: table-cell;
 
   &:not(:first-child):not(:last-child) {
-    border-radius: 0;
   }
 }
 // Addon and addon wrapper for buttons
@@ -73,24 +72,20 @@
 .input-group-addon {
   padding: @padding-base-vertical @padding-base-horizontal;
   font-size: @font-size-base;
-  font-weight: normal;
-  line-height: 1;
+  line-height: @baseLineHeight;
   color: @input-color;
   text-align: center;
   background-color: @input-group-addon-bg;
-  border: 1px solid @input-group-addon-border-color;
-  border-radius: @border-radius-base;
+  border: @borderWidth solid @input-group-addon-border-color;
 
   // Sizing
   &.input-sm {
     padding: @padding-small-vertical @padding-small-horizontal;
     font-size: @font-size-small;
-    border-radius: @border-radius-small;
   }
   &.input-lg {
     padding: @padding-large-vertical @padding-large-horizontal;
     font-size: @font-size-large;
-    border-radius: @border-radius-large;
   }
 
   // Nuke default margins from checkboxes and radios to vertically center within.
@@ -108,7 +103,6 @@
 .input-group-btn:first-child > .dropdown-toggle,
 .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
-  .border-right-radius(0);
 }
 .input-group-addon:first-child {
   border-right: 0;
@@ -120,7 +114,6 @@
 .input-group-btn:last-child > .dropdown-toggle,
 .input-group-btn:first-child > .btn:not(:first-child),
 .input-group-btn:first-child > .btn-group:not(:first-child) > .btn {
-  .border-left-radius(0);
 }
 .input-group-addon:last-child {
   border-left: 0;

@@ -49,9 +49,8 @@
 .modal-content {
   position: relative;
   background-color: @modal-content-bg;
-  border: 1px solid @modal-content-fallback-border-color; //old browsers fallback (ie8 etc)
-  border: 1px solid @modal-content-border-color;
-  border-radius: @border-radius-large;
+  border: @borderWidth solid @modal-content-fallback-border-color; //old browsers fallback (ie8 etc)
+  border: @borderWidth solid @modal-content-border-color;
   background-clip: padding-box;
   // Remove focus outline from opened modal
   outline: 0;
@@ -64,16 +63,13 @@
   right: 0;
   left: 0;
   background-color: @modal-backdrop-bg;
-  // Fade for backdrop
-  &.fade { .opacity(0); }
-  &.in { .opacity(@modal-backdrop-opacity); }
 }
 
 // Modal header
 // Top section of the modal w/ title and dismiss
 .modal-header {
   padding: @modal-title-padding;
-  border-bottom: 1px solid @modal-header-border-color;
+  border-bottom: @borderWidth solid @modal-header-border-color;
   min-height: (@modal-title-padding + @modal-title-line-height);
 }
 // Close icon
@@ -98,7 +94,7 @@
 .modal-footer {
   padding: @modal-inner-padding;
   text-align: right; // right align buttons
-  border-top: 1px solid @modal-footer-border-color;
+  border-top: @borderWidth solid @modal-footer-border-color;
   &:extend(.clearfix all); // clear it in case folks use .pull-* classes on buttons
 
   // Properly space out buttons

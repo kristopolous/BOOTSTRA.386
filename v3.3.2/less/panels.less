@@ -197,7 +197,6 @@
   // Tighten up margin so it's only between panels
   .panel {
     margin-bottom: 0;
-    border-radius: @panel-border-radius;
 
     + .panel {
       margin-top: 0px;
@@ -209,14 +208,12 @@
 
     + .panel-collapse > .panel-body,
     + .panel-collapse > .list-group {
-      border-top: 0px solid @panel-inner-border;
     }
   }
 
   .panel-footer {
     border-top: 0;
     + .panel-collapse .panel-body {
-      border-bottom: 0px solid @panel-inner-border;
     }
   }
 }

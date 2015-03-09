@@ -10,18 +10,16 @@
   z-index: @zindex-popover;
   display: none;
   max-width: @popover-max-width;
-  padding: 1px;
+  padding: 0px;
   // Reset font and text properties given new insertion method
   font-family: @font-family-base;
   font-size: @font-size-base;
-  font-weight: normal;
   line-height: @line-height-base;
   text-align: left;
   background-color: @popover-bg;
   background-clip: padding-box;
-  border: 1px solid @popover-fallback-border-color;
-  border: 1px solid @popover-border-color;
-  border-radius: @border-radius-large;
+  border: @borderWidth solid @popover-fallback-border-color;
+  border: @borderWidth solid @popover-border-color;
 
   // Overrides for proper insertion
   white-space: normal;
@@ -38,8 +36,6 @@
   padding: 8px 14px;
   font-size: @font-size-base;
   background-color: @popover-title-bg;
-  border-bottom: 0px solid @popover-title-bg;
-  border-radius: 0;
 }
 
 .popover-content {

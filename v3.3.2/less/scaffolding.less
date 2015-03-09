@@ -27,7 +27,7 @@
 
 html {
   font-size: @font-size-base;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: @black;
 }
 
 body {
@@ -90,7 +90,6 @@ img {
 
 // Rounded corners
 .img-rounded {
-  border-radius: @border-radius-large;
 }
 
 // Image thumbnails
@@ -100,8 +99,7 @@ img {
   padding: @thumbnail-padding;
   line-height: @line-height-base;
   background-color: @thumbnail-bg;
-  border: 1px solid @thumbnail-border;
-  border-radius: @thumbnail-border-radius;
+  border: @borderWidth solid @thumbnail-border;
 
   // Keep them at most 100% wide
   .img-responsive(inline-block);
@@ -109,7 +107,6 @@ img {
 
 // Perfect circle
 .img-circle {
-  border-radius: 0; // set radius in percents
 }
 
 
