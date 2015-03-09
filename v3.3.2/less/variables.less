@@ -35,9 +35,6 @@
 @pink:                  #FE54FE;
 @purple:                #FE5454;
 
-@lhsNB:                 6px;
-@rhsNB:                 5px;
-
 // end colors
 
 @gray-base:              @gray;
@@ -110,7 +107,7 @@
 @baseLineWidth:         (@baseLineHeight / 2);
 @lhsNB:                 6.2px;
 @rhsNB:                 5.2px;
-@lhs:                   (@lhsNB - (@borderWidth / 2));
+@lhs:                   (@lhsNB - (@borderWidth));
 @rhs:                   (@rhsNB - (@borderWidth / 2));
 @tsNB:                  (@baseLineHeight / 2);
 @bsNB:                  @tsNB;
@@ -169,9 +166,9 @@
 //## Customizes the `.table` component with basic values, each used across all table variations.
 
 //** Padding for `<th>`s and `<td>`s.
-@table-cell-padding:            8px;
+@table-cell-padding:            @ts @rhs @bs @lhs; 
 //** Padding for cells in `.table-condensed`.
-@table-condensed-cell-padding:  5px;
+@table-condensed-cell-padding:  @ts @rhs @bs @lhs;
 
 //** Default background color used for all tables.
 @table-bg:                      transparent;
@@ -182,7 +179,7 @@
 @table-bg-active:               @table-bg-hover;
 
 //** Border color for table and cell borders.
-@table-border-color:            #ddd;
+@table-border-color:            @gray;
 
 
 //== Buttons
@@ -523,8 +520,8 @@
 //##
 
 @jumbotron-padding:              (@ts * 2) (@rhs * 2) (@bs * 2) (@lhs * 2);
-@jumbotron-color:                @black;
-@jumbotron-bg:                   @gray-lighter;
+@jumbotron-color:                @grayLight;
+@jumbotron-bg:                   transparent;
 @jumbotron-heading-color:        inherit;
 @jumbotron-font-size:            @font-size-base;
 

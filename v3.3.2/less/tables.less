@@ -34,14 +34,14 @@ th {
         padding: @table-cell-padding;
         line-height: @line-height-base;
         vertical-align: top;
-        border-top: 1px solid @table-border-color;
+        border-top: @borderWidth solid @table-border-color;
       }
     }
   }
   // Bottom align for column headings
   > thead > tr > th {
     vertical-align: bottom;
-    border-bottom: 2px solid @table-border-color;
+    border-bottom: @borderWidth solid @table-border-color;
   }
   // Remove top border from thead by default
   > caption + thead,
@@ -50,13 +50,13 @@ th {
     > tr:first-child {
       > th,
       > td {
-        border-top: 0;
+        border-top: 1px;
       }
     }
   }
   // Account for multiple tbody instances
   > tbody + tbody {
-    border-top: 2px solid @table-border-color;
+    border-top: @borderWidth solid @table-border-color;
   }
 
   // Nesting
@@ -94,14 +94,14 @@ th {
     > tr {
       > th,
       > td {
-        border: 1px solid @table-border-color;
+        border: @borderWidth solid @table-border-color;
       }
     }
   }
   > thead > tr {
     > th,
     > td {
-      border-bottom-width: 2px;
+      border-bottom-width: @borderWidth;
     }
   }
 }
@@ -113,7 +113,7 @@ th {
 
 .table-striped {
   > tbody > tr:nth-of-type(odd) {
-    background-color: @table-bg-accent;
+    color: @cyan;
   }
 }
 
@@ -208,11 +208,9 @@ table {
         > tr {
           > th:first-child,
           > td:first-child {
-            border-left: 0;
           }
           > th:last-child,
           > td:last-child {
-            border-right: 0;
           }
         }
       }
@@ -225,7 +223,6 @@ table {
         > tr:last-child {
           > th,
           > td {
-            border-bottom: 0;
           }
         }
       }
