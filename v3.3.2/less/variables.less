@@ -113,8 +113,10 @@
 @lhs:                   4px;
 @rhs:                   @lhs;
 @ts:                    9px;
+@tsNB:                  (@ts - @borderWidth);
 @bs:                    @ts;
-@bsBD:                  (@ts - @borderWidth);
+@bsBD:                  (@bs - @borderWidth);
+@bsNB:                  @bsBD;
 
 
 //== Iconography
@@ -294,7 +296,7 @@
 @dropdown-link-disabled-color:   @gray-light;
 
 //** Text color for headers within dropdown menus.
-@dropdown-header-color:          @gray-light;
+@dropdown-header-color:          @brown;
 
 //** Deprecated `@dropdown-caret-color` as of v3.1.0
 @dropdown-caret-color:           #000;
@@ -468,7 +470,7 @@
 @nav-tabs-link-hover-border-color:          @gray-lighter;
 
 @nav-tabs-active-link-hover-bg:             @body-bg;
-@nav-tabs-active-link-hover-color:          @black;
+@nav-tabs-active-link-hover-color:          @white;
 @nav-tabs-active-link-hover-border-color:   #ddd;
 
 @nav-tabs-justified-link-border-color:            #ddd;

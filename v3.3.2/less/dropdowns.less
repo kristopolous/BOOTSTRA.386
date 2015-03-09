@@ -35,16 +35,15 @@
   display: none; // none by default, but block on "open" of the menu
   float: left;
   min-width: @baseLineWidth * 10;
-  padding: @bs @rhs @ts @lhs;
-  margin: -(15.5px) @rhs 8px @lhs;
+  padding: @ts @rhs @bs @lhs;
+  margin: 5px @rhs 8px @rhsNB;
   list-style: none;
   font-size: @font-size-base;
   text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
   background-color: @dropdown-bg;
-  border-radius: @border-radius-base;
   background-clip: padding-box;
 
-  border: 1px solid @black;
+  border: @borderWidth solid @black;
   .box-shadow(0px 0px 0 5px @gray);
   -webkit-background-clip: padding-box;
      -moz-background-clip: padding;
