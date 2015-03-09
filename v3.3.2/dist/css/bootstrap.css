@@ -2408,15 +2408,20 @@ legend {
   padding: 0;
   margin-bottom: 20px;
   font-size: 18px;
-  line-height: inherit;
+  line-height: 20px * 2;
   color: #555555;
   border: 0;
   border-bottom: 1px solid #e5e5e5;
 }
+legend:before {
+  content: "## ";
+}
+legend:after {
+  content: " ##";
+}
 label {
   display: inline-block;
   max-width: 100%;
-  margin-bottom: 5px;
   font-weight: normal;
 }
 input[type="search"] {
@@ -2426,9 +2431,14 @@ input[type="search"] {
 }
 input[type="radio"],
 input[type="checkbox"] {
-  margin: 4px 0 0;
-  margin-top: 1px \9;
-  line-height: normal;
+  margin: 10px 5px;
+  line-height: 20px;
+}
+input[type="text"]:before {
+  content: "[";
+}
+input[type="text"]:after {
+  content: "]";
 }
 input[type="file"] {
   display: block;
@@ -2450,10 +2460,10 @@ input[type="checkbox"]:focus {
 }
 output {
   display: block;
-  padding-top: 1px;
+  padding-top: 0;
   font-size: 18px;
   line-height: 20px;
-  color: #bbbbbb;
+  color: #ffffff;
 }
 .form-control {
   display: block;
@@ -2462,16 +2472,13 @@ output {
   padding: 0px 0px;
   font-size: 18px;
   line-height: 20px;
-  color: #bbbbbb;
-  background-color: #ffffff;
+  color: #ffffff;
+  background-color: #00aaaa;
   background-image: none;
-  border: 2px solid #cccccc;
+  border: none;
 }
 .form-control:focus {
-  border-color: #000000;
   outline: 0;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0, 0, 0, 0.6);
-  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0, 0, 0, 0.6);
 }
 .form-control::-moz-placeholder {
   color: #999999;
@@ -2552,12 +2559,12 @@ input[type="search"] {
 }
 .radio + .radio,
 .checkbox + .checkbox {
-  margin-top: -5px;
+  margin-top: -9px;
 }
 .radio-inline,
 .checkbox-inline {
   display: inline-block;
-  padding-left: 20px;
+  padding-left: 11.4px;
   margin-bottom: 0;
   vertical-align: middle;
   font-weight: normal;
@@ -2600,10 +2607,9 @@ fieldset[disabled] .checkbox label {
 }
 .input-sm {
   height: 18px;
-  padding: 0px 0px;
+  padding: 0 0;
   font-size: 18px;
   line-height: 20px;
-  border-radius: 0;
 }
 select.input-sm {
   height: 18px;
@@ -2615,10 +2621,9 @@ select[multiple].input-sm {
 }
 .form-group-sm .form-control {
   height: 18px;
-  padding: 0px 0px;
+  padding: 0 0;
   font-size: 18px;
   line-height: 20px;
-  border-radius: 0;
 }
 select.form-group-sm .form-control {
   height: 18px;
@@ -2636,10 +2641,9 @@ select[multiple].form-group-sm .form-control {
 }
 .input-lg {
   height: 18px;
-  padding: 0px 6px;
+  padding: 0 0;
   font-size: 18px;
   line-height: 20px;
-  border-radius: 0;
 }
 select.input-lg {
   height: 18px;
@@ -2651,10 +2655,9 @@ select[multiple].input-lg {
 }
 .form-group-lg .form-control {
   height: 18px;
-  padding: 0px 6px;
+  padding: 0 0;
   font-size: 18px;
   line-height: 20px;
-  border-radius: 0;
 }
 select.form-group-lg .form-control {
   height: 18px;
@@ -2882,7 +2885,6 @@ select[multiple].form-group-lg .form-control {
 }
 .btn {
   display: inline-block;
-  margin-bottom: 20px;
   text-align: center;
   vertical-align: middle;
   touch-action: manipulation;
@@ -3239,7 +3241,7 @@ fieldset[disabled] .btn-link:focus {
   width: 100%;
 }
 .btn-block + .btn-block {
-  margin-top: 5px;
+  margin-top: 20px;
 }
 input[type="submit"].btn-block,
 input[type="reset"].btn-block,
@@ -3552,10 +3554,9 @@ tbody.collapse.in {
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn {
   height: 18px;
-  padding: 0px 6px;
+  padding: 0 0;
   font-size: 18px;
   line-height: 20px;
-  border-radius: 0;
 }
 select.input-group-lg > .form-control,
 select.input-group-lg > .input-group-addon,
@@ -3575,10 +3576,9 @@ select[multiple].input-group-lg > .input-group-btn > .btn {
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .btn {
   height: 18px;
-  padding: 0px 0px;
+  padding: 0 0;
   font-size: 18px;
   line-height: 20px;
-  border-radius: 0;
 }
 select.input-group-sm > .form-control,
 select.input-group-sm > .input-group-addon,
@@ -3609,7 +3609,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   padding: 0px 0px;
   font-size: 18px;
   line-height: 20px;
-  color: #bbbbbb;
+  color: #ffffff;
   text-align: center;
   background-color: #bbbbbb;
   border: 2px solid #cccccc;
