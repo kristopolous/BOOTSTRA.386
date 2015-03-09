@@ -8,7 +8,6 @@
   color: @black;
   margin-bottom: @line-height-computed;
   background-color: @panel-bg;
-  border: 0px solid transparent;
 }
 
 // Panel contents
@@ -20,7 +19,6 @@
 // Optional heading
 .panel-heading {
   padding: @panel-heading-padding;
-  border-bottom: 0px solid transparent;
 
   > .dropdown .dropdown-toggle {
     color: inherit;
@@ -47,7 +45,6 @@
 .panel-footer {
   padding: @panel-footer-padding;
   background-color: @panel-footer-bg;
-  border-top: 0px solid @panel-inner-border;
 }
 
 
@@ -63,19 +60,16 @@
 
     .list-group-item {
       border-width: 0px 0;
-      border-radius: 0;
     }
 
     // Add border top radius for first one
     &:first-child {
       .list-group-item:first-child {
-        border-top: 0;
       }
     }
     // Add border bottom radius for last one
     &:last-child {
       .list-group-item:last-child {
-        border-bottom: 0;
       }
     }
   }
@@ -83,7 +77,6 @@
 // Collapse space between when there's no additional content.
 .panel-heading + .list-group {
   .list-group-item:first-child {
-    border-top-width: 0;
   }
 }
 .list-group + .panel-footer {
