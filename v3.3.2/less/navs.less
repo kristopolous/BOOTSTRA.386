@@ -19,6 +19,7 @@
     > a {
       position: relative;
       display: block;
+      margin: 0;
       padding: @nav-link-padding;
       &:hover,
       &:focus {
@@ -75,19 +76,15 @@
 
 // Give the tabs something to sit on
 .nav-tabs {
-  border-bottom: @borderWidth solid @nav-tabs-border-color;
+  background: @black;
   > li {
     float: left;
     // Make the list-items overlay the bottom border
-    margin-bottom: -1px;
 
     // Actual tabs (as links)
     > a {
-      margin-right: @rhsNB;
       line-height: @line-height-base;
-      border: @borderWidth solid transparent;
       &:hover {
-        border-color: @nav-tabs-link-hover-border-color @nav-tabs-link-hover-border-color @nav-tabs-border-color;
       }
     }
 
@@ -98,8 +95,6 @@
       &:focus {
         color: @nav-tabs-active-link-hover-color;
         background-color: @nav-tabs-active-link-hover-bg;
-        border: @borderWidth solid @nav-tabs-active-link-hover-border-color;
-        border-bottom-color: transparent;
         cursor: default;
       }
     }
@@ -122,7 +117,7 @@
     > a {
     }
     + li {
-      margin-left: @baseWidth;
+      margin-left: 0;
     }
 
     // Active state
@@ -187,7 +182,6 @@
 //
 // Mixin for adding on top the shared `.nav-justified` styles for our tabs
 .nav-tabs-justified {
-  border-bottom: 0;
 
   > li > a {
     // Override margin from .nav-tabs
@@ -197,17 +191,14 @@
   > .active > a,
   > .active > a:hover,
   > .active > a:focus {
-    border: @borderWidth solid @nav-tabs-justified-link-border-color;
   }
 
   @media (min-width: @screen-sm-min) {
     > li > a {
-      border-bottom: 0px solid @nav-tabs-justified-link-border-color;
     }
     > .active > a,
     > .active > a:hover,
     > .active > a:focus {
-      border-bottom-color: @nav-tabs-justified-active-link-border-color;
     }
   }
 }

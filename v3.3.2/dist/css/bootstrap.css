@@ -3668,6 +3668,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav > li > a {
   position: relative;
   display: block;
+  margin: 0;
   padding: 0 11.4px;
 }
 .nav > li > a:hover,
@@ -3702,32 +3703,23 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   max-width: none;
 }
 .nav-tabs {
-  border-bottom: 2px solid #dddddd;
+  background: #000000;
 }
 .nav-tabs > li {
   float: left;
-  margin-bottom: -1px;
 }
 .nav-tabs > li > a {
-  margin-right: 5.2px;
   line-height: 20px;
-  border: 2px solid transparent;
-}
-.nav-tabs > li > a:hover {
-  border-color: #bbbbbb #bbbbbb #dddddd;
 }
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
   color: #ffffff;
-  background-color: #000084;
-  border: 2px solid #dddddd;
-  border-bottom-color: transparent;
+  background-color: #aa5500;
   cursor: default;
 }
 .nav-tabs.nav-justified {
   width: 100%;
-  border-bottom: 0;
 }
 .nav-tabs.nav-justified > li {
   float: none;
@@ -3752,26 +3744,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-tabs.nav-justified > li > a {
   margin-right: 0;
 }
-.nav-tabs.nav-justified > .active > a,
-.nav-tabs.nav-justified > .active > a:hover,
-.nav-tabs.nav-justified > .active > a:focus {
-  border: 2px solid #dddddd;
-}
-@media (min-width: 768px) {
-  .nav-tabs.nav-justified > li > a {
-    border-bottom: 0px solid #dddddd;
-  }
-  .nav-tabs.nav-justified > .active > a,
-  .nav-tabs.nav-justified > .active > a:hover,
-  .nav-tabs.nav-justified > .active > a:focus {
-    border-bottom-color: #000084;
-  }
-}
 .nav-pills > li {
   float: left;
 }
 .nav-pills > li + li {
-  margin-left: 11.4px;
+  margin-left: 0;
 }
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:hover,
@@ -3809,26 +3786,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     margin-bottom: 0;
   }
 }
-.nav-tabs-justified {
-  border-bottom: 0;
-}
 .nav-tabs-justified > li > a {
   margin-right: 0;
-}
-.nav-tabs-justified > .active > a,
-.nav-tabs-justified > .active > a:hover,
-.nav-tabs-justified > .active > a:focus {
-  border: 2px solid #dddddd;
-}
-@media (min-width: 768px) {
-  .nav-tabs-justified > li > a {
-    border-bottom: 0px solid #dddddd;
-  }
-  .nav-tabs-justified > .active > a,
-  .nav-tabs-justified > .active > a:hover,
-  .nav-tabs-justified > .active > a:focus {
-    border-bottom-color: #000084;
-  }
 }
 .tab-content > .tab-pane {
   display: none;
