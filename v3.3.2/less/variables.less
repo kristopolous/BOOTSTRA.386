@@ -77,7 +77,7 @@
 @font-family-monospace:   DOS, Monaco, Menlo, Consolas, "Courier New", monospace;
 @font-family-base:        @font-family-sans-serif;
 
-@baseWidth:               11.4px;
+@baseWidth:               10px;
 @font-size-base:          18px;
 @font-size-large:         @font-size-base;
 @font-size-small:         @font-size-base;
@@ -105,8 +105,8 @@
 @halfbaseLineHeight:    (@baseLineHeight / 2);
 @borderWidth:           2px;
 @baseLineWidth:         (@baseLineHeight / 2);
-@lhsNB:                 6.2px;
-@rhsNB:                 5.2px;
+@lhsNB:                 (@baseWidth / 2 + 1);
+@rhsNB:                 (@baseWidth / 2 - 1);
 @lhs:                   (@lhsNB - (@borderWidth));
 @rhs:                   (@rhsNB - (@borderWidth / 2));
 @tsNB:                  (@baseLineHeight / 2);
@@ -359,12 +359,12 @@
 //** Number of columns in the grid.
 @grid-columns:              12;
 //** Padding between columns. Gets divided in half for the left and right.
-@grid-gutter-width:         30px;
+@grid-gutter-width:         (@baseWidth * 2);
 // Navbar collapse
 //** Point at which the navbar becomes uncollapsed.
 @grid-float-breakpoint:     @screen-sm-min;
 //** Point at which the navbar begins collapsing.
-@grid-float-breakpoint-max: (@grid-float-breakpoint - 1);
+@grid-float-breakpoint-max: (@grid-float-breakpoint);
 
 
 //== Container sizes

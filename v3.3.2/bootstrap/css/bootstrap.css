@@ -1489,7 +1489,7 @@ blockquote .small:before {
 }
 .blockquote-reverse,
 blockquote.pull-right {
-  padding-right: 11.4px;
+  padding-right: 10px;
   padding-left: 0;
   border-right: 5px solid #bbbbbb;
   border-left: 0;
@@ -1565,39 +1565,39 @@ pre code {
 .container {
   margin-right: auto;
   margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 @media (min-width: 768px) {
   .container {
-    width: 750px;
+    width: 740px;
   }
 }
 @media (min-width: 992px) {
   .container {
-    width: 970px;
+    width: 960px;
   }
 }
 @media (min-width: 1200px) {
   .container {
-    width: 1170px;
+    width: 1160px;
   }
 }
 .container-fluid {
   margin-right: auto;
   margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .row {
-  margin-left: -15px;
-  margin-right: -15px;
+  margin-left: -10px;
+  margin-right: -10px;
 }
 .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
   position: relative;
   min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
   float: left;
@@ -2233,8 +2233,8 @@ table {
   background-color: transparent;
 }
 caption {
-  padding-top: 9px 4.2px 9px 4.2px;
-  padding-bottom: 9px 4.2px 9px 4.2px;
+  padding-top: 9px 3px 9px 4px;
+  padding-bottom: 9px 3px 9px 4px;
   color: #bbbbbb;
   text-align: left;
 }
@@ -2253,7 +2253,7 @@ th {
 .table > thead > tr > td,
 .table > tbody > tr > td,
 .table > tfoot > tr > td {
-  padding: 9px 4.2px 9px 4.2px;
+  padding: 9px 3px 9px 4px;
   line-height: 20px;
   vertical-align: top;
   border-top: 2px solid #bbbbbb;
@@ -2282,7 +2282,7 @@ th {
 .table-condensed > thead > tr > td,
 .table-condensed > tbody > tr > td,
 .table-condensed > tfoot > tr > td {
-  padding: 9px 4.2px 9px 4.2px;
+  padding: 9px 3px 9px 4px;
 }
 .table-bordered {
   border: 1px solid #bbbbbb;
@@ -2614,7 +2614,7 @@ input[type="search"] {
 .radio-inline,
 .checkbox-inline {
   display: inline-block;
-  padding-left: 11.4px;
+  padding-left: 10px;
   margin-bottom: 0;
   vertical-align: middle;
   font-weight: normal;
@@ -2904,8 +2904,8 @@ select[multiple].form-group-lg .form-control {
   min-height: 21px;
 }
 .form-horizontal .form-group {
-  margin-left: -15px;
-  margin-right: -15px;
+  margin-left: -10px;
+  margin-right: -10px;
 }
 @media (min-width: 768px) {
   .form-horizontal .control-label {
@@ -2915,7 +2915,7 @@ select[multiple].form-group-lg .form-control {
   }
 }
 .form-horizontal .has-feedback .form-control-feedback {
-  right: 15px;
+  right: 10px;
 }
 @media (min-width: 768px) {
   .form-horizontal .form-group-lg .control-label {
@@ -3347,8 +3347,8 @@ tbody.collapse.in {
   display: none;
   float: left;
   min-width: 10px * 10;
-  padding: 9px 4.2px 9px 4.2px;
-  margin: 5px 4.2px 8px 5.2px;
+  padding: 9px 3px 9px 4px;
+  margin: 5px 3px 8px 4px;
   list-style: none;
   font-size: 18px;
   text-align: left;
@@ -3372,7 +3372,7 @@ tbody.collapse.in {
 }
 .dropdown-menu > li > a {
   display: block;
-  padding: 0 11.4px;
+  padding: 0 10px;
   clear: both;
   font-weight: normal;
   line-height: 20px;
@@ -3422,7 +3422,7 @@ tbody.collapse.in {
 }
 .dropdown-header {
   display: block;
-  padding: 0px 11.4px;
+  padding: 0px 10px;
   font-size: 18px;
   line-height: 20px;
   color: #aa5500;
@@ -3499,7 +3499,7 @@ tbody.collapse.in {
 .btn-toolbar > .btn,
 .btn-toolbar > .btn-group,
 .btn-toolbar > .input-group {
-  margin-left: 4.2px;
+  margin-left: 4px;
 }
 .btn-group > .btn:first-child {
   margin-left: 0;
@@ -3516,12 +3516,12 @@ tbody.collapse.in {
   outline: 0;
 }
 .btn-group > .btn + .dropdown-toggle {
-  padding-left: 11.4px;
-  padding-right: 11.4px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .btn-group > .btn-lg + .dropdown-toggle {
-  padding-left: 11.4px;
-  padding-right: 11.4px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .btn-group.open .dropdown-toggle.btn-link {
   -webkit-box-shadow: none;
@@ -3718,7 +3718,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   position: relative;
   display: block;
   margin: 0;
-  padding: 0 11.4px;
+  padding: 0 10px;
 }
 .nav > li > a:hover,
 .nav > li > a:focus {
@@ -3860,8 +3860,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-collapse {
   overflow-x: visible;
-  padding-right: 22.8px;
-  padding-left: 22.8px;
+  padding-right: 20px;
+  padding-left: 20px;
   border-top: 0px solid transparent;
   -webkit-overflow-scrolling: touch;
 }
@@ -3904,8 +3904,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .container-fluid > .navbar-header,
 .container > .navbar-collapse,
 .container-fluid > .navbar-collapse {
-  margin-right: -22.8px;
-  margin-left: -22.8px;
+  margin-right: -20px;
+  margin-left: -20px;
 }
 @media (min-width: 768px) {
   .container > .navbar-header,
@@ -3935,7 +3935,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-brand {
   float: left;
-  padding: 0 22.8px;
+  padding: 0 20px;
   line-height: 20px;
 }
 .navbar-brand:hover,
@@ -3948,13 +3948,13 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 @media (min-width: 768px) {
   .navbar > .container .navbar-brand,
   .navbar > .container-fluid .navbar-brand {
-    margin-left: -22.8px;
+    margin-left: -20px;
   }
 }
 .navbar-toggle {
   position: relative;
   float: right;
-  margin-right: 22.8px;
+  margin-right: 20px;
   padding: 9px 10px;
   margin-top: -17px;
   margin-bottom: -17px;
@@ -3979,14 +3979,14 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-nav {
-  margin: 0 -22.8px;
+  margin: 0 -20px;
 }
 .navbar-nav > li > a {
   padding-top: 0px;
   padding-bottom: 0px;
   line-height: 20px;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .navbar-nav .open .dropdown-menu {
     position: static;
     float: none;
@@ -4021,9 +4021,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-form {
-  margin-left: -22.8px;
-  margin-right: -22.8px;
-  padding: 0px 22.8px;
+  margin-left: -20px;
+  margin-right: -20px;
+  padding: 0px 20px;
   border-top: 2px solid transparent;
   border-bottom: 2px solid transparent;
   margin-top: -11px;
@@ -4079,7 +4079,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     top: 0;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .navbar-form .form-group {
     margin-bottom: 0px;
   }
@@ -4119,8 +4119,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 @media (min-width: 768px) {
   .navbar-text {
     float: left;
-    margin-left: 22.8px;
-    margin-right: 22.8px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 }
 @media (min-width: 768px) {
@@ -4129,7 +4129,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
   .navbar-right {
     float: right !important;
-    margin-right: -22.8px;
+    margin-right: -20px;
   }
   .navbar-right ~ .navbar-right {
     margin-right: 0;
@@ -4190,7 +4190,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   background-color: #000000;
   color: #ffffff;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
     color: #000000;
   }
@@ -4286,7 +4286,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   background-color: #555555;
   color: #ffffff;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header {
     border-color: #000000;
   }
@@ -4344,7 +4344,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 }
 .breadcrumb > li + li:before {
   content: "/\00a0";
-  padding: 0 11.4px;
+  padding: 0 10px;
   color: #cccccc;
 }
 .breadcrumb > .active {
@@ -4474,7 +4474,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 }
 .label {
   display: inline;
-  padding: 0 11.4px;
+  padding: 0 10px;
   font-size: 18px;
   line-height: 20px;
   color: #ffffff;
@@ -4541,8 +4541,8 @@ a.label:focus {
 }
 .badge {
   display: inline-block;
-  min-width: 11.4px;
-  padding: 0 5.2px 0 6.2px;
+  min-width: 10px;
+  padding: 0 4px 0 6px;
   font-size: 18px;
   color: #000000;
   line-height: 20px;
@@ -4576,11 +4576,11 @@ a.badge:focus {
   float: right;
 }
 .jumbotron {
-  padding: 18px 8.4px 18px 8.4px 18px 8.4px 18px 8.4px;
-  margin-bottom: 18px 8.4px 18px 8.4px;
+  padding: 18px 6px 18px 8px 18px 6px 18px 8px;
+  margin-bottom: 18px 6px 18px 8px;
   color: #bbbbbb;
-  padding: 9px 4.2px 9px 4.2px;
-  margin: 9px 4.2px 9px 4.2px;
+  padding: 9px 3px 9px 4px;
+  margin: 9px 4px 9px 3px;
   background-color: transparent;
   border: 2px solid #fefe54;
 }
@@ -4589,7 +4589,7 @@ a.badge:focus {
   color: inherit;
 }
 .jumbotron p {
-  margin-bottom: 18px 8.4px 18px 8.4px;
+  margin-bottom: 18px 6px 18px 8px;
   font-size: 18px;
 }
 .jumbotron > hr {
@@ -4600,12 +4600,12 @@ a.badge:focus {
 }
 @media screen and (min-width: 768px) {
   .jumbotron {
-    padding: 18px 8.4px 18px 8.4px 0;
+    padding: 18px 6px 18px 8px 0;
   }
   .container .jumbotron,
   .container-fluid .jumbotron {
-    padding-left: 18px 8.4px 18px 8.4px;
-    padding-right: 18px 8.4px 18px 8.4px;
+    padding-left: 18px 6px 18px 8px;
+    padding-right: 18px 6px 18px 8px;
   }
   .jumbotron h1,
   .jumbotron .h1 {
@@ -4635,7 +4635,7 @@ a.thumbnail.active {
   color: #bbbbbb;
 }
 .alert {
-  padding: 20px 22.8px;
+  padding: 20px 20px;
   margin-bottom: 20px;
 }
 .alert h4 {
@@ -4654,7 +4654,7 @@ a.thumbnail.active {
 }
 .alert-dismissable,
 .alert-dismissible {
-  padding-right: 5.2px;
+  padding-right: 4px;
 }
 .alert-dismissable .close,
 .alert-dismissible .close {
@@ -4807,9 +4807,9 @@ a.thumbnail.active {
   list-style: none;
 }
 .list-group {
-  margin: 0 0 20px 5.2px;
+  margin: 0 0 20px 4px;
   background-color: #bbbbbb;
-  padding: 10px 4.2px 10px 4.2px;
+  padding: 10px 3px 10px 4px;
   border: 2px solid #000000;
   -webkit-box-shadow: 0px 0px 0 5px #bbbbbb;
   box-shadow: 0px 0px 0 5px #bbbbbb;
@@ -4821,7 +4821,7 @@ a.thumbnail.active {
   color: #000000;
   position: relative;
   display: block;
-  padding: 0px 11.4px;
+  padding: 0px 10px;
   margin-bottom: -1px;
   background-color: #bbbbbb;
 }
@@ -4983,10 +4983,10 @@ a.list-group-item-danger.active:focus {
   background-color: #bbbbbb;
 }
 .panel-body {
-  padding: 0 5.2px 0 6.2px;
+  padding: 0 4px 0 6px;
 }
 .panel-heading {
-  padding: 0 5.2px 0 6.2px;
+  padding: 0 4px 0 6px;
 }
 .panel-heading > .dropdown .dropdown-toggle {
   color: inherit;
@@ -5005,7 +5005,7 @@ a.list-group-item-danger.active:focus {
   color: inherit;
 }
 .panel-footer {
-  padding: 0 5.2px 0 6.2px;
+  padding: 0 4px 0 6px;
   background-color: #f5f5f5;
 }
 .panel > .list-group,
@@ -5027,8 +5027,8 @@ a.list-group-item-danger.active:focus {
 .panel > .table caption,
 .panel > .table-responsive > .table caption,
 .panel > .panel-collapse > .table caption {
-  padding-left: 0 5.2px 0 6.2px;
-  padding-right: 0 5.2px 0 6.2px;
+  padding-left: 0 4px 0 6px;
+  padding-right: 0 4px 0 6px;
 }
 .panel > .panel-body + .table,
 .panel > .panel-body + .table-responsive,
@@ -5247,15 +5247,15 @@ a.list-group-item-danger.active:focus {
 }
 .well {
   color: #ffffff;
-  padding: 20px 11.4px;
+  padding: 20px 10px;
   margin-bottom: 20px;
   background-color: #00aa00;
 }
 .well-lg {
-  padding: 18px 8.4px 18px 8.4px;
+  padding: 18px 6px 18px 8px;
 }
 .well-sm {
-  padding: 9px 4.2px 9px 4.2px;
+  padding: 9px 3px 9px 4px;
 }
 .close {
   float: right;
@@ -5413,7 +5413,7 @@ button.close {
 }
 .tooltip-inner {
   max-width: 200px;
-  padding: 0 11.4px;
+  padding: 0 10px;
   color: #ffffff;
   text-align: center;
   text-decoration: none;

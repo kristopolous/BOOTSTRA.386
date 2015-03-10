@@ -152,7 +152,7 @@
 .navbar-inverse {
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .navbar .navbar-nav .open .dropdown-menu > .active > a,
   .navbar .navbar-nav .open .dropdown-menu > .active > a:hover,
   .navbar .navbar-nav .open .dropdown-menu > .active > a:focus {
