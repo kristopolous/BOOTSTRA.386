@@ -570,16 +570,16 @@
 //##
 
 //** Popover body background color
-@popover-bg:                          #fff;
+@popover-bg:                          @gray;
 //** Popover maximum width
-@popover-max-width:                   276px;
+@popover-max-width:                   (@baseWidth * 20);
 //** Popover border color
 @popover-border-color:                rgb(0,0,0);
 //** Popover fallback border color
 @popover-fallback-border-color:       #ccc;
 
 //** Popover title background color
-@popover-title-bg:                    @popover-bg;
+@popover-title-bg:                    @greenDark;
 
 //** Popover arrow width
 @popover-arrow-width:                 10px;
@@ -622,15 +622,15 @@
 //##
 
 //** Padding applied to the modal body
-@modal-inner-padding:         15px;
+@modal-inner-padding:         0 @baseWidth;
 
 //** Padding applied to the modal title
-@modal-title-padding:         15px;
+@modal-title-padding:         0 @baseWidth;
 //** Modal title line-height
 @modal-title-line-height:     @line-height-base;
 
 //** Background color of modal content area
-@modal-content-bg:                             #fff;
+@modal-content-bg:                             @gray;
 //** Modal content border color
 @modal-content-border-color:                   rgb(0,0,0);
 //** Modal content border color **for IE8**

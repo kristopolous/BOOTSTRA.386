@@ -5281,18 +5281,23 @@ button.close {
   overflow-x: hidden;
   overflow-y: auto;
 }
+.modal .btn {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
 .modal-dialog {
   position: relative;
   width: auto;
-  margin: 10px;
+  margin: 20px 0;
 }
 .modal-content {
+  color: #000000;
   position: relative;
-  background-color: #ffffff;
-  border: 2px solid #999999;
-  border: 2px solid #000000;
+  background-color: #bbbbbb;
   background-clip: padding-box;
   outline: 0;
+  -webkit-box-shadow: 10px 10px 0 rgb(0,0,0);
+  box-shadow: 10px 10px 0 rgb(0,0,0);
 }
 .modal-backdrop {
   position: absolute;
@@ -5301,33 +5306,27 @@ button.close {
   left: 0;
   background-color: #000000;
 }
-.modal-header {
-  padding: 15px;
-  border-bottom: 2px solid #e5e5e5;
-  min-height: 35px;
-}
 .modal-header .close {
-  margin-top: -2px;
+  margin-top: 2px;
+  margin-right: 2px;
 }
 .modal-title {
-  margin: 0;
+  color: #ffffff;
+  background: #00aa00;
+  padding: 0 10px;
   line-height: 20px;
 }
 .modal-body {
   position: relative;
-  padding: 15px;
+  padding: 0 10px;
 }
 .modal-footer {
-  padding: 15px;
+  padding: 0 10px;
   text-align: right;
-  border-top: 2px solid #e5e5e5;
 }
 .modal-footer .btn + .btn {
-  margin-left: 5px;
+  margin-left: 10px;
   margin-bottom: 0;
-}
-.modal-footer .btn-group .btn + .btn {
-  margin-left: -1px;
 }
 .modal-footer .btn-block + .btn-block {
   margin-left: 0;
@@ -5457,21 +5456,20 @@ button.close {
   border-bottom-color: #000000;
 }
 .popover {
+  color: #000000;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 1060;
   display: none;
-  max-width: 276px;
+  max-width: 200px;
   padding: 0px;
   font-family: DOS, Monaco, Menlo, Consolas, "Courier New", monospace;
   font-size: 18px;
   line-height: 20px;
   text-align: left;
-  background-color: #ffffff;
+  background-color: #bbbbbb;
   background-clip: padding-box;
-  border: 2px solid #cccccc;
-  border: 2px solid #000000;
   white-space: normal;
 }
 .popover.top {
@@ -5488,12 +5486,12 @@ button.close {
 }
 .popover-title {
   margin: 0;
-  padding: 8px 14px;
-  font-size: 18px;
-  background-color: #ffffff;
+  padding: 0 10px;
+  color: #ffffff;
+  background-color: #00aa00;
 }
 .popover-content {
-  padding: 9px 14px;
+  padding: 0 10px;
 }
 .popover > .arrow,
 .popover > .arrow:after {
@@ -5524,7 +5522,7 @@ button.close {
   bottom: 1px;
   margin-left: -10px;
   border-bottom-width: 0;
-  border-top-color: #ffffff;
+  border-top-color: #bbbbbb;
 }
 .popover.right > .arrow {
   top: 50%;
@@ -5539,7 +5537,7 @@ button.close {
   left: 1px;
   bottom: -10px;
   border-left-width: 0;
-  border-right-color: #ffffff;
+  border-right-color: #bbbbbb;
 }
 .popover.bottom > .arrow {
   left: 50%;
@@ -5554,7 +5552,7 @@ button.close {
   top: 1px;
   margin-left: -10px;
   border-top-width: 0;
-  border-bottom-color: #ffffff;
+  border-bottom-color: #bbbbbb;
 }
 .popover.left > .arrow {
   top: 50%;
@@ -5568,7 +5566,7 @@ button.close {
   content: " ";
   right: 1px;
   border-right-width: 0;
-  border-left-color: #ffffff;
+  border-left-color: #bbbbbb;
   bottom: -10px;
 }
 .carousel {

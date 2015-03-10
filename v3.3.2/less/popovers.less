@@ -4,6 +4,7 @@
 
 
 .popover {
+  color: @black;
   position: absolute;
   top: 0;
   left: 0;
@@ -18,8 +19,6 @@
   text-align: left;
   background-color: @popover-bg;
   background-clip: padding-box;
-  border: @borderWidth solid @popover-fallback-border-color;
-  border: @borderWidth solid @popover-border-color;
 
   // Overrides for proper insertion
   white-space: normal;
@@ -33,13 +32,13 @@
 
 .popover-title {
   margin: 0; // reset heading margin
-  padding: 8px 14px;
-  font-size: @font-size-base;
+  padding: 0 @baseWidth;
+  color: @white;
   background-color: @popover-title-bg;
 }
 
 .popover-content {
-  padding: 9px 14px;
+  padding: 0 @baseWidth;
 }
 
 // Arrows
