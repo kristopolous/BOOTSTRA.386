@@ -62,10 +62,10 @@
 // horizontal sizing, wrap controls in the predefined grid classes. `<select>`
 // element gets special love because it's special, and that's a fact!
 .input-size(@input-height; @padding-vertical; @padding-horizontal; @font-size; @line-height; @border-radius) {
-  height: @input-height;
-  padding: 0 0;//@padding-vertical @padding-horizontal;
+  height: @baseLineHeight;
+  padding: 0 0;
   font-size: @font-size;
-  line-height: @line-height;
+  line-height: @baseLineHeight;
 
   select& {
     height: @input-height;

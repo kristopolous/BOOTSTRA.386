@@ -11,14 +11,12 @@
     > a,
     > span {
       position: relative;
+      padding: 0 @baseWidth;
       float: left; // Collapse white-space
-      padding: @padding-base-vertical @padding-base-horizontal;
       line-height: @line-height-base;
       text-decoration: none;
       color: @pagination-color;
       background-color: @pagination-bg;
-      border: 1px solid @pagination-border;
-      margin-left: -1px;
     }
     &:first-child {
       > a,

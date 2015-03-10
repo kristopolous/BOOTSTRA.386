@@ -20,7 +20,6 @@
     // Ensure that the input is always above the *appended* addon button for
     // proper border colors.
     position: relative;
-    z-index: 2;
 
     // IE9 fubars the placeholder attribute in text inputs and the arrows on
     // select elements in input groups. To fix it, we float the input. Details:
@@ -70,13 +69,13 @@
 // Text input groups
 // -------------------------
 .input-group-addon {
+  margin: 0;
   padding: @padding-base-vertical @padding-base-horizontal;
   font-size: @font-size-base;
   line-height: @baseLineHeight;
-  color: @input-color;
+  color: @cyan;
   text-align: center;
-  background-color: @input-group-addon-bg;
-  border: @borderWidth solid @input-group-addon-border-color;
+  background-color: @black;
 
   // Sizing
   &.input-sm {
@@ -131,15 +130,14 @@
   // Negative margin for spacing, position for bringing hovered/focused/actived
   // element above the siblings.
   > .btn {
+    .box-shadow(none);
     position: relative;
     + .btn {
-      margin-left: -1px;
     }
     // Bring the "active" button to the front
     &:hover,
     &:focus,
     &:active {
-      z-index: 2;
     }
   }
 
@@ -147,13 +145,11 @@
   &:first-child {
     > .btn,
     > .btn-group {
-      margin-right: -1px;
     }
   }
   &:last-child {
     > .btn,
     > .btn-group {
-      margin-left: -1px;
     }
   }
 }

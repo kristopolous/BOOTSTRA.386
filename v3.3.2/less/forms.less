@@ -55,7 +55,7 @@ input[type="search"] {
 // Position radios and checkboxes better
 input[type="radio"],
 input[type="checkbox"] {
-  margin: (@baseLineHeight / 2) (@baseLineWidth / 2);
+  margin: 0 (@baseLineWidth / 2);
   line-height: @baseLineHeight;
 }
 input[type="text"]:before {
@@ -414,8 +414,8 @@ input[type="checkbox"] {
 
 .help-block {
   display: block; // account for any element using help-block
-  margin-top: 5px;
-  margin-bottom: 10px;
+  margin-top: @ts;
+  margin-bottom: @bs;
   color: @text-color;
 }
 

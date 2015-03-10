@@ -9,7 +9,7 @@
 
 .list-group {
   // No need to set list-style: none; since .list-group-item is block level
-  margin: 0 0 @baseLineHeight @rhsNB;
+  margin: 0 @baseWidth (@baseLineHeight * 2) @baseWidth;
   background-color: @list-group-bg;
   padding: @tsNB @rhs @bsNB @lhs;
   border: @borderWidth solid @black;
@@ -30,7 +30,6 @@
   display: block;
   padding: 0px @baseWidth;
   // Place the border on the list items and negative margin up for better styling
-  margin-bottom: -1px;
   background-color: @list-group-bg;
 
   // Round the first and last items

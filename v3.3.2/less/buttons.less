@@ -21,7 +21,6 @@
   padding: 0 @baseLineWidth;
   .box-shadow(~"@{baseLineWidth} @{halfbaseLineHeight} 0 rgb(0,0,0)");
   cursor: default;
-  white-space: nowrap;
   border: 0px;
   //.button-size(@padding-base-vertical; @padding-base-horizontal; @font-size-base; @line-height-base; @border-radius-base);
   .user-select(none);
@@ -55,6 +54,11 @@
     pointer-events: none; // Future-proof disabling of clicks
     .box-shadow(none);
   }
+}
+.navbar .btn {
+  background: @grayDark;
+  color: @white;
+  .box-shadow(none);
 }
 
 
@@ -110,7 +114,6 @@
   &:hover,
   &:focus {
     color: @link-hover-color;
-    text-decoration: @link-hover-decoration;
     background-color: transparent;
   }
   &[disabled],
@@ -118,7 +121,6 @@
     &:hover,
     &:focus {
       color: @btn-link-disabled-color;
-      text-decoration: none;
     }
   }
 }

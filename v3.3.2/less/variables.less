@@ -242,14 +242,14 @@
 @input-border-focus:             @black;
 
 //** Placeholder text color
-@input-color-placeholder:        #999;
+@input-color-placeholder:        @black;
 
 //** Default `.form-control` height
-@input-height-base:              (@line-height-computed + (@padding-base-vertical * 2) + 2);
+@input-height-base:              @line-height-computed;
 //** Large `.form-control` height
-@input-height-large:             @font-size-large;
+@input-height-large:             @input-height-base;
 //** Small `.form-control` height
-@input-height-small:             @font-size-large;
+@input-height-small:             @input-height-base;
 
 @legend-color:                   @gray-dark;
 @legend-border-color:            #e5e5e5;
@@ -482,8 +482,8 @@
 //
 //##
 
-@pagination-color:                     @link-color;
-@pagination-bg:                        #fff;
+@pagination-color:                     @black;
+@pagination-bg:                        @gray;
 @pagination-border:                    #ddd;
 
 @pagination-hover-color:               @link-hover-color;
@@ -721,7 +721,7 @@
 @list-group-active-text-color:  @component-active-color;
 
 //** Text color of disabled list items
-@list-group-disabled-color:      @gray-light;
+@list-group-disabled-color:      @gray-dark;
 //** Background color of disabled list items
 @list-group-disabled-bg:         @gray-lighter;
 //** Text color for content within disabled list items

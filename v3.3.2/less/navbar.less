@@ -183,11 +183,10 @@
   position: relative;
   float: right;
   margin-right: @navbar-padding-horizontal;
-  padding: 9px 10px;
+  padding: 0px @baseWidth;
   .navbar-vertical-align(34px);
   background-color: transparent;
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
-  border: 1px solid transparent;
 
   // We remove the `outline` here, but later compensate by attaching `:hover`
   // styles to `:focus`.
@@ -270,11 +269,8 @@
 // our navbars.
 
 .navbar-form {
-  margin-left: -@navbar-padding-horizontal;
-  margin-right: -@navbar-padding-horizontal;
+  margin: 0 -@navbar-padding-horizontal;
   padding: 0px @navbar-padding-horizontal;
-  border-top: @borderWidth solid transparent;
-  border-bottom: @borderWidth solid transparent;
 
   // Mixin behavior for optimum display
   .form-inline();
@@ -290,7 +286,7 @@
   }
 
   // Vertically center in expanded, horizontal navbar
-  .navbar-vertical-align(@input-height-base);
+  // .navbar-vertical-align(@input-height-base);
 
   // Undo 100% width for pull classes
   @media (min-width: @grid-float-breakpoint) {

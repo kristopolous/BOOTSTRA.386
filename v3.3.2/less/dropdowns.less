@@ -34,9 +34,9 @@
   z-index: @zindex-dropdown;
   display: none; // none by default, but block on "open" of the menu
   float: left;
-  min-width: @baseLineWidth * 10;
+  min-width: (@baseLineWidth * 10);
   padding: @ts @rhs @bs @lhs;
-  margin: 5px @rhs 8px @rhsNB;
+  margin: 4px @rhs 8px @rhsNB;
   list-style: none;
   font-size: @font-size-base;
   text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
@@ -44,7 +44,7 @@
   background-clip: padding-box;
 
   border: @borderWidth solid @black;
-  .box-shadow(0px 0px 0 5px @gray);
+  .box-shadow(0px 0px 0 4px @gray);
   -webkit-background-clip: padding-box;
      -moz-background-clip: padding;
           background-clip: padding-box;
