@@ -4,6 +4,16 @@ Looking to contribute something to BOOTSTRA.386?
 
 Don't you worry! It's Easy!
 
+** Basic idea **
+
+Bootstra.386 is an attempt to make an accurate-as-possible replica of a DOS or Console style interface in the web-browser using the bootstrap templating engine.  
+
+It's in this authors opinion that there are great rewards and pleasure from a faithful exercise of this and that there is a high level of satisfaction that is a direct result of the level of care and precision taken in so doing.
+
+It gets to a point where it's indistinguishable from an early 90s DOS screen.  The mind defies the eyes, "how is this a web page?" as if some great orchestration of CSS magic had been performed in front of you ... truly exhilirating.  
+
+I want all to feel this magic.  It's wonderful.
+
 **Here's how you can help.**
 
 ## Issues
@@ -31,6 +41,7 @@ Preferably, I like a screen shot and context. Here's an example of a good bug:
     the height of the font / 2 if you are doing some special ASCII-like thing.
   * Foreground colors can be any of the EGA 16 - background can only be the first 8.
   * Things like shadows, darken, lighten, border-radius, underline, italics, bold - none of this is allowed - it has to have been able to have been generated in a generic ANSI terminal - think IBM AT era.
+  * Colors and spacing should be endogeneous.  That is to say that it should be based on something defined from the baseline variables.less.  There is only a few exceptions.  Generally speaking, things should be "@white" and not "#fff".  That one is obvious, but it also helps avoiding things like #F7F7F7 which appear all throughout regular bootstrap that look white-like, but actually are off enough that it destroys the magic.
 
 ## HTML guidelines
 

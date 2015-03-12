@@ -12,15 +12,14 @@
   // Reset font and text properties given new insertion method
   font-family: @font-family-base;
   font-size: @font-size-small;
-  font-weight: normal;
   line-height: @baseLineHeight;
   .opacity(0);
 
-  &.in     { .opacity(@tooltip-opacity); }
-  &.top    { margin-top:  -3px; padding: @tooltip-arrow-width 0; }
-  &.right  { margin-left:  3px; padding: 0 @tooltip-arrow-width; }
-  &.bottom { margin-top:   3px; padding: @tooltip-arrow-width 0; }
-  &.left   { margin-left: -3px; padding: 0 @tooltip-arrow-width; }
+  &.in     { }
+  &.top    { margin-top:  0px; padding: @tooltip-arrow-width 0; }
+  &.right  { margin-left: 0px; padding: 0 @tooltip-arrow-width; }
+  &.bottom { margin-top:  0px; padding: @tooltip-arrow-width 0; }
+  &.left   { margin-left: 0px; padding: 0 @tooltip-arrow-width; }
 }
 
 // Wrapper for the tooltip content
