@@ -2684,7 +2684,7 @@ select[multiple].form-group-lg .form-control {
 }
 .form-group-lg .form-control-static {
   height: 20px;
-  padding: 0px 6px;
+  padding: 0px 5px;
   font-size: 18px;
   line-height: 20px;
 }
@@ -3630,7 +3630,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   font-size: 18px;
 }
 .input-group-addon.input-lg {
-  padding: 0px 6px;
+  padding: 0px 5px;
   font-size: 18px;
 }
 .input-group-addon input[type="radio"],
@@ -4362,7 +4362,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 }
 .pagination-lg > li > a,
 .pagination-lg > li > span {
-  padding: 0px 6px;
+  padding: 0px 5px;
   font-size: 18px;
 }
 .pagination-sm > li > a,
@@ -4667,7 +4667,7 @@ a.thumbnail.active {
   overflow: hidden;
   height: 20px;
   margin-bottom: 20px;
-  background-color: #f5f5f5;
+  background-color: #000000;
 }
 .progress-bar {
   float: left;
@@ -4675,7 +4675,7 @@ a.thumbnail.active {
   height: 100%;
   font-size: 18px;
   line-height: 20px;
-  color: #ffffff;
+  color: #000000;
   text-align: center;
   background-color: #bbbbbb;
 }
