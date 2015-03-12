@@ -1119,10 +1119,10 @@ img {
   height: auto;
 }
 hr {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 9px;
+  padding-top: 9px;
   border: 0;
-  border-top: 1px solid #bbbbbb;
+  border-top: 2px solid #000000;
 }
 .sr-only {
   position: absolute;
@@ -1213,7 +1213,7 @@ h3 {
 }
 h4 {
   font-size: 18px;
-  color: #fe54fe;
+  color: #ffffff;
 }
 h5 {
   font-size: 18px;
@@ -1234,7 +1234,7 @@ h4 small {
   font-size: 18px;
 }
 p {
-  margin: 0 0 10px;
+  margin: 0 0 20px;
 }
 .lead {
   margin-bottom: 20px;
@@ -5309,6 +5309,23 @@ button.close {
 .modal-header .close {
   margin-top: 2px;
   margin-right: 2px;
+}
+.modal-body h1,
+.modal-body h2,
+.modal-body h3,
+.modal-body h4,
+.modal-body h5,
+.modal-body h6 {
+  background: #555555;
+  margin-bottom: 0;
+}
+.modal-body a {
+  color: #000084;
+  background: transparent;
+}
+.modal-body a:hover {
+  color: #ffffff;
+  background: #aa5500;
 }
 .modal-title {
   color: #ffffff;
