@@ -1,7 +1,7 @@
 self._386 = self._386 || {};
 
 $(function(){
-  var character = { height: 20, width: 12.4 };
+  var character = { height: 20, width: 10 };
 
   function scrollLock() {
     var last = 0;
