@@ -8,6 +8,13 @@ HR=\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\
 
 
 #
+# BUILD SIMPLE BOOTSTRAP DIRECTORY
+# recess & uglifyjs are required
+#
+
+zipfile:
+	zip -r -9 ../bootstra.386-latest-v3.zip dist
+#
 # BUILD DOCS
 #
 
@@ -58,15 +65,6 @@ test:
 clean:
 	rm -r bootstrap
 
-#
-# BUILD SIMPLE BOOTSTRAP DIRECTORY
-# recess & uglifyjs are required
-#
-
-zipfile:
-	cp -ur ./docs/assets/css/fonts bootstrap/css/
-	cp -ur ./dist/css/*css bootstrap/css/
-	zip -r -9 ../bootstra.386-latest-v3.zip bootstrap
 
 bootstrap: bootstrap-img bootstrap-css bootstrap-js zipfile
 

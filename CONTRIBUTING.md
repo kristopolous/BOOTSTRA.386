@@ -4,7 +4,7 @@ Looking to contribute something to BOOTSTRA.386?
 
 Don't you worry! It's Easy!
 
-** Basic idea **
+**Basic idea**
 
 Bootstra.386 is an attempt to make an accurate-as-possible replica of a DOS or Console style interface in the web-browser using the bootstrap templating engine.  
 
