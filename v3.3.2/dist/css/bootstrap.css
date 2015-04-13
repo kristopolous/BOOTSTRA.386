@@ -1081,12 +1081,13 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #bbbbbb;
+  color: inherit;
   text-decoration: none;
 }
 a:hover,
 a:focus {
   color: #ffffff;
+  background: #aa5500;
   text-decoration: none;
 }
 a:focus {
@@ -4516,21 +4517,21 @@ a.badge:focus {
   float: right;
 }
 .jumbotron {
-  padding: 18px 6px 18px 8px 18px 6px 18px 8px;
-  margin-bottom: 18px 6px 18px 8px;
-  color: #bbbbbb;
-  padding: 9px 3px 9px 4px;
+  padding: 9px 13px 9px 14px 9px 13px 9px 14px;
+  margin-bottom: 9px 13px 9px 14px;
+  color: #ffffff;
+  padding: 9px 13px 9px 14px;
   margin: 9px 4px 9px 3px;
   background-color: transparent;
-  border: 2px solid #fefe54;
+  border: 2px solid #bbbbbb;
 }
 .jumbotron h1,
 .jumbotron .h1 {
+  margin: 0;
   color: inherit;
 }
 .jumbotron p {
-  margin-bottom: 18px 6px 18px 8px;
-  font-size: 18px;
+  margin-bottom: 0;
 }
 .jumbotron > hr {
   border-top-color: transparent;
@@ -4540,12 +4541,12 @@ a.badge:focus {
 }
 @media screen and (min-width: 768px) {
   .jumbotron {
-    padding: 18px 6px 18px 8px 0;
+    padding: 9px 13px 9px 14px 0;
   }
   .container .jumbotron,
   .container-fluid .jumbotron {
-    padding-left: 18px 6px 18px 8px;
-    padding-right: 18px 6px 18px 8px;
+    padding-left: 9px 13px 9px 14px;
+    padding-right: 9px 13px 9px 14px;
   }
   .jumbotron h1,
   .jumbotron .h1 {
@@ -4946,6 +4947,12 @@ a.list-group-item-danger.active:focus {
 .panel-footer {
   padding: 0 4px 0 6px;
   background-color: #f5f5f5;
+}
+.panel-title:before {
+  content: '-= ';
+}
+.panel-title:after {
+  content: ' =-';
 }
 .panel > .list-group,
 .panel > .panel-collapse > .list-group {
