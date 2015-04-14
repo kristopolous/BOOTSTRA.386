@@ -200,12 +200,12 @@ strong {
 // Inline turns list items into inline-block
 .list-inline {
   .list-unstyled();
-  margin-left: -5px;
+  margin: 0;
+  padding: 0;
 
   > li {
     display: inline-block;
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0 @baseWidth;
   }
 }
 
