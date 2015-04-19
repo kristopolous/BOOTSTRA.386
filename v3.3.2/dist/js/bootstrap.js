@@ -55,7 +55,7 @@ $(function(){
 
     var
       onePass = _386.onePass,
-      speedFactor = 1 / (_386.speedFactor || 1) * 165000;
+      speedFactor = 1 / (_386.speedFactor || 1) * 165000,
       wrap = document.createElement('div'),
       bar = wrap.appendChild(document.createElement('div')),
 
