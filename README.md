@@ -6,7 +6,8 @@ A bootstrap v3 version is in the works and this copy will be changed as things p
  * March 5 2015: started. It's not as faithful to DOS as v2 is yet --- but I'm working on it.
  * March 8 2015: preliminary build: [zip file](https://github.com/kristopolous/BOOTSTRA.386/blob/master/bootstra.386-latest-v3.zip?raw=true)
  * March 12 2015: Beta testing open: [follow here](https://github.com/kristopolous/BOOTSTRA.386/issues/7)
- * March 13 2015: pre1 tagged. [please use this commit id](https://github.com/kristopolous/BOOTSTRA.386/tree/bs3-pre1) for bug reporting.
+ * <s>March 13 2015: pre1 tagged. [please use this commit id](https://github.com/kristopolous/BOOTSTRA.386/tree/bs3-pre1) for bug reporting.</s>
+ * April 19 2015: pre2 tagged. [use this](https://github.com/kristopolous/BOOTSTRA.386/tree/bs3-pre2)
 
 > Psstt! If you love the terminal you may like a spankin' new animated image viewer of mine: [ascsee](https://github.com/kristopolous/ascsee).
 
