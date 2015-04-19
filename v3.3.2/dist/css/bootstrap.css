@@ -5927,4 +5927,30 @@ button.close {
     display: none !important;
   }
 }
+#wrap386 {
+  z-index: 9999999;
+  background: #000084;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+}
+#bar386 {
+  color: #ffffff;
+  font-weight: bold;
+  float: right;
+  background: #000084;
+  height: 20px;
+  margin-top: -20px;
+  width: 100%;
+}
+#cursor386 {
+  z-index: 9999999;
+  color: #ffffff;
+  font-weight: bold;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
 /*# sourceMappingURL=bootstrap.css.map */
