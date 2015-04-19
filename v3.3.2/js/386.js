@@ -1,6 +1,7 @@
 self._386 = self._386 || {};
 
 $(function(){
+  'use strict';
   var character = { height: 20, width: 10 };
 
   function scrollLock() {
