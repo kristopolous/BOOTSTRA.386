@@ -9,7 +9,7 @@ A bootstrap v3 version is in the works and this copy will be changed as things p
  * <s>March 13 2015: pre1 tagged. [please use this commit id](https://github.com/kristopolous/BOOTSTRA.386/tree/bs3-pre1) for bug reporting.</s>
  * April 19 2015: pre2 tagged. [use this](https://github.com/kristopolous/BOOTSTRA.386/tree/bs3-pre2)
 
-> Psstt! If you love the terminal you may like a spankin' new animated image viewer of mine: [ascsee](https://github.com/kristopolous/ascsee).
+> Psstt! I'm also super excited about my new project, a DVR for radio - a free open source service to Get MP3s of any radio show - [at any time, right now](https://indycast.net).
 
 # [Demo Link](http://kristopolous.github.io/BOOTSTRA.386/)
 
