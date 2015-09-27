@@ -3337,6 +3337,9 @@ tbody.collapse.in {
   overflow: hidden;
   background-color: #000000;
 }
+.dropdown-menu > li {
+  list-style-type: none;
+}
 .dropdown-menu > li > a {
   display: block;
   padding: 0 10px;

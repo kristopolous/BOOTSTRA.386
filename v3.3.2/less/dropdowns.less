@@ -62,15 +62,17 @@
     .nav-divider(@dropdown-divider-bg);
   }
 
-  // Links within the dropdown menu
-  > li > a {
-    display: block;
-    padding: 0 @baseWidth;
-    clear: both;
-    font-weight: normal;
-    line-height: @line-height-base;
-    color: @dropdown-link-color;
-    white-space: nowrap; // prevent links from randomly breaking onto new lines
+  > li {
+    list-style-type: none;
+    > a {
+      display: block;
+      padding: 0 @baseWidth;
+      clear: both;
+      font-weight: normal;
+      line-height: @line-height-base;
+      color: @dropdown-link-color;
+      white-space: nowrap; // prevent links from randomly breaking onto new lines
+    }
   }
 }
 
