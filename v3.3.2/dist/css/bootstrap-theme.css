@@ -77,22 +77,22 @@
 .btn-info {
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   background-repeat: repeat-x;
-  border-color: #000000;
+  border-color: #aa5500;
 }
 .btn-info:hover,
 .btn-info:focus {
-  background-color: #000000;
+  background-color: #aa5500;
   background-position: 0 -15px;
 }
 .btn-info:active,
 .btn-info.active {
-  background-color: #000000;
-  border-color: #000000;
+  background-color: #aa5500;
+  border-color: #aa5500;
 }
 .btn-info.disabled,
 .btn-info:disabled,
 .btn-info[disabled] {
-  background-color: #000000;
+  background-color: #aa5500;
   background-image: none;
 }
 .btn-warning {
@@ -163,7 +163,7 @@
   border-color: #00aa00;
 }
 .alert-info {
-  border-color: #000000;
+  border-color: #aa5500;
 }
 .alert-warning {
   border-color: #aa00aa;
