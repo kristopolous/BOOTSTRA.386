@@ -3315,7 +3315,7 @@ tbody.collapse.in {
   float: left;
   min-width: 100px;
   padding: 9px 3px 9px 4px;
-  margin: 4px 3px 8px 4px;
+  margin: 3px 3px 8px 4px;
   list-style: none;
   font-size: 18px;
   text-align: left;
@@ -3420,7 +3420,7 @@ tbody.collapse.in {
 .navbar-fixed-bottom .dropdown .dropdown-menu {
   top: auto;
   bottom: 100%;
-  margin-bottom: 0;
+  margin-bottom: 4px;
 }
 @media (min-width: 768px) {
   .navbar-right .dropdown-menu {
@@ -3801,9 +3801,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .tab-content > .active {
   display: block;
   visibility: visible;
-}
-.nav-tabs .dropdown-menu {
-  margin-top: -1px;
 }
 .navbar {
   position: relative;

@@ -36,7 +36,7 @@
   float: left;
   min-width: (@baseLineWidth * 10);
   padding: @ts @rhs @bs @lhs;
-  margin: 4px @rhs 8px @rhsNB;
+  margin: @tsMargin @rhs 8px @rhsNB;
   list-style: none;
   font-size: @font-size-base;
   text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
@@ -195,7 +195,7 @@
   .dropdown-menu {
     top: auto;
     bottom: 100%;
-    margin-bottom: 0;
+    margin-bottom: 4px;
   }
 }
 
