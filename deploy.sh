@@ -5,20 +5,19 @@ abort() {
 }
 
 {
+  [ -e ~/temp/docs ] && rm -r ~/temp/docs
+  cp -r v2.3.1/docs ~/temp
 
-[ -e ~/temp/docs ] && rm -r ~/temp/docs
-cp -r v2.3.1/docs ~/temp
+  git checkout gh-pages
+  [ $? -eq 0 ] || abort $? "Failed to checkout"
 
-git checkout gh-pages
-[ $? -eq 0 ] || abort $? "Failed to checkout"
+  cp -r ~/temp/docs/* .
 
-cp -r ~/temp/docs/* .
+  git commit -am "docs update"
+  [ $? -eq 0 ] || abort $? "Failed to commit"
 
-git commit -am "docs update"
-[ $? -eq 0 ] || abort $? "Failed to commit"
+  git push
+  [ $? -eq 0 ] || abort $? "Failed to push"
 
-git push
-[ $? -eq 0 ] || abort $? "Failed to push"
-
-git checkout master
+  git checkout master
 }
