@@ -10,7 +10,7 @@ A bootstrap v3 version is in the works and this copy will be changed as things p
  * <s>April 19 2015: pre2 tagged. [use this](https://github.com/kristopolous/BOOTSTRA.386/tree/bs3-pre2)</s>
  * Sept 27 2015: Fixed a number of small things. Just use v3 or v2 --- they're both fine.
 
-> Psstt! I'm also super excited about my new project, a DVR for radio - a free open source service to Get MP3s of any radio show - [at any time, right now](https://indycast.net).
+> Psstt! I'm also super excited about my new project, a DVR for radio - a free open source service to Get MP3s of any radio show - [at any time, right now](http://indycast.net).
 
 # [Demo Link](http://kristopolous.github.io/BOOTSTRA.386/)
 
