@@ -3252,6 +3252,23 @@ fieldset[disabled] .btn-link:hover,
 fieldset[disabled] .btn-link:focus {
   color: #bbbbbb;
 }
+.btn-sm,
+.btn-xs,
+.btn-group-xs > .btn,
+.btn-group-sm > .btn {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.btn-lg:before {
+  content: "<  ";
+}
+.btn-lg:after {
+  content: "  >";
+}
+.btn-xs:before,
+.btn-xs:after {
+  content: "";
+}
 .btn-block {
   display: block;
   width: 100%;

@@ -22,7 +22,6 @@
   .box-shadow(~"@{baseLineWidth} @{halfbaseLineHeight} 0 rgb(0,0,0)");
   cursor: default;
   border: 0px;
-  //.button-size(@padding-base-vertical; @padding-base-horizontal; @font-size-base; @line-height-base; @border-radius-base);
   .user-select(none);
 
   &,
@@ -133,12 +132,14 @@
   // line-height: ensure even-numbered height of button next to large input
   //.button-size(@padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @border-radius-large);
 }
-.btn-sm {
-  // line-height: ensure proper height of button next to small input
-  //.button-size(@padding-small-vertical; @padding-small-horizontal; @font-size-small; @line-height-small; @border-radius-small);
+.btn-sm,.btn-xs {
+  .box-shadow(none);
 }
-.btn-xs {
-  //.button-size(@padding-xs-vertical; @padding-xs-horizontal; @font-size-small; @line-height-small; @border-radius-small);
+.btn-lg:before { content:"<  "; }
+.btn-lg:after { content:"  >"; }
+
+.btn-xs:before,.btn-xs:after {
+  content: "";
 }
 
 
