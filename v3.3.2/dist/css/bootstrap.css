@@ -2921,7 +2921,7 @@ select[multiple].form-group-lg .form-control {
   -ms-user-select: none;
   user-select: none;
 }
-.btn ::first-letter {
+.btn::first-letter {
   color: #aa0000;
 }
 .btn:focus,
@@ -2943,8 +2943,8 @@ select[multiple].form-group-lg .form-control {
   background: #000000 !important;
   outline: 0;
 }
-.btn:active ::first-letter,
-.btn.active ::first-letter {
+.btn:active::first-letter,
+.btn.active::first-letter {
   color: #bbbbbb !important;
 }
 .btn.disabled,
@@ -3067,6 +3067,9 @@ fieldset[disabled] .btn-primary.active {
   }
   */
 }
+.btn-success::first-letter {
+  color: #fefe54;
+}
 .btn-success:active,
 .btn-success.active,
 .open > .dropdown-toggle.btn-success {
@@ -3111,6 +3114,9 @@ fieldset[disabled] .btn-success.active {
         border-color: @border;
   }
   */
+}
+.btn-info::first-letter {
+  color: #fefe54;
 }
 .btn-info:active,
 .btn-info.active,
@@ -3157,6 +3163,9 @@ fieldset[disabled] .btn-info.active {
   }
   */
 }
+.btn-warning::first-letter {
+  color: #fefe54;
+}
 .btn-warning:active,
 .btn-warning.active,
 .open > .dropdown-toggle.btn-warning {
@@ -3201,6 +3210,9 @@ fieldset[disabled] .btn-warning.active {
         border-color: @border;
   }
   */
+}
+.btn-danger::first-letter {
+  color: #fefe54;
 }
 .btn-danger:active,
 .btn-danger.active,

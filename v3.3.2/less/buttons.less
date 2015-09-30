@@ -26,7 +26,7 @@
   border: 0px;
   .user-select(none);
 
-  ::first-letter {
+  &::first-letter {
     color: @redDark;
   }
 
@@ -50,7 +50,7 @@
     color: @gray !important;
     background: @black !important;
     outline: 0;
-    ::first-letter {
+    &::first-letter {
       color: @gray !important;
     }
   }
@@ -82,18 +82,30 @@
 }
 // Success appears as green
 .btn-success {
+  &::first-letter {
+    color: @yellow;
+  }
   .button-variant(@btn-success-color; @btn-success-bg; @btn-success-border);
 }
 // Info appears as blue-green
 .btn-info {
+  &::first-letter {
+    color: @yellow;
+  }
   .button-variant(@btn-info-color; @btn-info-bg; @btn-info-border);
 }
 // Warning appears as orange
 .btn-warning {
+  &::first-letter {
+    color: @yellow;
+  }
   .button-variant(@btn-warning-color; @btn-warning-bg; @btn-warning-border);
 }
 // Danger and error appear as red
 .btn-danger {
+  &::first-letter {
+    color: @yellow;
+  }
   .button-variant(@btn-danger-color; @btn-danger-bg; @btn-danger-border);
 }
 
