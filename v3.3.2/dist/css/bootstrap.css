@@ -2936,9 +2936,13 @@ select[multiple].form-group-lg .form-control {
 }
 .btn:active,
 .btn.active {
-  color: #ffffff !important;
-  background: #aa5500 !important;
+  color: #bbbbbb !important;
+  background: #000000 !important;
   outline: 0;
+}
+.btn:active ::first-letter,
+.btn.active ::first-letter {
+  color: #bbbbbb !important;
 }
 .btn.disabled,
 .btn[disabled],
@@ -2949,7 +2953,7 @@ fieldset[disabled] .btn {
   box-shadow: none;
 }
 .btn::first-letter {
-  color: blue !important;
+  color: #aa0000;
 }
 .navbar .btn {
   background: #555555;

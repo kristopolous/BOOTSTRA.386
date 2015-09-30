@@ -43,9 +43,12 @@
 
   &:active,
   &.active {
-    color: @white !important;
-    background: @brown !important;
+    color: @gray !important;
+    background: @black !important;
     outline: 0;
+    ::first-letter {
+      color: @gray !important;
+    }
   }
 
   &.disabled,
@@ -57,7 +60,7 @@
   }
 }
 .btn::first-letter {
-  color: blue !important;
+  color: @redDark;
 }
 .navbar .btn {
   background: @grayDark;
