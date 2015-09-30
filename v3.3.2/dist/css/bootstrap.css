@@ -3718,6 +3718,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin: 0;
   padding: 0 10px;
 }
+.nav > li > a::first-letter {
+  color: #fefe54;
+}
 .nav > li > a:hover,
 .nav > li > a:focus {
   color: #000000;
