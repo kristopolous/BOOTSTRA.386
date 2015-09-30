@@ -6,12 +6,14 @@
 // Base styles
 // --------------------------------------------------
 
+/*
 .btn:before {
   content:"< ";
 }
 .btn:after {
   content:" >";
 }
+*/
 .btn {
   display: inline-block;
   text-align: center;
@@ -53,6 +55,9 @@
     pointer-events: none; // Future-proof disabling of clicks
     .box-shadow(none);
   }
+}
+.btn::first-letter {
+  color: blue !important;
 }
 .navbar .btn {
   background: @grayDark;

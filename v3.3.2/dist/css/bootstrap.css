@@ -2897,12 +2897,14 @@ select[multiple].form-group-lg .form-control {
     padding-top: 1px;
   }
 }
+/*
 .btn:before {
-  content: "< ";
+  content:"< ";
 }
 .btn:after {
-  content: " >";
+  content:" >";
 }
+*/
 .btn {
   display: inline-block;
   text-align: center;
@@ -2945,6 +2947,9 @@ fieldset[disabled] .btn {
   pointer-events: none;
   -webkit-box-shadow: none;
   box-shadow: none;
+}
+.btn::first-letter {
+  color: blue !important;
 }
 .navbar .btn {
   background: #555555;
