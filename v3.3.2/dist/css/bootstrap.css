@@ -3252,6 +3252,10 @@ fieldset[disabled] .btn-link:hover,
 fieldset[disabled] .btn-link:focus {
   color: #bbbbbb;
 }
+.btn-lg,
+.btn-group-lg > .btn {
+  padding: 19px 9.5px;
+}
 .btn-sm,
 .btn-xs,
 .btn-group-xs > .btn,
