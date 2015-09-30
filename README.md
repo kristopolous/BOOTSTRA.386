@@ -1,12 +1,10 @@
-### Download the [latest zip file](https://github.com/kristopolous/BOOTSTRA.386/blob/master/bootstra.386-latest-v2.zip?raw=true) with all the necessary JS and CSS to get started right away.
+# [See A Demo By Clicking Here](http://kristopolous.github.io/BOOTSTRA.386/)
 
-Bootstrap/386 is a [Twitter bootstrap v2/v3](http://twitter.github.io/bootstrap/) theme to make webpages look like they are from the 1980s. 
+### Download the [latest zip file](https://github.com/kristopolous/BOOTSTRA.386/blob/master/bootstra.386-latest-v3.zip?raw=true) with all the necessary JS and CSS to get started right away.
 
-Want to just download it? **[Bootstrap v3 (you probably want this) zipfile ready to use](https://github.com/kristopolous/BOOTSTRA.386/raw/master/bootstra.386-latest-v3.zip)**, **legacy [Bootstrap v2 zip file](https://github.com/kristopolous/BOOTSTRA.386/raw/master/bootstra.386-latest-v2.zip)**
+Bootstrap/386 is a Twitter bootstrap v2/v3 theme to make webpages look like they are from the 1980s. 
 
-> Psstt! I'm also super excited about my new project, a DVR for radio - a free open source service to Get MP3s of any radio show - [at any time, right now](http://indycast.net).
-
-# [Demo Link](http://kristopolous.github.io/BOOTSTRA.386/)
+> Psstt! I'm super excited about my other project: [a free open source DVR for radio](http://indycast.net).
 
 <a href=http://i.imgur.com/chWpJfb.jpg><img src=http://i.imgur.com/chWpJfbl.jpg></a>
 <pre>
