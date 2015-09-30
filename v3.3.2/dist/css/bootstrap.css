@@ -1091,7 +1091,7 @@ a {
 a:hover,
 a:focus {
   color: #ffffff;
-  background: #aa5500;
+  background: #000000;
   text-decoration: none;
 }
 a:focus {
@@ -3395,7 +3395,7 @@ tbody.collapse.in {
 .dropdown-menu > li > a:focus {
   text-decoration: none;
   color: #bbbbbb;
-  background-color: #aa5500;
+  background-color: #000000;
 }
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
@@ -3403,7 +3403,7 @@ tbody.collapse.in {
   color: #ffffff;
   text-decoration: none;
   outline: 0;
-  background-color: #aa5500;
+  background-color: #000000;
 }
 .dropdown-menu > .disabled > a,
 .dropdown-menu > .disabled > a:hover,
@@ -3437,7 +3437,7 @@ tbody.collapse.in {
   padding: 0px 10px;
   font-size: 18px;
   line-height: 19px;
-  color: #aa5500;
+  color: #000000;
   white-space: nowrap;
 }
 .dropdown-backdrop {
@@ -3765,7 +3765,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
   color: #ffffff;
-  background-color: #aa5500;
+  background-color: #000000;
   cursor: default;
 }
 .nav-tabs.nav-justified {
@@ -3804,7 +3804,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
   color: #ffffff;
-  background-color: #aa5500;
+  background-color: #000000;
 }
 .nav-stacked > li {
   float: none;
@@ -4851,8 +4851,8 @@ a.list-group-item:focus {
 .list-group-item.active:focus {
   z-index: 2;
   color: #ffffff;
-  background-color: #aa5500;
-  border-color: #aa5500;
+  background-color: #000000;
+  border-color: #000000;
 }
 .list-group-item.active .list-group-item-heading,
 .list-group-item.active:hover .list-group-item-heading,

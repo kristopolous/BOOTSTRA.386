@@ -139,12 +139,12 @@
 }
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
-  background-color: #aa5500;
+  background-color: #000000;
 }
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
 .dropdown-menu > .active > a:focus {
-  background-color: #aa5500;
+  background-color: #000000;
 }
 .navbar-default {
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
@@ -174,7 +174,7 @@
 .list-group-item.active,
 .list-group-item.active:hover,
 .list-group-item.active:focus {
-  border-color: #aa5500;
+  border-color: #000000;
 }
 .list-group-item.active .badge,
 .list-group-item.active:hover .badge,
