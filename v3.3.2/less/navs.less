@@ -35,6 +35,9 @@
     // Disabled state sets text to gray and nukes hover/tab effects
     &.disabled > a {
       color: @nav-disabled-link-color;
+      &::first-letter {
+        color: @grayDark;
+      }
 
       &:hover,
       &:focus {
@@ -87,6 +90,9 @@
     // Actual tabs (as links)
     > a {
       line-height: @line-height-base;
+      &::first-letter {
+        color: @red;
+      }
       &:hover {
       }
     }
@@ -118,6 +124,10 @@
 
     // Links rendered as pills
     > a {
+      color: @black;
+      &::first-letter {
+        color: @redDark;
+      }
     }
     + li {
       margin-left: 0;
@@ -130,6 +140,9 @@
       &:focus {
         color: @nav-pills-active-link-hover-color;
         background-color: @nav-pills-active-link-hover-bg;
+        &::first-letter {
+          color: @red;
+        }
       }
     }
   }

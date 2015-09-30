@@ -16,8 +16,11 @@
     &:focus,
     &:active,
     &.active {
-      color: @white !important;
-      background: @brown !important;
+      color: @gray;
+      background: @black;
+      &::first-letter {
+        color: @gray;
+      }
     }
   }
 }

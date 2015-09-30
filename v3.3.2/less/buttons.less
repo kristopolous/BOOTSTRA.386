@@ -6,14 +6,6 @@
 // Base styles
 // --------------------------------------------------
 
-/*
-.btn:before {
-  content:"< ";
-}
-.btn:after {
-  content:" >";
-}
-*/
 .btn {
   display: inline-block;
   text-align: center;
@@ -68,6 +60,9 @@
   background: @grayDark;
   color: @white;
   .box-shadow(none);
+  &::first-letter {
+    color: @yellow;
+  }
 }
 
 
@@ -157,12 +152,6 @@
 }
 .btn-sm,.btn-xs {
   .box-shadow(none);
-}
-.btn-lg:before { content:"<  "; }
-.btn-lg:after { content:"  >"; }
-
-.btn-xs:before,.btn-xs:after {
-  content: "";
 }
 
 
