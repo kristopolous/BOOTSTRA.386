@@ -2921,6 +2921,9 @@ select[multiple].form-group-lg .form-control {
   -ms-user-select: none;
   user-select: none;
 }
+.btn ::first-letter {
+  color: #aa0000;
+}
 .btn:focus,
 .btn:active:focus,
 .btn.active:focus,
@@ -2951,9 +2954,6 @@ fieldset[disabled] .btn {
   pointer-events: none;
   -webkit-box-shadow: none;
   box-shadow: none;
-}
-.btn::first-letter {
-  color: #aa0000;
 }
 .navbar .btn {
   background: #555555;

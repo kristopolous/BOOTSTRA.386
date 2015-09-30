@@ -26,6 +26,10 @@
   border: 0px;
   .user-select(none);
 
+  ::first-letter {
+    color: @redDark;
+  }
+
   &,
   &:active,
   &.active {
@@ -51,6 +55,7 @@
     }
   }
 
+
   &.disabled,
   &[disabled],
   fieldset[disabled] & {
@@ -58,9 +63,6 @@
     pointer-events: none; // Future-proof disabling of clicks
     .box-shadow(none);
   }
-}
-.btn::first-letter {
-  color: @redDark;
 }
 .navbar .btn {
   background: @grayDark;
