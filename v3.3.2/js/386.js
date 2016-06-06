@@ -30,6 +30,13 @@ $(function () {
   }
   */
 
+  function aggressive () {
+    window.console.log("HI");
+    $("*").css({
+      'font-size': '18px !important'
+    });
+  }
+
   function loading () {
 
     if (window._386.fastLoad) {
@@ -110,5 +117,6 @@ $(function () {
     }, 1);
   }
   loading();
+  aggressive();
 });
 
