@@ -56,6 +56,7 @@
     "grunt-jscs": "~1.2.0",
     "grunt-saucelabs": "~8.4.1",
     "grunt-sed": "~0.1.1",
+    "jshint": "^2.9.2",
     "load-grunt-tasks": "~2.0.0",
     "npm-shrinkwrap": "^200.0.0",
     "remarkable": "~1.6.0",
@@ -79,5 +80,8 @@
     "buildConfig": {
       "uglify": true
     }
+  },
+  "dependencies": {
+    "color-diff": "^1.0.0"
   }
 }
