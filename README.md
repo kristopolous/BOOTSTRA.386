@@ -4,8 +4,6 @@
 
 Bootstrap/386 is a Twitter bootstrap v2/v3 theme to make webpages look like they are from the 1980s. 
 
-> Psstt! I'm super excited about my other project: [a free open source DVR for radio](http://indycast.net).
-
 <a href=http://i.imgur.com/chWpJfb.jpg><img src=http://i.imgur.com/chWpJfbl.jpg></a>
 <pre>
      ____  ____  ____  _____________________  ___    ____        __   _____ ____  _____
@@ -60,6 +58,21 @@ Example:
     _386 = { onePass: true, speedFactor: 1.25 };
 
 > Note: For the progressive animation to work you may need to set this stanza in your regular CSS: `body { visibility: hidden }`.
+
+### Accomodating users without javascript
+
+During a [2018 April fools' prank, a user pointed out that this theme doesn't work without javascript](https://www.reddit.com/r/linux/comments/88lump/manjaro_websites_april_1st_prank_is_the_default/dwlz0rv/). This is a valid concern, however it cannot be addressed without a user manually doing something
+since this is just a bootstrap theme.
+
+Luckily, HTML5 permits [noscript in the head section](https://stackoverflow.com/questions/218162/embedding-extra-styles-with-noscript/1332058#1332058) which means that style can be put in the noscript section.  This means that putting this in the header would permit people without JS on to see the site:
+
+```
+  <noscript>
+    <style>
+      body { visibility: visible }
+    </style>
+  </noscript>
+```
 
 ### Bugs and Stuff
 
