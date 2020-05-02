@@ -34,16 +34,27 @@ $grays: map-merge(
   $grays
 );
 
-$blue:    #007bff !default;
+//
+// colors are 4 bits essentially
+//  brightness red green blue
+//
+//  so, for instance, purple came in 2 forms:
+//
+//  1 1 0 1 - magenta
+//  0 1 0 1 - purple
+//    ^   ^ - these are essentially 88.
+//  ^ when that is triggered it goes to FF
+//
+$blue:    #008 !default;
 $indigo:  #6610f2 !default;
-$purple:  #6f42c1 !default;
-$pink:    #e83e8c !default;
-$red:     #dc3545 !default;
-$orange:  #fd7e14 !default;
-$yellow:  #ffc107 !default;
-$green:   #28a745 !default;
-$teal:    #20c997 !default;
-$cyan:    #17a2b8 !default;
+$purple:  #808 !default;
+$pink:    #f0f !default; // we'll use "magenta" here
+$red:     #800 !default;
+$orange:  #880 !default;
+$yellow:  #ff0 !default;
+$green:   #080 !default;
+$teal:    #088 !default;
+$cyan:    #0ff !default;
 
 $colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
