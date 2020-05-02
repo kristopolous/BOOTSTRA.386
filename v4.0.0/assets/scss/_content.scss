@@ -20,8 +20,8 @@
 
     &::before {
       display: block;
-      height: 6rem;
-      margin-top: -6rem;
+      height: $font-size-base;
+      margin-top: -$font-size-base;
       visibility: hidden;
       content: "";
     }
@@ -30,7 +30,7 @@
   > table {
     width: 100%;
     max-width: 100%;
-    margin-bottom: 1rem;
+    margin-bottom: $font-size-base;
 
     @include media-breakpoint-down(md) {
       display: block;
@@ -95,18 +95,16 @@
 }
 
 .bd-title {
-  margin-top: 1rem;
-  margin-bottom: .5rem;
-  font-weight: 300;
+  margin-top: $font-size-base;
+  margin-bottom: 0;
 
   @include media-breakpoint-up(sm) {
-    font-size: 3rem;
+    font-size: $font-size-base;
   }
 }
 
 .bd-lead {
-  font-size: 1.125rem;
-  font-weight: 300;
+  font-size: $font-size-base;
 
   @include media-breakpoint-up(sm) {
     max-width: 80%;

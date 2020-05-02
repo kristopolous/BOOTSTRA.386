@@ -25,7 +25,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 body {
   margin: 0;
   font-family: DOS, Monaco, Menlo, Consolas, "Courier New", monospace;
-  font-size: 1.125rem;
+  font-size: 14px;
   font-weight: 400;
   line-height: 18px;
   color: #bbb;
@@ -103,13 +103,13 @@ strong {
 }
 
 small {
-  font-size: 80%;
+  font-size: 14px;
 }
 
 sub,
 sup {
   position: relative;
-  font-size: 75%;
+  font-size: 14px;
   line-height: 0;
   vertical-align: baseline;
 }
@@ -148,7 +148,7 @@ code,
 kbd,
 samp {
   font-family: DOS, Monaco, Menlo, Consolas, "Courier New", monospace;
-  font-size: 1em;
+  font-size: 14px;
 }
 
 pre {
@@ -208,7 +208,7 @@ optgroup,
 textarea {
   margin: 0;
   font-family: inherit;
-  font-size: inherit;
+  font-size: 14px;
   line-height: inherit;
 }
 
@@ -279,7 +279,7 @@ legend {
   max-width: 100%;
   padding: 0;
   margin-bottom: .5rem;
-  font-size: 1.5rem;
+  font-size: 14px;
   line-height: inherit;
   color: inherit;
   white-space: normal;

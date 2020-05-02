@@ -9,7 +9,7 @@
 // Configuration
 
 // Base font size
-$rfs-base-font-size: 1.25rem !default;
+$rfs-base-font-size: 1rem !default;
 $rfs-font-size-unit: rem !default;
 
 // Breakpoint at where font-size starts decreasing if screen width is smaller
@@ -70,7 +70,7 @@ $rfs-breakpoint-unit-cache: unit($rfs-breakpoint);
 
   // If $fs isn't a number (like inherit) or $fs has a unit (not px or rem, like 1.5em) or $ is 0, just print the value
   @if not $fs-unit or $fs-unit != "" and $fs-unit != "px" and $fs-unit != "rem" or $fs == 0 {
-    font-size: #{$fs}#{$rfs-suffix};
+    font-size: 14px;
   }
   @else {
     // Variables for storing static and fluid rescaling
@@ -87,7 +87,7 @@ $rfs-breakpoint-unit-cache: unit($rfs-breakpoint);
 
     // Set default font-size
     @if $rfs-font-size-unit == rem {
-      $rfs-static: #{$fs / $rfs-rem-value}rem#{$rfs-suffix};
+      $rfs-static: 14px;
     }
     @else if $rfs-font-size-unit == px {
       $rfs-static: #{$fs}px#{$rfs-suffix};
@@ -151,7 +151,7 @@ $rfs-breakpoint-unit-cache: unit($rfs-breakpoint);
         }
       }
       @else {
-        font-size: $rfs-static;
+        sont-size: $rfs-static;
       }
 
       @if $rfs-two-dimensional {

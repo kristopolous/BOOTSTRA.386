@@ -105,19 +105,9 @@
 }
 
 .bd-title {
-  margin-top: 1rem;
-  margin-bottom: .5rem;
-  font-weight: 300;
-  @include font-size(3rem);
 }
 
 .bd-lead {
-  @include font-size(1.5rem);
-  font-weight: 300;
-
-  @include media-breakpoint-up(lg) {
-    max-width: 80%;
-  }
 }
 
 .bd-text-purple { color: $bd-purple; }
