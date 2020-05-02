@@ -78,6 +78,8 @@ Luckily, HTML5 permits [noscript in the head section](https://stackoverflow.com/
 
 While you're here, let me plug another fun project I have. This one includes a 1990's style "made for tv" infomercial I made. It's a better way to [search manpages called mansnip](https://github.com/kristopolous/mansnip). At least watch the youtube video, that took me days.
 
+Let's make software fun again, remember those days? Oh you're too young? Well trust me, it used to be a blast! Let's do *that* again, it was a good time.
+
 ### Bugs and Stuff
 
 Check out the [contribution](https://github.com/kristopolous/BOOTSTRA.386/blob/master/CONTRIBUTING.md) doc - it's easy, I swear.
