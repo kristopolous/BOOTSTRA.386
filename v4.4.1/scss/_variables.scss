@@ -128,7 +128,7 @@ $escaped-characters: (
 // Quickly modify global styling by enabling or disabling optional features.
 
 $enable-caret:                                true !default;
-$enable-rounded:                              true !default;
+$enable-rounded:                              false !default;
 $enable-shadows:                              false !default;
 $enable-gradients:                            false !default;
 $enable-transitions:                          true !default;
@@ -168,9 +168,9 @@ $sizes: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $sizes: map-merge(
   (
-    25: 25%,
-    50: 50%,
-    75: 75%,
+    25: 100%,
+    50: 100%,
+    75: 100%,
     100: 100%,
     auto: auto
   ),
@@ -248,17 +248,17 @@ $grid-row-columns:            6 !default;
 //
 // Define common padding and border radius sizes and more.
 
-$line-height-lg:              1.5 !default;
-$line-height-sm:              1.5 !default;
+$line-height-lg:              1 !default;
+$line-height-sm:              1 !default;
 
-$border-width:                1px !default;
+$border-width:                0 !default;
 $border-color:                $gray-300 !default;
 
-$border-radius:               .25rem !default;
-$border-radius-lg:            .3rem !default;
-$border-radius-sm:            .2rem !default;
+$border-radius:               0 !default;
+$border-radius-lg:            0 !default;
+$border-radius-sm:            0 !default;
 
-$rounded-pill:                50rem !default;
+$rounded-pill:                0 !default;
 
 $box-shadow-sm:               0 .125rem .25rem rgba($black, .075) !default;
 $box-shadow:                  0 .5rem 1rem rgba($black, .15) !default;
@@ -297,18 +297,19 @@ $font-family-monospace:      DOS, Monaco, Menlo, Consolas, "Courier New", monosp
 $font-family-base:      DOS, Monaco, Menlo, Consolas, "Courier New", monospace !default;
 // stylelint-enable value-keyword-case
 
-$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$font-size-base:              18px !default; // Assumes the browser default, typically `16px`
 $font-size-lg:                $font-size-base !default;
 $font-size-sm:                $font-size-base !default;
+$font-size-width:             12.4px !default;
 
-$font-weight-lighter:         lighter !default;
+$font-weight-lighter:         400 !default;
 $font-weight-light:           400 !default;
 $font-weight-normal:          400 !default;
 $font-weight-bold:            400 !default;
-$font-weight-bolder:          bolder !default;
+$font-weight-bolder:          400 !default;
 
 $font-weight-base:            $font-weight-normal !default;
-$line-height-base:            1.5 !default;
+$line-height-base:            $font-size-base !default;
 
 $h1-font-size:                $font-size-base !default;
 $h2-font-size:                $font-size-base !default;
@@ -319,14 +320,14 @@ $h6-font-size:                $font-size-base !default;
 
 $headings-margin-bottom:      $spacer / 2 !default;
 $headings-font-family:        null !default;
-$headings-font-weight:        500 !default;
-$headings-line-height:        1.2 !default;
+$headings-font-weight:        400 !default;
+$headings-line-height:        $font-size-base !default;
 $headings-color:              null !default;
 
-$display1-size:               6rem !default;
-$display2-size:               5.5rem !default;
-$display3-size:               4.5rem !default;
-$display4-size:               3.5rem !default;
+$display1-size:               $font-size-base !default;
+$display2-size:               $font-size-base !default;
+$display3-size:               $font-size-base !default;
+$display4-size:               $font-size-base !default;
 
 $display1-weight:             400 !default;
 $display2-weight:             400 !default;
@@ -348,14 +349,14 @@ $blockquote-font-size:        $font-size-base !default;
 $hr-border-color:             rgba($black, .1) !default;
 $hr-border-width:             $border-width !default;
 
-$mark-padding:                .2em !default;
+$mark-padding:                0 !default;
 
 $dt-font-weight:              $font-weight-bold !default;
 
 $kbd-box-shadow:              inset 0 -.1rem 0 rgba($black, .25) !default;
 $nested-kbd-font-weight:      $font-weight-bold !default;
 
-$list-inline-padding:         .5rem !default;
+$list-inline-padding:         0 !default;
 
 $mark-bg:                     #fcf8e3 !default;
 
@@ -366,8 +367,8 @@ $hr-margin-y:                 $spacer !default;
 //
 // Customizes the `.table` component with basic values, each used across all table variations.
 
-$table-cell-padding:          .75rem !default;
-$table-cell-padding-sm:       .3rem !default;
+$table-cell-padding:          0 !default;
+$table-cell-padding-sm:       0 !default;
 
 $table-color:                 $body-color !default;
 $table-bg:                    null !default;
@@ -401,8 +402,8 @@ $table-border-level:          -6 !default;
 //
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
-$input-btn-padding-y:         .375rem !default;
-$input-btn-padding-x:         .75rem !default;
+$input-btn-padding-y:         0 !default;
+$input-btn-padding-x:         0 !default;
 $input-btn-font-family:       null !default;
 $input-btn-font-size:         $font-size-base !default;
 $input-btn-line-height:       $line-height-base !default;
@@ -411,13 +412,13 @@ $input-btn-focus-width:       .2rem !default;
 $input-btn-focus-color:       rgba($component-active-bg, .25) !default;
 $input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
 
-$input-btn-padding-y-sm:      .25rem !default;
-$input-btn-padding-x-sm:      .5rem !default;
+$input-btn-padding-y-sm:      0 !default;
+$input-btn-padding-x-sm:      0 !default;
 $input-btn-font-size-sm:      $font-size-sm !default;
 $input-btn-line-height-sm:    $line-height-sm !default;
 
-$input-btn-padding-y-lg:      .5rem !default;
-$input-btn-padding-x-lg:      1rem !default;
+$input-btn-padding-y-lg:      0 !default;
+$input-btn-padding-x-lg:      0 !default;
 $input-btn-font-size-lg:      $font-size-lg !default;
 $input-btn-line-height-lg:    $line-height-lg !default;
 
@@ -451,7 +452,7 @@ $btn-font-weight:             $font-weight-normal !default;
 $btn-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075) !default;
 $btn-focus-width:             $input-btn-focus-width !default;
 $btn-focus-box-shadow:        $input-btn-focus-box-shadow !default;
-$btn-disabled-opacity:        .65 !default;
+$btn-disabled-opacity:        1 !default;
 $btn-active-box-shadow:       inset 0 3px 5px rgba($black, .125) !default;
 
 $btn-link-disabled-color:     $gray-600 !default;
