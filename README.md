@@ -2,7 +2,7 @@
 
 ### Download the [latest zip file](https://github.com/kristopolous/BOOTSTRA.386/blob/master/bootstra.386-latest-v3.zip?raw=true) with all the necessary JS and CSS to get started right away.
 
-Bootstrap/386 is a Twitter bootstrap v2/v3 theme to make webpages look like they are from the 1980s. 
+Bootstrap/386 is a Twitter bootstrap v2/v3 (v4 coming soon) theme to make webpages look like they are from the 1980s. 
 
 <a href=http://i.imgur.com/chWpJfb.jpg><img src=http://i.imgur.com/chWpJfbl.jpg></a>
 <pre>
@@ -73,6 +73,10 @@ Luckily, HTML5 permits [noscript in the head section](https://stackoverflow.com/
     </style>
   </noscript>
 ```
+
+### Distractions
+
+While you're here, let me plug another fun project I have. This one includes a 1990's style "made for tv" infomercial I made. It's a better way to [search manpages called mansnip](https://github.com/kristopolous/mansnip). At least watch the youtube video, that took me days.
 
 ### Bugs and Stuff
 
