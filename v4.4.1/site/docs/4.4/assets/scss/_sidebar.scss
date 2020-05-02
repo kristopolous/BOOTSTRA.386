@@ -32,7 +32,6 @@
   a {
     display: block;
     padding: .125rem 1.5rem;
-    color: #77757a;
 
     &:hover {
       color: $blue;
@@ -48,7 +47,6 @@
 .bd-sidebar {
   order: 0;
   // background-color: #f5f2f9;
-  border-bottom: 1px solid rgba(0, 0, 0, .1);
 
   @include media-breakpoint-up(md) {
     @supports (position: sticky) {
@@ -93,13 +91,11 @@
 
   .form-control:focus {
     border-color: $bd-purple-bright;
-    box-shadow: 0 0 0 3px rgba($bd-purple-bright, .25);
   }
 }
 
 .bd-search-docs-toggle {
   line-height: 1;
-  color: $gray-900;
 }
 
 .bd-sidenav {
@@ -108,12 +104,8 @@
 
 .bd-toc-link {
   display: block;
-  padding: .25rem 1.5rem;
-  font-weight: 600;
-  color: rgba(0, 0, 0, .65);
 
   &:hover {
-    color: rgba(0, 0, 0, .85);
     text-decoration: none;
   }
 }
@@ -127,7 +119,6 @@
     }
 
     > .bd-toc-link {
-      color: rgba(0, 0, 0, .85);
 
       &:hover {
         background-color: transparent;
@@ -145,18 +136,14 @@
   display: block;
   padding: .25rem 1.5rem;
   @include font-size(90%);
-  color: rgba(0, 0, 0, .65);
 }
 
 .bd-sidebar .nav > li > a:hover {
-  color: rgba(0, 0, 0, .85);
   text-decoration: none;
   background-color: transparent;
 }
 
 .bd-sidebar .nav > .active > a,
 .bd-sidebar .nav > .active:hover > a {
-  font-weight: 600;
-  color: rgba(0, 0, 0, .85);
   background-color: transparent;
 }
