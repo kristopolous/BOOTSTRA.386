@@ -1,0 +1,69 @@
+# Dependencies
+markdown:       kramdown
+highlighter:    rouge
+
+kramdown:
+  auto_ids:     true
+
+# Permalinks
+permalink:      pretty
+
+# Server
+source:         "site"
+destination:    ./_gh_pages
+host:           "localhost"
+port:           9001
+baseurl:        ""
+url:            "https://getbootstrap.com"
+encoding:       UTF-8
+exclude:
+  - docs/4.4/assets/scss/
+
+plugins:
+  - jekyll-redirect-from
+  - jekyll-sitemap
+  - jekyll-toc
+
+# Social
+title:              Bootstrap
+description:        "The most popular HTML, CSS, and JS library in the world."
+twitter:            getbootstrap
+authors:            "Mark Otto, Jacob Thornton, and Bootstrap contributors"
+social_image_path:  /docs/4.4/assets/brand/bootstrap-social.png
+social_logo_path:   /docs/4.4/assets/brand/bootstrap-social-logo.png
+
+# Custom variables
+current_version:      4.4.1
+current_ruby_version: 4.4.1
+docs_version:         4.4
+repo:                 "https://github.com/twbs/bootstrap"
+slack:                "https://bootstrap-slack.herokuapp.com"
+opencollective:       "https://opencollective.com/bootstrap"
+blog:                 "https://blog.getbootstrap.com"
+expo:                 "https://expo.getbootstrap.com"
+themes:               "https://themes.getbootstrap.com"
+icons:                "https://icons.getbootstrap.com"
+
+download:
+  source:           "https://github.com/twbs/bootstrap/archive/v4.4.1.zip"
+  dist:             "https://github.com/twbs/bootstrap/releases/download/v4.4.1/bootstrap-4.4.1-dist.zip"
+
+cdn:
+  # See https://www.srihash.org for info on how to generate the hashes
+  css:              "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+  css_hash:         "sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+  js:               "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+  js_hash:          "sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+  js_bundle:        "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"
+  js_bundle_hash:   "sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm"
+  jquery:           "https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  jquery_hash:      "sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+  popper:           "https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  popper_hash:      "sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+
+toc:
+  min_level:        2
+  max_level:        4
+  no_toc_section_class:
+    - "bd-callout"
+    - "bd-example"
