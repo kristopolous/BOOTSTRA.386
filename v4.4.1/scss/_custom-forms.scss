@@ -10,7 +10,7 @@
 .custom-control {
   position: relative;
   display: block;
-  min-height: $font-size-base * $line-height-base;
+  min-height: $font-size-base;
   padding-left: $custom-control-gutter + $custom-control-indicator-size;
 }
 
@@ -184,7 +184,7 @@
     }
 
     &::after {
-      top: add(($font-size-base * $line-height-base - $custom-control-indicator-size) / 2, $custom-control-indicator-border-width * 2);
+      top: $font-size-base;
       left: add(-($custom-switch-width + $custom-control-gutter), $custom-control-indicator-border-width * 2);
       width: $custom-switch-indicator-size;
       height: $custom-switch-indicator-size;
