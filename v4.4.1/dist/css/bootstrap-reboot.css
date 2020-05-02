@@ -133,6 +133,15 @@ a:hover {
   text-decoration: underline;
 }
 
+em {
+  font-style: normal;
+}
+
+em ::before,
+em ::after {
+  content: "_";
+}
+
 a:not([href]) {
   color: inherit;
   text-decoration: none;
