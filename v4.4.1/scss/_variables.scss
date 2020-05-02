@@ -6,15 +6,17 @@
 // Color system
 
 $white:    #fff !default;
-$gray-100: #f8f9fa !default;
-$gray-200: #e9ecef !default;
-$gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
-$gray-500: #adb5bd !default;
-$gray-600: #6c757d !default;
-$gray-700: #495057 !default;
-$gray-800: #343a40 !default;
-$gray-900: #212529 !default;
+$grayDark:  #555 !default;
+$grayLight: #bbb !default;
+$gray-100: $grayDark !default;
+$gray-200: $grayDark !default;
+$gray-300: $grayDark !default;
+$gray-400: $grayDark !default;
+$gray-500: $grayDark !default;
+$gray-600: $grayLight !default;
+$gray-700: $grayLight !default;
+$gray-800: $grayLight !default;
+$gray-900: $grayLight !default;
 $black:    #000 !default;
 
 $grays: () !default;
@@ -46,6 +48,7 @@ $grays: map-merge(
 //  ^ when that is triggered it goes to FF
 //
 $blue:    #008 !default;
+$blueDark:    #008 !default;
 $indigo:  #6610f2 !default;
 $purple:  #808 !default;
 $pink:    #f0f !default; // we'll use "magenta" here
@@ -179,8 +182,8 @@ $sizes: map-merge(
 //
 // Settings for the `<body>` element.
 
-$body-bg:                   $white !default;
-$body-color:                $gray-900 !default;
+$body-bg:                   $blueDark !default;
+$body-color:                $grayLight !default;
 
 
 // Links
@@ -289,29 +292,29 @@ $embed-responsive-aspect-ratios: join(
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
-$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
-$font-family-base:            $font-family-sans-serif !default;
+$font-family-sans-serif:      DOS, Monaco, Menlo, Consolas, "Courier New", monospace !default;
+$font-family-monospace:      DOS, Monaco, Menlo, Consolas, "Courier New", monospace !default;
+$font-family-base:      DOS, Monaco, Menlo, Consolas, "Courier New", monospace !default;
 // stylelint-enable value-keyword-case
 
 $font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
-$font-size-lg:                $font-size-base * 1.25 !default;
-$font-size-sm:                $font-size-base * .875 !default;
+$font-size-lg:                $font-size-base !default;
+$font-size-sm:                $font-size-base !default;
 
 $font-weight-lighter:         lighter !default;
-$font-weight-light:           300 !default;
+$font-weight-light:           400 !default;
 $font-weight-normal:          400 !default;
-$font-weight-bold:            700 !default;
+$font-weight-bold:            400 !default;
 $font-weight-bolder:          bolder !default;
 
 $font-weight-base:            $font-weight-normal !default;
 $line-height-base:            1.5 !default;
 
-$h1-font-size:                $font-size-base * 2.5 !default;
-$h2-font-size:                $font-size-base * 2 !default;
-$h3-font-size:                $font-size-base * 1.75 !default;
-$h4-font-size:                $font-size-base * 1.5 !default;
-$h5-font-size:                $font-size-base * 1.25 !default;
+$h1-font-size:                $font-size-base !default;
+$h2-font-size:                $font-size-base !default;
+$h3-font-size:                $font-size-base !default;
+$h4-font-size:                $font-size-base !default;
+$h5-font-size:                $font-size-base !default;
 $h6-font-size:                $font-size-base !default;
 
 $headings-margin-bottom:      $spacer / 2 !default;
@@ -325,22 +328,22 @@ $display2-size:               5.5rem !default;
 $display3-size:               4.5rem !default;
 $display4-size:               3.5rem !default;
 
-$display1-weight:             300 !default;
-$display2-weight:             300 !default;
-$display3-weight:             300 !default;
-$display4-weight:             300 !default;
+$display1-weight:             400 !default;
+$display2-weight:             400 !default;
+$display3-weight:             400 !default;
+$display4-weight:             400 !default;
 $display-line-height:         $headings-line-height !default;
 
-$lead-font-size:              $font-size-base * 1.25 !default;
-$lead-font-weight:            300 !default;
+$lead-font-size:              $font-size-base !default;
+$lead-font-weight:            400 !default;
 
-$small-font-size:             80% !default;
+$small-font-size:             100% !default;
 
 $text-muted:                  $gray-600 !default;
 
 $blockquote-small-color:      $gray-600 !default;
 $blockquote-small-font-size:  $small-font-size !default;
-$blockquote-font-size:        $font-size-base * 1.25 !default;
+$blockquote-font-size:        $font-size-base !default;
 
 $hr-border-color:             rgba($black, .1) !default;
 $hr-border-width:             $border-width !default;
