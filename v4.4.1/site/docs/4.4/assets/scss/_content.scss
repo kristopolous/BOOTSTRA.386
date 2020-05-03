@@ -15,8 +15,6 @@
 
     &::before {
       display: block;
-      height: 6rem;
-      margin-top: -6rem;
       content: "";
     }
   }
@@ -44,7 +42,6 @@
         > td {
           padding: $table-cell-padding;
           vertical-align: top;
-          border: 1px solid $table-border-color;
 
           > p:last-child {
             margin-bottom: 0;
@@ -81,20 +78,6 @@
   > h4 {
     @include font-size($h4-font-size);
   }
-
-  > h2:not(:first-child) {
-    margin-top: 3rem;
-  }
-
-  > h3 {
-    margin-top: 1.5rem;
-  }
-
-  > ul li,
-  > ol li {
-    margin-bottom: .25rem;
-  }
-
   @include media-breakpoint-up(lg) {
     > ul,
     > ol,
