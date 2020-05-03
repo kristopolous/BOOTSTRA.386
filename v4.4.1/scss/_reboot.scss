@@ -16,6 +16,14 @@
 // 4. Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.
 // 5. Change the default tap highlight to be completely transparent in iOS.
 
+@font-face {
+  font-family: 'DOS';
+  src: url('fonts/Fixedsys500c.eot');
+  src: local('☺'), url('fonts/Fixedsys500c.woff') format('woff'), url('fonts/Fixedsys500c.ttf') format('truetype'), url('fonts/Fixedsys500c.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 *,
 *::before,
 *::after {

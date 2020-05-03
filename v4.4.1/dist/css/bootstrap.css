@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -33,6 +34,14 @@
   --breakpoint-xl: 1200px;
   --font-family-sans-serif: DOS, Monaco, Menlo, Consolas, "Courier New", monospace;
   --font-family-monospace: DOS, Monaco, Menlo, Consolas, "Courier New", monospace;
+}
+
+@font-face {
+  font-family: 'DOS';
+  src: url("fonts/Fixedsys500c.eot");
+  src: local("☺"), url("fonts/Fixedsys500c.woff") format("woff"), url("fonts/Fixedsys500c.ttf") format("truetype"), url("fonts/Fixedsys500c.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 
 *,

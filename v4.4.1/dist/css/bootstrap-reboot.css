@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
  * Bootstrap Reboot v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -5,6 +6,14 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * Forked from Normalize.css, licensed MIT (https://github.com/necolas/normalize.css/blob/master/LICENSE.md)
  */
+@font-face {
+  font-family: 'DOS';
+  src: url("fonts/Fixedsys500c.eot");
+  src: local("☺"), url("fonts/Fixedsys500c.woff") format("woff"), url("fonts/Fixedsys500c.ttf") format("truetype"), url("fonts/Fixedsys500c.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
 *,
 *::before,
 *::after {
