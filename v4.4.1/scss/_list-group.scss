@@ -154,5 +154,5 @@
 // Organizationally, this must come after the `:hover` states.
 
 @each $color, $value in $theme-colors {
-  @include list-group-item-variant($color, theme-color-level($color, -9), theme-color-level($color, 6));
+  @include list-group-item-variant($color, theme-color-level($color, -1), theme-color-level($color, 1));
 }

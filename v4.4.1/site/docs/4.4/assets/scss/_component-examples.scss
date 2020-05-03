@@ -35,8 +35,6 @@
 
 .bd-example-responsive-containers {
   [class^="container"] {
-    padding-top: .75rem;
-    padding-bottom: .75rem;
     background-color: rgba(86, 61, 124, .15);
     border: 1px solid rgba(86, 61, 124, .2);
   }
@@ -86,10 +84,8 @@
   @include clearfix();
 
   @include media-breakpoint-up(sm) {
-    padding: 1.5rem;
     margin-right: 0;
     margin-left: 0;
-    border-width: .2rem;
   }
 
   + .highlight,
@@ -143,7 +139,6 @@
 .bd-example-type {
   .table {
     td {
-      padding: 1rem 0;
       border-color: #eee;
     }
     tr:first-child td {
@@ -162,28 +157,12 @@
   }
 }
 
-// Contextual background colors
-.bd-example-bg-classes p {
-  padding: 1rem;
-}
 
 // Images
 .bd-example {
   > svg + svg,
   > img + img {
     margin-left: .5rem;
-  }
-}
-
-// Buttons
-.bd-example {
-  > .btn,
-  > .btn-group {
-    margin-top: .25rem;
-    margin-bottom: .25rem;
-  }
-  > .btn-toolbar + .btn-toolbar {
-    margin-top: .5rem;
   }
 }
 

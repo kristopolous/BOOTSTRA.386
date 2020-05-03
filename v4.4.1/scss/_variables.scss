@@ -106,7 +106,7 @@ $theme-colors: map-merge(
 );
 
 // Set a specific jump point for requesting color jumps
-$theme-color-interval:      8% !default;
+$theme-color-interval:      50% !default;
 
 // The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
 $yiq-contrasted-threshold:  150 !default;
@@ -201,7 +201,7 @@ $link-decoration:                         none !default;
 $link-hover-color:                        $white !default;
 $link-hover-decoration:                   underline !default;
 // Darken percentage for links with `.text-*` class (e.g. `.text-success`)
-$emphasized-link-hover-darken-percentage: 15% !default;
+$emphasized-link-hover-darken-percentage: 0% !default;
 
 // Paragraphs
 //
@@ -373,7 +373,7 @@ $table-cell-padding-sm:       0 !default;
 
 $table-color:                 $body-color !default;
 $table-bg:                    null !default;
-$table-accent-bg:             rgba($black, .05) !default;
+$table-accent-bg:             inherit !default;
 $table-hover-color:           $table-color !default;
 $table-hover-bg:              rgba($black, .075) !default;
 $table-active-bg:             $table-hover-bg !default;
@@ -395,8 +395,8 @@ $table-striped-order:         odd !default;
 
 $table-caption-color:         $text-muted !default;
 
-$table-bg-level:              -9 !default;
-$table-border-level:          -6 !default;
+$table-bg-level:              -1 !default;
+$table-border-level:          0 !default;
 
 
 // Buttons + Forms
@@ -470,7 +470,7 @@ $btn-transition:              color .15s ease-in-out, background-color .15s ease
 
 // Forms
 
-$label-margin-bottom:                   .5rem !default;
+$label-margin-bottom:                   $line-height-base !default;
 
 $input-padding-y:                       $input-btn-padding-y !default;
 $input-padding-x:                       $input-btn-padding-x !default;
@@ -781,7 +781,7 @@ $dropdown-spacer:                   0 !default;
 $dropdown-font-size:                $font-size-base !default;
 $dropdown-color:                    $body-color !default;
 $dropdown-bg:                       $white !default;
-$dropdown-border-color:             rgba($black, .15) !default;
+$dropdown-border-color:             rgba($black, .5) !default;
 $dropdown-border-radius:            $border-radius !default;
 $dropdown-border-width:             $border-width !default;
 $dropdown-inner-border-radius:      subtract($dropdown-border-radius, $dropdown-border-width) !default;
@@ -1000,16 +1000,17 @@ $modal-scale-transform:             scale(1.02) !default;
 //
 // Define alert colors, border radius, and padding.
 
-$alert-padding-y:                   0 !default;
-$alert-padding-x:                   0 !default;
+$alert-padding-y:                   $line-height-base !default;
+$alert-padding-x:                   $space-width !default;
 $alert-margin-bottom:               0 !default;
 $alert-border-radius:               $border-radius !default;
 $alert-link-font-weight:            $font-weight-bold !default;
 $alert-border-width:                $border-width !default;
 
-$alert-bg-level:                    -10 !default;
-$alert-border-level:                -9 !default;
-$alert-color-level:                 6 !default;
+// These are multipliers of the base (
+$alert-bg-level:                    1 !default;
+$alert-border-level:                -1 !default;
+$alert-color-level:                 -1 !default;
 
 
 // Progress bars
