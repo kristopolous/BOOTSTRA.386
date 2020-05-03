@@ -12,6 +12,12 @@
   src: local("☺"), url("fonts/Fixedsys500c.woff") format("woff"), url("fonts/Fixedsys500c.ttf") format("truetype"), url("fonts/Fixedsys500c.svg") format("svg");
   font-weight: normal;
   font-style: normal;
+  -webkit-font-kerning: none;
+  font-kerning: none;
+  font-synthesis: none;
+  -webkit-font-variant-ligatures: none;
+  font-variant-ligatures: none;
+  font-variant-numeric: tabular-nums;
 }
 
 *,
@@ -25,6 +31,7 @@ html {
   line-height: 13.752px;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  line-height-step: 13.752px;
 }
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
@@ -54,12 +61,12 @@ hr {
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-  margin-bottom: 9px;
+  margin-bottom: 13.752px 16px/2;
 }
 
 p {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 13.752px;
 }
 
 abbr[title],
@@ -74,7 +81,7 @@ abbr[data-original-title] {
 }
 
 address {
-  margin-bottom: 1rem;
+  margin-bottom: 13.752px;
   font-style: normal;
   line-height: inherit;
 }
@@ -83,7 +90,8 @@ ol,
 ul,
 dl {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-left: 18px;
+  margin-bottom: 13.752px;
 }
 
 ol ol,
@@ -98,7 +106,7 @@ dt {
 }
 
 dd {
-  margin-bottom: .5rem;
+  margin-bottom: 13.752px;
   margin-left: 0;
 }
 
@@ -118,17 +126,16 @@ small {
 sub,
 sup {
   position: relative;
-  font-size: 14px;
   line-height: 0;
   vertical-align: baseline;
 }
 
 sub {
-  bottom: -.25em;
+  bottom: 0;
 }
 
 sup {
-  top: -.5em;
+  top: 0;
 }
 
 a {
@@ -299,7 +306,7 @@ legend {
   width: 100%;
   max-width: 100%;
   padding: 0;
-  margin-bottom: .5rem;
+  margin-bottom: 13.752px;
   font-size: 14px;
   line-height: inherit;
   color: inherit;

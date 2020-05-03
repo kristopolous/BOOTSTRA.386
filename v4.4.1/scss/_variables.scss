@@ -143,17 +143,18 @@ $enable-deprecation-messages:                 true !default;
 
 
 $font-size-base:              18px !default; // Assumes the browser default, typically `16px`
+$line-height-base:            $font-size-base * .764 !default;
 
 $font-size-lg:                $font-size-base !default;
 $font-size-sm:                $font-size-base !default;
-//$font-size-width:             12.4px !default;
+$space-width:             16px !default;
 // Spacing
 //
 // Control the default styling of most Bootstrap elements by modifying these
 // variables. Mostly focused on spacing.
 // You can add more entries to the $spacers map, should you need more variation.
 
-$spacer: $font-size-base !default;
+$spacer: $line-height-base $space-width !default;
 $spacers: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $spacers: map-merge(
@@ -162,8 +163,8 @@ $spacers: map-merge(
     1: ($spacer),
     2: ($spacer),
     3: $spacer,
-    4: ($spacer * 2),
-    5: ($spacer * 3)
+    4: ($spacer),
+    5: ($spacer)
   ),
   $spacers
 );
@@ -206,7 +207,7 @@ $emphasized-link-hover-darken-percentage: 15% !default;
 //
 // Style p element.
 
-$paragraph-margin-bottom:   1rem !default;
+$paragraph-margin-bottom: $line-height-base !default;
 
 
 // Grid breakpoints
@@ -253,8 +254,8 @@ $grid-row-columns:            6 !default;
 //
 // Define common padding and border radius sizes and more.
 
-$line-height-lg:              1 !default;
-$line-height-sm:              1 !default;
+$line-height-lg:              $line-height-base !default;
+$line-height-sm:              $line-height-base !default;
 
 $border-width:                0 !default;
 $border-color:                $gray-300 !default;
@@ -310,7 +311,6 @@ $font-weight-bold:            400 !default;
 $font-weight-bolder:          400 !default;
 
 $font-weight-base:            $font-weight-normal !default;
-$line-height-base:            $font-size-base * .764 !default;
 
 $h1-font-size:                $font-size-base !default;
 $h2-font-size:                $font-size-base !default;
@@ -322,7 +322,7 @@ $h6-font-size:                $font-size-base !default;
 $headings-margin-bottom:      $spacer / 2 !default;
 $headings-font-family:        null !default;
 $headings-font-weight:        400 !default;
-$headings-line-height:        $font-size-base !default;
+$headings-line-height:        $line-height-base !default;
 $headings-color:              null !default;
 
 $display1-size:               $font-size-base !default;
