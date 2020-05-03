@@ -272,6 +272,7 @@ svg {
 
 table {
   border-collapse: collapse; // Prevent double borders
+  border-spacing: 0;
 }
 
 caption {
@@ -286,6 +287,8 @@ th {
   // Matches default `<td>` alignment by inheriting from the `<body>`, or the
   // closest parent with a set `text-align`.
   text-align: inherit;
+  font-weight: normal;
+  color: $white;
 }
 
 
