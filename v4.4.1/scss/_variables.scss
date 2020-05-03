@@ -142,22 +142,26 @@ $enable-validation-icons:                     true !default;
 $enable-deprecation-messages:                 true !default;
 
 
+$font-size-base:              18px !default; // Assumes the browser default, typically `16px`
+$font-size-lg:                $font-size-base !default;
+$font-size-sm:                $font-size-base !default;
+//$font-size-width:             12.4px !default;
 // Spacing
 //
 // Control the default styling of most Bootstrap elements by modifying these
 // variables. Mostly focused on spacing.
 // You can add more entries to the $spacers map, should you need more variation.
 
-$spacer: 1rem !default;
+$spacer: $font-size-base !default;
 $spacers: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $spacers: map-merge(
   (
     0: 0,
-    1: ($spacer * .25),
-    2: ($spacer * .5),
+    1: ($spacer),
+    2: ($spacer),
     3: $spacer,
-    4: ($spacer * 1.5),
+    4: ($spacer * 2),
     5: ($spacer * 3)
   ),
   $spacers
@@ -297,10 +301,6 @@ $font-family-monospace:      DOS, Monaco, Menlo, Consolas, "Courier New", monosp
 $font-family-base:      DOS, Monaco, Menlo, Consolas, "Courier New", monospace !default;
 // stylelint-enable value-keyword-case
 
-$font-size-base:              18px !default; // Assumes the browser default, typically `16px`
-$font-size-lg:                $font-size-base !default;
-$font-size-sm:                $font-size-base !default;
-//$font-size-width:             12.4px !default;
 
 $font-weight-lighter:         400 !default;
 $font-weight-light:           400 !default;

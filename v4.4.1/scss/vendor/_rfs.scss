@@ -174,16 +174,6 @@ $rfs-breakpoint-unit-cache: unit($rfs-breakpoint);
       }
       @else {
         @media (max-width: #{$mq-value}) {
-          @if $rfs-class == "enable" {
-            .enable-responsive-font-size &,
-            &.enable-responsive-font-size {
-              font-size: $rfs-fluid;
-            }
-          }
-          @else {
-            font-size: $rfs-fluid;
-          }
-
           @if $rfs-safari-iframe-resize-bug-fix {
             // stylelint-disable-next-line length-zero-no-unit
             min-width: 0vw;

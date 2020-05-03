@@ -134,8 +134,6 @@
 // All levels of nav
 .bd-sidebar .nav > li > a {
   display: block;
-  padding: .25rem 1.5rem;
-  @include font-size(90%);
 }
 
 .bd-sidebar .nav > li > a:hover {
