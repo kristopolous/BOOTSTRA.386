@@ -310,7 +310,7 @@ $font-weight-bold:            400 !default;
 $font-weight-bolder:          400 !default;
 
 $font-weight-base:            $font-weight-normal !default;
-$line-height-base:            $font-size-base !default;
+$line-height-base:            $font-size-base * .764 !default;
 
 $h1-font-size:                $font-size-base !default;
 $h2-font-size:                $font-size-base !default;

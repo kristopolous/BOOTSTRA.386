@@ -9,6 +9,15 @@ toc: true
 
 ## Approach
 
+```
+A>dir
+A: ASM86
+A: ASSIGN
+A: ED
+A: HELP
+A>_
+```
+
 Reboot builds upon Normalize, providing many HTML elements with somewhat opinionated styles using only element selectors. Additional styling is done only with classes. For example, we reboot some `<table>` styles for a simpler baseline and later provide `.table`, `.table-bordered`, and more.
 
 Here are our guidelines and reasons for choosing what to override in Reboot:

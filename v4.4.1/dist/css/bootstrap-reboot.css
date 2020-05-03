@@ -22,7 +22,7 @@
 
 html {
   font-family: sans-serif;
-  line-height: 1.15;
+  line-height: 13.752px;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -36,7 +36,7 @@ body {
   font-family: DOS, Monaco, Menlo, Consolas, "Courier New", monospace;
   font-size: 14px;
   font-weight: 400;
-  line-height: 18px;
+  line-height: 13.752px;
   color: #bbb;
   text-align: left;
   background-color: #008;
