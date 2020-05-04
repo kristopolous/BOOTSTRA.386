@@ -843,9 +843,9 @@ $pagination-disabled-border-color:  $gray-300 !default;
 
 // Jumbotron
 
-$jumbotron-padding:                 2rem !default;
-$jumbotron-color:                   null !default;
-$jumbotron-bg:                      $gray-200 !default;
+$jumbotron-padding:                 ($line-height-base * 2) ($space-width * 2) !default;
+$jumbotron-color:                   $black !default;
+$jumbotron-bg:                      $grayLight !default;
 
 
 // Cards

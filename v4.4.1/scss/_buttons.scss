@@ -15,11 +15,9 @@
   cursor: if($enable-pointer-cursor-for-buttons, pointer, null);
   user-select: none;
   background-color: $grayLight;
-  border: $btn-border-width solid $black;
-  padding: ($line-height-base / 2 - .5) (1.5 * $space-width - .5);
-  box-shadow: 0 0 0 ($space-width / 2 - .5) $grayLight;
+
+  @include dos-border(0);
   filter: drop-shadow($line-height-base / 2 $space-width 0 $black);
-  margin-left: $space-width / 2 - .5;
   //@include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
   @include transition($btn-transition);
 

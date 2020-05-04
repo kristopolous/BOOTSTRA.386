@@ -2556,11 +2556,12 @@ textarea.form-control {
   user-select: none;
   background-color: #aaa;
   border: 1px solid #000;
-  padding: 6.4993px 10.8766px;
-  box-shadow: 0 0 0 3.2922px #aaa;
+  padding: 6.4993px 12.3766px;
+  box-shadow: 0 -4.2071px 0 2.7922px #aaa, 0 3.2071px 0 2.7922px #aaa, 0 0 0 2.7922px #aaa;
+  margin-left: 3.2922px;
+  margin-bottom: 13.9986px;
   -webkit-filter: drop-shadow(6.9993px 7.5844px 0 #000);
   filter: drop-shadow(6.9993px 7.5844px 0 #000);
-  margin-left: 3.2922px;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
@@ -5070,15 +5071,27 @@ a.badge-dark:focus, a.badge-dark.focus {
 }
 
 .jumbotron {
-  padding: 2rem 1rem;
-  margin-bottom: 2rem;
-  background-color: #555;
+  padding: 27.9972px 15.1688px;
+  margin-bottom: 27.9972px 15.1688px;
+  color: #000;
+  background-color: #aaa;
+  border: 1px solid #000;
+  padding: 20.4979px 12.3766px;
+  box-shadow: 0 -4.2071px 0 2.7922px #aaa, 0 3.2071px 0 2.7922px #aaa, 0 0 0 2.7922px #aaa;
+  margin-left: 3.2922px;
+  margin-bottom: 27.9972px;
 }
 
-@media (min-width: 576px) {
-  .jumbotron {
-    padding: 4rem 2rem;
-  }
+.jumbotron .display-4 {
+  text-indent: 0;
+  position: absolute;
+  padding: 0 10.3766px;
+  top: -6.9993px;
+  margin: 0;
+  left: 18.961px;
+  background: #aaa;
+  border-left: 3px double #000;
+  border-right: 3px double #000;
 }
 
 .jumbotron-fluid {
