@@ -140,12 +140,24 @@ address {
   line-height: inherit;
 }
 
+// a gnarly trick needs to be done here to get the bullets
+// to line up with the fake dos gride we're so anal about
+// preserving. Also this shit totally fucking moves when
+// zooming in and out. it's really frustrating.
 ol,
 ul,
 dl {
   margin-top: 0;
-  margin-left: $font-size-base;
+  margin-left: $space-width * 1.75;
+  padding-left: 0;
   margin-bottom: $line-height-base;
+}
+li {
+  padding-left: .25 * $space-width;
+}
+li:before {
+  font-size: 100px;
+  color: pink;
 }
 
 ol ol,

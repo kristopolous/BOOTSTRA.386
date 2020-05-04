@@ -28,10 +28,10 @@
 
 html {
   font-family: sans-serif;
-  line-height: 13.752px;
+  line-height: 13.9986px;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  line-height-step: 13.752px;
+  line-height-step: 13.9986px;
 }
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
@@ -43,7 +43,7 @@ body {
   font-family: DOS, Monaco, Menlo, Consolas, "Courier New", monospace;
   font-size: 14px;
   font-weight: 400;
-  line-height: 13.752px;
+  line-height: 13.9986px;
   color: #aaa;
   text-align: left;
   background-color: #00a;
@@ -61,12 +61,12 @@ hr {
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-  margin-bottom: 13.752px 8px/2;
+  margin-bottom: 13.9986px 8px/2;
 }
 
 p {
   margin-top: 0;
-  margin-bottom: 13.752px;
+  margin-bottom: 13.9986px;
 }
 
 abbr[title],
@@ -81,7 +81,7 @@ abbr[data-original-title] {
 }
 
 address {
-  margin-bottom: 13.752px;
+  margin-bottom: 13.9986px;
   font-style: normal;
   line-height: inherit;
 }
@@ -90,8 +90,18 @@ ol,
 ul,
 dl {
   margin-top: 0;
-  margin-left: 18px;
-  margin-bottom: 13.752px;
+  margin-left: 14px;
+  padding-left: 0;
+  margin-bottom: 13.9986px;
+}
+
+li {
+  padding-left: 2px;
+}
+
+li:before {
+  font-size: 100px;
+  color: pink;
 }
 
 ol ol,
@@ -106,12 +116,12 @@ dt {
 }
 
 dd {
-  margin-bottom: 13.752px;
+  margin-bottom: 13.9986px;
   margin-left: 0;
 }
 
 blockquote {
-  margin: 0 0 13.752px;
+  margin: 0 0 13.9986px;
 }
 
 b,
@@ -178,12 +188,12 @@ samp {
 
 pre {
   margin-top: 0;
-  margin-bottom: 13.752px;
+  margin-bottom: 13.9986px;
   overflow: auto;
 }
 
 figure {
-  margin: 0 0 13.752px;
+  margin: 0 0 13.9986px;
 }
 
 img {
@@ -217,7 +227,7 @@ th {
 
 label {
   display: inline-block;
-  margin-bottom: 13.752px;
+  margin-bottom: 13.9986px;
 }
 
 button {
@@ -306,7 +316,7 @@ legend {
   width: 100%;
   max-width: 100%;
   padding: 0;
-  margin-bottom: 13.752px;
+  margin-bottom: 13.9986px;
   font-size: 14px;
   line-height: inherit;
   color: inherit;

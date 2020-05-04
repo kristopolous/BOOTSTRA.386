@@ -148,8 +148,8 @@ $enable-validation-icons:                     true !default;
 $enable-deprecation-messages:                 true !default;
 
 
-$font-size-base:              18px !default; // Assumes the browser default, typically `16px`
-$line-height-base:            $font-size-base * .764 !default;
+$font-size-base:              18px !default; 
+$line-height-base:            $font-size-base * .7777 !default;
 
 $font-size-lg:                $font-size-base !default;
 $font-size-sm:                $font-size-base !default;
@@ -329,7 +329,7 @@ $headings-margin-bottom:      $spacer / 2 !default;
 $headings-font-family:        null !default;
 $headings-font-weight:        400 !default;
 $headings-line-height:        $line-height-base !default;
-$headings-color:              null !default;
+$headings-color:              $black !default;
 
 $display1-size:               $font-size-base !default;
 $display2-size:               $font-size-base !default;
@@ -415,7 +415,7 @@ $input-btn-font-family:       null !default;
 $input-btn-font-size:         $font-size-base !default;
 $input-btn-line-height:       $line-height-base !default;
 
-$input-btn-focus-width:       .2rem !default;
+$input-btn-focus-width:       0 !default;
 $input-btn-focus-color:       rgba($component-active-bg, .25) !default;
 $input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
 
