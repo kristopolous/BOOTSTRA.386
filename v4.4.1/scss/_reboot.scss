@@ -165,7 +165,7 @@ dd {
 }
 
 blockquote {
-  margin: 0 0 1rem;
+  margin: 0 0 $line-height-base;
 }
 
 b,
@@ -174,7 +174,7 @@ strong {
 }
 
 small {
-  @include font-size(80%); // Add the correct font size in all browsers
+  @include font-size(100%); // Add the correct font size in all browsers
 }
 
 //
@@ -247,7 +247,7 @@ pre {
   // Remove browser default top margin
   margin-top: 0;
   // Reset browser default of `1em` to use `rem`s
-  margin-bottom: 1rem;
+  margin-bottom: $line-height-base;
   // Don't allow content to break outside
   overflow: auto;
 }
@@ -259,7 +259,7 @@ pre {
 
 figure {
   // Apply a consistent margin strategy (matches our type styles).
-  margin: 0 0 1rem;
+  margin: 0 0 $line-height-base;
 }
 
 

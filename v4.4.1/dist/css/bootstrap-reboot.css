@@ -111,7 +111,7 @@ dd {
 }
 
 blockquote {
-  margin: 0 0 1rem;
+  margin: 0 0 13.752px;
 }
 
 b,
@@ -178,12 +178,12 @@ samp {
 
 pre {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 13.752px;
   overflow: auto;
 }
 
 figure {
-  margin: 0 0 1rem;
+  margin: 0 0 13.752px;
 }
 
 img {
