@@ -44,9 +44,9 @@ body {
   font-size: 14px;
   font-weight: 400;
   line-height: 13.752px;
-  color: #bbb;
+  color: #aaa;
   text-align: left;
-  background-color: #008;
+  background-color: #00a;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -61,7 +61,7 @@ hr {
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-  margin-bottom: 13.752px 16px/2;
+  margin-bottom: 13.752px 8px/2;
 }
 
 p {
@@ -204,7 +204,7 @@ table {
 caption {
   padding-top: 0;
   padding-bottom: 0;
-  color: #bbb;
+  color: #aaa;
   text-align: left;
   caption-side: bottom;
 }

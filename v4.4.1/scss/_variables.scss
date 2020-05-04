@@ -7,7 +7,7 @@
 
 $white:    #fff !default;
 $grayDark:  #555 !default;
-$grayLight: #bbb !default;
+$grayLight: #aaa !default;
 $gray-100: $grayDark !default;
 $gray-200: $grayDark !default;
 $gray-300: $grayDark !default;
@@ -17,7 +17,6 @@ $gray-600: $grayLight !default;
 $gray-700: $grayLight !default;
 $gray-800: $grayLight !default;
 $gray-900: $grayLight !default;
-$black:    #000 !default;
 
 $grays: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -47,31 +46,38 @@ $grays: map-merge(
 //    ^   ^ - these are essentially 88.
 //  ^ when that is triggered it goes to FF
 //
-$blue:    #008 !default;
-$blueDark:    #008 !default;
-$indigo:  #6610f2 !default;
-$purple:  #808 !default;
-$pink:    #f0f !default; // we'll use "magenta" here
-$red:     #800 !default;
-$orange:  #880 !default;
-$yellow:  #ff0 !default;
-$green:   #080 !default;
-$teal:    #088 !default;
-$cyan:    #0ff !default;
+// These values are lifted from
+// https://en.wikipedia.org/wiki/Enhanced_Graphics_Adapter
+// screw it, why think?
+
+$black:    #000 !default;
+$blue:     #00a !default;
+$green:    #0a0 !default;
+$cyan:     #0aa !default;
+$red:      #a00 !default;
+$magenta:  #a0a !default;
+$brown:    #a50 !default;
+$blueBright:  #55f !default;
+$greenBright: #5f5 !default;
+$cyanBright:  #5ff !default;
+$redBright:  #ff5 !default;
+$magentaBright: #f5f !default;
+$yellow: #ff5 !default;
+$pink: $magentaBright;
 
 $colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $colors: map-merge(
   (
     "blue":       $blue,
-    "indigo":     $indigo,
-    "purple":     $purple,
-    "pink":       $pink,
+    "indigo":     $blueBright,
+    "purple":     $magenta,
+    "pink":       $magentaBright,
     "red":        $red,
-    "orange":     $orange,
+    "orange":     $redBright,
     "yellow":     $yellow,
     "green":      $green,
-    "teal":       $teal,
+    "teal":       $cyan,
     "cyan":       $cyan,
     "white":      $white,
     "gray":       $gray-600,
@@ -84,7 +90,7 @@ $primary:       $blue !default;
 $secondary:     $gray-600 !default;
 $success:       $green !default;
 $info:          $cyan !default;
-$warning:       $yellow !default;
+$warning:       $brown !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
 $dark:          $gray-800 !default;
@@ -147,7 +153,7 @@ $line-height-base:            $font-size-base * .764 !default;
 
 $font-size-lg:                $font-size-base !default;
 $font-size-sm:                $font-size-base !default;
-$space-width:             16px !default;
+$space-width:             8px !default;
 // Spacing
 //
 // Control the default styling of most Bootstrap elements by modifying these
@@ -188,7 +194,7 @@ $sizes: map-merge(
 //
 // Settings for the `<body>` element.
 
-$body-bg:                   $blueDark !default;
+$body-bg:                   $blue !default;
 $body-color:                $grayLight !default;
 
 
@@ -938,19 +944,19 @@ $toast-header-border-color:         rgba(0, 0, 0, .05) !default;
 
 // Badges
 
-$badge-font-size:                   75% !default;
+$badge-font-size:                   100% !default;
 $badge-font-weight:                 $font-weight-bold !default;
-$badge-padding-y:                   .25em !default;
-$badge-padding-x:                   .4em !default;
+$badge-padding-y:                   0 !default;
+$badge-padding-x:                   $space-width !default;
 $badge-border-radius:               $border-radius !default;
 
 $badge-transition:                  $btn-transition !default;
 $badge-focus-width:                 $input-btn-focus-width !default;
 
-$badge-pill-padding-x:              .6em !default;
+$badge-pill-padding-x:              $space-width !default;
 // Use a higher than normal value to ensure completely rounded edges when
 // customizing padding or font-size on labels.
-$badge-pill-border-radius:          10rem !default;
+$badge-pill-border-radius:          0 !default;
 
 
 // Modals
@@ -1135,7 +1141,7 @@ $close-text-shadow:                 0 1px 0 $white !default;
 // Code
 
 $code-font-size:                    87.5% !default;
-$code-color:                        $pink !default;
+$code-color:                        $magentaBright !default;
 
 $kbd-padding-y:                     .2rem !default;
 $kbd-padding-x:                     .4rem !default;
