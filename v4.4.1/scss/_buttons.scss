@@ -8,15 +8,19 @@
   display: inline-block;
   font-family: $btn-font-family;
   font-weight: $btn-font-weight;
-  color: $body-color;
+  color: $black;
   text-align: center;
   white-space: $btn-white-space;
   vertical-align: middle;
   cursor: if($enable-pointer-cursor-for-buttons, pointer, null);
   user-select: none;
-  background-color: transparent;
-  border: $btn-border-width solid transparent;
-  @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
+  background-color: $grayLight;
+  border: $btn-border-width solid $black;
+  padding: ($line-height-base / 2 - .5) (1.5 * $space-width - .5);
+  box-shadow: 0 0 0 ($space-width / 2 - .5) $grayLight;
+  filter: drop-shadow($line-height-base / 2 $space-width 0 $black);
+  margin-left: $space-width / 2 - .5;
+  //@include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
   @include transition($btn-transition);
 
   @include hover() {
@@ -41,9 +45,6 @@
   &:not(:disabled):not(.disabled).active {
     @include box-shadow($btn-active-box-shadow);
 
-    &:focus {
-      @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
-    }
   }
 }
 
@@ -105,10 +106,11 @@ fieldset:disabled a.btn {
 //
 // Button Sizes
 //
-
+/*
 .btn-lg {
   @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
 }
+*/
 
 .btn-sm {
   @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
