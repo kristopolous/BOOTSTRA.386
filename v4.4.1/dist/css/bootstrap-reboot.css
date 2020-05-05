@@ -149,14 +149,14 @@ sup {
 }
 
 a {
-  color: #fff;
+  color: #ff5;
   text-decoration: none;
   background-color: transparent;
 }
 
 a:hover {
   color: #fff;
-  text-decoration: underline;
+  background-color: #a50;
 }
 
 em {

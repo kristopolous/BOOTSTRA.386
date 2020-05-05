@@ -179,14 +179,14 @@ sup {
 }
 
 a {
-  color: #fff;
+  color: #ff5;
   text-decoration: none;
   background-color: transparent;
 }
 
 a:hover {
   color: #fff;
-  text-decoration: underline;
+  background-color: #a50;
 }
 
 em {
@@ -3179,7 +3179,7 @@ fieldset:disabled a.btn {
 
 .btn-link {
   font-weight: 400;
-  color: #fff;
+  color: #ff5;
   text-decoration: none;
 }
 
@@ -4929,7 +4929,7 @@ input[type="button"].btn-block {
   padding: 0.5rem 0.75rem;
   margin-left: 0;
   line-height: 1.25;
-  color: #fff;
+  color: #ff5;
   background-color: #fff;
   border: 0 solid #555;
 }

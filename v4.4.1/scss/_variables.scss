@@ -202,9 +202,10 @@ $body-color:                $grayLight !default;
 //
 // Style anchor elements.
 
-$link-color:                              $white !default;
+$link-color:                              $yellow !default;
 $link-decoration:                         none !default;
 $link-hover-color:                        $white !default;
+$link-hover-background:                   $brown !default;
 $link-hover-decoration:                   underline !default;
 // Darken percentage for links with `.text-*` class (e.g. `.text-success`)
 $emphasized-link-hover-darken-percentage: 0% !default;
