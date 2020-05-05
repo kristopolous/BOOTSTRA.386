@@ -7,8 +7,8 @@
 .bd-toc {
   @supports (position: sticky) {
     position: sticky;
-    top: 4rem;
-    height: subtract(100vh, 4rem);
+    top: $line-height-base * 4;
+    height: subtract(100vh, $line-height-base * 4);
     overflow-y: auto;
   }
   order: 2;
@@ -16,7 +16,6 @@
 
 .section-nav {
   padding-left: 0;
-  border-left: 1px solid #eee;
 
 }
 
@@ -43,11 +42,9 @@
   @include media-breakpoint-up(md) {
     @supports (position: sticky) {
       position: sticky;
-      top: 4rem;
       z-index: 1000;
       height: subtract(100vh, 4rem);
     }
-    border-right: 1px solid rgba(0, 0, 0, .1);
   }
 
   @include media-breakpoint-up(xl) {
@@ -73,9 +70,6 @@
 .bd-search {
   position: relative; // To contain the Algolia search
 
-  .form-control:focus {
-    border-color: $bd-purple-bright;
-  }
 }
 
 .bd-search-docs-toggle {
