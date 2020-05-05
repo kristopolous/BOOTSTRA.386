@@ -741,10 +741,10 @@ $nav-divider-margin-y:              $spacer / 2 !default;
 
 // Navbar
 
-$navbar-padding-y:                  $spacer / 2 !default;
-$navbar-padding-x:                  $spacer !default;
+$navbar-padding-y:                  0 !default;
+$navbar-padding-x:                  $space-width !default;
 
-$navbar-nav-link-padding-x:         .5rem !default;
+$navbar-nav-link-padding-x:         $space-width !default;
 
 $navbar-brand-font-size:            $font-size-lg !default;
 // Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
@@ -758,14 +758,14 @@ $navbar-toggler-font-size:          $font-size-lg !default;
 $navbar-toggler-border-radius:      $btn-border-radius !default;
 
 $navbar-dark-color:                 rgba($white, .5) !default;
-$navbar-dark-hover-color:           rgba($white, .5) !default;
+$navbar-dark-hover-color:           $white !default;
 $navbar-dark-active-color:          $white !default;
 $navbar-dark-disabled-color:        rgba($white, .5) !default;
 $navbar-dark-toggler-icon-bg:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
 $navbar-dark-toggler-border-color:  rgba($white, .1) !default;
 
 $navbar-light-color:                rgba($black, .5) !default;
-$navbar-light-hover-color:          rgba($black, .5) !default;
+$navbar-light-hover-color:          $black !default;
 $navbar-light-active-color:         rgba($black, .5) !default;
 $navbar-light-disabled-color:       rgba($black, .5) !default;
 $navbar-light-toggler-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{$navbar-light-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
