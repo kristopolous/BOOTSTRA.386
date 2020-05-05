@@ -2558,17 +2558,19 @@ textarea.form-control {
   -webkit-filter: drop-shadow(6.9993px 7.5844px 0 #000);
   filter: drop-shadow(6.9993px 7.5844px 0 #000);
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  border: none;
+  /*
+  @include hover() {
+    color: $body-color;
+    text-decoration: none;
+  }
+  */
 }
 
 @media (prefers-reduced-motion: reduce) {
   .btn {
     transition: none;
   }
-}
-
-.btn:hover {
-  color: #aaa;
-  text-decoration: none;
 }
 
 .btn:focus, .btn.focus {
@@ -2598,7 +2600,6 @@ fieldset:disabled a.btn {
 
 .btn-primary:hover {
   color: #aaa;
-  background-color: #979797;
   border-color: #919191;
 }
 
@@ -2640,7 +2641,6 @@ fieldset:disabled a.btn {
 
 .btn-secondary:hover {
   color: #aaa;
-  background-color: #979797;
   border-color: #919191;
 }
 
@@ -2682,7 +2682,6 @@ fieldset:disabled a.btn {
 
 .btn-success:hover {
   color: #fff;
-  background-color: #008400;
   border-color: #007700;
 }
 
@@ -2724,7 +2723,6 @@ fieldset:disabled a.btn {
 
 .btn-info:hover {
   color: #fff;
-  background-color: #008484;
   border-color: #007777;
 }
 
@@ -2766,7 +2764,6 @@ fieldset:disabled a.btn {
 
 .btn-warning:hover {
   color: #fff;
-  background-color: #844200;
   border-color: #773c00;
 }
 
@@ -2808,7 +2805,6 @@ fieldset:disabled a.btn {
 
 .btn-danger:hover {
   color: #fff;
-  background-color: #840000;
   border-color: #770000;
 }
 
@@ -2850,7 +2846,6 @@ fieldset:disabled a.btn {
 
 .btn-light:hover {
   color: #aaa;
-  background-color: #979797;
   border-color: #919191;
 }
 
@@ -2892,7 +2887,6 @@ fieldset:disabled a.btn {
 
 .btn-dark:hover {
   color: #fff;
-  background-color: black;
   border-color: black;
 }
 
@@ -5336,7 +5330,6 @@ a.badge-dark:focus, a.badge-dark.focus {
 }
 
 .progress-bar-striped {
-  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-size: 1rem 1rem;
 }
 
