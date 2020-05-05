@@ -765,15 +765,16 @@ $navbar-dark-disabled-color:        rgba($white, .5) !default;
 $navbar-dark-toggler-icon-bg:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
 $navbar-dark-toggler-border-color:  rgba($white, .1) !default;
 
-$navbar-light-color:                rgba($black, .5) !default;
-$navbar-light-hover-color:          $black !default;
-$navbar-light-active-color:         rgba($black, .5) !default;
+$navbar-light-color:                $black !default;
+$navbar-light-hover-color:          $white !default;
+$navbar-light-active-color:         $grayLight !default;
+$navbar-light-active-background:    $black !default;
 $navbar-light-disabled-color:       rgba($black, .5) !default;
 $navbar-light-toggler-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{$navbar-light-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
 $navbar-light-toggler-border-color: rgba($black, .1) !default;
 
-$navbar-light-brand-color:                $navbar-light-active-color !default;
-$navbar-light-brand-hover-color:          $navbar-light-active-color !default;
+$navbar-light-brand-color:                $black !default;
+$navbar-light-brand-hover-color:          $black !default;
 $navbar-dark-brand-color:                 $white !default;
 $navbar-dark-brand-hover-color:           $white !default;
 
@@ -805,8 +806,8 @@ $dropdown-link-active-bg:           $component-active-bg !default;
 
 $dropdown-link-disabled-color:      $gray-600 !default;
 
-$dropdown-item-padding-y:           .25rem !default;
-$dropdown-item-padding-x:           1.5rem !default;
+$dropdown-item-padding-y:           0 !default;
+$dropdown-item-padding-x:           $space-width !default;
 
 $dropdown-header-color:             $gray-600 !default;
 
