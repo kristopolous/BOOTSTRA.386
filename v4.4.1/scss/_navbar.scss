@@ -132,8 +132,8 @@
 // or image file as needed.
 .navbar-toggler-icon {
   display: inline-block;
-  width: 1.5em;
-  height: 1.5em;
+  width: $space-width * 2;
+  height: $line-height-base;
   vertical-align: middle;
   content: "";
   background: no-repeat center center;
@@ -299,6 +299,7 @@
     .nav-link.show,
     .nav-link.active {
       color: $navbar-dark-active-color;
+      background: $navbar-dark-active-background;
     }
   }
 
@@ -315,6 +316,7 @@
     color: $navbar-dark-color;
     a {
       color: $navbar-dark-active-color;
+      background: $navbar-dark-active-background;
 
       @include hover-focus() {
         color: $navbar-dark-active-color;

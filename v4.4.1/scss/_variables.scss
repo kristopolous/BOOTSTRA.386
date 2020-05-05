@@ -92,8 +92,8 @@ $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $brown !default;
 $danger:        $red !default;
-$light:         $gray-100 !default;
-$dark:          $gray-800 !default;
+$light:         $gray-800 !default;
+$dark:          $black !default;
 
 $theme-colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -750,7 +750,7 @@ $navbar-brand-font-size:            $font-size-lg !default;
 // Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
 $nav-link-height:                   $font-size-base !default;
 $navbar-brand-height:               $line-height-base !default;
-$navbar-brand-padding-y:            ($nav-link-height - $navbar-brand-height) / 2 !default;
+$navbar-brand-padding-y:            0 !default;
 
 $navbar-toggler-padding-y:          0 !default;
 $navbar-toggler-padding-x:          0 !default;
@@ -759,7 +759,8 @@ $navbar-toggler-border-radius:      $btn-border-radius !default;
 
 $navbar-dark-color:                 rgba($white, .5) !default;
 $navbar-dark-hover-color:           $white !default;
-$navbar-dark-active-color:          $white !default;
+$navbar-dark-active-color:          $black !default;
+$navbar-dark-active-background:     $grayLight !default;
 $navbar-dark-disabled-color:        rgba($white, .5) !default;
 $navbar-dark-toggler-icon-bg:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
 $navbar-dark-toggler-border-color:  rgba($white, .1) !default;
@@ -773,8 +774,8 @@ $navbar-light-toggler-border-color: rgba($black, .1) !default;
 
 $navbar-light-brand-color:                $navbar-light-active-color !default;
 $navbar-light-brand-hover-color:          $navbar-light-active-color !default;
-$navbar-dark-brand-color:                 $navbar-dark-active-color !default;
-$navbar-dark-brand-hover-color:           $navbar-dark-active-color !default;
+$navbar-dark-brand-color:                 $white !default;
+$navbar-dark-brand-hover-color:           $white !default;
 
 
 // Dropdowns
