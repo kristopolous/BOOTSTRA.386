@@ -16,7 +16,6 @@
   user-select: none;
   background-color: $grayLight;
 
-  @include dos-border(0);
   filter: drop-shadow($line-height-base / 2 $space-width 0 $black);
   //@include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
   @include transition($btn-transition);

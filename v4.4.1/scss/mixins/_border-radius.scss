@@ -1,14 +1,14 @@
 // stylelint-disable property-blacklist
 // Single side border-radius
 
-@mixin dos-border($extra) {
+@mixin dos-border($extra, $color) {
   border: $btn-border-width solid $black;
   padding: $extra + ($line-height-base / 2 - .5) (1.5 * $space-width + 1);
   // this kind of crazy hackery is why this thing has like 6,000 stars...
   box-shadow: 
-    0 (-$line-height-base / 2 + ($space-width / 2 - 1)) 0 ($space-width / 2 - 1) $grayLight,
-    0 ($line-height-base / 2 - ($space-width / 2)) 0 ($space-width / 2 - 1) $grayLight,
-    0   0   0 ($space-width / 2 - 1) $grayLight;
+    0 (-$line-height-base / 2 + ($space-width / 2 - 1)) 0 ($space-width / 2 - 1) $color,
+    0 ($line-height-base / 2 - ($space-width / 2)) 0 ($space-width / 2 - 1) $color,
+    0   0   0 ($space-width / 2 - 1) $color;
   margin-left: $space-width / 2 - .5;
   margin-bottom: $extra + $line-height-base;
 }
