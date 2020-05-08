@@ -205,6 +205,7 @@ $body-color:                $grayLight !default;
 $link-color:                              $yellow !default;
 $link-decoration:                         none !default;
 $link-hover-color:                        $white !default;
+$link-focus-background:                   $black !default;
 $link-hover-background:                   $brown !default;
 $link-hover-decoration:                   underline !default;
 // Darken percentage for links with `.text-*` class (e.g. `.text-success`)
@@ -326,7 +327,7 @@ $h4-font-size:                $font-size-base !default;
 $h5-font-size:                $font-size-base !default;
 $h6-font-size:                $font-size-base !default;
 
-$headings-margin-bottom:      $spacer / 2 !default;
+$headings-margin-bottom:      $line-height-base !default;
 $headings-font-family:        null !default;
 $headings-font-weight:        400 !default;
 $headings-line-height:        $line-height-base !default;
@@ -368,7 +369,7 @@ $list-inline-padding:         0 !default;
 
 $mark-bg:                     #fcf8e3 !default;
 
-$hr-margin-y:                 $spacer !default;
+$hr-margin-y:                 $line-height-base !default;
 
 
 // Tables
@@ -737,7 +738,7 @@ $nav-pills-link-active-color:       $component-active-color !default;
 $nav-pills-link-active-bg:          $component-active-bg !default;
 
 $nav-divider-color:                 $gray-200 !default;
-$nav-divider-margin-y:              $spacer / 2 !default;
+$nav-divider-margin-y:              $line-height-base !default;
 
 
 // Navbar

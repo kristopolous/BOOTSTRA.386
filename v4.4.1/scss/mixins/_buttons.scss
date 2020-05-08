@@ -7,25 +7,18 @@
   color: $black;
   background-color: $background;
   border-color: $black;
-  @include box-shadow($btn-box-shadow);
+  //@include box-shadow($btn-box-shadow);
   @include dos-border(0, $background);
 
   @include hover() {
-    color: color-yiq($hover-background);
-    border-color: $hover-border;
+    color: $white;
+    border-color: $white;
   }
 
   &:focus,
   &.focus {
-    color: color-yiq($hover-background);
-    @include gradient-bg($hover-background);
-    border-color: $hover-border;
-    // Avoid using mixin so we can pass custom focus shadow properly
-    @if $enable-shadows {
-      box-shadow: $btn-box-shadow, 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), .5);
-    } @else {
-      box-shadow: 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), .5);
-    }
+    color: $white;
+    border-color: $white;
   }
 
   // Disabled comes first so active can properly restyle
@@ -48,16 +41,7 @@
     @if $enable-gradients {
       background-image: none; // Remove the gradient for the pressed/active state
     }
-    border-color: $active-border;
 
-    &:focus {
-      // Avoid using mixin so we can pass custom focus shadow properly
-      @if $enable-shadows and $btn-active-box-shadow != none {
-        box-shadow: $btn-active-box-shadow, 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), .5);
-      } @else {
-        box-shadow: 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), .5);
-      }
-    }
   }
 }
 

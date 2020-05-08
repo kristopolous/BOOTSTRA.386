@@ -18,12 +18,12 @@
 
   filter: drop-shadow($line-height-base / 2 $space-width 0 $black);
   //@include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
-  @include transition($btn-transition);
+  //@include transition($btn-transition);
   border: none;
 
   /*
   @include hover() {
-    color: $body-color;
+    background-color: $link-hover-background;
     text-decoration: none;
   }
   */
@@ -31,21 +31,8 @@
   &:focus,
   &.focus {
     outline: 0;
-    box-shadow: $btn-focus-box-shadow;
   }
 
-  // Disabled comes first so active can properly restyle
-  &.disabled,
-  &:disabled {
-    opacity: $btn-disabled-opacity;
-    @include box-shadow(none);
-  }
-
-  &:not(:disabled):not(.disabled):active,
-  &:not(:disabled):not(.disabled).active {
-    @include box-shadow($btn-active-box-shadow);
-
-  }
 }
 
 // Future-proof disabling of clicks on `<a>` elements
@@ -89,8 +76,7 @@ fieldset:disabled a.btn {
 
   &:focus,
   &.focus {
-    text-decoration: $link-hover-decoration;
-    box-shadow: none;
+    background-color: $link-hover-background;
   }
 
   &:disabled,
