@@ -12,17 +12,12 @@
   td {
     padding: $table-cell-padding;
     vertical-align: top;
-    border-top: $table-border-width solid $table-border-color;
   }
 
   thead th {
     vertical-align: bottom;
-    border-bottom: (2 * $table-border-width) solid $table-border-color;
   }
 
-  tbody + tbody {
-    border-top: (2 * $table-border-width) solid $table-border-color;
-  }
 }
 
 
@@ -45,10 +40,6 @@
 .table-bordered {
   border: $table-border-width solid $table-border-color;
 
-  th,
-  td {
-    border: $table-border-width solid $table-border-color;
-  }
 
   thead {
     th,
@@ -151,7 +142,6 @@
     tbody tr {
       @include hover() {
         color: $table-dark-hover-color;
-        background-color: $table-dark-hover-bg;
       }
     }
   }

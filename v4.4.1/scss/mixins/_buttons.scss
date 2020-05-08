@@ -5,10 +5,9 @@
 
 @mixin button-variant($background, $border, $hover-background: darken($background, 7.5%), $hover-border: darken($border, 10%), $active-background: darken($background, 10%), $active-border: darken($border, 12.5%)) {
   color: $black;
-  background-color: $background;
   border-color: $black;
   //@include box-shadow($btn-box-shadow);
-  @include dos-border(0, $background);
+  //@include dos-border(0, $background);
 
   @include hover() {
     color: $white;

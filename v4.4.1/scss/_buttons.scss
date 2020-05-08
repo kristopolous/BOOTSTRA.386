@@ -16,7 +16,6 @@
   user-select: none;
   background-color: $grayLight;
 
-  filter: drop-shadow($line-height-base / 2 $space-width 0 $black);
   //@include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
   //@include transition($btn-transition);
   border: none;
@@ -49,7 +48,15 @@ fieldset:disabled a.btn {
 @each $color, $value in $theme-colors {
   .btn-#{$color} {
     @include button-variant($value, $value);
+    @include dos-basic-border(0, $value);
+    &.btn-lg {
+      background-color: $color;
+      @include dos-solid-border(0, $value);
+      filter: drop-shadow($line-height-base / 2 $space-width 0 $black);
+      //@include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
+    }
   }
+
 }
 
 @each $color, $value in $theme-colors {
@@ -92,11 +99,9 @@ fieldset:disabled a.btn {
 //
 // Button Sizes
 //
-/*
 .btn-lg {
-  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
+  //@include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
 }
-*/
 
 // instead of btn-sm just being btn with less padding, we do a completely separate style
 // to get it into a single line

@@ -381,9 +381,9 @@ $table-cell-padding-sm:       0 !default;
 
 $table-color:                 $body-color !default;
 $table-bg:                    null !default;
-$table-accent-bg:             inherit !default;
+$table-accent-bg:             $black !default;
 $table-hover-color:           $table-color !default;
-$table-hover-bg:              rgba($black, .075) !default;
+$table-hover-bg:              $black !default;
 $table-active-bg:             $table-hover-bg !default;
 
 $table-border-width:          $border-width !default;
@@ -394,10 +394,10 @@ $table-head-color:            $gray-700 !default;
 
 $table-dark-color:            $white !default;
 $table-dark-bg:               $gray-800 !default;
-$table-dark-accent-bg:        rgba($white, .05) !default;
+$table-dark-accent-bg:        $black !default;
 $table-dark-hover-color:      $table-dark-color !default;
-$table-dark-hover-bg:         rgba($white, .075) !default;
-$table-dark-border-color:     lighten($table-dark-bg, 7.5%) !default;
+$table-dark-hover-bg:         $black !default;
+$table-dark-border-color:     $black !default;
 
 $table-striped-order:         odd !default;
 

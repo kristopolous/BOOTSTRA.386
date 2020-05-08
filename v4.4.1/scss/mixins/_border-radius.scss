@@ -1,9 +1,13 @@
 // stylelint-disable property-blacklist
 // Single side border-radius
 
-@mixin dos-border($extra, $color) {
+@mixin dos-basic-border($extra, $color) {
   border: $btn-border-width solid $black;
   padding: $extra + ($line-height-base / 2 - .5) (1.5 * $space-width + 1);
+}
+
+@mixin dos-solid-border($extra, $color) {
+  @include dos-basic-border($extra, $color);
   // this kind of crazy hackery is why this thing has like 6,000 stars...
   box-shadow: 
     0 (-$line-height-base / 2 + ($space-width / 2 - 1)) 0 ($space-width / 2 - 1) $color,
