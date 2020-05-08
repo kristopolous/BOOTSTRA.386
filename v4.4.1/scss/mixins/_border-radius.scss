@@ -12,6 +12,14 @@
   margin-left: $space-width / 2 - .5;
   margin-bottom: $extra + $line-height-base;
 }
+@mixin dos-border-off() {
+  border: 0;
+  box-shadow: 0;
+  padding: 0;
+  margin-left: 0;
+  margin-bottom: 0;
+}
+
 
 @mixin border-radius($radius: $border-radius, $fallback-border-radius: false) {
   @if $enable-rounded {

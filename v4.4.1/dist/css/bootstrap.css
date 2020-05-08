@@ -244,7 +244,7 @@ table {
 caption {
   padding-top: 0;
   padding-bottom: 0;
-  color: #aaa;
+  color: #555;
   text-align: left;
   caption-side: bottom;
 }
@@ -393,8 +393,8 @@ template {
   display: none !important;
 }
 
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
+h1, h2, h3, h4,
+.h1, .h2, .h3, .h4 {
   margin-bottom: 13.9986px;
   font-weight: 400;
   line-height: 13.9986px;
@@ -402,6 +402,64 @@ h1, h2, h3, h4, h5, h6,
   background: #0aa;
   padding: 13.9986px 7.5844px;
   color: #000;
+}
+
+h4, .h4 {
+  padding: 0 7.5844px;
+}
+
+h5, h6,
+.h5, .h6 {
+  margin: 0;
+  background: transparent;
+  padding: 0;
+  color: white;
+  text-indent: 0;
+}
+
+h5, .h5 {
+  -webkit-animation: blinkingText 1.2s infinite;
+  animation: blinkingText 1.2s infinite;
+}
+
+@-webkit-keyframes blinkingText {
+  1% {
+    visibility: hidden;
+  }
+  49% {
+    visibility: hidden;
+  }
+  60% {
+    visibility: visible;
+  }
+  99% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+
+@keyframes blinkingText {
+  1% {
+    visibility: hidden;
+  }
+  49% {
+    visibility: hidden;
+  }
+  60% {
+    visibility: visible;
+  }
+  99% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+
+h6:after, h6:before, .h6:after, .h6:before {
+  content: "°º¤ø,¸¸,ø¤º°`";
 }
 
 h1, .h1 {
@@ -2251,7 +2309,7 @@ textarea.form-control {
 
 .form-check-input[disabled] ~ .form-check-label,
 .form-check-input:disabled ~ .form-check-label {
-  color: #aaa;
+  color: #555;
 }
 
 .form-check-label {
@@ -9812,7 +9870,7 @@ button.bg-dark:focus {
 }
 
 .text-muted {
-  color: #aaa !important;
+  color: #555 !important;
 }
 
 .text-black-50 {

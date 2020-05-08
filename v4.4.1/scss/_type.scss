@@ -4,8 +4,8 @@
 // Headings
 //
 
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
+h1, h2, h3, h4,
+.h1, .h2, .h3, .h4 {
   margin-bottom: $headings-margin-bottom;
   font-family: $headings-font-family;
   font-weight: $headings-font-weight;
@@ -15,6 +15,36 @@ h1, h2, h3, h4, h5, h6,
   padding: $line-height-base $space-width;
   color: $headings-color;
 }
+h4, .h4 {
+  padding: 0 $space-width;
+}
+
+h5, h6,
+.h5, .h6 {
+  margin: 0;
+  background: transparent;
+  padding: 0;
+  color: white;
+  text-indent: 0;
+}
+
+h5, .h5 {
+  animation:blinkingText 1.2s infinite;
+}
+@keyframes blinkingText{
+    1%{    visibility: hidden;  }
+    49%{    visibility: hidden;  }
+    60%{    visibility: visible; }
+    99%{    visibility: visible;  }
+    100%{    visibility: hidden;  }
+}
+
+h6, .h6 {
+
+  &:after, &:before {
+    content: "°º¤ø,¸¸,ø¤º°`";
+  }
+};
 
 h1, .h1 { @include font-size($h1-font-size); }
 h2, .h2 { @include font-size($h2-font-size); }
