@@ -2964,6 +2964,7 @@ fieldset:disabled a.btn {
 .btn-outline-primary {
   color: #fff;
   border-color: #aaa;
+  background: transparent;
 }
 
 .btn-outline-primary:hover {
@@ -2992,6 +2993,7 @@ fieldset:disabled a.btn {
 .btn-outline-secondary {
   color: #fff;
   border-color: #aaa;
+  background: transparent;
 }
 
 .btn-outline-secondary:hover {
@@ -3020,6 +3022,7 @@ fieldset:disabled a.btn {
 .btn-outline-success {
   color: #5f5;
   border-color: #0a0;
+  background: transparent;
 }
 
 .btn-outline-success:hover {
@@ -3048,6 +3051,7 @@ fieldset:disabled a.btn {
 .btn-outline-info {
   color: #5ff;
   border-color: #0aa;
+  background: transparent;
 }
 
 .btn-outline-info:hover {
@@ -3076,6 +3080,7 @@ fieldset:disabled a.btn {
 .btn-outline-warning {
   color: #ff5;
   border-color: #a50;
+  background: transparent;
 }
 
 .btn-outline-warning:hover {
@@ -3104,6 +3109,7 @@ fieldset:disabled a.btn {
 .btn-outline-danger {
   color: #f55;
   border-color: #a00;
+  background: transparent;
 }
 
 .btn-outline-danger:hover {
@@ -3132,6 +3138,7 @@ fieldset:disabled a.btn {
 .btn-outline-light {
   color: #fff;
   border-color: #aaa;
+  background: transparent;
 }
 
 .btn-outline-light:hover {
@@ -3160,6 +3167,7 @@ fieldset:disabled a.btn {
 .btn-outline-dark {
   color: #555;
   border-color: #000;
+  background: transparent;
 }
 
 .btn-outline-dark:hover {
