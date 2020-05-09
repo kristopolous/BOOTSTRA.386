@@ -23,13 +23,9 @@
   // Disabled comes first so active can properly restyle
   &.disabled,
   &:disabled {
-    color: color-yiq($background);
-    background-color: $background;
+    color: $grayDark;
+    background-color: $grayLight;
     border-color: $border;
-    // Remove CSS gradients if they're enabled
-    @if $enable-gradients {
-      background-image: none;
-    }
   }
 
   &:not(:disabled):not(.disabled):active,
@@ -45,18 +41,13 @@
 }
 
 @mixin button-outline-variant($color, $color-hover: color-yiq($color), $active-background: $color, $active-border: $color) {
-  color: $color;
+  color: brighten($color);
   border-color: $color;
 
   @include hover() {
-    color: $color-hover;
+    color: $white;
     background-color: $active-background;
     border-color: $active-border;
-  }
-
-  &:focus,
-  &.focus {
-    box-shadow: 0 0 0 $btn-focus-width rgba($color, .5);
   }
 
   &.disabled,

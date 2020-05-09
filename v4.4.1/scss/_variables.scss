@@ -60,10 +60,22 @@ $brown:    #a50 !default;
 $blueBright:  #55f !default;
 $greenBright: #5f5 !default;
 $cyanBright:  #5ff !default;
-$redBright:  #ff5 !default;
+$redBright:  #f55 !default;
 $magentaBright: #f5f !default;
 $yellow: #ff5 !default;
 $pink: $magentaBright;
+
+$brightMap: (
+  $black: $grayDark,
+  $grayDark: $grayLight,
+  $grayLight: $white,
+  $blue: $blueBright,
+  $green: $greenBright,
+  $cyan: $cyanBright,
+  $red: $redBright,
+  $magenta: $magentaBright,
+  $brown: $yellow
+);
 
 $colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -462,11 +474,11 @@ $btn-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($b
 $btn-focus-width:             $input-btn-focus-width !default;
 $btn-focus-box-shadow:        $input-btn-focus-box-shadow !default;
 $btn-disabled-opacity:        1 !default;
-$btn-active-box-shadow:       inset 0 3px 5px rgba($black, .125) !default;
+$btn-active-box-shadow:       0 !default;
 
-$btn-link-disabled-color:     $gray-600 !default;
+$btn-link-disabled-color:     $grayDark !default;
 
-$btn-block-spacing-y:         .5rem !default;
+$btn-block-spacing-y:         0 !default;
 
 // Allows for customizing button radius independently from global border radius
 $btn-border-radius:           $border-radius !default;
@@ -503,7 +515,7 @@ $input-disabled-bg:                     $gray-200 !default;
 $input-color:                           $black !default;
 $input-border-color:                    $gray-400 !default;
 $input-border-width:                    $input-btn-border-width !default;
-$input-box-shadow:                      inset 0 1px 1px rgba($black, .075) !default;
+$input-box-shadow:                      0 !default;
 
 $input-border-radius:                   $border-radius !default;
 $input-border-radius-lg:                $border-radius-lg !default;
