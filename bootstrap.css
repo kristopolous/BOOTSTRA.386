@@ -101,9 +101,7 @@ p {
 
 abbr[title],
 abbr[data-original-title] {
-  text-decoration: underline;
-  -webkit-text-decoration: underline dotted;
-  text-decoration: underline dotted;
+  text-decoration: none;
   cursor: help;
   border-bottom: 0;
   -webkit-text-decoration-skip-ink: none;
@@ -3227,7 +3225,7 @@ fieldset:disabled a.btn {
 
 .btn-link:hover {
   color: #fff;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .btn-link:focus, .btn-link.focus {
@@ -9887,7 +9885,7 @@ button.bg-dark:focus {
 }
 
 .font-italic {
-  font-style: italic !important;
+  font-style: normal !important;
 }
 
 .text-white {
