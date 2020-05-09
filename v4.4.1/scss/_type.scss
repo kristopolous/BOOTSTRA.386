@@ -4,8 +4,8 @@
 // Headings
 //
 
-h1, h2, h3, h4,
-.h1, .h2, .h3, .h4 {
+h1, h2, h3,
+.h1, .h2, .h3 {
   margin-bottom: $headings-margin-bottom;
   font-family: $headings-font-family;
   font-weight: $headings-font-weight;
@@ -15,8 +15,12 @@ h1, h2, h3, h4,
   padding: $line-height-base $space-width;
   color: $headings-color;
 }
-h4, .h4 {
+h3, .h3 {
   padding: 0 $space-width;
+}
+h4, .h4 {
+  color: $white;
+  @include dos-basic-border(0, $white);
 }
 
 h5, h6,
