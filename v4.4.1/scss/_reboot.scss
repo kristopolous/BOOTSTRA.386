@@ -127,8 +127,7 @@ p {
 
 abbr[title],
 abbr[data-original-title] { // 1
-  text-decoration: underline; // 2
-  text-decoration: underline dotted; // 2
+  text-decoration: none; // 2
   cursor: help; // 3
   border-bottom: 0; // 4
   text-decoration-skip-ink: none; // 5
