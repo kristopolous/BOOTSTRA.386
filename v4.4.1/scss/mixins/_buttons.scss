@@ -42,9 +42,10 @@
 
 @mixin button-outline-variant($color, $color-hover: color-yiq($color), $active-background: $color, $active-border: $color) {
   color: brighten($color);
-  border-color: $color;
+  border-color: brighten($color);
   background: transparent;
 
+  @include dos-basic-border(brighten($color));
   @include hover() {
     color: $white;
     background-color: $active-background;

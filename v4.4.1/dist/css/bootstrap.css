@@ -408,10 +408,10 @@ h3, .h3 {
 
 h4, .h4 {
   color: #fff;
-  border: 1px solid #fff;
-  padding: 6.4993px 12.3766px;
+  border: 1px solid 0;
+  padding: white 12.3766px;
   margin-left: 3.2922px;
-  margin-bottom: 13.9986px;
+  margin-bottom: white;
 }
 
 h5, h6,
@@ -2628,10 +2628,10 @@ fieldset:disabled a.btn {
 .btn-primary {
   color: #000;
   border-color: #000;
-  border: 1px solid #aaa;
-  padding: 6.4993px 12.3766px;
+  border: 1px solid 0;
+  padding: #b0b0b0 12.3766px;
   margin-left: 3.2922px;
-  margin-bottom: 13.9986px;
+  margin-bottom: #b8b8b8;
 }
 
 .btn-primary:hover {
@@ -2670,10 +2670,10 @@ fieldset:disabled a.btn {
 .btn-secondary {
   color: #000;
   border-color: #000;
-  border: 1px solid #aaa;
-  padding: 6.4993px 12.3766px;
+  border: 1px solid 0;
+  padding: #b0b0b0 12.3766px;
   margin-left: 3.2922px;
-  margin-bottom: 13.9986px;
+  margin-bottom: #b8b8b8;
 }
 
 .btn-secondary:hover {
@@ -2712,10 +2712,10 @@ fieldset:disabled a.btn {
 .btn-success {
   color: #000;
   border-color: #000;
-  border: 1px solid #0a0;
-  padding: 6.4993px 12.3766px;
+  border: 1px solid 0;
+  padding: #06b006 12.3766px;
   margin-left: 3.2922px;
-  margin-bottom: 13.9986px;
+  margin-bottom: #0eb80e;
 }
 
 .btn-success:hover {
@@ -2754,10 +2754,10 @@ fieldset:disabled a.btn {
 .btn-info {
   color: #000;
   border-color: #000;
-  border: 1px solid #0aa;
-  padding: 6.4993px 12.3766px;
+  border: 1px solid 0;
+  padding: #06b0b0 12.3766px;
   margin-left: 3.2922px;
-  margin-bottom: 13.9986px;
+  margin-bottom: #0eb8b8;
 }
 
 .btn-info:hover {
@@ -2796,10 +2796,10 @@ fieldset:disabled a.btn {
 .btn-warning {
   color: #000;
   border-color: #000;
-  border: 1px solid #a50;
-  padding: 6.4993px 12.3766px;
+  border: 1px solid 0;
+  padding: #b05b06 12.3766px;
   margin-left: 3.2922px;
-  margin-bottom: 13.9986px;
+  margin-bottom: #b8630e;
 }
 
 .btn-warning:hover {
@@ -2838,10 +2838,10 @@ fieldset:disabled a.btn {
 .btn-danger {
   color: #000;
   border-color: #000;
-  border: 1px solid #a00;
-  padding: 6.4993px 12.3766px;
+  border: 1px solid 0;
+  padding: #b00606 12.3766px;
   margin-left: 3.2922px;
-  margin-bottom: 13.9986px;
+  margin-bottom: #b80e0e;
 }
 
 .btn-danger:hover {
@@ -2880,10 +2880,10 @@ fieldset:disabled a.btn {
 .btn-light {
   color: #000;
   border-color: #000;
-  border: 1px solid #aaa;
-  padding: 6.4993px 12.3766px;
+  border: 1px solid 0;
+  padding: #b0b0b0 12.3766px;
   margin-left: 3.2922px;
-  margin-bottom: 13.9986px;
+  margin-bottom: #b8b8b8;
 }
 
 .btn-light:hover {
@@ -2922,10 +2922,10 @@ fieldset:disabled a.btn {
 .btn-dark {
   color: #000;
   border-color: #000;
-  border: 1px solid #000;
-  padding: 6.4993px 12.3766px;
+  border: 1px solid 0;
+  padding: #060606 12.3766px;
   margin-left: 3.2922px;
-  margin-bottom: 13.9986px;
+  margin-bottom: #0e0e0e;
 }
 
 .btn-dark:hover {
@@ -2963,8 +2963,12 @@ fieldset:disabled a.btn {
 
 .btn-outline-primary {
   color: #fff;
-  border-color: #aaa;
+  border-color: #fff;
   background: transparent;
+  border: 1px solid #fff;
+  padding: 6.4993px 12.3766px;
+  margin-left: 3.2922px;
+  margin-bottom: 13.9986px;
 }
 
 .btn-outline-primary:hover {
@@ -2992,8 +2996,12 @@ fieldset:disabled a.btn {
 
 .btn-outline-secondary {
   color: #fff;
-  border-color: #aaa;
+  border-color: #fff;
   background: transparent;
+  border: 1px solid #fff;
+  padding: 6.4993px 12.3766px;
+  margin-left: 3.2922px;
+  margin-bottom: 13.9986px;
 }
 
 .btn-outline-secondary:hover {
@@ -3021,8 +3029,12 @@ fieldset:disabled a.btn {
 
 .btn-outline-success {
   color: #5f5;
-  border-color: #0a0;
+  border-color: #5f5;
   background: transparent;
+  border: 1px solid #5f5;
+  padding: 6.4993px 12.3766px;
+  margin-left: 3.2922px;
+  margin-bottom: 13.9986px;
 }
 
 .btn-outline-success:hover {
@@ -3050,8 +3062,12 @@ fieldset:disabled a.btn {
 
 .btn-outline-info {
   color: #5ff;
-  border-color: #0aa;
+  border-color: #5ff;
   background: transparent;
+  border: 1px solid #5ff;
+  padding: 6.4993px 12.3766px;
+  margin-left: 3.2922px;
+  margin-bottom: 13.9986px;
 }
 
 .btn-outline-info:hover {
@@ -3079,8 +3095,12 @@ fieldset:disabled a.btn {
 
 .btn-outline-warning {
   color: #ff5;
-  border-color: #a50;
+  border-color: #ff5;
   background: transparent;
+  border: 1px solid #ff5;
+  padding: 6.4993px 12.3766px;
+  margin-left: 3.2922px;
+  margin-bottom: 13.9986px;
 }
 
 .btn-outline-warning:hover {
@@ -3108,8 +3128,12 @@ fieldset:disabled a.btn {
 
 .btn-outline-danger {
   color: #f55;
-  border-color: #a00;
+  border-color: #f55;
   background: transparent;
+  border: 1px solid #f55;
+  padding: 6.4993px 12.3766px;
+  margin-left: 3.2922px;
+  margin-bottom: 13.9986px;
 }
 
 .btn-outline-danger:hover {
@@ -3137,8 +3161,12 @@ fieldset:disabled a.btn {
 
 .btn-outline-light {
   color: #fff;
-  border-color: #aaa;
+  border-color: #fff;
   background: transparent;
+  border: 1px solid #fff;
+  padding: 6.4993px 12.3766px;
+  margin-left: 3.2922px;
+  margin-bottom: 13.9986px;
 }
 
 .btn-outline-light:hover {
@@ -3166,8 +3194,12 @@ fieldset:disabled a.btn {
 
 .btn-outline-dark {
   color: #555;
-  border-color: #000;
+  border-color: #555;
   background: transparent;
+  border: 1px solid #555;
+  padding: 6.4993px 12.3766px;
+  margin-left: 3.2922px;
+  margin-bottom: 13.9986px;
 }
 
 .btn-outline-dark:hover {
@@ -5135,9 +5167,9 @@ a.badge-dark:focus, a.badge-dark.focus {
   color: #000;
   background-color: #aaa;
   border: 1px solid #000;
-  padding: 20.4979px 12.3766px;
+  padding: 6.4993px 12.3766px;
   margin-left: 3.2922px;
-  margin-bottom: 27.9972px;
+  margin-bottom: 13.9986px;
   box-shadow: 0 -4.2071px 0 2.7922px #aaa, 0 3.2071px 0 2.7922px #aaa, 0 0 0 2.7922px #aaa;
 }
 

@@ -3,7 +3,7 @@
   margin-bottom: $jumbotron-padding;
   color: $jumbotron-color;
   background-color: $jumbotron-bg;
-  @include dos-solid-border($line-height-base, $grayLight);
+  @include dos-solid-border($grayLight, $line-height-base);
 
   // this is a crazy hack ... hopefully people will enjoy it.
   .display-4 {

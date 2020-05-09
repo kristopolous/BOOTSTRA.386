@@ -51,7 +51,7 @@ fieldset:disabled a.btn {
     @include dos-basic-border(0, $value);
     &.btn-lg {
       background-color: $color;
-      @include dos-solid-border(0, $value);
+      @include dos-solid-border($value);
       filter: drop-shadow($line-height-base / 2 $space-width 0 $black);
       //@include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
     }
