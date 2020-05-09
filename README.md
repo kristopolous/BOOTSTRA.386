@@ -2,7 +2,7 @@
 
 ### Download the [latest zip file](https://github.com/kristopolous/BOOTSTRA.386/blob/master/bootstra.386-latest-v3.zip?raw=true) with all the necessary JS and CSS to get started right away.
 
-Bootstrap/386 is a Twitter bootstrap v2/<s>v3</s> (v4 [coming soon](http://kristopolous.github.io/BOOTSTRA.386/demo.html)) theme to make webpages look like they are from the 1980s. 
+Bootstrap/386 is a Twitter bootstrap v2/<s>v3</s><sup>1</sup> (v4 [coming soon](http://kristopolous.github.io/BOOTSTRA.386/demo.html)) theme to make webpages look like they are from the 1980s. 
 
 <a href=http://i.imgur.com/chWpJfb.jpg><img src=http://i.imgur.com/chWpJfbl.jpg></a>
 <pre>
@@ -90,3 +90,8 @@ Check out the [contribution](https://github.com/kristopolous/BOOTSTRA.386/blob/m
  * Also try my github username on your messaging platform of choice 
 
 ### See [the wiki](https://github.com/kristopolous/BOOTSTRA.386/wiki/) for more documentation.
+
+--- 
+Notes
+
+[1] The v3 version kinda sucked. You don't want that, do you? Brooks' 2nd system effect, not just the musings of 1975.  Anyway, v4 is coming ...
