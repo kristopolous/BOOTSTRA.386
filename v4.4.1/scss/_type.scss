@@ -20,7 +20,7 @@ h3, .h3 {
 }
 h4, .h4 {
   color: $white;
-  @include dos-basic-border(0, $white);
+  @include dos-basic-border($white);
 }
 
 h5, h6,
