@@ -1,6 +1,6 @@
 # [See A Demo By Clicking Here](http://kristopolous.github.io/BOOTSTRA.386/)
 
-### Download the latest with all the necessary JS and CSS to get started right away.
+### Download for your favorite bootstrap version with all the necessary JS and CSS to get started right away:
 
  * BOOTSTRA/386 ][ (from 2013) [144KB](https://github.com/kristopolous/BOOTSTRA.386/blob/master/bootstra.386-latest-v2.zip?raw=true)
  * BOOTSTRA/386 <i>iii</i> (from 2015) [423KB](https://github.com/kristopolous/BOOTSTRA.386/blob/master/shit-that-dont-work/bootstra.386-latest-v3.zip?raw=true)
