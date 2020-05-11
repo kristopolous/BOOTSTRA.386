@@ -1,6 +1,14 @@
 @mixin badge-variant($bg) {
-  color: color-yiq($bg);
-  background-color: $bg;
+  color: brighten($bg);
+  background-color: transparent;
+  &:before {
+    color: $bg;
+    content: "-{";
+  }
+  &:after {
+    color: $bg;
+    content: "}-";
+  }
 
   @at-root a#{&} {
     @include hover-focus() {

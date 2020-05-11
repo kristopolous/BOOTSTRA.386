@@ -828,16 +828,16 @@ $dropdown-header-color:             $gray-600 !default;
 
 // Pagination
 
-$pagination-padding-y:              .5rem !default;
-$pagination-padding-x:              .75rem !default;
-$pagination-padding-y-sm:           .25rem !default;
-$pagination-padding-x-sm:           .5rem !default;
+$pagination-padding-y:              0 !default;
+$pagination-padding-x:              0 !default;
+$pagination-padding-y-sm:           0 !default;
+$pagination-padding-x-sm:           $space-width !default;
 $pagination-padding-y-lg:           .75rem !default;
 $pagination-padding-x-lg:           1.5rem !default;
-$pagination-line-height:            1.25 !default;
+$pagination-line-height:            $line-height-base !default;
 
 $pagination-color:                  $link-color !default;
-$pagination-bg:                     $white !default;
+$pagination-bg:                     transparent !default;
 $pagination-border-width:           $border-width !default;
 $pagination-border-color:           $gray-300 !default;
 
@@ -1094,11 +1094,11 @@ $figure-caption-color:              $gray-600 !default;
 
 $breadcrumb-font-size:              null !default;
 
-$breadcrumb-padding-y:              .75rem !default;
-$breadcrumb-padding-x:              1rem !default;
+$breadcrumb-padding-y:              0 !default;
+$breadcrumb-padding-x:              $space-width !default;
 $breadcrumb-item-padding:           .5rem !default;
 
-$breadcrumb-margin-bottom:          1rem !default;
+$breadcrumb-margin-bottom:          0 !default;
 
 $breadcrumb-bg:                     $gray-200 !default;
 $breadcrumb-divider-color:          $gray-600 !default;
