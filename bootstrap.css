@@ -260,6 +260,7 @@ label {
 
 button {
   border-radius: 0;
+  padding: 0;
 }
 
 button:focus {
@@ -2130,8 +2131,8 @@ pre code {
   font-size: 14px;
   font-weight: 400;
   line-height: 13.9986px;
-  color: #000;
-  background-color: #aaa;
+  color: #fff;
+  background-color: #00a;
   background-clip: padding-box;
   border: 0 solid #555;
   border-radius: 0;
@@ -2151,12 +2152,12 @@ pre code {
 
 .form-control:-moz-focusring {
   color: transparent;
-  text-shadow: 0 0 0 #000;
+  text-shadow: 0 0 0 #fff;
 }
 
 .form-control:focus {
-  color: #000;
-  background-color: #aaa;
+  color: #fff;
+  background-color: #00a;
   border-color: #eaeaea;
   outline: 0;
   box-shadow: 0 0 0 0 rgba(170, 170, 170, 0.25);
@@ -2193,8 +2194,8 @@ pre code {
 }
 
 select.form-control:focus::-ms-value {
-  color: #000;
-  background-color: #aaa;
+  color: #fff;
+  background-color: #00a;
 }
 
 .form-control-file,
@@ -2376,7 +2377,7 @@ textarea.form-control {
 .was-validated .custom-select:valid, .custom-select.is-valid {
   border-color: #0a0;
   padding-right: calc(0.75em + 1rem);
-  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23aaa' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0 center/8px 10px, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%230a0' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e") #aaa no-repeat center right 1rem/13.9986px 13.9986px;
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23aaa' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0 center/8px 10px, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%230a0' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e") #00a no-repeat center right 1rem/13.9986px 13.9986px;
 }
 
 .was-validated .custom-select:valid:focus, .custom-select.is-valid:focus {
@@ -2473,7 +2474,7 @@ textarea.form-control {
 .was-validated .custom-select:invalid, .custom-select.is-invalid {
   border-color: #f55;
   padding-right: calc(0.75em + 1rem);
-  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23aaa' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0 center/8px 10px, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23f55' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23f55' stroke='none'/%3e%3c/svg%3e") #aaa no-repeat center right 1rem/13.9986px 13.9986px;
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23aaa' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0 center/8px 10px, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23f55' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23f55' stroke='none'/%3e%3c/svg%3e") #00a no-repeat center right 1rem/13.9986px 13.9986px;
 }
 
 .was-validated .custom-select:invalid:focus, .custom-select.is-invalid:focus {
@@ -3758,7 +3759,7 @@ input[type="button"].btn-block {
   font-size: 14px;
   font-weight: 400;
   line-height: 13.9986px;
-  color: #000;
+  color: #fff;
   text-align: center;
   white-space: nowrap;
   background-color: #555;
@@ -3872,7 +3873,7 @@ input[type="button"].btn-block {
   height: 1rem;
   pointer-events: none;
   content: "";
-  background-color: #aaa;
+  background-color: #00a;
   border: #555 solid 0;
 }
 
@@ -3950,7 +3951,7 @@ input[type="button"].btn-block {
 }
 
 .custom-switch .custom-control-input:checked ~ .custom-control-label::after {
-  background-color: #aaa;
+  background-color: #00a;
   -webkit-transform: translateX(0.75rem);
   transform: translateX(0.75rem);
 }
@@ -3967,9 +3968,9 @@ input[type="button"].btn-block {
   font-size: 14px;
   font-weight: 400;
   line-height: 13.9986px;
-  color: #000;
+  color: #fff;
   vertical-align: middle;
-  background: #aaa url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23aaa' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0 center/8px 10px;
+  background: #00a url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23aaa' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0 center/8px 10px;
   border: 0 solid #555;
   border-radius: 0;
   -webkit-appearance: none;
@@ -3984,8 +3985,8 @@ input[type="button"].btn-block {
 }
 
 .custom-select:focus::-ms-value {
-  color: #000;
-  background-color: #aaa;
+  color: #fff;
+  background-color: #00a;
 }
 
 .custom-select[multiple], .custom-select[size]:not([size="1"]) {
@@ -4005,7 +4006,7 @@ input[type="button"].btn-block {
 
 .custom-select:-moz-focusring {
   color: transparent;
-  text-shadow: 0 0 0 #000;
+  text-shadow: 0 0 0 #fff;
 }
 
 .custom-select-sm {
@@ -4069,8 +4070,8 @@ input[type="button"].btn-block {
   padding: 0 0;
   font-weight: 400;
   line-height: 13.9986px;
-  color: #000;
-  background-color: #aaa;
+  color: #fff;
+  background-color: #00a;
   border: 0 solid #555;
 }
 
@@ -4084,7 +4085,7 @@ input[type="button"].btn-block {
   height: 13.9986px;
   padding: 0 0;
   line-height: 13.9986px;
-  color: #000;
+  color: #fff;
   content: "Browse";
   background-color: #555;
   border-left: inherit;
