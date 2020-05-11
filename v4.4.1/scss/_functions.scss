@@ -5,6 +5,9 @@
 @function brighten($color) {
   @return map-get($brightMap, $color);
 }
+@function darken($color) {
+  @return map-get($darkMap, $color);
+}
 
 // Ascending
 // Used to evaluate Sass maps like our grid breakpoints.

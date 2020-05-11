@@ -76,6 +76,17 @@ $brightMap: (
   $magenta: $magentaBright,
   $brown: $yellow
 );
+$darkMap: (
+  $grayDark: $black,
+  $grayLight: $grayDark,
+  $white: $grayLight,
+  $blueBright: $blue,
+  $greenBright: $green,
+  $cyanBright: $cyan,
+  $redBright: $red,
+  $magentaBright: $magenta,
+  $yellow: $brown
+);
 
 $colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -924,7 +935,7 @@ $popover-border-radius:             $border-radius-lg !default;
 $popover-inner-border-radius:       subtract($popover-border-radius, $popover-border-width) !default;
 $popover-box-shadow:                0 .25rem .5rem rgba($black, .2) !default;
 
-$popover-header-bg:                 darken($popover-bg, 3%) !default;
+$popover-header-bg:                 $popover-bg !default;
 $popover-header-color:              $headings-color !default;
 $popover-header-padding-y:          .5rem !default;
 $popover-header-padding-x:          .75rem !default;
