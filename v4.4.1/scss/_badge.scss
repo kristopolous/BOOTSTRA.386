@@ -33,16 +33,6 @@
   top: -1px;
 }
 
-// Pill badges
-//
-// Make them extra rounded with a modifier to replace v3's badges.
-
-.badge-pill {
-  padding-right: $badge-pill-padding-x;
-  padding-left: $badge-pill-padding-x;
-  @include border-radius($badge-pill-border-radius);
-}
-
 // Colors
 //
 // Contextual variations (linked badges get darker on :hover).
@@ -52,3 +42,16 @@
     @include badge-variant($value);
   }
 }
+// Pill badges
+//
+// Make them extra rounded with a modifier to replace v3's badges.
+
+.badge-pill {
+  &:before {
+    content: "(";
+  }
+  &:after {
+    content: ")";
+  }
+}
+

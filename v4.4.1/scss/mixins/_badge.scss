@@ -3,11 +3,11 @@
   background-color: transparent;
   &:before {
     color: $bg;
-    content: "-{";
+    content: "[";
   }
   &:after {
     color: $bg;
-    content: "}-";
+    content: "]";
   }
 
   @at-root a#{&} {
