@@ -8,5 +8,6 @@ cp -v v4.4.1/site/docs/4.4/demo.html v4.4.1/dist/{css/bootstrap.css,js/bootstrap
 # exercis left up to the reader.
 sed -Ei s'/\/docs\/4.4\/dist\/(js|css)\///g' site/demo.html
 
+cd site
 git commit -am "updates"
 git push origin HEAD
