@@ -333,6 +333,7 @@ label {
 button {
   // stylelint-disable-next-line property-blacklist
   border-radius: 0;
+  padding: 0;
 }
 
 // Work around a Firefox/IE bug where the transparent `button` background
