@@ -1,0 +1,27 @@
+@mixin dos-basic-border($color: $black, $extra:0) {
+  border: $btn-border-width solid $color;
+  padding: $extra + ($line-height-base / 2 - .5) (1.5 * $space-width + 1);
+  margin-left: $space-width / 2 - .5;
+  margin-bottom: $extra + $line-height-base;
+}
+
+@mixin dos-shadow($color: $black) {
+  // this kind of crazy hackery is why this thing has like 6,000 stars...
+  box-shadow: 
+    0 (-$line-height-base / 2 + ($space-width / 2 - 1)) 0 ($space-width / 2 - 1) $color,
+    0 ($line-height-base / 2 - ($space-width / 2)) 0 ($space-width / 2 - 1) $color,
+    0   0   0 ($space-width / 2 - 1) $color;
+}
+@mixin dos-solid-border($color, $extra:0) {
+  @include dos-basic-border();
+  @include dos-shadow($color);
+}
+@mixin dos-border-off() {
+  border: 0;
+  box-shadow: 0;
+  padding: 0;
+  margin-left: 0;
+  margin-bottom: 0;
+}
+
+

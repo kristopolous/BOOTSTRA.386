@@ -48,7 +48,7 @@ fieldset:disabled a.btn {
 @each $color, $value in $theme-colors {
   .btn-#{$color} {
     @include button-variant($value, $value);
-    @include dos-basic-border(0, $value);
+    @include dos-shadow();
     &.btn-lg {
       background-color: $color;
       @include dos-solid-border($value);

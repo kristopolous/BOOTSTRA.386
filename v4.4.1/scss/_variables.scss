@@ -115,7 +115,7 @@ $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $brown !default;
 $danger:        $red !default;
-$light:         $gray-800 !default;
+$light:         $white !default;
 $dark:          $black !default;
 
 $theme-colors: () !default;
@@ -160,7 +160,7 @@ $enable-caret:                                true !default;
 $enable-rounded:                              false !default;
 $enable-shadows:                              false !default;
 $enable-gradients:                            false !default;
-$enable-transitions:                          true !default;
+$enable-transitions:                          false !default;
 $enable-prefers-reduced-motion-media-query:   true !default;
 $enable-hover-media-query:                    false !default; // Deprecated, no longer affects any compiled CSS
 $enable-grid-classes:                         true !default;
@@ -782,11 +782,11 @@ $navbar-toggler-padding-x:          0 !default;
 $navbar-toggler-font-size:          $font-size-lg !default;
 $navbar-toggler-border-radius:      $btn-border-radius !default;
 
-$navbar-dark-color:                 rgba($white, .5) !default;
+$navbar-dark-color:                 $black !default;
 $navbar-dark-hover-color:           $white !default;
-$navbar-dark-active-color:          $black !default;
-$navbar-dark-active-background:     $grayLight !default;
-$navbar-dark-disabled-color:        rgba($white, .5) !default;
+$navbar-dark-active-color:          $grayLight !default;
+$navbar-dark-active-background:     $black !default;
+$navbar-dark-disabled-color:        $grayDark !default;
 $navbar-dark-toggler-icon-bg:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
 $navbar-dark-toggler-border-color:  rgba($white, .1) !default;
 
@@ -794,7 +794,7 @@ $navbar-light-color:                $black !default;
 $navbar-light-hover-color:          $white !default;
 $navbar-light-active-color:         $grayLight !default;
 $navbar-light-active-background:    $black !default;
-$navbar-light-disabled-color:       rgba($black, .5) !default;
+$navbar-light-disabled-color:       $grayLight !default;
 $navbar-light-toggler-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{$navbar-light-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
 $navbar-light-toggler-border-color: rgba($black, .1) !default;
 

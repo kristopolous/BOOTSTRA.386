@@ -177,10 +177,6 @@
             position: absolute;
           }
 
-          .nav-link {
-            padding-right: $navbar-nav-link-padding-x;
-            padding-left: $navbar-nav-link-padding-x;
-          }
         }
 
         // For nesting containers, have to redeclare for alignment purposes
@@ -302,6 +298,12 @@
     .nav-link.active {
       color: $navbar-dark-active-color;
       background: $navbar-dark-active-background;
+    }
+  }
+
+  &.bg-dark {
+    .nav-link {
+      color: $white;
     }
   }
 
