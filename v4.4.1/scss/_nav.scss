@@ -27,6 +27,9 @@
   }
 }
 
+.nav-item {
+  padding: 0;
+}
 //
 // Tabs
 //
@@ -35,7 +38,7 @@
   border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
 
   .nav-item {
-    margin-bottom: -$nav-tabs-border-width;
+    margin: 0;
   }
 
   .nav-link {

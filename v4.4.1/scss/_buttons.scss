@@ -19,6 +19,7 @@
   //@include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
   //@include transition($btn-transition);
   border: none;
+  padding: 0 $space-width;
 
   /*
   @include hover() {
@@ -48,9 +49,19 @@ fieldset:disabled a.btn {
 @each $color, $value in $theme-colors {
   .btn-#{$color} {
     @include button-variant($value, $value);
-    @include dos-shadow();
+    background-color: $value;
+    &:after { content: " ◀"; }
+    &:before { content: "▶ "; }
+    &:not(.disabled) {
+
+      &:after, &:before {
+        color: brighten($value);
+      }
+    }
+
     &.btn-lg {
-      background-color: $color;
+      &:after, &:before { content: ""; }
+      background-color: $value;
       @include dos-solid-border($value);
       filter: drop-shadow($line-height-base / 2 $space-width 0 $black);
       //@include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);

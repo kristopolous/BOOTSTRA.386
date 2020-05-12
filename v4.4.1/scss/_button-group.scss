@@ -16,6 +16,7 @@
     @include hover() {
       z-index: 1;
     }
+    &:after, &:before { content: "" }
     &:focus,
     &:active,
     &.active {
