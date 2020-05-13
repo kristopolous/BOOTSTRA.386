@@ -451,7 +451,7 @@ legend {
   max-width: 100%; // 1
   padding: 0;
   margin-bottom: $line-height-base;
-  @include font-size(1.5rem);
+  @include font-size(1em);
   line-height: inherit;
   color: inherit; // 2
   white-space: normal; // 1

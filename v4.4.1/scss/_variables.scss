@@ -884,10 +884,10 @@ $card-border-radius:                $border-radius !default;
 $card-border-color:                 none !default;
 $card-inner-border-radius:          subtract($card-border-radius, $card-border-width) !default;
 $card-cap-bg:                       $grayDark !default;
-$card-cap-color:                    null !default;
+$card-cap-color:                    $white !default;
 $card-height:                       null !default;
-$card-color:                        null !default;
-$card-bg:                           $white !default;
+$card-color:                        $black !default;
+$card-bg:                           $grayLight !default;
 
 $card-img-overlay-padding:          1.25rem !default;
 
