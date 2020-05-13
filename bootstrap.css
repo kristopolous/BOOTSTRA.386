@@ -4870,7 +4870,7 @@ input[type="button"].btn-block {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #fff;
+  background-color: #aaa;
   background-clip: border-box;
   border: 0 solid none;
 }
@@ -4885,6 +4885,7 @@ input[type="button"].btn-block {
   flex: 1 1 auto;
   min-height: 1px;
   padding: 15.1688px;
+  color: #000;
 }
 
 .card-title {
@@ -4911,6 +4912,7 @@ input[type="button"].btn-block {
 .card-header {
   padding: 13.9986px 15.1688px;
   margin-bottom: 0;
+  color: #fff;
   background-color: #555;
   border-bottom: 0 solid none;
 }
