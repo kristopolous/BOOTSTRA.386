@@ -42,9 +42,8 @@
 
   @include dos-basic-border(brighten($color));
   @include hover() {
+    @include dos-double-border(brighten($color));
     color: $white;
-    background-color: $active-background;
-    border-color: $active-border;
   }
 
   &.disabled,
@@ -56,9 +55,8 @@
   &:not(:disabled):not(.disabled):active,
   &:not(:disabled):not(.disabled).active,
   .show > &.dropdown-toggle {
-    color: color-yiq($active-background);
-    background-color: $active-background;
-    border-color: $active-border;
+    color: brighten($color);
+    border-color: $color;
 
     &:focus {
       // Avoid using mixin so we can pass custom focus shadow properly
