@@ -3342,16 +3342,16 @@ fieldset:disabled a.btn {
 .btn-link {
   font-weight: 400;
   color: #ff5;
-  text-decoration: none;
+  background: transparent;
 }
 
 .btn-link:hover {
   color: #fff;
-  text-decoration: none;
+  background-color: #a50;
 }
 
-.btn-link:focus, .btn-link.focus {
-  background-color: #a50;
+.btn-link:before, .btn-link:after {
+  content: '_';
 }
 
 .btn-link:disabled, .btn-link.disabled {

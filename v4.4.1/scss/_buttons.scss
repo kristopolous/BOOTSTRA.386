@@ -85,16 +85,15 @@ fieldset:disabled a.btn {
 .btn-link {
   font-weight: $font-weight-normal;
   color: $link-color;
-  text-decoration: $link-decoration;
+  background: transparent;
 
   @include hover() {
     color: $link-hover-color;
-    text-decoration: $link-hover-decoration;
+    background-color: $link-hover-background;
   }
 
-  &:focus,
-  &.focus {
-    background-color: $link-hover-background;
+  &:before, &:after {
+    content: '_';
   }
 
   &:disabled,
@@ -103,7 +102,6 @@ fieldset:disabled a.btn {
     pointer-events: none;
   }
 
-  // No need for an active state here
 }
 
 
