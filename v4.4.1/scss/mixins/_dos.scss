@@ -1,12 +1,12 @@
 @mixin dos-basic-border($color: $black, $extra:0) {
   border: $btn-border-width solid $color;
-  padding: $extra + ($line-height-base / 2 - .5) (1.5 * $space-width + 1);
+  padding: $extra + ($line-height-base / 2 - .5) (1.5 * $space-width);
   margin-left: $space-width / 2 - .5;
   margin-bottom: $extra + $line-height-base;
 }
 @mixin dos-double-border($color: $black, $extra:0) {
   border: 3px double $color;
-  padding: $extra + ($line-height-base / 2 - 2.5) (1.5 * $space-width) $extra + ($line-height-base / 2 - 1.5);
+  padding: $extra + ($line-height-base / 2 - 2.5) (1.5 * $space-width - 1) $extra + ($line-height-base / 2 - 1.5);
   margin-top: 0;
   margin-right: -1px;
   margin-bottom: $extra + $line-height-base - 1;

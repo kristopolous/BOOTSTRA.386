@@ -4,6 +4,7 @@
 .btn-group,
 .btn-group-vertical {
   position: relative;
+  margin: 0 $space-width;
   display: inline-flex;
   vertical-align: middle; // match .btn alignment given font-size hack above
 
@@ -43,16 +44,6 @@
     margin-left: -$btn-border-width;
   }
 
-  // Reset rounded corners
-  > .btn:not(:last-child):not(.dropdown-toggle),
-  > .btn-group:not(:last-child) > .btn {
-    @include border-right-radius(0);
-  }
-
-  > .btn:not(:first-child),
-  > .btn-group:not(:first-child) > .btn {
-    @include border-left-radius(0);
-  }
 }
 
 // Sizing

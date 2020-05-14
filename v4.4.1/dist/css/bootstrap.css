@@ -410,7 +410,7 @@ h3, .h3 {
 h4, .h4 {
   color: #fff;
   border: 1px solid #fff;
-  padding: 6.4993px 12.3766px;
+  padding: 6.4993px 11.3766px;
   margin-left: 3.2922px;
   margin-bottom: 13.9986px;
 }
@@ -2646,7 +2646,7 @@ fieldset:disabled a.btn {
 .btn-primary.btn-lg, .btn-group-lg > .btn-primary.btn {
   background-color: #aaa;
   border: 1px solid #000;
-  padding: 6.4993px 12.3766px;
+  padding: 6.4993px 11.3766px;
   margin-left: 3.2922px;
   margin-bottom: 13.9986px;
   box-shadow: 0 -4.2071px 0 2.7922px #aaa, 0 3.2071px 0 2.7922px #aaa, 0 0 0 2.7922px #aaa;
@@ -2700,7 +2700,7 @@ fieldset:disabled a.btn {
 .btn-secondary.btn-lg, .btn-group-lg > .btn-secondary.btn {
   background-color: #aaa;
   border: 1px solid #000;
-  padding: 6.4993px 12.3766px;
+  padding: 6.4993px 11.3766px;
   margin-left: 3.2922px;
   margin-bottom: 13.9986px;
   box-shadow: 0 -4.2071px 0 2.7922px #aaa, 0 3.2071px 0 2.7922px #aaa, 0 0 0 2.7922px #aaa;
@@ -2754,7 +2754,7 @@ fieldset:disabled a.btn {
 .btn-success.btn-lg, .btn-group-lg > .btn-success.btn {
   background-color: #0a0;
   border: 1px solid #000;
-  padding: 6.4993px 12.3766px;
+  padding: 6.4993px 11.3766px;
   margin-left: 3.2922px;
   margin-bottom: 13.9986px;
   box-shadow: 0 -4.2071px 0 2.7922px #0a0, 0 3.2071px 0 2.7922px #0a0, 0 0 0 2.7922px #0a0;
@@ -2808,7 +2808,7 @@ fieldset:disabled a.btn {
 .btn-info.btn-lg, .btn-group-lg > .btn-info.btn {
   background-color: #0aa;
   border: 1px solid #000;
-  padding: 6.4993px 12.3766px;
+  padding: 6.4993px 11.3766px;
   margin-left: 3.2922px;
   margin-bottom: 13.9986px;
   box-shadow: 0 -4.2071px 0 2.7922px #0aa, 0 3.2071px 0 2.7922px #0aa, 0 0 0 2.7922px #0aa;
@@ -2862,7 +2862,7 @@ fieldset:disabled a.btn {
 .btn-warning.btn-lg, .btn-group-lg > .btn-warning.btn {
   background-color: #a50;
   border: 1px solid #000;
-  padding: 6.4993px 12.3766px;
+  padding: 6.4993px 11.3766px;
   margin-left: 3.2922px;
   margin-bottom: 13.9986px;
   box-shadow: 0 -4.2071px 0 2.7922px #a50, 0 3.2071px 0 2.7922px #a50, 0 0 0 2.7922px #a50;
@@ -2916,7 +2916,7 @@ fieldset:disabled a.btn {
 .btn-danger.btn-lg, .btn-group-lg > .btn-danger.btn {
   background-color: #a00;
   border: 1px solid #000;
-  padding: 6.4993px 12.3766px;
+  padding: 6.4993px 11.3766px;
   margin-left: 3.2922px;
   margin-bottom: 13.9986px;
   box-shadow: 0 -4.2071px 0 2.7922px #a00, 0 3.2071px 0 2.7922px #a00, 0 0 0 2.7922px #a00;
@@ -2966,7 +2966,7 @@ fieldset:disabled a.btn {
 .btn-light.btn-lg, .btn-group-lg > .btn-light.btn {
   background-color: #fff;
   border: 1px solid #000;
-  padding: 6.4993px 12.3766px;
+  padding: 6.4993px 11.3766px;
   margin-left: 3.2922px;
   margin-bottom: 13.9986px;
   box-shadow: 0 -4.2071px 0 2.7922px #fff, 0 3.2071px 0 2.7922px #fff, 0 0 0 2.7922px #fff;
@@ -3020,7 +3020,7 @@ fieldset:disabled a.btn {
 .btn-dark.btn-lg, .btn-group-lg > .btn-dark.btn {
   background-color: #000;
   border: 1px solid #000;
-  padding: 6.4993px 12.3766px;
+  padding: 6.4993px 11.3766px;
   margin-left: 3.2922px;
   margin-bottom: 13.9986px;
   box-shadow: 0 -4.2071px 0 2.7922px #000, 0 3.2071px 0 2.7922px #000, 0 0 0 2.7922px #000;
@@ -3037,14 +3037,14 @@ fieldset:disabled a.btn {
   border-color: #fff;
   background: transparent;
   border: 1px solid #fff;
-  padding: 6.4993px 12.3766px;
+  padding: 6.4993px 11.3766px;
   margin-left: 3.2922px;
   margin-bottom: 13.9986px;
 }
 
 .btn-outline-primary:hover {
   border: 3px double #fff;
-  padding: 4.4993px 11.3766px 5.4993px;
+  padding: 4.4993px 10.3766px 5.4993px;
   margin-top: 0;
   margin-right: -1px;
   margin-bottom: 12.9986px;
@@ -3073,14 +3073,14 @@ fieldset:disabled a.btn {
   border-color: #fff;
   background: transparent;
   border: 1px solid #fff;
-  padding: 6.4993px 12.3766px;
+  padding: 6.4993px 11.3766px;
   margin-left: 3.2922px;
   margin-bottom: 13.9986px;
 }
 
 .btn-outline-secondary:hover {
   border: 3px double #fff;
-  padding: 4.4993px 11.3766px 5.4993px;
+  padding: 4.4993px 10.3766px 5.4993px;
   margin-top: 0;
   margin-right: -1px;
   margin-bottom: 12.9986px;
@@ -3109,14 +3109,14 @@ fieldset:disabled a.btn {
   border-color: #5f5;
   background: transparent;
   border: 1px solid #5f5;
-  padding: 6.4993px 12.3766px;
+  padding: 6.4993px 11.3766px;
   margin-left: 3.2922px;
   margin-bottom: 13.9986px;
 }
 
 .btn-outline-success:hover {
   border: 3px double #5f5;
-  padding: 4.4993px 11.3766px 5.4993px;
+  padding: 4.4993px 10.3766px 5.4993px;
   margin-top: 0;
   margin-right: -1px;
   margin-bottom: 12.9986px;
@@ -3145,14 +3145,14 @@ fieldset:disabled a.btn {
   border-color: #5ff;
   background: transparent;
   border: 1px solid #5ff;
-  padding: 6.4993px 12.3766px;
+  padding: 6.4993px 11.3766px;
   margin-left: 3.2922px;
   margin-bottom: 13.9986px;
 }
 
 .btn-outline-info:hover {
   border: 3px double #5ff;
-  padding: 4.4993px 11.3766px 5.4993px;
+  padding: 4.4993px 10.3766px 5.4993px;
   margin-top: 0;
   margin-right: -1px;
   margin-bottom: 12.9986px;
@@ -3181,14 +3181,14 @@ fieldset:disabled a.btn {
   border-color: #ff5;
   background: transparent;
   border: 1px solid #ff5;
-  padding: 6.4993px 12.3766px;
+  padding: 6.4993px 11.3766px;
   margin-left: 3.2922px;
   margin-bottom: 13.9986px;
 }
 
 .btn-outline-warning:hover {
   border: 3px double #ff5;
-  padding: 4.4993px 11.3766px 5.4993px;
+  padding: 4.4993px 10.3766px 5.4993px;
   margin-top: 0;
   margin-right: -1px;
   margin-bottom: 12.9986px;
@@ -3217,14 +3217,14 @@ fieldset:disabled a.btn {
   border-color: #f55;
   background: transparent;
   border: 1px solid #f55;
-  padding: 6.4993px 12.3766px;
+  padding: 6.4993px 11.3766px;
   margin-left: 3.2922px;
   margin-bottom: 13.9986px;
 }
 
 .btn-outline-danger:hover {
   border: 3px double #f55;
-  padding: 4.4993px 11.3766px 5.4993px;
+  padding: 4.4993px 10.3766px 5.4993px;
   margin-top: 0;
   margin-right: -1px;
   margin-bottom: 12.9986px;
@@ -3251,14 +3251,14 @@ fieldset:disabled a.btn {
 .btn-outline-light {
   background: transparent;
   border: 1px solid;
-  padding: 6.4993px 12.3766px;
+  padding: 6.4993px 11.3766px;
   margin-left: 3.2922px;
   margin-bottom: 13.9986px;
 }
 
 .btn-outline-light:hover {
   border: 3px double;
-  padding: 4.4993px 11.3766px 5.4993px;
+  padding: 4.4993px 10.3766px 5.4993px;
   margin-top: 0;
   margin-right: -1px;
   margin-bottom: 12.9986px;
@@ -3286,14 +3286,14 @@ fieldset:disabled a.btn {
   border-color: #555;
   background: transparent;
   border: 1px solid #555;
-  padding: 6.4993px 12.3766px;
+  padding: 6.4993px 11.3766px;
   margin-left: 3.2922px;
   margin-bottom: 13.9986px;
 }
 
 .btn-outline-dark:hover {
   border: 3px double #555;
-  padding: 4.4993px 11.3766px 5.4993px;
+  padding: 4.4993px 10.3766px 5.4993px;
   margin-top: 0;
   margin-right: -1px;
   margin-bottom: 12.9986px;
@@ -3645,6 +3645,7 @@ input[type="button"].btn-block {
 .btn-group,
 .btn-group-vertical {
   position: relative;
+  margin: 0 7.5844px;
   display: -ms-inline-flexbox;
   display: inline-flex;
   vertical-align: middle;
@@ -5334,7 +5335,7 @@ a.badge-dark:focus, a.badge-dark.focus {
   color: #000;
   background-color: #aaa;
   border: 1px solid #000;
-  padding: 6.4993px 12.3766px;
+  padding: 6.4993px 11.3766px;
   margin-left: 3.2922px;
   margin-bottom: 13.9986px;
   box-shadow: 0 -4.2071px 0 2.7922px #aaa, 0 3.2071px 0 2.7922px #aaa, 0 0 0 2.7922px #aaa;
