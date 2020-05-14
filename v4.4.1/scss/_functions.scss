@@ -100,7 +100,8 @@
   $color-base: if($level > 0, $black, $white);
   $level: abs($level);
 
-  @return mix($color-base, $color, $level * $theme-color-interval);
+  @return brighten($color);
+  //@return mix($color-base, $color, $level * $theme-color-interval);
 }
 
 // Return valid calc
