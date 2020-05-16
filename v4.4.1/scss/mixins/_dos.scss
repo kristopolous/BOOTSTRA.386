@@ -1,6 +1,6 @@
-@mixin dos-basic-border($color: $black, $extra:0) {
+@mixin dos-basic-border($color: $black, $extra: 0, $character-space: 1) {
   border: $btn-border-width solid $color;
-  padding: $extra + ($line-height-base / 2 - .5) (1.5 * $space-width);
+  padding: $extra + ($line-height-base / 2 - .5) (($character-space + .5) * $space-width);
   margin-left: $space-width / 2 - .5;
   margin-bottom: $extra + $line-height-base;
 }
