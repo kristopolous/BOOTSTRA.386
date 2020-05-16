@@ -63,8 +63,26 @@ fieldset:disabled a.btn {
       &:after, &:before { content: ""; }
       background-color: $value;
       @include dos-solid-border($value);
-      filter: drop-shadow($line-height-base / 2 $space-width 0 $black);
-      //@include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
+      @include dos-shadow();
+      margin-bottom: $line-height-base;
+
+      @include hover() {
+        @include dos-border-background(darken($value));
+        color: $white;
+        border-color: white;
+        background: darken($value);
+      }
+
+      &:not(:disabled):not(.disabled):active,
+      &:not(:disabled):not(.disabled).active,
+      .show > &.dropdown-toggle {
+        @include dos-border-background(darken($value));
+        color: $white;
+        border-color: white;
+        background: darken($value);
+        filter: none;
+        margin: $line-height-base 0 $line-height-base / 2 $space-width;
+      }
     }
   }
 

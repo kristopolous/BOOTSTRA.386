@@ -13,6 +13,11 @@
   margin-left: $space-width / 2 - 1.5;
 }
 
+@mixin dos-shadow($color: black) {
+  filter: drop-shadow($line-height-base / 2 $space-width 0 $color);
+  margin-right: $space-width / 2 + 1;
+}
+
 @mixin dos-border-background($color: $grayLight, $borderSize: 1) {
   // this kind of crazy hackery is why this thing has like 6,000 stars...
   box-shadow: 

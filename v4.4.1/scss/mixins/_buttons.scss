@@ -12,11 +12,13 @@
   @include hover() {
     color: $white;
     border-color: $white;
+    &:after, &:before {
+      color: black;
+    }
   }
 
   &:focus,
   &.focus {
-    color: $white;
     border-color: $white;
   }
 
@@ -31,7 +33,8 @@
   &:not(:disabled):not(.disabled):active,
   &:not(:disabled):not(.disabled).active,
   .show > &.dropdown-toggle {
-    background-color: $active-background;
+    color: $active-background;
+    background: $black;
   }
 }
 
@@ -73,7 +76,5 @@
   padding: $padding-y $padding-x;
   @include font-size($font-size);
   line-height: $line-height;
-  // Manually declare to provide an override to the browser default
-  @include border-radius($border-radius, 0);
 }
 

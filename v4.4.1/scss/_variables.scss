@@ -85,7 +85,15 @@ $darkMap: (
   $cyanBright: $cyan,
   $redBright: $red,
   $magentaBright: $magenta,
-  $yellow: $brown
+  $yellow: $brown,
+
+  $black: $black,
+  $blue: $blue,
+  $green: $green,
+  $cyan: $cyan,
+  $red: $red,
+  $magenta: $magenta,
+  $brown: $brown
 );
 
 $colors: () !default;
@@ -176,7 +184,7 @@ $line-height-base:            $font-size-base * .7777 !default;
 
 $font-size-lg:                $font-size-base !default;
 $font-size-sm:                $font-size-base !default;
-$space-width:             7.5844px !default;
+$space-width:                 7.6px !default;
 // Spacing
 //
 // Control the default styling of most Bootstrap elements by modifying these
