@@ -8,7 +8,7 @@
 
   // No need to set list-style: none; since .list-group-item is block level
   margin-bottom: 0;
-  @include dos-basic-border($grayLight, $character-space: 0);
+  @include dos-border-single($grayLight, $character-space: 0);
 }
 
 

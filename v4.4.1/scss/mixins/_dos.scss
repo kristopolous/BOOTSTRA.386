@@ -1,4 +1,4 @@
-@mixin dos-basic-border($color: $black, $extra: 0, $character-space: 1) {
+@mixin dos-border-single($color: $black, $extra: 0, $character-space: 1) {
   border: $btn-border-width solid $color;
   padding: $extra + ($line-height-base / 2 - .5) (($character-space + .5) * $space-width);
   margin-left: $space-width / 2 - .5;
@@ -13,16 +13,17 @@
   margin-left: $space-width / 2 - 1.5;
 }
 
-@mixin dos-shadow($color: $black) {
+@mixin dos-border-background($color: $grayLight, $borderSize: 1) {
   // this kind of crazy hackery is why this thing has like 6,000 stars...
   box-shadow: 
-    0 (-$line-height-base / 2 + ($space-width / 2 - 1)) 0 ($space-width / 2 - 1) $color,
-    0 ($line-height-base / 2 - ($space-width / 2)) 0 ($space-width / 2 - 1) $color,
-    0   0   0 ($space-width / 2 - 1) $color;
+    0 (-$line-height-base / 2 + ($space-width / 2 - $borderSize)) 0 ($space-width / 2 - $borderSize) $color,
+    0 ($line-height-base / 2 - ($space-width / 2)) 0 ($space-width / 2 - $borderSize) $color,
+    0   0   0 ($space-width / 2 - $borderSize) $color;
+  margin-top: $line-height-base / 2;
 }
 @mixin dos-solid-border($color, $extra:0) {
-  @include dos-basic-border();
-  @include dos-shadow($color);
+  @include dos-border-single();
+  @include dos-border-background($color: $color);
 }
 @mixin dos-border-off() {
   border: 0;

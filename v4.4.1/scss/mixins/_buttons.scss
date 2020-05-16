@@ -40,7 +40,7 @@
   border-color: brighten($color);
   background: transparent;
 
-  @include dos-basic-border(brighten($color));
+  @include dos-border-single(brighten($color));
   @include hover() {
     @include dos-double-border(brighten($color));
     color: $white;

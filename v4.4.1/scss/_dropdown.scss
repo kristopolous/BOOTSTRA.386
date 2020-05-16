@@ -30,9 +30,8 @@
   list-style: none;
   background-color: $dropdown-bg;
   background-clip: padding-box;
-  border: $dropdown-border-width solid $dropdown-border-color;
-  @include border-radius($dropdown-border-radius);
-  @include box-shadow($dropdown-box-shadow);
+  @include dos-border-single($character-space:0);
+  @include dos-border-background();
 }
 
 @each $breakpoint in map-keys($grid-breakpoints) {
@@ -114,7 +113,7 @@
 
 // Dividers (basically an `<hr>`) within the dropdown
 .dropdown-divider {
-  @include nav-divider($dropdown-divider-bg, $dropdown-divider-margin-y, true);
+  @include nav-divider($dropdown-divider-bg, $dropdown-divider-margin-y / 2, true);
 }
 
 // Links, buttons, and more within the dropdown menu
