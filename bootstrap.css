@@ -4685,12 +4685,11 @@ input[type="button"].btn-block {
 
 .navbar-brand {
   display: inline-block;
-  padding-top: 0;
-  padding-bottom: 0;
   margin-right: 12.4px;
   font-size: 18px;
   line-height: inherit;
   white-space: nowrap;
+  color: #000084;
 }
 
 .navbar-brand:hover, .navbar-brand:focus {
@@ -4971,7 +4970,7 @@ input[type="button"].btn-block {
 }
 
 .navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
-  color: #000;
+  color: #fff;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -5017,7 +5016,7 @@ input[type="button"].btn-block {
 }
 
 .navbar-dark .navbar-brand {
-  color: #fff;
+  color: #000;
 }
 
 .navbar-dark .navbar-brand:hover, .navbar-dark .navbar-brand:focus {
@@ -5044,6 +5043,7 @@ input[type="button"].btn-block {
   background: #000;
 }
 
+.navbar-dark.bg-dark .navbar-brand,
 .navbar-dark.bg-dark .nav-link {
   color: #fff;
 }
