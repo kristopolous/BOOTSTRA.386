@@ -51,12 +51,11 @@
 
 .navbar-brand {
   display: inline-block;
-  padding-top: $navbar-brand-padding-y;
-  padding-bottom: $navbar-brand-padding-y;
   margin-right: $navbar-padding-x;
   @include font-size($navbar-brand-font-size);
   line-height: inherit;
   white-space: nowrap;
+  color: $blue;
 
   @include hover-focus() {
     text-decoration: none;
@@ -306,6 +305,7 @@
   }
 
   &.bg-dark {
+    .navbar-brand,
     .nav-link {
       color: $white;
     }
