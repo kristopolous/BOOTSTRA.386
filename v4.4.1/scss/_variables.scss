@@ -7,7 +7,7 @@
 
 $white:    #fff !default;
 $grayDark:  #555 !default;
-$grayLight: #aaa !default;
+$grayLight: #bbb !default;
 $gray-100: $grayDark !default;
 $gray-200: $grayDark !default;
 $gray-300: $grayDark !default;
@@ -51,7 +51,7 @@ $grays: map-merge(
 // screw it, why think?
 
 $black:    #000 !default;
-$blue:     #00a !default;
+$blue:     #000084 !default;
 $green:    #0a0 !default;
 $cyan:     #0aa !default;
 $red:      #a00 !default;
@@ -180,11 +180,11 @@ $enable-deprecation-messages:                 true !default;
 
 
 $font-size-base:              18px !default; 
-$line-height-base:            $font-size-base * .7777 !default;
+$line-height-base:            20px !default;
 
 $font-size-lg:                $font-size-base !default;
 $font-size-sm:                $font-size-base !default;
-$space-width:                 7.6px !default;
+$space-width:                 12.4px !default;
 // Spacing
 //
 // Control the default styling of most Bootstrap elements by modifying these

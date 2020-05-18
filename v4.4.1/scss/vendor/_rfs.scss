@@ -30,7 +30,7 @@ $rfs-factor: 10 !default;
 $rfs-class: false !default;
 
 // 1 rem = $rfs-rem-value px
-$rfs-rem-value: 16 !default;
+$rfs-rem-value: 18 !default;
 
 // Safari iframe resize bug: https://github.com/twbs/rfs/issues/14
 $rfs-safari-iframe-resize-bug-fix: false !default;
@@ -70,7 +70,7 @@ $rfs-breakpoint-unit-cache: unit($rfs-breakpoint);
 
   // If $fs isn't a number (like inherit) or $fs has a unit (not px or rem, like 1.5em) or $ is 0, just print the value
   @if not $fs-unit or $fs-unit != "" and $fs-unit != "px" and $fs-unit != "rem" or $fs == 0 {
-    font-size: 14px;
+    font-size: $font-size-base;
   }
   @else {
     // Variables for storing static and fluid rescaling
@@ -87,7 +87,7 @@ $rfs-breakpoint-unit-cache: unit($rfs-breakpoint);
 
     // Set default font-size
     @if $rfs-font-size-unit == rem {
-      $rfs-static: 14px;
+      $rfs-static: $font-size-base;
     }
     @else if $rfs-font-size-unit == px {
       $rfs-static: #{$fs}px#{$rfs-suffix};
