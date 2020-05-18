@@ -1,4 +1,4 @@
-@mixin dos-border-single($color: $black, $extra: 0, $character-space: 1) {
+@mixin dos-border-single($color: $black, $extra: 0, $character-space: 0) {
   border: $btn-border-width solid $color;
   padding: $extra + ($line-height-base / 2 - .5) (($character-space + .5) * $space-width);
   margin-left: $space-width / 2 - .5;

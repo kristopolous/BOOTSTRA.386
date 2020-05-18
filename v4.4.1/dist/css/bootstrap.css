@@ -279,6 +279,10 @@ textarea {
   line-height: inherit;
 }
 
+option {
+  padding: 0;
+}
+
 button,
 input {
   overflow: visible;
@@ -410,7 +414,7 @@ h3, .h3 {
 h4, .h4 {
   color: #fff;
   border: 1px solid #fff;
-  padding: 9.5px 18.6px;
+  padding: 9.5px 6.2px;
   margin-left: 5.7px;
   margin-bottom: 20px;
 }
@@ -2133,11 +2137,7 @@ pre code {
 }
 
 .form-control:focus {
-  color: #fff;
-  background-color: #000084;
-  border-color: #fbfbfb;
   outline: 0;
-  box-shadow: 0 0 0 0 rgba(187, 187, 187, 0.25);
 }
 
 .form-control::-webkit-input-placeholder {
@@ -2170,9 +2170,20 @@ pre code {
   opacity: 1;
 }
 
+select.form-control {
+  background: #bbb;
+  border: 1px solid #000;
+  padding: 9.5px 6.2px;
+  margin-left: 5.7px;
+  margin-bottom: 20px;
+  box-shadow: 0 -4.8px 0 5.2px #bbb, 0 3.8px 0 5.2px #bbb, 0 0 0 5.2px #bbb;
+  margin-top: 10px;
+  color: #000;
+}
+
 select.form-control:focus::-ms-value {
-  color: #fff;
-  background-color: #000084;
+  color: #000;
+  background: #bbb;
 }
 
 .form-control-file,
@@ -2650,7 +2661,7 @@ fieldset:disabled a.btn {
 .btn-primary.btn-lg, .btn-group-lg > .btn-primary.btn {
   background-color: #bbb;
   border: 1px solid #000;
-  padding: 9.5px 18.6px;
+  padding: 9.5px 6.2px;
   margin-left: 5.7px;
   margin-bottom: 20px;
   box-shadow: 0 -4.8px 0 5.2px #bbb, 0 3.8px 0 5.2px #bbb, 0 0 0 5.2px #bbb;
@@ -2732,7 +2743,7 @@ fieldset:disabled a.btn {
 .btn-secondary.btn-lg, .btn-group-lg > .btn-secondary.btn {
   background-color: #bbb;
   border: 1px solid #000;
-  padding: 9.5px 18.6px;
+  padding: 9.5px 6.2px;
   margin-left: 5.7px;
   margin-bottom: 20px;
   box-shadow: 0 -4.8px 0 5.2px #bbb, 0 3.8px 0 5.2px #bbb, 0 0 0 5.2px #bbb;
@@ -2814,7 +2825,7 @@ fieldset:disabled a.btn {
 .btn-success.btn-lg, .btn-group-lg > .btn-success.btn {
   background-color: #0a0;
   border: 1px solid #000;
-  padding: 9.5px 18.6px;
+  padding: 9.5px 6.2px;
   margin-left: 5.7px;
   margin-bottom: 20px;
   box-shadow: 0 -4.8px 0 5.2px #0a0, 0 3.8px 0 5.2px #0a0, 0 0 0 5.2px #0a0;
@@ -2896,7 +2907,7 @@ fieldset:disabled a.btn {
 .btn-info.btn-lg, .btn-group-lg > .btn-info.btn {
   background-color: #0aa;
   border: 1px solid #000;
-  padding: 9.5px 18.6px;
+  padding: 9.5px 6.2px;
   margin-left: 5.7px;
   margin-bottom: 20px;
   box-shadow: 0 -4.8px 0 5.2px #0aa, 0 3.8px 0 5.2px #0aa, 0 0 0 5.2px #0aa;
@@ -2978,7 +2989,7 @@ fieldset:disabled a.btn {
 .btn-warning.btn-lg, .btn-group-lg > .btn-warning.btn {
   background-color: #a50;
   border: 1px solid #000;
-  padding: 9.5px 18.6px;
+  padding: 9.5px 6.2px;
   margin-left: 5.7px;
   margin-bottom: 20px;
   box-shadow: 0 -4.8px 0 5.2px #a50, 0 3.8px 0 5.2px #a50, 0 0 0 5.2px #a50;
@@ -3060,7 +3071,7 @@ fieldset:disabled a.btn {
 .btn-danger.btn-lg, .btn-group-lg > .btn-danger.btn {
   background-color: #a00;
   border: 1px solid #000;
-  padding: 9.5px 18.6px;
+  padding: 9.5px 6.2px;
   margin-left: 5.7px;
   margin-bottom: 20px;
   box-shadow: 0 -4.8px 0 5.2px #a00, 0 3.8px 0 5.2px #a00, 0 0 0 5.2px #a00;
@@ -3138,7 +3149,7 @@ fieldset:disabled a.btn {
 .btn-light.btn-lg, .btn-group-lg > .btn-light.btn {
   background-color: #fff;
   border: 1px solid #000;
-  padding: 9.5px 18.6px;
+  padding: 9.5px 6.2px;
   margin-left: 5.7px;
   margin-bottom: 20px;
   box-shadow: 0 -4.8px 0 5.2px #fff, 0 3.8px 0 5.2px #fff, 0 0 0 5.2px #fff;
@@ -3220,7 +3231,7 @@ fieldset:disabled a.btn {
 .btn-dark.btn-lg, .btn-group-lg > .btn-dark.btn {
   background-color: #000;
   border: 1px solid #000;
-  padding: 9.5px 18.6px;
+  padding: 9.5px 6.2px;
   margin-left: 5.7px;
   margin-bottom: 20px;
   box-shadow: 0 -4.8px 0 5.2px #000, 0 3.8px 0 5.2px #000, 0 0 0 5.2px #000;
@@ -3261,7 +3272,7 @@ fieldset:disabled a.btn {
   border-color: #fff;
   background: transparent;
   border: 1px solid #fff;
-  padding: 9.5px 18.6px;
+  padding: 9.5px 6.2px;
   margin-left: 5.7px;
   margin-bottom: 20px;
 }
@@ -3297,7 +3308,7 @@ fieldset:disabled a.btn {
   border-color: #fff;
   background: transparent;
   border: 1px solid #fff;
-  padding: 9.5px 18.6px;
+  padding: 9.5px 6.2px;
   margin-left: 5.7px;
   margin-bottom: 20px;
 }
@@ -3333,7 +3344,7 @@ fieldset:disabled a.btn {
   border-color: #5f5;
   background: transparent;
   border: 1px solid #5f5;
-  padding: 9.5px 18.6px;
+  padding: 9.5px 6.2px;
   margin-left: 5.7px;
   margin-bottom: 20px;
 }
@@ -3369,7 +3380,7 @@ fieldset:disabled a.btn {
   border-color: #5ff;
   background: transparent;
   border: 1px solid #5ff;
-  padding: 9.5px 18.6px;
+  padding: 9.5px 6.2px;
   margin-left: 5.7px;
   margin-bottom: 20px;
 }
@@ -3405,7 +3416,7 @@ fieldset:disabled a.btn {
   border-color: #ff5;
   background: transparent;
   border: 1px solid #ff5;
-  padding: 9.5px 18.6px;
+  padding: 9.5px 6.2px;
   margin-left: 5.7px;
   margin-bottom: 20px;
 }
@@ -3441,7 +3452,7 @@ fieldset:disabled a.btn {
   border-color: #f55;
   background: transparent;
   border: 1px solid #f55;
-  padding: 9.5px 18.6px;
+  padding: 9.5px 6.2px;
   margin-left: 5.7px;
   margin-bottom: 20px;
 }
@@ -3475,7 +3486,7 @@ fieldset:disabled a.btn {
 .btn-outline-light {
   background: transparent;
   border: 1px solid;
-  padding: 9.5px 18.6px;
+  padding: 9.5px 6.2px;
   margin-left: 5.7px;
   margin-bottom: 20px;
 }
@@ -3510,7 +3521,7 @@ fieldset:disabled a.btn {
   border-color: #555;
   background: transparent;
   border: 1px solid #555;
-  padding: 9.5px 18.6px;
+  padding: 9.5px 6.2px;
   margin-left: 5.7px;
   margin-bottom: 20px;
 }
@@ -5564,7 +5575,7 @@ a.badge-dark:focus, a.badge-dark.focus {
   color: #000;
   background-color: #bbb;
   border: 1px solid #000;
-  padding: 9.5px 18.6px;
+  padding: 9.5px 6.2px;
   margin-left: 5.7px;
   margin-bottom: 20px;
   box-shadow: 0 -4.8px 0 5.2px #bbb, 0 3.8px 0 5.2px #bbb, 0 0 0 5.2px #bbb;

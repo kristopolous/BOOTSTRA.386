@@ -249,6 +249,10 @@ textarea {
   line-height: inherit;
 }
 
+option {
+  padding: 0;
+}
+
 button,
 input {
   overflow: visible;

@@ -355,6 +355,9 @@ textarea {
   @include font-size(inherit);
   line-height: inherit;
 }
+option {
+  padding: 0;
+}
 
 button,
 input {
