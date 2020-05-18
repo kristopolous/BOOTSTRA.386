@@ -30,7 +30,7 @@
   list-style: none;
   background-color: $dropdown-bg;
   background-clip: padding-box;
-  @include dos-border-single($character-space:0);
+  @include dos-border-single();
   @include dos-border-background();
 }
 

@@ -4,7 +4,7 @@
   margin-left: $space-width / 2 - .5;
   margin-bottom: $extra + $line-height-base;
 }
-@mixin dos-double-border($color: $black, $extra:0) {
+@mixin dos-border-double($color: $black, $extra:0) {
   border: 3px double $color;
   padding: $extra + ($line-height-base / 2 - 2.5) (1.5 * $space-width - 1) $extra + ($line-height-base / 2 - 1.5);
   margin-top: 0;
@@ -26,8 +26,8 @@
     0   0   0 ($space-width / 2 - $borderSize) $color;
   margin-top: $line-height-base / 2;
 }
-@mixin dos-solid-border($color, $extra:0) {
-  @include dos-border-single();
+@mixin dos-solid-border($color, $character-space:0) {
+  @include dos-border-single($character-space: $character-space);
   @include dos-border-background($color: $color);
 }
 @mixin dos-border-off() {

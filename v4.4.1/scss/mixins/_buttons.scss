@@ -43,9 +43,9 @@
   border-color: brighten($color);
   background: transparent;
 
-  @include dos-border-single(brighten($color));
+  @include dos-border-single(brighten($color), $character-space: 1);
   @include hover() {
-    @include dos-double-border(brighten($color));
+    @include dos-border-double(brighten($color));
     color: $white;
   }
 
