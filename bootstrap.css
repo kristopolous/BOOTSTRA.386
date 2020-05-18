@@ -279,6 +279,10 @@ textarea {
   line-height: inherit;
 }
 
+option {
+  padding: 0;
+}
+
 button,
 input {
   overflow: visible;
@@ -397,7 +401,7 @@ h1, h2, h3,
   margin-bottom: 20px;
   font-weight: 400;
   line-height: 20px;
-  text-indent: 24.8px;
+  text-indent: 12.4px;
   background: #0aa;
   padding: 20px 12.4px;
   color: #000;
@@ -410,7 +414,7 @@ h3, .h3 {
 h4, .h4 {
   color: #fff;
   border: 1px solid #fff;
-  padding: 9.5px 18.6px;
+  padding: 9.5px 6.2px;
   margin-left: 5.7px;
   margin-bottom: 20px;
 }
@@ -2133,11 +2137,7 @@ pre code {
 }
 
 .form-control:focus {
-  color: #fff;
-  background-color: #000084;
-  border-color: #fbfbfb;
   outline: 0;
-  box-shadow: 0 0 0 0 rgba(187, 187, 187, 0.25);
 }
 
 .form-control::-webkit-input-placeholder {
@@ -2170,9 +2170,20 @@ pre code {
   opacity: 1;
 }
 
+select.form-control {
+  background: #bbb;
+  border: 1px solid #000;
+  padding: 9.5px 6.2px;
+  margin-left: 5.7px;
+  margin-bottom: 20px;
+  box-shadow: 0 -4.8px 0 5.2px #bbb, 0 3.8px 0 5.2px #bbb, 0 0 0 5.2px #bbb;
+  margin-top: 10px;
+  color: #000;
+}
+
 select.form-control:focus::-ms-value {
-  color: #fff;
-  background-color: #000084;
+  color: #000;
+  background: #bbb;
 }
 
 .form-control-file,
