@@ -171,6 +171,17 @@ select.form-control {
 textarea.form-control {
   height: auto;
 }
+input.form-control {
+  background: 
+   url('fonts/left-brace.svg') 3px 3.6px / 4.87px no-repeat, 
+   url('fonts/right-brace.svg') top 3px right 3.6px / 4.87px no-repeat, 
+   $grayLight;
+
+  color: $black;
+
+  padding: 0 $space-width
+}
+
 
 // Form groups
 //
