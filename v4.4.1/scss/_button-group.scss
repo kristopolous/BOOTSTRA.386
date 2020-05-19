@@ -17,7 +17,11 @@
     @include hover() {
       z-index: 1;
     }
-    &:after, &:before { content: "" }
+    // after is used for the dropdown
+    &:not(.dropdown-toggle) {
+      &:after { content: "" }
+    }
+    &:before { content: "" }
     &:focus,
     &:active,
     &.active {

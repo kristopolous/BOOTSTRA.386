@@ -312,9 +312,8 @@ $box-shadow-lg:               0 1rem 3rem rgba($black, .175) !default;
 $component-active-color:      $white !default;
 $component-active-bg:         theme-color("primary") !default;
 
-$caret-width:                 .3em !default;
-$caret-vertical-align:        $caret-width * .85 !default;
-$caret-spacing:               $caret-width * .85 !default;
+$caret-width:                 $space-width !default;
+$caret-spacing:               $caret-width !default;
 
 $transition-base:             all .2s ease-in-out !default;
 $transition-fade:             opacity .15s linear !default;

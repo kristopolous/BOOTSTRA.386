@@ -9,7 +9,6 @@
 .dropdown-toggle {
   white-space: nowrap;
 
-  // Generate the caret automatically
   @include caret();
 }
 
@@ -75,7 +74,7 @@
   }
 
   .dropdown-toggle {
-    @include caret(right);
+    background: url('fonts/arrow-down.svg') 3px 3.6px / 4.87px no-repeat
     &::after {
       vertical-align: 0;
     }

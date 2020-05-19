@@ -34,7 +34,7 @@
   &:not(:disabled):not(.disabled).active,
   .show > &.dropdown-toggle {
     color: $active-background;
-    background: $black;
+    background-color: $black;
   }
 }
 

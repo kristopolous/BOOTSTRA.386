@@ -70,7 +70,7 @@ fieldset:disabled a.btn {
         @include dos-border-background(darken($value));
         color: $white;
         border-color: white;
-        background: darken($value);
+        background-color: darken($value);
       }
 
       &:not(:disabled):not(.disabled):active,
@@ -79,7 +79,7 @@ fieldset:disabled a.btn {
         @include dos-border-background(darken($value));
         color: $white;
         border-color: white;
-        background: darken($value);
+        background-color: darken($value);
         filter: none;
         margin: $line-height-base 0 $line-height-base / 2 $space-width;
       }

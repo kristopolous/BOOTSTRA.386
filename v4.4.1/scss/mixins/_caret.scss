@@ -1,15 +1,9 @@
 @mixin caret-down() {
-  border-top: $caret-width solid;
-  border-right: $caret-width solid transparent;
-  border-bottom: 0;
-  border-left: $caret-width solid transparent;
+  content: "▾";
 }
 
 @mixin caret-up() {
-  border-top: 0;
-  border-right: $caret-width solid transparent;
-  border-bottom: $caret-width solid;
-  border-left: $caret-width solid transparent;
+  content: "▴";
 }
 
 @mixin caret-right() {
@@ -29,9 +23,6 @@
   @if $enable-caret {
     &::after {
       display: inline-block;
-      margin-left: $caret-spacing;
-      vertical-align: $caret-vertical-align;
-      content: "";
       @if $direction == down {
         @include caret-down();
       } @else if $direction == up {
@@ -49,7 +40,6 @@
       &::before {
         display: inline-block;
         margin-right: $caret-spacing;
-        vertical-align: $caret-vertical-align;
         content: "";
         @include caret-left();
       }
