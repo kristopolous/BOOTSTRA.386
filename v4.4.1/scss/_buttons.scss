@@ -39,6 +39,11 @@ fieldset:disabled a.btn {
 // Alternate buttons
 //
 
+.svgpath {
+  color: blue;
+  fill: blue;
+  stroke: blue;
+}
 @each $color, $value in $theme-colors {
   .btn-#{$color} {
     @include button-variant($value, $value);

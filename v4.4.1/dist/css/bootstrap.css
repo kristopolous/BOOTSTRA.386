@@ -2616,6 +2616,12 @@ fieldset:disabled a.btn {
   pointer-events: none;
 }
 
+.svgpath {
+  color: blue;
+  fill: blue;
+  stroke: blue;
+}
+
 .btn-primary {
   color: #000;
   border-color: #000;
@@ -10135,35 +10141,35 @@ button.bg-dark:focus {
 }
 
 .text-primary {
-  color: #bbb !important;
-}
-
-.text-secondary {
-  color: #bbb !important;
-}
-
-.text-success {
-  color: #0a0 !important;
-}
-
-.text-info {
-  color: #0aa !important;
-}
-
-.text-warning {
-  color: #a50 !important;
-}
-
-.text-danger {
-  color: #a00 !important;
-}
-
-.text-light {
   color: #fff !important;
 }
 
+.text-secondary {
+  color: #fff !important;
+}
+
+.text-success {
+  color: #5f5 !important;
+}
+
+.text-info {
+  color: #5ff !important;
+}
+
+.text-warning {
+  color: #ff5 !important;
+}
+
+.text-danger {
+  color: #f55 !important;
+}
+
+.text-light {
+  color: !important;
+}
+
 .text-dark {
-  color: #000 !important;
+  color: #555 !important;
 }
 
 .text-body {
