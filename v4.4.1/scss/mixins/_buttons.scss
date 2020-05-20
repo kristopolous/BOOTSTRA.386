@@ -10,7 +10,7 @@
   //@include dos-border(0, $background);
 
   @include hover() {
-    color: $white;
+    color: brighten($border);
     border-color: $white;
     &:after, &:before {
       color: black;

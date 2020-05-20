@@ -19,14 +19,7 @@
   //@include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
   //@include transition($btn-transition);
   border: none;
-  padding: 0 $space-width;
-
-  /*
-  @include hover() {
-    background-color: $link-hover-background;
-    text-decoration: none;
-  }
-  */
+  padding: 0 $space-width * 2;
 
   &:focus,
   &.focus {
@@ -50,12 +43,13 @@ fieldset:disabled a.btn {
   .btn-#{$color} {
     @include button-variant($value, $value);
     background-color: $value;
-    &:after { content: " ◀"; }
-    &:before { content: "▶ "; }
-    &:not(.disabled) {
-
-      &:after, &:before {
-        color: brighten($value);
+    &:not(:disabled):not(.disabled) {
+      @include hover() {
+        background: 
+         url('fonts/grey/triagrt_Px437_IBM_EGA8.svg') 0 0 / 9px no-repeat, 
+         url('fonts/grey/triaglf_Px437_IBM_EGA8.svg') top 0 right 0 / 9px no-repeat, 
+         darken($value);
+        background-blend-mode: luminosity;
       }
     }
 
