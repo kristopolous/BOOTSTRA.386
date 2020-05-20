@@ -100,6 +100,7 @@ hr {
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: $headings-margin-bottom;
+  font-weight: normal;
 }
 
 // Reset margins on paragraphs
@@ -141,12 +142,12 @@ ol,
 ul,
 dl {
   margin-top: 0;
-  margin-left: $space-width * 1.75;
+  margin-left: $space-width;
   padding-left: 0;
   margin-bottom: $line-height-base;
 }
 li {
-  padding-left: .25 * $space-width;
+  padding-left: $space-width;
 }
 li:before {
   font-size: 100px;
