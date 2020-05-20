@@ -133,26 +133,17 @@
   // Prevent dropdown overflow if there's no padding
   // See https://github.com/twbs/bootstrap/pull/27703
   @if $dropdown-padding-y == 0 {
-    &:first-child {
-      @include border-top-radius($dropdown-inner-border-radius);
-    }
-
-    &:last-child {
-      @include border-bottom-radius($dropdown-inner-border-radius);
-    }
   }
 
   @include hover-focus() {
     color: $dropdown-link-hover-color;
     text-decoration: none;
-    @include gradient-bg($dropdown-link-hover-bg);
   }
 
   &.active,
   &:active {
     color: $dropdown-link-active-color;
     text-decoration: none;
-    @include gradient-bg($dropdown-link-active-bg);
   }
 
   &.disabled,
@@ -160,10 +151,6 @@
     color: $dropdown-link-disabled-color;
     pointer-events: none;
     background-color: transparent;
-    // Remove CSS gradients if they're enabled
-    @if $enable-gradients {
-      background-image: none;
-    }
   }
 }
 

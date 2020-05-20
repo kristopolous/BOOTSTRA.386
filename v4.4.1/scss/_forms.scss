@@ -19,8 +19,6 @@
   border: $input-border-width solid $input-border-color;
 
   // Note: This has no effect on <select>s in some browsers, due to the limited stylability of `<select>`s in CSS.
-  @include border-radius($input-border-radius, 0);
-
   @include box-shadow($input-box-shadow);
   @include transition($input-transition);
 
@@ -149,7 +147,6 @@ select.form-control {
   padding: $input-padding-y-sm $input-padding-x-sm;
   @include font-size($input-font-size-sm);
   line-height: $input-line-height-sm;
-  @include border-radius($input-border-radius-sm);
 }
 
 .form-control-lg {
@@ -157,7 +154,6 @@ select.form-control {
   padding: $input-padding-y-lg $input-padding-x-lg;
   @include font-size($input-font-size-lg);
   line-height: $input-line-height-lg;
-  @include border-radius($input-border-radius-lg);
 }
 
 // stylelint-disable-next-line no-duplicate-selectors

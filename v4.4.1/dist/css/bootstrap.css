@@ -2119,7 +2119,6 @@ pre code {
   background-color: #000084;
   background-clip: padding-box;
   border: 0 solid #555;
-  border-radius: 0;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -3729,9 +3728,6 @@ input[type="button"].btn-block {
   display: inline-block;
   margin-right: 10px;
   content: "";
-  border-top: 10px solid transparent;
-  border-right: 10px solid;
-  border-bottom: 10px solid transparent;
 }
 
 .dropleft .dropdown-toggle:empty::after {
@@ -3770,13 +3766,11 @@ input[type="button"].btn-block {
 .dropdown-item:hover, .dropdown-item:focus {
   color: #fff;
   text-decoration: none;
-  background-color: #000;
 }
 
 .dropdown-item.active, .dropdown-item:active {
   color: #fff;
   text-decoration: none;
-  background-color: #bbb;
 }
 
 .dropdown-item.disabled, .dropdown-item:disabled {
@@ -4092,7 +4086,6 @@ input[type="button"].btn-block {
 .custom-control-input:checked ~ .custom-control-label::before {
   color: #fff;
   border-color: #bbb;
-  background-color: #bbb;
 }
 
 .custom-control-input:focus ~ .custom-control-label::before {
@@ -4153,7 +4146,6 @@ input[type="button"].btn-block {
 
 .custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::before {
   border-color: #bbb;
-  background-color: #bbb;
 }
 
 .custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::after {
@@ -4166,10 +4158,6 @@ input[type="button"].btn-block {
 
 .custom-checkbox .custom-control-input:disabled:indeterminate ~ .custom-control-label::before {
   background-color: rgba(187, 187, 187, 0.5);
-}
-
-.custom-radio .custom-control-label::before {
-  border-radius: 50%;
 }
 
 .custom-radio .custom-control-input:checked ~ .custom-control-label::after {
@@ -4188,7 +4176,6 @@ input[type="button"].btn-block {
   left: -2.25rem;
   width: 1.75rem;
   pointer-events: all;
-  border-radius: 0.5rem;
 }
 
 .custom-switch .custom-control-label::after {
@@ -4197,7 +4184,6 @@ input[type="button"].btn-block {
   width: 1rem;
   height: 1rem;
   background-color: #555;
-  border-radius: 0.5rem;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -4228,7 +4214,6 @@ input[type="button"].btn-block {
   vertical-align: middle;
   background: #000084 url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23bbb' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0 center/8px 10px;
   border: 0 solid #555;
-  border-radius: 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -4343,7 +4328,6 @@ input[type="button"].btn-block {
   line-height: 20.1px;
   color: #fff;
   content: "Browse";
-  background-color: #555;
   border-left: inherit;
 }
 
@@ -4381,7 +4365,6 @@ input[type="button"].btn-block {
   width: 1rem;
   height: 1rem;
   margin-top: -0.25rem;
-  background-color: #bbb;
   border: 0;
   -webkit-appearance: none;
   appearance: none;
@@ -4392,10 +4375,6 @@ input[type="button"].btn-block {
     -webkit-transition: none;
     transition: none;
   }
-}
-
-.custom-range::-webkit-slider-thumb:active {
-  background-color: white;
 }
 
 .custom-range::-webkit-slider-runnable-track {
@@ -4410,7 +4389,6 @@ input[type="button"].btn-block {
 .custom-range::-moz-range-thumb {
   width: 1rem;
   height: 1rem;
-  background-color: #bbb;
   border: 0;
   -moz-appearance: none;
   appearance: none;
@@ -4421,10 +4399,6 @@ input[type="button"].btn-block {
     -moz-transition: none;
     transition: none;
   }
-}
-
-.custom-range::-moz-range-thumb:active {
-  background-color: white;
 }
 
 .custom-range::-moz-range-track {
@@ -4442,7 +4416,6 @@ input[type="button"].btn-block {
   margin-top: 0;
   margin-right: 0;
   margin-left: 0;
-  background-color: #bbb;
   border: 0;
   appearance: none;
 }
@@ -4452,10 +4425,6 @@ input[type="button"].btn-block {
     -ms-transition: none;
     transition: none;
   }
-}
-
-.custom-range::-ms-thumb:active {
-  background-color: white;
 }
 
 .custom-range::-ms-track {

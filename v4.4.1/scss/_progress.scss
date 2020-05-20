@@ -12,7 +12,6 @@
   overflow: hidden; // force rounded corners by cropping it
   @include font-size($progress-font-size);
   background-color: $progress-bg;
-  @include border-radius($progress-border-radius);
   @include box-shadow($progress-box-shadow);
 }
 
@@ -29,7 +28,6 @@
 }
 
 .progress-bar-striped {
-  @include gradient-striped();
   background-size: $progress-height $progress-height;
 }
 

@@ -1,7 +1,6 @@
 .pagination {
   display: flex;
   @include list-unstyled();
-  @include border-radius();
 }
 
 .page-link {
@@ -33,12 +32,10 @@
   &:first-child {
     .page-link {
       margin-left: 0;
-      @include border-left-radius($border-radius);
     }
   }
   &:last-child {
     .page-link {
-      @include border-right-radius($border-radius);
     }
   }
 

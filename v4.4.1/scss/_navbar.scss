@@ -120,7 +120,6 @@
   line-height: 1;
   background-color: transparent; // remove default button style
   border: $border-width solid transparent; // remove default button style
-  @include border-radius($navbar-toggler-border-radius);
 
   @include hover-focus() {
     text-decoration: none;

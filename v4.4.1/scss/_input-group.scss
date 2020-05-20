@@ -41,8 +41,8 @@
 
   > .form-control,
   > .custom-select {
-    &:not(:last-child) { @include border-right-radius(0); }
-    &:not(:first-child) { @include border-left-radius(0); }
+    &:not(:last-child) { }
+    &:not(:first-child) { }
   }
 
   // Custom file inputs have more complex markup, thus requiring different
@@ -52,8 +52,8 @@
     align-items: center;
 
     &:not(:last-child) .custom-file-label,
-    &:not(:last-child) .custom-file-label::after { @include border-right-radius(0); }
-    &:not(:first-child) .custom-file-label { @include border-left-radius(0); }
+    &:not(:last-child) .custom-file-label::after { }
+    &:not(:first-child) .custom-file-label { }
   }
 }
 
@@ -110,7 +110,6 @@
   white-space: nowrap;
   background-color: $input-group-addon-bg;
   border: $input-border-width solid $input-group-addon-border-color;
-  @include border-radius($input-border-radius);
 
   // Nuke default margins from checkboxes and radios to vertically center within.
   input[type="radio"],
@@ -139,7 +138,6 @@
   padding: $input-padding-y-lg $input-padding-x-lg;
   @include font-size($input-font-size-lg);
   line-height: $input-line-height-lg;
-  @include border-radius($input-border-radius-lg);
 }
 
 .input-group-sm > .form-control:not(textarea),
@@ -156,7 +154,6 @@
   padding: $input-padding-y-sm $input-padding-x-sm;
   @include font-size($input-font-size-sm);
   line-height: $input-line-height-sm;
-  @include border-radius($input-border-radius-sm);
 }
 
 .input-group-lg > .custom-select,
@@ -178,7 +175,6 @@
 .input-group > .input-group-append:not(:last-child) > .input-group-text,
 .input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
 .input-group > .input-group-append:last-child > .input-group-text:not(:last-child) {
-  @include border-right-radius(0);
 }
 
 .input-group > .input-group-append > .btn,
@@ -187,5 +183,4 @@
 .input-group > .input-group-prepend:not(:first-child) > .input-group-text,
 .input-group > .input-group-prepend:first-child > .btn:not(:first-child),
 .input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child) {
-  @include border-left-radius(0);
 }

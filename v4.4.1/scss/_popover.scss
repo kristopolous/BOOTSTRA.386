@@ -14,7 +14,6 @@
   background-color: $popover-bg;
   background-clip: padding-box;
   border: $popover-border-width solid $popover-border-color;
-  @include border-radius($popover-border-radius);
   @include box-shadow($popover-box-shadow);
 
   .arrow {
@@ -157,7 +156,6 @@
   color: $popover-header-color;
   background-color: $popover-header-bg;
   border-bottom: $popover-border-width solid $popover-header-bg;
-  @include border-top-radius($popover-inner-border-radius);
 
   &:empty {
     display: none;

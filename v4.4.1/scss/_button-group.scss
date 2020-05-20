@@ -119,16 +119,6 @@
     margin-top: -$btn-border-width;
   }
 
-  // Reset rounded corners
-  > .btn:not(:last-child):not(.dropdown-toggle),
-  > .btn-group:not(:last-child) > .btn {
-    @include border-bottom-radius(0);
-  }
-
-  > .btn:not(:first-child),
-  > .btn-group:not(:first-child) > .btn {
-    @include border-top-radius(0);
-  }
 }
 
 
