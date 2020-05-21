@@ -2259,7 +2259,7 @@ textarea.form-control {
   margin-top: 8.5px;
   margin-left: 3px;
   margin-bottom: 18px;
-  box-shadow: inset 0 -5px 0 3.5px pink, inset 0 5px 0 3.5px orange, 0 -4px 0 3.5px purple, 0 5px 0 3.5px red, 0 0 0 3.5px #bbb;
+  box-shadow: inset 0 -5px 0 3.5px #bbb, inset 0 5px 0 3.5px #bbb, 0 -4px 0 3.5px #bbb, 0 5px 0 3.5px #bbb, 0 0 0 3.5px #bbb;
 }
 
 input.form-control {

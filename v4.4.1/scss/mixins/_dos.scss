@@ -32,10 +32,10 @@
 @mixin dos-border-background-inset($color: $grayLight, $borderSize: 1) {
   $spacer: (($space-width - $borderSize) / 2);
   box-shadow: 
-    inset 0 (-$line-height-base / 2 + $spacer) 0 $spacer - .5 pink, //$color,
-    inset 0 ($line-height-base / 2 - $spacer) 0 $spacer - .5 orange, //$color,
-    0 (-$line-height-base / 2 + $borderSize + 4) 0 $spacer - .5 purple, //$color,
-    0 ($line-height-base / 2 - 4) 0 $spacer - .5 red,
+    inset 0 (-$line-height-base / 2 + $spacer) 0 $spacer - .5 $color,
+    inset 0 ($line-height-base / 2 - $spacer) 0 $spacer - .5 $color,
+    0 (-$line-height-base / 2 + $borderSize + 4) 0 $spacer - .5 $color,
+    0 ($line-height-base / 2 - 4) 0 $spacer - .5 $color,
     0   0   0 $spacer - .5 $color;
 }
 
