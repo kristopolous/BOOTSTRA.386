@@ -162,6 +162,8 @@ select.form-control {
 
 textarea.form-control {
   height: auto;
+  @include dos-border-single();
+  @include dos-border-background-inset();
 }
 input.form-control {
   background: 

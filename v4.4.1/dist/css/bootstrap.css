@@ -416,9 +416,11 @@ h3, .h3 {
 h4, .h4 {
   color: #fff;
   border: 1px solid #fff;
-  padding: 8.5px 4.5px;
-  margin-top: 9px;
-  margin-left: 4px;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  padding: 8.5px 4px;
+  margin-top: 8.5px;
+  margin-left: 3px;
   margin-bottom: 18px;
 }
 
@@ -2169,12 +2171,13 @@ pre code {
 select.form-control {
   background: #bbb;
   border: 1px solid #000;
-  padding: 8.5px 4.5px;
-  margin-top: 9px;
-  margin-left: 4px;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  padding: 8.5px 4px;
+  margin-top: 8.5px;
+  margin-left: 3px;
   margin-bottom: 18px;
-  box-shadow: 0 -5.5px 0 3.5px #bbb, 0 4.5px 0 3.5px #bbb, 0 0 0 3.5px #bbb;
-  margin-top: 9px;
+  box-shadow: 0 -4px 0 3.5px #bbb, 0 5px 0 3.5px #bbb, 0 0 0 3.5px #bbb;
   color: #000;
 }
 
@@ -2249,6 +2252,14 @@ select.form-control[size], select.form-control[multiple] {
 
 textarea.form-control {
   height: auto;
+  border: 1px solid #000;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  padding: 8.5px 4px;
+  margin-top: 8.5px;
+  margin-left: 3px;
+  margin-bottom: 18px;
+  box-shadow: inset 0 -5px 0 3.5px pink, inset 0 5px 0 3.5px orange, 0 -4px 0 3.5px purple, 0 5px 0 3.5px red, 0 0 0 3.5px #bbb;
 }
 
 input.form-control {
@@ -2659,12 +2670,13 @@ fieldset:disabled a.btn {
 .btn-primary.btn-lg, .btn-group-lg > .btn-primary.btn {
   background-color: #bbb;
   border: 1px solid #000;
-  padding: 8.5px 13.5px;
-  margin-top: 9px;
-  margin-left: 4px;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  padding: 8.5px 13px;
+  margin-top: 8.5px;
+  margin-left: 3px;
   margin-bottom: 18px;
-  box-shadow: 0 -5.5px 0 3.5px #bbb, 0 4.5px 0 3.5px #bbb, 0 0 0 3.5px #bbb;
-  margin-top: 9px;
+  box-shadow: 0 -4px 0 3.5px #bbb, 0 5px 0 3.5px #bbb, 0 0 0 3.5px #bbb;
   -webkit-filter: drop-shadow(9px 9px 0 black);
   filter: drop-shadow(9px 9px 0 black);
   margin-right: 5.5px;
@@ -2672,8 +2684,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-primary.btn-lg:hover, .btn-group-lg > .btn-primary.btn:hover {
-  box-shadow: 0 -5.5px 0 3.5px #555, 0 4.5px 0 3.5px #555, 0 0 0 3.5px #555;
-  margin-top: 9px;
+  box-shadow: 0 -4px 0 3.5px #555, 0 5px 0 3.5px #555, 0 0 0 3.5px #555;
   color: #fff;
   border-color: white;
   background-color: #555;
@@ -2682,8 +2693,7 @@ fieldset:disabled a.btn {
 .btn-primary.btn-lg:not(:disabled):not(.disabled):active, .btn-group-lg > .btn-primary.btn:not(:disabled):not(.disabled):active, .btn-primary.btn-lg:not(:disabled):not(.disabled).active, .btn-group-lg > .btn-primary.btn:not(:disabled):not(.disabled).active,
 .show > .btn-primary.btn-lg.dropdown-toggle,
 .btn-group-lg.show > .btn-primary.dropdown-toggle.btn {
-  box-shadow: 0 -5.5px 0 3.5px #555, 0 4.5px 0 3.5px #555, 0 0 0 3.5px #555;
-  margin-top: 9px;
+  box-shadow: 0 -4px 0 3.5px #555, 0 5px 0 3.5px #555, 0 0 0 3.5px #555;
   color: #fff;
   border-color: white;
   background-color: #555;
@@ -2739,12 +2749,13 @@ fieldset:disabled a.btn {
 .btn-secondary.btn-lg, .btn-group-lg > .btn-secondary.btn {
   background-color: #bbb;
   border: 1px solid #000;
-  padding: 8.5px 13.5px;
-  margin-top: 9px;
-  margin-left: 4px;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  padding: 8.5px 13px;
+  margin-top: 8.5px;
+  margin-left: 3px;
   margin-bottom: 18px;
-  box-shadow: 0 -5.5px 0 3.5px #bbb, 0 4.5px 0 3.5px #bbb, 0 0 0 3.5px #bbb;
-  margin-top: 9px;
+  box-shadow: 0 -4px 0 3.5px #bbb, 0 5px 0 3.5px #bbb, 0 0 0 3.5px #bbb;
   -webkit-filter: drop-shadow(9px 9px 0 black);
   filter: drop-shadow(9px 9px 0 black);
   margin-right: 5.5px;
@@ -2752,8 +2763,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-secondary.btn-lg:hover, .btn-group-lg > .btn-secondary.btn:hover {
-  box-shadow: 0 -5.5px 0 3.5px #555, 0 4.5px 0 3.5px #555, 0 0 0 3.5px #555;
-  margin-top: 9px;
+  box-shadow: 0 -4px 0 3.5px #555, 0 5px 0 3.5px #555, 0 0 0 3.5px #555;
   color: #fff;
   border-color: white;
   background-color: #555;
@@ -2762,8 +2772,7 @@ fieldset:disabled a.btn {
 .btn-secondary.btn-lg:not(:disabled):not(.disabled):active, .btn-group-lg > .btn-secondary.btn:not(:disabled):not(.disabled):active, .btn-secondary.btn-lg:not(:disabled):not(.disabled).active, .btn-group-lg > .btn-secondary.btn:not(:disabled):not(.disabled).active,
 .show > .btn-secondary.btn-lg.dropdown-toggle,
 .btn-group-lg.show > .btn-secondary.dropdown-toggle.btn {
-  box-shadow: 0 -5.5px 0 3.5px #555, 0 4.5px 0 3.5px #555, 0 0 0 3.5px #555;
-  margin-top: 9px;
+  box-shadow: 0 -4px 0 3.5px #555, 0 5px 0 3.5px #555, 0 0 0 3.5px #555;
   color: #fff;
   border-color: white;
   background-color: #555;
@@ -2819,12 +2828,13 @@ fieldset:disabled a.btn {
 .btn-success.btn-lg, .btn-group-lg > .btn-success.btn {
   background-color: #0a0;
   border: 1px solid #000;
-  padding: 8.5px 13.5px;
-  margin-top: 9px;
-  margin-left: 4px;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  padding: 8.5px 13px;
+  margin-top: 8.5px;
+  margin-left: 3px;
   margin-bottom: 18px;
-  box-shadow: 0 -5.5px 0 3.5px #0a0, 0 4.5px 0 3.5px #0a0, 0 0 0 3.5px #0a0;
-  margin-top: 9px;
+  box-shadow: 0 -4px 0 3.5px #0a0, 0 5px 0 3.5px #0a0, 0 0 0 3.5px #0a0;
   -webkit-filter: drop-shadow(9px 9px 0 black);
   filter: drop-shadow(9px 9px 0 black);
   margin-right: 5.5px;
@@ -2832,8 +2842,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-success.btn-lg:hover, .btn-group-lg > .btn-success.btn:hover {
-  box-shadow: 0 -5.5px 0 3.5px #0a0, 0 4.5px 0 3.5px #0a0, 0 0 0 3.5px #0a0;
-  margin-top: 9px;
+  box-shadow: 0 -4px 0 3.5px #0a0, 0 5px 0 3.5px #0a0, 0 0 0 3.5px #0a0;
   color: #fff;
   border-color: white;
   background-color: #0a0;
@@ -2842,8 +2851,7 @@ fieldset:disabled a.btn {
 .btn-success.btn-lg:not(:disabled):not(.disabled):active, .btn-group-lg > .btn-success.btn:not(:disabled):not(.disabled):active, .btn-success.btn-lg:not(:disabled):not(.disabled).active, .btn-group-lg > .btn-success.btn:not(:disabled):not(.disabled).active,
 .show > .btn-success.btn-lg.dropdown-toggle,
 .btn-group-lg.show > .btn-success.dropdown-toggle.btn {
-  box-shadow: 0 -5.5px 0 3.5px #0a0, 0 4.5px 0 3.5px #0a0, 0 0 0 3.5px #0a0;
-  margin-top: 9px;
+  box-shadow: 0 -4px 0 3.5px #0a0, 0 5px 0 3.5px #0a0, 0 0 0 3.5px #0a0;
   color: #fff;
   border-color: white;
   background-color: #0a0;
@@ -2899,12 +2907,13 @@ fieldset:disabled a.btn {
 .btn-info.btn-lg, .btn-group-lg > .btn-info.btn {
   background-color: #0aa;
   border: 1px solid #000;
-  padding: 8.5px 13.5px;
-  margin-top: 9px;
-  margin-left: 4px;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  padding: 8.5px 13px;
+  margin-top: 8.5px;
+  margin-left: 3px;
   margin-bottom: 18px;
-  box-shadow: 0 -5.5px 0 3.5px #0aa, 0 4.5px 0 3.5px #0aa, 0 0 0 3.5px #0aa;
-  margin-top: 9px;
+  box-shadow: 0 -4px 0 3.5px #0aa, 0 5px 0 3.5px #0aa, 0 0 0 3.5px #0aa;
   -webkit-filter: drop-shadow(9px 9px 0 black);
   filter: drop-shadow(9px 9px 0 black);
   margin-right: 5.5px;
@@ -2912,8 +2921,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-info.btn-lg:hover, .btn-group-lg > .btn-info.btn:hover {
-  box-shadow: 0 -5.5px 0 3.5px #0aa, 0 4.5px 0 3.5px #0aa, 0 0 0 3.5px #0aa;
-  margin-top: 9px;
+  box-shadow: 0 -4px 0 3.5px #0aa, 0 5px 0 3.5px #0aa, 0 0 0 3.5px #0aa;
   color: #fff;
   border-color: white;
   background-color: #0aa;
@@ -2922,8 +2930,7 @@ fieldset:disabled a.btn {
 .btn-info.btn-lg:not(:disabled):not(.disabled):active, .btn-group-lg > .btn-info.btn:not(:disabled):not(.disabled):active, .btn-info.btn-lg:not(:disabled):not(.disabled).active, .btn-group-lg > .btn-info.btn:not(:disabled):not(.disabled).active,
 .show > .btn-info.btn-lg.dropdown-toggle,
 .btn-group-lg.show > .btn-info.dropdown-toggle.btn {
-  box-shadow: 0 -5.5px 0 3.5px #0aa, 0 4.5px 0 3.5px #0aa, 0 0 0 3.5px #0aa;
-  margin-top: 9px;
+  box-shadow: 0 -4px 0 3.5px #0aa, 0 5px 0 3.5px #0aa, 0 0 0 3.5px #0aa;
   color: #fff;
   border-color: white;
   background-color: #0aa;
@@ -2979,12 +2986,13 @@ fieldset:disabled a.btn {
 .btn-warning.btn-lg, .btn-group-lg > .btn-warning.btn {
   background-color: #a50;
   border: 1px solid #000;
-  padding: 8.5px 13.5px;
-  margin-top: 9px;
-  margin-left: 4px;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  padding: 8.5px 13px;
+  margin-top: 8.5px;
+  margin-left: 3px;
   margin-bottom: 18px;
-  box-shadow: 0 -5.5px 0 3.5px #a50, 0 4.5px 0 3.5px #a50, 0 0 0 3.5px #a50;
-  margin-top: 9px;
+  box-shadow: 0 -4px 0 3.5px #a50, 0 5px 0 3.5px #a50, 0 0 0 3.5px #a50;
   -webkit-filter: drop-shadow(9px 9px 0 black);
   filter: drop-shadow(9px 9px 0 black);
   margin-right: 5.5px;
@@ -2992,8 +3000,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-warning.btn-lg:hover, .btn-group-lg > .btn-warning.btn:hover {
-  box-shadow: 0 -5.5px 0 3.5px #a50, 0 4.5px 0 3.5px #a50, 0 0 0 3.5px #a50;
-  margin-top: 9px;
+  box-shadow: 0 -4px 0 3.5px #a50, 0 5px 0 3.5px #a50, 0 0 0 3.5px #a50;
   color: #fff;
   border-color: white;
   background-color: #a50;
@@ -3002,8 +3009,7 @@ fieldset:disabled a.btn {
 .btn-warning.btn-lg:not(:disabled):not(.disabled):active, .btn-group-lg > .btn-warning.btn:not(:disabled):not(.disabled):active, .btn-warning.btn-lg:not(:disabled):not(.disabled).active, .btn-group-lg > .btn-warning.btn:not(:disabled):not(.disabled).active,
 .show > .btn-warning.btn-lg.dropdown-toggle,
 .btn-group-lg.show > .btn-warning.dropdown-toggle.btn {
-  box-shadow: 0 -5.5px 0 3.5px #a50, 0 4.5px 0 3.5px #a50, 0 0 0 3.5px #a50;
-  margin-top: 9px;
+  box-shadow: 0 -4px 0 3.5px #a50, 0 5px 0 3.5px #a50, 0 0 0 3.5px #a50;
   color: #fff;
   border-color: white;
   background-color: #a50;
@@ -3059,12 +3065,13 @@ fieldset:disabled a.btn {
 .btn-danger.btn-lg, .btn-group-lg > .btn-danger.btn {
   background-color: #a00;
   border: 1px solid #000;
-  padding: 8.5px 13.5px;
-  margin-top: 9px;
-  margin-left: 4px;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  padding: 8.5px 13px;
+  margin-top: 8.5px;
+  margin-left: 3px;
   margin-bottom: 18px;
-  box-shadow: 0 -5.5px 0 3.5px #a00, 0 4.5px 0 3.5px #a00, 0 0 0 3.5px #a00;
-  margin-top: 9px;
+  box-shadow: 0 -4px 0 3.5px #a00, 0 5px 0 3.5px #a00, 0 0 0 3.5px #a00;
   -webkit-filter: drop-shadow(9px 9px 0 black);
   filter: drop-shadow(9px 9px 0 black);
   margin-right: 5.5px;
@@ -3072,8 +3079,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-danger.btn-lg:hover, .btn-group-lg > .btn-danger.btn:hover {
-  box-shadow: 0 -5.5px 0 3.5px #a00, 0 4.5px 0 3.5px #a00, 0 0 0 3.5px #a00;
-  margin-top: 9px;
+  box-shadow: 0 -4px 0 3.5px #a00, 0 5px 0 3.5px #a00, 0 0 0 3.5px #a00;
   color: #fff;
   border-color: white;
   background-color: #a00;
@@ -3082,8 +3088,7 @@ fieldset:disabled a.btn {
 .btn-danger.btn-lg:not(:disabled):not(.disabled):active, .btn-group-lg > .btn-danger.btn:not(:disabled):not(.disabled):active, .btn-danger.btn-lg:not(:disabled):not(.disabled).active, .btn-group-lg > .btn-danger.btn:not(:disabled):not(.disabled).active,
 .show > .btn-danger.btn-lg.dropdown-toggle,
 .btn-group-lg.show > .btn-danger.dropdown-toggle.btn {
-  box-shadow: 0 -5.5px 0 3.5px #a00, 0 4.5px 0 3.5px #a00, 0 0 0 3.5px #a00;
-  margin-top: 9px;
+  box-shadow: 0 -4px 0 3.5px #a00, 0 5px 0 3.5px #a00, 0 0 0 3.5px #a00;
   color: #fff;
   border-color: white;
   background-color: #a00;
@@ -3134,12 +3139,13 @@ fieldset:disabled a.btn {
 .btn-light.btn-lg, .btn-group-lg > .btn-light.btn {
   background-color: #fff;
   border: 1px solid #000;
-  padding: 8.5px 13.5px;
-  margin-top: 9px;
-  margin-left: 4px;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  padding: 8.5px 13px;
+  margin-top: 8.5px;
+  margin-left: 3px;
   margin-bottom: 18px;
-  box-shadow: 0 -5.5px 0 3.5px #fff, 0 4.5px 0 3.5px #fff, 0 0 0 3.5px #fff;
-  margin-top: 9px;
+  box-shadow: 0 -4px 0 3.5px #fff, 0 5px 0 3.5px #fff, 0 0 0 3.5px #fff;
   -webkit-filter: drop-shadow(9px 9px 0 black);
   filter: drop-shadow(9px 9px 0 black);
   margin-right: 5.5px;
@@ -3147,8 +3153,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-light.btn-lg:hover, .btn-group-lg > .btn-light.btn:hover {
-  box-shadow: 0 -5.5px 0 3.5px #bbb, 0 4.5px 0 3.5px #bbb, 0 0 0 3.5px #bbb;
-  margin-top: 9px;
+  box-shadow: 0 -4px 0 3.5px #bbb, 0 5px 0 3.5px #bbb, 0 0 0 3.5px #bbb;
   color: #fff;
   border-color: white;
   background-color: #bbb;
@@ -3157,8 +3162,7 @@ fieldset:disabled a.btn {
 .btn-light.btn-lg:not(:disabled):not(.disabled):active, .btn-group-lg > .btn-light.btn:not(:disabled):not(.disabled):active, .btn-light.btn-lg:not(:disabled):not(.disabled).active, .btn-group-lg > .btn-light.btn:not(:disabled):not(.disabled).active,
 .show > .btn-light.btn-lg.dropdown-toggle,
 .btn-group-lg.show > .btn-light.dropdown-toggle.btn {
-  box-shadow: 0 -5.5px 0 3.5px #bbb, 0 4.5px 0 3.5px #bbb, 0 0 0 3.5px #bbb;
-  margin-top: 9px;
+  box-shadow: 0 -4px 0 3.5px #bbb, 0 5px 0 3.5px #bbb, 0 0 0 3.5px #bbb;
   color: #fff;
   border-color: white;
   background-color: #bbb;
@@ -3214,12 +3218,13 @@ fieldset:disabled a.btn {
 .btn-dark.btn-lg, .btn-group-lg > .btn-dark.btn {
   background-color: #000;
   border: 1px solid #000;
-  padding: 8.5px 13.5px;
-  margin-top: 9px;
-  margin-left: 4px;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  padding: 8.5px 13px;
+  margin-top: 8.5px;
+  margin-left: 3px;
   margin-bottom: 18px;
-  box-shadow: 0 -5.5px 0 3.5px #000, 0 4.5px 0 3.5px #000, 0 0 0 3.5px #000;
-  margin-top: 9px;
+  box-shadow: 0 -4px 0 3.5px #000, 0 5px 0 3.5px #000, 0 0 0 3.5px #000;
   -webkit-filter: drop-shadow(9px 9px 0 black);
   filter: drop-shadow(9px 9px 0 black);
   margin-right: 5.5px;
@@ -3227,8 +3232,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-dark.btn-lg:hover, .btn-group-lg > .btn-dark.btn:hover {
-  box-shadow: 0 -5.5px 0 3.5px #000, 0 4.5px 0 3.5px #000, 0 0 0 3.5px #000;
-  margin-top: 9px;
+  box-shadow: 0 -4px 0 3.5px #000, 0 5px 0 3.5px #000, 0 0 0 3.5px #000;
   color: #fff;
   border-color: white;
   background-color: #000;
@@ -3237,8 +3241,7 @@ fieldset:disabled a.btn {
 .btn-dark.btn-lg:not(:disabled):not(.disabled):active, .btn-group-lg > .btn-dark.btn:not(:disabled):not(.disabled):active, .btn-dark.btn-lg:not(:disabled):not(.disabled).active, .btn-group-lg > .btn-dark.btn:not(:disabled):not(.disabled).active,
 .show > .btn-dark.btn-lg.dropdown-toggle,
 .btn-group-lg.show > .btn-dark.dropdown-toggle.btn {
-  box-shadow: 0 -5.5px 0 3.5px #000, 0 4.5px 0 3.5px #000, 0 0 0 3.5px #000;
-  margin-top: 9px;
+  box-shadow: 0 -4px 0 3.5px #000, 0 5px 0 3.5px #000, 0 0 0 3.5px #000;
   color: #fff;
   border-color: white;
   background-color: #000;
@@ -3252,9 +3255,11 @@ fieldset:disabled a.btn {
   border-color: #fff;
   background: transparent;
   border: 1px solid #fff;
-  padding: 8.5px 13.5px;
-  margin-top: 9px;
-  margin-left: 4px;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  padding: 8.5px 13px;
+  margin-top: 8.5px;
+  margin-left: 3px;
   margin-bottom: 18px;
 }
 
@@ -3284,9 +3289,11 @@ fieldset:disabled a.btn {
   border-color: #fff;
   background: transparent;
   border: 1px solid #fff;
-  padding: 8.5px 13.5px;
-  margin-top: 9px;
-  margin-left: 4px;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  padding: 8.5px 13px;
+  margin-top: 8.5px;
+  margin-left: 3px;
   margin-bottom: 18px;
 }
 
@@ -3316,9 +3323,11 @@ fieldset:disabled a.btn {
   border-color: #5f5;
   background: transparent;
   border: 1px solid #5f5;
-  padding: 8.5px 13.5px;
-  margin-top: 9px;
-  margin-left: 4px;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  padding: 8.5px 13px;
+  margin-top: 8.5px;
+  margin-left: 3px;
   margin-bottom: 18px;
 }
 
@@ -3348,9 +3357,11 @@ fieldset:disabled a.btn {
   border-color: #5ff;
   background: transparent;
   border: 1px solid #5ff;
-  padding: 8.5px 13.5px;
-  margin-top: 9px;
-  margin-left: 4px;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  padding: 8.5px 13px;
+  margin-top: 8.5px;
+  margin-left: 3px;
   margin-bottom: 18px;
 }
 
@@ -3380,9 +3391,11 @@ fieldset:disabled a.btn {
   border-color: #ff5;
   background: transparent;
   border: 1px solid #ff5;
-  padding: 8.5px 13.5px;
-  margin-top: 9px;
-  margin-left: 4px;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  padding: 8.5px 13px;
+  margin-top: 8.5px;
+  margin-left: 3px;
   margin-bottom: 18px;
 }
 
@@ -3412,9 +3425,11 @@ fieldset:disabled a.btn {
   border-color: #f55;
   background: transparent;
   border: 1px solid #f55;
-  padding: 8.5px 13.5px;
-  margin-top: 9px;
-  margin-left: 4px;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  padding: 8.5px 13px;
+  margin-top: 8.5px;
+  margin-left: 3px;
   margin-bottom: 18px;
 }
 
@@ -3442,9 +3457,11 @@ fieldset:disabled a.btn {
 .btn-outline-light {
   background: transparent;
   border: 1px solid;
-  padding: 8.5px 13.5px;
-  margin-top: 9px;
-  margin-left: 4px;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  padding: 8.5px 13px;
+  margin-top: 8.5px;
+  margin-left: 3px;
   margin-bottom: 18px;
 }
 
@@ -3473,9 +3490,11 @@ fieldset:disabled a.btn {
   border-color: #555;
   background: transparent;
   border: 1px solid #555;
-  padding: 8.5px 13.5px;
-  margin-top: 9px;
-  margin-left: 4px;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  padding: 8.5px 13px;
+  margin-top: 8.5px;
+  margin-left: 3px;
   margin-bottom: 18px;
 }
 
@@ -3588,12 +3607,13 @@ input[type="button"].btn-block {
   background-color: #bbb;
   background-clip: padding-box;
   border: 1px solid #000;
-  padding: 8.5px 4.5px;
-  margin-top: 9px;
-  margin-left: 4px;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  padding: 8.5px 4px;
+  margin-top: 8.5px;
+  margin-left: 3px;
   margin-bottom: 18px;
-  box-shadow: 0 -5.5px 0 3.5px #bbb, 0 4.5px 0 3.5px #bbb, 0 0 0 3.5px #bbb;
-  margin-top: 9px;
+  box-shadow: 0 -4px 0 3.5px #bbb, 0 5px 0 3.5px #bbb, 0 0 0 3.5px #bbb;
 }
 
 .dropdown-menu-left {
@@ -5410,12 +5430,13 @@ a.badge-dark:focus, a.badge-dark.focus {
   color: #000;
   background-color: #bbb;
   border: 1px solid #000;
-  padding: 8.5px 13.5px;
-  margin-top: 9px;
-  margin-left: 4px;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  padding: 8.5px 13px;
+  margin-top: 8.5px;
+  margin-left: 3px;
   margin-bottom: 18px;
-  box-shadow: 0 -5.5px 0 3.5px #bbb, 0 4.5px 0 3.5px #bbb, 0 0 0 3.5px #bbb;
-  margin-top: 9px;
+  box-shadow: 0 -4px 0 3.5px #bbb, 0 5px 0 3.5px #bbb, 0 0 0 3.5px #bbb;
 }
 
 .jumbotron .display-4 {
@@ -5599,9 +5620,11 @@ a.badge-dark:focus, a.badge-dark.focus {
   flex-direction: column;
   margin-bottom: 0;
   border: 1px solid #bbb;
-  padding: 8.5px 4.5px;
-  margin-top: 9px;
-  margin-left: 4px;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  padding: 8.5px 4px;
+  margin-top: 8.5px;
+  margin-left: 3px;
   margin-bottom: 18px;
 }
 

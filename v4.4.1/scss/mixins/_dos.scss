@@ -1,8 +1,11 @@
 @mixin dos-border-single($color: $black, $extra: 0, $character-space: 0) {
   border: $btn-border-width solid $color;
-  padding: $extra + ($line-height-base / 2 - .5) (($character-space + .5) * $space-width);
-  margin-top: $line-height-base / 2;
-  margin-left: $space-width / 2 - .5;
+  // In dos world, the left and right are actually a bit thicker.
+  border-left-width: 2px;
+  border-right-width: 2px;
+  padding: $extra + ($line-height-base / 2 - .5) (($character-space + .5) * $space-width - .5);
+  margin-top: $line-height-base / 2 - .5;
+  margin-left: $space-width / 2 - 1.5;
   margin-bottom: $extra + $line-height-base;
 }
 @mixin dos-border-double($color: $black, $extra:0) {
@@ -20,13 +23,22 @@
 }
 
 @mixin dos-border-background($color: $grayLight, $borderSize: 1) {
-  // this kind of crazy hackery is why this thing has like 6,000 stars...
+  $spacer: (($space-width - $borderSize) / 2);
   box-shadow: 
-    0 (-$line-height-base / 2 + ($space-width / 2 - $borderSize)) 0 ($space-width / 2 - $borderSize) $color,
-    0 ($line-height-base / 2 - ($space-width / 2)) 0 ($space-width / 2 - $borderSize) $color,
-    0   0   0 ($space-width / 2 - $borderSize) $color;
-  margin-top: $line-height-base / 2;
+    0 (-$line-height-base / 2 + $borderSize + 4) 0 $spacer - .5 $color,
+    0 ($line-height-base / 2 - 4) 0 $spacer - .5 $color,
+    0   0   0 $spacer - .5 $color;
 }
+@mixin dos-border-background-inset($color: $grayLight, $borderSize: 1) {
+  $spacer: (($space-width - $borderSize) / 2);
+  box-shadow: 
+    inset 0 (-$line-height-base / 2 + $spacer) 0 $spacer - .5 pink, //$color,
+    inset 0 ($line-height-base / 2 - $spacer) 0 $spacer - .5 orange, //$color,
+    0 (-$line-height-base / 2 + $borderSize + 4) 0 $spacer - .5 purple, //$color,
+    0 ($line-height-base / 2 - 4) 0 $spacer - .5 red,
+    0   0   0 $spacer - .5 $color;
+}
+
 @mixin dos-solid-border($color, $character-space:0) {
   @include dos-border-single($character-space: $character-space);
   @include dos-border-background($color: $color);
