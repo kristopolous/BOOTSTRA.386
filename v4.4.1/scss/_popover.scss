@@ -14,7 +14,6 @@
   background-color: $popover-bg;
   background-clip: padding-box;
   border: $popover-border-width solid $popover-border-color;
-  @include box-shadow($popover-box-shadow);
 
   .arrow {
     position: absolute;

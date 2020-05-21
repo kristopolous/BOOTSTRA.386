@@ -114,7 +114,6 @@
   background-color: $modal-content-bg;
   background-clip: padding-box;
   border: $modal-content-border-width solid $modal-content-border-color;
-  @include box-shadow($modal-content-box-shadow-xs);
   // Remove focus outline from opened modal
   outline: 0;
 }
@@ -218,7 +217,6 @@
   }
 
   .modal-content {
-    @include box-shadow($modal-content-box-shadow-sm-up);
   }
 
   .modal-sm { max-width: $modal-sm; }

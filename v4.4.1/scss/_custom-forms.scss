@@ -30,7 +30,6 @@
   &:checked ~ .custom-control-label::before {
     color: $custom-control-indicator-checked-color;
     border-color: $custom-control-indicator-checked-border-color;
-    @include box-shadow($custom-control-indicator-checked-box-shadow);
   }
 
   &:focus ~ .custom-control-label::before {
@@ -50,7 +49,6 @@
     color: $custom-control-indicator-active-color;
     background-color: $custom-control-indicator-active-bg;
     border-color: $custom-control-indicator-active-border-color;
-    @include box-shadow($custom-control-indicator-active-box-shadow);
   }
 
   // Use [disabled] and :disabled to work around https://github.com/twbs/bootstrap/issues/28247
@@ -89,7 +87,6 @@
     content: "";
     background-color: $custom-control-indicator-bg;
     border: $custom-control-indicator-border-color solid $custom-control-indicator-border-width;
-    @include box-shadow($custom-control-indicator-box-shadow);
   }
 
   // Foreground (icon)
@@ -123,7 +120,6 @@
   .custom-control-input:indeterminate ~ .custom-control-label {
     &::before {
       border-color: $custom-checkbox-indicator-indeterminate-border-color;
-      @include box-shadow($custom-checkbox-indicator-indeterminate-box-shadow);
     }
     &::after {
       background-image: escape-svg($custom-checkbox-indicator-icon-indeterminate);
@@ -223,7 +219,6 @@
   vertical-align: middle;
   background: $custom-select-bg $custom-select-background;
   border: $custom-select-border-width solid $custom-select-border-color;
-  @include box-shadow($custom-select-box-shadow);
   appearance: none;
 
   &:focus {
@@ -343,7 +338,6 @@
   color: $custom-file-color;
   background-color: $custom-file-bg;
   border: $custom-file-border-width solid $custom-file-border-color;
-  @include box-shadow($custom-file-box-shadow);
 
   &::after {
     position: absolute;
@@ -393,7 +387,6 @@
     height: $custom-range-thumb-height;
     margin-top: ($custom-range-track-height - $custom-range-thumb-height) / 2; // Webkit specific
     border: $custom-range-thumb-border;
-    @include box-shadow($custom-range-thumb-box-shadow);
     @include transition($custom-forms-transition);
     appearance: none;
 
@@ -408,14 +401,12 @@
     cursor: $custom-range-track-cursor;
     background-color: $custom-range-track-bg;
     border-color: transparent;
-    @include box-shadow($custom-range-track-box-shadow);
   }
 
   &::-moz-range-thumb {
     width: $custom-range-thumb-width;
     height: $custom-range-thumb-height;
     border: $custom-range-thumb-border;
-    @include box-shadow($custom-range-thumb-box-shadow);
     @include transition($custom-forms-transition);
     appearance: none;
 
@@ -430,7 +421,6 @@
     cursor: $custom-range-track-cursor;
     background-color: $custom-range-track-bg;
     border-color: transparent; // Firefox specific?
-    @include box-shadow($custom-range-track-box-shadow);
   }
 
   &::-ms-thumb {
@@ -440,7 +430,6 @@
     margin-right: $custom-range-thumb-focus-box-shadow-width; // Workaround that overflowed box-shadow is hidden.
     margin-left: $custom-range-thumb-focus-box-shadow-width;  // Workaround that overflowed box-shadow is hidden.
     border: $custom-range-thumb-border;
-    @include box-shadow($custom-range-thumb-box-shadow);
     @include transition($custom-forms-transition);
     appearance: none;
 
@@ -456,7 +445,6 @@
     background-color: transparent;
     border-color: transparent;
     border-width: $custom-range-thumb-height / 2;
-    @include box-shadow($custom-range-track-box-shadow);
   }
 
   &::-ms-fill-lower {

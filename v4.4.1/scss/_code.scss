@@ -16,13 +16,11 @@ kbd {
   @include font-size($kbd-font-size);
   color: $kbd-color;
   background-color: $kbd-bg;
-  @include box-shadow($kbd-box-shadow);
 
   kbd {
     padding: 0;
     @include font-size(100%);
     font-weight: $nested-kbd-font-weight;
-    @include box-shadow(none);
   }
 }
 
