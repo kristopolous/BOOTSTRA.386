@@ -6,13 +6,11 @@
 .badge {
   display: inline-block;
   padding: $badge-padding-y $badge-padding-x;
-  @include font-size($badge-font-size);
   font-weight: $badge-font-weight;
   line-height: 1;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
-  @include transition($badge-transition);
 
   @at-root a#{&} {
     @include hover-focus() {

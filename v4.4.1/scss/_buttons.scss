@@ -16,8 +16,6 @@
   user-select: none;
   background-color: $grayLight;
 
-  //@include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
-  //@include transition($btn-transition);
   border: none;
   padding: 0 $space-width * 2;
 
@@ -136,7 +134,7 @@ fieldset:disabled a.btn {
 .btn-sm {
   //@include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
   border: 0;
-  padding: 0 $space-width * 2;
+  padding: 0 $space-width;
   box-shadow: none;
   margin-left: 0;
   &:before {

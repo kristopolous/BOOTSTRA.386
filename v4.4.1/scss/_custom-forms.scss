@@ -181,7 +181,6 @@
       height: $custom-switch-indicator-size;
       background-color: $custom-control-indicator-border-color;
       // stylelint-disable-next-line property-blacklist
-      @include transition(transform .15s ease-in-out, $custom-forms-transition);
     }
   }
 
@@ -387,7 +386,6 @@
     height: $custom-range-thumb-height;
     margin-top: ($custom-range-track-height - $custom-range-thumb-height) / 2; // Webkit specific
     border: $custom-range-thumb-border;
-    @include transition($custom-forms-transition);
     appearance: none;
 
     &:active {
@@ -407,7 +405,6 @@
     width: $custom-range-thumb-width;
     height: $custom-range-thumb-height;
     border: $custom-range-thumb-border;
-    @include transition($custom-forms-transition);
     appearance: none;
 
     &:active {
@@ -430,7 +427,6 @@
     margin-right: $custom-range-thumb-focus-box-shadow-width; // Workaround that overflowed box-shadow is hidden.
     margin-left: $custom-range-thumb-focus-box-shadow-width;  // Workaround that overflowed box-shadow is hidden.
     border: $custom-range-thumb-border;
-    @include transition($custom-forms-transition);
     appearance: none;
 
     &:active {
@@ -482,5 +478,4 @@
 .custom-control-label::before,
 .custom-file-label,
 .custom-select {
-  @include transition($custom-forms-transition);
 }

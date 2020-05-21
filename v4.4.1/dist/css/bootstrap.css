@@ -2122,12 +2122,6 @@ pre code {
   border: 0 solid #555;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .form-control {
-    transition: none;
-  }
-}
-
 .form-control::-ms-expand {
   background-color: transparent;
   border: 0;
@@ -3528,7 +3522,7 @@ fieldset:disabled a.btn {
 
 .btn-sm, .btn-group-sm > .btn {
   border: 0;
-  padding: 0 18px;
+  padding: 0 9px;
   box-shadow: none;
   margin-left: 0;
 }
@@ -3556,32 +3550,6 @@ input[type="submit"].btn-block,
 input[type="reset"].btn-block,
 input[type="button"].btn-block {
   width: 100%;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .fade {
-    transition: none;
-  }
-}
-
-.fade:not(.show) {
-  opacity: 0;
-}
-
-.collapse:not(.show) {
-  display: none;
-}
-
-.collapsing {
-  position: relative;
-  height: 0;
-  overflow: hidden;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .collapsing {
-    transition: none;
-  }
 }
 
 .dropup,
@@ -3743,7 +3711,6 @@ input[type="button"].btn-block {
 .dropleft .dropdown-toggle::before {
   display: inline-block;
   margin-right: 9px;
-  content: "";
   content: "\25c4";
 }
 
@@ -4203,12 +4170,6 @@ input[type="button"].btn-block {
   background-color: #555;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .custom-switch .custom-control-label::after {
-    transition: none;
-  }
-}
-
 .custom-switch .custom-control-input:checked ~ .custom-control-label::after {
   background-color: #000084;
   -webkit-transform: translateX(0.75rem);
@@ -4387,13 +4348,6 @@ input[type="button"].btn-block {
   appearance: none;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .custom-range::-webkit-slider-thumb {
-    -webkit-transition: none;
-    transition: none;
-  }
-}
-
 .custom-range::-webkit-slider-runnable-track {
   width: 100%;
   height: 0.5rem;
@@ -4409,13 +4363,6 @@ input[type="button"].btn-block {
   border: 0;
   -moz-appearance: none;
   appearance: none;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .custom-range::-moz-range-thumb {
-    -moz-transition: none;
-    transition: none;
-  }
 }
 
 .custom-range::-moz-range-track {
@@ -4435,13 +4382,6 @@ input[type="button"].btn-block {
   margin-left: 0;
   border: 0;
   appearance: none;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .custom-range::-ms-thumb {
-    -ms-transition: none;
-    transition: none;
-  }
 }
 
 .custom-range::-ms-track {
@@ -4481,14 +4421,6 @@ input[type="button"].btn-block {
 
 .custom-range:disabled::-ms-thumb {
   background-color: #555;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .custom-control-label::before,
-  .custom-file-label,
-  .custom-select {
-    transition: none;
-  }
 }
 
 .nav {
@@ -5263,18 +5195,11 @@ input[type="button"].btn-block {
 .badge {
   display: inline-block;
   padding: 0 9px;
-  font-size: 18px;
   font-weight: 400;
   line-height: 1;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .badge {
-    transition: none;
-  }
 }
 
 a.badge:hover, a.badge:focus {
@@ -5651,12 +5576,6 @@ a.badge-dark:focus, a.badge-dark.focus {
   text-align: center;
   white-space: nowrap;
   background-color: #bbb;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .progress-bar {
-    transition: none;
-  }
 }
 
 .progress-bar-striped {
@@ -6065,12 +5984,6 @@ a.close.disabled {
 .modal.fade .modal-dialog {
   -webkit-transform: translate(0, -50px);
   transform: translate(0, -50px);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .modal.fade .modal-dialog {
-    transition: none;
-  }
 }
 
 .modal.show .modal-dialog {
@@ -6554,12 +6467,6 @@ a.close.disabled {
   backface-visibility: hidden;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .carousel-item {
-    transition: none;
-  }
-}
-
 .carousel-item.active,
 .carousel-item-next,
 .carousel-item-prev {
@@ -6598,13 +6505,6 @@ a.close.disabled {
   opacity: 0;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .carousel-fade .active.carousel-item-left,
-  .carousel-fade .active.carousel-item-right {
-    transition: none;
-  }
-}
-
 .carousel-control-prev,
 .carousel-control-next {
   position: absolute;
@@ -6621,13 +6521,6 @@ a.close.disabled {
   color: #fff;
   text-align: center;
   opacity: 0.5;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .carousel-control-prev,
-  .carousel-control-next {
-    transition: none;
-  }
 }
 
 .carousel-control-prev:hover, .carousel-control-prev:focus,
@@ -6694,12 +6587,6 @@ a.close.disabled {
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
   opacity: .5;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .carousel-indicators li {
-    transition: none;
-  }
 }
 
 .carousel-indicators .active {

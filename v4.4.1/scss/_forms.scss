@@ -18,9 +18,6 @@
   background-clip: padding-box;
   border: $input-border-width solid $input-border-color;
 
-  // Note: This has no effect on <select>s in some browsers, due to the limited stylability of `<select>`s in CSS.
-  @include transition($input-transition);
-
   // Unstyle the caret on `<select>`s in IE10+.
   &::-ms-expand {
     background-color: transparent;

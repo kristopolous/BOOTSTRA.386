@@ -36,7 +36,6 @@
       &::before {
         display: inline-block;
         margin-right: $caret-spacing;
-        content: "";
         @include caret-left();
       }
     }
