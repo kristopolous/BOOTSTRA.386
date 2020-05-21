@@ -39,17 +39,9 @@ fieldset:disabled a.btn {
 // Alternate buttons
 //
 
-.svgpath {
-  color: blue;
-  fill: blue;
-  stroke: blue;
-}
 @each $color, $value in $theme-colors {
   .bs-component>.btn-#{$color}:not(.disabled):not(.btn-sm):not(.btn-lg) {
     @include hover() {
-      &:before, &:after {
-        color: brighten($value);
-      }
       &:before {
         content: '\25ba\20';
       }
@@ -61,11 +53,15 @@ fieldset:disabled a.btn {
     }
   }
   .btn-#{$color} {
+    @include hover() {
+      &:before,&:after {
+        color: brighten($value);
+      }
+    }
     @include button-variant($value, $value);
     background-color: $value;
 
     &.btn-lg {
-      &:after, &:before { content: ""; }
       background-color: $value;
       @include dos-solid-border($value, $character-space: 1);
       @include dos-shadow();

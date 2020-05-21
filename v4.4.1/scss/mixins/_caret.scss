@@ -1,19 +1,22 @@
 @mixin caret-down() {
-  content: "▾";
+  content: "\25bc";
 }
 
 @mixin caret-up() {
-  content: "▴";
+  content: "\25b2";
 }
 
 @mixin caret-right() {
+  content: "\25ba";
 }
 
 @mixin caret-left() {
+  content: "\25c4";
 }
 
 @mixin caret($direction: down) {
   @if $enable-caret {
+    padding: 0 $space-width;
     &::after {
       display: inline-block;
       @if $direction == down {

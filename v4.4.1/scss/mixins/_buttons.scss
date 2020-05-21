@@ -12,9 +12,6 @@
   @include hover() {
     color: brighten($border);
     border-color: $white;
-    &:after, &:before {
-      color: black;
-    }
   }
 
   &:focus,
@@ -60,15 +57,6 @@
   .show > &.dropdown-toggle {
     color: brighten($color);
     border-color: $color;
-
-    &:focus {
-      // Avoid using mixin so we can pass custom focus shadow properly
-      @if $enable-shadows and $btn-active-box-shadow != none {
-        box-shadow: $btn-active-box-shadow, 0 0 0 $btn-focus-width rgba($color, .5);
-      } @else {
-        box-shadow: 0 0 0 $btn-focus-width rgba($color, .5);
-      }
-    }
   }
 }
 
