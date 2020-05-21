@@ -89,13 +89,13 @@ ol,
 ul,
 dl {
   margin-top: 0;
-  margin-left: 10px;
+  margin-left: 9px;
   padding-left: 0;
   margin-bottom: 20.1px;
 }
 
 li {
-  padding-left: 10px;
+  padding-left: 9px;
 }
 
 li:before {

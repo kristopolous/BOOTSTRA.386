@@ -184,12 +184,7 @@ $line-height-base:            20.1px !default;
 
 $font-size-lg:                $font-size-base !default;
 $font-size-sm:                $font-size-base !default;
-$space-width:                 10px !default;
-// The font-rendering subengines are different on the browsers
-// and this means that they have to be slightly different numbers depending on the browser
-@supports (-moz-appearance:none) {
-  $space-width:                 10px !default;
-}
+$space-width:                 9px !default;
 // Spacing
 //
 // Control the default styling of most Bootstrap elements by modifying these

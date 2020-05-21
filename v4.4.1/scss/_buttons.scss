@@ -45,18 +45,24 @@ fieldset:disabled a.btn {
   stroke: blue;
 }
 @each $color, $value in $theme-colors {
+  .bs-component>.btn-#{$color}:not(.disabled):not(.btn-sm):not(.btn-lg) {
+    @include hover() {
+      &:before, &:after {
+        color: brighten($value);
+      }
+      &:before {
+        content: '\25ba\20';
+      }
+      &:after {
+        content: ' \25c4';
+      }
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
   .btn-#{$color} {
     @include button-variant($value, $value);
     background-color: $value;
-    &:not(:disabled):not(.disabled) {
-      @include hover() {
-        background: 
-         url('fonts/grey/triagrt_Px437_IBM_EGA8.svg') 0 0 / 9px no-repeat, 
-         url('fonts/grey/triaglf_Px437_IBM_EGA8.svg') top 0 right 0 / 9px no-repeat, 
-         darken($value);
-        background-blend-mode: luminosity;
-      }
-    }
 
     &.btn-lg {
       &:after, &:before { content: ""; }
