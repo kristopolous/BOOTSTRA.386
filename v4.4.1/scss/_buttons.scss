@@ -134,16 +134,14 @@ fieldset:disabled a.btn {
 .btn-sm {
   //@include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
   border: 0;
-  padding: 0 $space-width;
+  padding: 0;
   box-shadow: none;
   margin-left: 0;
   &:before {
-    content: '< ';
-    color: $white;
+    content: '<';
   }
   &:after {
-    content: ' >';
-    color: $white;
+    content: '>';
   }
 }
 
