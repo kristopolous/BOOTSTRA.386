@@ -3264,12 +3264,13 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-primary:hover {
-  border: 3px double #fff;
-  padding: 6.5px 12.5px 7.5px;
-  margin-top: 8px;
-  margin-right: -1px;
-  margin-bottom: 17px;
+  border: 1px solid #555;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  padding: 8.5px 13px;
+  margin-top: 8.5px;
   margin-left: 3px;
+  margin-bottom: 27px;
   color: #fff;
 }
 
@@ -3298,12 +3299,13 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-secondary:hover {
-  border: 3px double #fff;
-  padding: 6.5px 12.5px 7.5px;
-  margin-top: 8px;
-  margin-right: -1px;
-  margin-bottom: 17px;
+  border: 1px solid #555;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  padding: 8.5px 13px;
+  margin-top: 8.5px;
   margin-left: 3px;
+  margin-bottom: 27px;
   color: #fff;
 }
 
@@ -3332,12 +3334,13 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-success:hover {
-  border: 3px double #5f5;
-  padding: 6.5px 12.5px 7.5px;
-  margin-top: 8px;
-  margin-right: -1px;
-  margin-bottom: 17px;
+  border: 1px solid #0a0;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  padding: 8.5px 13px;
+  margin-top: 8.5px;
   margin-left: 3px;
+  margin-bottom: 27px;
   color: #fff;
 }
 
@@ -3366,12 +3369,13 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-info:hover {
-  border: 3px double #5ff;
-  padding: 6.5px 12.5px 7.5px;
-  margin-top: 8px;
-  margin-right: -1px;
-  margin-bottom: 17px;
+  border: 1px solid #0aa;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  padding: 8.5px 13px;
+  margin-top: 8.5px;
   margin-left: 3px;
+  margin-bottom: 27px;
   color: #fff;
 }
 
@@ -3400,12 +3404,13 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-warning:hover {
-  border: 3px double #ff5;
-  padding: 6.5px 12.5px 7.5px;
-  margin-top: 8px;
-  margin-right: -1px;
-  margin-bottom: 17px;
+  border: 1px solid #a50;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  padding: 8.5px 13px;
+  margin-top: 8.5px;
   margin-left: 3px;
+  margin-bottom: 27px;
   color: #fff;
 }
 
@@ -3434,12 +3439,13 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-danger:hover {
-  border: 3px double #f55;
-  padding: 6.5px 12.5px 7.5px;
-  margin-top: 8px;
-  margin-right: -1px;
-  margin-bottom: 17px;
+  border: 1px solid #a00;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  padding: 8.5px 13px;
+  margin-top: 8.5px;
   margin-left: 3px;
+  margin-bottom: 27px;
   color: #fff;
 }
 
@@ -3466,12 +3472,13 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-light:hover {
-  border: 3px double;
-  padding: 6.5px 12.5px 7.5px;
-  margin-top: 8px;
-  margin-right: -1px;
-  margin-bottom: 17px;
+  border: 1px solid #bbb;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  padding: 8.5px 13px;
+  margin-top: 8.5px;
   margin-left: 3px;
+  margin-bottom: 27px;
   color: #fff;
 }
 
@@ -3499,12 +3506,13 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-dark:hover {
-  border: 3px double #555;
-  padding: 6.5px 12.5px 7.5px;
-  margin-top: 8px;
-  margin-right: -1px;
-  margin-bottom: 17px;
+  border: 1px solid #000;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  padding: 8.5px 13px;
+  margin-top: 8.5px;
   margin-left: 3px;
+  margin-bottom: 27px;
   color: #fff;
 }
 

@@ -42,7 +42,7 @@
 
   @include dos-border-single(brighten($color), $character-space: 1);
   @include hover() {
-    @include dos-border-double(brighten($color));
+    @include dos-border-single(darken($color), $character-space: 1);
     color: $white;
   }
 

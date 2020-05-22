@@ -8,14 +8,6 @@
   margin-left: $space-width / 2 - 1.5;
   margin-bottom: $extra + 1.5 * $line-height-base;
 }
-@mixin dos-border-double($color: $black, $extra:0) {
-  border: 3px double $color;
-  padding: $extra + ($line-height-base / 2 - 2.5) (1.5 * $space-width - 1) $extra + ($line-height-base / 2 - 1.5);
-  margin-top: $line-height-base / 2 - 1;
-  margin-right: -1px;
-  margin-bottom: $extra + $line-height-base - 1;
-  margin-left: $space-width / 2 - 1.5;
-}
 
 @mixin dos-shadow($color: black) {
   filter: drop-shadow($line-height-base / 2 $space-width 0 $color);
