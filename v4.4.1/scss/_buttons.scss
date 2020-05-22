@@ -58,7 +58,6 @@ fieldset:disabled a.btn {
     }
     @include button-variant($value, $value);
     background-color: $value;
-
     &.btn-lg {
       background-color: $value;
       @include dos-solid-border($value, $character-space: 1);

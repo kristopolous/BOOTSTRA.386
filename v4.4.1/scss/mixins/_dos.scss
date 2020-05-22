@@ -6,7 +6,7 @@
   padding: $extra + ($line-height-base / 2 - .5) (($character-space + .5) * $space-width - .5);
   margin-top: $line-height-base / 2 - .5;
   margin-left: $space-width / 2 - 1.5;
-  margin-bottom: $extra + $line-height-base;
+  margin-bottom: $extra + 1.5 * $line-height-base;
 }
 @mixin dos-border-double($color: $black, $extra:0) {
   border: 3px double $color;
