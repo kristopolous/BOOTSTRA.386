@@ -421,7 +421,7 @@ h4, .h4 {
   padding: 8.5px 4px;
   margin-top: 8.5px;
   margin-left: 3px;
-  margin-bottom: 18px;
+  margin-bottom: 27px;
 }
 
 h5, h6,
@@ -2176,7 +2176,7 @@ select.form-control {
   padding: 8.5px 4px;
   margin-top: 8.5px;
   margin-left: 3px;
-  margin-bottom: 18px;
+  margin-bottom: 27px;
   box-shadow: 0 -4px 0 3.5px #bbb, 0 5px 0 3.5px #bbb, 0 0 0 3.5px #bbb;
   color: #000;
 }
@@ -2258,7 +2258,7 @@ textarea.form-control {
   padding: 8.5px 4px;
   margin-top: 8.5px;
   margin-left: 3px;
-  margin-bottom: 18px;
+  margin-bottom: 27px;
   box-shadow: inset 0 -5px 0 3.5px #bbb, inset 0 5px 0 3.5px #bbb, 0 -4px 0 3.5px #bbb, 0 5px 0 3.5px #bbb, 0 0 0 3.5px #bbb;
 }
 
@@ -2269,7 +2269,7 @@ input.form-control {
 }
 
 .form-group {
-  margin-bottom: 1rem;
+  margin-bottom: 18px;
 }
 
 .form-text {
@@ -2675,7 +2675,7 @@ fieldset:disabled a.btn {
   padding: 8.5px 13px;
   margin-top: 8.5px;
   margin-left: 3px;
-  margin-bottom: 18px;
+  margin-bottom: 27px;
   box-shadow: 0 -4px 0 3.5px #bbb, 0 5px 0 3.5px #bbb, 0 0 0 3.5px #bbb;
   -webkit-filter: drop-shadow(9px 9px 0 black);
   filter: drop-shadow(9px 9px 0 black);
@@ -2754,7 +2754,7 @@ fieldset:disabled a.btn {
   padding: 8.5px 13px;
   margin-top: 8.5px;
   margin-left: 3px;
-  margin-bottom: 18px;
+  margin-bottom: 27px;
   box-shadow: 0 -4px 0 3.5px #bbb, 0 5px 0 3.5px #bbb, 0 0 0 3.5px #bbb;
   -webkit-filter: drop-shadow(9px 9px 0 black);
   filter: drop-shadow(9px 9px 0 black);
@@ -2833,7 +2833,7 @@ fieldset:disabled a.btn {
   padding: 8.5px 13px;
   margin-top: 8.5px;
   margin-left: 3px;
-  margin-bottom: 18px;
+  margin-bottom: 27px;
   box-shadow: 0 -4px 0 3.5px #0a0, 0 5px 0 3.5px #0a0, 0 0 0 3.5px #0a0;
   -webkit-filter: drop-shadow(9px 9px 0 black);
   filter: drop-shadow(9px 9px 0 black);
@@ -2912,7 +2912,7 @@ fieldset:disabled a.btn {
   padding: 8.5px 13px;
   margin-top: 8.5px;
   margin-left: 3px;
-  margin-bottom: 18px;
+  margin-bottom: 27px;
   box-shadow: 0 -4px 0 3.5px #0aa, 0 5px 0 3.5px #0aa, 0 0 0 3.5px #0aa;
   -webkit-filter: drop-shadow(9px 9px 0 black);
   filter: drop-shadow(9px 9px 0 black);
@@ -2991,7 +2991,7 @@ fieldset:disabled a.btn {
   padding: 8.5px 13px;
   margin-top: 8.5px;
   margin-left: 3px;
-  margin-bottom: 18px;
+  margin-bottom: 27px;
   box-shadow: 0 -4px 0 3.5px #a50, 0 5px 0 3.5px #a50, 0 0 0 3.5px #a50;
   -webkit-filter: drop-shadow(9px 9px 0 black);
   filter: drop-shadow(9px 9px 0 black);
@@ -3070,7 +3070,7 @@ fieldset:disabled a.btn {
   padding: 8.5px 13px;
   margin-top: 8.5px;
   margin-left: 3px;
-  margin-bottom: 18px;
+  margin-bottom: 27px;
   box-shadow: 0 -4px 0 3.5px #a00, 0 5px 0 3.5px #a00, 0 0 0 3.5px #a00;
   -webkit-filter: drop-shadow(9px 9px 0 black);
   filter: drop-shadow(9px 9px 0 black);
@@ -3144,7 +3144,7 @@ fieldset:disabled a.btn {
   padding: 8.5px 13px;
   margin-top: 8.5px;
   margin-left: 3px;
-  margin-bottom: 18px;
+  margin-bottom: 27px;
   box-shadow: 0 -4px 0 3.5px #fff, 0 5px 0 3.5px #fff, 0 0 0 3.5px #fff;
   -webkit-filter: drop-shadow(9px 9px 0 black);
   filter: drop-shadow(9px 9px 0 black);
@@ -3223,7 +3223,7 @@ fieldset:disabled a.btn {
   padding: 8.5px 13px;
   margin-top: 8.5px;
   margin-left: 3px;
-  margin-bottom: 18px;
+  margin-bottom: 27px;
   box-shadow: 0 -4px 0 3.5px #000, 0 5px 0 3.5px #000, 0 0 0 3.5px #000;
   -webkit-filter: drop-shadow(9px 9px 0 black);
   filter: drop-shadow(9px 9px 0 black);
@@ -3260,7 +3260,7 @@ fieldset:disabled a.btn {
   padding: 8.5px 13px;
   margin-top: 8.5px;
   margin-left: 3px;
-  margin-bottom: 18px;
+  margin-bottom: 27px;
 }
 
 .btn-outline-primary:hover {
@@ -3294,7 +3294,7 @@ fieldset:disabled a.btn {
   padding: 8.5px 13px;
   margin-top: 8.5px;
   margin-left: 3px;
-  margin-bottom: 18px;
+  margin-bottom: 27px;
 }
 
 .btn-outline-secondary:hover {
@@ -3328,7 +3328,7 @@ fieldset:disabled a.btn {
   padding: 8.5px 13px;
   margin-top: 8.5px;
   margin-left: 3px;
-  margin-bottom: 18px;
+  margin-bottom: 27px;
 }
 
 .btn-outline-success:hover {
@@ -3362,7 +3362,7 @@ fieldset:disabled a.btn {
   padding: 8.5px 13px;
   margin-top: 8.5px;
   margin-left: 3px;
-  margin-bottom: 18px;
+  margin-bottom: 27px;
 }
 
 .btn-outline-info:hover {
@@ -3396,7 +3396,7 @@ fieldset:disabled a.btn {
   padding: 8.5px 13px;
   margin-top: 8.5px;
   margin-left: 3px;
-  margin-bottom: 18px;
+  margin-bottom: 27px;
 }
 
 .btn-outline-warning:hover {
@@ -3430,7 +3430,7 @@ fieldset:disabled a.btn {
   padding: 8.5px 13px;
   margin-top: 8.5px;
   margin-left: 3px;
-  margin-bottom: 18px;
+  margin-bottom: 27px;
 }
 
 .btn-outline-danger:hover {
@@ -3462,7 +3462,7 @@ fieldset:disabled a.btn {
   padding: 8.5px 13px;
   margin-top: 8.5px;
   margin-left: 3px;
-  margin-bottom: 18px;
+  margin-bottom: 27px;
 }
 
 .btn-outline-light:hover {
@@ -3495,7 +3495,7 @@ fieldset:disabled a.btn {
   padding: 8.5px 13px;
   margin-top: 8.5px;
   margin-left: 3px;
-  margin-bottom: 18px;
+  margin-bottom: 27px;
 }
 
 .btn-outline-dark:hover {
@@ -3612,7 +3612,7 @@ input[type="button"].btn-block {
   padding: 8.5px 4px;
   margin-top: 8.5px;
   margin-left: 3px;
-  margin-bottom: 18px;
+  margin-bottom: 27px;
   box-shadow: 0 -4px 0 3.5px #bbb, 0 5px 0 3.5px #bbb, 0 0 0 3.5px #bbb;
 }
 
@@ -5435,7 +5435,7 @@ a.badge-dark:focus, a.badge-dark.focus {
   padding: 8.5px 13px;
   margin-top: 8.5px;
   margin-left: 3px;
-  margin-bottom: 18px;
+  margin-bottom: 27px;
   box-shadow: 0 -4px 0 3.5px #bbb, 0 5px 0 3.5px #bbb, 0 0 0 3.5px #bbb;
 }
 
@@ -5625,7 +5625,7 @@ a.badge-dark:focus, a.badge-dark.focus {
   padding: 8.5px 4px;
   margin-top: 8.5px;
   margin-left: 3px;
-  margin-bottom: 18px;
+  margin-bottom: 27px;
 }
 
 .list-group-item-action {
