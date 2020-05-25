@@ -7,18 +7,22 @@ var list = ["// This file is auto-generated from icon-gen in the root directory"
 [
   ['[\u25A0]', 'checkbox-checked', 'custom-checkbox-indicator-icon-checked'],
   ['[ ]', 'checkbox-unchecked', ''],
-  ['(\u2022)', 'radio-checked', ''],
+  ['(\u2022)', 'radio-checked', 'custom-radio-indicator-icon-checked'],
   ['( )', 'radio-unchecked', '']
 ].forEach(row => {
   let [str, name, bsname] = row;
-  const options = {x: 0, y: 0, fontSize: 18, anchor: 'top'}
-  const svg = textToSVG.getSVG(str, options);
+
+  const svg = textToSVG.getSVG(str, {
+    x: 0, y: 0, 
+    fontSize: 18, anchor: 'top',
+    attributes: { fill: '#bbbbbb'}
+  });
+
   fs.writeFileSync(`${name}.svg`, svg);
+
   if(bsname) {
-    list.push(`$${bsname}: url('data:image/svg+xml,${svg}')`);
+    list.push(`$${bsname}: url('data:image/svg+xml,${svg}');`);
   }
 });
 
-fs.writeFileSync(`v4.4.1/scss/_autogen.scss`, list.join('\n'));/*(, (e) => {
-  console.log("Auto gen written, content:\n" + list.join('\n'));
-});*/
+fs.writeFileSync(`v4.4.1/scss/_autogen.scss`, list.join('\n'));
