@@ -4051,7 +4051,7 @@ input[type="button"].btn-block {
   position: relative;
   display: block;
   min-height: 18px;
-  padding-left: 27px;
+  padding-left: 36px;
 }
 
 .custom-control-inline {
@@ -4064,7 +4064,7 @@ input[type="button"].btn-block {
   position: absolute;
   left: 0;
   z-index: -1;
-  width: 27px;
+  width: 36px;
   height: 18px;
   opacity: 0;
 }
@@ -4072,10 +4072,6 @@ input[type="button"].btn-block {
 .custom-control-input:checked ~ .custom-control-label::before {
   color: #fff;
   border-color: #bbb;
-}
-
-.custom-control-input:focus ~ .custom-control-label::before {
-  box-shadow: 0 0 0 0 rgba(187, 187, 187, 0.25);
 }
 
 .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
@@ -4089,11 +4085,11 @@ input[type="button"].btn-block {
 }
 
 .custom-control-input[disabled] ~ .custom-control-label, .custom-control-input:disabled ~ .custom-control-label {
-  color: #bbb;
+  color: #555;
 }
 
-.custom-control-input[disabled] ~ .custom-control-label::before, .custom-control-input:disabled ~ .custom-control-label::before {
-  background-color: #555;
+.custom-control-input[disabled] ~ .custom-control-label::before, .custom-control-input[disabled] ~ .custom-control-label::after, .custom-control-input:disabled ~ .custom-control-label::before, .custom-control-input:disabled ~ .custom-control-label::after {
+  color: #555;
 }
 
 .custom-control-label {
@@ -4105,9 +4101,9 @@ input[type="button"].btn-block {
 .custom-control-label::before {
   position: absolute;
   top: 0;
-  left: -27px;
+  left: -36px;
   display: block;
-  width: 27px;
+  width: 36px;
   height: 18px;
   pointer-events: none;
   content: "";
@@ -4118,81 +4114,82 @@ input[type="button"].btn-block {
 .custom-control-label::after {
   position: absolute;
   top: 0;
-  left: -27px;
+  left: -36px;
   display: block;
-  width: 27px;
+  width: 36px;
   height: 18px;
   content: "";
   background: no-repeat 50% / 50% 50%;
 }
 
+.custom-checkbox .custom-control-label::after {
+  content: '[ ]';
+}
+
 .custom-checkbox .custom-control-input:checked ~ .custom-control-label {
-  background: purple;
+  color: #fff;
 }
 
 .custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
-  background-image: url('data:image/svg+xml,%3csvg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="15.75"%3e%3cpath d="M4.50 11.25L4.50 3.38L6.75 3.38L6.75 2.25L2.25 2.25L2.25 12.38L6.75 12.38L6.75 11.25ZM10.13 11.25L15.75 11.25L15.75 4.50L10.13 4.50ZM22.50 11.25L20.25 11.25L20.25 12.38L24.75 12.38L24.75 2.25L20.25 2.25L20.25 3.38L22.50 3.38Z"/%3e%3c/svg%3e');
+  color: #fff;
+  content: '[X]';
 }
 
-.custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label {
-  background: pink;
-}
-
-.custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::before {
-  border-color: #bbb;
-}
-
-.custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::after {
-  background-image: url('data:image/svg+xml,%3csvg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="15.75"%3e%3cpath d="M4.50 11.25L4.50 3.38L6.75 3.38L6.75 2.25L2.25 2.25L2.25 12.38L6.75 12.38L6.75 11.25ZM10.13 11.25L15.75 11.25L15.75 4.50L10.13 4.50ZM22.50 11.25L20.25 11.25L20.25 12.38L24.75 12.38L24.75 2.25L20.25 2.25L20.25 3.38L22.50 3.38Z"/%3e%3c/svg%3e');
+.custom-checkbox .custom-control-input:disabled {
+  /*
+    &:indeterminate ~ .custom-control-label::before {
+      background-color: $custom-control-indicator-checked-disabled-bg;
+    }
+    */
 }
 
 .custom-checkbox .custom-control-input:disabled:checked ~ .custom-control-label::before {
-  background-color: rgba(187, 187, 187, 0.5);
+  color: #555;
 }
 
-.custom-checkbox .custom-control-input:disabled:indeterminate ~ .custom-control-label::before {
-  background-color: rgba(187, 187, 187, 0.5);
+.custom-radio .custom-control-label::after {
+  content: '( )';
 }
 
-.custom-radio .custom-control-label::before {
-  background: orange;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+.custom-radio .custom-control-input:checked ~ .custom-control-label {
+  color: #fff;
 }
 
 .custom-radio .custom-control-input:checked ~ .custom-control-label::after {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+  color: #fff;
+  content: '(*)';
 }
 
-.custom-radio .custom-control-input:disabled:checked ~ .custom-control-label::before {
-  background-color: rgba(187, 187, 187, 0.5);
+.custom-radio .custom-control-input:disabled:checked ~ .custom-control-label::after {
+  color: #555;
 }
 
 .custom-switch {
-  padding-left: 47.25px;
+  padding-left: 63px;
 }
 
 .custom-switch .custom-control-label::before {
-  left: -47.25px;
-  width: 47.25px;
+  left: -63px;
+  width: 63px;
   pointer-events: all;
 }
 
 .custom-switch .custom-control-label::after {
   top: 18px;
-  left: -47.25px;
-  width: 27px;
-  height: 27px;
+  left: -63px;
+  width: 36px;
+  height: 36px;
   background-color: #555;
 }
 
 .custom-switch .custom-control-input:checked ~ .custom-control-label::after {
   background-color: #000084;
-  -webkit-transform: translateX(20.25px);
-  transform: translateX(20.25px);
+  -webkit-transform: translateX(27px);
+  transform: translateX(27px);
 }
 
 .custom-switch .custom-control-input:disabled:checked ~ .custom-control-label::before {
-  background-color: rgba(187, 187, 187, 0.5);
+  color: #555;
 }
 
 .custom-select {

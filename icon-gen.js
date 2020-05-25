@@ -8,7 +8,7 @@ var list = ["// This file is auto-generated from icon-gen in the root directory"
   ['[\u25A0]', 'checkbox-checked', 'custom-checkbox-indicator-icon-checked'],
   ['[ ]', 'checkbox-unchecked', ''],
   ['(\u2022)', 'radio-checked', 'custom-radio-indicator-icon-checked'],
-  ['( )', 'radio-unchecked', '']
+  ['( )', 'radio-unchecked', 'custom-radio-indicator-icon-unchecked']
 ].forEach(row => {
   let [str, name, bsname] = row;
 

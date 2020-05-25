@@ -5,7 +5,6 @@
 
 // Color system
 
-@import "autogen";
 $white:    #fff !default;
 $grayDark:  #555 !default;
 $grayLight: #bbb !default;
@@ -583,7 +582,7 @@ $custom-control-gutter:                 0 !default;
 $custom-control-spacer-x:               0 !default;
 $custom-control-cursor:                 null !default;
 
-$custom-control-indicator-size:         $space-width * 3 !default;
+$custom-control-indicator-size:         $space-width * 4 !default;
 $custom-control-indicator-bg:           $input-bg !default;
 
 $custom-control-indicator-bg-size:      50% 50% !default;
@@ -594,11 +593,10 @@ $custom-control-indicator-border-width: $input-border-width !default;
 $custom-control-label-color:            null !default;
 
 $custom-control-indicator-disabled-bg:          $input-disabled-bg !default;
-$custom-control-label-disabled-color:           $gray-600 !default;
+$custom-control-label-disabled-color:           $grayDark !default;
 
 $custom-control-indicator-checked-color:        $component-active-color !default;
 $custom-control-indicator-checked-bg:           $component-active-bg !default;
-$custom-control-indicator-checked-disabled-bg:  rgba(theme-color("primary"), .5) !default;
 $custom-control-indicator-checked-box-shadow:   none !default;
 $custom-control-indicator-checked-border-color: $custom-control-indicator-checked-bg !default;
 
@@ -618,7 +616,6 @@ $custom-checkbox-indicator-indeterminate-box-shadow:   none !default;
 $custom-checkbox-indicator-indeterminate-border-color: $custom-checkbox-indicator-indeterminate-bg !default;
 
 $custom-radio-indicator-border-radius:          50% !default;
-$custom-radio-indicator-icon-checked:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='-4 -4 8 8'><circle r='3' fill='#{$custom-control-indicator-checked-color}'/></svg>") !default;
 
 $custom-switch-width:                           $custom-control-indicator-size * 1.75 !default;
 $custom-switch-indicator-border-radius:         $custom-control-indicator-size / 2 !default;

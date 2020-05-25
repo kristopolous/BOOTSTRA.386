@@ -32,14 +32,6 @@
     border-color: $custom-control-indicator-checked-border-color;
   }
 
-  &:focus ~ .custom-control-label::before {
-    // the mixin is not used here to make sure there is feedback
-    @if $enable-shadows {
-      box-shadow: $input-box-shadow, $input-focus-box-shadow;
-    } @else {
-      box-shadow: $custom-control-indicator-focus-box-shadow;
-    }
-  }
 
   &:focus:not(:checked) ~ .custom-control-label::before {
     border-color: $custom-control-indicator-focus-border-color;
@@ -57,8 +49,8 @@
     ~ .custom-control-label {
       color: $custom-control-label-disabled-color;
 
-      &::before {
-        background-color: $custom-control-indicator-disabled-bg;
+      &::before, &::after {
+        color: $custom-control-label-disabled-color;
       }
     }
   }
@@ -108,30 +100,31 @@
 // Tweak just a few things for checkboxes.
 
 .custom-checkbox {
+  .custom-control-label::after {
+    content: '[ ]';
+  }
   .custom-control-input:checked ~ .custom-control-label {
-    background: purple;
+    color: $white;
     &::after {
-      background-image: escape-svg($custom-checkbox-indicator-icon-checked);
+      color: $white;
+      content: '[X]';
     }
   }
 
   .custom-control-input:indeterminate ~ .custom-control-label {
-    background: pink;
-    &::before {
-      border-color: $custom-checkbox-indicator-indeterminate-border-color;
-    }
     &::after {
-      background-image: escape-svg($custom-checkbox-indicator-icon-checked);
     }
   }
 
   .custom-control-input:disabled {
     &:checked ~ .custom-control-label::before {
-      background-color: $custom-control-indicator-checked-disabled-bg;
+      color: $grayDark;
     }
+    /*
     &:indeterminate ~ .custom-control-label::before {
       background-color: $custom-control-indicator-checked-disabled-bg;
     }
+    */
   }
 }
 
@@ -140,21 +133,21 @@
 // Tweak just a few things for radios.
 
 .custom-radio {
-  .custom-control-label::before {
-    background: orange;
-    background-image: escape-svg($custom-radio-indicator-icon-checked);
-    // stylelint-disable-next-line property-blacklist
+  .custom-control-label::after {
+    content: '( )';
   }
 
   .custom-control-input:checked ~ .custom-control-label {
+    color: $white;
     &::after {
-      background-image: escape-svg($custom-radio-indicator-icon-checked);
+      color: $white;
+      content: '(*)';
     }
   }
 
   .custom-control-input:disabled {
-    &:checked ~ .custom-control-label::before {
-      background-color: $custom-control-indicator-checked-disabled-bg;
+    &:checked ~ .custom-control-label::after {
+      color: $grayDark;
     }
   }
 }
@@ -194,7 +187,7 @@
 
   .custom-control-input:disabled {
     &:checked ~ .custom-control-label::before {
-      background-color: $custom-control-indicator-checked-disabled-bg;
+      color: $grayDark;
     }
   }
 }
