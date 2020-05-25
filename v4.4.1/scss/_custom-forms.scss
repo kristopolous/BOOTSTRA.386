@@ -78,11 +78,11 @@
   // Background-color and (when enabled) gradient
   &::before {
     position: absolute;
-    top: $font-size-base;
+    top: 0;
     left: -($custom-control-gutter + $custom-control-indicator-size);
     display: block;
     width: $custom-control-indicator-size;
-    height: $custom-control-indicator-size;
+    height: $input-line-height;
     pointer-events: none;
     content: "";
     background-color: $custom-control-indicator-bg;
@@ -92,11 +92,11 @@
   // Foreground (icon)
   &::after {
     position: absolute;
-    top: $font-size-base;
+    top: 0;
     left: -($custom-control-gutter + $custom-control-indicator-size);
     display: block;
     width: $custom-control-indicator-size;
-    height: $custom-control-indicator-size;
+    height: $input-line-height;
     content: "";
     background: no-repeat 50% / #{$custom-control-indicator-bg-size};
   }
@@ -108,19 +108,20 @@
 // Tweak just a few things for checkboxes.
 
 .custom-checkbox {
-  .custom-control-label::before {
-  }
-
   .custom-control-input:checked ~ .custom-control-label {
+    background: purple;
     &::after {
+      background-image: escape-svg($custom-checkbox-indicator-icon-checked);
     }
   }
 
   .custom-control-input:indeterminate ~ .custom-control-label {
+    background: pink;
     &::before {
       border-color: $custom-checkbox-indicator-indeterminate-border-color;
     }
     &::after {
+      background-image: escape-svg($custom-checkbox-indicator-icon-checked);
     }
   }
 
@@ -140,6 +141,8 @@
 
 .custom-radio {
   .custom-control-label::before {
+    background: orange;
+    background-image: escape-svg($custom-radio-indicator-icon-checked);
     // stylelint-disable-next-line property-blacklist
   }
 

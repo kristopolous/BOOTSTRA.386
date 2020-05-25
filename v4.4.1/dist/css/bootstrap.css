@@ -4051,20 +4051,20 @@ input[type="button"].btn-block {
   position: relative;
   display: block;
   min-height: 18px;
-  padding-left: 1.5rem;
+  padding-left: 27px;
 }
 
 .custom-control-inline {
   display: -ms-inline-flexbox;
   display: inline-flex;
-  margin-right: 1rem;
+  margin-right: 0;
 }
 
 .custom-control-input {
   position: absolute;
   left: 0;
   z-index: -1;
-  width: 1rem;
+  width: 27px;
   height: 18px;
   opacity: 0;
 }
@@ -4104,11 +4104,11 @@ input[type="button"].btn-block {
 
 .custom-control-label::before {
   position: absolute;
-  top: 18px;
-  left: -1.5rem;
+  top: 0;
+  left: -27px;
   display: block;
-  width: 1rem;
-  height: 1rem;
+  width: 27px;
+  height: 18px;
   pointer-events: none;
   content: "";
   background-color: #000084;
@@ -4117,17 +4117,33 @@ input[type="button"].btn-block {
 
 .custom-control-label::after {
   position: absolute;
-  top: 18px;
-  left: -1.5rem;
+  top: 0;
+  left: -27px;
   display: block;
-  width: 1rem;
-  height: 1rem;
+  width: 27px;
+  height: 18px;
   content: "";
   background: no-repeat 50% / 50% 50%;
 }
 
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label {
+  background: purple;
+}
+
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
+  background-image: url('data:image/svg+xml,%3csvg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="15.75"%3e%3cpath d="M4.50 11.25L4.50 3.38L6.75 3.38L6.75 2.25L2.25 2.25L2.25 12.38L6.75 12.38L6.75 11.25ZM10.13 11.25L15.75 11.25L15.75 4.50L10.13 4.50ZM22.50 11.25L20.25 11.25L20.25 12.38L24.75 12.38L24.75 2.25L20.25 2.25L20.25 3.38L22.50 3.38Z"/%3e%3c/svg%3e');
+}
+
+.custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label {
+  background: pink;
+}
+
 .custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::before {
   border-color: #bbb;
+}
+
+.custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::after {
+  background-image: url('data:image/svg+xml,%3csvg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="15.75"%3e%3cpath d="M4.50 11.25L4.50 3.38L6.75 3.38L6.75 2.25L2.25 2.25L2.25 12.38L6.75 12.38L6.75 11.25ZM10.13 11.25L15.75 11.25L15.75 4.50L10.13 4.50ZM22.50 11.25L20.25 11.25L20.25 12.38L24.75 12.38L24.75 2.25L20.25 2.25L20.25 3.38L22.50 3.38Z"/%3e%3c/svg%3e');
 }
 
 .custom-checkbox .custom-control-input:disabled:checked ~ .custom-control-label::before {
@@ -4136,6 +4152,11 @@ input[type="button"].btn-block {
 
 .custom-checkbox .custom-control-input:disabled:indeterminate ~ .custom-control-label::before {
   background-color: rgba(187, 187, 187, 0.5);
+}
+
+.custom-radio .custom-control-label::before {
+  background: orange;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
 }
 
 .custom-radio .custom-control-input:checked ~ .custom-control-label::after {
@@ -4147,27 +4168,27 @@ input[type="button"].btn-block {
 }
 
 .custom-switch {
-  padding-left: 2.25rem;
+  padding-left: 47.25px;
 }
 
 .custom-switch .custom-control-label::before {
-  left: -2.25rem;
-  width: 1.75rem;
+  left: -47.25px;
+  width: 47.25px;
   pointer-events: all;
 }
 
 .custom-switch .custom-control-label::after {
   top: 18px;
-  left: -2.25rem;
-  width: 1rem;
-  height: 1rem;
+  left: -47.25px;
+  width: 27px;
+  height: 27px;
   background-color: #555;
 }
 
 .custom-switch .custom-control-input:checked ~ .custom-control-label::after {
   background-color: #000084;
-  -webkit-transform: translateX(0.75rem);
-  transform: translateX(0.75rem);
+  -webkit-transform: translateX(20.25px);
+  transform: translateX(20.25px);
 }
 
 .custom-switch .custom-control-input:disabled:checked ~ .custom-control-label::before {

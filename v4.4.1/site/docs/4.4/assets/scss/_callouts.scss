@@ -3,7 +3,6 @@
 //
 
 .bd-callout {
-  @include border-radius();
 
   h4 {
     margin-top: 0;
@@ -13,9 +12,6 @@
     margin-bottom: 0;
   }
 
-  code {
-    @include border-radius();
-  }
 
 }
 

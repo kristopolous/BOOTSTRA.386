@@ -5,6 +5,7 @@
 
 // Color system
 
+@import "autogen";
 $white:    #fff !default;
 $grayDark:  #555 !default;
 $grayLight: #bbb !default;
@@ -578,11 +579,11 @@ $input-group-addon-border-color:        $input-border-color !default;
 
 $custom-forms-transition:               background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
 
-$custom-control-gutter:                 .5rem !default;
-$custom-control-spacer-x:               1rem !default;
+$custom-control-gutter:                 0 !default;
+$custom-control-spacer-x:               0 !default;
 $custom-control-cursor:                 null !default;
 
-$custom-control-indicator-size:         1rem !default;
+$custom-control-indicator-size:         $space-width * 3 !default;
 $custom-control-indicator-bg:           $input-bg !default;
 
 $custom-control-indicator-bg-size:      50% 50% !default;
