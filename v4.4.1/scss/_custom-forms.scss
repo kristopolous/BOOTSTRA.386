@@ -104,9 +104,9 @@
     content: '[ ]';
   }
   .custom-control-input:checked ~ .custom-control-label {
-    color: $white;
+    color: $custom-form-active-color;
     &::after {
-      color: $white;
+      color: $custom-form-active-color;
       content: '[X]';
     }
   }
@@ -138,9 +138,9 @@
   }
 
   .custom-control-input:checked ~ .custom-control-label {
-    color: $white;
+    color: $custom-form-active-color;
     &::after {
-      color: $white;
+      color: $custom-form-active-color;
       content: '(*)';
     }
   }
@@ -158,30 +158,32 @@
 // Tweak a few things for switches
 
 .custom-switch {
-  padding-left: $custom-switch-width + $custom-control-gutter;
+  padding-left: $custom-switch-width;
 
   .custom-control-label {
     &::before {
-      left: -($custom-switch-width + $custom-control-gutter);
+      left: -$custom-switch-width;
       width: $custom-switch-width;
       pointer-events: all;
       // stylelint-disable-next-line property-blacklist
     }
 
     &::after {
-      top: $font-size-base;
-      left: add(-($custom-switch-width + $custom-control-gutter), $custom-control-indicator-border-width * 2);
+      top: 0;
+      left: -$custom-switch-width;
       width: $custom-switch-indicator-size;
-      height: $custom-switch-indicator-size;
-      background-color: $custom-control-indicator-border-color;
+      height: $line-height-base;
+      content: '\2588\2591\2591';
       // stylelint-disable-next-line property-blacklist
     }
   }
 
   .custom-control-input:checked ~ .custom-control-label {
+    color: $custom-form-active-color;
     &::after {
-      background-color: $custom-control-indicator-bg;
-      transform: translateX($custom-switch-width - $custom-control-indicator-size);
+      content: '\2591\2591\2588';
+      color: $white;
+      //background-color: $custom-control-indicator-bg;
     }
   }
 
@@ -225,7 +227,7 @@
 
     &::-ms-value {
       // For visual consistency with other platforms/browsers,
-      // suppress the default white text on blue background highlight given to
+      // suppress the default custom-form-active-color text on blue background highlight given to
       // the selected option text when the (still closed) <select> receives focus
       // in IE and (under certain conditions) Edge.
       // See https://github.com/twbs/bootstrap/issues/19398.
