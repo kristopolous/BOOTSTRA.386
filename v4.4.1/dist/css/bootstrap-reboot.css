@@ -39,7 +39,6 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 body {
   margin: 0;
   font-family: DOS, Monaco, Menlo, Consolas, "Courier New", monospace;
-  font-size: 18px;
   font-weight: 400;
   line-height: 18px;
   color: #bbb;
@@ -96,11 +95,6 @@ dl {
 
 li {
   padding-left: 9px;
-}
-
-li:before {
-  font-size: 100px;
-  color: pink;
 }
 
 ol ol,
