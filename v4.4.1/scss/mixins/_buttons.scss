@@ -6,8 +6,6 @@
 @mixin button-variant($background, $border, $active-background: $background, $active-border: $border) {
   color: $black;
   border-color: $black;
-  //@include box-shadow($btn-box-shadow);
-  //@include dos-border(0, $background);
 
   @include hover() {
     color: brighten($border);
@@ -62,7 +60,6 @@
 
 @mixin button-size($padding-y, $padding-x, $font-size, $line-height, $border-radius) {
   padding: $padding-y $padding-x;
-  @include font-size($font-size);
   line-height: $line-height;
 }
 

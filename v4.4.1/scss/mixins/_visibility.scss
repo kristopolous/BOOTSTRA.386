@@ -4,5 +4,4 @@
 
 @mixin invisible($visibility) {
   visibility: $visibility !important;
-  @include deprecate("`invisible()`", "v4.3.0", "v5");
 }

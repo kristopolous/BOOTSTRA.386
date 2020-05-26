@@ -6,6 +6,4 @@
   text-shadow: none;
   background-color: transparent;
   border: 0;
-
-  @include deprecate("`text-hide()`", "v4.1.0", "v5", $ignore-warning);
 }

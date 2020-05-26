@@ -176,7 +176,7 @@ $enable-pointer-cursor-for-buttons:           true !default;
 $enable-print-styles:                         true !default;
 $enable-responsive-font-sizes:                false !default;
 $enable-validation-icons:                     false !default;
-$enable-deprecation-messages:                 true !default;
+$enable-deprecation-messages:                 false !default;
 
 
 $font-size-base:              18px !default; 
@@ -558,8 +558,6 @@ $input-height:                          add($input-line-height, add($input-paddi
 $input-height-sm:                       add($input-line-height-sm, add($input-padding-y-sm * 2, $input-height-border, false)) !default;
 $input-height-lg:                       add($input-line-height-lg, add($input-padding-y-lg * 2, $input-height-border, false)) !default;
 
-$input-transition:                      border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
-
 $form-text-margin-top:                  0 !default;
 
 $form-check-input-gutter:               0 !default;
@@ -575,8 +573,6 @@ $form-group-margin-bottom:              $line-height-base !default;
 $input-group-addon-color:               $input-color !default;
 $input-group-addon-bg:                  $gray-200 !default;
 $input-group-addon-border-color:        $input-border-color !default;
-
-$custom-forms-transition:               background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
 
 $custom-control-gutter:                 0 !default;
 $custom-control-spacer-x:               0 !default;
@@ -614,8 +610,6 @@ $custom-checkbox-indicator-indeterminate-bg:           $component-active-bg !def
 $custom-checkbox-indicator-indeterminate-color:        $custom-control-indicator-checked-color !default;
 $custom-checkbox-indicator-indeterminate-box-shadow:   none !default;
 $custom-checkbox-indicator-indeterminate-border-color: $custom-checkbox-indicator-indeterminate-bg !default;
-
-$custom-radio-indicator-border-radius:          50% !default;
 
 $custom-form-active-color:                      $white;
 
