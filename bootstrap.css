@@ -70,7 +70,6 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 body {
   margin: 0;
   font-family: DOS, Monaco, Menlo, Consolas, "Courier New", monospace;
-  font-size: 18px;
   font-weight: 400;
   line-height: 18px;
   color: #bbb;
@@ -127,11 +126,6 @@ dl {
 
 li {
   padding-left: 9px;
-}
-
-li:before {
-  font-size: 100px;
-  color: pink;
 }
 
 ol ol,
@@ -5094,20 +5088,19 @@ input[type="button"].btn-block {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  padding: 0 9px;
+  padding: 0;
   margin-bottom: 0;
-  font-size: 18px;
   list-style: none;
   background-color: #555;
 }
 
 .breadcrumb-item + .breadcrumb-item {
-  padding-left: 0.5rem;
+  padding-left: 9px;
 }
 
 .breadcrumb-item + .breadcrumb-item::before {
   display: inline-block;
-  padding-right: 0.5rem;
+  padding-right: 9px;
   color: #bbb;
   content: "/";
 }
