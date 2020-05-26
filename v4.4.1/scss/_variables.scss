@@ -560,8 +560,8 @@ $input-height-lg:                       add($input-line-height-lg, add($input-pa
 
 $form-text-margin-top:                  0 !default;
 
-$form-check-input-gutter:               0 !default;
-$form-check-input-margin-y:             0 !default;
+$form-check-input-gutter:               $space-width * 2 !default;
+$form-check-input-margin-y:             2px !default;
 $form-check-input-margin-x:             0 !default;
 
 $form-check-inline-margin-x:            0 !default;
