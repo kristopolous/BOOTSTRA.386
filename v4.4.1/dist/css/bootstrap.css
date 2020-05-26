@@ -5088,7 +5088,7 @@ input[type="button"].btn-block {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  padding: 0 9px;
+  padding: 0;
   margin-bottom: 0;
   list-style: none;
   background-color: #555;
