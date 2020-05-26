@@ -2217,14 +2217,14 @@ select.form-control:focus::-ms-value {
 .form-control-plaintext {
   display: block;
   width: 100%;
-  padding: 0 0;
+  padding: 0 9px;
   margin-bottom: 0;
-  font-size: 18px;
   line-height: 18px;
   color: #bbb;
   background-color: transparent;
   border: solid transparent;
   border-width: 0 0;
+  background: url("fonts/left-brace.svg") 3px 3.6px/4.87px no-repeat, url("fonts/right-brace.svg") top 3px right 3.6px/4.87px no-repeat;
 }
 
 .form-control-plaintext.form-control-sm, .form-control-plaintext.form-control-lg {
