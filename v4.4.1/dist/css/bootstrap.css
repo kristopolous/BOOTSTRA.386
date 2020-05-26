@@ -4200,9 +4200,9 @@ input[type="button"].btn-block {
   font-size: 18px;
   font-weight: 400;
   line-height: 18px;
-  color: #fff;
+  color: #000;
   vertical-align: middle;
-  background: #000084 url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23bbb' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0 center/8px 10px;
+  background: #bbb;
   border: 0 solid #555;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -4237,7 +4237,7 @@ input[type="button"].btn-block {
 
 .custom-select:-moz-focusring {
   color: transparent;
-  text-shadow: 0 0 0 #fff;
+  text-shadow: 0 0 0 #000;
 }
 
 .custom-select-sm {
@@ -4865,10 +4865,6 @@ input[type="button"].btn-block {
   border-color: rgba(0, 0, 0, 0.1);
 }
 
-.navbar-light .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='%23000' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
-
 .navbar-light .navbar-text {
   color: #000;
 }
@@ -4918,10 +4914,6 @@ input[type="button"].btn-block {
 .navbar-dark .navbar-toggler {
   color: #000;
   border-color: rgba(255, 255, 255, 0.1);
-}
-
-.navbar-dark .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='%23000' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 .navbar-dark .navbar-text {
