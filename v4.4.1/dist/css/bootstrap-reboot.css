@@ -10,8 +10,10 @@
   src: url("fonts/Px437_IBM_EGA8.otf") format("opentype"), url("fonts/Px437_IBM_EGA8.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+  -webkit-font-kerning: none;
   font-kerning: none;
   font-synthesis: none;
+  -webkit-font-variant-ligatures: none;
   font-variant-ligatures: none;
   font-variant-numeric: tabular-nums;
 }
@@ -43,6 +45,7 @@ body {
   color: #bbb;
   text-align: left;
   background-color: #000084;
+  -webkit-font-kerning: none;
   font-kerning: none;
 }
 
@@ -72,6 +75,7 @@ abbr[data-original-title] {
   text-decoration: none;
   cursor: help;
   border-bottom: 0;
+  -webkit-text-decoration-skip-ink: none;
   text-decoration-skip-ink: none;
 }
 
@@ -362,5 +366,4 @@ template {
 [hidden] {
   display: none !important;
 }
-
 /*# sourceMappingURL=bootstrap-reboot.css.map */
