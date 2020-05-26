@@ -35,12 +35,19 @@
   @include dos-border-single($character-space: $character-space);
   @include dos-border-background($color: $color);
 }
-@mixin dos-border-off() {
-  border: 0;
+@mixin dos-border-off($direction: 'all') {
+  @if $direction == 'bottom' {
+    margin-bottom: 0;
+    border-bottom: 0;
+    padding-bottom: 0;
+  } 
+  @else { 
+    border: 0;
+    padding: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
   box-shadow: 0;
-  padding: 0;
-  margin-left: 0;
-  margin-bottom: 0;
 }
 
 

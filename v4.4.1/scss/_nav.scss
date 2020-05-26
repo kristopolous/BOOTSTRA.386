@@ -37,12 +37,14 @@
 .nav-tabs {
   border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
 
+
   .nav-item {
     margin: 0;
   }
 
   .nav-link {
-    border: $nav-tabs-border-width solid transparent;
+    @include dos-border-single($color: $grayLight,$character-space: 1);
+    @include dos-border-off($direction: 'bottom');
 
     @include hover-focus() {
       border-color: $nav-tabs-link-hover-border-color;

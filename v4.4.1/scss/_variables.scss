@@ -184,7 +184,7 @@ $line-height-base:            18px !default;
 
 $font-size-lg:                $font-size-base !default;
 $font-size-sm:                $font-size-base !default;
-$space-width:                 9px !default;
+$space-width:                 7.75px !default;
 // Spacing
 //
 // Control the default styling of most Bootstrap elements by modifying these
@@ -625,7 +625,7 @@ $custom-select-indicator-padding:   1rem !default; // Extra padding to account f
 $custom-select-font-weight:         $input-font-weight !default;
 $custom-select-line-height:         $input-line-height !default;
 $custom-select-color:               $black !default;
-$custom-select-disabled-color:      $gray-600 !default;
+$custom-select-disabled-color:      $grayDark !default;
 $custom-select-bg:                  $input-bg !default;
 $custom-select-disabled-bg:         $gray-200 !default;
 $custom-select-bg-size:             8px 10px !default; // In pixels because image dimensions
@@ -738,7 +738,7 @@ $zindex-tooltip:                    1070 !default;
 
 $nav-link-padding-y:                0 !default;
 $nav-link-padding-x:                0 !default;
-$nav-link-disabled-color:           $gray-600 !default;
+$nav-link-disabled-color:           $grayDark !default;
 
 $nav-tabs-border-color:             $gray-300 !default;
 $nav-tabs-border-width:             $border-width !default;
@@ -853,7 +853,7 @@ $pagination-active-color:           $component-active-color !default;
 $pagination-active-bg:              $component-active-bg !default;
 $pagination-active-border-color:    $pagination-active-bg !default;
 
-$pagination-disabled-color:         $gray-600 !default;
+$pagination-disabled-color:         $grayDark !default;
 $pagination-disabled-bg:            $white !default;
 $pagination-disabled-border-color:  $gray-300 !default;
 
@@ -1065,7 +1065,7 @@ $list-group-active-color:           $component-active-color !default;
 $list-group-active-bg:              $component-active-bg !default;
 $list-group-active-border-color:    $list-group-active-bg !default;
 
-$list-group-disabled-color:         $gray-600 !default;
+$list-group-disabled-color:         $grayDark !default;
 $list-group-disabled-bg:            $list-group-bg !default;
 
 $list-group-action-color:           $gray-700 !default;
