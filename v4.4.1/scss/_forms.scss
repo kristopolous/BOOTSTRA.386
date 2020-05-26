@@ -114,7 +114,7 @@ select.form-control {
 .form-control-plaintext {
   display: block;
   width: 100%;
-  padding: 0 $space-width
+  padding: 0 $space-width;
   margin-bottom: 0; // match inputs if this class comes on inputs with default margins
   line-height: $input-line-height;
   color: $input-plaintext-color;
