@@ -39,8 +39,6 @@
 
   &:not(:disabled):active ~ .custom-control-label::before {
     color: $custom-control-indicator-active-color;
-    background-color: $custom-control-indicator-active-bg;
-    border-color: $custom-control-indicator-active-border-color;
   }
 
   // Use [disabled] and :disabled to work around https://github.com/twbs/bootstrap/issues/28247
@@ -78,7 +76,6 @@
     pointer-events: none;
     content: "";
     background-color: $custom-control-indicator-bg;
-    border: $custom-control-indicator-border-color solid $custom-control-indicator-border-width;
   }
 
   // Foreground (icon)
@@ -90,7 +87,6 @@
     width: $custom-control-indicator-size;
     height: $input-line-height;
     content: "";
-    background: no-repeat 50% / #{$custom-control-indicator-bg-size};
   }
 }
 
@@ -111,20 +107,10 @@
     }
   }
 
-  .custom-control-input:indeterminate ~ .custom-control-label {
-    &::after {
-    }
-  }
-
   .custom-control-input:disabled {
     &:checked ~ .custom-control-label::before {
       color: $grayDark;
     }
-    /*
-    &:indeterminate ~ .custom-control-label::before {
-      background-color: $custom-control-indicator-checked-disabled-bg;
-    }
-    */
   }
 }
 
@@ -208,8 +194,6 @@
   padding: $custom-select-padding-y ($custom-select-padding-x + $custom-select-indicator-padding) $custom-select-padding-y $custom-select-padding-x;
   font-family: $custom-select-font-family;
   @include font-size($custom-select-font-size);
-  font-weight: $custom-select-font-weight;
-  line-height: $custom-select-line-height;
   color: $custom-select-color;
   vertical-align: middle;
   background: $grayLight;
