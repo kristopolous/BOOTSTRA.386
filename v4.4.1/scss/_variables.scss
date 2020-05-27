@@ -6,13 +6,13 @@
 // Color system
 
 // debug values
-$grayLight: #bbbbbbc0 !default;
-$cyan:     #00aaaad0 !default;
+$grayLight: #bbbbbb !default;
+$cyan:     #00aaaa !default;
 
 /*
 normal.
-$grayLight: #bbbbbb !default;
-$cyan:     #00aaaa !default;
+$grayLight: #bbbbbbc0 !default;
+$cyan:     #00aaaad0 !default;
 */
 
 $white:    #fff !default;
@@ -191,7 +191,6 @@ $font-size-base:              16px !default;
 $line-height-base:            14px !default;
 
 $font-size-lg:                $font-size-base !default;
-$font-size-sm:                $font-size-base !default;
 $space-width:                 $font-size-base/2 !default;
 // Spacing
 //
@@ -461,7 +460,7 @@ $input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $input-btn-focus-colo
 
 $input-btn-padding-y-sm:      0 !default;
 $input-btn-padding-x-sm:      0 !default;
-$input-btn-font-size-sm:      $font-size-sm !default;
+$input-btn-font-size-sm:      $font-size-base !default;
 $input-btn-line-height-sm:    $line-height-sm !default;
 
 $input-btn-padding-y-lg:      0 !default;
@@ -493,7 +492,7 @@ $btn-padding-x-lg:            $input-btn-padding-x-lg !default;
 $btn-font-size-lg:            $input-btn-font-size-lg !default;
 $btn-line-height-lg:          $input-btn-line-height-lg !default;
 
-$btn-border-width:            1px !default;
+$btn-border-width:            0 !default;
 
 $btn-font-weight:             $font-weight-normal !default;
 $btn-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075) !default;
@@ -894,7 +893,7 @@ $card-columns-margin:               $card-spacer-y !default;
 
 // Tooltips
 
-$tooltip-font-size:                 $font-size-sm !default;
+$tooltip-font-size:                 $font-size-base !default;
 $tooltip-max-width:                 200px !default;
 $tooltip-color:                     $white !default;
 $tooltip-bg:                        $black !default;
@@ -919,7 +918,7 @@ $form-feedback-tooltip-border-radius: $tooltip-border-radius !default;
 
 // Popovers
 
-$popover-font-size:                 $font-size-sm !default;
+$popover-font-size:                 $font-size-base !default;
 $popover-bg:                        $white !default;
 $popover-max-width:                 276px !default;
 $popover-border-width:              $border-width !default;

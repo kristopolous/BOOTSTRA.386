@@ -17,8 +17,8 @@ html {
 
 /*
 normal.
-$grayLight: #bbbbbb !default;
-$cyan:     #00aaaa !default;
+$grayLight: #bbbbbbc0 !default;
+$cyan:     #00aaaad0 !default;
 */
 .container {
   width: 100%;

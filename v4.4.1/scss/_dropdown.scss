@@ -163,7 +163,7 @@
   display: block;
   padding: $dropdown-padding-y $dropdown-item-padding-x;
   margin-bottom: 0; // for use with heading elements
-  @include font-size($font-size-sm);
+  @include font-size();
   color: $dropdown-header-color;
   white-space: nowrap; // as with > li > a
 }

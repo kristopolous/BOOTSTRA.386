@@ -61,7 +61,7 @@ $rfs-breakpoint-unit-cache: unit($rfs-breakpoint);
 }
 
 // The font-size & responsive-font-size mixin uses RFS to rescale font sizes
-@mixin font-size($fs, $important: false) {
+@mixin font-size($fs: "", $important: false) {
   font-size: $font-size-base;
 }
 

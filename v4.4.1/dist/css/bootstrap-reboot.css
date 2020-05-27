@@ -7,8 +7,8 @@
  */
 /*
 normal.
-$grayLight: #bbbbbb !default;
-$cyan:     #00aaaa !default;
+$grayLight: #bbbbbbc0 !default;
+$cyan:     #00aaaad0 !default;
 */
 @font-face {
   font-family: 'DOS';
@@ -47,7 +47,7 @@ body {
   font-weight: 400;
   line-height: 14px;
   font-size: 16px;
-  color: #bbbbbbc0;
+  color: #bbbbbb;
   text-align: left;
   background-color: #000084;
   -webkit-font-kerning: none;
