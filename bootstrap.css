@@ -419,7 +419,7 @@ h3, .h3 {
 
 h4, .h4 {
   color: #fff;
-  border: 0 solid #fff;
+  border: 1px solid #fff;
   border-left-width: 2px;
   border-right-width: 2px;
   padding: 7px 3.5px;
@@ -2179,7 +2179,7 @@ pre code {
 
 select.form-control {
   background: #bbbbbb;
-  border: 0 solid #000000;
+  border: 1px solid #000000;
   border-left-width: 2px;
   border-right-width: 2px;
   padding: 7px 3.5px;
@@ -2262,7 +2262,7 @@ select.form-control[size], select.form-control[multiple] {
 
 textarea.form-control {
   height: auto;
-  border: 0 solid #000000;
+  border: 1px solid #000000;
   border-left-width: 2px;
   border-right-width: 2px;
   padding: 7px 3.5px;
@@ -2656,7 +2656,7 @@ fieldset:disabled a.btn {
 
 .btn-primary.btn-lg, .btn-group-lg > .btn-primary.btn {
   background-color: #bbbbbb;
-  border: 0 solid #000000;
+  border: 1px solid #000000;
   border-left-width: 2px;
   border-right-width: 2px;
   padding: 7px 11.5px;
@@ -2736,7 +2736,7 @@ fieldset:disabled a.btn {
 
 .btn-secondary.btn-lg, .btn-group-lg > .btn-secondary.btn {
   background-color: #bbbbbb;
-  border: 0 solid #000000;
+  border: 1px solid #000000;
   border-left-width: 2px;
   border-right-width: 2px;
   padding: 7px 11.5px;
@@ -2816,7 +2816,7 @@ fieldset:disabled a.btn {
 
 .btn-success.btn-lg, .btn-group-lg > .btn-success.btn {
   background-color: #00aa00;
-  border: 0 solid #000000;
+  border: 1px solid #000000;
   border-left-width: 2px;
   border-right-width: 2px;
   padding: 7px 11.5px;
@@ -2896,7 +2896,7 @@ fieldset:disabled a.btn {
 
 .btn-info.btn-lg, .btn-group-lg > .btn-info.btn {
   background-color: #00aaaa;
-  border: 0 solid #000000;
+  border: 1px solid #000000;
   border-left-width: 2px;
   border-right-width: 2px;
   padding: 7px 11.5px;
@@ -2976,7 +2976,7 @@ fieldset:disabled a.btn {
 
 .btn-warning.btn-lg, .btn-group-lg > .btn-warning.btn {
   background-color: #aa5500;
-  border: 0 solid #000000;
+  border: 1px solid #000000;
   border-left-width: 2px;
   border-right-width: 2px;
   padding: 7px 11.5px;
@@ -3056,7 +3056,7 @@ fieldset:disabled a.btn {
 
 .btn-danger.btn-lg, .btn-group-lg > .btn-danger.btn {
   background-color: #aa0000;
-  border: 0 solid #000000;
+  border: 1px solid #000000;
   border-left-width: 2px;
   border-right-width: 2px;
   padding: 7px 11.5px;
@@ -3131,7 +3131,7 @@ fieldset:disabled a.btn {
 
 .btn-light.btn-lg, .btn-group-lg > .btn-light.btn {
   background-color: #fff;
-  border: 0 solid #000000;
+  border: 1px solid #000000;
   border-left-width: 2px;
   border-right-width: 2px;
   padding: 7px 11.5px;
@@ -3211,7 +3211,7 @@ fieldset:disabled a.btn {
 
 .btn-dark.btn-lg, .btn-group-lg > .btn-dark.btn {
   background-color: #000000;
-  border: 0 solid #000000;
+  border: 1px solid #000000;
   border-left-width: 2px;
   border-right-width: 2px;
   padding: 7px 11.5px;
@@ -3249,7 +3249,7 @@ fieldset:disabled a.btn {
   color: #fff;
   border-color: #fff;
   background: transparent;
-  border: 0 solid #fff;
+  border: 1px solid #fff;
   border-left-width: 2px;
   border-right-width: 2px;
   padding: 7px 11.5px;
@@ -3260,7 +3260,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-primary:hover {
-  border: 0 solid #555;
+  border: 1px solid #555;
   border-left-width: 2px;
   border-right-width: 2px;
   padding: 7px 11.5px;
@@ -3286,7 +3286,7 @@ fieldset:disabled a.btn {
   color: #fff;
   border-color: #fff;
   background: transparent;
-  border: 0 solid #fff;
+  border: 1px solid #fff;
   border-left-width: 2px;
   border-right-width: 2px;
   padding: 7px 11.5px;
@@ -3297,7 +3297,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-secondary:hover {
-  border: 0 solid #555;
+  border: 1px solid #555;
   border-left-width: 2px;
   border-right-width: 2px;
   padding: 7px 11.5px;
@@ -3323,7 +3323,7 @@ fieldset:disabled a.btn {
   color: #5f5;
   border-color: #5f5;
   background: transparent;
-  border: 0 solid #5f5;
+  border: 1px solid #5f5;
   border-left-width: 2px;
   border-right-width: 2px;
   padding: 7px 11.5px;
@@ -3334,7 +3334,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-success:hover {
-  border: 0 solid #00aa00;
+  border: 1px solid #00aa00;
   border-left-width: 2px;
   border-right-width: 2px;
   padding: 7px 11.5px;
@@ -3360,7 +3360,7 @@ fieldset:disabled a.btn {
   color: #5ff;
   border-color: #5ff;
   background: transparent;
-  border: 0 solid #5ff;
+  border: 1px solid #5ff;
   border-left-width: 2px;
   border-right-width: 2px;
   padding: 7px 11.5px;
@@ -3371,7 +3371,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-info:hover {
-  border: 0 solid #00aaaa;
+  border: 1px solid #00aaaa;
   border-left-width: 2px;
   border-right-width: 2px;
   padding: 7px 11.5px;
@@ -3397,7 +3397,7 @@ fieldset:disabled a.btn {
   color: #ff5;
   border-color: #ff5;
   background: transparent;
-  border: 0 solid #ff5;
+  border: 1px solid #ff5;
   border-left-width: 2px;
   border-right-width: 2px;
   padding: 7px 11.5px;
@@ -3408,7 +3408,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-warning:hover {
-  border: 0 solid #aa5500;
+  border: 1px solid #aa5500;
   border-left-width: 2px;
   border-right-width: 2px;
   padding: 7px 11.5px;
@@ -3434,7 +3434,7 @@ fieldset:disabled a.btn {
   color: #f55;
   border-color: #f55;
   background: transparent;
-  border: 0 solid #f55;
+  border: 1px solid #f55;
   border-left-width: 2px;
   border-right-width: 2px;
   padding: 7px 11.5px;
@@ -3445,7 +3445,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-danger:hover {
-  border: 0 solid #aa0000;
+  border: 1px solid #aa0000;
   border-left-width: 2px;
   border-right-width: 2px;
   padding: 7px 11.5px;
@@ -3469,7 +3469,7 @@ fieldset:disabled a.btn {
 
 .btn-outline-light {
   background: transparent;
-  border: 0 solid;
+  border: 1px solid;
   border-left-width: 2px;
   border-right-width: 2px;
   padding: 7px 11.5px;
@@ -3480,7 +3480,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-light:hover {
-  border: 0 solid #bbbbbb;
+  border: 1px solid #bbbbbb;
   border-left-width: 2px;
   border-right-width: 2px;
   padding: 7px 11.5px;
@@ -3505,7 +3505,7 @@ fieldset:disabled a.btn {
   color: #555;
   border-color: #555;
   background: transparent;
-  border: 0 solid #555;
+  border: 1px solid #555;
   border-left-width: 2px;
   border-right-width: 2px;
   padding: 7px 11.5px;
@@ -3516,7 +3516,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-dark:hover {
-  border: 0 solid #000000;
+  border: 1px solid #000000;
   border-left-width: 2px;
   border-right-width: 2px;
   padding: 7px 11.5px;
@@ -3625,7 +3625,7 @@ input[type="button"].btn-block {
   list-style: none;
   background-color: #bbbbbb;
   background-clip: padding-box;
-  border: 0 solid #000000;
+  border: 1px solid #000000;
   border-left-width: 2px;
   border-right-width: 2px;
   padding: 7px 3.5px;
@@ -3912,7 +3912,7 @@ input[type="button"].btn-block {
 
 .btn-group-vertical > .btn:not(:first-child),
 .btn-group-vertical > .btn-group:not(:first-child) {
-  margin-top: 0;
+  margin-top: -1px;
 }
 
 .btn-group-toggle > .btn,
@@ -4497,7 +4497,7 @@ input[type="button"].btn-block {
 }
 
 .nav-tabs .nav-link {
-  border: 0 solid #bbbbbb;
+  border: 1px solid #bbbbbb;
   border-left-width: 2px;
   border-right-width: 2px;
   padding: 7px 11.5px;
@@ -5454,7 +5454,7 @@ a.badge-dark:focus, a.badge-dark.focus {
   margin-bottom: 28px 16px;
   color: #000000;
   background-color: #bbbbbb;
-  border: 0 solid #000000;
+  border: 1px solid #000000;
   border-left-width: 2px;
   border-right-width: 2px;
   padding: 7px 11.5px;
@@ -5645,7 +5645,7 @@ a.badge-dark:focus, a.badge-dark.focus {
   -ms-flex-direction: column;
   flex-direction: column;
   margin-bottom: 0;
-  border: 0 solid #bbbbbb;
+  border: 1px solid #bbbbbb;
   border-left-width: 2px;
   border-right-width: 2px;
   padding: 7px 3.5px;
