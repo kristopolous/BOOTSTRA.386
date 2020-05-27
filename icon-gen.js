@@ -9,16 +9,22 @@ var list = ["// This file is auto-generated from icon-gen in the root directory"
   ['[', 'left-brace', ''],
   [']', 'right-brace', ''],
   ['[ ]', 'checkbox-unchecked', ''],
+  [`\u253c\u2584`, 'grid', ''],
   ['(\u2022)', 'radio-checked', 'custom-radio-indicator-icon-checked'],
   ['( )', 'radio-unchecked', 'custom-radio-indicator-icon-unchecked']
 ].forEach(row => {
   let [str, name, bsname] = row;
 
-  const svg = textToSVG.getSVG(str, {
+  let props = {
     x: 0, y: 0, 
-    fontSize: 18, anchor: 'top',
+    fontSize: 16, anchor: 'top',
     attributes: { fill: '#bbbbbb'}
-  });
+  };
+
+  if(name == 'grid') {
+    props.attributes.fill += '40';
+  }
+  const svg = textToSVG.getSVG(str, props);
 
   fs.writeFileSync(`${name}.svg`, svg);
 

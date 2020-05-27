@@ -5,6 +5,11 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * Forked from Normalize.css, licensed MIT (https://github.com/necolas/normalize.css/blob/master/LICENSE.md)
  */
+/*
+normal.
+$grayLight: #bbbbbb !default;
+$cyan:     #00aaaa !default;
+*/
 @font-face {
   font-family: 'DOS';
   src: url("fonts/Px437_IBM_EGA8.otf") format("opentype"), url("fonts/Px437_IBM_EGA8.woff") format("woff");
@@ -41,7 +46,8 @@ body {
   font-family: DOS, Monaco, Menlo, Consolas, "Courier New", monospace;
   font-weight: 400;
   line-height: 14px;
-  color: #bbb;
+  font-size: 16px;
+  color: #bbbbbbc0;
   text-align: left;
   background-color: #000084;
   -webkit-font-kerning: none;
@@ -88,13 +94,13 @@ ol,
 ul,
 dl {
   margin-top: 0;
-  margin-left: 9px;
+  margin-left: 8px;
   padding-left: 0;
   margin-bottom: 14px;
 }
 
 li {
-  padding-left: 9px;
+  padding-left: 8px;
 }
 
 ol ol,
@@ -119,11 +125,17 @@ blockquote {
 
 b,
 strong {
-  font-weight: 400;
+  font-weight: normal;
+}
+
+b::before, b::after,
+strong::before,
+strong::after {
+  content: '*';
 }
 
 small {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 sub,
@@ -149,16 +161,15 @@ a {
 
 a:hover {
   color: #fff;
-  background-color: #a50;
+  background-color: #aa5500;
 }
 
 em {
   font-style: normal;
 }
 
-em ::before,
-em ::after {
-  content: "_";
+em::before, em::after {
+  content: "/";
 }
 
 a:not([href]) {
@@ -176,7 +187,7 @@ code,
 kbd,
 samp {
   font-family: DOS, Monaco, Menlo, Consolas, "Courier New", monospace;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 pre {
@@ -229,7 +240,7 @@ button {
 }
 
 button:focus {
-  outline: 1px dotted;
+  outline: 0px dotted;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
@@ -239,8 +250,7 @@ select,
 optgroup,
 textarea {
   margin: 0;
-  font-family: inherit;
-  font-size: 18px;
+  font: 400 16px "DOS" !important;
   line-height: inherit;
 }
 
@@ -315,7 +325,7 @@ legend {
   max-width: 100%;
   padding: 0;
   margin-bottom: 14px;
-  font-size: 18px;
+  font-size: 16px;
   line-height: inherit;
   color: inherit;
   white-space: normal;

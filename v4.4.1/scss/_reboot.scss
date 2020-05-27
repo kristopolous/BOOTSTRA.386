@@ -55,6 +55,7 @@ body {
   font-family: $font-family-base;
   font-weight: $font-weight-base;
   line-height: $line-height-base;
+  font-size: $font-size-base;
   color: $body-color;
   text-align: left; // 3
   background-color: $body-bg; // 2
@@ -171,7 +172,10 @@ blockquote {
 
 b,
 strong {
-  font-weight: $font-weight-bolder; // Add the correct font weight in Chrome, Edge, and Safari
+  font-weight: normal;
+  &::before, &::after {
+    content: '*';
+  }
 }
 
 small {
@@ -211,9 +215,8 @@ a {
 
 em {
   font-style: normal;
-  ::before,
-  ::after {
-    content: "_";
+  &::before, &::after {
+    content: "/";
   }
 }
 // And undo these styles for placeholder links/named anchors (without href).
@@ -331,7 +334,7 @@ button {
 //
 // Credit: https://github.com/suitcss/base/
 button:focus {
-  outline: 1px dotted;
+  outline: 0px dotted;
   outline: 5px auto -webkit-focus-ring-color;
 }
 
@@ -341,8 +344,7 @@ select,
 optgroup,
 textarea {
   margin: 0; // Remove the margin in Firefox and Safari
-  font-family: inherit;
-  @include font-size(inherit);
+  font: 400 $font-size-base 'DOS' !important;
   line-height: inherit;
 }
 option {

@@ -5,9 +5,18 @@
 
 // Color system
 
+// debug values
+$grayLight: #bbbbbbc0 !default;
+$cyan:     #00aaaad0 !default;
+
+/*
+normal.
+$grayLight: #bbbbbb !default;
+$cyan:     #00aaaa !default;
+*/
+
 $white:    #fff !default;
 $grayDark:  #555 !default;
-$grayLight: #bbb !default;
 $gray-100: $grayDark !default;
 $gray-200: $grayDark !default;
 $gray-300: $grayDark !default;
@@ -50,13 +59,12 @@ $grays: map-merge(
 // https://en.wikipedia.org/wiki/Enhanced_Graphics_Adapter
 // screw it, why think?
 
-$black:    #000 !default;
+$black:    #000000 !default;
 $blue:     #000084 !default;
-$green:    #0a0 !default;
-$cyan:     #0aa !default;
-$red:      #a00 !default;
-$magenta:  #a0a !default;
-$brown:    #a50 !default;
+$green:    #00aa00 !default;
+$red:      #aa0000 !default;
+$magenta:  #aa00aa !default;
+$brown:    #aa5500 !default;
 $blueBright:  #55f !default;
 $greenBright: #5f5 !default;
 $cyanBright:  #5ff !default;
@@ -179,12 +187,12 @@ $enable-validation-icons:                     false !default;
 $enable-deprecation-messages:                 false !default;
 
 
-$font-size-base:              18px !default; 
+$font-size-base:              16px !default; 
 $line-height-base:            14px !default;
 
 $font-size-lg:                $font-size-base !default;
 $font-size-sm:                $font-size-base !default;
-$space-width:                 9px !default;
+$space-width:                 $font-size-base/2 !default;
 // Spacing
 //
 // Control the default styling of most Bootstrap elements by modifying these
@@ -271,10 +279,10 @@ $grid-breakpoints: (
 // Define the maximum width of `.container` for different screen sizes.
 
 $container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1140px
+  sm: $space-width * 60,
+  md: $space-width * 90,
+  lg: $space-width * 120,
+  xl: $space-width * 150
 ) !default;
 
 @include _assert-ascending($container-max-widths, "$container-max-widths");
@@ -285,7 +293,7 @@ $container-max-widths: (
 // Set the number of columns and specify the width of the gutters.
 
 $grid-columns:                12 !default;
-$grid-gutter-width:           30px !default;
+$grid-gutter-width:           $space-width * 2 !default;
 $grid-row-columns:            6 !default;
 
 
@@ -1003,10 +1011,10 @@ $modal-header-padding-y:            1rem !default;
 $modal-header-padding-x:            1rem !default;
 $modal-header-padding:              $modal-header-padding-y $modal-header-padding-x !default; // Keep this for backwards compatibility
 
-$modal-xl:                          1140px !default;
-$modal-lg:                          800px !default;
-$modal-md:                          500px !default;
-$modal-sm:                          300px !default;
+$modal-xl:                          $space-width * 140 !default;
+$modal-lg:                          $space-width * 100 !default;
+$modal-md:                          $space-width * 60 !default;
+$modal-sm:                          $space-width * 30 !default;
 
 $modal-fade-transform:              translate(0, -50px) !default;
 $modal-show-transform:              none !default;

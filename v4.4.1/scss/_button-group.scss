@@ -4,7 +4,7 @@
 .btn-group,
 .btn-group-vertical {
   position: relative;
-  margin: 0 $space-width;
+  margin: 0;
   display: inline-flex;
   vertical-align: middle; // match .btn alignment given font-size hack above
 
@@ -39,15 +39,6 @@
   .input-group {
     width: auto;
   }
-}
-
-.btn-group {
-  // Prevent double borders when buttons are next to each other
-  > .btn:not(:first-child),
-  > .btn-group:not(:first-child) {
-    margin-left: -$btn-border-width;
-  }
-
 }
 
 // Sizing
