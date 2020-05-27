@@ -3273,7 +3273,6 @@ fieldset:disabled a.btn {
 
 .btn-outline-primary.disabled, .btn-outline-primary:disabled {
   color: #bbbbbb;
-  background-color: transparent;
 }
 
 .btn-outline-primary:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active,
@@ -3310,7 +3309,6 @@ fieldset:disabled a.btn {
 
 .btn-outline-secondary.disabled, .btn-outline-secondary:disabled {
   color: #bbbbbb;
-  background-color: transparent;
 }
 
 .btn-outline-secondary:not(:disabled):not(.disabled):active, .btn-outline-secondary:not(:disabled):not(.disabled).active,
@@ -3347,7 +3345,6 @@ fieldset:disabled a.btn {
 
 .btn-outline-success.disabled, .btn-outline-success:disabled {
   color: #00aa00;
-  background-color: transparent;
 }
 
 .btn-outline-success:not(:disabled):not(.disabled):active, .btn-outline-success:not(:disabled):not(.disabled).active,
@@ -3384,7 +3381,6 @@ fieldset:disabled a.btn {
 
 .btn-outline-info.disabled, .btn-outline-info:disabled {
   color: #00aaaa;
-  background-color: transparent;
 }
 
 .btn-outline-info:not(:disabled):not(.disabled):active, .btn-outline-info:not(:disabled):not(.disabled).active,
@@ -3421,7 +3417,6 @@ fieldset:disabled a.btn {
 
 .btn-outline-warning.disabled, .btn-outline-warning:disabled {
   color: #aa5500;
-  background-color: transparent;
 }
 
 .btn-outline-warning:not(:disabled):not(.disabled):active, .btn-outline-warning:not(:disabled):not(.disabled).active,
@@ -3458,7 +3453,6 @@ fieldset:disabled a.btn {
 
 .btn-outline-danger.disabled, .btn-outline-danger:disabled {
   color: #aa0000;
-  background-color: transparent;
 }
 
 .btn-outline-danger:not(:disabled):not(.disabled):active, .btn-outline-danger:not(:disabled):not(.disabled).active,
@@ -3493,7 +3487,6 @@ fieldset:disabled a.btn {
 
 .btn-outline-light.disabled, .btn-outline-light:disabled {
   color: #fff;
-  background-color: transparent;
 }
 
 .btn-outline-light:not(:disabled):not(.disabled):active, .btn-outline-light:not(:disabled):not(.disabled).active,
@@ -3529,7 +3522,6 @@ fieldset:disabled a.btn {
 
 .btn-outline-dark.disabled, .btn-outline-dark:disabled {
   color: #000000;
-  background-color: transparent;
 }
 
 .btn-outline-dark:not(:disabled):not(.disabled):active, .btn-outline-dark:not(:disabled):not(.disabled).active,
