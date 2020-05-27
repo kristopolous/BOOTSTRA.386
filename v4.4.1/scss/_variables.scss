@@ -180,7 +180,7 @@ $enable-deprecation-messages:                 false !default;
 
 
 $font-size-base:              18px !default; 
-$line-height-base:            18px !default;
+$line-height-base:            14px !default;
 
 $font-size-lg:                $font-size-base !default;
 $font-size-sm:                $font-size-base !default;
@@ -741,12 +741,10 @@ $nav-link-padding-x:                0 !default;
 $nav-link-disabled-color:           $grayDark !default;
 
 $nav-tabs-border-color:             $gray-300 !default;
-$nav-tabs-border-width:             $border-width !default;
-$nav-tabs-border-radius:            $border-radius !default;
-$nav-tabs-link-hover-border-color:  $gray-200 $gray-200 $nav-tabs-border-color !default;
-$nav-tabs-link-active-color:        $gray-700 !default;
-$nav-tabs-link-active-bg:           $body-bg !default;
-$nav-tabs-link-active-border-color: $gray-300 $gray-300 $nav-tabs-link-active-bg !default;
+$nav-tabs-link-hover-border-color:  $white !default;
+$nav-tabs-link-active-color:        $white !default;
+$nav-tabs-link-active-bg:           $blue !default;
+$nav-tabs-link-active-border-color: $white !default;
 
 $nav-pills-border-radius:           $border-radius !default;
 $nav-pills-link-active-color:       $component-active-color !default;

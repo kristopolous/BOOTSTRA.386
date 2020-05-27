@@ -26,10 +26,10 @@
 
 html {
   font-family: 'DOS', monospace;
-  line-height: 18px;
+  line-height: 14px;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  line-height-step: 18px;
+  line-height-step: 14px;
 }
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
@@ -40,7 +40,7 @@ body {
   margin: 0;
   font-family: DOS, Monaco, Menlo, Consolas, "Courier New", monospace;
   font-weight: 400;
-  line-height: 18px;
+  line-height: 14px;
   color: #bbb;
   text-align: left;
   background-color: #000084;
@@ -60,13 +60,13 @@ hr {
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
   font-weight: normal;
 }
 
 p {
   margin-top: 0;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 }
 
 abbr[title],
@@ -79,7 +79,7 @@ abbr[data-original-title] {
 }
 
 address {
-  margin-bottom: 18px;
+  margin-bottom: 14px;
   font-style: normal;
   line-height: inherit;
 }
@@ -90,7 +90,7 @@ dl {
   margin-top: 0;
   margin-left: 7.75px;
   padding-left: 0;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 }
 
 li {
@@ -109,12 +109,12 @@ dt {
 }
 
 dd {
-  margin-bottom: 18px;
+  margin-bottom: 14px;
   margin-left: 0;
 }
 
 blockquote {
-  margin: 0 0 18px;
+  margin: 0 0 14px;
 }
 
 b,
@@ -181,12 +181,12 @@ samp {
 
 pre {
   margin-top: 0;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
   overflow: auto;
 }
 
 figure {
-  margin: 0 0 18px;
+  margin: 0 0 14px;
 }
 
 img {
@@ -314,7 +314,7 @@ legend {
   width: 100%;
   max-width: 100%;
   padding: 0;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
   font-size: 18px;
   line-height: inherit;
   color: inherit;

@@ -3,9 +3,10 @@
   // In dos world, the left and right are actually a bit thicker.
   border-left-width: 2px;
   border-right-width: 2px;
-  padding: $extra + ($line-height-base / 2 - .5) (($character-space + .5) * $space-width - .5);
+  padding: $extra + ($line-height-base / 2) (($character-space + .5) * $space-width - .5);
   margin-top: $line-height-base / 2 - .5;
   margin-left: $space-width / 2 - 1.5;
+  margin-right: (($character-space + .5) * $space-width - .5);
   margin-bottom: $extra + 1.5 * $line-height-base;
 }
 
