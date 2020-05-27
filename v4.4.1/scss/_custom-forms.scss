@@ -10,7 +10,7 @@
 .custom-control {
   position: relative;
   display: block;
-  min-height: $font-size-base;
+  min-height: $line-height-base;
   padding-left: $custom-control-gutter + $custom-control-indicator-size;
 }
 
