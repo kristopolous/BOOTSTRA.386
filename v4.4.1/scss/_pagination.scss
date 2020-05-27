@@ -8,17 +8,14 @@
   display: block;
   padding: $pagination-padding-y $pagination-padding-x;
   margin-left: -$pagination-border-width;
-  line-height: $pagination-line-height;
   color: $pagination-color;
   background-color: $pagination-bg;
-  border: $pagination-border-width solid $pagination-border-color;
 
   &:hover {
     z-index: 2;
     color: $pagination-hover-color;
     text-decoration: none;
     background-color: $pagination-hover-bg;
-    border-color: $pagination-hover-border-color;
   }
 
   &:focus {
@@ -29,6 +26,7 @@
 }
 
 .page-item {
+  padding-left: 0;
   &:first-child {
     .page-link {
       margin-left: 0;
@@ -43,7 +41,6 @@
     z-index: 3;
     color: $pagination-active-color;
     background-color: $pagination-active-bg;
-    border-color: $pagination-active-border-color;
   }
 
   &.disabled .page-link {

@@ -310,7 +310,7 @@ $box-shadow:                  0 .5rem 1rem rgba($black, .15) !default;
 $box-shadow-lg:               0 1rem 3rem rgba($black, .175) !default;
 
 $component-active-color:      $white !default;
-$component-active-bg:         theme-color("primary") !default;
+$component-active-bg:         $link-hover-background !default;
 
 $caret-width:                 $space-width !default;
 $caret-spacing:               $caret-width !default;
@@ -828,28 +828,25 @@ $dropdown-header-color:             $gray-600 !default;
 // Pagination
 
 $pagination-padding-y:              0 !default;
-$pagination-padding-x:              0 !default;
+$pagination-padding-x:              $space-width !default;
 $pagination-padding-y-sm:           0 !default;
-$pagination-padding-x-sm:           $space-width !default;
-$pagination-padding-y-lg:           .75rem !default;
-$pagination-padding-x-lg:           1.5rem !default;
+$pagination-padding-x-sm:           0 !default;
+$pagination-padding-y-lg:           $line-height-base !default;
+$pagination-padding-x-lg:           $space-width !default;
 $pagination-line-height:            $line-height-base !default;
 
 $pagination-color:                  $link-color !default;
 $pagination-bg:                     transparent !default;
 $pagination-border-width:           $border-width !default;
-$pagination-border-color:           $gray-300 !default;
 
 $pagination-focus-box-shadow:       $input-btn-focus-box-shadow !default;
 $pagination-focus-outline:          0 !default;
 
 $pagination-hover-color:            $link-hover-color !default;
-$pagination-hover-bg:               $gray-200 !default;
-$pagination-hover-border-color:     $gray-300 !default;
+$pagination-hover-bg:               $link-hover-background !default;
 
 $pagination-active-color:           $component-active-color !default;
 $pagination-active-bg:              $component-active-bg !default;
-$pagination-active-border-color:    $pagination-active-bg !default;
 
 $pagination-disabled-color:         $grayDark !default;
 $pagination-disabled-bg:            $white !default;
