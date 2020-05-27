@@ -79,6 +79,14 @@
 
 .nav-pills {
   .nav-link {
+    &::before {
+      content: '(';
+      margin-right: $space-width;
+    }
+    &::after {
+      content: ')';
+      margin-left: $space-width;
+    }
   }
 
   .nav-link.active,

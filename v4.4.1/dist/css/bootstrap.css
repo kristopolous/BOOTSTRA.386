@@ -4521,6 +4521,16 @@ input[type="button"].btn-block {
   margin-top: -1px;
 }
 
+.nav-pills .nav-link::before {
+  content: '(';
+  margin-right: 9px;
+}
+
+.nav-pills .nav-link::after {
+  content: ')';
+  margin-left: 9px;
+}
+
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   color: #fff;
