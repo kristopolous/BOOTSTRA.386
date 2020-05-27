@@ -7,11 +7,9 @@
 .btn {
   display: inline-block;
   font-family: $btn-font-family;
-  font-weight: $btn-font-weight;
   color: $black;
   text-align: left;
   white-space: $btn-white-space;
-  vertical-align: middle;
   cursor: if($enable-pointer-cursor-for-buttons, pointer, null);
   user-select: none;
   background-color: $grayLight;
@@ -62,7 +60,7 @@ fieldset:disabled a.btn {
       background-color: $value;
       @include dos-solid-border($value, $character-space: 1);
       @include dos-shadow();
-      margin-bottom: $line-height-base;
+      margin-bottom: $line-height-base + 6px;
 
       @include hover() {
         @include dos-border-background(darken($value));
@@ -79,7 +77,12 @@ fieldset:disabled a.btn {
         border-color: white;
         background-color: darken($value);
         filter: none;
-        margin: $line-height-base 0 $line-height-base / 2 $space-width;
+        // this little position: relative trick keeps shit on the
+        // page from moving around.
+        position: relative;
+        top: .5 + $line-height-base;
+        left: $space-width;
+        margin: 5.5px 5 + $line-height-base 3px $line-height-base / 2 2.5px;
       }
     }
   }

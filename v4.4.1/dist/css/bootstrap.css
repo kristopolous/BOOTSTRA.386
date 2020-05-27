@@ -6,8 +6,8 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*
-normal.
-$grayLight: #bbbbbbc0 !default;
+$grayLight: #bbbbbb70 !default;
+$grayDark:  #55555570 !default;
 $cyan:     #00aaaad0 !default;
 */
 :root {
@@ -249,7 +249,7 @@ table {
 caption {
   padding-top: 0;
   padding-bottom: 0;
-  color: #555;
+  color: #555555;
   text-align: left;
   caption-side: bottom;
 }
@@ -422,8 +422,8 @@ h4, .h4 {
   border: 1px solid #fff;
   border-left-width: 2px;
   border-right-width: 2px;
-  padding: 7px 3.5px;
-  margin-top: 6.5px;
+  padding: 6.5px 3.5px;
+  margin-top: 5.5px;
   margin-left: 2.5px;
   margin-right: 3.5px;
   margin-bottom: 7px;
@@ -605,7 +605,7 @@ mark,
 .img-thumbnail {
   padding: 0.25rem;
   background-color: #000084;
-  border: 0 solid #555;
+  border: 0 solid #555555;
   max-width: 100%;
   height: auto;
 }
@@ -1832,7 +1832,7 @@ pre code {
 }
 
 .table-bordered {
-  border: 0 solid #555;
+  border: 0 solid #555555;
 }
 
 .table-bordered thead th,
@@ -1991,23 +1991,23 @@ pre code {
 .table-dark,
 .table-dark > th,
 .table-dark > td {
-  background-color: #555;
+  background-color: #555555;
 }
 
 .table-dark th,
 .table-dark td,
 .table-dark thead th,
 .table-dark tbody + tbody {
-  border-color: #555;
+  border-color: #555555;
 }
 
 .table-hover .table-dark:hover {
-  background-color: #555;
+  background-color: #555555;
 }
 
 .table-hover .table-dark:hover > td,
 .table-hover .table-dark:hover > th {
-  background-color: #555;
+  background-color: #555555;
 }
 
 .table-active,
@@ -2033,8 +2033,8 @@ pre code {
 
 .table .thead-light th {
   color: #bbbbbb;
-  background-color: #555;
-  border-color: #555;
+  background-color: #555555;
+  border-color: #555555;
 }
 
 .table-dark {
@@ -2130,7 +2130,7 @@ pre code {
   color: #fff;
   background-color: #000084;
   background-clip: padding-box;
-  border: 0 solid #555;
+  border: 0 solid #555555;
 }
 
 .form-control::-ms-expand {
@@ -2173,7 +2173,7 @@ pre code {
 }
 
 .form-control:disabled, .form-control[readonly] {
-  background-color: #555;
+  background-color: #555555;
   opacity: 1;
 }
 
@@ -2182,12 +2182,12 @@ select.form-control {
   border: 1px solid #000000;
   border-left-width: 2px;
   border-right-width: 2px;
-  padding: 7px 3.5px;
-  margin-top: 6.5px;
+  padding: 6.5px 3.5px;
+  margin-top: 5.5px;
   margin-left: 2.5px;
   margin-right: 3.5px;
   margin-bottom: 7px;
-  box-shadow: 0 -2px 0 3px #bbbbbb, 0 3px 0 3px #bbbbbb, 0 0 0 3px #bbbbbb;
+  box-shadow: 0.5px -2.5px 0 2.75px #bbbbbb, 0.5px 3px 0 2.75px #bbbbbb;
   color: #000000;
 }
 
@@ -2265,12 +2265,12 @@ textarea.form-control {
   border: 1px solid #000000;
   border-left-width: 2px;
   border-right-width: 2px;
-  padding: 7px 3.5px;
-  margin-top: 6.5px;
+  padding: 6.5px 3.5px;
+  margin-top: 5.5px;
   margin-left: 2.5px;
   margin-right: 3.5px;
   margin-bottom: 7px;
-  box-shadow: inset 0 -3.5px 0 3px #bbbbbb, inset 0 3.5px 0 3px #bbbbbb, 0 -2px 0 3px #bbbbbb, 0 3px 0 3px #bbbbbb, 0 0 0 3px #bbbbbb;
+  box-shadow: inset 0 -3.5px 0 3px #bbbbbb, inset 0 3.5px 0 3px #bbbbbb, 0.5px -2.5px 0 2.75px #bbbbbb, 0.5px 3px 0 2.75px #bbbbbb;
 }
 
 input.form-control {
@@ -2317,7 +2317,7 @@ input.form-control {
 
 .form-check-input[disabled] ~ .form-check-label,
 .form-check-input:disabled ~ .form-check-label {
-  color: #555;
+  color: #555555;
 }
 
 .form-check-label {
@@ -2587,10 +2587,8 @@ input.form-control {
 
 .btn {
   display: inline-block;
-  font-weight: 400;
   color: #000000;
   text-align: left;
-  vertical-align: middle;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -2643,7 +2641,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-primary.disabled, .btn-primary:disabled {
-  color: #555;
+  color: #555555;
   background-color: #bbbbbb;
   border-color: #bbbbbb;
 }
@@ -2659,35 +2657,38 @@ fieldset:disabled a.btn {
   border: 1px solid #000000;
   border-left-width: 2px;
   border-right-width: 2px;
-  padding: 7px 11.5px;
-  margin-top: 6.5px;
+  padding: 6.5px 11.5px;
+  margin-top: 5.5px;
   margin-left: 2.5px;
   margin-right: 11.5px;
   margin-bottom: 7px;
-  box-shadow: 0 -2px 0 3px #bbbbbb, 0 3px 0 3px #bbbbbb, 0 0 0 3px #bbbbbb;
+  box-shadow: 0.5px -2.5px 0 2.75px #bbbbbb, 0.5px 3px 0 2.75px #bbbbbb;
   -webkit-filter: drop-shadow(7px 8px 0 black);
   filter: drop-shadow(7px 8px 0 black);
   margin-right: 5px;
-  margin-bottom: 14px;
+  margin-bottom: 20px;
 }
 
 .btn-primary.btn-lg:hover, .btn-group-lg > .btn-primary.btn:hover {
-  box-shadow: 0 -2px 0 3px #555, 0 3px 0 3px #555, 0 0 0 3px #555;
+  box-shadow: 0.5px -2.5px 0 2.75px #555555, 0.5px 3px 0 2.75px #555555;
   color: #fff;
   border-color: white;
-  background-color: #555;
+  background-color: #555555;
 }
 
 .btn-primary.btn-lg:not(:disabled):not(.disabled):active, .btn-group-lg > .btn-primary.btn:not(:disabled):not(.disabled):active, .btn-primary.btn-lg:not(:disabled):not(.disabled).active, .btn-group-lg > .btn-primary.btn:not(:disabled):not(.disabled).active,
 .show > .btn-primary.btn-lg.dropdown-toggle,
 .btn-group-lg.show > .btn-primary.dropdown-toggle.btn {
-  box-shadow: 0 -2px 0 3px #555, 0 3px 0 3px #555, 0 0 0 3px #555;
+  box-shadow: 0.5px -2.5px 0 2.75px #555555, 0.5px 3px 0 2.75px #555555;
   color: #fff;
   border-color: white;
-  background-color: #555;
+  background-color: #555555;
   -webkit-filter: none;
   filter: none;
-  margin: 14px 0 7px 8px;
+  position: relative;
+  top: 14.5px;
+  left: 8px;
+  margin: 5.5px 19px 3px 7px 2.5px;
 }
 
 .bs-component > .btn-secondary:not(.disabled):not(.btn-sm):not(.btn-lg):hover {
@@ -2723,7 +2724,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-secondary.disabled, .btn-secondary:disabled {
-  color: #555;
+  color: #555555;
   background-color: #bbbbbb;
   border-color: #bbbbbb;
 }
@@ -2739,35 +2740,38 @@ fieldset:disabled a.btn {
   border: 1px solid #000000;
   border-left-width: 2px;
   border-right-width: 2px;
-  padding: 7px 11.5px;
-  margin-top: 6.5px;
+  padding: 6.5px 11.5px;
+  margin-top: 5.5px;
   margin-left: 2.5px;
   margin-right: 11.5px;
   margin-bottom: 7px;
-  box-shadow: 0 -2px 0 3px #bbbbbb, 0 3px 0 3px #bbbbbb, 0 0 0 3px #bbbbbb;
+  box-shadow: 0.5px -2.5px 0 2.75px #bbbbbb, 0.5px 3px 0 2.75px #bbbbbb;
   -webkit-filter: drop-shadow(7px 8px 0 black);
   filter: drop-shadow(7px 8px 0 black);
   margin-right: 5px;
-  margin-bottom: 14px;
+  margin-bottom: 20px;
 }
 
 .btn-secondary.btn-lg:hover, .btn-group-lg > .btn-secondary.btn:hover {
-  box-shadow: 0 -2px 0 3px #555, 0 3px 0 3px #555, 0 0 0 3px #555;
+  box-shadow: 0.5px -2.5px 0 2.75px #555555, 0.5px 3px 0 2.75px #555555;
   color: #fff;
   border-color: white;
-  background-color: #555;
+  background-color: #555555;
 }
 
 .btn-secondary.btn-lg:not(:disabled):not(.disabled):active, .btn-group-lg > .btn-secondary.btn:not(:disabled):not(.disabled):active, .btn-secondary.btn-lg:not(:disabled):not(.disabled).active, .btn-group-lg > .btn-secondary.btn:not(:disabled):not(.disabled).active,
 .show > .btn-secondary.btn-lg.dropdown-toggle,
 .btn-group-lg.show > .btn-secondary.dropdown-toggle.btn {
-  box-shadow: 0 -2px 0 3px #555, 0 3px 0 3px #555, 0 0 0 3px #555;
+  box-shadow: 0.5px -2.5px 0 2.75px #555555, 0.5px 3px 0 2.75px #555555;
   color: #fff;
   border-color: white;
-  background-color: #555;
+  background-color: #555555;
   -webkit-filter: none;
   filter: none;
-  margin: 14px 0 7px 8px;
+  position: relative;
+  top: 14.5px;
+  left: 8px;
+  margin: 5.5px 19px 3px 7px 2.5px;
 }
 
 .bs-component > .btn-success:not(.disabled):not(.btn-sm):not(.btn-lg):hover {
@@ -2803,7 +2807,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-success.disabled, .btn-success:disabled {
-  color: #555;
+  color: #555555;
   background-color: #bbbbbb;
   border-color: #00aa00;
 }
@@ -2819,20 +2823,20 @@ fieldset:disabled a.btn {
   border: 1px solid #000000;
   border-left-width: 2px;
   border-right-width: 2px;
-  padding: 7px 11.5px;
-  margin-top: 6.5px;
+  padding: 6.5px 11.5px;
+  margin-top: 5.5px;
   margin-left: 2.5px;
   margin-right: 11.5px;
   margin-bottom: 7px;
-  box-shadow: 0 -2px 0 3px #00aa00, 0 3px 0 3px #00aa00, 0 0 0 3px #00aa00;
+  box-shadow: 0.5px -2.5px 0 2.75px #00aa00, 0.5px 3px 0 2.75px #00aa00;
   -webkit-filter: drop-shadow(7px 8px 0 black);
   filter: drop-shadow(7px 8px 0 black);
   margin-right: 5px;
-  margin-bottom: 14px;
+  margin-bottom: 20px;
 }
 
 .btn-success.btn-lg:hover, .btn-group-lg > .btn-success.btn:hover {
-  box-shadow: 0 -2px 0 3px #00aa00, 0 3px 0 3px #00aa00, 0 0 0 3px #00aa00;
+  box-shadow: 0.5px -2.5px 0 2.75px #00aa00, 0.5px 3px 0 2.75px #00aa00;
   color: #fff;
   border-color: white;
   background-color: #00aa00;
@@ -2841,13 +2845,16 @@ fieldset:disabled a.btn {
 .btn-success.btn-lg:not(:disabled):not(.disabled):active, .btn-group-lg > .btn-success.btn:not(:disabled):not(.disabled):active, .btn-success.btn-lg:not(:disabled):not(.disabled).active, .btn-group-lg > .btn-success.btn:not(:disabled):not(.disabled).active,
 .show > .btn-success.btn-lg.dropdown-toggle,
 .btn-group-lg.show > .btn-success.dropdown-toggle.btn {
-  box-shadow: 0 -2px 0 3px #00aa00, 0 3px 0 3px #00aa00, 0 0 0 3px #00aa00;
+  box-shadow: 0.5px -2.5px 0 2.75px #00aa00, 0.5px 3px 0 2.75px #00aa00;
   color: #fff;
   border-color: white;
   background-color: #00aa00;
   -webkit-filter: none;
   filter: none;
-  margin: 14px 0 7px 8px;
+  position: relative;
+  top: 14.5px;
+  left: 8px;
+  margin: 5.5px 19px 3px 7px 2.5px;
 }
 
 .bs-component > .btn-info:not(.disabled):not(.btn-sm):not(.btn-lg):hover {
@@ -2883,7 +2890,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-info.disabled, .btn-info:disabled {
-  color: #555;
+  color: #555555;
   background-color: #bbbbbb;
   border-color: #00aaaa;
 }
@@ -2899,20 +2906,20 @@ fieldset:disabled a.btn {
   border: 1px solid #000000;
   border-left-width: 2px;
   border-right-width: 2px;
-  padding: 7px 11.5px;
-  margin-top: 6.5px;
+  padding: 6.5px 11.5px;
+  margin-top: 5.5px;
   margin-left: 2.5px;
   margin-right: 11.5px;
   margin-bottom: 7px;
-  box-shadow: 0 -2px 0 3px #00aaaa, 0 3px 0 3px #00aaaa, 0 0 0 3px #00aaaa;
+  box-shadow: 0.5px -2.5px 0 2.75px #00aaaa, 0.5px 3px 0 2.75px #00aaaa;
   -webkit-filter: drop-shadow(7px 8px 0 black);
   filter: drop-shadow(7px 8px 0 black);
   margin-right: 5px;
-  margin-bottom: 14px;
+  margin-bottom: 20px;
 }
 
 .btn-info.btn-lg:hover, .btn-group-lg > .btn-info.btn:hover {
-  box-shadow: 0 -2px 0 3px #00aaaa, 0 3px 0 3px #00aaaa, 0 0 0 3px #00aaaa;
+  box-shadow: 0.5px -2.5px 0 2.75px #00aaaa, 0.5px 3px 0 2.75px #00aaaa;
   color: #fff;
   border-color: white;
   background-color: #00aaaa;
@@ -2921,13 +2928,16 @@ fieldset:disabled a.btn {
 .btn-info.btn-lg:not(:disabled):not(.disabled):active, .btn-group-lg > .btn-info.btn:not(:disabled):not(.disabled):active, .btn-info.btn-lg:not(:disabled):not(.disabled).active, .btn-group-lg > .btn-info.btn:not(:disabled):not(.disabled).active,
 .show > .btn-info.btn-lg.dropdown-toggle,
 .btn-group-lg.show > .btn-info.dropdown-toggle.btn {
-  box-shadow: 0 -2px 0 3px #00aaaa, 0 3px 0 3px #00aaaa, 0 0 0 3px #00aaaa;
+  box-shadow: 0.5px -2.5px 0 2.75px #00aaaa, 0.5px 3px 0 2.75px #00aaaa;
   color: #fff;
   border-color: white;
   background-color: #00aaaa;
   -webkit-filter: none;
   filter: none;
-  margin: 14px 0 7px 8px;
+  position: relative;
+  top: 14.5px;
+  left: 8px;
+  margin: 5.5px 19px 3px 7px 2.5px;
 }
 
 .bs-component > .btn-warning:not(.disabled):not(.btn-sm):not(.btn-lg):hover {
@@ -2963,7 +2973,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-warning.disabled, .btn-warning:disabled {
-  color: #555;
+  color: #555555;
   background-color: #bbbbbb;
   border-color: #aa5500;
 }
@@ -2979,20 +2989,20 @@ fieldset:disabled a.btn {
   border: 1px solid #000000;
   border-left-width: 2px;
   border-right-width: 2px;
-  padding: 7px 11.5px;
-  margin-top: 6.5px;
+  padding: 6.5px 11.5px;
+  margin-top: 5.5px;
   margin-left: 2.5px;
   margin-right: 11.5px;
   margin-bottom: 7px;
-  box-shadow: 0 -2px 0 3px #aa5500, 0 3px 0 3px #aa5500, 0 0 0 3px #aa5500;
+  box-shadow: 0.5px -2.5px 0 2.75px #aa5500, 0.5px 3px 0 2.75px #aa5500;
   -webkit-filter: drop-shadow(7px 8px 0 black);
   filter: drop-shadow(7px 8px 0 black);
   margin-right: 5px;
-  margin-bottom: 14px;
+  margin-bottom: 20px;
 }
 
 .btn-warning.btn-lg:hover, .btn-group-lg > .btn-warning.btn:hover {
-  box-shadow: 0 -2px 0 3px #aa5500, 0 3px 0 3px #aa5500, 0 0 0 3px #aa5500;
+  box-shadow: 0.5px -2.5px 0 2.75px #aa5500, 0.5px 3px 0 2.75px #aa5500;
   color: #fff;
   border-color: white;
   background-color: #aa5500;
@@ -3001,13 +3011,16 @@ fieldset:disabled a.btn {
 .btn-warning.btn-lg:not(:disabled):not(.disabled):active, .btn-group-lg > .btn-warning.btn:not(:disabled):not(.disabled):active, .btn-warning.btn-lg:not(:disabled):not(.disabled).active, .btn-group-lg > .btn-warning.btn:not(:disabled):not(.disabled).active,
 .show > .btn-warning.btn-lg.dropdown-toggle,
 .btn-group-lg.show > .btn-warning.dropdown-toggle.btn {
-  box-shadow: 0 -2px 0 3px #aa5500, 0 3px 0 3px #aa5500, 0 0 0 3px #aa5500;
+  box-shadow: 0.5px -2.5px 0 2.75px #aa5500, 0.5px 3px 0 2.75px #aa5500;
   color: #fff;
   border-color: white;
   background-color: #aa5500;
   -webkit-filter: none;
   filter: none;
-  margin: 14px 0 7px 8px;
+  position: relative;
+  top: 14.5px;
+  left: 8px;
+  margin: 5.5px 19px 3px 7px 2.5px;
 }
 
 .bs-component > .btn-danger:not(.disabled):not(.btn-sm):not(.btn-lg):hover {
@@ -3043,7 +3056,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-danger.disabled, .btn-danger:disabled {
-  color: #555;
+  color: #555555;
   background-color: #bbbbbb;
   border-color: #aa0000;
 }
@@ -3059,20 +3072,20 @@ fieldset:disabled a.btn {
   border: 1px solid #000000;
   border-left-width: 2px;
   border-right-width: 2px;
-  padding: 7px 11.5px;
-  margin-top: 6.5px;
+  padding: 6.5px 11.5px;
+  margin-top: 5.5px;
   margin-left: 2.5px;
   margin-right: 11.5px;
   margin-bottom: 7px;
-  box-shadow: 0 -2px 0 3px #aa0000, 0 3px 0 3px #aa0000, 0 0 0 3px #aa0000;
+  box-shadow: 0.5px -2.5px 0 2.75px #aa0000, 0.5px 3px 0 2.75px #aa0000;
   -webkit-filter: drop-shadow(7px 8px 0 black);
   filter: drop-shadow(7px 8px 0 black);
   margin-right: 5px;
-  margin-bottom: 14px;
+  margin-bottom: 20px;
 }
 
 .btn-danger.btn-lg:hover, .btn-group-lg > .btn-danger.btn:hover {
-  box-shadow: 0 -2px 0 3px #aa0000, 0 3px 0 3px #aa0000, 0 0 0 3px #aa0000;
+  box-shadow: 0.5px -2.5px 0 2.75px #aa0000, 0.5px 3px 0 2.75px #aa0000;
   color: #fff;
   border-color: white;
   background-color: #aa0000;
@@ -3081,13 +3094,16 @@ fieldset:disabled a.btn {
 .btn-danger.btn-lg:not(:disabled):not(.disabled):active, .btn-group-lg > .btn-danger.btn:not(:disabled):not(.disabled):active, .btn-danger.btn-lg:not(:disabled):not(.disabled).active, .btn-group-lg > .btn-danger.btn:not(:disabled):not(.disabled).active,
 .show > .btn-danger.btn-lg.dropdown-toggle,
 .btn-group-lg.show > .btn-danger.dropdown-toggle.btn {
-  box-shadow: 0 -2px 0 3px #aa0000, 0 3px 0 3px #aa0000, 0 0 0 3px #aa0000;
+  box-shadow: 0.5px -2.5px 0 2.75px #aa0000, 0.5px 3px 0 2.75px #aa0000;
   color: #fff;
   border-color: white;
   background-color: #aa0000;
   -webkit-filter: none;
   filter: none;
-  margin: 14px 0 7px 8px;
+  position: relative;
+  top: 14.5px;
+  left: 8px;
+  margin: 5.5px 19px 3px 7px 2.5px;
 }
 
 .bs-component > .btn-light:not(.disabled):not(.btn-sm):not(.btn-lg):hover {
@@ -3118,7 +3134,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-light.disabled, .btn-light:disabled {
-  color: #555;
+  color: #555555;
   background-color: #bbbbbb;
   border-color: #fff;
 }
@@ -3134,20 +3150,20 @@ fieldset:disabled a.btn {
   border: 1px solid #000000;
   border-left-width: 2px;
   border-right-width: 2px;
-  padding: 7px 11.5px;
-  margin-top: 6.5px;
+  padding: 6.5px 11.5px;
+  margin-top: 5.5px;
   margin-left: 2.5px;
   margin-right: 11.5px;
   margin-bottom: 7px;
-  box-shadow: 0 -2px 0 3px #fff, 0 3px 0 3px #fff, 0 0 0 3px #fff;
+  box-shadow: 0.5px -2.5px 0 2.75px #fff, 0.5px 3px 0 2.75px #fff;
   -webkit-filter: drop-shadow(7px 8px 0 black);
   filter: drop-shadow(7px 8px 0 black);
   margin-right: 5px;
-  margin-bottom: 14px;
+  margin-bottom: 20px;
 }
 
 .btn-light.btn-lg:hover, .btn-group-lg > .btn-light.btn:hover {
-  box-shadow: 0 -2px 0 3px #bbbbbb, 0 3px 0 3px #bbbbbb, 0 0 0 3px #bbbbbb;
+  box-shadow: 0.5px -2.5px 0 2.75px #bbbbbb, 0.5px 3px 0 2.75px #bbbbbb;
   color: #fff;
   border-color: white;
   background-color: #bbbbbb;
@@ -3156,13 +3172,16 @@ fieldset:disabled a.btn {
 .btn-light.btn-lg:not(:disabled):not(.disabled):active, .btn-group-lg > .btn-light.btn:not(:disabled):not(.disabled):active, .btn-light.btn-lg:not(:disabled):not(.disabled).active, .btn-group-lg > .btn-light.btn:not(:disabled):not(.disabled).active,
 .show > .btn-light.btn-lg.dropdown-toggle,
 .btn-group-lg.show > .btn-light.dropdown-toggle.btn {
-  box-shadow: 0 -2px 0 3px #bbbbbb, 0 3px 0 3px #bbbbbb, 0 0 0 3px #bbbbbb;
+  box-shadow: 0.5px -2.5px 0 2.75px #bbbbbb, 0.5px 3px 0 2.75px #bbbbbb;
   color: #fff;
   border-color: white;
   background-color: #bbbbbb;
   -webkit-filter: none;
   filter: none;
-  margin: 14px 0 7px 8px;
+  position: relative;
+  top: 14.5px;
+  left: 8px;
+  margin: 5.5px 19px 3px 7px 2.5px;
 }
 
 .bs-component > .btn-dark:not(.disabled):not(.btn-sm):not(.btn-lg):hover {
@@ -3185,11 +3204,11 @@ fieldset:disabled a.btn {
 }
 
 .btn-dark:hover:before, .btn-dark:hover:after {
-  color: #555;
+  color: #555555;
 }
 
 .btn-dark:hover {
-  color: #555;
+  color: #555555;
   border-color: #fff;
 }
 
@@ -3198,7 +3217,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-dark.disabled, .btn-dark:disabled {
-  color: #555;
+  color: #555555;
   background-color: #bbbbbb;
   border-color: #000000;
 }
@@ -3214,20 +3233,20 @@ fieldset:disabled a.btn {
   border: 1px solid #000000;
   border-left-width: 2px;
   border-right-width: 2px;
-  padding: 7px 11.5px;
-  margin-top: 6.5px;
+  padding: 6.5px 11.5px;
+  margin-top: 5.5px;
   margin-left: 2.5px;
   margin-right: 11.5px;
   margin-bottom: 7px;
-  box-shadow: 0 -2px 0 3px #000000, 0 3px 0 3px #000000, 0 0 0 3px #000000;
+  box-shadow: 0.5px -2.5px 0 2.75px #000000, 0.5px 3px 0 2.75px #000000;
   -webkit-filter: drop-shadow(7px 8px 0 black);
   filter: drop-shadow(7px 8px 0 black);
   margin-right: 5px;
-  margin-bottom: 14px;
+  margin-bottom: 20px;
 }
 
 .btn-dark.btn-lg:hover, .btn-group-lg > .btn-dark.btn:hover {
-  box-shadow: 0 -2px 0 3px #000000, 0 3px 0 3px #000000, 0 0 0 3px #000000;
+  box-shadow: 0.5px -2.5px 0 2.75px #000000, 0.5px 3px 0 2.75px #000000;
   color: #fff;
   border-color: white;
   background-color: #000000;
@@ -3236,13 +3255,16 @@ fieldset:disabled a.btn {
 .btn-dark.btn-lg:not(:disabled):not(.disabled):active, .btn-group-lg > .btn-dark.btn:not(:disabled):not(.disabled):active, .btn-dark.btn-lg:not(:disabled):not(.disabled).active, .btn-group-lg > .btn-dark.btn:not(:disabled):not(.disabled).active,
 .show > .btn-dark.btn-lg.dropdown-toggle,
 .btn-group-lg.show > .btn-dark.dropdown-toggle.btn {
-  box-shadow: 0 -2px 0 3px #000000, 0 3px 0 3px #000000, 0 0 0 3px #000000;
+  box-shadow: 0.5px -2.5px 0 2.75px #000000, 0.5px 3px 0 2.75px #000000;
   color: #fff;
   border-color: white;
   background-color: #000000;
   -webkit-filter: none;
   filter: none;
-  margin: 14px 0 7px 8px;
+  position: relative;
+  top: 14.5px;
+  left: 8px;
+  margin: 5.5px 19px 3px 7px 2.5px;
 }
 
 .btn-outline-primary {
@@ -3252,19 +3274,19 @@ fieldset:disabled a.btn {
   border: 1px solid #fff;
   border-left-width: 2px;
   border-right-width: 2px;
-  padding: 7px 11.5px;
-  margin-top: 6.5px;
+  padding: 6.5px 11.5px;
+  margin-top: 5.5px;
   margin-left: 2.5px;
   margin-right: 11.5px;
   margin-bottom: 7px;
 }
 
 .btn-outline-primary:hover {
-  border: 1px solid #555;
+  border: 1px solid #555555;
   border-left-width: 2px;
   border-right-width: 2px;
-  padding: 7px 11.5px;
-  margin-top: 6.5px;
+  padding: 6.5px 11.5px;
+  margin-top: 5.5px;
   margin-left: 2.5px;
   margin-right: 11.5px;
   margin-bottom: 7px;
@@ -3273,7 +3295,6 @@ fieldset:disabled a.btn {
 
 .btn-outline-primary.disabled, .btn-outline-primary:disabled {
   color: #bbbbbb;
-  background-color: transparent;
 }
 
 .btn-outline-primary:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active,
@@ -3289,19 +3310,19 @@ fieldset:disabled a.btn {
   border: 1px solid #fff;
   border-left-width: 2px;
   border-right-width: 2px;
-  padding: 7px 11.5px;
-  margin-top: 6.5px;
+  padding: 6.5px 11.5px;
+  margin-top: 5.5px;
   margin-left: 2.5px;
   margin-right: 11.5px;
   margin-bottom: 7px;
 }
 
 .btn-outline-secondary:hover {
-  border: 1px solid #555;
+  border: 1px solid #555555;
   border-left-width: 2px;
   border-right-width: 2px;
-  padding: 7px 11.5px;
-  margin-top: 6.5px;
+  padding: 6.5px 11.5px;
+  margin-top: 5.5px;
   margin-left: 2.5px;
   margin-right: 11.5px;
   margin-bottom: 7px;
@@ -3310,7 +3331,6 @@ fieldset:disabled a.btn {
 
 .btn-outline-secondary.disabled, .btn-outline-secondary:disabled {
   color: #bbbbbb;
-  background-color: transparent;
 }
 
 .btn-outline-secondary:not(:disabled):not(.disabled):active, .btn-outline-secondary:not(:disabled):not(.disabled).active,
@@ -3326,8 +3346,8 @@ fieldset:disabled a.btn {
   border: 1px solid #5f5;
   border-left-width: 2px;
   border-right-width: 2px;
-  padding: 7px 11.5px;
-  margin-top: 6.5px;
+  padding: 6.5px 11.5px;
+  margin-top: 5.5px;
   margin-left: 2.5px;
   margin-right: 11.5px;
   margin-bottom: 7px;
@@ -3337,8 +3357,8 @@ fieldset:disabled a.btn {
   border: 1px solid #00aa00;
   border-left-width: 2px;
   border-right-width: 2px;
-  padding: 7px 11.5px;
-  margin-top: 6.5px;
+  padding: 6.5px 11.5px;
+  margin-top: 5.5px;
   margin-left: 2.5px;
   margin-right: 11.5px;
   margin-bottom: 7px;
@@ -3347,7 +3367,6 @@ fieldset:disabled a.btn {
 
 .btn-outline-success.disabled, .btn-outline-success:disabled {
   color: #00aa00;
-  background-color: transparent;
 }
 
 .btn-outline-success:not(:disabled):not(.disabled):active, .btn-outline-success:not(:disabled):not(.disabled).active,
@@ -3363,8 +3382,8 @@ fieldset:disabled a.btn {
   border: 1px solid #5ff;
   border-left-width: 2px;
   border-right-width: 2px;
-  padding: 7px 11.5px;
-  margin-top: 6.5px;
+  padding: 6.5px 11.5px;
+  margin-top: 5.5px;
   margin-left: 2.5px;
   margin-right: 11.5px;
   margin-bottom: 7px;
@@ -3374,8 +3393,8 @@ fieldset:disabled a.btn {
   border: 1px solid #00aaaa;
   border-left-width: 2px;
   border-right-width: 2px;
-  padding: 7px 11.5px;
-  margin-top: 6.5px;
+  padding: 6.5px 11.5px;
+  margin-top: 5.5px;
   margin-left: 2.5px;
   margin-right: 11.5px;
   margin-bottom: 7px;
@@ -3384,7 +3403,6 @@ fieldset:disabled a.btn {
 
 .btn-outline-info.disabled, .btn-outline-info:disabled {
   color: #00aaaa;
-  background-color: transparent;
 }
 
 .btn-outline-info:not(:disabled):not(.disabled):active, .btn-outline-info:not(:disabled):not(.disabled).active,
@@ -3400,8 +3418,8 @@ fieldset:disabled a.btn {
   border: 1px solid #ff5;
   border-left-width: 2px;
   border-right-width: 2px;
-  padding: 7px 11.5px;
-  margin-top: 6.5px;
+  padding: 6.5px 11.5px;
+  margin-top: 5.5px;
   margin-left: 2.5px;
   margin-right: 11.5px;
   margin-bottom: 7px;
@@ -3411,8 +3429,8 @@ fieldset:disabled a.btn {
   border: 1px solid #aa5500;
   border-left-width: 2px;
   border-right-width: 2px;
-  padding: 7px 11.5px;
-  margin-top: 6.5px;
+  padding: 6.5px 11.5px;
+  margin-top: 5.5px;
   margin-left: 2.5px;
   margin-right: 11.5px;
   margin-bottom: 7px;
@@ -3421,7 +3439,6 @@ fieldset:disabled a.btn {
 
 .btn-outline-warning.disabled, .btn-outline-warning:disabled {
   color: #aa5500;
-  background-color: transparent;
 }
 
 .btn-outline-warning:not(:disabled):not(.disabled):active, .btn-outline-warning:not(:disabled):not(.disabled).active,
@@ -3437,8 +3454,8 @@ fieldset:disabled a.btn {
   border: 1px solid #f55;
   border-left-width: 2px;
   border-right-width: 2px;
-  padding: 7px 11.5px;
-  margin-top: 6.5px;
+  padding: 6.5px 11.5px;
+  margin-top: 5.5px;
   margin-left: 2.5px;
   margin-right: 11.5px;
   margin-bottom: 7px;
@@ -3448,8 +3465,8 @@ fieldset:disabled a.btn {
   border: 1px solid #aa0000;
   border-left-width: 2px;
   border-right-width: 2px;
-  padding: 7px 11.5px;
-  margin-top: 6.5px;
+  padding: 6.5px 11.5px;
+  margin-top: 5.5px;
   margin-left: 2.5px;
   margin-right: 11.5px;
   margin-bottom: 7px;
@@ -3458,7 +3475,6 @@ fieldset:disabled a.btn {
 
 .btn-outline-danger.disabled, .btn-outline-danger:disabled {
   color: #aa0000;
-  background-color: transparent;
 }
 
 .btn-outline-danger:not(:disabled):not(.disabled):active, .btn-outline-danger:not(:disabled):not(.disabled).active,
@@ -3472,8 +3488,8 @@ fieldset:disabled a.btn {
   border: 1px solid;
   border-left-width: 2px;
   border-right-width: 2px;
-  padding: 7px 11.5px;
-  margin-top: 6.5px;
+  padding: 6.5px 11.5px;
+  margin-top: 5.5px;
   margin-left: 2.5px;
   margin-right: 11.5px;
   margin-bottom: 7px;
@@ -3483,8 +3499,8 @@ fieldset:disabled a.btn {
   border: 1px solid #bbbbbb;
   border-left-width: 2px;
   border-right-width: 2px;
-  padding: 7px 11.5px;
-  margin-top: 6.5px;
+  padding: 6.5px 11.5px;
+  margin-top: 5.5px;
   margin-left: 2.5px;
   margin-right: 11.5px;
   margin-bottom: 7px;
@@ -3493,7 +3509,6 @@ fieldset:disabled a.btn {
 
 .btn-outline-light.disabled, .btn-outline-light:disabled {
   color: #fff;
-  background-color: transparent;
 }
 
 .btn-outline-light:not(:disabled):not(.disabled):active, .btn-outline-light:not(:disabled):not(.disabled).active,
@@ -3502,14 +3517,14 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-dark {
-  color: #555;
-  border-color: #555;
+  color: #555555;
+  border-color: #555555;
   background: transparent;
-  border: 1px solid #555;
+  border: 1px solid #555555;
   border-left-width: 2px;
   border-right-width: 2px;
-  padding: 7px 11.5px;
-  margin-top: 6.5px;
+  padding: 6.5px 11.5px;
+  margin-top: 5.5px;
   margin-left: 2.5px;
   margin-right: 11.5px;
   margin-bottom: 7px;
@@ -3519,8 +3534,8 @@ fieldset:disabled a.btn {
   border: 1px solid #000000;
   border-left-width: 2px;
   border-right-width: 2px;
-  padding: 7px 11.5px;
-  margin-top: 6.5px;
+  padding: 6.5px 11.5px;
+  margin-top: 5.5px;
   margin-left: 2.5px;
   margin-right: 11.5px;
   margin-bottom: 7px;
@@ -3529,12 +3544,11 @@ fieldset:disabled a.btn {
 
 .btn-outline-dark.disabled, .btn-outline-dark:disabled {
   color: #000000;
-  background-color: transparent;
 }
 
 .btn-outline-dark:not(:disabled):not(.disabled):active, .btn-outline-dark:not(:disabled):not(.disabled).active,
 .show > .btn-outline-dark.dropdown-toggle {
-  color: #555;
+  color: #555555;
   border-color: #000000;
 }
 
@@ -3554,7 +3568,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-link:disabled, .btn-link.disabled {
-  color: #555;
+  color: #555555;
   pointer-events: none;
 }
 
@@ -3628,12 +3642,12 @@ input[type="button"].btn-block {
   border: 1px solid #000000;
   border-left-width: 2px;
   border-right-width: 2px;
-  padding: 7px 3.5px;
-  margin-top: 6.5px;
+  padding: 6.5px 3.5px;
+  margin-top: 5.5px;
   margin-left: 2.5px;
   margin-right: 3.5px;
   margin-bottom: 7px;
-  box-shadow: 0 -2px 0 3px #bbbbbb, 0 3px 0 3px #bbbbbb, 0 0 0 3px #bbbbbb;
+  box-shadow: 0.5px -2.5px 0 2.75px #bbbbbb, 0.5px 3px 0 2.75px #bbbbbb;
 }
 
 .dropdown-menu-left {
@@ -3769,7 +3783,7 @@ input[type="button"].btn-block {
   height: 0;
   margin: 7px 0;
   overflow: hidden;
-  border-top: 1px solid #555;
+  border-top: 1px solid #555555;
 }
 
 .dropdown-item {
@@ -3796,7 +3810,7 @@ input[type="button"].btn-block {
 }
 
 .dropdown-item.disabled, .dropdown-item:disabled {
-  color: #555;
+  color: #555555;
   pointer-events: none;
   background-color: transparent;
 }
@@ -4032,8 +4046,8 @@ input[type="button"].btn-block {
   color: #fff;
   text-align: center;
   white-space: nowrap;
-  background-color: #555;
-  border: 0 solid #555;
+  background-color: #555555;
+  border: 0 solid #555555;
 }
 
 .input-group-text input[type="radio"],
@@ -4114,11 +4128,11 @@ input[type="button"].btn-block {
 }
 
 .custom-control-input[disabled] ~ .custom-control-label, .custom-control-input:disabled ~ .custom-control-label {
-  color: #555;
+  color: #555555;
 }
 
 .custom-control-input[disabled] ~ .custom-control-label::before, .custom-control-input[disabled] ~ .custom-control-label::after, .custom-control-input:disabled ~ .custom-control-label::before, .custom-control-input:disabled ~ .custom-control-label::after {
-  color: #555;
+  color: #555555;
 }
 
 .custom-control-label {
@@ -4163,7 +4177,7 @@ input[type="button"].btn-block {
 }
 
 .custom-checkbox .custom-control-input:disabled:checked ~ .custom-control-label::before {
-  color: #555;
+  color: #555555;
 }
 
 .custom-radio .custom-control-label::after {
@@ -4180,7 +4194,7 @@ input[type="button"].btn-block {
 }
 
 .custom-radio .custom-control-input:disabled:checked ~ .custom-control-label::after {
-  color: #555;
+  color: #555555;
 }
 
 .custom-switch {
@@ -4211,7 +4225,7 @@ input[type="button"].btn-block {
 }
 
 .custom-switch .custom-control-input:disabled:checked ~ .custom-control-label::before {
-  color: #555;
+  color: #555555;
 }
 
 .custom-select {
@@ -4223,7 +4237,7 @@ input[type="button"].btn-block {
   color: #000000;
   vertical-align: middle;
   background: #bbbbbb;
-  border: 0 solid #555;
+  border: 0 solid #555555;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -4247,8 +4261,8 @@ input[type="button"].btn-block {
 }
 
 .custom-select:disabled {
-  color: #555;
-  background-color: #555;
+  color: #555555;
+  background-color: #555555;
 }
 
 .custom-select::-ms-expand {
@@ -4300,7 +4314,7 @@ input[type="button"].btn-block {
 
 .custom-file-input[disabled] ~ .custom-file-label,
 .custom-file-input:disabled ~ .custom-file-label {
-  background-color: #555;
+  background-color: #555555;
 }
 
 .custom-file-input:lang(en) ~ .custom-file-label::after {
@@ -4323,7 +4337,7 @@ input[type="button"].btn-block {
   line-height: 14px;
   color: #fff;
   background-color: #000084;
-  border: 0 solid #555;
+  border: 0 solid #555555;
 }
 
 .custom-file-label::after {
@@ -4385,7 +4399,7 @@ input[type="button"].btn-block {
   height: 0.5rem;
   color: transparent;
   cursor: pointer;
-  background-color: #555;
+  background-color: #555555;
   border-color: transparent;
 }
 
@@ -4402,7 +4416,7 @@ input[type="button"].btn-block {
   height: 0.5rem;
   color: transparent;
   cursor: pointer;
-  background-color: #555;
+  background-color: #555555;
   border-color: transparent;
 }
 
@@ -4427,16 +4441,16 @@ input[type="button"].btn-block {
 }
 
 .custom-range::-ms-fill-lower {
-  background-color: #555;
+  background-color: #555555;
 }
 
 .custom-range::-ms-fill-upper {
   margin-right: 15px;
-  background-color: #555;
+  background-color: #555555;
 }
 
 .custom-range:disabled::-webkit-slider-thumb {
-  background-color: #555;
+  background-color: #555555;
 }
 
 .custom-range:disabled::-webkit-slider-runnable-track {
@@ -4444,7 +4458,7 @@ input[type="button"].btn-block {
 }
 
 .custom-range:disabled::-moz-range-thumb {
-  background-color: #555;
+  background-color: #555555;
 }
 
 .custom-range:disabled::-moz-range-track {
@@ -4452,7 +4466,7 @@ input[type="button"].btn-block {
 }
 
 .custom-range:disabled::-ms-thumb {
-  background-color: #555;
+  background-color: #555555;
 }
 
 .nav {
@@ -4475,7 +4489,7 @@ input[type="button"].btn-block {
 }
 
 .nav-link.disabled {
-  color: #555;
+  color: #555555;
   pointer-events: none;
   cursor: default;
 }
@@ -4500,8 +4514,8 @@ input[type="button"].btn-block {
   border: 1px solid #bbbbbb;
   border-left-width: 2px;
   border-right-width: 2px;
-  padding: 7px 11.5px;
-  margin-top: 6.5px;
+  padding: 6.5px 11.5px;
+  margin-top: 5.5px;
   margin-left: 2.5px;
   margin-right: 11.5px;
   margin-bottom: 7px;
@@ -4513,7 +4527,7 @@ input[type="button"].btn-block {
 .nav-tabs .nav-link.disabled {
   border: 0;
   padding-bottom: 0;
-  color: #555;
+  color: #555555;
 }
 
 .nav-tabs .nav-link.active,
@@ -4934,7 +4948,7 @@ input[type="button"].btn-block {
 }
 
 .navbar-dark .navbar-nav .nav-link.disabled {
-  color: #555;
+  color: #555555;
 }
 
 .navbar-dark .navbar-nav .show > .nav-link,
@@ -5019,7 +5033,7 @@ input[type="button"].btn-block {
   padding: 14px 16px;
   margin-bottom: 0;
   color: #fff;
-  background-color: #555;
+  background-color: #555555;
   border-bottom: 0 solid none;
 }
 
@@ -5029,7 +5043,7 @@ input[type="button"].btn-block {
 
 .card-footer {
   padding: 14px 16px;
-  background-color: #555;
+  background-color: #555555;
   border-top: 0 solid none;
 }
 
@@ -5148,7 +5162,7 @@ input[type="button"].btn-block {
   margin-bottom: 0;
   margin-left: 0;
   list-style: none;
-  background-color: #555;
+  background-color: #555555;
 }
 
 .breadcrumb-item + .breadcrumb-item {
@@ -5220,7 +5234,7 @@ input[type="button"].btn-block {
 }
 
 .page-item.disabled .page-link {
-  color: #555;
+  color: #555555;
   pointer-events: none;
   cursor: auto;
 }
@@ -5419,7 +5433,7 @@ a.badge-light:focus, a.badge-light.focus {
 }
 
 .badge-dark {
-  color: #555;
+  color: #555555;
   background-color: transparent;
 }
 
@@ -5457,12 +5471,12 @@ a.badge-dark:focus, a.badge-dark.focus {
   border: 1px solid #000000;
   border-left-width: 2px;
   border-right-width: 2px;
-  padding: 7px 11.5px;
-  margin-top: 6.5px;
+  padding: 6.5px 11.5px;
+  margin-top: 5.5px;
   margin-left: 2.5px;
   margin-right: 11.5px;
   margin-bottom: 7px;
-  box-shadow: 0 -2px 0 3px #bbbbbb, 0 3px 0 3px #bbbbbb, 0 0 0 3px #bbbbbb;
+  box-shadow: 0.5px -2.5px 0 2.75px #bbbbbb, 0.5px 3px 0 2.75px #bbbbbb;
 }
 
 .jumbotron .display-4 {
@@ -5588,16 +5602,16 @@ a.badge-dark:focus, a.badge-dark.focus {
 }
 
 .alert-dark {
-  color: #555;
-  border-color: #555;
+  color: #555555;
+  border-color: #555555;
 }
 
 .alert-dark hr {
-  border-top-color: #555;
+  border-top-color: #555555;
 }
 
 .alert-dark .alert-link {
-  color: #555;
+  color: #555555;
 }
 
 .progress {
@@ -5606,7 +5620,7 @@ a.badge-dark:focus, a.badge-dark.focus {
   height: 1rem;
   overflow: hidden;
   font-size: 16px;
-  background-color: #555;
+  background-color: #555555;
 }
 
 .progress-bar {
@@ -5648,8 +5662,8 @@ a.badge-dark:focus, a.badge-dark.focus {
   border: 1px solid #bbbbbb;
   border-left-width: 2px;
   border-right-width: 2px;
-  padding: 7px 3.5px;
-  margin-top: 6.5px;
+  padding: 6.5px 3.5px;
+  margin-top: 5.5px;
   margin-left: 2.5px;
   margin-right: 3.5px;
   margin-bottom: 7px;
@@ -5665,12 +5679,12 @@ a.badge-dark:focus, a.badge-dark.focus {
   z-index: 1;
   color: #bbbbbb;
   text-decoration: none;
-  background-color: #555;
+  background-color: #555555;
 }
 
 .list-group-item-action:active {
   color: #bbbbbb;
-  background-color: #555;
+  background-color: #555555;
 }
 
 .list-group-item {
@@ -5682,7 +5696,7 @@ a.badge-dark:focus, a.badge-dark.focus {
 }
 
 .list-group-item.disabled, .list-group-item:disabled {
-  color: #555;
+  color: #555555;
   pointer-events: none;
   background-color: transparent;
 }
@@ -5908,19 +5922,19 @@ a.badge-dark:focus, a.badge-dark.focus {
 }
 
 .list-group-item-dark {
-  color: #555;
-  background-color: #555;
+  color: #555555;
+  background-color: #555555;
 }
 
 .list-group-item-dark.list-group-item-action:hover, .list-group-item-dark.list-group-item-action:focus {
-  color: #555;
-  background-color: #555;
+  color: #555555;
+  background-color: #555555;
 }
 
 .list-group-item-dark.list-group-item-action.active {
   color: #fff;
-  background-color: #555;
-  border-color: #555;
+  background-color: #555555;
+  border-color: #555555;
 }
 
 .close {
@@ -6135,7 +6149,7 @@ a.close.disabled {
   -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 1rem 1rem;
-  border-bottom: 0 solid #555;
+  border-bottom: 0 solid #555555;
 }
 
 .modal-header .close {
@@ -6165,7 +6179,7 @@ a.close.disabled {
   -ms-flex-pack: end;
   justify-content: flex-end;
   padding: 0.75rem;
-  border-top: 0 solid #555;
+  border-top: 0 solid #555555;
 }
 
 .modal-footer > * {
@@ -6827,23 +6841,23 @@ button.bg-dark:focus {
 }
 
 .border {
-  border: 0 solid #555 !important;
+  border: 0 solid #555555 !important;
 }
 
 .border-top {
-  border-top: 0 solid #555 !important;
+  border-top: 0 solid #555555 !important;
 }
 
 .border-right {
-  border-right: 0 solid #555 !important;
+  border-right: 0 solid #555555 !important;
 }
 
 .border-bottom {
-  border-bottom: 0 solid #555 !important;
+  border-bottom: 0 solid #555555 !important;
 }
 
 .border-left {
-  border-left: 0 solid #555 !important;
+  border-left: 0 solid #555555 !important;
 }
 
 .border-0 {
@@ -10109,7 +10123,7 @@ button.bg-dark:focus {
 }
 
 .text-dark {
-  color: #555 !important;
+  color: #555555 !important;
 }
 
 .text-body {
@@ -10117,7 +10131,7 @@ button.bg-dark:focus {
 }
 
 .text-muted {
-  color: #555 !important;
+  color: #555555 !important;
 }
 
 .text-black-50 {
@@ -10175,7 +10189,7 @@ button.bg-dark:focus {
   }
   pre,
   blockquote {
-    border: 0 solid #555;
+    border: 0 solid #555555;
     page-break-inside: avoid;
   }
   thead {
@@ -10219,7 +10233,7 @@ button.bg-dark:focus {
   }
   .table-bordered th,
   .table-bordered td {
-    border: 1px solid #555 !important;
+    border: 1px solid #555555 !important;
   }
   .table-dark {
     color: inherit;
@@ -10228,11 +10242,11 @@ button.bg-dark:focus {
   .table-dark td,
   .table-dark thead th,
   .table-dark tbody + tbody {
-    border-color: #555;
+    border-color: #555555;
   }
   .table .thead-dark th {
     color: inherit;
-    border-color: #555;
+    border-color: #555555;
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */

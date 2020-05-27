@@ -3,8 +3,8 @@
   // In dos world, the left and right are actually a bit thicker.
   border-left-width: 2px;
   border-right-width: 2px;
-  padding: $extra + ($line-height-base / 2) (($character-space + .5) * $space-width - .5);
-  margin-top: $line-height-base / 2 - .5;
+  padding: $extra + ($line-height-base / 2 - .5) (($character-space + .5) * $space-width - .5);
+  margin-top: $line-height-base / 2 - 1.5;
   margin-left: $space-width / 2 - 1.5;
   margin-right: (($character-space + .5) * $space-width - .5);
   margin-bottom: $extra + .5 * $line-height-base;
@@ -18,18 +18,16 @@
 @mixin dos-border-background($color: $grayLight, $borderSize: 1) {
   $spacer: (($space-width - $borderSize) / 2);
   box-shadow: 
-    0 (-$line-height-base / 2 + $borderSize + 4) 0 $spacer - .5 $color,
-    0 ($line-height-base / 2 - 4) 0 $spacer - .5 $color,
-    0   0   0 $spacer - .5 $color;
+    .5px ($borderSize + 3.5 -$line-height-base / 2) 0 $spacer - .75 $color,
+    .5px ($line-height-base / 2 - 4) 0 $spacer - .75 $color;
 }
 @mixin dos-border-background-inset($color: $grayLight, $borderSize: 1) {
   $spacer: (($space-width - $borderSize) / 2);
   box-shadow: 
     inset 0 (-$line-height-base / 2 + $spacer) 0 $spacer - .5 $color,
     inset 0 ($line-height-base / 2 - $spacer) 0 $spacer - .5 $color,
-    0 (-$line-height-base / 2 + $borderSize + 4) 0 $spacer - .5 $color,
-    0 ($line-height-base / 2 - 4) 0 $spacer - .5 $color,
-    0   0   0 $spacer - .5 $color;
+    .5px (-$line-height-base / 2 + $borderSize + 3.5) 0 $spacer - .75 $color,
+    .5px ($line-height-base / 2 - 4) 0 $spacer - .75 $color;
 }
 
 @mixin dos-solid-border($color, $character-space:0) {

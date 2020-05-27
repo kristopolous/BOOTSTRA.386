@@ -6,17 +6,16 @@
 // Color system
 
 // debug values
+/*
+$grayLight: #bbbbbb70 !default;
+$grayDark:  #55555570 !default;
+$cyan:     #00aaaad0 !default;
+*/
 $grayLight: #bbbbbb !default;
 $cyan:     #00aaaa !default;
 
-/*
-normal.
-$grayLight: #bbbbbbc0 !default;
-$cyan:     #00aaaad0 !default;
-*/
-
 $white:    #fff !default;
-$grayDark:  #555 !default;
+$grayDark:  #555555 !default;
 $gray-100: $grayDark !default;
 $gray-200: $grayDark !default;
 $gray-300: $grayDark !default;
@@ -495,7 +494,6 @@ $btn-line-height-lg:          $input-btn-line-height-lg !default;
 $btn-border-width:            1px !default;
 
 $btn-font-weight:             $font-weight-normal !default;
-$btn-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075) !default;
 $btn-focus-width:             $input-btn-focus-width !default;
 $btn-focus-box-shadow:        $input-btn-focus-box-shadow !default;
 $btn-disabled-opacity:        1 !default;

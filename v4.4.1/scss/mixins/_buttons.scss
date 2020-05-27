@@ -47,7 +47,6 @@
   &.disabled,
   &:disabled {
     color: $color;
-    background-color: transparent;
   }
 
   &:not(:disabled):not(.disabled):active,
@@ -60,6 +59,5 @@
 
 @mixin button-size($padding-y, $padding-x, $font-size, $line-height, $border-radius) {
   padding: $padding-y $padding-x;
-  line-height: $line-height;
 }
 
