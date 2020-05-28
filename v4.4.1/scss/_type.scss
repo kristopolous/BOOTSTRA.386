@@ -4,8 +4,8 @@
 // Headings
 //
 
-h1, h2, h3,
-.h1, .h2, .h3 {
+h1, h2,
+.h1, .h2  {
   margin-bottom: $headings-margin-bottom;
   font-family: $headings-font-family;
   font-weight: $headings-font-weight;
@@ -14,9 +14,23 @@ h1, h2, h3,
   background: $cyan;
   padding: $line-height-base $space-width;
   color: $headings-color;
+  .text-muted {
+    color: $grayLight;
+  }
+}
+h2, .h2 {
+  padding: 0 $space-width;
 }
 h3, .h3 {
-  padding: 0 $space-width;
+  color: $white;
+  &::before {
+    margin-right: $space-width;
+    content: ">>>";
+  }
+  &::after {
+    margin-left: $space-width;
+    content: "<<<";
+  }
 }
 h4, .h4 {
   color: $white;
@@ -45,6 +59,7 @@ h5, .h5 {
 
 h6, .h6 {
 
+  white-space: nowrap;
   &:after, &:before {
     content: "°º¤ø,¸¸,ø¤º°`";
   }

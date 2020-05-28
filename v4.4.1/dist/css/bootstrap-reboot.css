@@ -52,6 +52,7 @@ body {
   background-color: #000084;
   -webkit-font-kerning: none;
   font-kerning: none;
+  text-rendering: geometricPrecision;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {

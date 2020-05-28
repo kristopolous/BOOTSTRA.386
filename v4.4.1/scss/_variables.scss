@@ -1017,11 +1017,9 @@ $modal-scale-transform:             scale(1.02) !default;
 //
 // Define alert colors, border radius, and padding.
 
-$alert-padding-y:                   $line-height-base !default;
+$alert-padding-y:                   0 !default;
 $alert-padding-x:                   $space-width !default;
 $alert-margin-bottom:               0 !default;
-$alert-border-radius:               $border-radius !default;
-$alert-link-font-weight:            $font-weight-bold !default;
 $alert-border-width:                $border-width !default;
 
 // These are multipliers of the base (
@@ -1131,10 +1129,8 @@ $spinner-border-width-sm: .2em !default;
 
 // Close
 
-$close-font-size:                   $font-size-base * 1.5 !default;
-$close-font-weight:                 $font-weight-bold !default;
-$close-color:                       $black !default;
-$close-text-shadow:                 0 1px 0 $white !default;
+$close-font-size:                   $font-size-base !default;
+$close-color:                       $white !default;
 
 
 // Code
