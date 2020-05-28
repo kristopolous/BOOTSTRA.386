@@ -2,6 +2,7 @@
 const TextToSVG = require('text-to-svg');
 const textToSVG = TextToSVG.loadSync('fonts/Px437_IBM_EGA8.otf');
 const fs = require('fs');
+const path = (process.argv[2] || '.').replace(/\/$/, '');
 var list = ["// This file is auto-generated from icon-gen in the root directory"];
  
 [
@@ -9,6 +10,7 @@ var list = ["// This file is auto-generated from icon-gen in the root directory"
   ['[', 'left-brace-black', '', {attributes: { fill: '#000000' } }],
   [']', 'right-brace-black', '', {attributes: { fill: '#000000' } }],
   ['[', 'left-brace-grayLight', ''],
+  ['\u25Bc', 'arrow-down-black', '', {attributes: { fill: '#000000' } }],
   [']', 'right-brace-grayLight', ''],
   ['[ ]', 'checkbox-unchecked', ''],
   [`\u253c\u2584`, 'grid', ''],
@@ -30,13 +32,18 @@ var list = ["// This file is auto-generated from icon-gen in the root directory"
   if(name == 'grid') {
     props.attributes.fill += '40';
   }
-  const svg = textToSVG.getSVG(str, props);
 
-  fs.writeFileSync(`${name}.svg`, svg);
+  const 
+    svg = textToSVG.getSVG(str, props),
+    fullpath = `${path}/${name}.svg`
 
-  if(bsname) {
-    list.push(`$${bsname}: url('data:image/svg+xml,${svg}');`);
-  }
+  fs.writeFileSync(fullpath, svg);
+
+  console.log(fullpath);
+
+  //if(bsname) {
+  //  list.push(`$${bsname}: url('data:image/svg+xml,${svg}');`);
+  //}
 });
 
-fs.writeFileSync(`v4.4.1/scss/_autogen.scss`, list.join('\n'));
+//fs.writeFileSync(`v4.4.1/scss/_autogen.scss`, list.join('\n'));
