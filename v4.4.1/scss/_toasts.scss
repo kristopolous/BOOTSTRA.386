@@ -1,13 +1,10 @@
 .toast {
   max-width: $toast-max-width;
   overflow: hidden; // cheap rounded corners on nested items
-  @include font-size($toast-font-size);
   color: $toast-color;
+  padding: 0;
   background-color: $toast-background-color;
   background-clip: padding-box;
-  border: $toast-border-width solid $toast-border-color;
-  box-shadow: $toast-box-shadow;
-  backdrop-filter: blur(10px);
   opacity: 0;
 
   &:not(:last-child) {
@@ -31,11 +28,9 @@
 .toast-header {
   display: flex;
   align-items: center;
-  padding: $toast-padding-y $toast-padding-x;
+  padding: 0 $toast-padding-x;
   color: $toast-header-color;
   background-color: $toast-header-background-color;
-  background-clip: padding-box;
-  border-bottom: $toast-border-width solid $toast-header-border-color;
 }
 
 .toast-body {
