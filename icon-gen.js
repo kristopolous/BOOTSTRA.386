@@ -5,41 +5,49 @@ const fs = require('fs');
 const path = (process.argv[2] || '.').replace(/\/$/, '');
 var list = ["// This file is auto-generated from icon-gen in the root directory"];
  
+const variationList = [
+  ['black', '#000000'],
+  ['grayLight', '#bbbbbb']
+];
+
 [
-  ['[\u25A0]', 'checkbox-checked', 'custom-checkbox-indicator-icon-checked'],
-  ['[', 'left-brace-black', '', {attributes: { fill: '#000000' } }],
-  [']', 'right-brace-black', '', {attributes: { fill: '#000000' } }],
-  ['[', 'left-brace-grayLight', ''],
-  ['\u25Bc', 'arrow-down-black', '', {attributes: { fill: '#000000' } }],
-  [']', 'right-brace-grayLight', ''],
-  ['[ ]', 'checkbox-unchecked', ''],
-  [`\u253c\u2584`, 'grid', ''],
-  ['(\u2022)', 'radio-checked', 'custom-radio-indicator-icon-checked'],
-  ['( )', 'radio-unchecked', 'custom-radio-indicator-icon-unchecked']
+  ['[', 'left-brace'],
+  [']', 'right-brace'],
+  ['[', 'left-brace'],
+  ['-', 'hyphen'],
+  ['\u25Bc', 'arrow-down'],
+
+  ['[\u25A0]', 'checkbox-checked'],
+  ['[ ]', 'checkbox-unchecked'],
+  [`\u253c\u2584`, 'grid'],
+  ['(\u2022)', 'radio-checked'],
+  ['( )', 'radio-unchecked']
 ].forEach(row => {
-  let [str, name, bsname] = row;
+  let [str, string] = row;
 
-  let props = {
-    x: 0, y: 0, 
-    fontSize: 16, anchor: 'top',
-    attributes: { fill: '#bbbbbb'}
-  };
+  for(const [name, hex] of variationList) {
+    let props = {
+      x: 0, y: 0, 
+      fontSize: 16, anchor: 'top',
+      attributes: {fill: hex}
+    };
 
-  if (row.length > 3) {
-    props = Object.assign(props, row[3]);
+    if (row.length > 3) {
+      props = Object.assign(props, row[3]);
+    }
+
+    if(name == 'grid') {
+      props.attributes.fill += '40';
+    }
+
+    const 
+      svg = textToSVG.getSVG(str, props),
+      fullpath = `${path}/${string}-${name}.svg`
+
+    fs.writeFileSync(fullpath, svg);
+
+    console.log(fullpath);
   }
-
-  if(name == 'grid') {
-    props.attributes.fill += '40';
-  }
-
-  const 
-    svg = textToSVG.getSVG(str, props),
-    fullpath = `${path}/${name}.svg`
-
-  fs.writeFileSync(fullpath, svg);
-
-  console.log(fullpath);
 
   //if(bsname) {
   //  list.push(`$${bsname}: url('data:image/svg+xml,${svg}');`);
