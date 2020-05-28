@@ -4232,15 +4232,11 @@ input[type="button"].btn-block {
   padding: 0;
   color: #000000;
   vertical-align: middle;
-  background-color: #bbbbbb;
+  background: url("fonts/arrow-down-black.svg") no-repeat right center, #bbbbbb;
   border: 0 solid #555555;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-}
-
-.custom-select::after {
-  content: "h";
 }
 
 .custom-select:focus {
@@ -4274,17 +4270,11 @@ input[type="button"].btn-block {
 
 .custom-select-sm {
   height: 14px;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
   font-size: 16px;
 }
 
 .custom-select-lg {
   height: 14px;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
   font-size: 16px;
 }
 
