@@ -188,6 +188,7 @@ $enable-deprecation-messages:                 false !default;
 
 $font-size-base:              16px !default; 
 $line-height-base:            14px !default;
+$line-height:            $line-height-base;
 
 $font-size-lg:                $font-size-base !default;
 $space-width:                 $font-size-base/2 !default;
@@ -646,7 +647,7 @@ $custom-select-box-shadow:          0 !default;
 
 $custom-select-focus-border-color:  $input-focus-border-color !default;
 $custom-select-focus-width:         $input-focus-width !default;
-$custom-select-focus-box-shadow:    0 0 0 $custom-select-focus-width $input-btn-focus-color !default;
+$custom-select-focus-box-shadow:    0 !default;
 
 $custom-select-padding-y-sm:        $input-padding-y-sm !default;
 $custom-select-padding-x-sm:        $input-padding-x-sm !default;
@@ -658,21 +659,31 @@ $custom-select-padding-x-lg:        $input-padding-x-lg !default;
 $custom-select-font-size-lg:        $input-font-size-lg !default;
 $custom-select-height-lg:           $input-height-lg !default;
 
+
+
+
+
+
+
+
+
+
+
 $custom-range-track-width:          100% !default;
 $custom-range-track-height:         $line-height-base !default;
 $custom-range-track-cursor:         pointer !default;
 $custom-range-track-bg:             $white !default;
 
 $custom-range-thumb-width:                   $space-width !default;
-$custom-range-thumb-height:                  $custom-range-thumb-width !default;
+$custom-range-thumb-height:                  $line-height !default;
 $custom-range-thumb-bg:                      $component-active-bg !default;
 $custom-range-thumb-border:                  0 !default;
 $custom-range-thumb-border-radius:           0 !default;
 $custom-range-thumb-box-shadow:              0 !default;
 $custom-range-thumb-focus-box-shadow:        0 !default;
 $custom-range-thumb-focus-box-shadow-width:  $input-focus-width !default; // For focus box shadow issue in IE/Edge
-$custom-range-thumb-active-bg:               $magenta !default;
-$custom-range-thumb-disabled-bg:             $gray-500 !default;
+$custom-range-thumb-active-bg:               $black !default;
+$custom-range-thumb-disabled-bg:             $grayDark !default;
 
 $custom-file-height:                $input-height !default;
 $custom-file-height-inner:          $input-height-inner !default;

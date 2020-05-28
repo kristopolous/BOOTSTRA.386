@@ -332,7 +332,7 @@
 
 .custom-range {
   width: 100%;
-  height: add($custom-range-thumb-height, $custom-range-thumb-focus-box-shadow-width * 2);
+  height: $line-height;
   padding: 0; // Need to reset padding
   background-color: transparent;
   appearance: none;
@@ -354,8 +354,9 @@
   &::-webkit-slider-thumb {
     width: $custom-range-thumb-width;
     height: $custom-range-thumb-height;
-    margin-top: ($custom-range-track-height - $custom-range-thumb-height) / 2; // Webkit specific
-    border: $custom-range-thumb-border;
+    background: $custom-range-thumb-active-bg;
+    margin-top: 0;
+    border: 0;
     appearance: none;
 
     &:active {
@@ -367,7 +368,10 @@
     height: $custom-range-track-height;
     color: transparent; // Why?
     cursor: $custom-range-track-cursor;
-    background-color: $custom-range-track-bg;
+    background: 
+      url("fonts/hyphen-black.svg") repeat-x left center,
+      $grayLight;
+
     border-color: transparent;
   }
 
@@ -375,6 +379,8 @@
     width: $custom-range-thumb-width;
     height: $custom-range-thumb-height;
     border: $custom-range-thumb-border;
+    background: $custom-range-thumb-active-bg;
+    border-radius: 0; // moz specific
     appearance: none;
 
     &:active {
@@ -386,7 +392,9 @@
     height: $custom-range-track-height;
     color: transparent;
     cursor: $custom-range-track-cursor;
-    background-color: $custom-range-track-bg;
+    background: 
+      url("fonts/hyphen-black.svg") repeat-x left center,
+      $grayLight;
     border-color: transparent; // Firefox specific?
   }
 

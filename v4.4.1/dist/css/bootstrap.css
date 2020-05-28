@@ -4345,7 +4345,7 @@ input[type="button"].btn-block {
 
 .custom-range {
   width: 100%;
-  height: 8px;
+  height: 14px;
   padding: 0;
   background-color: transparent;
   -webkit-appearance: none;
@@ -4375,8 +4375,9 @@ input[type="button"].btn-block {
 
 .custom-range::-webkit-slider-thumb {
   width: 8px;
-  height: 8px;
-  margin-top: 3px;
+  height: 14px;
+  background: #000000;
+  margin-top: 0;
   border: 0;
   -webkit-appearance: none;
   appearance: none;
@@ -4387,14 +4388,16 @@ input[type="button"].btn-block {
   height: 14px;
   color: transparent;
   cursor: pointer;
-  background-color: #fff;
+  background: url("fonts/hyphen-black.svg") repeat-x left center, #bbbbbb;
   border-color: transparent;
 }
 
 .custom-range::-moz-range-thumb {
   width: 8px;
-  height: 8px;
+  height: 14px;
   border: 0;
+  background: #000000;
+  border-radius: 0;
   -moz-appearance: none;
   appearance: none;
 }
@@ -4404,13 +4407,13 @@ input[type="button"].btn-block {
   height: 14px;
   color: transparent;
   cursor: pointer;
-  background-color: #fff;
+  background: url("fonts/hyphen-black.svg") repeat-x left center, #bbbbbb;
   border-color: transparent;
 }
 
 .custom-range::-ms-thumb {
   width: 8px;
-  height: 8px;
+  height: 14px;
   margin-top: 0;
   margin-right: 0;
   margin-left: 0;
@@ -4425,7 +4428,7 @@ input[type="button"].btn-block {
   cursor: pointer;
   background-color: transparent;
   border-color: transparent;
-  border-width: 4px;
+  border-width: 7px;
 }
 
 .custom-range::-ms-fill-lower {
