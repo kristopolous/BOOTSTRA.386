@@ -4345,7 +4345,7 @@ input[type="button"].btn-block {
 
 .custom-range {
   width: 100%;
-  height: 1rem;
+  height: 8px;
   padding: 0;
   background-color: transparent;
   -webkit-appearance: none;
@@ -4358,15 +4358,15 @@ input[type="button"].btn-block {
 }
 
 .custom-range:focus::-webkit-slider-thumb {
-  box-shadow: 0 0 0 1px #000084, 0 0 0 0 rgba(170, 85, 0, 0.25);
+  box-shadow: 0;
 }
 
 .custom-range:focus::-moz-range-thumb {
-  box-shadow: 0 0 0 1px #000084, 0 0 0 0 rgba(170, 85, 0, 0.25);
+  box-shadow: 0;
 }
 
 .custom-range:focus::-ms-thumb {
-  box-shadow: 0 0 0 1px #000084, 0 0 0 0 rgba(170, 85, 0, 0.25);
+  box-shadow: 0;
 }
 
 .custom-range::-moz-focus-outer {
@@ -4374,9 +4374,9 @@ input[type="button"].btn-block {
 }
 
 .custom-range::-webkit-slider-thumb {
-  width: 1rem;
-  height: 1rem;
-  margin-top: -0.25rem;
+  width: 8px;
+  height: 8px;
+  margin-top: 3px;
   border: 0;
   -webkit-appearance: none;
   appearance: none;
@@ -4384,16 +4384,16 @@ input[type="button"].btn-block {
 
 .custom-range::-webkit-slider-runnable-track {
   width: 100%;
-  height: 0.5rem;
+  height: 14px;
   color: transparent;
   cursor: pointer;
-  background-color: #555555;
+  background-color: #fff;
   border-color: transparent;
 }
 
 .custom-range::-moz-range-thumb {
-  width: 1rem;
-  height: 1rem;
+  width: 8px;
+  height: 8px;
   border: 0;
   -moz-appearance: none;
   appearance: none;
@@ -4401,16 +4401,16 @@ input[type="button"].btn-block {
 
 .custom-range::-moz-range-track {
   width: 100%;
-  height: 0.5rem;
+  height: 14px;
   color: transparent;
   cursor: pointer;
-  background-color: #555555;
+  background-color: #fff;
   border-color: transparent;
 }
 
 .custom-range::-ms-thumb {
-  width: 1rem;
-  height: 1rem;
+  width: 8px;
+  height: 8px;
   margin-top: 0;
   margin-right: 0;
   margin-left: 0;
@@ -4420,21 +4420,21 @@ input[type="button"].btn-block {
 
 .custom-range::-ms-track {
   width: 100%;
-  height: 0.5rem;
+  height: 14px;
   color: transparent;
   cursor: pointer;
   background-color: transparent;
   border-color: transparent;
-  border-width: 0.5rem;
+  border-width: 4px;
 }
 
 .custom-range::-ms-fill-lower {
-  background-color: #555555;
+  background-color: #fff;
 }
 
 .custom-range::-ms-fill-upper {
   margin-right: 15px;
-  background-color: #555555;
+  background-color: #fff;
 }
 
 .custom-range:disabled::-webkit-slider-thumb {
@@ -4954,7 +4954,7 @@ input[type="button"].btn-block {
 
 .navbar-dark .navbar-toggler {
   color: #000000;
-  border-color: rgba(255, 255, 255, 0.1);
+  border-color: #fff;
 }
 
 .navbar-dark .navbar-text {
