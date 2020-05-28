@@ -294,6 +294,15 @@ input {
   overflow: visible;
 }
 
+input::focus {
+  color: blue;
+  outline: 0;
+}
+
+:focus {
+  outline: 0;
+}
+
 button,
 select {
   text-transform: none;
@@ -2232,14 +2241,8 @@ select.form-control:focus::-ms-value {
   line-height: 14px;
   color: #bbbbbb;
   background-color: transparent;
-  border: solid transparent;
-  border-width: 0 0;
-  background: url("fonts/left-brace.svg") 3px 3.6px/4.87px no-repeat, url("fonts/right-brace.svg") top 3px right 3.6px/4.87px no-repeat;
-}
-
-.form-control-plaintext.form-control-sm, .form-control-plaintext.form-control-lg {
-  padding-right: 0;
-  padding-left: 0;
+  border: 0;
+  background: url("fonts/left-brace-grayLight.svg") no-repeat left bottom, url("fonts/right-brace-grayLight.svg") no-repeat right bottom;
 }
 
 .form-control-sm {
@@ -2274,7 +2277,7 @@ textarea.form-control {
 }
 
 input.form-control {
-  background: url("fonts/left-brace.svg") 3px 3.6px/4.87px no-repeat, url("fonts/right-brace.svg") top 3px right 3.6px/4.87px no-repeat, #bbbbbb;
+  background: url("fonts/left-brace-black.svg") no-repeat left bottom, url("fonts/right-brace-black.svg") no-repeat right bottom, #bbbbbb;
   color: #000000;
   padding: 0 8px;
 }
@@ -4499,7 +4502,7 @@ input[type="button"].btn-block {
 }
 
 .nav-tabs {
-  height: 35px;
+  height: 33px;
   margin-left: 0;
   padding-left: 8px;
   border-bottom: 1px solid #bbbbbb;
@@ -5617,9 +5620,7 @@ a.badge-dark:focus, a.badge-dark.focus {
 .progress {
   display: -ms-flexbox;
   display: flex;
-  height: 1rem;
-  overflow: hidden;
-  font-size: 16px;
+  height: 14px;
   background-color: #555555;
 }
 
@@ -5634,11 +5635,11 @@ a.badge-dark:focus, a.badge-dark.focus {
   color: #fff;
   text-align: center;
   white-space: nowrap;
-  background-color: #bbbbbb;
+  background-color: yellow;
 }
 
 .progress-bar-striped {
-  background-size: 1rem 1rem;
+  background-size: 14px 14px;
 }
 
 .media {
