@@ -119,18 +119,11 @@ select.form-control {
   line-height: $input-line-height;
   color: $input-plaintext-color;
   background-color: transparent;
-  border: solid transparent;
-  border-width: $input-border-width 0;
+  border: 0;
 
   background: 
-   url('fonts/left-brace.svg') 3px 3.6px / 4.87px no-repeat, 
-   url('fonts/right-brace.svg') top 3px right 3.6px / 4.87px no-repeat;
-
-  &.form-control-sm,
-  &.form-control-lg {
-    padding-right: 0;
-    padding-left: 0;
-  }
+   url('fonts/left-brace-grayLight.svg') no-repeat left bottom, 
+   url('fonts/right-brace-grayLight.svg') no-repeat right bottom;
 }
 
 
@@ -170,8 +163,8 @@ textarea.form-control {
 }
 input.form-control {
   background: 
-   url('fonts/left-brace.svg') 3px 3.6px / 4.87px no-repeat, 
-   url('fonts/right-brace.svg') top 3px right 3.6px / 4.87px no-repeat, 
+   url('fonts/left-brace-black.svg') no-repeat left bottom, 
+   url('fonts/right-brace-black.svg') no-repeat right bottom,
    $grayLight;
 
   color: $black;

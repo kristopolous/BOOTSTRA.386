@@ -356,6 +356,14 @@ input {
   overflow: visible; // Show the overflow in Edge
 }
 
+input::focus {
+  color: blue;
+  outline: 0;
+}
+:focus {
+  outline: 0;
+}
+
 button,
 select {
   text-transform: none; // Remove the inheritance of text transform in Firefox

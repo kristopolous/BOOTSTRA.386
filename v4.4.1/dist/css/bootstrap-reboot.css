@@ -263,6 +263,15 @@ input {
   overflow: visible;
 }
 
+input::focus {
+  color: blue;
+  outline: 0;
+}
+
+:focus {
+  outline: 0;
+}
+
 button,
 select {
   text-transform: none;

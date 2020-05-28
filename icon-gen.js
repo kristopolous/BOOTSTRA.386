@@ -6,8 +6,10 @@ var list = ["// This file is auto-generated from icon-gen in the root directory"
  
 [
   ['[\u25A0]', 'checkbox-checked', 'custom-checkbox-indicator-icon-checked'],
-  ['[', 'left-brace', ''],
-  [']', 'right-brace', ''],
+  ['[', 'left-brace-black', '', {attributes: { fill: '#000000' } }],
+  [']', 'right-brace-black', '', {attributes: { fill: '#000000' } }],
+  ['[', 'left-brace-grayLight', ''],
+  [']', 'right-brace-grayLight', ''],
   ['[ ]', 'checkbox-unchecked', ''],
   [`\u253c\u2584`, 'grid', ''],
   ['(\u2022)', 'radio-checked', 'custom-radio-indicator-icon-checked'],
@@ -20,6 +22,10 @@ var list = ["// This file is auto-generated from icon-gen in the root directory"
     fontSize: 16, anchor: 'top',
     attributes: { fill: '#bbbbbb'}
   };
+
+  if (row.length > 3) {
+    props = Object.assign(props, row[3]);
+  }
 
   if(name == 'grid') {
     props.attributes.fill += '40';
