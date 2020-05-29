@@ -1904,8 +1904,9 @@ pre code {
   background-color: #000000;
 }
 
-.table-hover tr:hover {
-  color: #fff;
+.table-hover td:hover, .table-hover th:hover {
+  color: #000000;
+  background: #bbbbbb;
 }
 
 .table-primary,

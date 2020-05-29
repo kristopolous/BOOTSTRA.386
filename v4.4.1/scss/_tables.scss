@@ -74,9 +74,10 @@
 // Placed here since it has to come after the potential zebra striping
 
 .table-hover {
-  tr {
+  td,th {
     @include hover() {
-      color: $white;
+      color: $black;
+      background: $grayLight;
     }
   }
 }
