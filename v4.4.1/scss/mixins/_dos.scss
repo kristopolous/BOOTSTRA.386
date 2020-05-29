@@ -27,6 +27,14 @@
   filter: drop-shadow($line-height / 2 $space-width 0 $color);
   margin-right: (1 + 5/16) * $space-width;
 }
+@mixin dos-border-active() {
+  filter: none;
+  // this little position: relative trick keeps shit on the
+  // page from moving around.
+  position: relative;
+  top: $line-height-base;
+  left: $space-width;
+}
 
 @mixin dos-border-background($color: $grayLight) {
   // Here's essentially the problem. Given the above calculations we want

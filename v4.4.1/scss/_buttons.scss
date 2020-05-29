@@ -77,12 +77,7 @@ fieldset:disabled a.btn {
         border-color: white;
         background-color: darken($value);
         filter: none;
-        // this little position: relative trick keeps shit on the
-        // page from moving around.
-        position: relative;
-        top: .5 + $line-height-base;
-        left: $space-width;
-        margin: 5.5px 5 + $line-height-base 3px $line-height-base / 2 2.5px;
+        @include dos-border-active();
       }
     }
   }
