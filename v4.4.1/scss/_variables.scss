@@ -873,10 +873,6 @@ $jumbotron-bg:                      $grayLight !default;
 
 $card-spacer-y:                     $line-height-base !default;
 $card-spacer-x:                     ($space-width * 2) !default;
-$card-border-width:                 $border-width !default;
-$card-border-radius:                $border-radius !default;
-$card-border-color:                 none !default;
-$card-inner-border-radius:          subtract($card-border-radius, $card-border-width) !default;
 $card-cap-bg:                       $grayDark !default;
 $card-cap-color:                    $white !default;
 $card-height:                       null !default;

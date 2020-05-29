@@ -11,22 +11,12 @@
   word-wrap: break-word;
   background-color: $card-bg;
   background-clip: border-box;
-  border: $card-border-width solid $card-border-color;
 
   > hr {
     margin-right: 0;
     margin-left: 0;
   }
 
-  > .list-group:first-child {
-    .list-group-item:first-child {
-    }
-  }
-
-  > .list-group:last-child {
-    .list-group-item:last-child {
-    }
-  }
 }
 
 .card-body {
@@ -72,10 +62,7 @@
   margin-bottom: 0; // Removes the default margin-bottom of <hN>
   color: $card-cap-color;
   background-color: $card-cap-bg;
-  border-bottom: $card-border-width solid $card-border-color;
 
-  &:first-child {
-  }
 
   + .list-group {
     .list-group-item:first-child {
@@ -87,12 +74,13 @@
 .card-footer {
   padding: $card-spacer-y $card-spacer-x;
   background-color: $card-cap-bg;
-  border-top: $card-border-width solid $card-border-color;
-
-  &:last-child {
-  }
 }
 
+.card-header, .card-footer {
+  &.text-muted {
+    color: $black;
+  }
+}
 
 //
 // Header navs
@@ -260,7 +248,6 @@
     }
 
     > .card-header {
-      margin-bottom: -$card-border-width;
     }
   }
 }

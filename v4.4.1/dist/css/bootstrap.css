@@ -4996,7 +4996,6 @@ input[type="button"].btn-block {
   word-wrap: break-word;
   background-color: #bbbbbb;
   background-clip: border-box;
-  border: 0 solid none;
 }
 
 .card > hr {
@@ -5038,7 +5037,6 @@ input[type="button"].btn-block {
   margin-bottom: 0;
   color: #fff;
   background-color: #555555;
-  border-bottom: 0 solid none;
 }
 
 .card-header + .list-group .list-group-item:first-child {
@@ -5048,7 +5046,10 @@ input[type="button"].btn-block {
 .card-footer {
   padding: 14px 16px;
   background-color: #555555;
-  border-top: 0 solid none;
+}
+
+.card-header.text-muted, .card-footer.text-muted {
+  color: #000000;
 }
 
 .card-header-tabs {
@@ -5151,10 +5152,6 @@ input[type="button"].btn-block {
 
 .accordion > .card:not(:last-of-type) {
   border-bottom: 0;
-}
-
-.accordion > .card > .card-header {
-  margin-bottom: 0;
 }
 
 .breadcrumb {
