@@ -1904,177 +1904,56 @@ pre code {
   background-color: #000000;
 }
 
-.table-hover tbody tr:hover {
-  color: #bbbbbb;
-  background-color: #000000;
+.table-hover td:hover, .table-hover th:hover {
+  color: #000000;
+  background: #bbbbbb;
 }
 
 .table-primary,
 .table-primary > th,
 .table-primary > td {
-  background-color: #fff;
-}
-
-.table-primary th,
-.table-primary td,
-.table-primary thead th,
-.table-primary tbody + tbody {
-  border-color: #fff;
-}
-
-.table-hover .table-primary:hover {
-  background-color: #fff;
-}
-
-.table-hover .table-primary:hover > td,
-.table-hover .table-primary:hover > th {
-  background-color: #fff;
+  background-color: #555555;
 }
 
 .table-secondary,
 .table-secondary > th,
 .table-secondary > td {
-  background-color: #fff;
-}
-
-.table-secondary th,
-.table-secondary td,
-.table-secondary thead th,
-.table-secondary tbody + tbody {
-  border-color: #fff;
-}
-
-.table-hover .table-secondary:hover {
-  background-color: #fff;
-}
-
-.table-hover .table-secondary:hover > td,
-.table-hover .table-secondary:hover > th {
-  background-color: #fff;
+  background-color: #555555;
 }
 
 .table-success,
 .table-success > th,
 .table-success > td {
-  background-color: #5f5;
-}
-
-.table-success th,
-.table-success td,
-.table-success thead th,
-.table-success tbody + tbody {
-  border-color: #5f5;
-}
-
-.table-hover .table-success:hover {
-  background-color: #5f5;
-}
-
-.table-hover .table-success:hover > td,
-.table-hover .table-success:hover > th {
-  background-color: #5f5;
+  background-color: #00aa00;
 }
 
 .table-info,
 .table-info > th,
 .table-info > td {
-  background-color: #5ff;
-}
-
-.table-info th,
-.table-info td,
-.table-info thead th,
-.table-info tbody + tbody {
-  border-color: #5ff;
-}
-
-.table-hover .table-info:hover {
-  background-color: #5ff;
-}
-
-.table-hover .table-info:hover > td,
-.table-hover .table-info:hover > th {
-  background-color: #5ff;
+  background-color: #00aaaa;
 }
 
 .table-warning,
 .table-warning > th,
 .table-warning > td {
-  background-color: #ff5;
-}
-
-.table-warning th,
-.table-warning td,
-.table-warning thead th,
-.table-warning tbody + tbody {
-  border-color: #ff5;
-}
-
-.table-hover .table-warning:hover {
-  background-color: #ff5;
-}
-
-.table-hover .table-warning:hover > td,
-.table-hover .table-warning:hover > th {
-  background-color: #ff5;
+  background-color: #aa5500;
 }
 
 .table-danger,
 .table-danger > th,
 .table-danger > td {
-  background-color: #f55;
-}
-
-.table-danger th,
-.table-danger td,
-.table-danger thead th,
-.table-danger tbody + tbody {
-  border-color: #f55;
-}
-
-.table-hover .table-danger:hover {
-  background-color: #f55;
-}
-
-.table-hover .table-danger:hover > td,
-.table-hover .table-danger:hover > th {
-  background-color: #f55;
+  background-color: #aa0000;
 }
 
 .table-dark,
 .table-dark > th,
 .table-dark > td {
-  background-color: #555555;
-}
-
-.table-dark th,
-.table-dark td,
-.table-dark thead th,
-.table-dark tbody + tbody {
-  border-color: #555555;
-}
-
-.table-hover .table-dark:hover {
-  background-color: #555555;
-}
-
-.table-hover .table-dark:hover > td,
-.table-hover .table-dark:hover > th {
-  background-color: #555555;
+  background-color: #000000;
 }
 
 .table-active,
 .table-active > th,
 .table-active > td {
-  background-color: #000000;
-}
-
-.table-hover .table-active:hover {
-  background-color: #000000;
-}
-
-.table-hover .table-active:hover > td,
-.table-hover .table-active:hover > th {
   background-color: #000000;
 }
 
