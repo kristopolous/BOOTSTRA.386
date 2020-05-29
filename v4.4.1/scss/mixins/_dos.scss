@@ -16,10 +16,10 @@
 
   //             4/16
   margin-left:   7/16 * $space-width;
-  padding-left: (5/16 + 1) * $space-width;
+  padding-left: (5/16 + $character-space) * $space-width;
 
   //              4/16
-  padding-right: (7/16 + 1) * $space-width;
+  padding-right: (7/16 + $character-space) * $space-width;
   margin-right:   5/16 * $space-width;
 }
 

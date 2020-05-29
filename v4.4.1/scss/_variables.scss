@@ -242,9 +242,9 @@ $body-color:                $grayLight !default;
 
 $link-color:                              $yellow !default;
 $link-decoration:                         none !default;
-$link-hover-color:                        $white !default;
 $link-focus-background:                   $black !default;
-$link-hover-background:                   $brown !default;
+$link-hover-color:                        $grayLight !default;
+$link-hover-background:                   $black !default;
 $link-hover-decoration:                   none !default;
 // Darken percentage for links with `.text-*` class (e.g. `.text-success`)
 $emphasized-link-hover-darken-percentage: 0% !default;
@@ -807,14 +807,12 @@ $navbar-dark-brand-hover-color:           $white !default;
 $dropdown-min-width:                0 !default;
 $dropdown-padding-y:                0 !default;
 $dropdown-spacer:                   0 !default;
-$dropdown-font-size:                $font-size-base !default;
 $dropdown-color:                    $black !default;
 $dropdown-bg:                       $grayLight !default;
 $dropdown-border-color:             $black !default;
 $dropdown-border-radius:            0 !default;
-$dropdown-border-width:             $border-width !default;
 $dropdown-inner-border-radius:      0 !default;
-$dropdown-divider-bg:               $gray-200 !default;
+$dropdown-divider-bg:               $black !default;
 $dropdown-divider-margin-y:         $nav-divider-margin-y !default;
 $dropdown-box-shadow:               0 !default;
 
@@ -1051,19 +1049,15 @@ $thumbnail-box-shadow:              0 1px 2px rgba($black, .075) !default;
 
 // Figures
 
-$figure-caption-font-size:          90% !default;
 $figure-caption-color:              $gray-600 !default;
 
 
 // Breadcrumbs
 
-$breadcrumb-font-size:              null !default;
 
 $breadcrumb-item-padding:           $space-width !default;
-
 $breadcrumb-margin-bottom:          0 !default;
-
-$breadcrumb-bg:                     $gray-200 !default;
+$breadcrumb-bg:                     $black !default;
 $breadcrumb-divider-color:          $gray-600 !default;
 $breadcrumb-active-color:           $gray-600 !default;
 

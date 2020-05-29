@@ -68,6 +68,7 @@
   .dropdown-menu {
     // Make dropdown border overlap tab border
     margin-top: -1px;
+    margin-left: 0;
     // Remove the top rounded corners here since there is a hard edge above the menu
   }
 }

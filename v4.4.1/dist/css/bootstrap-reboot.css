@@ -161,8 +161,8 @@ a {
 }
 
 a:hover {
-  color: #fff;
-  background-color: #aa5500;
+  color: #bbbbbb;
+  background-color: #000000;
 }
 
 em {
