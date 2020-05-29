@@ -11,13 +11,12 @@ code {
 
 // User input typically entered via keyboard
 kbd {
-  padding: $kbd-padding-y $kbd-padding-x;
+  padding: $line-height $space-width;
   color: $kbd-color;
   background-color: $kbd-bg;
 
   kbd {
     padding: 0;
-    @include font-size(100%);
     font-weight: $nested-kbd-font-weight;
   }
 }

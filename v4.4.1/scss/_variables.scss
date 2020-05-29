@@ -198,7 +198,7 @@ $space-width:                 $font-size-base/2 !default;
 // variables. Mostly focused on spacing.
 // You can add more entries to the $spacers map, should you need more variation.
 
-$spacer: $line-height-base $space-width !default;
+$spacer: $line-height $space-width !default;
 $spacers: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $spacers: map-merge(
@@ -253,7 +253,7 @@ $emphasized-link-hover-darken-percentage: 0% !default;
 //
 // Style p element.
 
-$paragraph-margin-bottom: $line-height-base !default;
+$paragraph-margin-bottom: $line-height !default;
 
 
 // Grid breakpoints
@@ -300,8 +300,8 @@ $grid-row-columns:            6 !default;
 //
 // Define common padding and border radius sizes and more.
 
-$line-height-lg:              $line-height-base !default;
-$line-height-sm:              $line-height-base !default;
+$line-height-lg:              $line-height !default;
+$line-height-sm:              $line-height !default;
 
 $border-width:                0 !default;
 $border-color:                $gray-300 !default;
@@ -364,10 +364,10 @@ $h4-font-size:                $font-size-base !default;
 $h5-font-size:                $font-size-base !default;
 $h6-font-size:                $font-size-base !default;
 
-$headings-margin-bottom:      $line-height-base !default;
+$headings-margin-bottom:      $line-height !default;
 $headings-font-family:        null !default;
 $headings-font-weight:        400 !default;
-$headings-line-height:        $line-height-base !default;
+$headings-line-height:        $line-height !default;
 $headings-color:              $black !default;
 
 $display1-size:               $font-size-base !default;
@@ -406,7 +406,7 @@ $list-inline-padding:         0 !default;
 
 $mark-bg:                     #fcf8e3 !default;
 
-$hr-margin-y:                 $line-height-base !default;
+$hr-margin-y:                 $line-height !default;
 
 
 // Tables
@@ -452,7 +452,7 @@ $input-btn-padding-y:         0 !default;
 $input-btn-padding-x:         0 !default;
 $input-btn-font-family:       null !default;
 $input-btn-font-size:         $font-size-base !default;
-$input-btn-line-height:       $line-height-base !default;
+$input-btn-line-height:       $line-height !default;
 
 $input-btn-focus-width:       0 !default;
 $input-btn-focus-color:       rgba($component-active-bg, .25) !default;
@@ -510,7 +510,7 @@ $btn-border-radius:           $border-radius !default;
 
 // Forms
 
-$label-margin-bottom:                   $line-height-base !default;
+$label-margin-bottom:                   $line-height !default;
 
 $input-padding-y:                       $input-btn-padding-y !default;
 $input-padding-x:                       $input-btn-padding-x !default;
@@ -570,7 +570,7 @@ $form-check-inline-margin-x:            0 !default;
 $form-check-inline-input-margin-x:      0 !default;
 
 $form-grid-gutter-width:                10px !default;
-$form-group-margin-bottom:              $line-height-base !default;
+$form-group-margin-bottom:              $line-height !default;
 
 $input-group-addon-color:               $input-color !default;
 $input-group-addon-bg:                  $gray-200 !default;
@@ -665,7 +665,7 @@ $custom-select-height-lg:           $input-height-lg !default;
 
 
 $custom-range-track-width:          100% !default;
-$custom-range-track-height:         $line-height-base !default;
+$custom-range-track-height:         $line-height !default;
 $custom-range-track-cursor:         pointer !default;
 $custom-range-track-bg:             $white !default;
 
@@ -759,7 +759,7 @@ $nav-pills-link-active-color:       $component-active-color !default;
 $nav-pills-link-active-bg:          $component-active-bg !default;
 
 $nav-divider-color:                 $gray-200 !default;
-$nav-divider-margin-y:              $line-height-base !default;
+$nav-divider-margin-y:              $line-height !default;
 
 
 // Navbar
@@ -772,7 +772,7 @@ $navbar-nav-link-padding-x:         $space-width !default;
 $navbar-brand-font-size:            $font-size-lg !default;
 // Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
 $nav-link-height:                   $font-size-base !default;
-$navbar-brand-height:               $line-height-base !default;
+$navbar-brand-height:               $line-height !default;
 $navbar-brand-padding-y:            0 !default;
 
 $navbar-toggler-padding-y:          0 !default;
@@ -839,9 +839,9 @@ $pagination-padding-y:              0 !default;
 $pagination-padding-x:              $space-width !default;
 $pagination-padding-y-sm:           0 !default;
 $pagination-padding-x-sm:           0 !default;
-$pagination-padding-y-lg:           $line-height-base !default;
+$pagination-padding-y-lg:           $line-height !default;
 $pagination-padding-x-lg:           $space-width !default;
-$pagination-line-height:            $line-height-base !default;
+$pagination-line-height:            $line-height !default;
 
 $pagination-color:                  $link-color !default;
 $pagination-bg:                     transparent !default;
@@ -863,14 +863,14 @@ $pagination-disabled-border-color:  $gray-300 !default;
 
 // Jumbotron
 
-$jumbotron-padding:                 ($line-height-base * 2) ($space-width * 2) !default;
+$jumbotron-padding:                 ($line-height * 2) ($space-width * 2) !default;
 $jumbotron-color:                   $black !default;
 $jumbotron-bg:                      $grayLight !default;
 
 
 // Cards
 
-$card-spacer-y:                     $line-height-base !default;
+$card-spacer-y:                     $line-height !default;
 $card-spacer-x:                     ($space-width * 2) !default;
 $card-cap-bg:                       $grayDark !default;
 $card-cap-color:                    $white !default;
@@ -908,7 +908,7 @@ $tooltip-arrow-color:               $tooltip-bg !default;
 $form-feedback-tooltip-padding-y:     $tooltip-padding-y !default;
 $form-feedback-tooltip-padding-x:     $tooltip-padding-x !default;
 $form-feedback-tooltip-font-size:     $tooltip-font-size !default;
-$form-feedback-tooltip-line-height:   $line-height-base !default;
+$form-feedback-tooltip-line-height:   $line-height !default;
 $form-feedback-tooltip-opacity:       $tooltip-opacity !default;
 $form-feedback-tooltip-border-radius: $tooltip-border-radius !default;
 
@@ -944,7 +944,7 @@ $popover-arrow-outer-color:         fade-in($popover-border-color, .05) !default
 
 $toast-max-width:                   $space-width * 45 !default;
 $toast-padding-x:                   $space-width !default;
-$toast-padding-y:                   $line-height-base !default;
+$toast-padding-y:                   $line-height !default;
 $toast-color:                       $black !default;
 $toast-background-color:            $grayLight !default;
 
@@ -969,7 +969,7 @@ $badge-pill-border-radius:          0 !default;
 
 
 // Modals
-$modal-title-line-height:           $line-height-base !default;
+$modal-title-line-height:           $line-height !default;
 
 $modal-content-color:               $black !default;
 $modal-content-bg:                  $grayLight !default;
@@ -1007,7 +1007,7 @@ $alert-color-level:                 -1 !default;
 
 // Progress bars
 
-$progress-height:                   $line-height-base !default;
+$progress-height:                   $line-height !default;
 $progress-bg:                       $gray-200 !default;
 $progress-bar-color:                $white !default;
 $progress-bar-bg:                   yellow !default;
@@ -1021,7 +1021,7 @@ $list-group-border-color:           rgba($black, .125) !default;
 $list-group-border-width:           $border-width !default;
 $list-group-border-radius:          $border-radius !default;
 
-$list-group-item-padding-y:         $line-height-base !default;
+$list-group-item-padding-y:         $line-height !default;
 $list-group-item-padding-x:         $space-width !default;
 
 $list-group-hover-bg:               $gray-100 !default;
@@ -1113,8 +1113,6 @@ $close-color:                       $white !default;
 // Code
 $code-color:                        $magentaBright !default;
 
-$kbd-padding-y:                     .2rem !default;
-$kbd-padding-x:                     .4rem !default;
 $kbd-color:                         $white !default;
 $kbd-bg:                            $gray-900 !default;
 

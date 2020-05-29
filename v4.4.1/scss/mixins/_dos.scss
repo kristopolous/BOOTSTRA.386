@@ -26,6 +26,7 @@
 @mixin dos-shadow($color: black) {
   filter: drop-shadow($line-height / 2 $space-width 0 $color);
   margin-right: (1 + 5/16) * $space-width;
+  // margin bottom you're on your own
 }
 @mixin dos-border-active() {
   filter: none;

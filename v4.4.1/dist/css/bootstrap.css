@@ -687,14 +687,13 @@ a > code {
 }
 
 kbd {
-  padding: 0.2rem 0.4rem;
+  padding: 14px 8px;
   color: #fff;
   background-color: #bbbbbb;
 }
 
 kbd kbd {
   padding: 0;
-  font-size: 16px;
   font-weight: 400;
 }
 
@@ -6017,6 +6016,7 @@ a.close.disabled {
   -webkit-filter: drop-shadow(7px 8px 0 black);
   filter: drop-shadow(7px 8px 0 black);
   margin-right: 10.5px;
+  margin-bottom: 14px;
 }
 
 .modal .btn {
