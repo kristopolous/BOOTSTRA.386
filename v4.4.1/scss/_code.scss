@@ -1,6 +1,5 @@
 // Inline code
 code {
-  @include font-size($code-font-size);
   color: $code-color;
   word-wrap: break-word;
 
@@ -13,7 +12,6 @@ code {
 // User input typically entered via keyboard
 kbd {
   padding: $kbd-padding-y $kbd-padding-x;
-  @include font-size($kbd-font-size);
   color: $kbd-color;
   background-color: $kbd-bg;
 
@@ -27,7 +25,6 @@ kbd {
 // Blocks of code
 pre {
   display: block;
-  @include font-size($code-font-size);
   color: $pre-color;
 
   // Account for some code outputs that place code tags in pre tags

@@ -678,7 +678,6 @@ mark,
 }
 
 code {
-  font-size: 16px;
   color: #f5f;
   word-wrap: break-word;
 }
@@ -689,7 +688,6 @@ a > code {
 
 kbd {
   padding: 0.2rem 0.4rem;
-  font-size: 16px;
   color: #fff;
   background-color: #bbbbbb;
 }
@@ -702,7 +700,6 @@ kbd kbd {
 
 pre {
   display: block;
-  font-size: 16px;
   color: #bbbbbb;
 }
 

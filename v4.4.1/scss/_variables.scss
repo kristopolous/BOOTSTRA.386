@@ -630,7 +630,6 @@ $custom-select-color:               $black !default;
 $custom-select-disabled-color:      $grayDark !default;
 $custom-select-bg:                  $input-bg !default;
 $custom-select-disabled-bg:         $gray-200 !default;
-$custom-select-bg-size:             8px 10px !default; // In pixels because image dimensions
 $custom-select-indicator-color:     $gray-800 !default;
 
 $custom-select-feedback-icon-padding-right: add(1em * .75, (2 * $custom-select-padding-y * .75) + $custom-select-padding-x + $custom-select-indicator-padding) !default;
@@ -970,11 +969,6 @@ $badge-pill-border-radius:          0 !default;
 
 
 // Modals
-
-// Margin between elements in footer, must be lower than or equal to 2 * $modal-inner-padding
-$modal-footer-margin-between:       .5rem !default;
-
-
 $modal-title-line-height:           $line-height-base !default;
 
 $modal-content-color:               $black !default;
@@ -1117,13 +1111,10 @@ $close-color:                       $white !default;
 
 
 // Code
-
-$code-font-size:                    87.5% !default;
 $code-color:                        $magentaBright !default;
 
 $kbd-padding-y:                     .2rem !default;
 $kbd-padding-x:                     .4rem !default;
-$kbd-font-size:                     $code-font-size !default;
 $kbd-color:                         $white !default;
 $kbd-bg:                            $gray-900 !default;
 
