@@ -678,7 +678,6 @@ mark,
 }
 
 code {
-  font-size: 16px;
   color: #f5f;
   word-wrap: break-word;
 }
@@ -689,7 +688,6 @@ a > code {
 
 kbd {
   padding: 0.2rem 0.4rem;
-  font-size: 16px;
   color: #fff;
   background-color: #bbbbbb;
 }
@@ -702,7 +700,6 @@ kbd kbd {
 
 pre {
   display: block;
-  font-size: 16px;
   color: #bbbbbb;
 }
 
@@ -2620,10 +2617,10 @@ fieldset:disabled a.btn {
   background-color: #555555;
   -webkit-filter: none;
   filter: none;
+  filter: none;
   position: relative;
-  top: 14.5px;
+  top: 14px;
   left: 8px;
-  margin: 5.5px 19px 3px 7px 2.5px;
 }
 
 .bs-component > .btn-secondary:not(.disabled):not(.btn-sm):not(.btn-lg):hover {
@@ -2706,10 +2703,10 @@ fieldset:disabled a.btn {
   background-color: #555555;
   -webkit-filter: none;
   filter: none;
+  filter: none;
   position: relative;
-  top: 14.5px;
+  top: 14px;
   left: 8px;
-  margin: 5.5px 19px 3px 7px 2.5px;
 }
 
 .bs-component > .btn-success:not(.disabled):not(.btn-sm):not(.btn-lg):hover {
@@ -2792,10 +2789,10 @@ fieldset:disabled a.btn {
   background-color: #00aa00;
   -webkit-filter: none;
   filter: none;
+  filter: none;
   position: relative;
-  top: 14.5px;
+  top: 14px;
   left: 8px;
-  margin: 5.5px 19px 3px 7px 2.5px;
 }
 
 .bs-component > .btn-info:not(.disabled):not(.btn-sm):not(.btn-lg):hover {
@@ -2878,10 +2875,10 @@ fieldset:disabled a.btn {
   background-color: #00aaaa;
   -webkit-filter: none;
   filter: none;
+  filter: none;
   position: relative;
-  top: 14.5px;
+  top: 14px;
   left: 8px;
-  margin: 5.5px 19px 3px 7px 2.5px;
 }
 
 .bs-component > .btn-warning:not(.disabled):not(.btn-sm):not(.btn-lg):hover {
@@ -2964,10 +2961,10 @@ fieldset:disabled a.btn {
   background-color: #aa5500;
   -webkit-filter: none;
   filter: none;
+  filter: none;
   position: relative;
-  top: 14.5px;
+  top: 14px;
   left: 8px;
-  margin: 5.5px 19px 3px 7px 2.5px;
 }
 
 .bs-component > .btn-danger:not(.disabled):not(.btn-sm):not(.btn-lg):hover {
@@ -3050,10 +3047,10 @@ fieldset:disabled a.btn {
   background-color: #aa0000;
   -webkit-filter: none;
   filter: none;
+  filter: none;
   position: relative;
-  top: 14.5px;
+  top: 14px;
   left: 8px;
-  margin: 5.5px 19px 3px 7px 2.5px;
 }
 
 .bs-component > .btn-light:not(.disabled):not(.btn-sm):not(.btn-lg):hover {
@@ -3131,10 +3128,10 @@ fieldset:disabled a.btn {
   background-color: #bbbbbb;
   -webkit-filter: none;
   filter: none;
+  filter: none;
   position: relative;
-  top: 14.5px;
+  top: 14px;
   left: 8px;
-  margin: 5.5px 19px 3px 7px 2.5px;
 }
 
 .bs-component > .btn-dark:not(.disabled):not(.btn-sm):not(.btn-lg):hover {
@@ -3217,10 +3214,10 @@ fieldset:disabled a.btn {
   background-color: #000000;
   -webkit-filter: none;
   filter: none;
+  filter: none;
   position: relative;
-  top: 14.5px;
+  top: 14px;
   left: 8px;
-  margin: 5.5px 19px 3px 7px 2.5px;
 }
 
 .btn-outline-primary {
@@ -6017,12 +6014,29 @@ a.close.disabled {
   height: 100%;
   overflow: hidden;
   outline: 0;
+  -webkit-filter: drop-shadow(7px 8px 0 black);
+  filter: drop-shadow(7px 8px 0 black);
+  margin-right: 10.5px;
+}
+
+.modal .btn {
+  -webkit-filter: drop-shadow(7px 8px 0 black);
+  filter: drop-shadow(7px 8px 0 black);
+  margin-right: 10.5px;
+  background: #fff;
+}
+
+.modal .btn::first-letter {
+  color: #f55;
+}
+
+.modal .btn:hover {
+  color: black;
 }
 
 .modal-dialog {
   position: relative;
   width: auto;
-  margin: 0.5rem;
   pointer-events: none;
 }
 
@@ -6044,11 +6058,9 @@ a.close.disabled {
 .modal-dialog-scrollable {
   display: -ms-flexbox;
   display: flex;
-  max-height: calc(100% - 1rem);
 }
 
 .modal-dialog-scrollable .modal-content {
-  max-height: calc(100vh - 1rem);
   overflow: hidden;
 }
 
@@ -6067,12 +6079,10 @@ a.close.disabled {
   display: flex;
   -ms-flex-align: center;
   align-items: center;
-  min-height: calc(100% - 1rem);
 }
 
 .modal-dialog-centered::before {
   display: block;
-  height: calc(100vh - 1rem);
   content: "";
 }
 
@@ -6099,10 +6109,10 @@ a.close.disabled {
   -ms-flex-direction: column;
   flex-direction: column;
   width: 100%;
+  color: #000000;
   pointer-events: auto;
-  background-color: #fff;
+  background-color: #bbbbbb;
   background-clip: padding-box;
-  border: 0 solid rgba(0, 0, 0, 0.2);
   outline: 0;
 }
 
@@ -6120,10 +6130,6 @@ a.close.disabled {
   opacity: 0;
 }
 
-.modal-backdrop.show {
-  opacity: 0.5;
-}
-
 .modal-header {
   display: -ms-flexbox;
   display: flex;
@@ -6131,13 +6137,14 @@ a.close.disabled {
   align-items: flex-start;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 1rem 1rem;
-  border-bottom: 0 solid #555555;
+  padding: 0 8px;
+  background: #aa00aa;
+  color: #fff;
 }
 
 .modal-header .close {
-  padding: 1rem 1rem;
-  margin: -1rem -1rem -1rem auto;
+  padding: 0 8px;
+  margin: 0 -8px 0 auto;
 }
 
 .modal-title {
@@ -6149,7 +6156,7 @@ a.close.disabled {
   position: relative;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-  padding: 1rem;
+  padding: 14px 16px;
 }
 
 .modal-footer {
@@ -6161,12 +6168,11 @@ a.close.disabled {
   align-items: center;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  padding: 0.75rem;
-  border-top: 0 solid #555555;
+  padding: 0 8px 14px;
 }
 
 .modal-footer > * {
-  margin: 0.25rem;
+  margin: 0 8px;
 }
 
 .modal-scrollbar-measure {
@@ -6180,19 +6186,6 @@ a.close.disabled {
 @media (min-width: 576px) {
   .modal-dialog {
     max-width: 480px;
-    margin: 1.75rem auto;
-  }
-  .modal-dialog-scrollable {
-    max-height: calc(100% - 3.5rem);
-  }
-  .modal-dialog-scrollable .modal-content {
-    max-height: calc(100vh - 3.5rem);
-  }
-  .modal-dialog-centered {
-    min-height: calc(100% - 3.5rem);
-  }
-  .modal-dialog-centered::before {
-    height: calc(100vh - 3.5rem);
   }
   .modal-sm {
     max-width: 240px;
