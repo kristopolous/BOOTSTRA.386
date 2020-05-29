@@ -1,33 +1,46 @@
 @mixin dos-border-single($color: $black, $extra: 0, $character-space: 0) {
-  border: $btn-border-width solid $color;
   // In dos world, the left and right are actually a bit thicker.
-  border-left-width: 2px;
-  border-right-width: 2px;
-  padding: $extra + ($line-height-base / 2 - .5) (($character-space + .5) * $space-width - .5);
-  margin-top: $line-height-base / 2 - 1.5;
-  margin-left: $space-width / 2 - 1.5;
-  margin-right: (($character-space + .5) * $space-width - .5);
-  margin-bottom: $extra + .5 * $line-height-base;
+
+  border: (1/16 * $line-height) solid $color;
+
+  //            1/16
+  margin-top:   8/16 * $line-height;
+  padding-top: (7/16 + $extra) * $line-height;
+
+  //               1/16
+  padding-bottom: (8/16 + $extra) * $line-height;
+  margin-bottom:   7/16 * $line-height;
+
+  border-left-width: (4/16 * $space-width);
+  border-right-width: (4/16 * $space-width);
+
+  //             4/16
+  margin-left:   7/16 * $space-width;
+  padding-left: (5/16 + 1) * $space-width;
+
+  //              4/16
+  padding-right: (7/16 + 1) * $space-width;
+  margin-right:   5/16 * $space-width;
 }
 
 @mixin dos-shadow($color: black) {
-  filter: drop-shadow($line-height-base / 2 $space-width 0 $color);
+  filter: drop-shadow($line-height / 2 $space-width 0 $color);
   margin-right: $space-width / 2 + 1;
 }
 
 @mixin dos-border-background($color: $grayLight, $borderSize: 1) {
   $spacer: (($space-width - $borderSize) / 2);
   box-shadow: 
-    .5px ($borderSize + 3.5 -$line-height-base / 2) 0 $spacer - .75 $color,
-    .5px ($line-height-base / 2 - 4) 0 $spacer - .75 $color;
+    .5px ($borderSize + 3.5 -$line-height / 2) 0 $spacer - .75 $color,
+    .5px ($line-height / 2 - 4) 0 $spacer - .75 $color;
 }
 @mixin dos-border-background-inset($color: $grayLight, $borderSize: 1) {
   $spacer: (($space-width - $borderSize) / 2);
   box-shadow: 
-    inset 0 (-$line-height-base / 2 + $spacer) 0 $spacer - .5 $color,
-    inset 0 ($line-height-base / 2 - $spacer) 0 $spacer - .5 $color,
-    .5px (-$line-height-base / 2 + $borderSize + 3.5) 0 $spacer - .75 $color,
-    .5px ($line-height-base / 2 - 4) 0 $spacer - .75 $color;
+    inset 0 (-$line-height / 2 + $spacer) 0 $spacer - .5 $color,
+    inset 0 ($line-height / 2 - $spacer) 0 $spacer - .5 $color,
+    .5px (-$line-height / 2 + $borderSize + 3.5) 0 $spacer - .75 $color,
+    .5px ($line-height / 2 - 4) 0 $spacer - .75 $color;
 }
 
 @mixin dos-solid-border($color, $character-space:0) {
