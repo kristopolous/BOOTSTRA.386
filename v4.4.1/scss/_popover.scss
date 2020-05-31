@@ -12,14 +12,13 @@
   word-wrap: break-word;
   background-color: $popover-bg;
   background-clip: padding-box;
-  border: $popover-border-width solid $popover-border-color;
 
   .arrow {
     position: absolute;
     display: block;
     width: $popover-arrow-width;
     height: $popover-arrow-height;
-    margin: 0 $popover-border-radius;
+    margin: 0;
 
     &::before,
     &::after {
@@ -36,7 +35,7 @@
   margin-bottom: $popover-arrow-height;
 
   > .arrow {
-    bottom: subtract(-$popover-arrow-height, $popover-border-width);
+    bottom: -$popover-arrow-height;
 
     &::before {
       bottom: 0;
@@ -45,7 +44,6 @@
     }
 
     &::after {
-      bottom: $popover-border-width;
       border-width: $popover-arrow-height ($popover-arrow-width / 2) 0;
       border-top-color: $popover-arrow-color;
     }
@@ -56,10 +54,10 @@
   margin-left: $popover-arrow-height;
 
   > .arrow {
-    left: subtract(-$popover-arrow-height, $popover-border-width);
+    left: -$popover-arrow-height;
     width: $popover-arrow-height;
     height: $popover-arrow-width;
-    margin: $popover-border-radius 0; // make sure the arrow does not touch the popover's rounded corners
+    margin: 0;
 
     &::before {
       left: 0;
@@ -111,10 +109,10 @@
   margin-right: $popover-arrow-height;
 
   > .arrow {
-    right: subtract(-$popover-arrow-height, $popover-border-width);
+    right: -$popover-arrow-height;
     width: $popover-arrow-height;
     height: $popover-arrow-width;
-    margin: $popover-border-radius 0; // make sure the arrow does not touch the popover's rounded corners
+    margin: 0; // make sure the arrow does not touch the popover's rounded corners
 
     &::before {
       right: 0;
