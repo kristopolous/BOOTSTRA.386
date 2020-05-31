@@ -2281,11 +2281,11 @@ input.form-control {
   z-index: 5;
   display: none;
   max-width: 100%;
-  padding: 0.25rem 0.5rem;
+  padding: 0 8px;
   font-size: 16px;
   line-height: 14px;
   color: #fff;
-  background-color: rgba(0, 170, 0, 0.9);
+  background-color: #bbbbbb;
 }
 
 .was-validated :valid ~ .valid-feedback,
@@ -2366,11 +2366,11 @@ input.form-control {
   z-index: 5;
   display: none;
   max-width: 100%;
-  padding: 0.25rem 0.5rem;
+  padding: 0 8px;
   font-size: 16px;
   line-height: 14px;
   color: #fff;
-  background-color: rgba(255, 85, 85, 0.9);
+  background-color: #bbbbbb;
 }
 
 .was-validated :invalid ~ .invalid-feedback,
@@ -6228,13 +6228,12 @@ a.close.disabled {
   word-spacing: normal;
   white-space: normal;
   line-break: auto;
-  font-size: 16px;
   word-wrap: break-word;
   opacity: 0;
 }
 
 .tooltip.show {
-  opacity: 0.9;
+  opacity: 1;
 }
 
 .tooltip .arrow {
@@ -6313,7 +6312,7 @@ a.close.disabled {
 
 .tooltip-inner {
   max-width: 200px;
-  padding: 0.25rem 0.5rem;
+  padding: 0 8px;
   color: #fff;
   text-align: center;
   background-color: #000000;
@@ -6340,7 +6339,6 @@ a.close.disabled {
   word-spacing: normal;
   white-space: normal;
   line-break: auto;
-  font-size: 16px;
   word-wrap: break-word;
   background-color: #fff;
   background-clip: padding-box;

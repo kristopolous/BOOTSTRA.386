@@ -54,7 +54,7 @@
     @include font-size($form-feedback-tooltip-font-size);
     line-height: $form-feedback-tooltip-line-height;
     color: color-yiq($color);
-    background-color: rgba($color, $form-feedback-tooltip-opacity);
+    background-color: $grayLight;
   }
 
   @include form-validation-state-selector($state) {
