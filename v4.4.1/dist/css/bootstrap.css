@@ -2100,8 +2100,8 @@ pre code {
 }
 
 .form-control:disabled, .form-control[readonly] {
-  background-color: #555555;
   opacity: 1;
+  background: url("fonts/left-brace-grayLight.svg") no-repeat left bottom, url("fonts/right-brace-grayLight.svg") no-repeat right bottom, #555555;
 }
 
 select.form-control {
