@@ -909,7 +909,7 @@ $form-feedback-tooltip-line-height:   $line-height !default;
 
 // Popovers
 
-$popover-bg:                        $white !default;
+$popover-bg:                        $grayLight !default;
 $popover-max-width:                 $space-width * 35 !default;
 $popover-border-width:              $border-width !default;
 
@@ -918,12 +918,12 @@ $popover-header-color:              $headings-color !default;
 $popover-header-padding-y:          0 !default;
 $popover-header-padding-x:          $space-width !default;
 
-$popover-body-color:                $body-color !default;
+$popover-body-color:                $black !default;
 $popover-body-padding-y:            $popover-header-padding-y !default;
 $popover-body-padding-x:            $popover-header-padding-x !default;
 
-$popover-arrow-width:               1rem !default;
-$popover-arrow-height:              .5rem !default;
+$popover-arrow-width:               $space-width !default;
+$popover-arrow-height:              $line-height !default;
 $popover-arrow-color:               $popover-bg !default;
 
 $popover-arrow-outer-color:         $white !default;

@@ -13,20 +13,23 @@
   background-color: $popover-bg;
   background-clip: padding-box;
 
+  .h3, h3 {
+    @include dos-border-off();
+  }
+
   .arrow {
     position: absolute;
     display: block;
     width: $popover-arrow-width;
     height: $popover-arrow-height;
     margin: 0;
+    background: transparent;
 
     &::before,
     &::after {
       position: absolute;
       display: block;
       content: "";
-      border-color: transparent;
-      border-style: solid;
     }
   }
 }
@@ -37,38 +40,24 @@
   > .arrow {
     bottom: -$popover-arrow-height;
 
-    &::before {
-      bottom: 0;
-      border-width: $popover-arrow-height ($popover-arrow-width / 2) 0;
-      border-top-color: $popover-arrow-outer-color;
-    }
-
     &::after {
-      border-width: $popover-arrow-height ($popover-arrow-width / 2) 0;
-      border-top-color: $popover-arrow-color;
+      content: '\25bc';
     }
   }
 }
 
 .bs-popover-right {
-  margin-left: $popover-arrow-height;
+  margin-left: $popover-arrow-width;
 
   > .arrow {
-    left: -$popover-arrow-height;
-    width: $popover-arrow-height;
-    height: $popover-arrow-width;
+    left: -$popover-arrow-width;
+    width: $popover-arrow-width;
+    height: $popover-arrow-height;
     margin: 0;
 
-    &::before {
-      left: 0;
-      border-width: ($popover-arrow-width / 2) $popover-arrow-height ($popover-arrow-width / 2) 0;
-      border-right-color: $popover-arrow-outer-color;
-    }
-
     &::after {
+      content: '\25c4';
       left: $popover-border-width;
-      border-width: ($popover-arrow-width / 2) $popover-arrow-height ($popover-arrow-width / 2) 0;
-      border-right-color: $popover-arrow-color;
     }
   }
 }
@@ -77,18 +66,10 @@
   margin-top: $popover-arrow-height;
 
   > .arrow {
-    top: subtract(-$popover-arrow-height, $popover-border-width);
-
-    &::before {
-      top: 0;
-      border-width: 0 ($popover-arrow-width / 2) $popover-arrow-height ($popover-arrow-width / 2);
-      border-bottom-color: $popover-arrow-outer-color;
-    }
+    top: -$popover-arrow-height;
 
     &::after {
-      top: $popover-border-width;
-      border-width: 0 ($popover-arrow-width / 2) $popover-arrow-height ($popover-arrow-width / 2);
-      border-bottom-color: $popover-arrow-color;
+      content: '\25b2';
     }
   }
 
@@ -101,29 +82,20 @@
     width: $popover-arrow-width;
     margin-left: -$popover-arrow-width / 2;
     content: "";
-    border-bottom: $popover-border-width solid $popover-header-bg;
   }
 }
 
 .bs-popover-left {
-  margin-right: $popover-arrow-height;
-
+  margin-right: $popover-arrow-width;
   > .arrow {
-    right: -$popover-arrow-height;
-    width: $popover-arrow-height;
-    height: $popover-arrow-width;
+    right: -$popover-arrow-width;
+    width: $popover-arrow-width;
+    height: $popover-arrow-height;
     margin: 0; // make sure the arrow does not touch the popover's rounded corners
 
-    &::before {
-      right: 0;
-      border-width: ($popover-arrow-width / 2) 0 ($popover-arrow-width / 2) $popover-arrow-height;
-      border-left-color: $popover-arrow-outer-color;
-    }
-
     &::after {
+      content: '\25ba';
       right: $popover-border-width;
-      border-width: ($popover-arrow-width / 2) 0 ($popover-arrow-width / 2) $popover-arrow-height;
-      border-left-color: $popover-arrow-color;
     }
   }
 }
@@ -151,7 +123,6 @@
   @include font-size($font-size-base);
   color: $popover-header-color;
   background-color: $popover-header-bg;
-  border-bottom: $popover-border-width solid $popover-header-bg;
 
   &:empty {
     display: none;
