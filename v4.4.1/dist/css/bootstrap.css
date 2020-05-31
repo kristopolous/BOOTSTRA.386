@@ -6436,8 +6436,8 @@ a.close.disabled {
   padding: 0 8px;
   margin-bottom: 0;
   font-size: 16px;
-  color: #000000;
-  background-color: #bbbbbb;
+  color: #fff;
+  background-color: #aa00aa;
 }
 
 .popover-header:empty {
