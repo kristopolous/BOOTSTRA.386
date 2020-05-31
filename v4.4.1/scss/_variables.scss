@@ -896,8 +896,8 @@ $tooltip-padding-y:                 0 !default;
 $tooltip-padding-x:                 $space-width !default;
 $tooltip-margin:                    0 !default;
 
-$tooltip-arrow-width:               .8rem !default;
-$tooltip-arrow-height:              .4rem !default;
+$tooltip-arrow-width:               $space-width !default;
+$tooltip-arrow-height:              $line-height !default;
 $tooltip-arrow-color:               $tooltip-bg !default;
 
 // Form tooltips must come after regular tooltips
