@@ -200,6 +200,7 @@ $space-width:                 $font-size-base/2 !default;
 
 $spacer: $line-height $space-width !default;
 $spacers: () !default;
+
 // stylelint-disable-next-line scss/dollar-variable-default
 $spacers: map-merge(
   (
@@ -313,7 +314,6 @@ $border-radius-sm:            0 !default;
 $rounded-pill:                0 !default;
 
 $box-shadow-sm:               0 .125rem .25rem rgba($black, .075) !default;
-$box-shadow:                  0 .5rem 1rem rgba($black, .15) !default;
 $box-shadow-lg:               0 1rem 3rem rgba($black, .175) !default;
 
 $component-active-color:      $white !default;
@@ -399,7 +399,6 @@ $mark-padding:                0 !default;
 
 $dt-font-weight:              $font-weight-bold !default;
 
-$kbd-box-shadow:              inset 0 -.1rem 0 rgba($black, .25) !default;
 $nested-kbd-font-weight:      $font-weight-bold !default;
 
 $list-inline-padding:         0 !default;
