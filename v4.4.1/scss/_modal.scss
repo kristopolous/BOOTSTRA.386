@@ -145,18 +145,13 @@
   padding: $modal-header-padding;
   background: $magenta;
   color: $white;
+  @include plain-headers();
 
   .close {
     padding: $modal-header-padding;
     // auto on the left force icon to the right even when there is no .modal-title
     margin: (-$modal-header-padding-y) (-$modal-header-padding-x) (-$modal-header-padding-y) auto;
   }
-}
-
-// Title text within header
-.modal-title {
-  margin-bottom: 0;
-  line-height: $modal-title-line-height;
 }
 
 // Modal body

@@ -89,4 +89,15 @@
   box-shadow: 0;
 }
 
-
+@mixin plain-headers() {
+  h1, h2, h3, h4, h5, h6,
+  .h1, .h2, .h3, .h4, .h5, .h6 {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    &::after, &::before {
+      content: '';
+    }
+    animation: none;
+  }
+}
