@@ -12,9 +12,7 @@
 
 // Image thumbnails
 .img-thumbnail {
-  padding: $thumbnail-padding;
-  background-color: $thumbnail-bg;
-  border: $thumbnail-border-width solid $thumbnail-border-color;
+  padding: 0;
 
   // Keep them at most 100% wide
   @include img-fluid();
