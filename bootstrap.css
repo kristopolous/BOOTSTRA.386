@@ -5607,7 +5607,7 @@ a.badge-dark:focus, a.badge-dark.focus {
   display: -ms-flexbox;
   display: flex;
   height: 15px;
-  background-color: #555555;
+  background: url("fonts/shade-50-grayLight.svg") repeat-x left center;
 }
 
 .progress-bar {
