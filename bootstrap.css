@@ -452,12 +452,12 @@ h4, .h4 {
 
 h4::before, .h4::before {
   margin-right: 8px;
-  content: ">>>";
+  content: ">>";
 }
 
 h4::after, .h4::after {
   margin-left: 8px;
-  content: "<<<";
+  content: "<<";
 }
 
 h4, h5, h6,
@@ -4620,7 +4620,6 @@ input[type="button"].btn-block {
   display: inline-block;
   margin: 0;
   padding: 0 8px;
-  font-size: 16px;
   line-height: inherit;
   white-space: nowrap;
   color: #000084;
@@ -4668,7 +4667,6 @@ input[type="button"].btn-block {
 .navbar-toggler {
   padding: 0 0;
   font-size: 16px;
-  line-height: 1;
   background-color: transparent;
   border: 0 solid transparent;
 }
@@ -4905,6 +4903,7 @@ input[type="button"].btn-block {
 
 .navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
   color: #fff;
+  background: #000000;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -4913,6 +4912,7 @@ input[type="button"].btn-block {
 
 .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
   color: #fff;
+  background: #000000;
 }
 
 .navbar-light .navbar-nav .nav-link.disabled {
@@ -4929,7 +4929,6 @@ input[type="button"].btn-block {
 
 .navbar-light .navbar-toggler {
   color: #000000;
-  border-color: rgba(0, 0, 0, 0.1);
 }
 
 .navbar-light .navbar-text {
@@ -4951,6 +4950,7 @@ input[type="button"].btn-block {
 
 .navbar-dark .navbar-brand:hover, .navbar-dark .navbar-brand:focus {
   color: #fff;
+  background: #000000;
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -4958,7 +4958,8 @@ input[type="button"].btn-block {
 }
 
 .navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
-  color: #fff;
+  color: #bbbbbb;
+  background: #000000;
 }
 
 .navbar-dark .navbar-nav .nav-link.disabled {
@@ -5023,11 +5024,11 @@ input[type="button"].btn-block {
 }
 
 .card-title {
-  margin-bottom: 14px;
+  margin-bottom: 0;
 }
 
 .card-subtitle {
-  margin-top: -7px;
+  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -5044,10 +5045,10 @@ input[type="button"].btn-block {
 }
 
 .card-header {
-  padding: 14px 16px;
+  padding: 0 16px;
   margin-bottom: 0;
   color: #fff;
-  background-color: #555555;
+  background-color: #aa00aa;
 }
 
 .card-header + .list-group .list-group-item:first-child {
@@ -5055,8 +5056,8 @@ input[type="button"].btn-block {
 }
 
 .card-footer {
-  padding: 14px 16px;
-  background-color: #555555;
+  padding: 0 16px;
+  background-color: #aa00aa;
 }
 
 .card-header.text-muted, .card-footer.text-muted {
@@ -5065,7 +5066,7 @@ input[type="button"].btn-block {
 
 .card-header-tabs {
   margin-right: -8px;
-  margin-bottom: -14px;
+  margin-bottom: 0;
   margin-left: -8px;
   border-bottom: 0;
 }
@@ -5137,7 +5138,7 @@ input[type="button"].btn-block {
 }
 
 .card-columns .card {
-  margin-bottom: 14px;
+  margin-bottom: 0;
 }
 
 @media (min-width: 576px) {
