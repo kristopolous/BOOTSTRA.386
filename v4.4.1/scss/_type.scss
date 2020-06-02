@@ -29,11 +29,11 @@ h4, .h4 {
   color: $white;
   &::before {
     margin-right: $space-width;
-    content: ">>>";
+    content: ">>";
   }
   &::after {
     margin-left: $space-width;
-    content: "<<<";
+    content: "<<";
   }
 }
 

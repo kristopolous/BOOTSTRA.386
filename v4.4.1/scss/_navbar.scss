@@ -53,7 +53,6 @@
   display: inline-block;
   margin: 0;
   padding: 0 $space-width;
-  @include font-size($navbar-brand-font-size);
   line-height: inherit;
   white-space: nowrap;
   color: $blue;
@@ -118,7 +117,6 @@
 .navbar-toggler {
   padding: $navbar-toggler-padding-y $navbar-toggler-padding-x;
   @include font-size($navbar-toggler-font-size);
-  line-height: 1;
   background-color: transparent; // remove default button style
   border: $border-width solid transparent; // remove default button style
 
@@ -225,6 +223,7 @@
 
     @include hover-focus() {
       color: $navbar-light-brand-hover-color;
+      background: $black;
     }
   }
 
@@ -234,6 +233,7 @@
 
       @include hover-focus() {
         color: $navbar-light-hover-color;
+        background: $black;
       }
 
       &.disabled {
@@ -252,7 +252,6 @@
 
   .navbar-toggler {
     color: $navbar-light-color;
-    border-color: $navbar-light-toggler-border-color;
   }
 
   .navbar-toggler-icon {
@@ -278,6 +277,7 @@
 
     @include hover-focus() {
       color: $navbar-dark-brand-hover-color;
+      background: $black;
     }
   }
 
@@ -287,6 +287,7 @@
 
       @include hover-focus() {
         color: $navbar-dark-hover-color;
+        background: $black;
       }
 
       &.disabled {

@@ -37,6 +37,12 @@
   left: $space-width;
 }
 
+@mixin dos-border-solid($color: $white) {
+  border: $line-height solid $color;
+  border-left-width: $space-width;
+  border-right-width: $space-width;
+}
+
 @mixin dos-border-background($color: $grayLight) {
   // Here's essentially the problem. Given the above calculations we want
   // the margin to be the border.

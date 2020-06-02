@@ -4,12 +4,6 @@
   @include bg-variant(".bg-#{$color}", $value, true);
 }
 
-@if $enable-gradients {
-  @each $color, $value in $theme-colors {
-    @include bg-gradient-variant(".bg-gradient-#{$color}", $value);
-  }
-}
-
 .bg-white {
   // $white breaks things
   background-color: $grayLight !important;
