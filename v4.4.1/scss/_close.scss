@@ -18,7 +18,7 @@
 
 // stylelint-disable-next-line selector-no-qualifying-type
 button.close {
-  padding: 0;
+  padding: 0 0 0 $space-width;
   background-color: transparent;
   border: 0;
   appearance: none;

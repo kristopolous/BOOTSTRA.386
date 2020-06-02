@@ -674,7 +674,7 @@ mark,
   color: #bbbbbb;
 }
 
-.nav-link img, .dropdown-list img {
+.card img, .nav-link img, .dropdown-list img {
   display: none;
 }
 
@@ -5952,7 +5952,7 @@ a.badge-dark:focus, a.badge-dark.focus {
 }
 
 button.close {
-  padding: 0;
+  padding: 0 0 0 8px;
   background-color: transparent;
   border: 0;
   -webkit-appearance: none;
