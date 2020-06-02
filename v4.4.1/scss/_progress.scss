@@ -2,7 +2,7 @@
 .progress {
   display: flex;
   height: $progress-height;
-  background-color: $progress-bg;
+  background: url("fonts/shade-50-grayLight.svg") repeat-x left center;
 }
 
 .progress-bar {
