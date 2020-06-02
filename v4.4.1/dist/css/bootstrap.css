@@ -4293,6 +4293,17 @@ input[type="button"].btn-block {
   margin-bottom: 0;
 }
 
+.custom-file + .input-group-append > .input-group-text {
+  padding: 0 8px;
+  background: #aa00aa;
+  cursor: pointer;
+}
+
+.custom-file + .input-group-append > .input-group-text:hover {
+  background: #000000;
+  color: #f5f;
+}
+
 .custom-file-input {
   position: relative;
   z-index: 2;
@@ -4336,7 +4347,7 @@ input[type="button"].btn-block {
 
 .custom-file-label::after {
   position: absolute;
-  padding: 0 8px;
+  padding: 0;
   top: 0;
   right: 0;
   bottom: 0;

@@ -261,6 +261,15 @@
   width: 100%;
   height: $custom-file-height;
   margin-bottom: 0;
+  + .input-group-append > .input-group-text {
+    padding: 0 $space-width;
+    background: $magenta;
+    cursor: pointer;
+    @include hover() {
+      background: $black;
+      color: $magentaBright;
+    }
+  }
 }
 
 .custom-file-input {
@@ -309,7 +318,7 @@
 
   &::after {
     position: absolute;
-    padding: 0 $space-width;
+    padding: 0;
     top: 0;
     right: 0;
     bottom: 0;
