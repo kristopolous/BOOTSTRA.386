@@ -306,21 +306,17 @@
   line-height: $custom-file-line-height;
   color: $custom-file-color;
   background-color: $custom-file-bg;
-  border: $custom-file-border-width solid $custom-file-border-color;
 
   &::after {
     position: absolute;
+    padding: 0 $space-width;
     top: 0;
     right: 0;
     bottom: 0;
     z-index: 3;
     display: block;
-    height: $custom-file-height-inner;
-    padding: $custom-file-padding-y $custom-file-padding-x;
-    line-height: $custom-file-line-height;
-    color: $custom-file-button-color;
-    content: "Browse";
-    border-left: inherit;
+    background: $grayLight;
+    color: $black;
   }
 }
 

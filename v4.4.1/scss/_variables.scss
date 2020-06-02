@@ -654,15 +654,6 @@ $custom-select-font-size-lg:        $input-font-size-lg !default;
 $custom-select-height-lg:           $input-height-lg !default;
 
 
-
-
-
-
-
-
-
-
-
 $custom-range-track-width:          100% !default;
 $custom-range-track-height:         $line-height !default;
 $custom-range-track-cursor:         pointer !default;
@@ -699,7 +690,7 @@ $custom-file-box-shadow:            0 !default;
 $custom-file-button-color:          $custom-file-color !default;
 $custom-file-button-bg:             $input-group-addon-bg !default;
 $custom-file-text: (
-  en: "Browse"
+  en: "[ Browse ]"
 ) !default;
 
 
@@ -875,13 +866,11 @@ $card-height:                       null !default;
 $card-color:                        $black !default;
 $card-bg:                           $grayLight !default;
 
-$card-img-overlay-padding:          1.25rem !default;
-
 $card-group-margin:                 $grid-gutter-width / 2 !default;
 $card-deck-margin:                  $card-group-margin !default;
 
 $card-columns-count:                3 !default;
-$card-columns-gap:                  1.25rem !default;
+$card-columns-gap:                  $space-width !default;
 $card-columns-margin:               $card-spacer-y !default;
 
 
