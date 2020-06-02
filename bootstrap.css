@@ -700,7 +700,7 @@ kbd kbd {
 
 pre {
   display: block;
-  color: #bbbbbb;
+  color: #000000;
 }
 
 pre code {
@@ -4601,7 +4601,7 @@ input[type="button"].btn-block {
   align-items: center;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 0 8px;
+  padding: 0;
 }
 
 .navbar .container,
@@ -4618,7 +4618,8 @@ input[type="button"].btn-block {
 
 .navbar-brand {
   display: inline-block;
-  margin-right: 8px;
+  margin: 0;
+  padding: 0 8px;
   font-size: 16px;
   line-height: inherit;
   white-space: nowrap;
@@ -6153,14 +6154,24 @@ a.close.disabled {
   color: #fff;
 }
 
+.modal-header h1, .modal-header h2, .modal-header h3, .modal-header h4, .modal-header h5, .modal-header h6,
+.modal-header .h1, .modal-header .h2, .modal-header .h3, .modal-header .h4, .modal-header .h5, .modal-header .h6 {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  -webkit-animation: none;
+  animation: none;
+}
+
+.modal-header h1::after, .modal-header h1::before, .modal-header h2::after, .modal-header h2::before, .modal-header h3::after, .modal-header h3::before, .modal-header h4::after, .modal-header h4::before, .modal-header h5::after, .modal-header h5::before, .modal-header h6::after, .modal-header h6::before,
+.modal-header .h1::after,
+.modal-header .h1::before, .modal-header .h2::after, .modal-header .h2::before, .modal-header .h3::after, .modal-header .h3::before, .modal-header .h4::after, .modal-header .h4::before, .modal-header .h5::after, .modal-header .h5::before, .modal-header .h6::after, .modal-header .h6::before {
+  content: '';
+}
+
 .modal-header .close {
   padding: 0 8px;
   margin: 0 -8px 0 auto;
-}
-
-.modal-title {
-  margin-bottom: 0;
-  line-height: 14px;
 }
 
 .modal-body {
