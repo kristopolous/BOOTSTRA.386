@@ -35,3 +35,8 @@
 .figure-caption {
   color: $figure-caption-color;
 }
+
+// most places images should be bannded
+.nav-link img, .dropdown-list img {
+  display: none;
+}

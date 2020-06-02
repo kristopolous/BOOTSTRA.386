@@ -11,7 +11,8 @@
 }
 
 .bg-white {
-  background-color: $white !important;
+  // $white breaks things
+  background-color: $grayLight !important;
 }
 
 .bg-transparent {

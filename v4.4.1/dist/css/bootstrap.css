@@ -674,6 +674,10 @@ mark,
   color: #bbbbbb;
 }
 
+.nav-link img, .dropdown-list img {
+  display: none;
+}
+
 code {
   color: #f5f;
   word-wrap: break-word;
@@ -5001,6 +5005,7 @@ input[type="button"].btn-block {
   word-wrap: break-word;
   background-color: #bbbbbb;
   background-clip: border-box;
+  border-radius: 0;
 }
 
 .card > hr {
@@ -6780,50 +6785,30 @@ button.bg-dark:focus {
 }
 
 .bg-white {
-  background-color: #fff !important;
+  background-color: #bbbbbb !important;
 }
 
 .bg-transparent {
   background-color: transparent !important;
 }
 
-.border {
-  border: 0 solid #555555 !important;
-}
-
-.border-top {
-  border-top: 0 solid #555555 !important;
-}
-
-.border-right {
-  border-right: 0 solid #555555 !important;
-}
-
-.border-bottom {
-  border-bottom: 0 solid #555555 !important;
-}
-
-.border-left {
-  border-left: 0 solid #555555 !important;
-}
-
-.border-0 {
+.border, .border-0 {
   border: 0 !important;
 }
 
-.border-top-0 {
+.border-top, .border-top-0 {
   border-top: 0 !important;
 }
 
-.border-right-0 {
+.border-right, .border-right-0 {
   border-right: 0 !important;
 }
 
-.border-bottom-0 {
+.border-bottom, .border-bottom-0 {
   border-bottom: 0 !important;
 }
 
-.border-left-0 {
+.border-left, .border-left-0 {
   border-left: 0 !important;
 }
 
@@ -6859,8 +6844,8 @@ button.bg-dark:focus {
   border-color: #000000 !important;
 }
 
-.border-white {
-  border-color: #fff !important;
+.rounded {
+  border-radius: 0 !important;
 }
 
 .clearfix::after {
