@@ -23,7 +23,7 @@ h2, .h2 {
 }
 h3, .h3 {
   color: $white;
-  @include dos-border-single($white);
+  @include dos-border-single($white, $character-space: 1);
 }
 h4, .h4 {
   color: $white;

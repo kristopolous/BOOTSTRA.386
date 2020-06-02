@@ -441,8 +441,8 @@ h3, .h3 {
   border-left-width: 2px;
   border-right-width: 2px;
   margin-left: 3.5px;
-  padding-left: 2.5px;
-  padding-right: 3.5px;
+  padding-left: 10.5px;
+  padding-right: 11.5px;
   margin-right: 2.5px;
 }
 
@@ -706,7 +706,7 @@ pre code {
 }
 
 .pre-scrollable {
-  max-height: 340px;
+  max-height: 375px;
   overflow-y: scroll;
 }
 
@@ -5258,8 +5258,6 @@ input[type="button"].btn-block {
 .badge {
   display: inline-block;
   padding: 0 8px;
-  font-weight: 400;
-  line-height: 1;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
@@ -5693,7 +5691,6 @@ a.badge-dark:focus, a.badge-dark.focus {
   display: block;
   padding: 15px 8px;
   background-color: transparent;
-  border: 0 solid rgba(0, 0, 0, 0.125);
 }
 
 .list-group-item.disabled, .list-group-item:disabled {
@@ -10002,26 +9999,6 @@ button.bg-dark:focus {
 
 .text-capitalize {
   text-transform: capitalize !important;
-}
-
-.font-weight-light {
-  font-weight: 400 !important;
-}
-
-.font-weight-lighter {
-  font-weight: 400 !important;
-}
-
-.font-weight-normal {
-  font-weight: 400 !important;
-}
-
-.font-weight-bold {
-  font-weight: 400 !important;
-}
-
-.font-weight-bolder {
-  font-weight: 400 !important;
 }
 
 .font-italic {

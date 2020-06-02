@@ -993,7 +993,6 @@ $progress-bar-bg:                   yellow !default;
 
 $list-group-color:                  null !default;
 $list-group-bg:                     transparent !default;
-$list-group-border-color:           rgba($black, .125) !default;
 $list-group-border-width:           $border-width !default;
 $list-group-border-radius:          $border-radius !default;
 
@@ -1081,7 +1080,7 @@ $kbd-color:                         $white !default;
 $kbd-bg:                            $gray-900 !default;
 
 $pre-color:                         $gray-900 !default;
-$pre-scrollable-max-height:         340px !default;
+$pre-scrollable-max-height:         25 * $line-height !default;
 
 
 // Utilities
