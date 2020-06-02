@@ -698,11 +698,6 @@ kbd kbd {
   font-weight: 400;
 }
 
-pre {
-  display: block;
-  color: #bbbbbb;
-}
-
 pre code {
   font-size: 16px;
   color: inherit;
