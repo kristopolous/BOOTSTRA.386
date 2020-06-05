@@ -9,7 +9,8 @@ rm -r $build
 mkdir -p $build/css/fonts $build/js
 ./update-icons.sh $build/css/fonts
 cp -puv v4.4.1/site/docs/4.4/dist/css/fonts/* $build/css/fonts
-cp -puv v4.4.1/site/docs/4.4/demo.html v4.4.1/dist/{css/bootstrap.css,js/bootstrap.bundle.js} $build
+cp -puv v4.4.1/dist/css/bootstrap.css $build/css
+cp -puv v4.4.1/dist/js/bootstrap.bundle.js $build/js
 zip -r bootstra.386-latest-v4.zip build
 
 # Let's hope this doesn't break the planet ... all I need
