@@ -119,13 +119,6 @@ fieldset:disabled a.btn {
 }
 
 
-//
-// Button Sizes
-//
-.btn-lg {
-  //@include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
-}
-
 // instead of btn-sm just being btn with less padding, we do a completely separate style
 // to get it into a single line
 .btn-sm {
