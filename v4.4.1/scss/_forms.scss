@@ -50,8 +50,8 @@
     // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
     opacity: 1;
     background: 
-     url('#${fp}left-brace-grayLight.svg') no-repeat left bottom, 
-     url('#${fp}right-brace-grayLight.svg') no-repeat right bottom,
+     url('#{$fp}left-brace-grayLight.svg') no-repeat left bottom, 
+     url('#{$fp}right-brace-grayLight.svg') no-repeat right bottom,
      $input-disabled-bg;
   }
 }
@@ -125,8 +125,8 @@ select.form-control {
   border: 0;
 
   background: 
-   url('#${fp}left-brace-grayLight.svg') no-repeat left bottom, 
-   url('#${fp}right-brace-grayLight.svg') no-repeat right bottom;
+   url('#{$fp}left-brace-grayLight.svg') no-repeat left bottom, 
+   url('#{$fp}right-brace-grayLight.svg') no-repeat right bottom;
 }
 
 
@@ -166,8 +166,8 @@ textarea.form-control {
 }
 input.form-control {
   background: 
-   url('#${fp}left-brace-black.svg') no-repeat left bottom, 
-   url('#${fp}right-brace-black.svg') no-repeat right bottom,
+   url('#{$fp}left-brace-black.svg') no-repeat left bottom, 
+   url('#{$fp}right-brace-black.svg') no-repeat right bottom,
    $grayLight;
 
   color: $black;
