@@ -26,6 +26,8 @@ $gray-700: $grayLight !default;
 $gray-800: $grayLight !default;
 $gray-900: $grayLight !default;
 
+$fp: '../fonts/';
+
 $grays: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $grays: map-merge(

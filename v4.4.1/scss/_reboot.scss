@@ -11,7 +11,7 @@
 @font-face {
   font-family: 'DOS';
 
-  src: url('fonts/Px437_IBM_EGA8.otf') format('opentype'), url('fonts/Px437_IBM_EGA8.woff') format('woff');
+  src: url("#${fp}Px437_IBM_EGA8.otf") format('opentype');
 
   font-weight: normal;
   font-style: normal;

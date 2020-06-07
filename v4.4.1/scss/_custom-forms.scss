@@ -196,7 +196,7 @@
   vertical-align: middle;
 
   background: 
-     url('fonts/arrow-down-black.svg') no-repeat right center,
+     url('#${fp}arrow-down-black.svg') no-repeat right center,
      $grayLight;
 
   border: $custom-select-border-width solid $custom-select-border-color;
@@ -374,7 +374,7 @@
     color: transparent; // Why?
     cursor: $custom-range-track-cursor;
     background: 
-      url("fonts/hyphen-black.svg") repeat-x left center,
+      url("#${fp}hyphen-black.svg") repeat-x left center,
       $grayLight;
 
     border-color: transparent;
@@ -398,7 +398,7 @@
     color: transparent;
     cursor: $custom-range-track-cursor;
     background: 
-      url("fonts/hyphen-black.svg") repeat-x left center,
+      url("#${fp}hyphen-black.svg") repeat-x left center,
       $grayLight;
     border-color: transparent; // Firefox specific?
   }

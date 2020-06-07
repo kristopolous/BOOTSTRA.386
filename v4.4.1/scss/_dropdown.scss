@@ -8,7 +8,6 @@
 
 .dropdown-toggle {
   white-space: nowrap;
-
   @include caret();
 }
 
@@ -86,7 +85,7 @@
   }
 
   .dropdown-toggle {
-    background: url('fonts/arrow-down.svg') 3px 3.6px / 4.87px no-repeat
+    background: url('#${fp}arrow-down.svg') 3px 3.6px / 4.87px no-repeat
     &::after {
       vertical-align: 0;
     }
