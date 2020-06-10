@@ -4,7 +4,22 @@ window._386 = window._386 || {};
   var character = { height: 16, width: 8 },
       keyspace = 'hgdlaoybSru6x2vHsFvhoQ386';
 
-  function centerNudger() {
+  _386.magicCursor = function() {
+    if(!document.querySelector('.bootstra-cursor')) {
+      let b = document.body;
+      let d = b.appendChild(document.createElement('div'));
+
+      b.classList.add('bootstra-enable-cursor');
+      d.className = 'bootstra-cursor';
+
+      b.onmousemove = function(e) {
+        d.style.left = Math.round( (e.pageX - character.width / 2) / character.width) * character.width + 'px';
+        d.style.top = Math.round( (e.pageY - character.height / 2) / character.height) * character.height + 'px';
+      }
+    }
+  }
+
+  _386.centerNudger = function() {
     // this is likely inefficient - oh well.
     Array.from(document.querySelectorAll('*')).map(
       l => [Window.getComputedStyle(l), l]
