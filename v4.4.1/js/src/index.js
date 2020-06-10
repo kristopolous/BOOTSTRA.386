@@ -9,6 +9,7 @@ import Scrollspy from './scrollspy'
 import Tab from './tab'
 import Toast from './toast'
 import Tooltip from './tooltip'
+import _386 from './dos'
 import Util from './util'
 
 /**
@@ -26,6 +27,7 @@ export {
   Collapse,
   Dropdown,
   Modal,
+  _386,
   Popover,
   Scrollspy,
   Tab,

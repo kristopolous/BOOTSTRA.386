@@ -5,9 +5,10 @@
   pointer-events: none;
   width: $space-width;
   height: $line-height;
+  z-index: 20000;
 }
 
 body.bootstra-enable-cursor,
 .bootstra-enable-cursor * {
-  cursor: none;
+  cursor: none !important;
 }

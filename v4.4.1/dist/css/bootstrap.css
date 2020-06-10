@@ -6692,6 +6692,21 @@ a.close.disabled {
   height: 1rem;
 }
 
+.bootstra-cursor {
+  mix-blend-mode: difference;
+  position: absolute;
+  background-color: #cbd448;
+  pointer-events: none;
+  width: 8px;
+  height: 14px;
+  z-index: 20000;
+}
+
+body.bootstra-enable-cursor,
+.bootstra-enable-cursor * {
+  cursor: none !important;
+}
+
 .align-baseline {
   vertical-align: baseline !important;
 }
