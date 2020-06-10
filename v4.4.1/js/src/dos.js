@@ -1,4 +1,4 @@
-window._386 = window._386 || {};
+window._386 = window._386 || {options: {}};
 
 const height = 16;
 var character = { height: height, width: 8 },
@@ -17,6 +17,23 @@ _386.magicCursor = function() {
       d.style.left = Math.floor( e.pageX / character.width) * character.width + 'px';
       d.style.top = Math.floor(e.pageY  / h) * h + 'px';
     }
+  }
+}
+
+_386.scrollLock = function () {
+  function ev(e) {
+    document.body.style.paddingTop = _386.scrollLock.paddingStart + -(e.pageY % height) + "px";
+  }
+
+  if(_386.scrollLock.listener) {
+    window.removeEventListener(_386.scrollLock.listener);
+    _386.scrollLock.listener = false;
+  } else {
+    if(!('paddingStart' in _386.scrollLock)) {
+      _386.scrollLock.paddingStart = parseInt(document.body.style.paddingTop, 10) || 0;
+    }
+    window.addEventListener('scroll', ev, true);
+    _386.scrollLock.listener = ev;
   }
 }
 
