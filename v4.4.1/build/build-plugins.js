@@ -30,6 +30,7 @@ const bsPlugins = {
   Button: path.resolve(__dirname, '../js/src/button.js'),
   Carousel: path.resolve(__dirname, '../js/src/carousel.js'),
   Collapse: path.resolve(__dirname, '../js/src/collapse.js'),
+  Dos: path.resolve(__dirname, '../js/src/dos.js'),
   Dropdown: path.resolve(__dirname, '../js/src/dropdown.js'),
   Modal: path.resolve(__dirname, '../js/src/modal.js'),
   Popover: path.resolve(__dirname, '../js/src/popover.js'),
