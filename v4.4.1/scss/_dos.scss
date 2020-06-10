@@ -1,0 +1,13 @@
+.bootstra-cursor {
+  mix-blend-mode: difference;
+  position: absolute;
+  background-color: #cbd448;
+  pointer-events: none;
+  width: $space-width;
+  height: $line-height;
+}
+
+body.bootstra-enable-cursor,
+.bootstra-enable-cursor * {
+  cursor: none;
+}
