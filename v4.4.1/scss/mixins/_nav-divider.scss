@@ -4,7 +4,7 @@
 
 @mixin nav-divider($color: $nav-divider-color, $margin-y: $nav-divider-margin-y, $ignore-warning: false) {
   height: 0;
-  margin: $margin-y (-6/16 * $space-width) $margin-y (-5/16 * $space-width);
+  margin: (6/16 * $line-height) (-6/16 * $space-width) (7/16 * $line-height) (-5/16 * $space-width);
   overflow: hidden;
   border-top: 1px solid $color;
 }
