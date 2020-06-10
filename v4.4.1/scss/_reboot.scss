@@ -346,10 +346,12 @@ optgroup,
 textarea {
   margin: 0; // Remove the margin in Firefox and Safari
   font: 400 $font-size-base 'DOS' !important;
-  line-height: inherit;
+  line-height: $line-height;
 }
 option {
   padding: 0;
+  min-height: 0;
+  line-height: $line-height;
 }
 
 button,
