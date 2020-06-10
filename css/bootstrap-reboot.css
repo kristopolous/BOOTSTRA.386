@@ -252,11 +252,13 @@ optgroup,
 textarea {
   margin: 0;
   font: 400 16px "DOS" !important;
-  line-height: inherit;
+  line-height: 14px;
 }
 
 option {
   padding: 0;
+  min-height: 0;
+  line-height: 14px;
 }
 
 button,
