@@ -2209,7 +2209,7 @@ input.form-control {
 }
 
 .form-group {
-  margin-bottom: 14px;
+  margin-bottom: 0;
 }
 
 .form-text {
