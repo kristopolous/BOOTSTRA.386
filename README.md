@@ -84,6 +84,8 @@ While you're here, let me plug another fun project I have. This one includes a 1
 
 Let's make software fun again, remember those days? Oh you're too young? Well trust me, it used to be a blast! Let's do *that* again, it was a good time.
 
+Also you can give me money, as little as $1/month ... Click on that heart sponsor thing at the top ... I'm a sponsorer as well!
+
 ### Bugs and Stuff
 
 Check out the [contribution](https://github.com/kristopolous/BOOTSTRA.386/blob/master/CONTRIBUTING.md) doc - it's easy, I swear.
