@@ -446,6 +446,8 @@ h3, .h3 {
   padding-left: 10.5px;
   padding-right: 11.5px;
   margin-right: 2.5px;
+  display: inline-block;
+  width: calc(100% - 6px);
 }
 
 h4, .h4 {
@@ -5019,7 +5021,7 @@ input[type="button"].btn-block {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   min-height: 1px;
-  padding: 16px;
+  padding: 14px 16px;
   color: #000000;
 }
 
@@ -5065,15 +5067,15 @@ input[type="button"].btn-block {
 }
 
 .card-header-tabs {
-  margin-right: -8px;
+  margin-right: -16px;
   margin-bottom: 0;
-  margin-left: -8px;
+  margin-left: -16px;
   border-bottom: 0;
 }
 
 .card-header-pills {
-  margin-right: -8px;
-  margin-left: -8px;
+  margin-right: -16px;
+  margin-left: -16px;
 }
 
 .card-img-overlay {
@@ -5491,6 +5493,8 @@ a.badge-dark:focus, a.badge-dark.focus {
   padding-right: 11.5px;
   margin-right: 2.5px;
   box-shadow: -3.5px -7px 0 0 #bbbbbb, 2.5px 6.125px 0 0 #bbbbbb, -3.5px 6.125px 0 0 #bbbbbb, 2.5px -7px 0 0 #bbbbbb;
+  display: inline-block;
+  width: calc(100% - 6px);
 }
 
 .jumbotron .display-4 {
@@ -5673,6 +5677,8 @@ a.badge-dark:focus, a.badge-dark.focus {
   padding-left: 2.5px;
   padding-right: 3.5px;
   margin-right: 2.5px;
+  display: inline-block;
+  width: calc(100% - 6px);
 }
 
 .list-group-item-action {
