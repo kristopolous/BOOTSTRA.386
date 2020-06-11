@@ -4360,7 +4360,7 @@ input[type="button"].btn-block {
 
 .custom-range {
   width: 100%;
-  height: 14px;
+  height: 7px;
   padding: 0;
   background-color: transparent;
   -webkit-appearance: none;
@@ -4392,7 +4392,7 @@ input[type="button"].btn-block {
   width: 8px;
   height: 14px;
   background: #000000;
-  margin-top: 0;
+  margin: 0;
   border: 0;
   -webkit-appearance: none;
   appearance: none;
@@ -4402,15 +4402,18 @@ input[type="button"].btn-block {
   width: 100%;
   height: 14px;
   color: transparent;
-  cursor: pointer;
+  cursor: none;
+  margin: 0;
   background: url("../fonts/hyphen-black.svg") repeat-x left center, #bbbbbb;
   border-color: transparent;
 }
 
 .custom-range::-moz-range-thumb {
   width: 8px;
-  height: 14px;
+  height: 11px;
   border: 0;
+  margin: 0;
+  padding: 0;
   background: #000000;
   border-radius: 0;
   -moz-appearance: none;
@@ -4421,7 +4424,7 @@ input[type="button"].btn-block {
   width: 100%;
   height: 14px;
   color: transparent;
-  cursor: pointer;
+  cursor: none;
   background: url("../fonts/hyphen-black.svg") repeat-x left center, #bbbbbb;
   border-color: transparent;
 }
@@ -4440,7 +4443,7 @@ input[type="button"].btn-block {
   width: 100%;
   height: 14px;
   color: transparent;
-  cursor: pointer;
+  cursor: none;
   background-color: transparent;
   border-color: transparent;
   border-width: 7px;

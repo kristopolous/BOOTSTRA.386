@@ -337,7 +337,9 @@
 
 .custom-range {
   width: 100%;
-  height: $line-height;
+  // I don't know why we need to have line-height / 2 but apparently if we don't
+  // there's some mystery spacing that is getting added.
+  height: $line-height / 2;
   padding: 0; // Need to reset padding
   background-color: transparent;
   appearance: none;
@@ -360,12 +362,9 @@
     width: $custom-range-thumb-width;
     height: $custom-range-thumb-height;
     background: $custom-range-thumb-active-bg;
-    margin-top: 0;
+    margin: 0;
     border: 0;
     appearance: none;
-
-    &:active {
-    }
   }
 
   &::-webkit-slider-runnable-track {
@@ -373,6 +372,7 @@
     height: $custom-range-track-height;
     color: transparent; // Why?
     cursor: $custom-range-track-cursor;
+    margin: 0;
     background: 
       url("#{$fp}hyphen-black.svg") repeat-x left center,
       $grayLight;
@@ -382,8 +382,10 @@
 
   &::-moz-range-thumb {
     width: $custom-range-thumb-width;
-    height: $custom-range-thumb-height;
-    border: $custom-range-thumb-border;
+    height: $custom-range-thumb-height - 3;
+    border: 0;
+    margin: 0;
+    padding: 0;
     background: $custom-range-thumb-active-bg;
     border-radius: 0; // moz specific
     appearance: none;
