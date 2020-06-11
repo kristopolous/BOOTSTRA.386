@@ -4,6 +4,7 @@
   color: $jumbotron-color;
   background-color: $jumbotron-bg;
   @include dos-solid-border($grayLight, 1);
+  @include dos-uncollapse-margin();
 
   // this is a crazy hack ... hopefully people will enjoy it.
   .display-4 {

@@ -27,7 +27,7 @@
   // Workaround for the image size bug in IE
   // See: https://github.com/twbs/bootstrap/pull/28855
   min-height: 1px;
-  padding: $card-spacer-x;
+  padding: $card-body-spacer-y $card-spacer-x;
   color: $card-color;
 }
 
@@ -36,7 +36,7 @@
 }
 
 .card-subtitle {
-  margin-top: -$card-spacer-y / 2;
+  margin-top: -$card-spacer-y;
   margin-bottom: 0;
 }
 
@@ -88,15 +88,15 @@
 //
 
 .card-header-tabs {
-  margin-right: -$card-spacer-x / 2;
+  margin-right: -$card-spacer-x;
   margin-bottom: -$card-spacer-y;
-  margin-left: -$card-spacer-x / 2;
+  margin-left: -$card-spacer-x;
   border-bottom: 0;
 }
 
 .card-header-pills {
-  margin-right: -$card-spacer-x / 2;
-  margin-left: -$card-spacer-x / 2;
+  margin-right: -$card-spacer-x;
+  margin-left: -$card-spacer-x;
 }
 
 // Card image

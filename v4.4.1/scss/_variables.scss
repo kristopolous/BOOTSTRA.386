@@ -859,6 +859,7 @@ $jumbotron-bg:                      $grayLight !default;
 // Cards
 
 $card-spacer-y:                     0 !default;
+$card-body-spacer-y:                $line-height !default;
 $card-spacer-x:                     ($space-width * 2) !default;
 $card-cap-bg:                       $magenta !default;
 $card-cap-color:                    $white !default;

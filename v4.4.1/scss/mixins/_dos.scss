@@ -23,6 +23,11 @@
   margin-right:   5/16 * $space-width;
 }
 
+@mixin dos-uncollapse-margin($width: $space-width - 2) {
+  display: inline-block;
+  width: calc(100% - #{$width} );
+}
+
 @mixin dos-shadow($color: black) {
   filter: drop-shadow($line-height / 2 $space-width 0 $color);
   margin-right: (1 + 5/16) * $space-width;
