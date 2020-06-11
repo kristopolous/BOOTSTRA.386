@@ -6,7 +6,8 @@
 
 h1, h2,
 .h1, .h2  {
-  margin-bottom: $headings-margin-bottom;
+  margin-bottom: 0;
+  margin-top: $line-height;
   font-family: $headings-font-family;
   font-weight: $headings-font-weight;
   line-height: $headings-line-height;
@@ -20,6 +21,7 @@ h1, h2,
 }
 h2, .h2 {
   padding: 0 $space-width;
+
 }
 h3, .h3 {
   color: $white;

@@ -142,7 +142,7 @@ fieldset:disabled a.btn {
 
 .btn-block {
   display: block;
-  width: 100%;
+  width: calc(100% - #{$space-width - 2});
 
   // Vertically space out multiple block buttons
   + .btn-block {
@@ -155,6 +155,6 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"] {
   &.btn-block {
-    width: 100%;
+    width: calc(100% - #{$space-width - 2});
   }
 }

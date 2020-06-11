@@ -415,7 +415,8 @@ template {
 
 h1, h2,
 .h1, .h2 {
-  margin-bottom: 14px;
+  margin-bottom: 0;
+  margin-top: 14px;
   font-weight: 400;
   line-height: 14px;
   text-indent: 8px;
@@ -3595,7 +3596,7 @@ fieldset:disabled a.btn {
 
 .btn-block {
   display: block;
-  width: 100%;
+  width: calc(100% - 6px);
 }
 
 .btn-block + .btn-block {
@@ -3605,7 +3606,7 @@ fieldset:disabled a.btn {
 input[type="submit"].btn-block,
 input[type="reset"].btn-block,
 input[type="button"].btn-block {
-  width: 100%;
+  width: calc(100% - 6px);
 }
 
 .dropup,
