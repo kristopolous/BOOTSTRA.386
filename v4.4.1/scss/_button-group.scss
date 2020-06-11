@@ -6,7 +6,6 @@
   position: relative;
   margin: 0;
   display: inline-flex;
-  vertical-align: middle; // match .btn alignment given font-size hack above
 
   > .btn {
     position: relative;
@@ -54,8 +53,8 @@
 //
 
 .dropdown-toggle-split {
-  padding-right: $btn-padding-x * .75;
-  padding-left: $btn-padding-x * .75;
+  padding-right: $btn-padding-x;
+  padding-left: $btn-padding-x;
 
   &::after,
   .dropup &::after,
@@ -69,13 +68,13 @@
 }
 
 .btn-sm + .dropdown-toggle-split {
-  padding-right: $btn-padding-x-sm * .75;
-  padding-left: $btn-padding-x-sm * .75;
+  padding-right: $btn-padding-x-sm;
+  padding-left: $btn-padding-x-sm;
 }
 
 .btn-lg + .dropdown-toggle-split {
-  padding-right: $btn-padding-x-lg * .75;
-  padding-left: $btn-padding-x-lg * .75;
+  padding-right: $btn-padding-x-lg;
+  padding-left: $btn-padding-x-lg;
 }
 
 
@@ -101,11 +100,6 @@
   > .btn,
   > .btn-group {
     width: 100%;
-  }
-
-  > .btn:not(:first-child),
-  > .btn-group:not(:first-child) {
-    margin-top: -$btn-border-width;
   }
 
 }
