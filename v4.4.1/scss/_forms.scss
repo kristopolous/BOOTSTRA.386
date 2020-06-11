@@ -60,6 +60,7 @@ select.form-control {
   background: $grayLight;
   @include dos-border-single($black);
   @include dos-border-background($grayLight);
+  width: calc(100% - #{$space-width - 2} );
   color: $black;
   height: $line-height * 2;
   &:focus::-ms-value {
@@ -162,6 +163,7 @@ select.form-control {
 
 textarea.form-control {
   height: auto;
+  width: calc(100% - #{$space-width - 2} );
   @include dos-border-single();
   @include dos-border-background-inset();
 }

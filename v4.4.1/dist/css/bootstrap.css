@@ -2125,6 +2125,7 @@ select.form-control {
   padding-right: 3.5px;
   margin-right: 2.5px;
   box-shadow: -3.5px -7px 0 0 #bbbbbb, 2.5px 6.125px 0 0 #bbbbbb, -3.5px 6.125px 0 0 #bbbbbb, 2.5px -7px 0 0 #bbbbbb;
+  width: calc(100% - 6px);
   color: #000000;
   height: 28px;
 }
@@ -2194,6 +2195,7 @@ select.form-control[size], select.form-control[multiple] {
 
 textarea.form-control {
   height: auto;
+  width: calc(100% - 6px);
   border: 0.875px solid #000000;
   margin-top: 7px;
   padding-top: 6.125px;
