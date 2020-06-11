@@ -61,6 +61,7 @@ select.form-control {
   @include dos-border-single($black);
   @include dos-border-background($grayLight);
   color: $black;
+  height: $line-height * 2;
   &:focus::-ms-value {
     // Suppress the nested default white text on blue background highlight given to
     // the selected option text when the (still closed) <select> receives focus
