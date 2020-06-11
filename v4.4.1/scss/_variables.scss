@@ -209,7 +209,10 @@ $spacers: map-merge(
     0: 0,
     1: 1,
     2: 2,
-    3: 3
+    3: 3,
+    4: 4,
+    5: 5,
+    6: 6
   ),
   $spacers
 );
@@ -264,10 +267,10 @@ $paragraph-margin-bottom: $line-height !default;
 
 $grid-breakpoints: (
   xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px
+  sm: 12 * 6 * $space-width, 
+  md: 12 * 8 * $space-width,
+  lg: 12 * 10 * $space-width,
+  xl: 12 * 12 * $space-width,
 ) !default;
 
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
@@ -279,10 +282,10 @@ $grid-breakpoints: (
 // Define the maximum width of `.container` for different screen sizes.
 
 $container-max-widths: (
-  sm: $space-width * 60,
-  md: $space-width * 90,
-  lg: $space-width * 120,
-  xl: $space-width * 150
+  sm: $space-width * 12 * 5,
+  md: $space-width * 12 * 7,
+  lg: $space-width * 12 * 10,
+  xl: $space-width * 12 * 12
 ) !default;
 
 @include _assert-ascending($container-max-widths, "$container-max-widths");
