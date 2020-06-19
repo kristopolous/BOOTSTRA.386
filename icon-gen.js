@@ -15,6 +15,7 @@ const variationList = [
   [']', 'right-brace'],
   ['[', 'left-brace'],
   ['-', 'hyphen'],
+  ['\u25B2', 'arrow-up'],
   ['\u25Bc', 'arrow-down'],
   ['\u2591', 'shade-25'],
   ['\u2592', 'shade-50'],
