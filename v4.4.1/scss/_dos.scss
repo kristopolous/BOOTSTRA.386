@@ -12,3 +12,24 @@ body.bootstra-enable-cursor,
 .bootstra-enable-cursor * {
   cursor: none !important;
 }
+
+*::-webkit-scrollbar {
+  width: 9px;
+}
+￼
+*::-webkit-scrollbar-track {
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+}
+￼
+*::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+}
+￼
+*::-webkit-scrollbar-button:vertical:decrement {
+}
+
+*::-webkit-scrollbar-button:vertical:increment {
+  background-position: 0px -2px;
+}
