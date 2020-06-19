@@ -20,6 +20,7 @@ const variationList = [
   ['\u2591', 'shade-25'],
   ['\u2592', 'shade-50'],
   ['\u2593', 'shade-75'],
+  ['\u2588', 'shade-100'],
 
   ['[\u25A0]', 'checkbox-checked'],
   ['[ ]', 'checkbox-unchecked'],
