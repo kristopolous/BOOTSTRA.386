@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -6718,19 +6717,26 @@ body.bootstra-enable-cursor,
 }
 
 *::-webkit-scrollbar {
-  width: 9px;
+  width: 8px;
+  background: #000000;
 }
 
-￼ *::-webkit-scrollbar-track {
-  border-radius: 0px;
+*::-webkit-scrollbar-thumb {
+  background: #000000;
 }
 
-￼ *::-webkit-scrollbar-thumb {
-  border-radius: 0px;
+*::-webkit-scrollbar-track {
+  background: url("../fonts/shade-50-grayLight.svg") repeat;
+}
+
+*::-webkit-scrollbar-button:vertical:decrement {
+  background: url("../fonts/arrow-up-black.svg") no-repeat;
+  background-color: #bbbbbb;
 }
 
 *::-webkit-scrollbar-button:vertical:increment {
-  background-position: 0px -2px;
+  background: url("../fonts/arrow-down-black.svg") no-repeat;
+  background-color: #bbbbbb;
 }
 
 .align-baseline {

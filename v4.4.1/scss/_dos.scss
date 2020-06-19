@@ -13,23 +13,22 @@ body.bootstra-enable-cursor,
   cursor: none !important;
 }
 
-*::-webkit-scrollbar {
-  width: 9px;
-}
-￼
-*::-webkit-scrollbar-track {
-  -webkit-border-radius: 0px;
-  border-radius: 0px;
-}
-￼
-*::-webkit-scrollbar-thumb {
-  -webkit-border-radius: 0px;
-  border-radius: 0px;
-}
-￼
-*::-webkit-scrollbar-button:vertical:decrement {
+*::-webkit-scrollbar{
+  width: $space-width;
+  background: $black;
 }
 
+*::-webkit-scrollbar-thumb {
+  background: $black;
+}
+*::-webkit-scrollbar-track {
+  background: url('#{$fp}shade-50-grayLight.svg') repeat;
+}
+*::-webkit-scrollbar-button:vertical:decrement {
+  background: url('#{$fp}arrow-up-black.svg') no-repeat;
+  background-color: $grayLight;
+}
 *::-webkit-scrollbar-button:vertical:increment {
-  background-position: 0px -2px;
+  background: url('#{$fp}arrow-down-black.svg') no-repeat;
+  background-color: $grayLight;
 }
