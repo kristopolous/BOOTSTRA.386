@@ -6716,6 +6716,29 @@ body.bootstra-enable-cursor,
   cursor: none !important;
 }
 
+*::-webkit-scrollbar {
+  width: 8px;
+  background: #000000;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #000000;
+}
+
+*::-webkit-scrollbar-track {
+  background: url("../fonts/shade-50-grayLight.svg") repeat;
+}
+
+*::-webkit-scrollbar-button:vertical:decrement {
+  background: url("../fonts/arrow-up-black.svg") no-repeat;
+  background-color: #bbbbbb;
+}
+
+*::-webkit-scrollbar-button:vertical:increment {
+  background: url("../fonts/arrow-down-black.svg") no-repeat;
+  background-color: #bbbbbb;
+}
+
 .align-baseline {
   vertical-align: baseline !important;
 }
