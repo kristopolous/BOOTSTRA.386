@@ -11,9 +11,8 @@ $grayDark:  #55555570 !default;
 $cyan:     #00aaaad0 !default;
 */
 @media (min-width: 768px) {
-  @supports ((position: -webkit-sticky) or (position: sticky)) {
+  @supports (position: sticky) {
     .bd-navbar {
-      position: -webkit-sticky;
       position: sticky;
       top: 0;
       z-index: 1071;
@@ -70,7 +69,6 @@ $cyan:     #00aaaad0 !default;
 }
 
 .bd-content {
-  -ms-flex-order: 1;
   order: 1;
 }
 
@@ -170,13 +168,11 @@ $cyan:     #00aaaad0 !default;
 }
 
 .bd-toc {
-  -ms-flex-order: 2;
   order: 2;
 }
 
-@supports ((position: -webkit-sticky) or (position: sticky)) {
+@supports (position: sticky) {
   .bd-toc {
-    position: -webkit-sticky;
     position: sticky;
     top: 56px;
     height: calc(100vh - 56px);
@@ -201,14 +197,12 @@ $cyan:     #00aaaad0 !default;
 }
 
 .bd-sidebar {
-  -ms-flex-order: 0;
   order: 0;
 }
 
 @media (min-width: 768px) {
-  @supports ((position: -webkit-sticky) or (position: sticky)) {
+  @supports (position: sticky) {
     .bd-sidebar {
-      position: -webkit-sticky;
       position: sticky;
       z-index: 1000;
       height: calc(100vh - 4rem);
@@ -218,13 +212,12 @@ $cyan:     #00aaaad0 !default;
 
 @media (min-width: 1152px) {
   .bd-sidebar {
-    -ms-flex: 0 1 320px;
     flex: 0 1 320px;
   }
 }
 
 @media (min-width: 768px) {
-  @supports ((position: -webkit-sticky) or (position: sticky)) {
+  @supports (position: sticky) {
     .bd-links {
       max-height: calc(100vh - 9rem);
       overflow-y: auto;
@@ -362,9 +355,7 @@ $cyan:     #00aaaad0 !default;
 }
 
 .example-row {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-right: -8px;
   margin-left: -8px;
@@ -379,7 +370,6 @@ $cyan:     #00aaaad0 !default;
 
 @media (min-width: 576px) {
   .example-content-main {
-    -ms-flex: 0 0 50%;
     flex: 0 0 50%;
     max-width: 50%;
   }
@@ -387,7 +377,6 @@ $cyan:     #00aaaad0 !default;
 
 @media (min-width: 960px) {
   .example-content-main {
-    -ms-flex: 0 0 66.666667%;
     flex: 0 0 66.666667%;
     max-width: 66.666667%;
   }
@@ -402,7 +391,6 @@ $cyan:     #00aaaad0 !default;
 
 @media (min-width: 576px) {
   .example-content-secondary {
-    -ms-flex: 0 0 50%;
     flex: 0 0 50%;
     max-width: 50%;
   }
@@ -410,7 +398,6 @@ $cyan:     #00aaaad0 !default;
 
 @media (min-width: 960px) {
   .example-content-secondary {
-    -ms-flex: 0 0 33.333333%;
     flex: 0 0 33.333333%;
     max-width: 33.333333%;
   }
@@ -924,9 +911,6 @@ $cyan:     #00aaaad0 !default;
 .bd-placeholder-img {
   font-size: 16px;
   text-anchor: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 
@@ -1183,18 +1167,12 @@ $cyan:     #00aaaad0 !default;
 .language-sh::before {
   color: #009;
   content: "$ ";
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 
 .language-powershell::before {
   color: #009;
   content: "PM> ";
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 
@@ -1210,7 +1188,6 @@ $cyan:     #00aaaad0 !default;
 
 .algolia-autocomplete {
   display: block !important;
-  -ms-flex: 1;
   flex: 1;
 }
 
@@ -1284,9 +1261,7 @@ $cyan:     #00aaaad0 !default;
 }
 
 .algolia-autocomplete .algolia-docsearch-suggestion--content {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   float: none !important;
   width: 100% !important;
@@ -1315,7 +1290,6 @@ $cyan:     #00aaaad0 !default;
 }
 
 .algolia-autocomplete .algolia-docsearch-suggestion--text {
-  -ms-flex: 0 0 100%;
   flex: 0 0 100%;
   max-width: 100%;
   padding: .2rem 0;
@@ -1356,4 +1330,5 @@ $cyan:     #00aaaad0 !default;
 .algolia-autocomplete .ds-suggestion.ds-cursor .algolia-docsearch-suggestion--content {
   background-color: rgba(208, 189, 236, 0.15) !important;
 }
+
 /*# sourceMappingURL=docs.min.css.map */
