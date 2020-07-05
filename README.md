@@ -97,6 +97,10 @@ Check out the [contribution](https://github.com/kristopolous/BOOTSTRA.386/blob/m
 
 ### See [the wiki](https://github.com/kristopolous/BOOTSTRA.386/wiki/) for more documentation.
 
+### Attributions
+
+The font for the v4 is by Amir Keren, used under Creative Commons Share-Alike, which [can be found at int10h.org](https://int10h.org/oldschool-pc-fonts/fontlist/).
+
 --- 
 Notes
 
