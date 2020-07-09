@@ -99,7 +99,7 @@ Check out the [contribution](https://github.com/kristopolous/BOOTSTRA.386/blob/m
 
 ### Attributions
 
-The font for the v4 is by Amir Keren, used under Creative Commons Share-Alike, which [can be found at int10h.org](https://int10h.org/oldschool-pc-fonts/fontlist/).
+The font for the v4 is by VileR, used under Creative Commons Share-Alike, which [can be found at int10h.org](https://int10h.org/oldschool-pc-fonts/fontlist/).
 
 --- 
 Notes
