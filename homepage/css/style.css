@@ -21,6 +21,8 @@
 
 body { 
   font-family: times_regular;
+  margin:1rem 0;
+  padding:1rem 0;
 }
 big {
   font-family: times_b24;
@@ -46,4 +48,8 @@ input[type="submit"] {
   background: #d4d0c8;
   border: 2px outset;
   padding: 4px 1rem;
+} 
+p {
+  width: 80%;
+
 }
