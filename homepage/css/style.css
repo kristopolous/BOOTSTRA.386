@@ -1,0 +1,49 @@
+@font-face {
+  font-family: times_regular;
+  src: url(times-regular.woff);
+}
+@font-face {
+  font-family: times_italic;
+  src: url(times-italic.woff);
+}
+@font-face {
+  font-family: times_b16;
+  src: url(times-b-16.woff);
+}
+@font-face {
+  font-family: times_b24;
+  src: url(times-b-24.woff);
+}
+@font-face {
+  font-family: times_b32;
+  src: url(times-b-32.woff);
+}
+
+body { 
+  font-family: times_regular;
+}
+big {
+  font-family: times_b24;
+}
+b {
+  font-family: times_b16;
+}
+h1 {
+  font-family: times_b32;
+}
+i {
+  font-family: times_italic;
+}
+a img {
+  border: 2px solid;
+}
+input[type="text"], textarea {
+  border: 2px inset;
+  font-family: monospace;
+}
+input[type="submit"] {
+  font-family: times_regular;
+  background: #d4d0c8;
+  border: 2px outset;
+  padding: 4px 1rem;
+}
