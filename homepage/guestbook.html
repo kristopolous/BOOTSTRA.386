@@ -1,3 +1,12 @@
+<?php
+if(isset($_POST['name'])) {
+  $_POST['message'] = preg_replace('/\n/', '<br>', strip_tags(trim($_POST['message']), ['b', 'i', 'u', 'br', 'strong', 'em', 'ul', 'li', 'ol', 'p']));
+  $_POST['d'] = date('g:i A') . ' 19' . (intval(date('Y')) - 1900) . date('-m-d');
+  file_put_contents('guestbook.json', json_encode($_POST) . "\n", FILE_APPEND);
+  header("Location: guestbook.html");
+}
+
+?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
 <HTML>
 <HEAD>
@@ -12,9 +21,11 @@
 <H1 ALIGN=CENTER>
   <A HREF="index.html">
   <IMG SRC="img/terminal.gif"><BR>
-  BOOTSTRA/386 4.0</H1>
+  BOOTSTRA/386 4.0
   </A>
+</H1>
 <CENTER>
+<BR>
 <TABLE>
   <TR>
     <TD>
@@ -26,38 +37,71 @@
   </TR>
 </TABLE>
 <BR>
+<BR>
 
-<form>
-<TABLE>
+<FORM METHOD="post">
+<TABLE WIDTH=400 CELLPADDING=4>
   <TR>
-    <TD>
+    <TD ALIGN=RIGHT>
       Name:
     </td>
     <TD>
-      <INPUT name="name" TYPE=text SIZE=18>
+      <INPUT name="name" TYPE=text SIZE=22>
     </TD>
   </TR>
   <TR>
-    <TD>
+    <TD ALIGN=RIGHT>
       Email:
     </TD>
     <TD>
-      <INPUT name="email" TYPE=text SIZE=18>
+      <INPUT name="email" TYPE=text SIZE=22>
     </TD>
   </TR>
   <TR>
-    <TD VALIGN="TOP">
+    <TD ALIGN=RIGHT VALIGN=TOP>
       Your Message:
     </TD>
     <TD>
-      <TEXTAREA NAME="message" ROWS=4 COLS=18></TEXTAREA>
+      <TEXTAREA NAME="message" ROWS=4 COLS=22></TEXTAREA>
       <BR>
-      <P ALIGN=RIGHT>
-        <INPUT TYPE="SUBMIT" value="ADD COMMENT">
+      <P>
+      <INPUT TYPE="SUBMIT" value="SIGN!">
       </P>
     </TD>
   </TR>
 </TABLE>
 </form>
+<BR>
+<HR WIDTH=400 SIZE=1>
+<IMG SRC="img/library.gif">
+<P><B>ENTRIES</B></P>
+<BR>
+<BR>
+<TABLE WIDTH=300 CELLSPACING=0 CELLPADDING=0>
+<TR><TD>
+<?php
 
-<?php include('partials/footer'); ?>
+  $entryList = array_reverse(file("guestbook.json"));
+  foreach($entryList as $entryRaw) {
+    $entry = json_decode($entryRaw, true);
+    ?>
+      <TABLE WIDTH=100%>
+        <TR>
+        <TD ALIGN=RIGHT>
+          <SMALL><TT><?= $entry['d']; ?></TT></SMALL>
+          <B><?= $entry['name']; ?></B>
+        </TD>
+      </TR>
+      <TR>
+      <TD>
+        <?= $entry['message']; ?>
+      </TD></TR>
+      </TABLE>
+      <HR>
+    <?
+  }
+  ?>
+</TD></TR></TABLE>
+<?
+
+include('partials/footer'); ?>

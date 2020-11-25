@@ -1,4 +1,5 @@
-<CENTER><HR WIDTH=100%>
+<CENTER>
+<BR><BR>
 
 <TABLE CELLSPACING=1 CELLPADDING=4 STYLE="border:1px outset" BORDER=1 >
 <TR>
@@ -22,10 +23,9 @@
 
 <TD ALIGN=CENTER>
   <A HREF="guestbook.html">
-    <IMG SRC=img/scroll.gif VSPACE=10>
+    <IMG SRC="img/scroll.gif" VSPACE=10>
     <BR>
-    Sign Our Guestbook
-    <BR><BR>
+    Sign Our Guestbook<BR><BR>
   </A>
 </TD>
 
