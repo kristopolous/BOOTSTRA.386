@@ -1,11 +1,14 @@
 <?php
-if(isset($_POST['name'])) {
-  $_POST['message'] = preg_replace('/\n/', '<br>', strip_tags(trim($_POST['message']), ['b', 'i', 'u', 'br', 'strong', 'em', 'ul', 'li', 'ol', 'p']));
-  $_POST['d'] = date('g:i A') . ' 19' . (intval(date('Y')) - 1900) . date('-m-d');
-  file_put_contents('guestbook.json', json_encode($_POST) . "\n", FILE_APPEND);
-  header("Location: guestbook.html");
+$EE = false;
+if($_SERVER['REQUEST_METHOD'] == 'POST') {
+  if(!empty($_POST['message'])) {
+    $_POST['message'] = preg_replace('/\n/', '<br>', strip_tags(trim($_POST['message']), ['b', 'i', 'u', 'br', 'strong', 'em', 'ul', 'li', 'ol', 'p']));
+    $_POST['d'] = date('g:i A') . ' 19' . (intval(date('Y')) - 1900) . date('-m-d');
+    file_put_contents('guestbook.json', json_encode($_POST) . "\n", FILE_APPEND);
+  } else {
+    $EE = true;
+  }
 }
-
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
 <HTML>
@@ -36,6 +39,26 @@ if(isset($_POST['name'])) {
     </TD>
   </TR>
 </TABLE>
+<?
+if($EE) { ?>
+<TABLE BORDER=1 CELLPADDING=10>
+  <TR><TD>
+    <CENTER>
+      <H1>OPEN SESAME!</H1>
+      <H2>Easter Egg Unlocked!</H2>
+      <IMG SRC="img/selfie.gif">
+    </CENTER>
+    <TABLE>
+      <TR><TD>
+        <A HREF="thanks.wav"><IMG SRC="img/audio.gif"></A>
+      </TD><TD>
+        Thanks for coming!<BR>
+        <i>~chris</i>
+      </TD></TR>
+    </TABLE>
+  </TD></TR>
+</TABLE>
+<?} ?>
 <BR>
 <BR>
 
