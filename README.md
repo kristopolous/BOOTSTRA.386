@@ -70,12 +70,14 @@ since this is just a bootstrap theme.
 
 Luckily, HTML5 permits [noscript in the head section](https://stackoverflow.com/questions/218162/embedding-extra-styles-with-noscript/1332058#1332058) which means that style can be put in the noscript section.  This means that putting this in the header would permit people without JS on to see the site:
 
-```
-  <noscript>
-    <style>
-      body { visibility: visible }
-    </style>
-  </noscript>
+```html
+<noscript>
+  <style>
+    body { 
+       visibility: visible; 
+    }
+  </style>
+</noscript>
 ```
 
 ### Distractions
