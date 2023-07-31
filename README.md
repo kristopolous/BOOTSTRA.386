@@ -93,6 +93,10 @@ Also you can give me money, as little as $1/month ... Click on that heart sponso
 
 Check out the [contribution](https://github.com/kristopolous/BOOTSTRA.386/blob/master/CONTRIBUTING.md) doc - it's easy, I swear.
 
+### Building yourself
+
+These folders, and all versions, are proper forks of tagged releases of bootstrap. Because they represent very specific snapshots in time, there's no buildbot updates or anything like that. If you want to patch updates to the dependencies and confirm the build of the old versions then please open a PR ... I ignore the automated ones that github sends me because it's not that kind of project.
+
 ### Contact
 
  * [Mailing list](https://groups.google.com/forum/#!forum/bootstra-386)
