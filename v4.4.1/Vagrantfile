@@ -1,5 +1,17 @@
+$script = <<-SCRIPT
+cd /vagrant
+sudo apt update
+sudo apt -y install build-essential zlib1g-dev libssl-dev ruby ruby-dev ruby-bundler nodejs npm
+bundle install
+npm install
+SCRIPT
+
 Vagrant.configure(2) do |config|
   config.vm.box = "ubuntu/bionic64"
   config.ssh.insert_key = false
-  config.vm.network "forwarded_port", guest: 80, host: 3080
+  config.vm.network "forwarded_port", guest: 9001, host: 9001
+  config.vm.provider "virtualbox" do |v|
+    v.memory = 2048
+  end
+  config.vm.provision "shell", inline: $script
 end
