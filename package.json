@@ -1,0 +1,21 @@
+{
+  "name": "bootstra.386",
+  "version": "1.0.0",
+  "description": "This is only for keeping track of the package management ... ",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kristopolous/BOOTSTRA.386.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kristopolous/BOOTSTRA.386/issues"
+  },
+  "homepage": "https://github.com/kristopolous/BOOTSTRA.386#readme",
+  "devDependencies": {
+    "text-to-svg": "^3.1.5"
+  }
+}
