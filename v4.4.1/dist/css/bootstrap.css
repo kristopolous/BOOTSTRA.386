@@ -10309,38 +10309,46 @@ button.bg-dark:focus {
   color: #fff !important;
 }
 
-.text-primary {
-  color: #fff !important;
-}
-
-.text-secondary {
-  color: #fff !important;
-}
-
-.text-success {
-  color: #5f5 !important;
-}
-
-.text-info {
-  color: #5ff !important;
-}
-
-.text-warning {
-  color: #ff5 !important;
-}
-
-.text-danger {
-  color: #f55 !important;
-}
-
-.text-light {
-  color: !important;
-}
-
-.text-dark {
-  color: #555555 !important;
-}
-
+/*
+  .text-primary {
+    color: brighten($color) !important;
+  }
+  */
+/*
+  .text-secondary {
+    color: brighten($color) !important;
+  }
+  */
+/*
+  .text-success {
+    color: brighten($color) !important;
+  }
+  */
+/*
+  .text-info {
+    color: brighten($color) !important;
+  }
+  */
+/*
+  .text-warning {
+    color: brighten($color) !important;
+  }
+  */
+/*
+  .text-danger {
+    color: brighten($color) !important;
+  }
+  */
+/*
+  .text-light {
+    color: brighten($color) !important;
+  }
+  */
+/*
+  .text-dark {
+    color: brighten($color) !important;
+  }
+  */
 .text-body {
   color: #bbbbbb !important;
 }
