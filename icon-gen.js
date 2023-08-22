@@ -2,6 +2,12 @@
 const TextToSVG = require('text-to-svg');
 const textToSVG = TextToSVG.loadSync('fonts/Px437_IBM_EGA8.otf');
 const fs = require('fs');
+
+if(!process.argv[2]) { 
+  console.error("You need to specify a path to generate the svg files in as your argument");
+  process.exit(-1);
+}
+
 const path = (process.argv[2] || '.').replace(/\/$/, '');
 var list = ["// This file is auto-generated from icon-gen in the root directory"];
  
