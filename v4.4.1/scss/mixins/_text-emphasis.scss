@@ -1,5 +1,7 @@
 @mixin text-emphasis-variant($parent, $color, $ignore-warning: false) {
+  /*
   #{$parent} {
     color: brighten($color) !important;
   }
+  */
 }
