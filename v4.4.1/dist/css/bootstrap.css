@@ -422,6 +422,16 @@ template {
   display: none !important;
 }
 
+::-moz-selection {
+  color: #fff;
+  background-color: #00aaaa;
+}
+
+::selection {
+  color: #fff;
+  background-color: #00aaaa;
+}
+
 h1, h2,
 .h1, .h2 {
   margin-bottom: 0;

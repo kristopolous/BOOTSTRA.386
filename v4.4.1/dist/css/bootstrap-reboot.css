@@ -391,4 +391,14 @@ template {
 [hidden] {
   display: none !important;
 }
+
+::-moz-selection {
+  color: #fff;
+  background-color: #00aaaa;
+}
+
+::selection {
+  color: #fff;
+  background-color: #00aaaa;
+}
 /*# sourceMappingURL=bootstrap-reboot.css.map */
