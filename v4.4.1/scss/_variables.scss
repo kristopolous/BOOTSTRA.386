@@ -198,6 +198,9 @@ $enable-validation-icons:                     false !default;
 $enable-deprecation-messages:                 false !default;
 
 
+// THIS IS THE SIZE EVERYTHING IS BASED ON
+$sz:                          16;
+
 $font-size-base:              16px !default; 
 $line-height-base:            14px !default;
 $line-height:            $line-height-base;
@@ -326,9 +329,6 @@ $border-radius-sm:            0 !default;
 
 $rounded-pill:                0 !default;
 
-$box-shadow-sm:               0 .125rem .25rem rgba($black, .075) !default;
-$box-shadow-lg:               0 1rem 3rem rgba($black, .175) !default;
-
 $component-active-color:      $white !default;
 $component-active-bg:         $link-hover-background !default;
 
@@ -426,6 +426,7 @@ $hr-margin-y:                 $line-height !default;
 // Customizes the `.table` component with basic values, each used across all table variations.
 
 $table-cell-padding:          0 !default;
+$table-cell-padding-border:   0 !default;
 $table-cell-padding-sm:       0 !default;
 
 $table-color:                 $body-color !default;
@@ -442,11 +443,11 @@ $table-head-bg:               $gray-200 !default;
 $table-head-color:            $gray-700 !default;
 
 $table-dark-color:            $white !default;
-$table-dark-bg:               $grayDark !default;
+$table-dark-bg:               $black !default;
 $table-dark-accent-bg:        $black !default;
 $table-dark-hover-color:      $table-dark-color !default;
 $table-dark-hover-bg:         $black !default;
-$table-dark-border-color:     $black !default;
+$table-dark-border-color:     $grayLight !default;
 
 $table-striped-order:         odd !default;
 

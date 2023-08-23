@@ -438,16 +438,16 @@ h2, .h2 {
 h3, .h3 {
   color: #fff;
   border: 0.875px solid #fff;
-  margin-top: 7px;
-  padding-top: 6.125px;
-  padding-bottom: 7px;
-  margin-bottom: 6.125px;
   border-left-width: 2px;
   border-right-width: 2px;
+  margin-top: 7px;
+  margin-bottom: 6.125px;
   margin-left: 3.5px;
+  margin-right: 2.5px;
+  padding-top: 6.125px;
+  padding-bottom: 7px;
   padding-left: 10.5px;
   padding-right: 11.5px;
-  margin-right: 2.5px;
   display: inline-block;
   width: calc(100% - 6px);
 }
@@ -1888,12 +1888,26 @@ pre code {
 }
 
 .table-bordered {
-  border: 0 solid #555555;
+  border-collapse: collapse;
+  width: calc(100% - 7px);
+  margin-top: 7px;
+  margin-bottom: 6.125px;
+  margin-left: 3.5px;
+  margin-right: 2.5px;
 }
 
-.table-bordered thead th,
-.table-bordered thead td {
-  border-bottom-width: 0;
+.table-bordered th, .table-bordered td {
+  border: 0.875px solid #fff;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  margin-top: 7px;
+  margin-bottom: 6.125px;
+  margin-left: 3.5px;
+  margin-right: 2.5px;
+  padding-top: 6.125px;
+  padding-bottom: 7px;
+  padding-left: 10.5px;
+  padding-right: 11.5px;
 }
 
 .table-borderless th,
@@ -1962,8 +1976,8 @@ pre code {
 
 .table .thead-dark th {
   color: #fff;
-  background-color: #555555;
-  border-color: #000000;
+  background-color: #000000;
+  border-color: #bbbbbb;
 }
 
 .table .thead-light th {
@@ -1974,17 +1988,17 @@ pre code {
 
 .table-dark {
   color: #fff;
-  background-color: #555555;
+  background-color: #000000;
 }
 
 .table-dark th,
 .table-dark td,
 .table-dark thead th {
-  border-color: #000000;
+  border-color: #bbbbbb;
 }
 
 .table-dark.table-bordered {
-  border: 0;
+  box-shadow: -3.5px -7px 0 0 #000000, 2.5px 6.125px 0 0 #000000, -3.5px 6.125px 0 0 #000000, 2.5px -7px 0 0 #000000;
 }
 
 .table-dark.table-striped tbody tr:nth-of-type(odd) {
@@ -2115,16 +2129,16 @@ pre code {
 select.form-control {
   background: #bbbbbb;
   border: 0.875px solid #000000;
-  margin-top: 7px;
-  padding-top: 6.125px;
-  padding-bottom: 7px;
-  margin-bottom: 6.125px;
   border-left-width: 2px;
   border-right-width: 2px;
+  margin-top: 7px;
+  margin-bottom: 6.125px;
   margin-left: 3.5px;
+  margin-right: 2.5px;
+  padding-top: 6.125px;
+  padding-bottom: 7px;
   padding-left: 2.5px;
   padding-right: 3.5px;
-  margin-right: 2.5px;
   box-shadow: -3.5px -7px 0 0 #bbbbbb, 2.5px 6.125px 0 0 #bbbbbb, -3.5px 6.125px 0 0 #bbbbbb, 2.5px -7px 0 0 #bbbbbb;
   width: calc(100% - 6px);
   color: #000000;
@@ -2198,16 +2212,16 @@ textarea.form-control {
   height: auto;
   width: calc(100% - 6px);
   border: 0.875px solid #000000;
-  margin-top: 7px;
-  padding-top: 6.125px;
-  padding-bottom: 7px;
-  margin-bottom: 6.125px;
   border-left-width: 2px;
   border-right-width: 2px;
+  margin-top: 7px;
+  margin-bottom: 6.125px;
   margin-left: 3.5px;
+  margin-right: 2.5px;
+  padding-top: 6.125px;
+  padding-bottom: 7px;
   padding-left: 2.5px;
   padding-right: 3.5px;
-  margin-right: 2.5px;
   box-shadow: inset 0 -3.5px 0 3px #bbbbbb, inset 0 3.5px 0 3px #bbbbbb, -3.5px -7px 0 0 #bbbbbb, 2.5px 6.125px 0 0 #bbbbbb, -3.5px 6.125px 0 0 #bbbbbb, 2.5px -7px 0 0 #bbbbbb;
 }
 
@@ -2593,16 +2607,16 @@ fieldset:disabled a.btn {
 .btn-primary.btn-lg, .btn-group-lg > .btn-primary.btn {
   background-color: #bbbbbb;
   border: 0.875px solid #000000;
-  margin-top: 7px;
-  padding-top: 6.125px;
-  padding-bottom: 7px;
-  margin-bottom: 6.125px;
   border-left-width: 2px;
   border-right-width: 2px;
+  margin-top: 7px;
+  margin-bottom: 6.125px;
   margin-left: 3.5px;
+  margin-right: 2.5px;
+  padding-top: 6.125px;
+  padding-bottom: 7px;
   padding-left: 10.5px;
   padding-right: 11.5px;
-  margin-right: 2.5px;
   box-shadow: -3.5px -7px 0 0 #bbbbbb, 2.5px 6.125px 0 0 #bbbbbb, -3.5px 6.125px 0 0 #bbbbbb, 2.5px -7px 0 0 #bbbbbb;
   -webkit-filter: drop-shadow(7px 8px 0 black);
   filter: drop-shadow(7px 8px 0 black);
@@ -2679,16 +2693,16 @@ fieldset:disabled a.btn {
 .btn-secondary.btn-lg, .btn-group-lg > .btn-secondary.btn {
   background-color: #bbbbbb;
   border: 0.875px solid #000000;
-  margin-top: 7px;
-  padding-top: 6.125px;
-  padding-bottom: 7px;
-  margin-bottom: 6.125px;
   border-left-width: 2px;
   border-right-width: 2px;
+  margin-top: 7px;
+  margin-bottom: 6.125px;
   margin-left: 3.5px;
+  margin-right: 2.5px;
+  padding-top: 6.125px;
+  padding-bottom: 7px;
   padding-left: 10.5px;
   padding-right: 11.5px;
-  margin-right: 2.5px;
   box-shadow: -3.5px -7px 0 0 #bbbbbb, 2.5px 6.125px 0 0 #bbbbbb, -3.5px 6.125px 0 0 #bbbbbb, 2.5px -7px 0 0 #bbbbbb;
   -webkit-filter: drop-shadow(7px 8px 0 black);
   filter: drop-shadow(7px 8px 0 black);
@@ -2765,16 +2779,16 @@ fieldset:disabled a.btn {
 .btn-success.btn-lg, .btn-group-lg > .btn-success.btn {
   background-color: #00aa00;
   border: 0.875px solid #000000;
-  margin-top: 7px;
-  padding-top: 6.125px;
-  padding-bottom: 7px;
-  margin-bottom: 6.125px;
   border-left-width: 2px;
   border-right-width: 2px;
+  margin-top: 7px;
+  margin-bottom: 6.125px;
   margin-left: 3.5px;
+  margin-right: 2.5px;
+  padding-top: 6.125px;
+  padding-bottom: 7px;
   padding-left: 10.5px;
   padding-right: 11.5px;
-  margin-right: 2.5px;
   box-shadow: -3.5px -7px 0 0 #00aa00, 2.5px 6.125px 0 0 #00aa00, -3.5px 6.125px 0 0 #00aa00, 2.5px -7px 0 0 #00aa00;
   -webkit-filter: drop-shadow(7px 8px 0 black);
   filter: drop-shadow(7px 8px 0 black);
@@ -2851,16 +2865,16 @@ fieldset:disabled a.btn {
 .btn-info.btn-lg, .btn-group-lg > .btn-info.btn {
   background-color: #00aaaa;
   border: 0.875px solid #000000;
-  margin-top: 7px;
-  padding-top: 6.125px;
-  padding-bottom: 7px;
-  margin-bottom: 6.125px;
   border-left-width: 2px;
   border-right-width: 2px;
+  margin-top: 7px;
+  margin-bottom: 6.125px;
   margin-left: 3.5px;
+  margin-right: 2.5px;
+  padding-top: 6.125px;
+  padding-bottom: 7px;
   padding-left: 10.5px;
   padding-right: 11.5px;
-  margin-right: 2.5px;
   box-shadow: -3.5px -7px 0 0 #00aaaa, 2.5px 6.125px 0 0 #00aaaa, -3.5px 6.125px 0 0 #00aaaa, 2.5px -7px 0 0 #00aaaa;
   -webkit-filter: drop-shadow(7px 8px 0 black);
   filter: drop-shadow(7px 8px 0 black);
@@ -2937,16 +2951,16 @@ fieldset:disabled a.btn {
 .btn-warning.btn-lg, .btn-group-lg > .btn-warning.btn {
   background-color: #aa5500;
   border: 0.875px solid #000000;
-  margin-top: 7px;
-  padding-top: 6.125px;
-  padding-bottom: 7px;
-  margin-bottom: 6.125px;
   border-left-width: 2px;
   border-right-width: 2px;
+  margin-top: 7px;
+  margin-bottom: 6.125px;
   margin-left: 3.5px;
+  margin-right: 2.5px;
+  padding-top: 6.125px;
+  padding-bottom: 7px;
   padding-left: 10.5px;
   padding-right: 11.5px;
-  margin-right: 2.5px;
   box-shadow: -3.5px -7px 0 0 #aa5500, 2.5px 6.125px 0 0 #aa5500, -3.5px 6.125px 0 0 #aa5500, 2.5px -7px 0 0 #aa5500;
   -webkit-filter: drop-shadow(7px 8px 0 black);
   filter: drop-shadow(7px 8px 0 black);
@@ -3023,16 +3037,16 @@ fieldset:disabled a.btn {
 .btn-danger.btn-lg, .btn-group-lg > .btn-danger.btn {
   background-color: #aa0000;
   border: 0.875px solid #000000;
-  margin-top: 7px;
-  padding-top: 6.125px;
-  padding-bottom: 7px;
-  margin-bottom: 6.125px;
   border-left-width: 2px;
   border-right-width: 2px;
+  margin-top: 7px;
+  margin-bottom: 6.125px;
   margin-left: 3.5px;
+  margin-right: 2.5px;
+  padding-top: 6.125px;
+  padding-bottom: 7px;
   padding-left: 10.5px;
   padding-right: 11.5px;
-  margin-right: 2.5px;
   box-shadow: -3.5px -7px 0 0 #aa0000, 2.5px 6.125px 0 0 #aa0000, -3.5px 6.125px 0 0 #aa0000, 2.5px -7px 0 0 #aa0000;
   -webkit-filter: drop-shadow(7px 8px 0 black);
   filter: drop-shadow(7px 8px 0 black);
@@ -3104,16 +3118,16 @@ fieldset:disabled a.btn {
 .btn-light.btn-lg, .btn-group-lg > .btn-light.btn {
   background-color: #fff;
   border: 0.875px solid #000000;
-  margin-top: 7px;
-  padding-top: 6.125px;
-  padding-bottom: 7px;
-  margin-bottom: 6.125px;
   border-left-width: 2px;
   border-right-width: 2px;
+  margin-top: 7px;
+  margin-bottom: 6.125px;
   margin-left: 3.5px;
+  margin-right: 2.5px;
+  padding-top: 6.125px;
+  padding-bottom: 7px;
   padding-left: 10.5px;
   padding-right: 11.5px;
-  margin-right: 2.5px;
   box-shadow: -3.5px -7px 0 0 #fff, 2.5px 6.125px 0 0 #fff, -3.5px 6.125px 0 0 #fff, 2.5px -7px 0 0 #fff;
   -webkit-filter: drop-shadow(7px 8px 0 black);
   filter: drop-shadow(7px 8px 0 black);
@@ -3190,16 +3204,16 @@ fieldset:disabled a.btn {
 .btn-dark.btn-lg, .btn-group-lg > .btn-dark.btn {
   background-color: #000000;
   border: 0.875px solid #000000;
-  margin-top: 7px;
-  padding-top: 6.125px;
-  padding-bottom: 7px;
-  margin-bottom: 6.125px;
   border-left-width: 2px;
   border-right-width: 2px;
+  margin-top: 7px;
+  margin-bottom: 6.125px;
   margin-left: 3.5px;
+  margin-right: 2.5px;
+  padding-top: 6.125px;
+  padding-bottom: 7px;
   padding-left: 10.5px;
   padding-right: 11.5px;
-  margin-right: 2.5px;
   box-shadow: -3.5px -7px 0 0 #000000, 2.5px 6.125px 0 0 #000000, -3.5px 6.125px 0 0 #000000, 2.5px -7px 0 0 #000000;
   -webkit-filter: drop-shadow(7px 8px 0 black);
   filter: drop-shadow(7px 8px 0 black);
@@ -3234,30 +3248,30 @@ fieldset:disabled a.btn {
   border-color: #fff;
   background: transparent;
   border: 0.875px solid #fff;
-  margin-top: 7px;
-  padding-top: 6.125px;
-  padding-bottom: 7px;
-  margin-bottom: 6.125px;
   border-left-width: 2px;
   border-right-width: 2px;
+  margin-top: 7px;
+  margin-bottom: 6.125px;
   margin-left: 3.5px;
+  margin-right: 2.5px;
+  padding-top: 6.125px;
+  padding-bottom: 7px;
   padding-left: 10.5px;
   padding-right: 11.5px;
-  margin-right: 2.5px;
 }
 
 .btn-outline-primary:hover {
   border: 0.875px solid #555555;
-  margin-top: 7px;
-  padding-top: 6.125px;
-  padding-bottom: 7px;
-  margin-bottom: 6.125px;
   border-left-width: 2px;
   border-right-width: 2px;
+  margin-top: 7px;
+  margin-bottom: 6.125px;
   margin-left: 3.5px;
+  margin-right: 2.5px;
+  padding-top: 6.125px;
+  padding-bottom: 7px;
   padding-left: 10.5px;
   padding-right: 11.5px;
-  margin-right: 2.5px;
   color: #fff;
 }
 
@@ -3276,30 +3290,30 @@ fieldset:disabled a.btn {
   border-color: #fff;
   background: transparent;
   border: 0.875px solid #fff;
-  margin-top: 7px;
-  padding-top: 6.125px;
-  padding-bottom: 7px;
-  margin-bottom: 6.125px;
   border-left-width: 2px;
   border-right-width: 2px;
+  margin-top: 7px;
+  margin-bottom: 6.125px;
   margin-left: 3.5px;
+  margin-right: 2.5px;
+  padding-top: 6.125px;
+  padding-bottom: 7px;
   padding-left: 10.5px;
   padding-right: 11.5px;
-  margin-right: 2.5px;
 }
 
 .btn-outline-secondary:hover {
   border: 0.875px solid #555555;
-  margin-top: 7px;
-  padding-top: 6.125px;
-  padding-bottom: 7px;
-  margin-bottom: 6.125px;
   border-left-width: 2px;
   border-right-width: 2px;
+  margin-top: 7px;
+  margin-bottom: 6.125px;
   margin-left: 3.5px;
+  margin-right: 2.5px;
+  padding-top: 6.125px;
+  padding-bottom: 7px;
   padding-left: 10.5px;
   padding-right: 11.5px;
-  margin-right: 2.5px;
   color: #fff;
 }
 
@@ -3318,30 +3332,30 @@ fieldset:disabled a.btn {
   border-color: #5f5;
   background: transparent;
   border: 0.875px solid #5f5;
-  margin-top: 7px;
-  padding-top: 6.125px;
-  padding-bottom: 7px;
-  margin-bottom: 6.125px;
   border-left-width: 2px;
   border-right-width: 2px;
+  margin-top: 7px;
+  margin-bottom: 6.125px;
   margin-left: 3.5px;
+  margin-right: 2.5px;
+  padding-top: 6.125px;
+  padding-bottom: 7px;
   padding-left: 10.5px;
   padding-right: 11.5px;
-  margin-right: 2.5px;
 }
 
 .btn-outline-success:hover {
   border: 0.875px solid #00aa00;
-  margin-top: 7px;
-  padding-top: 6.125px;
-  padding-bottom: 7px;
-  margin-bottom: 6.125px;
   border-left-width: 2px;
   border-right-width: 2px;
+  margin-top: 7px;
+  margin-bottom: 6.125px;
   margin-left: 3.5px;
+  margin-right: 2.5px;
+  padding-top: 6.125px;
+  padding-bottom: 7px;
   padding-left: 10.5px;
   padding-right: 11.5px;
-  margin-right: 2.5px;
   color: #fff;
 }
 
@@ -3360,30 +3374,30 @@ fieldset:disabled a.btn {
   border-color: #5ff;
   background: transparent;
   border: 0.875px solid #5ff;
-  margin-top: 7px;
-  padding-top: 6.125px;
-  padding-bottom: 7px;
-  margin-bottom: 6.125px;
   border-left-width: 2px;
   border-right-width: 2px;
+  margin-top: 7px;
+  margin-bottom: 6.125px;
   margin-left: 3.5px;
+  margin-right: 2.5px;
+  padding-top: 6.125px;
+  padding-bottom: 7px;
   padding-left: 10.5px;
   padding-right: 11.5px;
-  margin-right: 2.5px;
 }
 
 .btn-outline-info:hover {
   border: 0.875px solid #00aaaa;
-  margin-top: 7px;
-  padding-top: 6.125px;
-  padding-bottom: 7px;
-  margin-bottom: 6.125px;
   border-left-width: 2px;
   border-right-width: 2px;
+  margin-top: 7px;
+  margin-bottom: 6.125px;
   margin-left: 3.5px;
+  margin-right: 2.5px;
+  padding-top: 6.125px;
+  padding-bottom: 7px;
   padding-left: 10.5px;
   padding-right: 11.5px;
-  margin-right: 2.5px;
   color: #fff;
 }
 
@@ -3402,30 +3416,30 @@ fieldset:disabled a.btn {
   border-color: #ff5;
   background: transparent;
   border: 0.875px solid #ff5;
-  margin-top: 7px;
-  padding-top: 6.125px;
-  padding-bottom: 7px;
-  margin-bottom: 6.125px;
   border-left-width: 2px;
   border-right-width: 2px;
+  margin-top: 7px;
+  margin-bottom: 6.125px;
   margin-left: 3.5px;
+  margin-right: 2.5px;
+  padding-top: 6.125px;
+  padding-bottom: 7px;
   padding-left: 10.5px;
   padding-right: 11.5px;
-  margin-right: 2.5px;
 }
 
 .btn-outline-warning:hover {
   border: 0.875px solid #aa5500;
-  margin-top: 7px;
-  padding-top: 6.125px;
-  padding-bottom: 7px;
-  margin-bottom: 6.125px;
   border-left-width: 2px;
   border-right-width: 2px;
+  margin-top: 7px;
+  margin-bottom: 6.125px;
   margin-left: 3.5px;
+  margin-right: 2.5px;
+  padding-top: 6.125px;
+  padding-bottom: 7px;
   padding-left: 10.5px;
   padding-right: 11.5px;
-  margin-right: 2.5px;
   color: #fff;
 }
 
@@ -3444,30 +3458,30 @@ fieldset:disabled a.btn {
   border-color: #f55;
   background: transparent;
   border: 0.875px solid #f55;
-  margin-top: 7px;
-  padding-top: 6.125px;
-  padding-bottom: 7px;
-  margin-bottom: 6.125px;
   border-left-width: 2px;
   border-right-width: 2px;
+  margin-top: 7px;
+  margin-bottom: 6.125px;
   margin-left: 3.5px;
+  margin-right: 2.5px;
+  padding-top: 6.125px;
+  padding-bottom: 7px;
   padding-left: 10.5px;
   padding-right: 11.5px;
-  margin-right: 2.5px;
 }
 
 .btn-outline-danger:hover {
   border: 0.875px solid #aa0000;
-  margin-top: 7px;
-  padding-top: 6.125px;
-  padding-bottom: 7px;
-  margin-bottom: 6.125px;
   border-left-width: 2px;
   border-right-width: 2px;
+  margin-top: 7px;
+  margin-bottom: 6.125px;
   margin-left: 3.5px;
+  margin-right: 2.5px;
+  padding-top: 6.125px;
+  padding-bottom: 7px;
   padding-left: 10.5px;
   padding-right: 11.5px;
-  margin-right: 2.5px;
   color: #fff;
 }
 
@@ -3484,30 +3498,30 @@ fieldset:disabled a.btn {
 .btn-outline-light {
   background: transparent;
   border: 0.875px solid;
-  margin-top: 7px;
-  padding-top: 6.125px;
-  padding-bottom: 7px;
-  margin-bottom: 6.125px;
   border-left-width: 2px;
   border-right-width: 2px;
+  margin-top: 7px;
+  margin-bottom: 6.125px;
   margin-left: 3.5px;
+  margin-right: 2.5px;
+  padding-top: 6.125px;
+  padding-bottom: 7px;
   padding-left: 10.5px;
   padding-right: 11.5px;
-  margin-right: 2.5px;
 }
 
 .btn-outline-light:hover {
   border: 0.875px solid #bbbbbb;
-  margin-top: 7px;
-  padding-top: 6.125px;
-  padding-bottom: 7px;
-  margin-bottom: 6.125px;
   border-left-width: 2px;
   border-right-width: 2px;
+  margin-top: 7px;
+  margin-bottom: 6.125px;
   margin-left: 3.5px;
+  margin-right: 2.5px;
+  padding-top: 6.125px;
+  padding-bottom: 7px;
   padding-left: 10.5px;
   padding-right: 11.5px;
-  margin-right: 2.5px;
   color: #fff;
 }
 
@@ -3525,30 +3539,30 @@ fieldset:disabled a.btn {
   border-color: #555555;
   background: transparent;
   border: 0.875px solid #555555;
-  margin-top: 7px;
-  padding-top: 6.125px;
-  padding-bottom: 7px;
-  margin-bottom: 6.125px;
   border-left-width: 2px;
   border-right-width: 2px;
+  margin-top: 7px;
+  margin-bottom: 6.125px;
   margin-left: 3.5px;
+  margin-right: 2.5px;
+  padding-top: 6.125px;
+  padding-bottom: 7px;
   padding-left: 10.5px;
   padding-right: 11.5px;
-  margin-right: 2.5px;
 }
 
 .btn-outline-dark:hover {
   border: 0.875px solid #000000;
-  margin-top: 7px;
-  padding-top: 6.125px;
-  padding-bottom: 7px;
-  margin-bottom: 6.125px;
   border-left-width: 2px;
   border-right-width: 2px;
+  margin-top: 7px;
+  margin-bottom: 6.125px;
   margin-left: 3.5px;
+  margin-right: 2.5px;
+  padding-top: 6.125px;
+  padding-bottom: 7px;
   padding-left: 10.5px;
   padding-right: 11.5px;
-  margin-right: 2.5px;
   color: #fff;
 }
 
@@ -3649,16 +3663,16 @@ input[type="button"].btn-block {
   background-color: #bbbbbb;
   background-clip: padding-box;
   border: 0.875px solid #000000;
-  margin-top: 7px;
-  padding-top: 6.125px;
-  padding-bottom: 7px;
-  margin-bottom: 6.125px;
   border-left-width: 2px;
   border-right-width: 2px;
+  margin-top: 7px;
+  margin-bottom: 6.125px;
   margin-left: 3.5px;
+  margin-right: 2.5px;
+  padding-top: 6.125px;
+  padding-bottom: 7px;
   padding-left: 2.5px;
   padding-right: 3.5px;
-  margin-right: 2.5px;
   box-shadow: -3.5px -7px 0 0 #bbbbbb, 2.5px 6.125px 0 0 #bbbbbb, -3.5px 6.125px 0 0 #bbbbbb, 2.5px -7px 0 0 #bbbbbb;
   -webkit-filter: drop-shadow(7px 8px 0 black);
   filter: drop-shadow(7px 8px 0 black);
@@ -4527,16 +4541,16 @@ input[type="button"].btn-block {
 
 .nav-tabs .nav-link {
   border: 0.875px solid #bbbbbb;
-  margin-top: 7px;
-  padding-top: 6.125px;
-  padding-bottom: 7px;
-  margin-bottom: 6.125px;
   border-left-width: 2px;
   border-right-width: 2px;
+  margin-top: 7px;
+  margin-bottom: 6.125px;
   margin-left: 3.5px;
+  margin-right: 2.5px;
+  padding-top: 6.125px;
+  padding-bottom: 7px;
   padding-left: 10.5px;
   padding-right: 11.5px;
-  margin-right: 2.5px;
   color: #bbbbbb;
   background-color: #000084;
   border-bottom: 0;
@@ -5485,16 +5499,16 @@ a.badge-dark:focus, a.badge-dark.focus {
   color: #000000;
   background-color: #bbbbbb;
   border: 0.875px solid #000000;
-  margin-top: 7px;
-  padding-top: 6.125px;
-  padding-bottom: 7px;
-  margin-bottom: 6.125px;
   border-left-width: 2px;
   border-right-width: 2px;
+  margin-top: 7px;
+  margin-bottom: 6.125px;
   margin-left: 3.5px;
+  margin-right: 2.5px;
+  padding-top: 6.125px;
+  padding-bottom: 7px;
   padding-left: 10.5px;
   padding-right: 11.5px;
-  margin-right: 2.5px;
   box-shadow: -3.5px -7px 0 0 #bbbbbb, 2.5px 6.125px 0 0 #bbbbbb, -3.5px 6.125px 0 0 #bbbbbb, 2.5px -7px 0 0 #bbbbbb;
   display: inline-block;
   width: calc(100% - 6px);
@@ -5670,16 +5684,16 @@ a.badge-dark:focus, a.badge-dark.focus {
   flex-direction: column;
   margin-bottom: 0;
   border: 0.875px solid #bbbbbb;
-  margin-top: 7px;
-  padding-top: 6.125px;
-  padding-bottom: 7px;
-  margin-bottom: 6.125px;
   border-left-width: 2px;
   border-right-width: 2px;
+  margin-top: 7px;
+  margin-bottom: 6.125px;
   margin-left: 3.5px;
+  margin-right: 2.5px;
+  padding-top: 6.125px;
+  padding-bottom: 7px;
   padding-left: 2.5px;
   padding-right: 3.5px;
-  margin-right: 2.5px;
   display: inline-block;
   width: calc(100% - 6px);
 }
@@ -10454,8 +10468,7 @@ button.bg-dark:focus {
   .table th {
     background-color: #fff !important;
   }
-  .table-bordered th,
-  .table-bordered td {
+  .table-bordered th, .table-bordered td {
     border: 1px solid #555555 !important;
   }
   .table-dark {

@@ -8,6 +8,7 @@
   color: $table-color;
   background-color: $table-bg; // Reset for nesting within parents with `background-color`.
 
+
   th,
   td {
     padding: $table-cell-padding;
@@ -38,14 +39,13 @@
 // Add or remove borders all around the table and between all the columns.
 
 .table-bordered {
-  border: $table-border-width solid $table-border-color;
+  border-collapse: collapse;
+  width: calc(100% - 7px);
 
+  @include dos-margin-only($character-space: 1);
 
-  thead {
-    th,
-    td {
-      border-bottom-width: 2 * $table-border-width;
-    }
+  th,td {
+    @include dos-border-single($white, $character-space: 1);
   }
 }
 
@@ -129,7 +129,7 @@
   }
 
   &.table-bordered {
-    border: 0;
+    @include dos-border-background($table-dark-bg);
   }
 
   &.table-striped {

@@ -1,26 +1,26 @@
+@mixin dos-margin-only( $extra: 0, $character-space: 0) {
+  margin-top:   8/$sz * $line-height;
+  margin-bottom:   7/$sz * $line-height;
+  margin-left:   7/$sz * $space-width;
+  margin-right:   5/$sz * $space-width;
+}
+
+@mixin dos-padding-only( $extra: 0, $character-space: 0) {
+  padding-top: (7/$sz + $extra) * $line-height;
+  padding-bottom: (8/$sz + $extra) * $line-height;
+  padding-left: (5/$sz + $character-space) * $space-width;
+  padding-right: (7/$sz + $character-space) * $space-width;
+}
 @mixin dos-border-single($color: $black, $extra: 0, $character-space: 0) {
   // In dos world, the left and right are actually a bit thicker.
 
-  border: (1/16 * $line-height) solid $color;
+  border: (1/$sz * $line-height) solid $color;
 
-  //            1/16
-  margin-top:   8/16 * $line-height;
-  padding-top: (7/16 + $extra) * $line-height;
+  border-left-width: (4/$sz * $space-width);
+  border-right-width: (4/$sz * $space-width);
 
-  //               1/16
-  padding-bottom: (8/16 + $extra) * $line-height;
-  margin-bottom:   7/16 * $line-height;
-
-  border-left-width: (4/16 * $space-width);
-  border-right-width: (4/16 * $space-width);
-
-  //             4/16
-  margin-left:   7/16 * $space-width;
-  padding-left: (5/16 + $character-space) * $space-width;
-
-  //              4/16
-  padding-right: (7/16 + $character-space) * $space-width;
-  margin-right:   5/16 * $space-width;
+  @include dos-margin-only($extra, $character-space);
+  @include dos-padding-only($extra, $character-space);
 }
 
 @mixin dos-uncollapse-margin($width: $space-width - 2) {
@@ -30,7 +30,7 @@
 
 @mixin dos-shadow($color: black) {
   filter: drop-shadow($line-height / 2 $space-width 0 $color);
-  margin-right: (1 + 5/16) * $space-width;
+  margin-right: (1 + 5/$sz) * $space-width;
   // margin bottom you're on your own
 }
 @mixin dos-border-active() {
@@ -53,9 +53,9 @@
   // the margin to be the border.
   // That means we really want this:
   //
-  //      8/16
-  //  7/16    5/16
-  //      7/16
+  //      8/$sz
+  //  7/$sz    5/$sz
+  //      7/$sz
   //
   // This isn't really how box-shadow works ... there's two ways to do it.
   // We'll start out with the easy one, which is to make the size 0.
@@ -66,20 +66,20 @@
   // There's another crazier way to do this where all you need are 2
   // but I don't feel like doing that math right now.
   box-shadow: 
-    (-7/16 * $space-width) (-8/16 * $line-height) 0 0 $color,
-    ( 5/16 * $space-width) ( 7/16 * $line-height) 0 0 $color,
-    (-7/16 * $space-width) ( 7/16 * $line-height) 0 0 $color,
-    ( 5/16 * $space-width) (-8/16 * $line-height) 0 0 $color;
+    (-7/$sz * $space-width) (-8/$sz * $line-height) 0 0 $color,
+    ( 5/$sz * $space-width) ( 7/$sz * $line-height) 0 0 $color,
+    (-7/$sz * $space-width) ( 7/$sz * $line-height) 0 0 $color,
+    ( 5/$sz * $space-width) (-8/$sz * $line-height) 0 0 $color;
 }
 @mixin dos-border-background-inset($color: $grayLight, $borderSize: 1) {
   $spacer: (($space-width - $borderSize) / 2);
   box-shadow: 
     inset 0 (-$line-height / 2 + $spacer) 0 $spacer - .5 $color,
     inset 0 ($line-height / 2 - $spacer) 0 $spacer - .5 $color,
-    (-7/16 * $space-width) (-8/16 * $line-height) 0 0 $color,
-    ( 5/16 * $space-width) ( 7/16 * $line-height) 0 0 $color,
-    (-7/16 * $space-width) ( 7/16 * $line-height) 0 0 $color,
-    ( 5/16 * $space-width) (-8/16 * $line-height) 0 0 $color;
+    (-7/$sz * $space-width) (-8/$sz * $line-height) 0 0 $color,
+    ( 5/$sz * $space-width) ( 7/$sz * $line-height) 0 0 $color,
+    (-7/$sz * $space-width) ( 7/$sz * $line-height) 0 0 $color,
+    ( 5/$sz * $space-width) (-8/$sz * $line-height) 0 0 $color;
 }
 
 @mixin dos-solid-border($color, $character-space:0) {
