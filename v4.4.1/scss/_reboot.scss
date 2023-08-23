@@ -143,12 +143,18 @@ ol,
 ul,
 dl {
   margin-top: 0;
-  margin-left: $space-width;
+  margin-left: $space-width / 2;
   padding-left: 0;
   margin-bottom: $line-height-base;
 }
+ol {
+  li {
+    padding-left: 0;
+  }
+  margin-left: $font-size-base;
+}
 li {
-  padding-left: $space-width;
+  padding-left: $space-width / 2;
   margin-left: $space-width;
 }
 

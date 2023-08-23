@@ -95,13 +95,21 @@ ol,
 ul,
 dl {
   margin-top: 0;
-  margin-left: 8px;
+  margin-left: 4px;
   padding-left: 0;
   margin-bottom: 14px;
 }
 
+ol {
+  margin-left: 16px;
+}
+
+ol li {
+  padding-left: 0;
+}
+
 li {
-  padding-left: 8px;
+  padding-left: 4px;
   margin-left: 8px;
 }
 
