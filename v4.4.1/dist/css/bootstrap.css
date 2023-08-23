@@ -132,6 +132,7 @@ dl {
 
 li {
   padding-left: 8px;
+  margin-left: 8px;
 }
 
 ol ol,
@@ -1961,7 +1962,7 @@ pre code {
 
 .table .thead-dark th {
   color: #fff;
-  background-color: #bbbbbb;
+  background-color: #555555;
   border-color: #000000;
 }
 
@@ -1973,7 +1974,7 @@ pre code {
 
 .table-dark {
   color: #fff;
-  background-color: #bbbbbb;
+  background-color: #555555;
 }
 
 .table-dark th,
@@ -5285,7 +5286,6 @@ a.badge:hover, a.badge:focus {
 
 .btn .badge {
   position: relative;
-  top: -1px;
 }
 
 .badge-primary {
@@ -6765,6 +6765,7 @@ body.bootstra-enable-cursor,
 
 .bg-primary {
   background-color: #bbbbbb !important;
+  color: #000000;
 }
 
 a.bg-primary:hover, a.bg-primary:focus,
@@ -6775,6 +6776,7 @@ button.bg-primary:focus {
 
 .bg-secondary {
   background-color: #bbbbbb !important;
+  color: #000000;
 }
 
 a.bg-secondary:hover, a.bg-secondary:focus,
@@ -6785,6 +6787,7 @@ button.bg-secondary:focus {
 
 .bg-success {
   background-color: #00aa00 !important;
+  color: #000000;
 }
 
 a.bg-success:hover, a.bg-success:focus,
@@ -6795,6 +6798,7 @@ button.bg-success:focus {
 
 .bg-info {
   background-color: #00aaaa !important;
+  color: #000000;
 }
 
 a.bg-info:hover, a.bg-info:focus,
@@ -6805,6 +6809,7 @@ button.bg-info:focus {
 
 .bg-warning {
   background-color: #aa5500 !important;
+  color: #000000;
 }
 
 a.bg-warning:hover, a.bg-warning:focus,
@@ -6815,6 +6820,7 @@ button.bg-warning:focus {
 
 .bg-danger {
   background-color: #aa0000 !important;
+  color: #000000;
 }
 
 a.bg-danger:hover, a.bg-danger:focus,
@@ -6824,17 +6830,19 @@ button.bg-danger:focus {
 }
 
 .bg-light {
-  background-color: #fff !important;
+  background-color: #bbbbbb !important;
+  color: #000000;
 }
 
 a.bg-light:hover, a.bg-light:focus,
 button.bg-light:hover,
 button.bg-light:focus {
-  background-color: #fff !important;
+  background-color: #bbbbbb !important;
 }
 
 .bg-dark {
   background-color: #000000 !important;
+  color: #000000;
 }
 
 a.bg-dark:hover, a.bg-dark:focus,

@@ -1,6 +1,6 @@
 // stylelint-disable declaration-no-important
 
-@each $color, $value in $theme-colors {
+@each $color, $value in $theme-colors-bg {
   @include bg-variant(".bg-#{$color}", $value, true);
 }
 

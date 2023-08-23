@@ -151,6 +151,16 @@ $theme-colors: map-merge(
   $theme-colors
 );
 
+$theme-colors-bg: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $grayLight,
+  "dark":       $dark
+);
 // Set a specific jump point for requesting color jumps
 $theme-color-interval:      50% !default;
 
@@ -432,7 +442,7 @@ $table-head-bg:               $gray-200 !default;
 $table-head-color:            $gray-700 !default;
 
 $table-dark-color:            $white !default;
-$table-dark-bg:               $gray-800 !default;
+$table-dark-bg:               $grayDark !default;
 $table-dark-accent-bg:        $black !default;
 $table-dark-hover-color:      $table-dark-color !default;
 $table-dark-hover-bg:         $black !default;
