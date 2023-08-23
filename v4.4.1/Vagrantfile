@@ -1,7 +1,7 @@
 $script = <<-SCRIPT
-cd /vagrant
+cd /vagrant/v4.4.1
 sudo apt update
-sudo apt -y install build-essential zlib1g-dev libssl-dev ruby ruby-dev ruby-bundler nodejs npm
+sudo apt -y install build-essential zlib1g-dev libssl-dev ruby ruby-dev ruby-bundler nodejs npm openjdk-17-jre
 bundle install
 npm install
 SCRIPT
