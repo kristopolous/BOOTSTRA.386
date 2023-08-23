@@ -19,7 +19,7 @@
   ],
   "scripts": {
     "start": "npm-run-all --parallel watch docs-serve",
-    "bootstra": "mkdir -p dist/fonts && (cd ../ && ./icon-gen.js v4.4.1/dist/fonts) && cp ../fonts/Px437_IBM_EGA8.otf dist/fonts/",
+    "bootstra": "mkdir -p dist/fonts && (cd ../ && ./icon-gen.js v4.4.1/dist/fonts) && cp ../fonts/Px437_IBM_EGA8.otf dist/fonts/ && cross-env-shell shx cp -r dist/fonts/ site/docs/$npm_package_version_short/dist/",
     "blc": "blc --exclude-external --filter-level 3 --follow --get --ordered --recursive --host-requests 4 --input http://localhost:3000/",
     "http-server": "http-server --silent -p 3000",
     "bundlesize": "bundlesize",
