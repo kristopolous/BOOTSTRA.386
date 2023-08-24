@@ -7,16 +7,17 @@
 
 // scss-docs-start gray-color-variables
 $white:    #fff !default;
-$gray-100: #f8f9fa !default;
-$gray-200: #e9ecef !default;
-$gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
-$gray-500: #adb5bd !default;
-$gray-600: #6c757d !default;
-$gray-700: #495057 !default;
-$gray-800: #343a40 !default;
-$gray-900: #212529 !default;
-$black:    #000 !default;
+$grayLight: #bbbbbb !default;
+$grayDark:  #555555 !default;
+$gray-100: $grayDark !default;
+$gray-200: $grayDark !default;
+$gray-300: $grayDark !default;
+$gray-400: $grayDark !default;
+$gray-500: $grayDark !default;
+$gray-600: $grayLight !default;
+$gray-700: $grayLight !default;
+$gray-800: $grayLight !default;
+$gray-900: $grayLight !default;
 // scss-docs-end gray-color-variables
 
 // fusv-disable
@@ -35,17 +36,41 @@ $grays: (
 // scss-docs-end gray-colors-map
 // fusv-enable
 
+//
+// colors are 4 bits essentially
+//  brightness red green blue
+//
+//  so, for instance, purple came in 2 forms:
+//
+//  1 1 0 1 - magenta
+//  0 1 0 1 - purple
+//    ^   ^ - these are essentially 88.
+//  ^ when that is triggered it goes to FF
+//
+// These values are lifted from
+// https://en.wikipedia.org/wiki/Enhanced_Graphics_Adapter
+// screw it, why think?
+
+$black:    #000000 !default;
+$blue:     #000084 !default;
+$cyan:     #00aaaa !default;
+$green:    #00aa00 !default;
+$red:      #aa0000 !default;
+$magenta:  #aa00aa !default;
+$brown:    #aa5500 !default;
+$blueBright:  #5555ff !default;
+$greenBright: #55ff55 !default;
+$cyanBright:  #55ffff !default;
+$redBright:  #ff5555 !default;
+$magentaBright: #ff55ff !default;
+$yellow: #ffff55 !default;
+$pink: $magentaBright;
+
 // scss-docs-start color-variables
-$blue:    #0d6efd !default;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
-$pink:    #d63384 !default;
-$red:     #dc3545 !default;
 $orange:  #fd7e14 !default;
-$yellow:  #ffc107 !default;
-$green:   #198754 !default;
 $teal:    #20c997 !default;
-$cyan:    #0dcaf0 !default;
 // scss-docs-end color-variables
 
 // scss-docs-start colors-map
@@ -308,6 +333,66 @@ $light:         $gray-100 !default;
 $dark:          $gray-900 !default;
 // scss-docs-end theme-color-variables
 
+$brightMap: (
+  $black: $grayDark,
+  $grayDark: $grayLight,
+  $grayLight: $white,
+  $blue: $blueBright,
+  $green: $greenBright,
+  $cyan: $cyanBright,
+  $red: $redBright,
+  $magenta: $magentaBright,
+  $brown: $yellow
+);
+$darkMap: (
+  $grayDark: $black,
+  $grayLight: $grayDark,
+  $white: $grayLight,
+  $blueBright: $blue,
+  $greenBright: $green,
+  $cyanBright: $cyan,
+  $redBright: $red,
+  $magentaBright: $magenta,
+  $yellow: $brown,
+
+  $black: $black,
+  $blue: $blue,
+  $green: $green,
+  $cyan: $cyan,
+  $red: $red,
+  $magenta: $magenta,
+  $brown: $brown
+);
+
+$colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$colors: map-merge(
+  (
+    "blue":       $blue,
+    "indigo":     $blueBright,
+    "purple":     $magenta,
+    "pink":       $magentaBright,
+    "red":        $red,
+    "orange":     $redBright,
+    "yellow":     $yellow,
+    "green":      $green,
+    "teal":       $cyan,
+    "cyan":       $cyan,
+    "white":      $white,
+    "gray":       $gray-600,
+    "gray-dark":  $gray-800
+  ),
+  $colors
+);
+
+$primary:       $grayLight !default;
+$secondary:     $grayLight !default;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $brown !default;
+$danger:        $red !default;
+$light:         $white !default;
+$dark:          $black !default;
 // scss-docs-start theme-colors-map
 $theme-colors: (
   "primary":    $primary,
@@ -387,6 +472,15 @@ $enable-important-utilities:  true !default;
 $enable-dark-mode:            true !default;
 $color-mode-type:             data !default; // `data` or `media-query`
 
+// THIS IS THE SIZE EVERYTHING IS BASED ON
+$sz:                          16;
+
+$font-size-base:              16px !default; 
+$line-height-base:            14px !default;
+$line-height:            $line-height-base;
+
+$font-size-lg:                $font-size-base !default;
+$space-width:                 $font-size-base/2 !default;
 // Prefix for :root CSS variables
 
 $variable-prefix:             bs- !default; // Deprecated in v5.2.0 for the shorter `$prefix`
@@ -501,11 +595,11 @@ $grid-breakpoints: (
 
 // scss-docs-start container-max-widths
 $container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1140px,
-  xxl: 1320px
+  sm: $space-width * 12 * 5,
+  md: $space-width * 12 * 7,
+  lg: $space-width * 12 * 10,
+  xl: $space-width * 12 * 12,
+  xxl: $space-width * 12 * 15
 ) !default;
 // scss-docs-end container-max-widths
 
