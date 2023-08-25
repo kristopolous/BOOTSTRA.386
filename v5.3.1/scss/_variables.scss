@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 // Variables
 //
 // Variables should follow the `$component-state-property-size` formula for
@@ -6,7 +8,7 @@
 // Color system
 
 // scss-docs-start gray-color-variables
-$white:    #fff !default;
+$white:    #ffffff !default;
 $grayLight: #bbbbbb !default;
 $grayDark:  #555555 !default;
 $gray-100: $grayDark !default;
@@ -475,12 +477,12 @@ $color-mode-type:             data !default; // `data` or `media-query`
 // THIS IS THE SIZE EVERYTHING IS BASED ON
 $sz:                          16;
 
-$font-size-base:              16px !default; 
-$line-height-base:            14px !default;
+$font-size-base:              16 !default; 
+$line-height-base:            14 !default;
 $line-height:            $line-height-base;
 
 $font-size-lg:                $font-size-base !default;
-$space-width:                 $font-size-base/2 !default;
+$space-width:                 $font-size-base * 0.5 !default;
 // Prefix for :root CSS variables
 
 $variable-prefix:             bs- !default; // Deprecated in v5.2.0 for the shorter `$prefix`
@@ -577,11 +579,11 @@ $paragraph-margin-bottom:   1rem !default;
 // scss-docs-start grid-breakpoints
 $grid-breakpoints: (
   xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1400px
+  sm: 12 * 6 * $space-width, 
+  md: 12 * 8 * $space-width,
+  lg: 12 * 10 * $space-width,
+  xl: 12 * 12 * $space-width,
+  xxl: 12 * 14 * $space-width,
 ) !default;
 // scss-docs-end grid-breakpoints
 

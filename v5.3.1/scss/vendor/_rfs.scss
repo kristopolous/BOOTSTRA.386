@@ -54,7 +54,7 @@ $rfs-base-value-unit: unit($rfs-base-value);
 
 @function divide($dividend, $divisor, $precision: 10) {
   $sign: if($dividend > 0 and $divisor > 0 or $dividend < 0 and $divisor < 0, 1, -1);
-  $dividend: abs($dividend);
+  $dividend: math.abs($dividend);
   $divisor: abs($divisor);
   @if $dividend == 0 {
     @return 0;
