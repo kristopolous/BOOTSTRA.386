@@ -43,7 +43,7 @@
     "bootstra": "mkdir -p dist/fonts && (cd ../ && ./icon-gen.js v5.3.1/dist/fonts) && cp ../fonts/Px437_IBM_EGA8.otf dist/fonts/ && cross-env-shell shx cp -r dist/fonts/ site/docs/$npm_package_version_short/dist/",
     "bundlewatch": "bundlewatch --config .bundlewatch.config.json",
     "css": "npm-run-all css-compile css-prefix css-rtl css-minify bootstra",
-    "--css-compile": "which sass && pwd && sass -v && sass --style expanded --source-map --embed-sources --no-error-css scss/:dist/css/",
+    "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css scss/:dist/css/",
     "css-rtl": "cross-env NODE_ENV=RTL postcss --config build/postcss.config.js --dir \"dist/css\" --ext \".rtl.css\" \"dist/css/*.css\" \"!dist/css/*.min.css\" \"!dist/css/*.rtl.css\"",
     "css-lint": "npm-run-all --aggregate-output --continue-on-error --parallel css-lint-*",
     "css-lint-stylelint": "/usr/bin/true",
