@@ -15,10 +15,10 @@
   --bs-green: #00aa00;
   --bs-teal: #20c997;
   --bs-cyan: #00aaaa;
-  --bs-white: #ffffff;
+  --bs-white: #fff;
   --bs-gray: #bbbbbb;
   --bs-gray-dark: #bbbbbb;
-  --bs-black: #000000;
+  --bs-black: #000;
   --bs-gray-100: #555555;
   --bs-gray-200: #555555;
   --bs-gray-300: #555555;
@@ -74,14 +74,14 @@
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: var(--bs-font-sans-serif);
-  --bs-body-font-size: 16;
+  --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
-  --bs-body-line-height: 14;
+  --bs-body-line-height: 1.5;
   --bs-body-color: #bbbbbb;
   --bs-body-color-rgb: 187, 187, 187;
-  --bs-body-bg: #ffffff;
+  --bs-body-bg: #fff;
   --bs-body-bg-rgb: 255, 255, 255;
-  --bs-emphasis-color: #000000;
+  --bs-emphasis-color: #000;
   --bs-emphasis-color-rgb: 0, 0, 0;
   --bs-secondary-color: rgba(187, 187, 187, 0.75);
   --bs-secondary-color-rgb: 187, 187, 187;
@@ -129,7 +129,7 @@
   --bs-body-color-rgb: 85, 85, 85;
   --bs-body-bg: #bbbbbb;
   --bs-body-bg-rgb: 187, 187, 187;
-  --bs-emphasis-color: #ffffff;
+  --bs-emphasis-color: #fff;
   --bs-emphasis-color-rgb: 255, 255, 255;
   --bs-secondary-color: rgba(85, 85, 85, 0.75);
   --bs-secondary-color-rgb: 85, 85, 85;
@@ -219,27 +219,47 @@ h6, h5, h4, h3, h2, h1 {
 }
 
 h1 {
-  font-size: 40;
+  font-size: calc(1.375rem + 1.5vw);
+}
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 2.5rem;
+  }
 }
 
 h2 {
-  font-size: 32;
+  font-size: calc(1.325rem + 0.9vw);
+}
+@media (min-width: 1200px) {
+  h2 {
+    font-size: 2rem;
+  }
 }
 
 h3 {
-  font-size: 28;
+  font-size: calc(1.3rem + 0.6vw);
+}
+@media (min-width: 1200px) {
+  h3 {
+    font-size: 1.75rem;
+  }
 }
 
 h4 {
-  font-size: 24;
+  font-size: calc(1.275rem + 0.3vw);
+}
+@media (min-width: 1200px) {
+  h4 {
+    font-size: 1.5rem;
+  }
 }
 
 h5 {
-  font-size: 20;
+  font-size: 1.25rem;
 }
 
 h6 {
-  font-size: 16;
+  font-size: 1rem;
 }
 
 p {

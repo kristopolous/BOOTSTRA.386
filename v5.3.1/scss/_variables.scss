@@ -1,5 +1,3 @@
-@use 'sass:math';
-
 // Variables
 //
 // Variables should follow the `$component-state-property-size` formula for
@@ -8,7 +6,7 @@
 // Color system
 
 // scss-docs-start gray-color-variables
-$white:    #ffffff !default;
+$white:    #fff !default;
 $grayLight: #bbbbbb !default;
 $grayDark:  #555555 !default;
 $gray-100: $grayDark !default;
@@ -20,6 +18,7 @@ $gray-600: $grayLight !default;
 $gray-700: $grayLight !default;
 $gray-800: $grayLight !default;
 $gray-900: $grayLight !default;
+$black:    #000 !default;
 // scss-docs-end gray-color-variables
 
 // fusv-disable
@@ -38,25 +37,10 @@ $grays: (
 // scss-docs-end gray-colors-map
 // fusv-enable
 
-//
-// colors are 4 bits essentially
-//  brightness red green blue
-//
-//  so, for instance, purple came in 2 forms:
-//
-//  1 1 0 1 - magenta
-//  0 1 0 1 - purple
-//    ^   ^ - these are essentially 88.
-//  ^ when that is triggered it goes to FF
-//
-// These values are lifted from
-// https://en.wikipedia.org/wiki/Enhanced_Graphics_Adapter
-// screw it, why think?
-
-$black:    #000000 !default;
+// scss-docs-start color-variables
 $blue:     #000084 !default;
-$cyan:     #00aaaa !default;
-$green:    #00aa00 !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
 $red:      #aa0000 !default;
 $magenta:  #aa00aa !default;
 $brown:    #aa5500 !default;
@@ -69,10 +53,11 @@ $yellow: #ffff55 !default;
 $pink: $magentaBright;
 
 // scss-docs-start color-variables
-$indigo:  #6610f2 !default;
-$purple:  #6f42c1 !default;
 $orange:  #fd7e14 !default;
+$yellow: #ffff55 !default;
+$green:    #00aa00 !default;
 $teal:    #20c997 !default;
+$cyan:     #00aaaa !default;
 // scss-docs-end color-variables
 
 // scss-docs-start colors-map
@@ -474,15 +459,13 @@ $enable-important-utilities:  true !default;
 $enable-dark-mode:            true !default;
 $color-mode-type:             data !default; // `data` or `media-query`
 
-// THIS IS THE SIZE EVERYTHING IS BASED ON
-$sz:                          16;
-
-$font-size-base:              16 !default; 
-$line-height-base:            14 !default;
-$line-height:            $line-height-base;
-
-$font-size-lg:                $font-size-base !default;
-$space-width:                 $font-size-base * 0.5 !default;
+$_line-height:                 14 !default;
+$_line-height-px:              $_line-height * 1px !default;
+$_font-size-base:              16 !default; 
+$_font-size-base-px:           $_font-size-base * 1px !default; 
+$_font-size-lg:                $_font-size-base !default;
+$space-width:                 $_font-size-base * 0.5 !default;
+$space-width-px:                 $space-width * 1px !default;
 // Prefix for :root CSS variables
 
 $variable-prefix:             bs- !default; // Deprecated in v5.2.0 for the shorter `$prefix`
@@ -579,11 +562,11 @@ $paragraph-margin-bottom:   1rem !default;
 // scss-docs-start grid-breakpoints
 $grid-breakpoints: (
   xs: 0,
-  sm: 12 * 6 * $space-width, 
-  md: 12 * 8 * $space-width,
-  lg: 12 * 10 * $space-width,
-  xl: 12 * 12 * $space-width,
-  xxl: 12 * 14 * $space-width,
+  sm: 12 * 6 * $space-width-px, 
+  md: 12 * 8 * $space-width-px,
+  lg: 12 * 10 * $space-width-px,
+  xl: 12 * 12 * $space-width-px,
+  xxl: 12 * 14 * $space-width-px,
 ) !default;
 // scss-docs-end grid-breakpoints
 
@@ -597,11 +580,11 @@ $grid-breakpoints: (
 
 // scss-docs-start container-max-widths
 $container-max-widths: (
-  sm: $space-width * 12 * 5,
-  md: $space-width * 12 * 7,
-  lg: $space-width * 12 * 10,
-  xl: $space-width * 12 * 12,
-  xxl: $space-width * 12 * 15
+  sm: $space-width-px * 12 * 6,
+  md: $space-width-px * 12 * 7,
+  lg: $space-width-px * 12 * 10,
+  xl: $space-width-px * 12 * 12,
+  xxl: $space-width-px * 12 * 14 
 ) !default;
 // scss-docs-end container-max-widths
 
