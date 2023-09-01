@@ -5,10 +5,35 @@
 
 // Color system
 
+// scss-docs-start color-variables
+// These values are lifted from
+// https://en.wikipedia.org/wiki/Enhanced_Graphics_Adapter
+// screw it, why think?
+$blue:     #0000aa !default;
+$green:    #00aa00 !default;
+$cyan:     #00aaaa !default;
+$red:      #aa0000 !default;
+$magenta:  #aa00aa !default;
+$brown:    #aa5500 !default;
+$grayLight:   #aaaaaa !default;
+$grayDark:    #555555 !default;
+$blueBright:  #5555ff !default;
+$greenBright: #55ff55 !default;
+$cyanBright:  #55ffff !default;
+$redBright:   #ff5555 !default;
+$magentaBright: #ff55ff !default;
+$yellow:      #ffff55 !default;
+$white:       #fff !default;
+
+// we just do an approximation here
+$indigo:  $magenta !default;
+$purple:  $magenta !default;
+$pink:    $magentaBright !default;
+$orange:  $redBright !default;
+$teal:    $cyan !default;
+// scss-docs-end color-variables
+
 // scss-docs-start gray-color-variables
-$white:    #fff !default;
-$grayLight: #bbbbbb !default;
-$grayDark:  #555555 !default;
 $gray-100: $grayDark !default;
 $gray-200: $grayDark !default;
 $gray-300: $grayDark !default;
@@ -37,28 +62,6 @@ $grays: (
 // scss-docs-end gray-colors-map
 // fusv-enable
 
-// scss-docs-start color-variables
-$blue:     #000084 !default;
-$indigo:  #6610f2 !default;
-$purple:  #6f42c1 !default;
-$red:      #aa0000 !default;
-$magenta:  #aa00aa !default;
-$brown:    #aa5500 !default;
-$blueBright:  #5555ff !default;
-$greenBright: #55ff55 !default;
-$cyanBright:  #55ffff !default;
-$redBright:  #ff5555 !default;
-$magentaBright: #ff55ff !default;
-$yellow: #ffff55 !default;
-$pink: $magentaBright;
-
-// scss-docs-start color-variables
-$orange:  #fd7e14 !default;
-$yellow: #ffff55 !default;
-$green:    #00aa00 !default;
-$teal:    #20c997 !default;
-$cyan:     #00aaaa !default;
-// scss-docs-end color-variables
 
 // scss-docs-start colors-map
 $colors: (
@@ -320,6 +323,8 @@ $light:         $gray-100 !default;
 $dark:          $gray-900 !default;
 // scss-docs-end theme-color-variables
 
+$fp: '../fonts/';
+
 $brightMap: (
   $black: $grayDark,
   $grayDark: $grayLight,
@@ -460,12 +465,13 @@ $enable-dark-mode:            true !default;
 $color-mode-type:             data !default; // `data` or `media-query`
 
 $_line-height:                 14 !default;
+$_line-height-scalar:          1 !default;
 $_line-height-px:              $_line-height * 1px !default;
 $_font-size-base:              16 !default; 
 $_font-size-base-px:           $_font-size-base * 1px !default; 
 $_font-size-lg:                $_font-size-base !default;
-$space-width:                 $_font-size-base * 0.5 !default;
-$space-width-px:                 $space-width * 1px !default;
+$space-width:                  $_font-size-base * 0.5 !default;
+$space-width-px:               $space-width * 1px !default;
 // Prefix for :root CSS variables
 
 $variable-prefix:             bs- !default; // Deprecated in v5.2.0 for the shorter `$prefix`
@@ -515,7 +521,7 @@ $position-values: (
 
 $body-text-align:           null !default;
 $body-color:                $gray-900 !default;
-$body-bg:                   $white !default;
+$body-bg:                   $blue !default;
 
 $body-secondary-color:      rgba($body-color, .75) !default;
 $body-secondary-bg:         $gray-200 !default;
@@ -682,18 +688,18 @@ $aspect-ratios: (
 
 // scss-docs-start font-variables
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
-$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-sans-serif:      DOS, Monaco, Menlo, Consolas, "Courier New", monospace !default;
+$font-family-monospace:      DOS, Monaco, Menlo, Consolas, "Courier New", monospace !default;
 // stylelint-enable value-keyword-case
-$font-family-base:            var(--#{$prefix}font-sans-serif) !default;
+$font-family-base:      DOS, Monaco, Menlo, Consolas, "Courier New", monospace !default;
 $font-family-code:            var(--#{$prefix}font-monospace) !default;
 
 // $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
 // $font-size-base affects the font size of the body text
 $font-size-root:              null !default;
 $font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
-$font-size-sm:                $font-size-base * .875 !default;
-$font-size-lg:                $font-size-base * 1.25 !default;
+$font-size-sm:                $font-size-base !default;
+$font-size-lg:                $font-size-base !default;
 
 $font-weight-lighter:         lighter !default;
 $font-weight-light:           300 !default;
@@ -705,15 +711,15 @@ $font-weight-bolder:          bolder !default;
 
 $font-weight-base:            $font-weight-normal !default;
 
-$line-height-base:            1.5 !default;
-$line-height-sm:              1.25 !default;
-$line-height-lg:              2 !default;
+$line-height-base:            $_line-height-scalar !default;
+$line-height-sm:              $_line-height-scalar !default;
+$line-height-lg:              $_line-height-scalar !default;
 
-$h1-font-size:                $font-size-base * 2.5 !default;
-$h2-font-size:                $font-size-base * 2 !default;
-$h3-font-size:                $font-size-base * 1.75 !default;
-$h4-font-size:                $font-size-base * 1.5 !default;
-$h5-font-size:                $font-size-base * 1.25 !default;
+$h1-font-size:                $font-size-base !default;
+$h2-font-size:                $font-size-base !default;
+$h3-font-size:                $font-size-base !default;
+$h4-font-size:                $font-size-base !default;
+$h5-font-size:                $font-size-base !default;
 $h6-font-size:                $font-size-base !default;
 // scss-docs-end font-variables
 

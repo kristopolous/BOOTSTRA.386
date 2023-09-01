@@ -1,5 +1,6 @@
 {
   "name": "bootstrap",
+
   "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
   "version": "5.3.1",
   "config": {
@@ -40,7 +41,7 @@
   "style": "dist/css/bootstrap.css",
   "scripts": {
     "start": "npm-run-all --parallel watch docs-serve",
-    "bootstra": "mkdir -p dist/fonts && (cd ../ && ./icon-gen.js v5.3.1/dist/fonts) && cp ../fonts/Px437_IBM_EGA8.otf dist/fonts/ && cross-env-shell shx cp -r dist/fonts/ site/docs/$npm_package_version_short/dist/",
+    "bootstra": "mkdir -p dist/fonts && (cd ../ && ./icon-gen.js v5.3.1/dist/fonts) && cp ../fonts/Px437_IBM_EGA8.otf dist/fonts/ && cp -r dist/fonts/ site/content/docs/$npm_package_config_version_short/dist/",
     "bundlewatch": "bundlewatch --config .bundlewatch.config.json",
     "css": "npm-run-all css-compile css-prefix css-rtl css-minify bootstra",
     "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css scss/:dist/css/",
@@ -80,7 +81,7 @@
     "docs-compile": "npm run docs-build",
     "docs-vnu": "node build/vnu-jar.js",
     "docs-lint": "npm run docs-vnu",
-    "docs-serve": "hugo server --port 9001 --disableFastRender --printUnusedTemplates",
+    "docs-serve": "hugo server --bind=0.0.0.0 --port 9001 --disableFastRender --printUnusedTemplates",
     "docs-serve-only": "npx sirv-cli _site --port 9001",
     "lockfile-lint": "lockfile-lint --allowed-hosts npm --allowed-schemes https: --empty-hostname false --type npm --path package-lock.json",
     "update-deps": "ncu -u -x globby,jasmine,karma-browserstack-launcher,karma-rollup-preprocessor && echo Manually update site/assets/js/vendor",

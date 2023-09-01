@@ -45,6 +45,18 @@
 // 3. Prevent adjustments of font size after orientation changes in iOS.
 // 4. Change the default tap highlight to be completely transparent in iOS.
 
+@font-face {
+  font-family: 'DOS';
+
+  src: url("#{$fp}Px437_IBM_EGA8.otf") format('opentype');
+
+  font-weight: normal;
+  font-style: normal;
+  font-kerning: none;
+  font-synthesis: none;
+  font-variant-ligatures: none;
+  font-variant-numeric: tabular-nums;
+}
 // scss-docs-start reboot-body-rules
 body {
   margin: 0; // 1
@@ -75,51 +87,13 @@ hr {
 
 
 // Typography
-//
-// 1. Remove top margins from headings
-//    By default, `<h1>`-`<h6>` all receive top and bottom margins. We nuke the top
-//    margin for easier control within type scales as it avoids margin collapsing.
-
-%heading {
-  margin-top: 0; // 1
+// I really liked the bs-5 way of doing this but our system is so much simpler so sorry.
+h1, h2, h3, h4, h5, h6 {
+  font-size: $font-size-base !important;
+  margin-top: 0;
   margin-bottom: $headings-margin-bottom;
-  font-family: $headings-font-family;
-  font-style: $headings-font-style;
-  font-weight: $headings-font-weight;
-  line-height: $headings-line-height;
-  color: var(--#{$prefix}heading-color);
+  font-weight: normal;
 }
-
-h1 {
-  @extend %heading;
-  @include font-size($h1-font-size);
-}
-
-h2 {
-  @extend %heading;
-  @include font-size($h2-font-size);
-}
-
-h3 {
-  @extend %heading;
-  @include font-size($h3-font-size);
-}
-
-h4 {
-  @extend %heading;
-  @include font-size($h4-font-size);
-}
-
-h5 {
-  @extend %heading;
-  @include font-size($h5-font-size);
-}
-
-h6 {
-  @extend %heading;
-  @include font-size($h6-font-size);
-}
-
 
 // Reset margins on paragraphs
 //
@@ -607,4 +581,22 @@ progress {
 
 [hidden] {
   display: none !important;
+}
+
+// trying to get all the typography to obey my orders like some soul crushing dictator
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  font-size: $font-size-base !important;
+  font-weight: normal !important;
 }
