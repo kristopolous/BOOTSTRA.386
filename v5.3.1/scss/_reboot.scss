@@ -599,4 +599,11 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
   font-size: $font-size-base !important;
   font-weight: normal !important;
+
+  // this is a tough one since we need to !important our way out of it later on for a few
+  // effects
+  box-shadow: 0 0 0 !important;
+
+  // This is universally true - we place it 4 times because of override rules
+  border-radius: 0 0 0 0 !important;
 }

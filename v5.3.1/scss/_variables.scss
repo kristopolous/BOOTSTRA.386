@@ -9,6 +9,7 @@
 // These values are lifted from
 // https://en.wikipedia.org/wiki/Enhanced_Graphics_Adapter
 // screw it, why think?
+$black:    #000 !default;
 $blue:     #0000aa !default;
 $green:    #00aa00 !default;
 $cyan:     #00aaaa !default;
@@ -34,16 +35,15 @@ $teal:    $cyan !default;
 // scss-docs-end color-variables
 
 // scss-docs-start gray-color-variables
-$gray-100: $grayDark !default;
-$gray-200: $grayDark !default;
-$gray-300: $grayDark !default;
-$gray-400: $grayDark !default;
+$gray-100: $grayLight !default;
+$gray-200: $grayLight !default;
+$gray-300: $grayLight !default;
+$gray-400: $grayLight !default;
 $gray-500: $grayDark !default;
-$gray-600: $grayLight !default;
-$gray-700: $grayLight !default;
-$gray-800: $grayLight !default;
-$gray-900: $grayLight !default;
-$black:    #000 !default;
+$gray-600: $grayDark !default;
+$gray-700: $grayDark !default;
+$gray-800: $black !default;
+$gray-900: $black !default;
 // scss-docs-end gray-color-variables
 
 // fusv-disable
@@ -313,14 +313,14 @@ $cyans: (
 // fusv-enable
 
 // scss-docs-start theme-color-variables
-$primary:       $blue !default;
+$primary:       $grayLight !default;
 $secondary:     $gray-600 !default;
 $success:       $green !default;
 $info:          $cyan !default;
-$warning:       $yellow !default;
+$warning:       $brown !default;
 $danger:        $red !default;
-$light:         $gray-100 !default;
-$dark:          $gray-900 !default;
+$light:         $white !default;
+$dark:          $black !default;
 // scss-docs-end theme-color-variables
 
 $fp: '../fonts/';
@@ -520,7 +520,7 @@ $position-values: (
 // Settings for the `<body>` element.
 
 $body-text-align:           null !default;
-$body-color:                $gray-900 !default;
+$body-color:                $white !default;
 $body-bg:                   $blue !default;
 
 $body-secondary-color:      rgba($body-color, .75) !default;
@@ -535,7 +535,7 @@ $body-emphasis-color:       $black !default;
 //
 // Style anchor elements.
 
-$link-color:                              $primary !default;
+$link-color:                              $yellow !default;
 $link-decoration:                         underline !default;
 $link-shade-percentage:                   20% !default;
 $link-hover-color:                        shift-color($link-color, $link-shade-percentage) !default;
@@ -1279,7 +1279,7 @@ $navbar-brand-font-size:            $font-size-lg !default;
 // Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
 $nav-link-height:                   $font-size-base * $line-height-base + $nav-link-padding-y * 2 !default;
 $navbar-brand-height:               $navbar-brand-font-size * $line-height-base !default;
-$navbar-brand-padding-y:            ($nav-link-height - $navbar-brand-height) * .5 !default;
+$navbar-brand-padding-y:            0 !default; //($nav-link-height - $navbar-brand-height) * .5 !default;
 $navbar-brand-margin-end:           1rem !default;
 
 $navbar-toggler-padding-y:          .25rem !default;

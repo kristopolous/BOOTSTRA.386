@@ -32,8 +32,9 @@
   flex-wrap: wrap; // allow us to do the line break for collapsing content
   align-items: center;
   justify-content: space-between; // space out brand from logo
-  padding: var(--#{$prefix}navbar-padding-y) var(--#{$prefix}navbar-padding-x);
-  @include gradient-bg();
+  padding: 0;
+  //padding: var(--#{$prefix}navbar-padding-y) var(--#{$prefix}navbar-padding-x);
+  //@include gradient-bg();
 
   // Because flex properties aren't inherited, we need to redeclare these first
   // few properties so that content nested within behave properly.
