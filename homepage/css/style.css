@@ -24,7 +24,7 @@ body {
   margin:1rem 0;
   padding:1rem 0;
 }
-big {
+h2,big {
   font-family: times_b24;
 }
 b {

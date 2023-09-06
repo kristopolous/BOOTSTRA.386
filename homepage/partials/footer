@@ -1,60 +1,60 @@
 <CENTER>
-<BR><BR>
+  <BR><BR>
 
-<TABLE CELLSPACING=1 CELLPADDING=4 STYLE="border:1px outset" BORDER=1 >
-<TR>
-<TD ALIGN=CENTER>
-  <A HREF="https://github.com/kristopolous/BOOTSTRA.386">
-    <IMG SRC="img/ftp.gif" VSPACE=10>
-    <br>
-    Download Bootstra/386
-    <BR><BR>
-  </A>
-</TD>
-
-<TD ALIGN=CENTER>
-  <A HREF="buy.html">
-    <IMG SRC="img/money-bw.gif" VSPACE=10>
-    <BR>
-    Buy on Floppy
-    <BR><BR>
-  </A>
-</TD>
-
-<TD ALIGN=CENTER>
-  <A HREF="guestbook.html">
-    <IMG SRC="img/scroll.gif" VSPACE=10>
-    <BR>
-    Sign Our Guestbook<BR><BR>
-  </A>
-</TD>
-
-<TD ALIGN=CENTER>
-  <A HREF="https://groups.google.com/forum/#!forum/bootstra-386">
-    <IMG SRC="img/message.gif" VSPACE=10>
-      <BR>
-      Join our newsgroup
-      <BR><BR>
-    </A>
-  </TD>
-  </TR>
-</TABLE>
-
-<BR>
-
-<CENTER>
-<TABLE>
+  <TABLE CELLSPACING=1 CELLPADDING=4 STYLE="border:1px outset" BORDER=1 >
   <TR>
-    <TD>
-     <A HREF="https://creativecommons.org/licenses/by-sa/4.0/legalcode"><IMG SRC="img/by-sa.gif"></A>
+    <TD ALIGN=CENTER>
+      <A HREF="https://github.com/kristopolous/BOOTSTRA.386">
+        <IMG SRC="img/ftp.gif" VSPACE=10>
+        <BR>Download<BR><BR>
+      </A>
     </TD>
-    <TD VALIGN=CENTER ALIGN=LEFT>
-      <A HREF="https://creativecommons.org/licenses/by-sa/4.0/legalcode">2020</A> BOOTSTRA/386
+
+    <TD ALIGN=CENTER>
+      <A HREF="buy.html">
+        <IMG SRC="img/money-bw.gif" VSPACE=10>
+        <BR>Buy<BR><BR>
+      </A>
     </TD>
-  </TR>
-</TABLE>
-<BR>
-BOOTSTRA/386 is <b>not</b> affiliated with <A HREF="https://getbootstrap.com/">the official Bootstrap project</A>.
+
+    <TD ALIGN=CENTER>
+      <A HREF="guestbook.html">
+        <IMG SRC="img/scroll.gif" VSPACE=10>
+        <BR>Guestbook<BR><BR>
+      </A>
+    </TD>
+
+    <TD ALIGN=CENTER>
+      <A HREF="spambook.html">
+        <IMG SRC="img/phone.gif" VSPACE=10>
+        <BR>Spambook<BR><BR>
+      </A>
+    </TD>
+
+    <TD ALIGN=CENTER>
+      <A HREF="https://groups.google.com/forum/#!forum/bootstra-386">
+        <IMG SRC="img/message.gif" VSPACE=10>
+          <BR>Newsgroup<BR><BR>
+        </A>
+      </TD>
+    </TR>
+  </TABLE>
+
+  <BR>
+
+  <TABLE>
+    <TR>
+      <TD>
+       <A HREF="https://creativecommons.org/licenses/by-sa/4.0/legalcode"><IMG SRC="img/by-sa.gif"></A>
+      </TD>
+      <TD VALIGN=CENTER ALIGN=LEFT>
+        <A HREF="https://creativecommons.org/licenses/by-sa/4.0/legalcode">2022</A> BOOTSTRA/386
+      </TD>
+    </TR>
+  </TABLE>
+  <BR>
+  BOOTSTRA/386 is <b>not</b> affiliated with <A HREF="https://getbootstrap.com/">the official Bootstrap project</A>.
 </CENTER>
+
 </BODY>
 </HTML>
