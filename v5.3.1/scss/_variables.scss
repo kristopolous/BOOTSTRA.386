@@ -1270,19 +1270,19 @@ $nav-underline-link-active-color:   var(--#{$prefix}emphasis-color) !default;
 // Navbar
 
 // scss-docs-start navbar-variables
-$navbar-padding-y:                  $spacer * .5 !default;
+$navbar-padding-y:                  0;//spacer * .5 !default;
 $navbar-padding-x:                  null !default;
 
-$navbar-nav-link-padding-x:         .5rem !default;
+$navbar-nav-link-padding-x:         $_font-size-base-px !default;
 
 $navbar-brand-font-size:            $font-size-lg !default;
 // Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
-$nav-link-height:                   $font-size-base * $line-height-base + $nav-link-padding-y * 2 !default;
+$nav-link-height:                   $font-size-base * $line-height-base + $nav-link-padding-y !default;
 $navbar-brand-height:               $navbar-brand-font-size * $line-height-base !default;
 $navbar-brand-padding-y:            0 !default; //($nav-link-height - $navbar-brand-height) * .5 !default;
 $navbar-brand-margin-end:           1rem !default;
 
-$navbar-toggler-padding-y:          .25rem !default;
+$navbar-toggler-padding-y:          0 !default;
 $navbar-toggler-padding-x:          .75rem !default;
 $navbar-toggler-font-size:          $font-size-lg !default;
 $navbar-toggler-border-radius:      $btn-border-radius !default;
