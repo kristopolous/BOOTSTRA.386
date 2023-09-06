@@ -1,22 +1,93 @@
-<?php
+<?
+    if(strpos($_SERVER['REMOTE_ADDR'], '5.188.211') !== false) {
+      header("HTTP/1.1 301 Moved Permanently");
+      header("Location: http://" . $_SERVER['REMOTE_ADDR']);
+      header('Content-Encoding: gzip');
+      echo file_get_contents('../empty.gz');
+      exit(0);
+    }
+    $my_uuid = '17398cfa-0208-4556-9b4f-dde02dd7f027';
+    $nonce = time();
+    $hash = hash('ripemd160', $my_uuid . $nonce);
+
+    $source = $_SERVER['REQUEST_URI'];
+    $source = substr($source, 1, -5);
+    //echo $source;
+
 $EE = false;
+$show_form = true;
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
+  $show_form = false;
   if(!empty($_POST['message'])) {
-    $_POST['message'] = preg_replace('/\n/', '<br>', strip_tags(trim($_POST['message']), ['b', 'i', 'u', 'br', 'strong', 'em', 'ul', 'li', 'ol', 'p']));
+    $_POST['message'] = preg_replace('/\n/', '<br>', strip_tags(trim($_POST['message']), '<b><i><u><br><strong><em><ul><li><ol><font><small><big><p>'));
+    $message = $_POST['message'];
+    $filter = false;
+    $lc = preg_replace('/\*/', '', strtolower($message));
+
+    if(time() - intval($_POST['nonce']) > 600) {
+      $filter = 'nonce';
+    } 
+    
+    if(strlen($lc) > 2000 || strlen($lc) < 2) {
+      $filter = 'length';
+    }
+
+    if(!$filter) {
+      $check = hash('ripemd160', $my_uuid . $_POST['nonce']); 
+      if($check !== $_POST['hash']) {
+        $filter = 'hash';
+      }
+    }
+
+    if(!$filter) {
+      error_log($n);
+      foreach(['http:','porn','xxx',' com ','casino','https:','jackpot','viagra','online store','www.',' sexy ','bitcoin','crypto','your business','cialis','.onion','\xd0','\xd0\xa1','\xd0\x9f','promotional','backlinks','gambling'] as $n) {
+
+        if(strpos($lc, $n) !== false) {
+          $filter = "word:$n";
+          break;
+        }
+      }
+    }
+
+    if(!$filter && strpos(file_get_contents('guestbook.json'), $message) !== false) {
+      $filter = "copy";
+    }
+
     $_POST['d'] = date('g:i A') . ' 19' . (intval(date('Y')) - 1900) . date('-m-d');
-    file_put_contents('guestbook.json', json_encode($_POST) . "\n", FILE_APPEND);
+    $_POST['i'] = $_SERVER['REMOTE_ADDR'];
+
+    $_POST['u'] = $_SERVER['HTTP_USER_AGENT'];
+
+    unset($_POST['submit']);
+
+    if(!$filter) {
+      unset($_POST['nonce']);
+      unset($_POST['hash']);
+      error_log(">> passed: ". $message);
+      file_put_contents('guestbook.json', json_encode($_POST) . "\n", FILE_APPEND);
+    } else {
+      $_POST['filter'] = $filter;
+      file_put_contents('spambook.json', json_encode($_POST) . "\n", FILE_APPEND);
+    }
   } else {
     $EE = true;
   }
 }
+$Source = ucfirst($source);
+$verb = 'sign';
+if($source === 'spambook') {
+  $verb = 'spam';
+}
+
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
 <HTML>
 <HEAD>
-   <TITLE>BOOTSTRA/386 Guestbook</TITLE>
-   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <TITLE>BOOTSTRA/386 <?=$Source?></TITLE>
+   <META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0" />
    <META NAME="Author" CONTENT="">
-   <META NAME="GENERATOR" CONTENT="Mozilla/3.04 Gold (WinNT; I) [Netscape]">
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.04Gold (WinNT; I) [Netscape]">
    <LINK HREF="css/style.css" REL="stylesheet" TYPE="text/css">
 </HEAD>
 <BODY BGCOLOR="#C0C0C0">
@@ -24,7 +95,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 <H1 ALIGN=CENTER>
   <A HREF="index.html">
   <IMG SRC="img/terminal.gif"><BR>
-  BOOTSTRA/386 5.0
+  BOOTSTRA/386 4.0
   </A>
 </H1>
 <CENTER>
@@ -35,12 +106,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
       <IMG SRC="img/scroll.gif"> 
     </TD>
     <TD VALIGN=CENTER>
-      <BIG><STRONG>Sign Our Guestbook</STRONG></BIG>
+      <BIG><STRONG><?= ucfirst($verb);?> Our <?=$Source;?></STRONG></BIG>
     </TD>
   </TR>
 </TABLE>
-<?
-if($EE) { ?>
+<? if($EE) { ?>
 <TABLE BORDER=1 CELLPADDING=10>
   <TR><TD>
     <CENTER>
@@ -62,38 +132,45 @@ if($EE) { ?>
 <BR>
 <BR>
 
-<FORM METHOD="post">
-<TABLE WIDTH=400 CELLPADDING=4>
-  <TR>
-    <TD ALIGN=RIGHT>
-      Name:
-    </td>
-    <TD>
-      <INPUT name="name" TYPE=text SIZE=22>
-    </TD>
-  </TR>
-  <TR>
-    <TD ALIGN=RIGHT>
-      Email:
-    </TD>
-    <TD>
-      <INPUT name="email" TYPE=text SIZE=22>
-    </TD>
-  </TR>
-  <TR>
-    <TD ALIGN=RIGHT VALIGN=TOP>
-      Your Message:
-    </TD>
-    <TD>
-      <TEXTAREA NAME="message" ROWS=4 COLS=22></TEXTAREA>
-      <BR>
-      <P>
-      <INPUT TYPE="SUBMIT" value="SIGN!">
-      </P>
-    </TD>
-  </TR>
-</TABLE>
-</form>
+<? if ($show_form) { ?>
+<FORM METHOD="POST">
+  <SCRIPT>document.write('
+    <INPUT TYPE="hidden" NAME="nonce" VALUE="');document.write('<?php echo $nonce; ?>">
+  ');</SCRIPT>
+  <INPUT TYPE="hidden" NAME="hash" VALUE="<?php echo $hash; ?>">
+
+  <TABLE WIDTH=400 CELLPADDING=4>
+    <TR>
+      <TD ALIGN=RIGHT>
+        Name:
+      </td>
+      <TD>
+        <INPUT name="name" TYPE=text SIZE=22>
+      </TD>
+    </TR>
+    <TR>
+      <TD ALIGN=RIGHT>
+        Email:
+      </TD>
+      <TD>
+        <INPUT name="email" TYPE=text SIZE=22>
+      </TD>
+    </TR>
+    <TR>
+      <TD ALIGN=RIGHT VALIGN=TOP>
+        Your Message:
+      </TD>
+      <TD>
+        <TEXTAREA NAME="message" ROWS=4 COLS=22></TEXTAREA>
+        <BR>
+        <P>
+          <INPUT TYPE="SUBMIT" value="<?=strtoupper($verb)?>!">
+        </P>
+      </TD>
+    </TR>
+  </TABLE>
+</FORM>
+<?php } ?>
 <BR>
 <HR WIDTH=400 SIZE=1>
 <IMG SRC="img/library.gif">
@@ -104,7 +181,7 @@ if($EE) { ?>
 <TR><TD>
 <?php
 
-  $entryList = array_reverse(file("guestbook.json"));
+  $entryList = array_reverse(file("${source}.json"));
   foreach($entryList as $entryRaw) {
     $entry = json_decode($entryRaw, true);
     ?>
