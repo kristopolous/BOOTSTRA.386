@@ -134,9 +134,11 @@ if($source === 'spambook') {
 
 <? if ($show_form) { ?>
 <FORM METHOD="POST">
-  <SCRIPT>document.write('
-    <INPUT TYPE="hidden" NAME="nonce" VALUE="');document.write('<?php echo $nonce; ?>">
-  ');</SCRIPT>
+  <SCRIPT>
+    var str='<INPUT TYPE="hidden" NAME="nonce" VALUE="';
+        str+='<?php echo $nonce; ?>">';
+      document.write(str);
+   </SCRIPT>
   <INPUT TYPE="hidden" NAME="hash" VALUE="<?php echo $hash; ?>">
 
   <TABLE WIDTH=400 CELLPADDING=4>
