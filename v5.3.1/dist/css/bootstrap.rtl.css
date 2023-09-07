@@ -2058,7 +2058,7 @@ time, mark, .mark, audio, video {
   }
 }
 .form-label {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
 }
 
 .col-form-label {
@@ -2070,8 +2070,8 @@ time, mark, .mark, audio, video {
 }
 
 .col-form-label-lg {
-  padding-top: calc(0.5rem + var(--bs-border-width));
-  padding-bottom: calc(0.5rem + var(--bs-border-width));
+  padding-top: calc(0 + var(--bs-border-width));
+  padding-bottom: calc(0 + var(--bs-border-width));
   font-size: 1rem;
 }
 
@@ -2082,7 +2082,7 @@ time, mark, .mark, audio, video {
 }
 
 .form-text {
-  margin-top: 0.25rem;
+  margin-top: 0;
   font-size: 1rem;
   color: var(--bs-secondary-color);
 }
@@ -2229,22 +2229,22 @@ time, mark, .mark, audio, video {
 }
 
 .form-control-lg {
-  min-height: calc(1em + 1rem + calc(var(--bs-border-width) * 2));
-  padding: 0.5rem 1rem;
+  min-height: calc(1em + 0 + calc(var(--bs-border-width) * 2));
+  padding: 0 0;
   font-size: 1rem;
   border-radius: var(--bs-border-radius-lg);
 }
 .form-control-lg::-webkit-file-upload-button {
-  padding: 0.5rem 1rem;
-  margin: -0.5rem -1rem;
-  -webkit-margin-end: 1rem;
-  margin-inline-end: 1rem;
+  padding: 0 0;
+  margin: 0 0;
+  -webkit-margin-end: 0;
+  margin-inline-end: 0;
 }
 .form-control-lg::file-selector-button {
-  padding: 0.5rem 1rem;
-  margin: -0.5rem -1rem;
-  -webkit-margin-end: 1rem;
-  margin-inline-end: 1rem;
+  padding: 0 0;
+  margin: 0 0;
+  -webkit-margin-end: 0;
+  margin-inline-end: 0;
 }
 
 textarea.form-control {
@@ -2254,7 +2254,7 @@ textarea.form-control-sm {
   min-height: calc(1em + 0 + calc(var(--bs-border-width) * 2));
 }
 textarea.form-control-lg {
-  min-height: calc(1em + 1rem + calc(var(--bs-border-width) * 2));
+  min-height: calc(1em + 0 + calc(var(--bs-border-width) * 2));
 }
 
 .form-control-color {
@@ -2277,7 +2277,7 @@ textarea.form-control-lg {
   height: calc(1em + 0 + calc(var(--bs-border-width) * 2));
 }
 .form-control-color.form-control-lg {
-  height: calc(1em + 1rem + calc(var(--bs-border-width) * 2));
+  height: calc(1em + 0 + calc(var(--bs-border-width) * 2));
 }
 
 .form-select {
@@ -2332,9 +2332,9 @@ textarea.form-control-lg {
 }
 
 .form-select-lg {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-right: 1rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 0;
   font-size: 1rem;
   border-radius: var(--bs-border-radius-lg);
 }
@@ -2385,10 +2385,10 @@ textarea.form-control-lg {
   print-color-adjust: exact;
 }
 .form-check-input[type=checkbox] {
-  border-radius: 0.25em;
+  border-radius: 0;
 }
 .form-check-input[type=radio] {
-  border-radius: 50%;
+  border-radius: 0;
 }
 .form-check-input:active {
   filter: brightness(90%);
@@ -2432,7 +2432,7 @@ textarea.form-control-lg {
   margin-right: -2.5em;
   background-image: var(--bs-form-switch-bg);
   background-position: right center;
-  border-radius: 2em;
+  border-radius: 0;
   transition: background-position 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -2505,7 +2505,7 @@ textarea.form-control-lg {
   appearance: none;
   background-color: #aaaaaa;
   border: 0;
-  border-radius: 1rem;
+  border-radius: 0;
   -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
@@ -2525,7 +2525,7 @@ textarea.form-control-lg {
   cursor: pointer;
   background-color: var(--bs-tertiary-bg);
   border-color: transparent;
-  border-radius: 1rem;
+  border-radius: 0;
 }
 .form-range::-moz-range-thumb {
   width: 1rem;
@@ -2534,7 +2534,7 @@ textarea.form-control-lg {
   appearance: none;
   background-color: #aaaaaa;
   border: 0;
-  border-radius: 1rem;
+  border-radius: 0;
   -moz-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
@@ -2554,7 +2554,7 @@ textarea.form-control-lg {
   cursor: pointer;
   background-color: var(--bs-tertiary-bg);
   border-color: transparent;
-  border-radius: 1rem;
+  border-radius: 0;
 }
 .form-range:disabled {
   pointer-events: none;
@@ -2722,7 +2722,7 @@ textarea.form-control-lg {
 .input-group-lg > .form-select,
 .input-group-lg > .input-group-text,
 .input-group-lg > .btn {
-  padding: 0.5rem 1rem;
+  padding: 0 0;
   font-size: 1rem;
   border-radius: var(--bs-border-radius-lg);
 }
@@ -2769,7 +2769,7 @@ textarea.form-control-lg {
 .valid-feedback {
   display: none;
   width: 100%;
-  margin-top: 0.25rem;
+  margin-top: 0;
   font-size: 1rem;
   color: var(--bs-form-valid-color);
 }
@@ -2859,7 +2859,7 @@ textarea.form-control-lg {
 .invalid-feedback {
   display: none;
   width: 100%;
-  margin-top: 0.25rem;
+  margin-top: 0;
   font-size: 1rem;
   color: var(--bs-form-invalid-color);
 }
@@ -3319,8 +3319,8 @@ textarea.form-control-lg {
 }
 
 .btn-lg, .btn-group-lg > .btn {
-  --bs-btn-padding-y: 0.5rem;
-  --bs-btn-padding-x: 1rem;
+  --bs-btn-padding-y: 0;
+  --bs-btn-padding-x: 0;
   --bs-btn-font-size: 1rem;
   --bs-btn-border-radius: var(--bs-border-radius-lg);
 }
@@ -3768,8 +3768,8 @@ textarea.form-control-lg {
 }
 
 .btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .btn-group-vertical {
@@ -3939,13 +3939,13 @@ textarea.form-control-lg {
   --bs-navbar-disabled-color: rgba(var(--bs-emphasis-color-rgb), 0.3);
   --bs-navbar-active-color: rgba(var(--bs-emphasis-color-rgb), 1);
   --bs-navbar-brand-padding-y: 0;
-  --bs-navbar-brand-margin-end: 1rem;
+  --bs-navbar-brand-margin-end: 16px;
   --bs-navbar-brand-font-size: 1rem;
   --bs-navbar-brand-color: rgba(var(--bs-emphasis-color-rgb), 1);
   --bs-navbar-brand-hover-color: rgba(var(--bs-emphasis-color-rgb), 1);
   --bs-navbar-nav-link-padding-x: 16px;
   --bs-navbar-toggler-padding-y: 0;
-  --bs-navbar-toggler-padding-x: 0.75rem;
+  --bs-navbar-toggler-padding-x: 0;
   --bs-navbar-toggler-font-size: 1rem;
   --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
   --bs-navbar-toggler-border-color: rgba(var(--bs-emphasis-color-rgb), 0.15);
