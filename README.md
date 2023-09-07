@@ -4,8 +4,8 @@ https://github.com/kristopolous/BOOTSTRA.386/assets/231761/9d8f7c51-0ba7-4a45-99
 
 ### Download for your favorite bootstrap version with all the necessary JS and CSS to get started right away:
 
- * BOOTSTRA/386 ][ (from 2013) [demo](http://kristopolous.github.io/BOOTSTRA.386/) [144KB](https://github.com/kristopolous/BOOTSTRA.386/blob/master/bootstra.386-latest-v2.zip?raw=true)
- * BOOTSTRA/386 <i>iii</i> (from 2015) [423KB](https://github.com/kristopolous/BOOTSTRA.386/blob/master/bootstra.386-latest-v3.zip?raw=true)
+ * BOOTSTRA/386 ][ (2013) [demo](http://kristopolous.github.io/BOOTSTRA.386/) [144KB](https://github.com/kristopolous/BOOTSTRA.386/blob/master/bootstra.386-latest-v2.zip?raw=true)
+ * BOOTSTRA/386 <i>iii</i> (2015) [423KB](https://github.com/kristopolous/BOOTSTRA.386/blob/master/bootstra.386-latest-v3.zip?raw=true)
  * BOOTSTRA/386 4 (2020) - [demo](http://kristopolous.github.io/BOOTSTRA.386/demo.html) - [remaining issues](https://github.com/kristopolous/BOOTSTRA.386/issues/85) - [current build](https://github.com/kristopolous/BOOTSTRA.386/blob/master/bootstra.386-latest-v4.zip?raw=true)
  * ブートストラップ/386 5.0 (2023) - In progress 
 
@@ -82,15 +82,6 @@ Luckily, HTML5 permits [noscript in the head section](https://stackoverflow.com/
   </style>
 </noscript>
 ```
-
-### Distractions
-
-While you're here, let me plug another fun project I have. This one includes a 1990's style "made for tv" infomercial I made. It's a better way to [search manpages called mansnip](https://github.com/kristopolous/mansnip). At least watch the youtube video, that took me days.
-
-Let's make software fun again, remember those days? Oh you're too young? Well trust me, it used to be a blast! Let's do *that* again, it was a good time.
-
-Also you can give me money, as little as $1/month ... Click on that heart sponsor thing at the top ... I'm a sponsorer as well!
-
 ### Bugs and Stuff
 
 Check out the [contribution](https://github.com/kristopolous/BOOTSTRA.386/blob/master/CONTRIBUTING.md) doc - it's easy, I swear.
@@ -104,13 +95,11 @@ These folders, and all versions, are proper forks of tagged releases of bootstra
  * [Mailing list](https://groups.google.com/forum/#!forum/bootstra-386)
  * Also try my github username on your messaging platform of choice 
 
+Also you can give me money, as little as $1/month ... Click on that heart sponsor thing at the top ... I'm a sponsorer as well!
+
 ### See [the wiki](https://github.com/kristopolous/BOOTSTRA.386/wiki/) for more documentation.
 
 ### Attributions
 
 The font for the v4 is by VileR, used under Creative Commons Share-Alike, which [can be found at int10h.org](https://int10h.org/oldschool-pc-fonts/fontlist/).
 
---- 
-Notes
-
-[1] The v3 version kinda sucked. You don't want that, do you? Brooks' 2nd system effect, not just the musings of 1975.
