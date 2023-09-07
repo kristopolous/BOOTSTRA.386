@@ -1,6 +1,7 @@
+Bootstrap/386 is a Twitter bootstrap v2/3/4/5(in progress) theme to make webpages look like they are from the gentler, less distracting time of the 1980s. 
+
 # [See A Demo By Clicking Here](http://kristopolous.github.io/BOOTSTRA.386/)
 
-https://github.com/kristopolous/BOOTSTRA.386/assets/231761/9d8f7c51-0ba7-4a45-996d-d9a36e00a6a3
 
 ### Download for your favorite bootstrap version with all the necessary JS and CSS to get started right away:
 
@@ -9,7 +10,7 @@ https://github.com/kristopolous/BOOTSTRA.386/assets/231761/9d8f7c51-0ba7-4a45-99
  * BOOTSTRA/386 4 (2020) - [demo](http://kristopolous.github.io/BOOTSTRA.386/demo.html) - [remaining issues](https://github.com/kristopolous/BOOTSTRA.386/issues/85) - [current build](https://github.com/kristopolous/BOOTSTRA.386/blob/master/bootstra.386-latest-v4.zip?raw=true)
  * ブートストラップ/386 5.0 (2023) - In progress 
 
-Bootstrap/386 is a Twitter bootstrap v2/3/4/5(in progress) theme to make webpages look like they are from the gentler, less distracting time of the 1980s. 
+https://github.com/kristopolous/BOOTSTRA.386/assets/231761/9d8f7c51-0ba7-4a45-996d-d9a36e00a6a3
 
 <a href=http://i.imgur.com/chWpJfb.jpg><img src=http://i.imgur.com/chWpJfbl.jpg></a>
 <pre>
@@ -88,12 +89,13 @@ Check out the [contribution](https://github.com/kristopolous/BOOTSTRA.386/blob/m
 
 ### Building yourself
 
-These folders, and all versions, are proper forks of tagged releases of bootstrap. Because they represent very specific snapshots in time, there's no buildbot updates or anything like that. If you want to patch updates to the dependencies and confirm the build of the old versions then please open a PR ... I ignore the automated ones that github sends me because it's not that kind of project.
+These folders, and all versions, are proper forks of tagged releases of bootstrap. Because they represent very specific snapshots in time, there's no configuration json, buildbot updates or anything like that. If you want to patch updates to the dependencies and confirm the build of the old versions then please open a PR ... I ignore the automated ones that github sends me because it's not that kind of project.
+
+For building, I have included README.md in each of the directories. Unlike the lazy chumps over at bootstrap industries, I actually support 4 versions, simultaneously. Now I do so very poorly, and with a proposterous time lag, but I supposedly do.
 
 ### Contact
 
  * [Mailing list](https://groups.google.com/forum/#!forum/bootstra-386)
- * Also try my github username on your messaging platform of choice 
 
 Also you can give me money, as little as $1/month ... Click on that heart sponsor thing at the top ... I'm a sponsorer as well!
 
