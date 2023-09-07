@@ -7,7 +7,7 @@ https://github.com/kristopolous/BOOTSTRA.386/assets/231761/9d8f7c51-0ba7-4a45-99
  * BOOTSTRA/386 ][ (from 2013) [demo](http://kristopolous.github.io/BOOTSTRA.386/) [144KB](https://github.com/kristopolous/BOOTSTRA.386/blob/master/bootstra.386-latest-v2.zip?raw=true)
  * BOOTSTRA/386 <i>iii</i> (from 2015) [423KB](https://github.com/kristopolous/BOOTSTRA.386/blob/master/bootstra.386-latest-v3.zip?raw=true)
  * BOOTSTRA/386 4 (2020) - [demo](http://kristopolous.github.io/BOOTSTRA.386/demo.html) - [remaining issues](https://github.com/kristopolous/BOOTSTRA.386/issues/85) - [current build](https://github.com/kristopolous/BOOTSTRA.386/blob/master/bootstra.386-latest-v4.zip?raw=true)
- * ブートストラップ/３８６ 5.0 (2023) **tentative name** In progress 
+ * ブートストラップ/386 5.0 (2023) - In progress 
 
 Bootstrap/386 is a Twitter bootstrap v2/3/4/5(in progress) theme to make webpages look like they are from the gentler, less distracting time of the 1980s. 
 
