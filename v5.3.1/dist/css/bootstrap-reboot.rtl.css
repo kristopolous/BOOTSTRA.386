@@ -94,9 +94,9 @@
   --bs-heading-color: inherit;
   --bs-link-color: #ffff55;
   --bs-link-color-rgb: 255, 255, 85;
-  --bs-link-decoration: underline;
-  --bs-link-hover-color: #cccc44;
-  --bs-link-hover-color-rgb: 204, 204, 68;
+  --bs-link-decoration: none;
+  --bs-link-hover-color: #ffff55;
+  --bs-link-hover-color-rgb: 255, 255, 85;
   --bs-code-color: #ff55ff;
   --bs-highlight-bg: #ffffdd;
   --bs-border-width: 1px;
@@ -165,9 +165,9 @@
   --bs-dark-border-subtle: #000;
   --bs-heading-color: inherit;
   --bs-link-color: #cccccc;
-  --bs-link-hover-color: #d6d6d6;
+  --bs-link-hover-color: #cccccc;
   --bs-link-color-rgb: 204, 204, 204;
-  --bs-link-hover-color-rgb: 214, 214, 214;
+  --bs-link-hover-color-rgb: 204, 204, 204;
   --bs-code-color: #ff99ff;
   --bs-border-color: #555555;
   --bs-border-color-translucent: rgba(255, 255, 255, 0.15);
@@ -310,7 +310,7 @@ sup {
 
 a {
   color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
-  text-decoration: underline;
+  text-decoration: none;
 }
 a:hover {
   --bs-link-color-rgb: var(--bs-link-hover-color-rgb);
