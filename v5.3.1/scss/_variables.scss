@@ -602,7 +602,7 @@ $container-max-widths: (
 // Set the number of columns and specify the width of the gutters.
 
 $grid-columns:                12 !default;
-$grid-gutter-width:           1.5rem !default;
+$grid-gutter-width:           $space-width-px !default;
 $grid-row-columns:            6 !default;
 
 // Container padding
@@ -629,22 +629,22 @@ $border-color-translucent:    rgba($black, .175) !default;
 // scss-docs-end border-variables
 
 // scss-docs-start border-radius-variables
-$border-radius:               .375rem !default;
-$border-radius-sm:            .25rem !default;
-$border-radius-lg:            .5rem !default;
-$border-radius-xl:            1rem !default;
-$border-radius-xxl:           2rem !default;
-$border-radius-pill:          50rem !default;
+$border-radius:               0 !default;
+$border-radius-sm:            0 !default;
+$border-radius-lg:            0 !default;
+$border-radius-xl:            0 !default;
+$border-radius-xxl:           0 !default;
+$border-radius-pill:          0 !default;
 // scss-docs-end border-radius-variables
 // fusv-disable
 $border-radius-2xl:           $border-radius-xxl !default; // Deprecated in v5.3.0
 // fusv-enable
 
 // scss-docs-start box-shadow-variables
-$box-shadow:                  0 .5rem 1rem rgba($black, .15) !default;
-$box-shadow-sm:               0 .125rem .25rem rgba($black, .075) !default;
-$box-shadow-lg:               0 1rem 3rem rgba($black, .175) !default;
-$box-shadow-inset:            inset 0 1px 2px rgba($black, .075) !default;
+$box-shadow:                  none !default;
+$box-shadow-sm:               none !default;
+$box-shadow-lg:               none !default;
+$box-shadow-inset:            none !default;
 // scss-docs-end box-shadow-variables
 
 $component-active-color:      $white !default;
@@ -701,13 +701,13 @@ $font-size-base:              1rem !default; // Assumes the browser default, typ
 $font-size-sm:                $font-size-base !default;
 $font-size-lg:                $font-size-base !default;
 
-$font-weight-lighter:         lighter !default;
-$font-weight-light:           300 !default;
-$font-weight-normal:          400 !default;
-$font-weight-medium:          500 !default;
-$font-weight-semibold:        600 !default;
-$font-weight-bold:            700 !default;
-$font-weight-bolder:          bolder !default;
+$font-weight-lighter:         normal !default;
+$font-weight-light:           normal !default;
+$font-weight-normal:          normal !default;
+$font-weight-medium:          normal !default;
+$font-weight-semibold:        normal !default;
+$font-weight-bold:            normal !default;
+$font-weight-bolder:          normal !default;
 
 $font-weight-base:            $font-weight-normal !default;
 
@@ -735,11 +735,11 @@ $font-sizes: (
 // scss-docs-end font-sizes
 
 // scss-docs-start headings-variables
-$headings-margin-bottom:      $spacer * .5 !default;
+$headings-margin-bottom:      0 !default;
 $headings-font-family:        null !default;
 $headings-font-style:         null !default;
-$headings-font-weight:        500 !default;
-$headings-line-height:        1.2 !default;
+$headings-font-weight:        normal !default;
+$headings-line-height:        $_line-height-scalar !default;
 $headings-color:              inherit !default;
 // scss-docs-end headings-variables
 
@@ -755,17 +755,17 @@ $display-font-sizes: (
 
 $display-font-family: null !default;
 $display-font-style:  null !default;
-$display-font-weight: 300 !default;
+$display-font-weight: normal !default;
 $display-line-height: $headings-line-height !default;
 // scss-docs-end display-headings
 
 // scss-docs-start type-variables
-$lead-font-size:              $font-size-base * 1.25 !default;
-$lead-font-weight:            300 !default;
+$lead-font-size:              $_font-size-base-px !default;
+$lead-font-weight:            normal !default;
 
-$small-font-size:             .875em !default;
+$small-font-size:             $_font-size-base-px !default;
 
-$sub-sup-font-size:           .75em !default;
+$sub-sup-font-size:           $_font-size-base-px !default;
 
 // fusv-disable
 $text-muted:                  var(--#{$prefix}secondary-color) !default; // Deprecated in 5.3.0
@@ -774,7 +774,7 @@ $text-muted:                  var(--#{$prefix}secondary-color) !default; // Depr
 $initialism-font-size:        $small-font-size !default;
 
 $blockquote-margin-y:         $spacer !default;
-$blockquote-font-size:        $font-size-base * 1.25 !default;
+$blockquote-font-size:        $_font-size-base-px !default;
 $blockquote-footer-color:     $gray-600 !default;
 $blockquote-footer-font-size: $small-font-size !default;
 
@@ -788,21 +788,21 @@ $hr-height:                   null !default; // Deprecated in v5.2.0
 
 $hr-border-color:             null !default; // Allows for inherited colors
 $hr-border-width:             var(--#{$prefix}border-width) !default;
-$hr-opacity:                  .25 !default;
+$hr-opacity:                  1 !default;
 
 // scss-docs-start vr-variables
 $vr-border-width:             var(--#{$prefix}border-width) !default;
 // scss-docs-end vr-variables
 
-$legend-margin-bottom:        .5rem !default;
-$legend-font-size:            1.5rem !default;
+$legend-margin-bottom:        0 !default;
+$legend-font-size:            $_font-size-base-px !default;
 $legend-font-weight:          null !default;
 
 $dt-font-weight:              $font-weight-bold !default;
 
-$list-inline-padding:         .5rem !default;
+$list-inline-padding:         0 !default;
 
-$mark-padding:                .1875em !default;
+$mark-padding:                0 !default;
 $mark-bg:                     $yellow-100 !default;
 // scss-docs-end type-variables
 
@@ -812,10 +812,10 @@ $mark-bg:                     $yellow-100 !default;
 // Customizes the `.table` component with basic values, each used across all table variations.
 
 // scss-docs-start table-variables
-$table-cell-padding-y:        .5rem !default;
-$table-cell-padding-x:        .5rem !default;
-$table-cell-padding-y-sm:     .25rem !default;
-$table-cell-padding-x-sm:     .25rem !default;
+$table-cell-padding-y:        0 !default;
+$table-cell-padding-x:        0 !default;
+$table-cell-padding-y-sm:     0 !default;
+$table-cell-padding-x-sm:     0 !default;
 
 $table-cell-vertical-align:   top !default;
 
@@ -870,8 +870,8 @@ $table-variants: (
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
 // scss-docs-start input-btn-variables
-$input-btn-padding-y:         .375rem !default;
-$input-btn-padding-x:         .75rem !default;
+$input-btn-padding-y:         0 !default;
+$input-btn-padding-x:         0 !default;
 $input-btn-font-family:       null !default;
 $input-btn-font-size:         $font-size-base !default;
 $input-btn-line-height:       $line-height-base !default;
@@ -882,8 +882,8 @@ $input-btn-focus-color:         $focus-ring-color !default;
 $input-btn-focus-blur:          $focus-ring-blur !default;
 $input-btn-focus-box-shadow:    $focus-ring-box-shadow !default;
 
-$input-btn-padding-y-sm:      .25rem !default;
-$input-btn-padding-x-sm:      .5rem !default;
+$input-btn-padding-y-sm:      0 !default;
+$input-btn-padding-x-sm:      0 !default;
 $input-btn-font-size-sm:      $font-size-sm !default;
 
 $input-btn-padding-y-lg:      .5rem !default;
@@ -1320,8 +1320,8 @@ $navbar-dark-brand-hover-color:     $navbar-dark-active-color !default;
 // scss-docs-start dropdown-variables
 $dropdown-min-width:                10rem !default;
 $dropdown-padding-x:                0 !default;
-$dropdown-padding-y:                .5rem !default;
-$dropdown-spacer:                   .125rem !default;
+$dropdown-padding-y:                0 !default;
+$dropdown-spacer:                   0 !default;
 $dropdown-font-size:                $font-size-base !default;
 $dropdown-color:                    var(--#{$prefix}body-color) !default;
 $dropdown-bg:                       var(--#{$prefix}body-bg) !default;

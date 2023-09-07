@@ -75,7 +75,7 @@
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: DOS, Monaco, Menlo, Consolas, "Courier New", monospace;
   --bs-body-font-size: 1rem;
-  --bs-body-font-weight: 400;
+  --bs-body-font-weight: normal;
   --bs-body-line-height: 1;
   --bs-body-color: #fff;
   --bs-body-color-rgb: 255, 255, 255;
@@ -103,17 +103,17 @@
   --bs-border-style: solid;
   --bs-border-color: #aaaaaa;
   --bs-border-color-translucent: rgba(0, 0, 0, 0.175);
-  --bs-border-radius: 0.375rem;
-  --bs-border-radius-sm: 0.25rem;
-  --bs-border-radius-lg: 0.5rem;
-  --bs-border-radius-xl: 1rem;
-  --bs-border-radius-xxl: 2rem;
+  --bs-border-radius: 0;
+  --bs-border-radius-sm: 0;
+  --bs-border-radius-lg: 0;
+  --bs-border-radius-xl: 0;
+  --bs-border-radius-xxl: 0;
   --bs-border-radius-2xl: var(--bs-border-radius-xxl);
-  --bs-border-radius-pill: 50rem;
-  --bs-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  --bs-box-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-  --bs-box-shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
-  --bs-box-shadow-inset: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+  --bs-border-radius-pill: 0;
+  --bs-box-shadow: none;
+  --bs-box-shadow-sm: none;
+  --bs-box-shadow-lg: none;
+  --bs-box-shadow-inset: none;
   --bs-focus-ring-width: 0.25rem;
   --bs-focus-ring-opacity: 0.25;
   --bs-focus-ring-color: rgba(170, 170, 170, 0.25);
@@ -539,7 +539,7 @@
   width: var(--bs-border-width);
   min-height: 1em;
   background-color: currentcolor;
-  opacity: 0.25;
+  opacity: 1;
 }
 
 .align-baseline {
@@ -716,15 +716,15 @@
 }
 
 .shadow {
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  box-shadow: none !important;
 }
 
 .shadow-sm {
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+  box-shadow: none !important;
 }
 
 .shadow-lg {
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+  box-shadow: none !important;
 }
 
 .shadow-none {
@@ -1747,31 +1747,31 @@
 }
 
 .fw-lighter {
-  font-weight: lighter !important;
+  font-weight: normal !important;
 }
 
 .fw-light {
-  font-weight: 300 !important;
+  font-weight: normal !important;
 }
 
 .fw-normal {
-  font-weight: 400 !important;
+  font-weight: normal !important;
 }
 
 .fw-medium {
-  font-weight: 500 !important;
+  font-weight: normal !important;
 }
 
 .fw-semibold {
-  font-weight: 600 !important;
+  font-weight: normal !important;
 }
 
 .fw-bold {
-  font-weight: 700 !important;
+  font-weight: normal !important;
 }
 
 .fw-bolder {
-  font-weight: bolder !important;
+  font-weight: normal !important;
 }
 
 .lh-1 {
