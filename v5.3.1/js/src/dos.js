@@ -83,7 +83,7 @@ $(function () {
       rounds = (height * width / speedFactor),
       column = width, row = height - character.height
 
-    wrap.id = 'wrap386;
+    wrap.id = 'wrap386'
     bar.id = 'bar386'
     cursor.id = 'cursor386'
 
@@ -113,30 +113,30 @@ $(function () {
 
           if (pass == 2) {
             document.body.removeChild(cursor)
-            clearInterval(ival);
+            clearInterval(ival)
           } else {
             wrap.parentNode.removeChild(wrap)
             if (onePass) {
               clearInterval(ival)
             } else {
               document.body.appendChild(cursor)
-              rounds /= 2;
-              character.height *= 4;
+              rounds /= 2
+              character.height *= 4
             }
           }
         }
 
         if (pass === 0) {
-          bar.style.width = column + 'px';
-          wrap.style.height = row + 'px';
+          bar.style.width = column + 'px'
+          wrap.style.height = row + 'px'
         } else {
-          cursor.style.right = column + 'px';
-          cursor.style.bottom = row + 'px';
+          cursor.style.right = column + 'px'
+          cursor.style.bottom = row + 'px'
         }
       }
-    }, 1);
+    }, 1)
   }
-  loading();
+  loading()
 });
 
 export default _386
