@@ -317,7 +317,7 @@ $primary:       $grayLight !default;
 $secondary:     $gray-600 !default;
 $success:       $green !default;
 $info:          $cyan !default;
-$warning:       $brown !default;
+$warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $white !default;
 $dark:          $black !default;
@@ -356,6 +356,7 @@ $darkMap: (
   $brown: $brown
 );
 
+
 $colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $colors: map-merge(
@@ -377,6 +378,7 @@ $colors: map-merge(
   $colors
 );
 
+
 $primary:       $grayLight !default;
 $secondary:     $grayLight !default;
 $success:       $green !default;
@@ -397,6 +399,9 @@ $theme-colors: (
   "dark":       $dark
 ) !default;
 // scss-docs-end theme-colors-map
+
+$ignore: injectvar('darkMap', $darkMap) !default;
+$ignore: injectvar('brightMap', $brightMap) !default;
 
 // scss-docs-start theme-text-variables
 $primary-text-emphasis:   shade-color($primary, 60%) !default;

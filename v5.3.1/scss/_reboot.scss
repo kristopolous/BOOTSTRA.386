@@ -113,7 +113,7 @@ p {
 // 3. Prevent the text-decoration to be skipped.
 
 abbr[title] {
-  text-decoration: underline dotted; // 1
+  text-decoration: none; // 1
   cursor: help; // 2
   text-decoration-skip-ink: none; // 3
 }
@@ -597,7 +597,8 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-  font-size: $font-size-base !important;
+  font-size: $_font-size-base-px !important;
+  font-style: normal !important;
   font-weight: normal !important;
 
   // this is a tough one since we need to !important our way out of it later on for a few

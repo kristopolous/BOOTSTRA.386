@@ -1,6 +1,8 @@
+@use "sass:map";
 // Bootstrap functions
 //
 // Utility mixins and functions for evaluating source code across our variables, maps, and mixins.
+
 
 // Ascending
 // Used to evaluate Sass maps like our grid breakpoints.
@@ -210,6 +212,31 @@ $_luminance-list: .0008 .001 .0011 .0013 .0015 .0017 .002 .0022 .0025 .0027 .003
 // Shade a color: mix a color with black
 @function shade-color($color, $weight) {
   @return mix(black, $color, $weight);
+}
+
+$locals: ();
+@function injectvar($key, $value) {
+  $locals: map.set($locals, $key, $value);//$value);
+  @return true;
+}
+@function _tint-color($color, $weight) {
+  $brightMap: map.get($locals, 'brightMap');
+
+  @if(map-has-key($brightMap, $color)) {
+    @return map.get($brightMap,$color);
+  } @else {
+    @return $color;
+  }
+}
+
+// Shade a color: mix a color with black
+@function _shade-color($color, $weight) {
+  $darkMap: map.get($locals, 'darkMap');
+  @if(map-has-key($darkMap, $color)) {
+    @return map.get($darkMap,$color);
+  } @else {
+    @return $color;
+  }
 }
 
 // Shade the color if the weight is positive, else tint it
