@@ -857,7 +857,19 @@ ul,
 ol {
   padding: 0;
   margin: 0 0 20px 18px;
+}
+
+ul {
   list-style: square;
+}
+
+ol {
+  margin-left: 21px;
+  list-style: decimal;
+}
+
+ol > li {
+  padding-left: 0;
 }
 
 ul ul,
