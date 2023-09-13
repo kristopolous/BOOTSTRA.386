@@ -740,12 +740,12 @@ a.text-info:focus {
 }
 
 .text-success {
-  color: #55ff55;
+  color: #00aa00;
 }
 
 a.text-success:hover,
 a.text-success:focus {
-  color: #55ff55;
+  color: #00aa00;
 }
 
 .text-left {
@@ -864,13 +864,17 @@ ul ol,
 ol ol,
 ol ul {
   margin-bottom: 0;
+  list-style: square;
 }
 
 li {
   padding-left: 0;
   margin-left: 0;
   line-height: 20px;
-  list-style: none;
+}
+
+ol > li {
+  margin-left: 12.4px;
 }
 
 ul.unstyled,
@@ -1191,7 +1195,6 @@ input[type="color"],
 .uneditable-input {
   background-color: #bbbbbb;
   border: 0;
-  border-bottom: 2px solid #000000;
 }
 
 textarea:focus,
@@ -1573,7 +1576,7 @@ input[type="checkbox"][readonly] {
 .control-group.success .control-label,
 .control-group.success .help-block,
 .control-group.success .help-inline {
-  color: #55ff55;
+  color: #00aa00;
 }
 
 .control-group.success .checkbox,
@@ -1581,19 +1584,19 @@ input[type="checkbox"][readonly] {
 .control-group.success input,
 .control-group.success select,
 .control-group.success textarea {
-  color: #55ff55;
+  color: #00aa00;
 }
 
 .control-group.success input,
 .control-group.success select,
 .control-group.success textarea {
-  border-color: #55ff55;
+  border-color: #00aa00;
 }
 
 .control-group.success input:focus,
 .control-group.success select:focus,
 .control-group.success textarea:focus {
-  border-color: #55ff55;
+  border-color: #00aa00;
   -webkit-box-shadow: 0;
      -moz-box-shadow: 0;
           box-shadow: 0;
@@ -1601,9 +1604,9 @@ input[type="checkbox"][readonly] {
 
 .control-group.success .input-prepend .add-on,
 .control-group.success .input-append .add-on {
-  color: #55ff55;
+  color: #00aa00;
   background-color: #000000;
-  border-color: #55ff55;
+  border-color: #00aa00;
 }
 
 .control-group.info .control-label,
@@ -3097,8 +3100,6 @@ table th[class*="span"],
   min-height: 20px;
   padding: 19px;
   margin-bottom: 20px;
-  background-color: #000000;
-  border: 1px solid #000000;
   -webkit-border-radius: 0;
      -moz-border-radius: 0;
           border-radius: 0;
@@ -3198,7 +3199,7 @@ button.close {
   color: #000000;
   text-align: center;
   vertical-align: middle;
-  cursor: pointer;
+  cursor: default;
   background: #bbbbbb;
   border: 0;
   border-width: 0;
@@ -3702,7 +3703,7 @@ input[type="submit"].btn.btn-mini {
   margin-bottom: 20px;
   text-shadow: 0;
   background-color: #00aaaa;
-  border: 1px solid #00aa8e;
+  border: 1px solid #00aaaa;
   -webkit-border-radius: 0;
      -moz-border-radius: 0;
           border-radius: 0;
@@ -3725,20 +3726,20 @@ input[type="submit"].btn.btn-mini {
 }
 
 .alert-success {
-  color: #55ff55;
+  color: #00aa00;
   background-color: #000000;
   border-color: #000000;
 }
 
 .alert-success h4 {
-  color: #55ff55;
+  color: #00aa00;
 }
 
 .alert-danger,
 .alert-error {
   color: #ffffff;
   background-color: #aa0000;
-  border-color: #aa001c;
+  border-color: #aa0000;
 }
 
 .alert-danger h4,
@@ -3781,6 +3782,10 @@ input[type="submit"].btn.btn-mini {
   display: block;
 }
 
+.nav > li > a::first-letter {
+  color: #aa0000;
+}
+
 .nav > li > a:hover,
 .nav > li > a:focus {
   color: #bbbbbb;
@@ -3800,7 +3805,7 @@ input[type="submit"].btn.btn-mini {
   display: block;
   font-weight: normal;
   line-height: 20px;
-  color: #bbbbbb;
+  color: #000000;
   text-transform: uppercase;
 }
 
@@ -3809,7 +3814,7 @@ input[type="submit"].btn.btn-mini {
 }
 
 .nav-list {
-  display: inline-block;
+  display: block;
   padding: 10px 15px;
   margin: 10px 5px;
   margin-left: -5px;
@@ -4907,15 +4912,13 @@ input[type="submit"].btn.btn-mini {
 .pager li > a,
 .pager li > span {
   display: inline-block;
-  padding: 5px 14px;
-  background-color: #fff;
-  border: 1px solid #ddd;
+  padding: 0 20px;
+  background-color: #555555;
 }
 
 .pager li > a:hover,
 .pager li > a:focus {
   text-decoration: none;
-  background-color: #f5f5f5;
 }
 
 .pager .next > a,
@@ -4934,7 +4937,7 @@ input[type="submit"].btn.btn-mini {
 .pager .disabled > span {
   color: #bbbbbb;
   cursor: default;
-  background-color: #fff;
+  background-color: #555555;
 }
 
 .modal-backdrop {
@@ -5371,7 +5374,7 @@ a.thumbnail:focus {
   color: #ffffff;
   white-space: nowrap;
   vertical-align: baseline;
-  background-color: #bbbbbb;
+  background-color: #555555;
 }
 
 .badge {
@@ -5395,12 +5398,12 @@ a.badge:focus {
 
 .label-important,
 .badge-important {
-  background-color: #ffffff;
+  background-color: #aa0000;
 }
 
 .label-important[href],
 .badge-important[href] {
-  background-color: #ffffff;
+  background-color: #aa0000;
 }
 
 .label-warning,
@@ -5415,12 +5418,12 @@ a.badge:focus {
 
 .label-success,
 .badge-success {
-  background-color: #55ff55;
+  background-color: #00aa00;
 }
 
 .label-success[href],
 .badge-success[href] {
-  background-color: #55ff55;
+  background-color: #00aa00;
 }
 
 .label-info,
@@ -5865,10 +5868,6 @@ a.badge:focus {
 
 .invisible {
   visibility: hidden;
-}
-
-.affix {
-  position: fixed;
 }
 
 #wrap386 {

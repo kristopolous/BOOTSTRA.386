@@ -2273,14 +2273,11 @@
   })
 
 
-}(window.jQuery);self._386 = self._386 || {flyBy: true};
+}(window.jQuery);self._386 = self._386 || {};
 
 $(function(){
-  var 
-    character = {
-      height: 20,
-      width: 12.4
-    };
+  var character = { height: 20, width: 12.4 };
+
   function scrollLock() {
     var last = 0;
     $(window).bind('scroll', function(e) {
@@ -2306,8 +2303,14 @@ $(function(){
   }  
 
   function loading() {
+
+    if(_386.fastLoad) {
+      document.body.style.visibility='visible';
+      return;
+    }
+
     var
-      flyBy = _386.flyBy,
+      onePass = _386.onePass,
       speedFactor = 1 / (_386.speedFactor || 1) * 165000;
       wrap = document.createElement('div'),
       bar = wrap.appendChild(document.createElement('div')),
@@ -2358,7 +2361,7 @@ $(function(){
             clearInterval(ival);
           } else {
             wrap.parentNode.removeChild(wrap);
-            if(! flyBy) {
+            if(onePass) {
               clearInterval(ival);
             } else {
               document.body.appendChild(cursor);
