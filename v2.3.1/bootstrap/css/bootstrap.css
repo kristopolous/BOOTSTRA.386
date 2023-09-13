@@ -856,7 +856,8 @@ h4 small {
 ul,
 ol {
   padding: 0;
-  margin: 0 0 20px 20px;
+  margin: 0 0 20px 18px;
+  list-style: square;
 }
 
 ul ul,
@@ -864,19 +865,28 @@ ul ol,
 ol ol,
 ol ul {
   margin-bottom: 0;
+  list-style: square;
 }
 
 li {
-  padding-left: 0;
+  padding-left: 4px;
   margin-left: 0;
   line-height: 20px;
-  list-style: none;
+}
+
+ol > li {
+  margin-left: 12px;
 }
 
 ul.unstyled,
 ol.unstyled {
   margin-left: 0;
   list-style: none;
+}
+
+ul.unstyled > li,
+ol.unstyled > li {
+  padding-left: 0;
 }
 
 ul.inline,
@@ -1191,7 +1201,6 @@ input[type="color"],
 .uneditable-input {
   background-color: #bbbbbb;
   border: 0;
-  border-bottom: 2px solid #000000;
 }
 
 textarea:focus,
@@ -3777,6 +3786,10 @@ input[type="submit"].btn.btn-mini {
 
 .nav > li > a {
   display: block;
+}
+
+.nav > li > a::first-letter {
+  color: #aa0000;
 }
 
 .nav > li > a:hover,
