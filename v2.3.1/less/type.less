@@ -140,13 +140,17 @@ ul ol,
 ol ol,
 ol ul {
   margin-bottom: 0;
+  list-style: square;
 }
 li {
-  list-style: none;
   line-height: @baseLineHeight;
   padding-left: 0;
   margin-left: 0;
 }
+ol > li {
+  margin-left: @baseWidth;
+}
+
 
 // Remove default list styles
 ul.unstyled,

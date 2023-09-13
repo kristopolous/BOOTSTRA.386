@@ -864,13 +864,17 @@ ul ol,
 ol ol,
 ol ul {
   margin-bottom: 0;
+  list-style: square;
 }
 
 li {
   padding-left: 0;
   margin-left: 0;
   line-height: 20px;
-  list-style: none;
+}
+
+ol > li {
+  margin-left: 12.4px;
 }
 
 ul.unstyled,
@@ -1191,7 +1195,6 @@ input[type="color"],
 .uneditable-input {
   background-color: #bbbbbb;
   border: 0;
-  border-bottom: 2px solid #000000;
 }
 
 textarea:focus,
@@ -3777,6 +3780,10 @@ input[type="submit"].btn.btn-mini {
 
 .nav > li > a {
   display: block;
+}
+
+.nav > li > a::first-letter {
+  color: #aa0000;
 }
 
 .nav > li > a:hover,
