@@ -856,7 +856,20 @@ h4 small {
 ul,
 ol {
   padding: 0;
-  margin: 0 0 20px 20px;
+  margin: 0 0 20px 18px;
+}
+
+ul {
+  list-style: square;
+}
+
+ol {
+  margin-left: 21px;
+  list-style: decimal;
+}
+
+ol > li {
+  padding-left: 0;
 }
 
 ul ul,
@@ -868,19 +881,24 @@ ol ul {
 }
 
 li {
-  padding-left: 0;
+  padding-left: 4px;
   margin-left: 0;
   line-height: 20px;
 }
 
 ol > li {
-  margin-left: 12.4px;
+  margin-left: 12px;
 }
 
 ul.unstyled,
 ol.unstyled {
   margin-left: 0;
   list-style: none;
+}
+
+ul.unstyled > li,
+ol.unstyled > li {
+  padding-left: 0;
 }
 
 ul.inline,
