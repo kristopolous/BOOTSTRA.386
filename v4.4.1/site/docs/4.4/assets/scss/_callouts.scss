@@ -1,0 +1,27 @@
+//
+// Callouts
+//
+
+.bd-callout {
+
+  h4 {
+    margin-top: 0;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+
+}
+
+// Variations
+@mixin bs-callout-variant($color) {
+  border-left-color: $color;
+
+  h4 { color: $color; }
+}
+
+.bd-callout-info { @include bs-callout-variant($bd-info); }
+.bd-callout-warning { @include bs-callout-variant($bd-warning); }
+.bd-callout-danger { @include bs-callout-variant($bd-danger); }

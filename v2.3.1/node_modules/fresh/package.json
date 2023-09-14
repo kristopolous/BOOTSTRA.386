@@ -1,0 +1,20 @@
+{
+  "name": "fresh",
+  "author": "TJ Holowaychuk <tj@vision-media.ca> (http://tjholowaychuk.com)",
+  "description": "HTTP response freshness testing",
+  "version": "0.2.2",
+  "main": "index.js",
+  "repository": { "type": "git", "url": "https://github.com/visionmedia/node-fresh.git"},
+  "dependencies": {},
+  "repository": { "type": "git", "url": "https://github.com/visionmedia/node-fresh.git" },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/visionmedia/node-fresh/blob/master/Readme.md#license"
+    }
+  ]
+}

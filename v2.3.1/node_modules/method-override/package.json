@@ -1,0 +1,29 @@
+{
+  "name": "method-override",
+  "description": "Override HTTP verbs",
+  "version": "2.0.2",
+  "author": "Jonathan Ong <me@jongleberry.com> (http://jongleberry.com)",
+  "contributors": [
+    "Douglas Christopher Wilson <doug@somethingdoug.com>"
+  ],
+  "license": "MIT",
+  "repository": "expressjs/method-override",
+  "dependencies": {
+    "methods": "1.0.1",
+    "parseurl": "1.0.1",
+    "vary": "0.1.0"
+  },
+  "devDependencies": {
+    "istanbul": "0.2.10",
+    "mocha": "~1.20.0",
+    "supertest": "~0.13.0"
+  },
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "mocha --reporter dot test/",
+    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot test/",
+    "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec test/"
+  }
+}

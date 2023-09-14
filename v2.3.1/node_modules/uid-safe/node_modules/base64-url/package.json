@@ -1,0 +1,46 @@
+{
+  "name": "base64-url",
+  "version": "1.2.1",
+  "description": "Base64 encode, decode, escape and unescape for URL applications",
+  "main": "index.js",
+  "files": [
+    "LICENSE",
+    "README.md",
+    "index.js"
+  ],
+  "scripts": {
+    "test": "istanbul cover tape test.js",
+    "jshint": "jshint -c .jshintrc *.js",
+    "code-style": "jscs -p google *.js",
+    "check-coverage": "istanbul check-coverage --statements 100 --functions 100 --lines 100 --branches 100",
+    "coverage": "open coverage/lcov-report/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/joaquimserafim/base64-url.git"
+  },
+  "keywords": [
+    "base64",
+    "base64url"
+  ],
+  "author": "@joaquimserafim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joaquimserafim/base64-url/issues"
+  },
+  "homepage": "https://github.com/joaquimserafim/base64-url",
+  "devDependencies": {
+    "istanbul": "^0.3.5",
+    "jscs": "^1.9.0",
+    "jshint": "^2.5.11",
+    "pre-commit": "0.0.9",
+    "tape": "^3.0.3",
+    "which": "^1.0.8"
+  },
+  "pre-commit": [
+    "jshint",
+    "code-style",
+    "test",
+    "check-coverage"
+  ]
+}

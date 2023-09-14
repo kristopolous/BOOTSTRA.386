@@ -1,0 +1,33 @@
+{
+  "name": "compression",
+  "description": "Compression middleware for connect and node.js",
+  "version": "1.0.11",
+  "author": "Jonathan Ong <me@jongleberry.com> (http://jongleberry.com)",
+  "contributors": [
+    "Douglas Christopher Wilson <doug@somethingdoug.com>"
+  ],
+  "license": "MIT",
+  "repository": "expressjs/compression",
+  "dependencies": {
+    "accepts": "~1.0.7",
+    "bytes": "1.0.0",
+    "compressible": "~1.1.1",
+    "debug": "1.0.4",
+    "on-headers": "~1.0.0",
+    "vary": "~1.0.0"
+  },
+  "devDependencies": {
+    "istanbul": "0.3.0",
+    "mocha": "~1.21.3",
+    "supertest": "~0.13.0",
+    "should": "~4.0.1"
+  },
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "mocha --check-leaks --reporter spec --bail",
+    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --check-leaks --reporter dot",
+    "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --check-leaks --reporter spec"
+  }
+}

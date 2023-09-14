@@ -1,0 +1,63 @@
+// Button variants
+//
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+
+@mixin button-variant($background, $border, $active-background: $background, $active-border: $border) {
+  color: $black;
+  border-color: $black;
+
+  @include hover() {
+    color: brighten($border);
+    border-color: $white;
+  }
+
+  &:focus,
+  &.focus {
+    border-color: $white;
+  }
+
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled {
+    color: $grayDark;
+    background-color: $grayLight;
+    border-color: $border;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  .show > &.dropdown-toggle {
+    color: $active-background;
+    background-color: $black;
+  }
+}
+
+@mixin button-outline-variant($color, $color-hover: color-yiq($color), $active-background: $color, $active-border: $color) {
+  color: brighten($color);
+  border-color: brighten($color);
+  background: transparent;
+
+  @include dos-border-single(brighten($color), $character-space: 1);
+  @include hover() {
+    @include dos-border-single(darken($color), $character-space: 1);
+    color: $white;
+  }
+
+  &.disabled,
+  &:disabled {
+    color: $color;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  .show > &.dropdown-toggle {
+    color: brighten($color);
+    border-color: $color;
+  }
+}
+
+@mixin button-size($padding-y, $padding-x, $font-size, $line-height, $border-radius) {
+  padding: $padding-y $padding-x;
+}
+

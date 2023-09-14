@@ -1,0 +1,28 @@
+{
+  "name": "type-is",
+  "description": "Infer the content-type of a request.",
+  "version": "1.3.2",
+  "author": "Jonathan Ong <me@jongleberry.com> (http://jongleberry.com)",
+  "contributors": [
+    "Douglas Christopher Wilson <doug@somethingdoug.com>"
+  ],
+  "license": "MIT",
+  "repository": "expressjs/type-is",
+  "dependencies": {
+    "media-typer": "0.2.0",
+    "mime-types": "~1.0.1"
+  },
+  "devDependencies": {
+    "istanbul": "0.2.11",
+    "mocha": "*",
+    "should": "*"
+  },
+  "engines": {
+    "node": ">= 0.8"
+  },
+  "scripts": {
+    "test": "mocha --require should --reporter spec --check-leaks --bail test/",
+    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot --check-leaks test/",
+    "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks test/"
+  }
+}

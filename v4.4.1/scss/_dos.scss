@@ -1,0 +1,34 @@
+.bootstra-cursor {
+  mix-blend-mode: difference;
+  position: absolute;
+  background-color: #cbd448;
+  pointer-events: none;
+  width: $space-width;
+  height: $line-height;
+  z-index: 20000;
+}
+
+body.bootstra-enable-cursor,
+.bootstra-enable-cursor * {
+  cursor: none !important;
+}
+
+*::-webkit-scrollbar{
+  width: $space-width;
+  background: $black;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: $black;
+}
+*::-webkit-scrollbar-track {
+  background: url('#{$fp}shade-50-grayLight.svg') repeat;
+}
+*::-webkit-scrollbar-button:vertical:decrement {
+  background: url('#{$fp}arrow-up-black.svg') no-repeat;
+  background-color: $grayLight;
+}
+*::-webkit-scrollbar-button:vertical:increment {
+  background: url('#{$fp}arrow-down-black.svg') no-repeat;
+  background-color: $grayLight;
+}

@@ -1,0 +1,33 @@
+{
+  "name": "native-or-bluebird",
+  "description": "use either the native Promise or Bluebird",
+  "version": "1.1.2",
+  "author": {
+    "name": "Jonathan Ong",
+    "email": "me@jongleberry.com",
+    "url": "http://jongleberry.com",
+    "twitter": "https://twitter.com/jongleberry"
+  },
+  "license": "MIT",
+  "repository": "normalize/native-or-bluebird",
+  "keywords": [
+    "bluebird",
+    "promise",
+    "promises"
+  ],
+  "devDependencies": {
+    "bluebird": "*",
+    "istanbul": "0",
+    "mocha": "1"
+  },
+  "scripts": {
+    "test": "mocha --reporter spec",
+    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot",
+    "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter dot"
+  },
+  "files": [
+    "index.js",
+    "promise.js",
+    "LICENSE"
+  ]
+}

@@ -1,0 +1,21 @@
+@mixin alert-variant($klass, $border, $color) {
+  &::before {
+    margin: 0 (0 - $space-width) $line-height-base;
+    padding: 0 $space-width;
+    display:block;
+    text-transform: capitalize;
+    color: $white;
+    @if ($klass == 'primary' or $klass == 'secondary') {
+      background: $grayDark;
+      content: "Alert";
+    } 
+    @elseif ($klass == 'light') {
+      content: "Alert";
+      background: $magenta;
+    }
+    @else {
+      background: darken($color);
+      content: $klass;
+    }
+  }
+}

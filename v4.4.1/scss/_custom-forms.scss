@@ -1,0 +1,466 @@
+// Embedded icons from Open Iconic.
+// Released under MIT and copyright 2014 Waybury.
+// https://useiconic.com/open
+
+
+// Checkboxes and radios
+//
+// Base class takes care of all the key behavioral aspects.
+
+.custom-control {
+  position: relative;
+  display: block;
+  min-height: $line-height-base;
+  padding-left: $custom-control-gutter + $custom-control-indicator-size;
+}
+
+.custom-control-inline {
+  display: inline-flex;
+  margin-right: $custom-control-spacer-x;
+}
+
+.custom-control-input {
+  position: absolute;
+  left: 0;
+  z-index: -1; // Put the input behind the label so it doesn't overlay text
+  width: $custom-control-indicator-size;
+  height: $font-size-base;
+  opacity: 0;
+
+  &:checked ~ .custom-control-label::before {
+    color: $custom-control-indicator-checked-color;
+    border-color: $custom-control-indicator-checked-border-color;
+  }
+
+
+  &:focus:not(:checked) ~ .custom-control-label::before {
+    border-color: $custom-control-indicator-focus-border-color;
+  }
+
+  &:not(:disabled):active ~ .custom-control-label::before {
+    color: $custom-control-indicator-active-color;
+  }
+
+  // Use [disabled] and :disabled to work around https://github.com/twbs/bootstrap/issues/28247
+  &[disabled],
+  &:disabled {
+    ~ .custom-control-label {
+      color: $custom-control-label-disabled-color;
+
+      &::before, &::after {
+        color: $custom-control-label-disabled-color;
+      }
+    }
+  }
+}
+
+// Custom control indicators
+//
+// Build the custom controls out of pseudo-elements.
+
+.custom-control-label {
+  position: relative;
+  margin-bottom: 0;
+  color: $custom-control-label-color;
+  vertical-align: top;
+  cursor: $custom-control-cursor;
+
+  // Background-color and (when enabled) gradient
+  &::before {
+    position: absolute;
+    top: 0;
+    left: -($custom-control-gutter + $custom-control-indicator-size);
+    display: block;
+    width: $custom-control-indicator-size;
+    height: $input-line-height;
+    pointer-events: none;
+    content: "";
+    background-color: $custom-control-indicator-bg;
+  }
+
+  // Foreground (icon)
+  &::after {
+    position: absolute;
+    top: 0;
+    left: -($custom-control-gutter + $custom-control-indicator-size);
+    display: block;
+    width: $custom-control-indicator-size;
+    height: $input-line-height;
+    content: "";
+  }
+}
+
+
+// Checkboxes
+//
+// Tweak just a few things for checkboxes.
+
+.custom-checkbox {
+  .custom-control-label::after {
+    content: '[ ]';
+  }
+  .custom-control-input:checked ~ .custom-control-label {
+    color: $custom-form-active-color;
+    &::after {
+      color: $custom-form-active-color;
+      content: '[X]';
+    }
+  }
+
+  .custom-control-input:disabled {
+    &:checked ~ .custom-control-label::before {
+      color: $grayDark;
+    }
+  }
+}
+
+// Radios
+//
+// Tweak just a few things for radios.
+
+.custom-radio {
+  .custom-control-label::after {
+    content: '( )';
+  }
+
+  .custom-control-input:checked ~ .custom-control-label {
+    color: $custom-form-active-color;
+    &::after {
+      color: $custom-form-active-color;
+      content: '(*)';
+    }
+  }
+
+  .custom-control-input:disabled {
+    &:checked ~ .custom-control-label::after {
+      color: $grayDark;
+    }
+  }
+}
+
+
+// switches
+//
+// Tweak a few things for switches
+
+.custom-switch {
+  padding-left: $custom-switch-width;
+
+  .custom-control-label {
+    &::before {
+      left: -$custom-switch-width;
+      width: $custom-switch-width;
+      pointer-events: all;
+      // stylelint-disable-next-line property-blacklist
+    }
+
+    &::after {
+      top: 0;
+      left: -$custom-switch-width;
+      width: $custom-switch-indicator-size;
+      height: $line-height-base;
+      content: '\2588\2591\2591';
+      // stylelint-disable-next-line property-blacklist
+    }
+  }
+
+  .custom-control-input:checked ~ .custom-control-label {
+    color: $custom-form-active-color;
+    &::after {
+      content: '\2591\2591\2588';
+      color: $white;
+      //background-color: $custom-control-indicator-bg;
+    }
+  }
+
+  .custom-control-input:disabled {
+    &:checked ~ .custom-control-label::before {
+      color: $grayDark;
+    }
+  }
+}
+
+
+// Select
+//
+// Replaces the browser default select with a custom one, mostly pulled from
+// https://primer.github.io/.
+//
+
+.custom-select {
+  display: inline-block;
+  width: 100%;
+  height: $custom-select-height;
+  padding: 0;
+  color: $custom-select-color;
+  vertical-align: middle;
+
+  background: 
+     url('#{$fp}arrow-down-black.svg') no-repeat right center,
+     $grayLight;
+
+  border: $custom-select-border-width solid $custom-select-border-color;
+  appearance: none;
+
+  &:focus {
+    outline: 0;
+
+    &::-ms-value {
+      // For visual consistency with other platforms/browsers,
+      // suppress the default custom-form-active-color text on blue background highlight given to
+      // the selected option text when the (still closed) <select> receives focus
+      // in IE and (under certain conditions) Edge.
+      // See https://github.com/twbs/bootstrap/issues/19398.
+      color: $input-color;
+      background-color: $input-bg;
+    }
+  }
+
+  &[multiple],
+  &[size]:not([size="1"]) {
+    height: auto;
+    padding-right: $custom-select-padding-x;
+    background-image: none;
+  }
+
+  &:disabled {
+    color: $custom-select-disabled-color;
+    background-color: $custom-select-disabled-bg;
+  }
+
+  // Hides the default caret in IE11
+  &::-ms-expand {
+    display: none;
+  }
+
+  // Remove outline from select box in FF
+  &:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 $custom-select-color;
+  }
+}
+
+.custom-select-sm {
+  height: $custom-select-height-sm;
+  @include font-size($custom-select-font-size-sm);
+}
+
+.custom-select-lg {
+  height: $custom-select-height-lg;
+  @include font-size($custom-select-font-size-lg);
+}
+
+
+// File
+//
+// Custom file input.
+
+.custom-file {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: $custom-file-height;
+  margin-bottom: 0;
+  + .input-group-append > .input-group-text {
+    padding: 0 $space-width;
+    background: $magenta;
+    cursor: pointer;
+    @include hover() {
+      background: $black;
+      color: $magentaBright;
+    }
+  }
+}
+
+.custom-file-input {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: $custom-file-height;
+  margin: 0;
+  opacity: 0;
+
+  &:focus ~ .custom-file-label {
+    border-color: $custom-file-focus-border-color;
+    box-shadow: $custom-file-focus-box-shadow;
+  }
+
+  // Use [disabled] and :disabled to work around https://github.com/twbs/bootstrap/issues/28247
+  &[disabled] ~ .custom-file-label,
+  &:disabled ~ .custom-file-label {
+    background-color: $custom-file-disabled-bg;
+  }
+
+  @each $lang, $value in $custom-file-text {
+    &:lang(#{$lang}) ~ .custom-file-label::after {
+      content: $value;
+    }
+  }
+
+  ~ .custom-file-label[data-browse]::after {
+    content: attr(data-browse);
+  }
+}
+
+.custom-file-label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  height: $custom-file-height;
+  padding: $custom-file-padding-y $custom-file-padding-x;
+  font-family: $custom-file-font-family;
+  font-weight: $custom-file-font-weight;
+  line-height: $custom-file-line-height;
+  color: $custom-file-color;
+  background-color: $custom-file-bg;
+
+  &::after {
+    position: absolute;
+    padding: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    display: block;
+    background: $grayLight;
+    color: $black;
+  }
+}
+
+// Range
+//
+// Style range inputs the same across browsers. Vendor-specific rules for pseudo
+// elements cannot be mixed. As such, there are no shared styles for focus or
+// active states on prefixed selectors.
+
+.custom-range {
+  width: 100%;
+  // I don't know why we need to have line-height / 2 but apparently if we don't
+  // there's some mystery spacing that is getting added.
+  height: $line-height / 2;
+  padding: 0; // Need to reset padding
+  background-color: transparent;
+  appearance: none;
+
+  &:focus {
+    outline: none;
+
+    // Pseudo-elements must be split across multiple rulesets to have an effect.
+    // No box-shadow() mixin for focus accessibility.
+    &::-webkit-slider-thumb { box-shadow: $custom-range-thumb-focus-box-shadow; }
+    &::-moz-range-thumb     { box-shadow: $custom-range-thumb-focus-box-shadow; }
+    &::-ms-thumb            { box-shadow: $custom-range-thumb-focus-box-shadow; }
+  }
+
+  &::-moz-focus-outer {
+    border: 0;
+  }
+
+  &::-webkit-slider-thumb {
+    width: $custom-range-thumb-width;
+    height: $custom-range-thumb-height;
+    background: $custom-range-thumb-active-bg;
+    margin: 0;
+    border: 0;
+    appearance: none;
+  }
+
+  &::-webkit-slider-runnable-track {
+    width: $custom-range-track-width;
+    height: $custom-range-track-height;
+    color: transparent; // Why?
+    cursor: $custom-range-track-cursor;
+    margin: 0;
+    background: 
+      url("#{$fp}hyphen-black.svg") repeat-x left center,
+      $grayLight;
+
+    border-color: transparent;
+  }
+
+  &::-moz-range-thumb {
+    width: $custom-range-thumb-width;
+    height: $custom-range-thumb-height - 3;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    background: $custom-range-thumb-active-bg;
+    border-radius: 0; // moz specific
+    appearance: none;
+
+    &:active {
+    }
+  }
+
+  &::-moz-range-track {
+    width: $custom-range-track-width;
+    height: $custom-range-track-height;
+    color: transparent;
+    cursor: $custom-range-track-cursor;
+    background: 
+      url("#{$fp}hyphen-black.svg") repeat-x left center,
+      $grayLight;
+    border-color: transparent; // Firefox specific?
+  }
+
+  &::-ms-thumb {
+    width: $custom-range-thumb-width;
+    height: $custom-range-thumb-height;
+    margin-top: 0; // Edge specific
+    margin-right: $custom-range-thumb-focus-box-shadow-width; // Workaround that overflowed box-shadow is hidden.
+    margin-left: $custom-range-thumb-focus-box-shadow-width;  // Workaround that overflowed box-shadow is hidden.
+    border: $custom-range-thumb-border;
+    appearance: none;
+
+    &:active {
+    }
+  }
+
+  &::-ms-track {
+    width: $custom-range-track-width;
+    height: $custom-range-track-height;
+    color: transparent;
+    cursor: $custom-range-track-cursor;
+    background-color: transparent;
+    border-color: transparent;
+    border-width: $custom-range-thumb-height / 2;
+  }
+
+  &::-ms-fill-lower {
+    background-color: $custom-range-track-bg;
+  }
+
+  &::-ms-fill-upper {
+    margin-right: 15px; // arbitrary?
+    background-color: $custom-range-track-bg;
+  }
+
+  &:disabled {
+    &::-webkit-slider-thumb {
+      background-color: $custom-range-thumb-disabled-bg;
+    }
+
+    &::-webkit-slider-runnable-track {
+      cursor: default;
+    }
+
+    &::-moz-range-thumb {
+      background-color: $custom-range-thumb-disabled-bg;
+    }
+
+    &::-moz-range-track {
+      cursor: default;
+    }
+
+    &::-ms-thumb {
+      background-color: $custom-range-thumb-disabled-bg;
+    }
+  }
+}
+
+.custom-control-label::before,
+.custom-file-label,
+.custom-select {
+}

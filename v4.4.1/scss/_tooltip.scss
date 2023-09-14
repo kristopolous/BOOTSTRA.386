@@ -1,0 +1,107 @@
+// Base class
+.tooltip {
+  position: absolute;
+  z-index: $zindex-tooltip;
+  display: block;
+  margin: $tooltip-margin;
+  // Our parent element can be arbitrary since tooltips are by default inserted as a sibling of their target element.
+  // So reset our font and text properties to avoid inheriting weird values.
+  @include reset-text();
+  // Allow breaking very long words so they don't overflow the tooltip's bounds
+  word-wrap: break-word;
+  opacity: 0;
+
+  &.show { opacity: 1 }
+
+  .arrow {
+    position: absolute;
+    display: block;
+    color: $black;
+    width: $tooltip-arrow-width;
+    height: $tooltip-arrow-height;
+
+    &::before {
+      position: absolute;
+      content: "";
+      border-color: transparent;
+      border-style: solid;
+    }
+  }
+}
+
+.bs-tooltip-top {
+  padding: $tooltip-arrow-height 0;
+
+  .arrow {
+    bottom: 0;
+
+    &::after {
+      content: '\25bc';
+    }
+    &::before {
+      top: 0;
+    }
+  }
+}
+
+.bs-tooltip-right {
+  padding: 0 $tooltip-arrow-width;
+
+  .arrow {
+    left: 0;
+
+    &::before {
+      right: 0;
+      content: '\25c4';
+    }
+  }
+}
+
+.bs-tooltip-bottom {
+  padding: $tooltip-arrow-height 0;
+
+  .arrow {
+    top: 0;
+
+    &::after {
+      content: '\25b2';
+    }
+  }
+}
+
+.bs-tooltip-left {
+  padding: 0 $tooltip-arrow-width;
+
+  .arrow {
+    right: 0;
+
+    &::after {
+      content: '\25ba';
+    }
+
+  }
+}
+
+.bs-tooltip-auto {
+  &[x-placement^="top"] {
+    @extend .bs-tooltip-top;
+  }
+  &[x-placement^="right"] {
+    @extend .bs-tooltip-right;
+  }
+  &[x-placement^="bottom"] {
+    @extend .bs-tooltip-bottom;
+  }
+  &[x-placement^="left"] {
+    @extend .bs-tooltip-left;
+  }
+}
+
+// Wrapper for the tooltip content
+.tooltip-inner {
+  max-width: $tooltip-max-width;
+  padding: $tooltip-padding-y $tooltip-padding-x;
+  color: $tooltip-color;
+  text-align: center;
+  background-color: $tooltip-bg;
+}

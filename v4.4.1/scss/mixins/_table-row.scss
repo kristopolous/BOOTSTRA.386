@@ -1,0 +1,18 @@
+// Tables
+
+@mixin table-row-variant($state, $background, $border: null) {
+  // Exact selectors below required to override `.table-striped` and prevent
+  // inheritance to nested tables.
+  .table-#{$state} {
+    &,
+    > th,
+    > td {
+      @if ($state == 'primary' or $state == 'secondary')  {
+        background-color: $grayDark;
+      }
+      @else {
+        background-color: darken($background);
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+//
+// Base styles
+//
+
+.alert {
+  position: relative;
+  padding: $alert-padding-y $alert-padding-x $line-height-base;
+  margin-bottom: $alert-margin-bottom;
+  border: $alert-border-width solid transparent;
+  background: $grayLight;
+  color: black;
+
+  .alert-link {
+    color: $blue;
+    @include hover() {
+      background: transparent;
+      color: $blueBright;
+    }
+  }
+}
+
+// Headings for larger alerts
+.alert-heading {
+  // Specified to prevent conflicts of changing $headings-color
+  color: inherit;
+}
+
+
+// Dismissible alerts
+//
+// Expand the right padding and account for the close button's positioning.
+
+.alert-dismissible {
+
+  // Adjust close link position
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: $alert-padding-y $alert-padding-x;
+  }
+}
+
+
+// Alternate styles
+//
+// Generate contextual modifier classes for colorizing the alert.
+
+@each $color, $value in $theme-colors {
+  .alert-#{$color} {
+    @include alert-variant($color, theme-color-level($color, $alert-border-level), theme-color-level($color, $alert-color-level));
+  }
+}

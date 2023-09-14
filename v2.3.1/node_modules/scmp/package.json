@@ -1,0 +1,29 @@
+{
+  "name": "scmp",
+  "version": "0.0.3",
+  "description": "safe, constant-time string-comparison",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "posttest": "matcha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/freewil/scmp.git"
+  },
+  "keywords": [
+    "safe-compare",
+    "compare",
+    "time-equivalent-comparison",
+    "time equivalent",
+    "constant-time",
+    "constant time"
+  ],
+  "author": "Sean Lavine",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "devDependencies": {
+    "mocha": "~1.13.0",
+    "matcha": "~0.4.0"
+  }
+}

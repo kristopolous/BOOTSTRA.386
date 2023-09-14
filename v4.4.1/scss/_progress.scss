@@ -1,0 +1,22 @@
+
+.progress {
+  display: flex;
+  height: $progress-height;
+  background: url("#{$fp}shade-50-grayLight.svg") repeat-x left center;
+}
+
+.progress-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  color: $progress-bar-color;
+  text-align: center;
+  white-space: nowrap;
+  background-color: $progress-bar-bg;
+}
+
+.progress-bar-striped {
+  background-size: $progress-height $progress-height;
+}
+

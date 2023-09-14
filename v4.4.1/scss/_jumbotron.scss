@@ -1,0 +1,27 @@
+.jumbotron {
+  padding: $jumbotron-padding;
+  margin-bottom: $jumbotron-padding;
+  color: $jumbotron-color;
+  background-color: $jumbotron-bg;
+  @include dos-solid-border($grayLight, 1);
+  @include dos-uncollapse-margin();
+
+  // this is a crazy hack ... hopefully people will enjoy it.
+  .display-4 {
+    text-indent: 0;
+    position: absolute;
+    padding: 0 $space-width * 1.5 - 1;
+    top: -.5 * $line-height-base;
+    margin: 0;
+    left: $space-width * 2.5;
+    background: $grayLight;
+    border-left: 3px double $black;
+    border-right: 3px double $black;
+  }
+
+}
+
+.jumbotron-fluid {
+  padding-right: 0;
+  padding-left: 0;
+}

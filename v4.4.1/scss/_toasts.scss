@@ -1,0 +1,38 @@
+.toast {
+  max-width: $toast-max-width;
+  overflow: hidden; // cheap rounded corners on nested items
+  color: $toast-color;
+  padding: 0;
+  background-color: $toast-background-color;
+  background-clip: padding-box;
+  opacity: 0;
+
+  &:not(:last-child) {
+    margin-bottom: $toast-padding-x;
+  }
+
+  &.showing {
+    opacity: 1;
+  }
+
+  &.show {
+    display: block;
+    opacity: 1;
+  }
+
+  &.hide {
+    display: none;
+  }
+}
+
+.toast-header {
+  display: flex;
+  align-items: center;
+  padding: 0 $toast-padding-x;
+  color: $toast-header-color;
+  background-color: $toast-header-background-color;
+}
+
+.toast-body {
+  padding: $toast-padding-x; // apply to both vertical and horizontal
+}

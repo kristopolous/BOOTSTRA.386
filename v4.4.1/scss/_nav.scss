@@ -1,0 +1,132 @@
+// Base class
+//
+// Kickstart any navigation component with a set of style resets. Works with
+// `<nav>`s, `<ul>`s or `<ol>`s.
+
+.nav {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.nav-link {
+  display: block;
+  padding: $nav-link-padding-y $nav-link-padding-x;
+
+  @include hover-focus() {
+    text-decoration: none;
+  }
+
+  // Disabled state lightens text
+  &.disabled {
+    color: $nav-link-disabled-color;
+    pointer-events: none;
+    cursor: default;
+  }
+}
+
+.nav-item {
+  padding: 0;
+}
+//
+// Tabs
+//
+
+.nav-tabs {
+  height: $line-height-base * 2.5;
+  margin-left: 0;
+  padding-left: $space-width;
+  border-bottom: 1px solid $grayLight;
+  margin-bottom: 9px;
+
+
+  .nav-item {
+    margin: 0;
+  }
+
+  .nav-link {
+    @include dos-border-single($color: $grayLight,$character-space: 1);
+    color: $grayLight;
+    background-color: $blue;
+    border-bottom: 0;
+
+    &.disabled {
+      border: 0;
+      padding-bottom: 0;
+      color: $nav-link-disabled-color;
+    }
+  }
+
+  .nav-link.active,
+  .nav-item.show .nav-link {
+    outline: none;
+    color: $nav-tabs-link-active-color;
+  }
+
+  .dropdown-menu {
+    // Make dropdown border overlap tab border
+    margin-top: -1px;
+    margin-left: 0;
+    // Remove the top rounded corners here since there is a hard edge above the menu
+  }
+}
+
+
+//
+// Pills
+//
+
+.nav-pills {
+  .nav-link {
+    &::before {
+      content: '(';
+      margin-right: $space-width;
+    }
+    &::after {
+      content: ')';
+      margin-left: $space-width;
+    }
+  }
+
+  .nav-link.active,
+  .show > .nav-link {
+    color: $nav-pills-link-active-color;
+    background-color: $nav-pills-link-active-bg;
+  }
+}
+
+
+//
+// Justified variants
+//
+
+.nav-fill {
+  .nav-item {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+}
+
+.nav-justified {
+  .nav-item {
+    flex-basis: 0;
+    flex-grow: 1;
+    text-align: center;
+  }
+}
+
+
+// Tabbable tabs
+//
+// Hide tabbable panes to start, show them when `.active`
+
+.tab-content {
+  > .tab-pane {
+    display: none;
+  }
+  > .active {
+    display: block;
+  }
+}

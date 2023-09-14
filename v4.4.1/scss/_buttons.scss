@@ -1,0 +1,160 @@
+// stylelint-disable selector-no-qualifying-type
+
+//
+// Base styles
+//
+
+.btn {
+  display: inline-block;
+  font-family: $btn-font-family;
+  color: $black;
+  text-align: left;
+  white-space: $btn-white-space;
+  cursor: if($enable-pointer-cursor-for-buttons, pointer, null);
+  user-select: none;
+  background-color: $grayLight;
+
+  border: none;
+  padding: 0 $space-width * 2;
+
+  &:focus,
+  &.focus {
+    outline: 0;
+  }
+
+}
+
+// Future-proof disabling of clicks on `<a>` elements
+a.btn.disabled,
+fieldset:disabled a.btn {
+  pointer-events: none;
+}
+
+
+//
+// Alternate buttons
+//
+
+@each $color, $value in $theme-colors {
+  .bs-component>.btn-#{$color}:not(.disabled):not(.btn-sm):not(.btn-lg) {
+    @include hover() {
+      &:before {
+        content: '\25ba\20';
+      }
+      &:after {
+        content: ' \25c4';
+      }
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  .btn-#{$color} {
+    @include hover() {
+      &:before,&:after {
+        color: brighten($value);
+      }
+    }
+    @include button-variant($value, $value);
+    background-color: $value;
+    &.btn-lg {
+      background-color: $value;
+      @include dos-solid-border($value, $character-space: 1);
+      @include dos-shadow();
+      margin-bottom: $line-height-base + 6px;
+
+      @include hover() {
+        @include dos-border-background(darken($value));
+        color: $white;
+        border-color: white;
+        background-color: darken($value);
+      }
+
+      &:not(:disabled):not(.disabled):active,
+      &:not(:disabled):not(.disabled).active,
+      .show > &.dropdown-toggle {
+        @include dos-border-background(darken($value));
+        color: $white;
+        border-color: white;
+        background-color: darken($value);
+        filter: none;
+        @include dos-border-active();
+      }
+    }
+  }
+
+}
+
+@each $color, $value in $theme-colors {
+  .btn-outline-#{$color} {
+    @include button-outline-variant($value);
+  }
+}
+
+
+//
+// Link buttons
+//
+
+// Make a button look and behave like a link
+.btn-link {
+  font-weight: $font-weight-normal;
+  color: $link-color;
+  background: transparent;
+
+  @include hover() {
+    color: $link-hover-color;
+    background-color: $link-hover-background;
+  }
+
+  &:before, &:after {
+    content: '_';
+  }
+
+  &:disabled,
+  &.disabled {
+    color: $btn-link-disabled-color;
+    pointer-events: none;
+  }
+
+}
+
+
+// instead of btn-sm just being btn with less padding, we do a completely separate style
+// to get it into a single line
+.btn-sm {
+  //@include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
+  border: 0;
+  padding: 0;
+  box-shadow: none;
+  margin-left: 0;
+  &:before {
+    content: '<';
+  }
+  &:after {
+    content: '>';
+  }
+}
+
+
+//
+// Block button
+//
+
+.btn-block {
+  display: block;
+  width: calc(100% - #{$space-width - 2});
+
+  // Vertically space out multiple block buttons
+  + .btn-block {
+    margin-top: $btn-block-spacing-y;
+  }
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.btn-block {
+    width: calc(100% - #{$space-width - 2});
+  }
+}

@@ -1,0 +1,4 @@
+coverage/
+files/
+test/
+.travis.yml

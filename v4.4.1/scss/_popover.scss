@@ -1,0 +1,135 @@
+.popover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: $zindex-popover;
+  display: block;
+  max-width: $popover-max-width;
+  // Our parent element can be arbitrary since tooltips are by default inserted as a sibling of their target element.
+  // So reset our font and text properties to avoid inheriting weird values.
+  @include reset-text();
+  // Allow breaking very long words so they don't overflow the popover's bounds
+  word-wrap: break-word;
+  background-color: $popover-bg;
+  background-clip: padding-box;
+
+  .h3, h3 {
+    @include dos-border-off();
+  }
+
+  .arrow {
+    position: absolute;
+    display: block;
+    width: $popover-arrow-width;
+    height: $popover-arrow-height;
+    margin: 0;
+    background: transparent;
+
+    &::before,
+    &::after {
+      position: absolute;
+      display: block;
+      content: "";
+    }
+  }
+}
+
+.bs-popover-top {
+  margin-bottom: $popover-arrow-height;
+
+  > .arrow {
+    bottom: -$popover-arrow-height;
+
+    &::after {
+      content: '\25bc';
+    }
+  }
+}
+
+.bs-popover-right {
+  margin-left: $popover-arrow-width;
+
+  > .arrow {
+    left: -$popover-arrow-width;
+    width: $popover-arrow-width;
+    height: $popover-arrow-height;
+    margin: 0;
+
+    &::after {
+      content: '\25c4';
+      left: $popover-border-width;
+    }
+  }
+}
+
+.bs-popover-bottom {
+  margin-top: $popover-arrow-height;
+
+  > .arrow {
+    top: -$popover-arrow-height;
+
+    &::after {
+      content: '\25b2';
+    }
+  }
+
+  // This will remove the popover-header's border just below the arrow
+  .popover-header::before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    display: block;
+    width: $popover-arrow-width;
+    margin-left: -$popover-arrow-width / 2;
+    content: "";
+  }
+}
+
+.bs-popover-left {
+  margin-right: $popover-arrow-width;
+  > .arrow {
+    right: -$popover-arrow-width;
+    width: $popover-arrow-width;
+    height: $popover-arrow-height;
+    margin: 0; // make sure the arrow does not touch the popover's rounded corners
+
+    &::after {
+      content: '\25ba';
+      right: $popover-border-width;
+    }
+  }
+}
+
+.bs-popover-auto {
+  &[x-placement^="top"] {
+    @extend .bs-popover-top;
+  }
+  &[x-placement^="right"] {
+    @extend .bs-popover-right;
+  }
+  &[x-placement^="bottom"] {
+    @extend .bs-popover-bottom;
+  }
+  &[x-placement^="left"] {
+    @extend .bs-popover-left;
+  }
+}
+
+
+// Offset the popover to account for the popover arrow
+.popover-header {
+  padding: $popover-header-padding-y $popover-header-padding-x;
+  margin-bottom: 0; // Reset the default from Reboot
+  @include font-size($font-size-base);
+  color: $popover-header-color;
+  background-color: $popover-header-bg;
+
+  &:empty {
+    display: none;
+  }
+}
+
+.popover-body {
+  padding: $popover-body-padding-y $popover-body-padding-x;
+  color: $popover-body-color;
+}

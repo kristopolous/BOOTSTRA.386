@@ -1,0 +1,47 @@
+@mixin caret-down() {
+  content: "\25bc";
+}
+
+@mixin caret-up() {
+  content: "\25b2";
+}
+
+@mixin caret-right() {
+  content: "\25ba";
+}
+
+@mixin caret-left() {
+  content: "\25c4";
+}
+
+@mixin caret($direction: down) {
+  @if $enable-caret {
+    padding: 0 $space-width;
+    &::after {
+      display: inline-block;
+      @if $direction == down {
+        @include caret-down();
+      } @else if $direction == up {
+        @include caret-up();
+      } @else if $direction == right {
+        @include caret-right();
+      }
+    }
+
+    @if $direction == left {
+      &::after {
+        display: none;
+      }
+
+      &::before {
+        display: inline-block;
+        margin-right: $caret-spacing;
+        @include caret-left();
+      }
+    }
+
+    &:empty::after {
+      margin-left: 0;
+    }
+  }
+}
