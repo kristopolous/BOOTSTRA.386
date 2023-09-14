@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style>
+@font-face {
+  font-family: 'dos';
+  src:
+    url('https://9ol.es/Px437_IBM_EGA8.otf') format('opentype');
+}
+body { 
+  margin: 1rem;
+  height: calc(100vh - 2rem);
+  line-height: 19px;
+  color: lime;
+  font-size: 15px;
+  text-shadow: 
+    1px 0 3px lime,
+    -1px 0 3px lime;
+  background: rgb(112,112,112);
+  background: radial-gradient(circle, rgba(70,68,64,1) 90%, rgba(47,45,43,1) 100%);
+}
+
+#igroup {
+  display: inline;
+  position:relative;
+}
+#cursor {
+  position: absolute;
+  left: 0;
+  border-bottom: 2px lime;
+  height: 1rem;
+  display:inline-block;
+  animation: blink-animation 0.5s steps(2, start) infinite;
+}
+input {
+  background: transparent;
+  color: lime;
+  text-transform: uppercase;
+  font-family: 'dos', monospace;
+  border: 0;
+  font-size: 15px;
+  width: 50%;
+  caret-color: transparent;
+  margin-left: 1.75px;
+  text-shadow: 
+    1px 0 3px lime,
+    -1px 0 3px lime;
+}
+input:focus, input:active {
+  outline: 0;
+}
+pre{ 
+  font-family: 'dos', monospace;
+  line-height: 19px;
+  display: inline; }
+@keyframes blink-animation {
+  to {
+    opacity: 0.1;
+  }
+}
+</style>
+
+<pre>
+</pre>
+<div id=igroup><input onkeydown=move(this) onkeyup=move(this) type="text"><div id=cursor>_</div></div>
+
+<div id=dbg></div>
+<script>
+let dir=`
+Directory of A:\\.
+BS2     COM       152264 11-04-2013 12:00
+BS3     COM       423842 03-02-2015 12:00
+BS4     COM       732140 08-22-2020 12:00
+BS5     COM       821111 09-13-2023 12:00
+   4 File(s)     2129357 Bytes.
+   0 Dir(s)            0 Bytes free.
+`;
+let txt=`
+    ____              __       __            
+   / __ )____  ____  / /______/ /__________ _
+  / __  / __ \\/ __ \\/ __/ ___/ __/ ___/ __ '/
+ / /_/ / /_/ / /_/ / /_(__  ) /_/ /  / /_/ / 
+/_____/\\____/\\____/\\__/____/\\__/_/   \\__,_/  
+           _____ ____  _____
+          |__  /( __ )/ ___/
+           /_ </ __  / __ \\ 
+         ___/ / /_/ / /_/ / 
+        /____/\\____/\\____/  
+
+     Welcome to Bootstra/386
+
+     There are 4 demos 
+
+     BS2.COM  - Bootstra/386 2.0
+     BS3.COM  - Bootstra/386 3.0
+     BS4.COM  - Bootstra/386 4.0
+     BS5.COM  - Bootstra/386 5.0
+     
+A:\\>`;
+
+let cursor, inp, dsp, buffer ='',ival,
+  href = {
+    'BS2': 'http://kristopolous.github.io/BOOTSTRA.386/',
+    'BS3': 'http://kristopolous.github.io/BOOTSTRA.386/',
+    'BS4': 'http://kristopolous.github.io/BOOTSTRA.386/',
+    'BS5': 'http://kristopolous.github.io/BOOTSTRA.386/',
+  };
+
+window.addEventListener(
+  'keydown',
+  (ev) => {
+    //dbg.innerHTML += ev.code + " ";
+    let cmd = inp.value.toUpperCase().trim();
+    if(ev.code == 'Enter') {
+      inp.value = '';
+      addText(" " + cmd);
+      let noext = cmd.replace(/\.*/, '');
+      if(cmd === 'DIR') {
+        addText(dir);
+      } else if(cmd == 'VER') {
+        addText('\nBS-DOS version 0.');
+      } else if(cmd == 'REBOOT') {
+        location.reload();
+      } else if(cmd == 'CLS') {
+        buffer = '';
+        dsp.innerHTML = '';
+      } else if(href[noext]) {
+        window.location = href[noext];
+        return;
+      } else {
+        addText(`\nIllegal Command: ${cmd}.\n`);
+      }
+      addText('\nA:\\\>');
+      
+    }
+  }
+);
+function bl(el) {
+  inp.focus();
+}
+function move(el) {
+  cursor.style.left = el.value.length * 9 + 3 +'px';
+}
+
+function addText(toadd) {
+  let ix = 0;
+  buffer += toadd;
+  if(!ival) {
+    ival = setInterval(() => {
+      dsp.innerHTML += buffer[ix];
+      ix++;
+      if(ix >= buffer.length) {
+        clearInterval(ival);
+        ival = 0;
+        buffer = '';
+        inp.focus();
+      }
+    },4);
+  }
+
+}
+window.onload = () => {
+  dsp = document.body.getElementsByTagName('pre')[0];
+  inp = document.body.getElementsByTagName('input')[0];
+  cursor = document.querySelector('#cursor');
+  dbg = document.querySelector('#dbg');
+
+  let ram = 64, ival = setInterval(() => {
+      dsp.innerHTML = `${ram} KB OK`;
+      ram += 64;
+      if(ram > 640) {
+        clearInterval(ival);
+        addText(txt);
+      }
+    }, 400);
+}
+
+
+</script>
