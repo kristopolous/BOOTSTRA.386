@@ -1,0 +1,17 @@
+$script = <<-SCRIPT
+cd /vagrant/v3.3.2
+sudo apt update
+sudo apt -y install build-essential zlib1g-dev libssl-dev nodejs npm 
+npm install
+SCRIPT
+
+Vagrant.configure(2) do |config|
+  config.vm.box = "ubuntu/trusty64"
+  config.ssh.insert_key = false
+  config.vm.network "forwarded_port", guest_ip: "127.0.0.1", guest: 9001, host: 9002, host_ip: "127.0.0.1", id: "bsfw"
+  config.vm.provider "virtualbox" do |v|
+    v.memory = 2048
+  end
+  config.vm.provision "shell", inline: $script
+  config.vm.synced_folder "../", "/vagrant"
+end
