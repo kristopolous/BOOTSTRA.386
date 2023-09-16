@@ -1,7 +1,19 @@
+#
+# The NPM certificate from ubuntu/2014.04 is now expired which 
+# makes it untrusted. To avoid it freaking out and failing we 
+# set the strict-ssl to false here.
+#
+# Also 2014 ships with v0.10 nodejs, we need something like 4.9.1
+# so we put in nvm here to make it happy.
+#
 $script = <<-SCRIPT
 cd /vagrant/v3.3.2
 sudo apt update
-sudo apt -y install build-essential zlib1g-dev libssl-dev nodejs npm 
+sudo apt -y install zip build-essential zlib1g-dev libssl-dev nodejs npm 
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+source ~/.bashrc
+nvm install v4.9.1
+npm config set strict-ssl false
 npm install
 SCRIPT
 
