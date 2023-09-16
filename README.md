@@ -103,5 +103,5 @@ Also you can give me money, as little as $1/month ... Click on that heart sponso
 
 ### Attributions
 
-The font for the v4 is by VileR, used under Creative Commons Share-Alike, which [can be found at int10h.org](https://int10h.org/oldschool-pc-fonts/fontlist/).
+The font for v4/5 is by VileR, used under Creative Commons Share-Alike, which [can be found at int10h.org](https://int10h.org/oldschool-pc-fonts/fontlist/).
 
