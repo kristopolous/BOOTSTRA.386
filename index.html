@@ -1,207 +1,255 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Bootstrap</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style>
+@font-face {
+  font-family: 'dos';
+  src: url('Px437_IBM_EGA8.otf') format('opentype');
+}
+#screen {
+  width: 42rem;
+  height: 29rem;
+  padding: 1rem 0.25rem;
+  overflow: hidden;
+  position: relative;
+  background: rgb(112,112,112);
+  background: radial-gradient(circle, rgba(40,44,49,1) 90%, rgba(12,14,16,1) 100%);
+  border-top: 24px solid #5b5b53;
+  border-left: 30px solid #3b3d38;
+  border-bottom: 28px solid #7f7c77;
+  border-radius: 10px;
+  border-right: 30px solid #86857f;
+  text-shadow: 
+    0px 0 2px lime,
+    -1px 0 1px lime;
+}
+#screenborder {
+  position: relative;
+  width: 42rem;
+  height: 100%;
+  padding-left: 0.5rem;
+  overflow: hidden;
+}
 
-    <!-- Le styles -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
-    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
-    <link href="assets/css/docs.css" rel="stylesheet">
-    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="assets/js/html5shiv.js"></script>
-    <![endif]-->
+#content {
+  position: absolute;
+}
+body { 
+  margin: 1rem;
+  background: black;
+  height: calc(100vh - 2rem);
+  line-height: 16px;
+  color: lime;
+  font-size: 15px;
+}
 
-    <!-- Le fav and touch icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
-      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
-                    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
-                                   <link rel="shortcut icon" href="assets/ico/favicon.png">
+a, a:visited {
+  color: lime;
+}
+#igroup {
+  display: inline;
+  position:relative;
+}
+#cursor {
+  position: absolute;
+  left: 0;
+  border-bottom: 2px lime;
+  height: 1rem;
+  display:inline-block;
+  animation: blink-animation 0.5s steps(2, start) infinite;
+}
+input {
+  background: transparent;
+  color: lime;
+  text-transform: uppercase;
+  font-family: 'dos', monospace;
+  border: 0;
+  font-size: 15px;
+  width: 50%;
+  caret-color: transparent;
+  margin-left: 1.75px;
+  text-shadow: 
+    0px 0 2px lime,
+    -1px 0 1px lime;
+}
+input:focus, input:active {
+  outline: 0;
+}
+pre{ 
+  font-family: 'dos', monospace;
+  line-height: 19px;
+  display: inline; }
+@keyframes blink-animation {
+  to {
+    opacity: 0.1;
+  }
+}
+@media only screen and (min-width: 79px) and (max-width: 1281px) {
+#screen {
+  width: calc(100% - 20px - .5rem);
+  height: calc(100vh - 15px - 2rem);
+  padding: 1rem 0.25rem;
+  overflow: hidden;
+  position: relative;
+    background: #b5b9ab;
+  border-top: 5px solid #727876;
+  border-left: 10px solid #abadaa;
+  border-bottom: 10px solid #7a7b6d;
+  border-right: 10px solid #7a7b6d;
+    color: #493f35;
+    border-radius: 0;
+  text-shadow: 3px 3px 0 rgba(52,56,51,0.15);
+}
+a, a:visited {
+    color: #493f35;
+}
+input {
+    color: #493f35;
+  text-shadow: none;
+}
+  body {
+    margin:0;
+  }
+}
+</style>
 
-  </head>
-
-  <body data-spy="scroll" data-target=".bs-docs-sidebar">
-
-    <!-- Navbar
-    ================================================== -->
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-          </button>
-          <a class="brand" href="./index.html">Bootstrap</a>
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li class="active">
-                <a href="./index.html">Home</a>
-              </li>
-              <li class="">
-                <a href="./getting-started.html">Get started</a>
-              </li>
-              <li class="">
-                <a href="./scaffolding.html">Scaffolding</a>
-              </li>
-              <li class="">
-                <a href="./base-css.html">Base CSS</a>
-              </li>
-              <li class="">
-                <a href="./components.html">Components</a>
-              </li>
-              <li class="">
-                <a href="./javascript.html">JavaScript</a>
-              </li>
-              <li class="">
-                <a href="./customize.html">Customize</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-<div class="jumbotron masthead">
-  <div class="container">
-    <h1>Bootstrap</h1>
-    <p>Sleek, intuitive, and powerful front-end framework for faster and easier web development.</p>
-    <p>
-      <a href="https://github.com/kristopolous/BOOTSTRA.386" class="btn btn-primary btn-large" >Download Bootstrap</a>
-    </p>
-    <ul class="masthead-links">
-      <li>
-        <a href="https://github.com/kristopolous/BOOTSTRA.386" >GitHub project</a>
-      </li>
-      <li>
-        <a href="./getting-started.html#examples" >Examples</a>
-      </li>
-      <li>
-        <a href="./extend.html" >Extend</a>
-      </li>
-      <li>
-        Version 2.3.1
-      </li>
-    </ul>
-  </div>
-</div>
-
-<div class="bs-docs-social">
-  <div class="container">
-    <ul class="bs-docs-social-buttons">
-      <li class="tweet-btn">
-        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://twitter.github.com/bootstrap/" data-count="horizontal" data-via="twbootstrap" data-related="mdo:Creator of Twitter Bootstrap">Tweet</a>
-      </li>
-    </ul>
-  </div>
-</div>
-
-<div class="container">
-
-  <div class="marketing">
-
-    <h1>Introducing Bootstrap.</h1>
-    <p class="marketing-byline">Need reasons to love Bootstrap? Look no further.</p>
-
-    <div class="row-fluid">
-      <div class="span4">
-        <h2>By nerds, for nerds.</h2>
-        <p>Built at Twitter by <a href="http://twitter.com/mdo">@mdo</a> and <a href="http://twitter.com/fat">@fat</a>, Bootstrap utilizes <a href="http://lesscss.org">LESS CSS</a>, is compiled via <a href="http://nodejs.org">Node</a>, and is managed through <a href="http://github.com">GitHub</a> to help nerds do awesome stuff on the web.</p>
-      </div>
-      <div class="span4">
-        <h2>Made for everyone.</h2>
-        <p>Bootstrap was made to not only look and behave great in the latest desktop browsers (as well as IE7!), but in tablet and smartphone browsers via <a href="./scaffolding.html#responsive">responsive CSS</a> as well.</p>
-      </div>
-      <div class="span4">
-        <h2>Packed with features.</h2>
-        <p>A 12-column responsive <a href="./scaffolding.html#gridSystem">grid</a>, dozens of components, <a href="./javascript.html">JavaScript plugins</a>, typography, form controls, and even a <a href="./customize.html">web-based Customizer</a> to make Bootstrap your own.</p>
-      </div>
-    </div>
-
-    <hr class="soften">
-
-    <h1>Built with Bootstra.386.</h1>
-    <p class="marketing-byline">For even more sites built with Bootstrap, <a href="http://builtwithbootstrap.tumblr.com/" target="_blank">visit the unofficial Tumblr</a> or <a href="./getting-started.html#examples">browse the examples</a>.</p>
-    <div class="row-fluid">
-      <ul class="thumbnails example-sites">
-        <li class="span3">
-          <a class="thumbnail" href="http://jason.sperske.com/wad/" target="_blank">
-            <img src="assets/img/example-sites/wad.png" alt="WADParser.py">
-          </a>
-        </li>
-        <li class="span3">
-          <a class="thumbnail" href="http://kippt.com/" target="_blank">
-            <img src="assets/img/example-sites/kippt.png" alt="Kippt">
-          </a>
-        </li>
-        <li class="span3">
-          <a class="thumbnail" href="http://www.gathercontent.com/" target="_blank">
-            <img src="assets/img/example-sites/gathercontent.png" alt="Gather Content">
-          </a>
-        </li>
-        <li class="span3">
-          <a class="thumbnail" href="http://www.jshint.com/" target="_blank">
-            <img src="assets/img/example-sites/jshint.png" alt="JS Hint">
-          </a>
-        </li>
-      </ul>
-     </div>
-
-  </div>
+<div id=screen>
+<div id=screenborder>
+<div id=content>
+<pre>
+</pre>
+<div id=igroup><input onkeydown=move(this) onkeyup=move(this) type="text"><div id=cursor>_</div></div>
 
 </div>
+</div>
+</div>
+<script>
+let dir=`
+Directory of A:\\.
+BS2     COM       152264 11-04-2013 12:00
+BS3     COM       423842 03-02-2015 12:00
+BS4     COM       732140 08-22-2020 12:00
+BS5     COM       821111 09-13-2023 12:00
+   4 File(s)     2129357 Bytes.
+   0 Dir(s)            0 Bytes free.
+`;
+let txt=`
+    ____              __       __            
+   / __ )____  ____  / /______/ /__________ _
+  / __  / __ \\/ __ \\/ __/ ___/ __/ ___/ __ '/
+ / /_/ / /_/ / /_/ / /_(__  ) /_/ /  / /_/ / 
+/_____/\\____/\\____/\\__/____/\\__/_/   \\__,_/  
+           _____ ____  _____
+          |__  /( __ )/ ___/
+           /_ </ __  / __ \\ 
+         ___/ / /_/ / /_/ / 
+        /____/\\____/\\____/  
+
+     Welcome to Bootstra/386
+     BOOTSTRA386.COM
+
+     There are 4 demos 
+
+     BS2.COM  - Bootstra/386 2.0
+     BS3.COM  - Bootstra/386 3.0
+     BS4.COM  - Bootstra/386 4.0
+     BS5.COM  - Bootstra/386 5.0
+     
+A:\\>`;
+
+let cont,cursor, inp, dsp, buffer ='',ival,
+  href = {
+    'BS2': 'http://kristopolous.github.io/BOOTSTRA.386/v2.3.1/',
+    'BS3': 'http://kristopolous.github.io/BOOTSTRA.386/v3.3.2/',
+    'BS4': 'http://kristopolous.github.io/BOOTSTRA.386/v4.4.1/',
+    'BS5': 'http://kristopolous.github.io/BOOTSTRA.386/v5.3.1/',
+    'BOOTSTRA386': 'https://bootstra386.com/'
+  };
+  const LH = 20;
+window.addEventListener(
+  'keydown',
+  (ev) => {
+    //dbg.innerHTML += ev.code + " ";
+    let cmd = inp.value.toUpperCase().trim();
+    if(ev.code == 'Enter') {
+      inp.value = '';
+      addText(" " + cmd);
+      let noext = cmd.replace(/\.*/, '');
+      if(cmd === 'DIR') {
+        addText(dir);
+      } else if(cmd == 'VER') {
+        addText('\nBS-DOS version 0.');
+      } else if(cmd == 'REBOOT') {
+        location.reload();
+      } else if(cmd == 'CLS') {
+        linenum = 0;
+        content.style.top = 0;
+        buffer = '';
+        dsp.innerHTML = '';
+      } else if(href[noext]) {
+        window.location = href[noext];
+        return;
+      } else {
+        addText(`\nIllegal Command: ${cmd}.\n`);
+      }
+      addText('\nA:\\\>');
+      
+    }
+  }
+);
+function bl(el) {
+  inp.focus();
+}
+function move(el) {
+  cursor.style.left = el.value.length * 9 + 3 +'px';
+}
+
+let linenum = 0;
+function addText(toadd) {
+  let ix = 0;
+  buffer += toadd;
+  let lineCount = Math.floor((content.parentNode.parentNode.getBoundingClientRect().height - 60) / LH);
+  console.log(lineCount);
+  if(!ival) {
+    ival = setInterval(() => {
+      if(buffer[ix] == '\n') {
+        linenum++;
+        let top = - (Math.max(linenum - lineCount, 0) * LH) + "px";
+        content.style.top = top;
+      }
+      dsp.innerHTML += buffer[ix];
+      ix++;
+      if(ix >= buffer.length) {
+        for(const [key, url] of Object.entries(href)) {
+          dsp.innerHTML = dsp.innerHTML.replace(new RegExp(`${key}(\s*\.?)COM`), `<a href=${url}>${key}$1COM</a>`);
+        }
+        clearInterval(ival);
+        ival = 0;
+        buffer = '';
+        inp.focus();
+      }
+    },4);
+  }
+}
+window.onload = () => {
+  dsp = document.body.getElementsByTagName('pre')[0];
+  inp = document.body.getElementsByTagName('input')[0];
+  cursor = document.querySelector('#cursor');
+  cont = document.querySelector('#content');
+  dbg = document.querySelector('#dbg');
+  inp.focus();
+
+  setInterval( () => inp.focus(), 100);
+ 
+  let ram = 64, ival = setInterval(() => {
+      dsp.innerHTML = `${ram} KB OK`;
+      ram += 64;
+      if(ram > 640) {
+        clearInterval(ival);
+        addText(txt);
+      }
+    }, 400);
+}
 
 
-
-    <!-- Footer
-    ================================================== -->
-    <footer class="footer">
-      <div class="container">
-        <p>Designed and built with all the love in the world by <a href="http://twitter.com/mdo" target="_blank">@mdo</a> and <a href="http://twitter.com/fat" target="_blank">@fat</a>.</p>
-        <p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
-        <p><a href="http://glyphicons.com">Glyphicons Free</a> licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
-        <ul class="footer-links">
-          <li><a href="http://blog.getbootstrap.com">Blog</a></li>
-          <li class="muted">&middot;</li>
-          <li><a href="https://github.com/twitter/bootstrap/issues?state=open">Issues</a></li>
-          <li class="muted">&middot;</li>
-          <li><a href="https://github.com/twitter/bootstrap/blob/master/CHANGELOG.md">Changelog</a></li>
-        </ul>
-      </div>
-    </footer>
-
-
-
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/bootstrap-386.js"></script>
-    <script src="assets/js/bootstrap-transition.js"></script>
-    <script src="assets/js/bootstrap-alert.js"></script>
-    <script src="assets/js/bootstrap-modal.js"></script>
-    <script src="assets/js/bootstrap-dropdown.js"></script>
-    <script src="assets/js/bootstrap-scrollspy.js"></script>
-    <script src="assets/js/bootstrap-tab.js"></script>
-    <script src="assets/js/bootstrap-tooltip.js"></script>
-    <script src="assets/js/bootstrap-popover.js"></script>
-    <script src="assets/js/bootstrap-button.js"></script>
-    <script src="assets/js/bootstrap-collapse.js"></script>
-    <script src="assets/js/bootstrap-carousel.js"></script>
-    <script src="assets/js/bootstrap-typeahead.js"></script>
-    <script src="assets/js/bootstrap-affix.js"></script>
-
-    <script src="assets/js/holder/holder.js"></script>
-    <script src="assets/js/google-code-prettify/prettify.js"></script>
-
-    <script src="assets/js/application.js"></script>
-
-
-
-  </body>
-</html>
+</script>
