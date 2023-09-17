@@ -32,8 +32,6 @@
   padding-left: 0.5rem;
   overflow: hidden;
 }
-
-
 #content {
   position: absolute;
 }
@@ -78,38 +76,39 @@ input {
 input:focus, input:active {
   outline: 0;
 }
-pre{ 
+pre { 
   font-family: 'dos', monospace;
   line-height: 19px;
-  display: inline; }
+  display: inline; 
+}
 @keyframes blink-animation {
   to {
     opacity: 0.1;
   }
 }
 @media only screen and (min-width: 79px) and (max-width: 1281px) {
-#screen {
-  width: calc(100% - 20px - .5rem);
-  height: calc(100vh - 15px - 2rem);
-  padding: 1rem 0.25rem;
-  overflow: hidden;
-  position: relative;
+  #screen {
+    width: calc(100% - 20px - .5rem);
+    height: calc(100vh - 15px - 2rem);
+    padding: 1rem 0.25rem;
+    overflow: hidden;
+    position: relative;
     background: #b5b9ab;
-  border-top: 5px solid #727876;
-  border-left: 10px solid #abadaa;
-  border-bottom: 10px solid #7a7b6d;
-  border-right: 10px solid #7a7b6d;
+    border-top: 5px solid #727876;
+    border-left: 10px solid #abadaa;
+    border-bottom: 10px solid #7a7b6d;
+    border-right: 10px solid #7a7b6d;
     color: #493f35;
     border-radius: 0;
-  text-shadow: 3px 3px 0 rgba(52,56,51,0.15);
-}
-a, a:visited {
+    text-shadow: 3px 3px 0 rgba(52,56,51,0.15);
+  }
+  a, a:visited {
     color: #493f35;
-}
-input {
+  }
+  input {
     color: #493f35;
-  text-shadow: none;
-}
+    text-shadow: none;
+  }
   body {
     margin:0;
   }
@@ -119,10 +118,8 @@ input {
 <div id=screen>
 <div id=screenborder>
 <div id=content>
-<pre>
-</pre>
+<pre></pre>
 <div id=igroup><input onkeydown=move(this) onkeyup=move(this) type="text"><div id=cursor>_</div></div>
-
 </div>
 </div>
 </div>
@@ -148,19 +145,24 @@ let txt=`
          ___/ / /_/ / /_/ / 
         /____/\\____/\\____/  
 
-     Welcome to Bootstra/386
+     Welcome to Bootstra/386.
      BOOTSTRA386.COM
 
-     There are 4 demos 
+     There are 4 demos:
 
-     BS2.COM  - Bootstra/386 2.0
-     BS3.COM  - Bootstra/386 3.0
-     BS4.COM  - Bootstra/386 4.0
-     BS5.COM  - Bootstra/386 5.0
+     BS2.COM - Bootstra/386 2.0.
+     BS3.COM - Bootstra/386 3.0.
+     BS4.COM - Bootstra/386 4.0.
+     BS5.COM - Bootstra/386 5.0.
      
 A:\\>`;
 
-let cont,cursor, inp, dsp, buffer ='',ival,
+let cont,
+  cursor, 
+  inp, 
+  dsp, 
+  buffer = '',
+  ival,
   href = {
     'BS2': 'http://kristopolous.github.io/BOOTSTRA.386/v2.3.1/',
     'BS3': 'http://kristopolous.github.io/BOOTSTRA.386/v3.3.2/',
@@ -200,6 +202,7 @@ window.addEventListener(
     }
   }
 );
+
 function bl(el) {
   inp.focus();
 }
@@ -234,6 +237,7 @@ function addText(toadd) {
     },4);
   }
 }
+
 window.onload = () => {
   dsp = document.body.getElementsByTagName('pre')[0];
   inp = document.body.getElementsByTagName('input')[0];
@@ -253,6 +257,5 @@ window.onload = () => {
       }
     }, 400);
 }
-
 
 </script>
