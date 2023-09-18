@@ -134,6 +134,7 @@
     "sinon": "^7.5.0",
     "stylelint": "^9.10.1",
     "stylelint-config-twbs-bootstrap": "^0.5.0",
+    "text-to-svg": "^3.1.5",
     "uglify-js": "^3.9.1",
     "vnu-jar": "19.9.4"
   },
