@@ -15,10 +15,8 @@ $cyan:     #00aaaad0 !default;
   src: url("../fonts/Px437_IBM_EGA8.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
-  -webkit-font-kerning: none;
   font-kerning: none;
   font-synthesis: none;
-  -webkit-font-variant-ligatures: none;
   font-variant-ligatures: none;
   font-variant-numeric: tabular-nums;
 }
@@ -47,10 +45,9 @@ body {
   font-weight: 400;
   line-height: 14px;
   font-size: 16px;
-  color: #bbbbbb;
+  color: #aaaaaa;
   text-align: left;
-  background-color: #000084;
-  -webkit-font-kerning: none;
+  background-color: #0000aa;
   font-kerning: none;
   text-rendering: geometricPrecision;
 }
@@ -69,6 +66,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 14px;
   font-weight: normal;
+  font-size: 16px;
 }
 
 p {
@@ -81,7 +79,6 @@ abbr[data-original-title] {
   text-decoration: none;
   cursor: help;
   border-bottom: 0;
-  -webkit-text-decoration-skip-ink: none;
   text-decoration-skip-ink: none;
 }
 
@@ -170,7 +167,7 @@ a {
 }
 
 a:hover {
-  color: #bbbbbb;
+  color: #aaaaaa;
   background-color: #000000;
 }
 
@@ -392,13 +389,9 @@ template {
   display: none !important;
 }
 
-::-moz-selection {
-  color: #fff;
-  background-color: #00aaaa;
-}
-
 ::selection {
   color: #fff;
   background-color: #00aaaa;
 }
+
 /*# sourceMappingURL=bootstrap-reboot.css.map */

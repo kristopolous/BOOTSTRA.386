@@ -6,8 +6,13 @@ sudo apt update
 sudo apt -y install build-essential zlib1g-dev libssl-dev ruby ruby-dev ruby-bundler nodejs openjdk-17-jre
 sudo apt -y install npm
 
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+source ~/.bashrc
+
+nvm install v10.24.1
 bundle install
 npm install
+
 SCRIPT
 
 Vagrant.configure(2) do |config|
