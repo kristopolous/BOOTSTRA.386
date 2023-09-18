@@ -12,6 +12,9 @@ source ~/.bashrc
 nvm install v10.24.1
 bundle install
 npm install
+cd ../
+# This higher level one has to exist here to satisfy the fonts and svg creation
+npm install
 
 SCRIPT
 
