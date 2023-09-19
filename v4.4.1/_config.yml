@@ -13,7 +13,7 @@ source:         "site"
 destination:    ./_gh_pages
 host:           "localhost"
 port:           9001
-baseurl:        ""
+baseurl:        "/BOOTSTRA.386"
 url:            "https://getbootstrap.com"
 encoding:       UTF-8
 exclude:

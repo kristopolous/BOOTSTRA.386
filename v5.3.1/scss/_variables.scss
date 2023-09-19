@@ -400,8 +400,8 @@ $theme-colors: (
 ) !default;
 // scss-docs-end theme-colors-map
 
-$ignore: injectvar('darkMap', $darkMap) !default;
-$ignore: injectvar('brightMap', $brightMap) !default;
+// $ignore: injectvar('darkMap', $darkMap) !default;
+// $ignore: injectvar('brightMap', $brightMap) !default;
 
 // scss-docs-start theme-text-variables
 $primary-text-emphasis:   shade-color($primary, 60%) !default;
@@ -543,7 +543,7 @@ $body-emphasis-color:       $black !default;
 $link-color:                              $yellow !default;
 $link-decoration:                         none !default;
 $link-shade-percentage:                   0 !default;
-$link-hover-color:                        shift-color($link-color, $link-shade-percentage) !default;
+$link-hover-color:                        $yellow !default;
 $link-hover-decoration:                   null !default;
 
 $stretched-link-pseudo-element:           after !default;
