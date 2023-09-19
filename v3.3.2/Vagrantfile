@@ -20,7 +20,7 @@ SCRIPT
 Vagrant.configure(2) do |config|
   config.vm.box = "ubuntu/trusty64"
   config.ssh.insert_key = false
-  config.vm.network "forwarded_port", guest_ip: "127.0.0.1", guest: 9001, host: 9002, host_ip: "127.0.0.1", id: "bsfw"
+  config.vm.network "forwarded_port", guest_ip: "127.0.0.1", guest: 9001, host: 9005, host_ip: "127.0.0.1", id: "bsfw"
   config.vm.provider "virtualbox" do |v|
     v.memory = 2048
   end
