@@ -5,17 +5,12 @@
 
 // Color system
 
-// debug values
-/*
-$grayLight: #bbbbbb70 !default;
-$grayDark:  #55555570 !default;
-$cyan:     #00aaaad0 !default;
-*/
 $grayLight: #aaaaaa !default;
 $cyan:     #00aaaa !default;
 
 $white:    #fff !default;
-$grayDark:  #555555 !default;
+// this isn't really correct but there's a legibility issue
+$grayDark:  #777 !default;
 $gray-100: $grayDark !default;
 $gray-200: $grayDark !default;
 $gray-300: $grayDark !default;
@@ -59,9 +54,11 @@ $grays: map-merge(
 // These values are lifted from
 // https://en.wikipedia.org/wiki/Enhanced_Graphics_Adapter
 // screw it, why think?
+// Actually I don't like those. I like my value from 2.0 more
+//
 
 $black:    #000000 !default;
-$blue:     #0000aa !default;
+$blue:     #000084 !default;
 $green:    #00aa00 !default;
 $red:      #aa0000 !default;
 $magenta:  #aa00aa !default;
@@ -71,7 +68,7 @@ $greenBright: #5f5 !default;
 $cyanBright:  #5ff !default;
 $redBright:  #f55 !default;
 $magentaBright: #f5f !default;
-$yellow: #ff5 !default;
+$yellow: #fefe54 !default;
 $pink: $magentaBright;
 
 $brightMap: (

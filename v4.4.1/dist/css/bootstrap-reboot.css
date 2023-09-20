@@ -5,11 +5,6 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * Forked from Normalize.css, licensed MIT (https://github.com/necolas/normalize.css/blob/master/LICENSE.md)
  */
-/*
-$grayLight: #bbbbbb70 !default;
-$grayDark:  #55555570 !default;
-$cyan:     #00aaaad0 !default;
-*/
 @font-face {
   font-family: 'DOS';
   src: url("../fonts/Px437_IBM_EGA8.otf") format("opentype");
@@ -49,7 +44,7 @@ body {
   font-size: 16px;
   color: #aaaaaa;
   text-align: left;
-  background-color: #0000aa;
+  background-color: #000084;
   -webkit-font-kerning: none;
   font-kerning: none;
   text-rendering: geometricPrecision;
@@ -165,7 +160,7 @@ sup {
 }
 
 a {
-  color: #ff5;
+  color: #fefe54;
   text-decoration: none;
   background-color: transparent;
 }
@@ -229,7 +224,7 @@ table {
 caption {
   padding-top: 0;
   padding-bottom: 0;
-  color: #555555;
+  color: #777;
   text-align: left;
   caption-side: bottom;
 }
