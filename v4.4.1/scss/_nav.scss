@@ -18,6 +18,9 @@
   @include hover-focus() {
     text-decoration: none;
   }
+  &::first-letter {
+    color: $redDark;
+  }
 
   // Disabled state lightens text
   &.disabled {
