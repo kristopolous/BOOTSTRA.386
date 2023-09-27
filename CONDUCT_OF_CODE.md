@@ -42,7 +42,7 @@ whether they can release good software.
 
 The conduct of code applies to my computer and yours in public and in private, intimate settings, 
 late at night, when nobody is looking and you turn off your anti-virus, log in as root and slide 
-your laptop in home-made langerie to have your way with it by candlelight. 
+your laptop in home-made lingerie to have your way with it by candlelight. 
 
 We know. We all know.
 
