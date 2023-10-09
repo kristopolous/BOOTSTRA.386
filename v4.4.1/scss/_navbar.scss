@@ -234,6 +234,9 @@
       @include hover-focus() {
         color: $navbar-light-hover-color;
         background: $black;
+        &::first-letter {
+          color: $redBright;
+        }
       }
 
       &.disabled {
@@ -247,6 +250,9 @@
     .nav-link.active {
       color: $navbar-light-active-color;
       background: $navbar-light-active-background;
+      &::first-letter {
+        color: $redBright;
+      }
     }
   }
 

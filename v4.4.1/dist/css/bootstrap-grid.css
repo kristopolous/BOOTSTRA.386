@@ -15,11 +15,6 @@ html {
   box-sizing: inherit;
 }
 
-/*
-$grayLight: #bbbbbb70 !default;
-$grayDark:  #55555570 !default;
-$cyan:     #00aaaad0 !default;
-*/
 .container {
   width: 100%;
   padding-right: 8px;
