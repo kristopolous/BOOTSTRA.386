@@ -3,11 +3,9 @@
 //
 
 .bd-footer {
-  @include font-size(.875rem);
   text-align: center;
 
   a {
-    font-weight: 600;
     color: $gray-700;
 
     &:hover,

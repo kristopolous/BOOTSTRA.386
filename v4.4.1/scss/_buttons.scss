@@ -52,6 +52,7 @@ fieldset:disabled a.btn {
     @include hover() {
       &:before,&:after {
         color: brighten($value);
+	background: $black;
       }
     }
     @include button-variant($value, $value);

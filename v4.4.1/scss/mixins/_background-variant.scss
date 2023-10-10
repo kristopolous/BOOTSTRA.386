@@ -6,7 +6,12 @@
   #{$parent} {
     background-color: $color !important;
     // We need this to avoid gray on gray
-    color: $dark;
+    @if $color == $dark {
+      color: $white;
+    }
+    @else {
+      color: $dark;
+    }
   }
 
   a#{$parent},
@@ -20,8 +25,11 @@
 @mixin bg-gradient-variant($parent, $color) {
   #{$parent} {
     background: $color linear-gradient(180deg, mix($body-bg, $color, 15%), $color) repeat-x !important;
-    @if $color == 'light' {
+    @if $color == $light {
       color: $dark;
+    }
+    @if $color == $dark {
+      color: $white;
     }
   }
 }

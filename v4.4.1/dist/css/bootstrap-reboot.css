@@ -399,4 +399,8 @@ template {
   color: #fff;
   background-color: #00aaaa;
 }
+
+rect {
+  fill: none !important;
+}
 /*# sourceMappingURL=bootstrap-reboot.css.map */

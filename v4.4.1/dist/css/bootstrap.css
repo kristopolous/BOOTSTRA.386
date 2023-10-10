@@ -430,6 +430,10 @@ template {
   background-color: #00aaaa;
 }
 
+rect {
+  fill: none !important;
+}
+
 h1, h2,
 .h1, .h2 {
   margin-bottom: 0;
@@ -2597,6 +2601,7 @@ fieldset:disabled a.btn {
 
 .btn-primary:hover:before, .btn-primary:hover:after {
   color: #fff;
+  background: #000000;
 }
 
 .btn-primary:hover {
@@ -2683,6 +2688,7 @@ fieldset:disabled a.btn {
 
 .btn-secondary:hover:before, .btn-secondary:hover:after {
   color: #fff;
+  background: #000000;
 }
 
 .btn-secondary:hover {
@@ -2769,6 +2775,7 @@ fieldset:disabled a.btn {
 
 .btn-success:hover:before, .btn-success:hover:after {
   color: #5f5;
+  background: #000000;
 }
 
 .btn-success:hover {
@@ -2855,6 +2862,7 @@ fieldset:disabled a.btn {
 
 .btn-info:hover:before, .btn-info:hover:after {
   color: #5ff;
+  background: #000000;
 }
 
 .btn-info:hover {
@@ -2941,6 +2949,7 @@ fieldset:disabled a.btn {
 
 .btn-warning:hover:before, .btn-warning:hover:after {
   color: #fefe54;
+  background: #000000;
 }
 
 .btn-warning:hover {
@@ -3027,6 +3036,7 @@ fieldset:disabled a.btn {
 
 .btn-danger:hover:before, .btn-danger:hover:after {
   color: #f55;
+  background: #000000;
 }
 
 .btn-danger:hover {
@@ -3109,6 +3119,10 @@ fieldset:disabled a.btn {
   color: #000000;
   border-color: #000000;
   background-color: #fff;
+}
+
+.btn-light:hover:before, .btn-light:hover:after {
+  background: #000000;
 }
 
 .btn-light:hover {
@@ -3194,6 +3208,7 @@ fieldset:disabled a.btn {
 
 .btn-dark:hover:before, .btn-dark:hover:after {
   color: #777;
+  background: #000000;
 }
 
 .btn-dark:hover {
@@ -6887,7 +6902,7 @@ button.bg-light:focus {
 
 .bg-dark {
   background-color: #000000 !important;
-  color: #000000;
+  color: #fff;
 }
 
 a.bg-dark:hover, a.bg-dark:focus,

@@ -539,3 +539,8 @@ template {
   color: $white;
   background-color: $cyan;
 }
+
+// the toats use this
+rect {
+  fill: none !important;
+}

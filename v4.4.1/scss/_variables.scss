@@ -276,9 +276,6 @@ $paragraph-margin-bottom: $line-height !default;
 // Define the minimum dimensions at which your layout will change,
 // adapting to different screen sizes, for use in media queries.
 
-@debug 2*1px;
-@debug 2px*1;
-
 $grid-breakpoints: (
   xs: 0,
   sm: 12 * 6 * $space-width, 
