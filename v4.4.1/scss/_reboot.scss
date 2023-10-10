@@ -144,8 +144,8 @@ ol,
 ul,
 dl {
   margin-top: 0;
-  margin-left: $space-width / 2;
-  padding-left: 0;
+  margin-left: 2px; // $space-width / 2;
+  padding-left: $space-width / 2; //;
   margin-bottom: $line-height-base;
 }
 ol {
@@ -155,8 +155,8 @@ ol {
   margin-left: $font-size-base;
 }
 li {
-  padding-left: $space-width / 2;
-  margin-left: $space-width;
+  padding-left: 0; //$space-width / 2;
+  margin-left: 6px; //$sace-width;
 }
 
 ol ol,
@@ -332,7 +332,11 @@ label {
 // Remove the default `border-radius` that macOS Chrome adds.
 //
 // Details at https://github.com/twbs/bootstrap/issues/24093
+// There's some issues here with the documentation.
+// we need to remove the border and background 
 button {
+  background: none;
+  border: none;
   // stylelint-disable-next-line property-blacklist
   border-radius: 0;
   padding: 0;

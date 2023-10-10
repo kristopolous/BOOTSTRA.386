@@ -121,8 +121,8 @@ ol,
 ul,
 dl {
   margin-top: 0;
-  margin-left: 4px;
-  padding-left: 0;
+  margin-left: 2px;
+  padding-left: 4px;
   margin-bottom: 14px;
 }
 
@@ -135,8 +135,8 @@ ol li {
 }
 
 li {
-  padding-left: 4px;
-  margin-left: 8px;
+  padding-left: 0;
+  margin-left: 6px;
 }
 
 ol ol,
@@ -271,6 +271,8 @@ label {
 }
 
 button {
+  background: none;
+  border: none;
   border-radius: 0;
   padding: 0;
 }
@@ -5735,7 +5737,7 @@ a.badge-dark:focus, a.badge-dark.focus {
 
 .list-group-item-action:hover, .list-group-item-action:focus {
   z-index: 1;
-  color: #aaaaaa;
+  color: #fff;
   text-decoration: none;
   background-color: #777;
 }
