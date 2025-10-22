@@ -116,3 +116,28 @@ But it's not jsut phones, it's screens in general. Small CRTs flicker everywhere
 "What the hell is this thing?", I scoffed, "two terabytes of storage, on chip the size of my fingernail?". I looked at the convincing plastic rectangle festooned with logos and claiming "2TB" by some imaginary company named "Lenovo". Underneath it was bespeckled with tiny yellow colored teeth. I guess this prankster thought they could just slide it in like an Atari 2600 cartridge. Into what I have no idea. Getting 2 kilobytes in this form-factor would have been an accomplishment. It felt as fragile as a tortilla chip. 
 
 
+--
+
+
+It was time for me to go. Literally. In 6 months, I built BOOTSTRA/386 and now it my window to leave. I had heard about the legendary Claude with no last name who had brought the microcomputer to the masses and really, during that interview I just used the name as a joke. 
+
+That's always the problem with time-travel, did I become my future reality? Was it inevitable or did I build it? I've entered the grandfather paradox of technology. Maybe putting "Quit" in the File drop down is actually a bad idea. Who knows? It's too late now. The sands of time sweep through all our fingers the same. Windwos close before we realize they were ever open and opportunities enter the world of imagined counterfactuals. 
+
+Our negotiation with time is the most powerful relationship we ostensibly have control over. And yet, it will always have control over us.
+
+I came empty-handed and now I will leave them empty, a mystery of the ages. We were always going to be eclipsed by the Macintosh. That was unavoidable. Building the most legendary forgotten empire with all but a floppy disk and this story to show are my two vast and trunkless legs of stones in the desert. For a glimmer of the past, I was ozymandias, king of kings.
+
+But now, I look on my own works, however mighty, and all they fill me with is dispair.
+
+I set my time machine for 2025 and I pull the lever.
+
+
+
+---
+
+
+"Abort, Retry, Fail?" isn't just a DOS-error, it's the core contention of our business.
+shock-a-roo
+sharaku
+Sincerely,
+C:\> aude
