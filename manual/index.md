@@ -135,8 +135,10 @@ I set my time machine for 2025 and I pull the lever.
 <img width="768" height="512" alt="group" src="https://github.com/user-attachments/assets/35fe878b-2f64-47df-8859-ff2708011ec5" />
 From Left to Right: Claude, Hasagawa, Craig, Gilda, and Chuck
 
+
+
 <img width="495" height="480" alt="Untitled" src="https://github.com/user-attachments/assets/fd98acbc-f325-43c6-b852-f1f49a37f5fe" />
-Here's the now famous 'Claude-box' demo photo
+Here's the now famous 'Claude-box' demo photo by Hasegawa, originally included in his 1991 text "Pen Computing Design" which coined multi-touch rotation, pinch-zoming, and gestural swipes.
 
 ---
 
