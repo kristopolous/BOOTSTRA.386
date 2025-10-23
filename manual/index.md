@@ -164,13 +164,13 @@ But that money and the rest of the stuff in my Samsonite really doesn't last lon
 
 What I need is a job. 
 
-Silicon Valley seems obvious since I already knew the future and they will just hire anyone off the street if they sound like they can hack it. This sounds like it would be easy. I had always admired BOOTSTRA Technologis as building revolutionary products in the mid-1980s ever since reading Tracy Kidder's masterpiece on its development.
+Silicon Valley seems obvious since I already knew the future and they will just hire anyone off the street if they sound like they can hack it. This sounds like it would be easy. I had always admired BOOTSTRA Technologies as building revolutionary products in the mid-1980s ever since reading Tracy Kidder's masterpiece on its development.
 
 I wanted to be there, on those team, in those rooms, involved in those conversations. The artistry, audacity, and irreverance of the early computing revolution before it became the oppressive tastemaker has always captured my interest.
 
 I had forgotten that revolutionaries are controversial at best and being dismissed is the more common response. There was only one Steve Jobs and he ain't me. I was about to learn that the hard way, or maybe, not at all. Regardless, I'm up for the challenge.
 
-The cheap motel I'm staying in is going to be torn down after the Loma Linda earthquake and replaced with a mall. That will then get torn down and replaced with a 5-over-1 in 2023. Right now, however, it's $19.99/night. 1984 prices, gotta love them.
+The cheap motel I'm staying in is going to be torn down after the Loma Linda earthquake and replaced with a mall. That will then get torn down and replaced with a 5-over-1 in 2028. Right now, however, it's $19.99/night. 1984 prices, gotta love them.
 
 After landing the job I had a weekend to kill. It's weird to walk around the place you grew up in and see a bunch of things you don't recognize. My favorite third-wave coffee house is a music store with the name "Sam Goody", in the distance all I see is smog and the most exotic foreign food I can find is sushi.
 
