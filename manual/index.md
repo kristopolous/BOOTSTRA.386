@@ -149,15 +149,15 @@ And so we did. And then I slept for real and woke up Tuesday morning in our offi
 
 ## The Hail Mary
 
-Everyone has read mythical man-month, the idea that adding another developer too late in the game actually makes the product take longer.  The problem is it's March and we're basically right where we were at in the Tehachapi Denny's - not willing to clone them and trying to move ahead. And now we not only have the Apple Lisa to deal with but thanks to Thomas we know that Microsoft is working on a graphical system as well. I'm sure IBM and Digital Research is in the game as well. 
+Everyone has read mythical man-month, the idea that adding another developer too late in the game actually makes the product take longer.  The problem is it's March and we're basically right where we were at in the Tehachapi Denny's - not willing to clone VisiCorp and trying to move ahead. And now we not only have the Apple Lisa to deal with but thanks to Thomas we know that Microsoft is working on a graphical system as well. I'm sure IBM and Digital Research is in the game as well. 
 
-I feel asphyxiated before taking the first breath. I lean back in my chair. On the edge of my desk sit a pile of Resumes. We get a trickle in constantly regardless of whether we have a job posted and it's my job to go through them so I do on occasion. 
+I feel asphyxiated before taking the first breath. I lean back in my chair. On the edge of my desk sit a pile of resumes. We get a trickle in constantly regardless of whether we have a job posted and it's my job to go through them and I do, sometimes, do my job on occasion. 
 
-Going through resumes is hard. The method I've landed on is "do I want to talk to this person?". I'm not really interested if they are "good at the job" in as much as I'm interested in can they help define the space. Orion's "resume", for instance, was just a hand written note from Steve Wozniak, "Hire Orion. Woz" followed by his name and a phone number.
+Going through resumes is hard. The method I've landed on is "do I want to talk to this person?". I'm not really interested if they are "good at the job" in as much as I'm interested in can they help define the space. Orion's "resume", for instance, was just a hand written note from Steve Wozniak, "Hire Orion. Woz".
 
 It worked. That's all he needed. 
 
-As I shuffle through I see one by a guy named "Claude". It's strange, almost like he was living in the walls. Again, not in any typical resume format.
+As I shuffle through the pile I see another unconventional one that catches my eye by a guy named "Claude". It's strange, just a letter and a phone number, no credentials, no work history, nothing else listed:
 
   Hey Chuck,
 
@@ -166,13 +166,14 @@ As I shuffle through I see one by a guy named "Claude". It's strange, almost lik
   you break ahead and how can I help? 
 
   Let me convince you with a little innovation I call marching ants. You have a selection area and you could just draw a box.
-  The problem is you can't choose white, you can't choose black all the time, and inverting things doesn't look right either.
-  What about a light show? Alternate the colors and then cycle them, providing an animated rectangle to delineate a selection,
-  like ants maching.
+  
+  The problem is you can't choose white because some things are black and you can't choose black because some things are white and inverting things can also be hard to see if the area is complex enough.
+
+  So, what about a light show? Alternate the pixels and then cycle them, providing the illusion of an animated rectangle to delineate a selection like ants maching.
 
   The code is easy. Your team probably has it written, they just need to call it. 
 
-  Plenty more where that came from
+  There's plenty more where that came from. Give me a call.
   ~claude
 
 It was like an alien in a UFO had just landed in my backyard. I have no idea who he is but I've got the money and project is on its last legs with respect to time. So why not?
