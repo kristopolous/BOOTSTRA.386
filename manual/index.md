@@ -121,13 +121,13 @@ We ask the candidate what his idea would look like.
 
 "Ok, so let's redesign WordStar in your vision. Show us what these pull-downs will look like", I say. "Just get up and draw it."
 
-He draws on the chalkboard this oblong rectangle. Inside it are the words "File" "Edit" "View" "Windows" and "Help". Then he scratches a rectangle around the "File" and says "Alright the user point the mouse at this and then a rectangle below appears" as he places the words "New", "Open", "Open Recent", "Save", "Save As", and "Exit".
+The candidate looks around the room almost as if asking permission to get up and then pushes his chair back and walks over to the chalkboartd. He draws an oblong horizontal rectangle. Inside it are the words "File" "Edit" "View" "Windows" and "Help". Then he scratches a rectangle around the "File" and says "Alright the user points the mouse at this and then a rectangle below appears, we call it a menu" as he places the words "New", "Open", "Open Recent", "Save", "Save As", and "Exit".
 
-Gilda gets up and walks up to him as she picks up her chalk. "Alright but here's the problems." she doesn't even look at the candidate as she starts pressing dots on the chalkboard, "see, File is a noun, Edit and View are verbs. You've just gon from Noun-Verb in the first column to Verb-Noun in the second. And also, why is exiting the program in the File menu? Who would look for it there?"
+Gilda gets up and walks up to him as she picks up her chalk. "Interesting idea, but here's the problems." she doesn't even look at the candidate as she starts pressing dots on the chalkboard, "see, File is a noun, Edit and View are verbs. You've just gone from Noun-Verb in the first column to Verb-Noun in the second. And also, why is exiting the program in the File's commnd box? Who would look for it there? Why not under the Windows command box?"
 
 The candidate looks back at the board and mumbles, "I ... I never thought of that..."
 
-Craig gets up from his chair and walks on over as well. "Sorry, but here's another. So you've split "Save" and "Save As" and "Open" and "Open Recent", why not just put that distinction into a further dialog box? Also one distinction is temporal and the other is canonical."
+Orion gets up from his chair revealing his sandles and shorts as walks on over as well. "Sorry, but here's another. So you've split "Save" and "Save As" and "Open" and "Open Recent", why not just put that distinction into a further box? Also one distinction is temporal and the other is canonical."
 
 The candidate turns back and stares at us in utter bafflement, almost as if his world is shattered. 
 
@@ -141,15 +141,15 @@ It strikes me that this interview was over but I get an audacious, and perhaps c
 
 Now Mike comes from 20 years at Woolworths, he's en excellent sales guy but really doesn't know much about computers. He's been the "average-user" guinea pig before and has become famous for splashing cold water on the hottest idea.
 
-"Well", Michael starts scratching his head, "it looks like WordStar. That's a nice hierarchy. I hope you're putting formatting and clipboard stuff in the Edit box. Also, that separation in the box under File clears everything up. It's the stuff I want to do with the thing. Add Print in there and it's perfect. This is the first thing I've seen that makes sense. Anyway Chuck, I'll see you in 5." and he closes the door. 
+"Well", Michael starts scratching his head, "it looks like WordStar. That's a nice hierarchy. I hope you're putting formatting and clipboard stuff in the Edit box. Also, that separation in the box under File clears everything up. It's the stuff I want to do with the thing. Combining the vertical and the horizontal is very convenient, I like how I can continue to see everything. Add Print in there and it's perfect." He chuckles a bit in bemusement, "This is the first thing I've seen you guys do that makes sense. Anyway Chuck, I'll see you in 5." and he closes the door. 
 
-Everyone's mouth is open in shock as the only sound we hear is his squeaky shoes stepping down the carpeted hallway walking away.
+Everyone's mouth is open in shock as the only sound I hear is Michae's squeaky shoes stepping down the carpeted hallway walking away.
 
 I shrug my shoulders and look around the room, "Alright, fuck it." I pause and look for negative rection. Seeing none, I continue "I guess you're hired. See you Monday 9 am. You go by Claude right?"
 
 "Yeah."
 
-Craig murmurs in disbelief, "We should get the security guard in here and see if she can figure it out".
+Orion murmurs in disbelief, "We should get the security guard in here and see if that drawing makes sense to her as well".
 
 ## Claude's world
 January 1984 wasn't really a time of significance. It's hard to explain but not all times are equally accessible. There's a topology and the distances are very non-euclidean. It's just as uneven and entropic as everything else this universe creates. For whatever reason, the next easily accessible date that requires under 50KW and wasn't millions of years ago is January 1984, 15 years before I was born. I have about a 5 minute window at 3:32am tonight to catch it otherwise I will be sent off to somewhere in the Proterozoic.
