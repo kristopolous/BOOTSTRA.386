@@ -156,7 +156,7 @@ Everyone thinks time travel is going to be glamorous but really, you go back to 
 
 No friends, bank account, connections, place to live... 
 
-January 1984 wasn't really a time of significance. It's hard to explain but not all times are equally accessible. There's a topology and the distances are very non-euclidean. It's just as uneven and entropic as everything else this universe creates. For whatever reason, the next easily accessible date that requires under 50KW and wasn't millions of years ago is January 1984, 20 years before I was born. I have about a 5 minute window at 3:32am tonight to catch it otherwise I will be sent off to somewhere in the Proterozoic.
+March 1984 wasn't really a time of significance. It's hard to explain but not all times are equally accessible. There's a topology and the distances are very non-euclidean. It's just as uneven and entropic as everything else this universe creates. For whatever reason, the next easily accessible date that requires under 50KW and wasn't millions of years ago is January 1984, 20 years before I was born. I have about a 5 minute window at 3:32am tonight to catch it otherwise I will be sent off to somewhere in the Proterozoic.
 
 The best way to travel isn't to get vintage currency, that's expensive. What I do is purchase jewelry at estate sales. Then I pawn it off. At least that way I'll have a few hundred bucks. 
 
@@ -215,7 +215,7 @@ From Left to Right: Claude, Hasagawa, Orion, Gilda, and Chuck
 
 
 <img width="495" height="480" alt="Untitled" src="https://github.com/user-attachments/assets/fd98acbc-f325-43c6-b852-f1f49a37f5fe" />
-Here's the now famous 'Claude-box' demo photo by Hasegawa, originally included in his 1991 text "Pen Computing Design" which coined multi-touch rotation, pinch-zoming, and gestural swipes.
+Here's the now famous September 1984 'Claude-box' demo photo by Hasegawa, originally included in his 1991 text "Pen Computing Design" which coined multi-touch rotation, pinch-zoming, and gestural swipes.
 
 ---
 
