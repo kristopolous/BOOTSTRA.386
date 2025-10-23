@@ -210,7 +210,7 @@ I set my time machine for 2025 and I pull the lever.
 
 
 <img width="768" height="512" alt="group" src="https://github.com/user-attachments/assets/35fe878b-2f64-47df-8859-ff2708011ec5" />
-From Left to Right: Claude, Hasagawa, Craig, Gilda, and Chuck
+From Left to Right: Claude, Hasagawa, Orion, Gilda, and Chuck
 
 
 
