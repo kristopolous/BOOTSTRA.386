@@ -8,7 +8,7 @@ This is our story.
 
 ## Planning Party
 
-When Nolan Bushnell sold Atari to start Chuck-E-Cheese a few years ago, we joked he was just going lower in the stack - providing the fuel to the fire on Sandhill Road. At least fuel to a team of kids, the oldest of which was 24, who I was eating late night pizza in Menlo Park on a Friday in early January.
+When Nolan Bushnell sold Atari to start Chuck-E-Cheese a few years ago, we joked he was just going lower in the stack - providing the fuel to the fire on Sandhill Road. At least fuel to a team of kids, the oldest of which was 24, who I was eating late night pizza in Menlo Park on a Saturday night around New Year.
 
 We were talking about the future of computing and how it was going to change the office of the 1990s. We had been passing around this book, Smalltalk-80, describing some personal office computers by Xerox, unrelated to their 500 series minicomputers, to be used by just a single non-technical person to do work in a way that obsoletes the mail room, switchboard, and even the secretary.
 
@@ -22,51 +22,44 @@ The question went unanswered. Xerox's machines sold about as well as cars from S
 
 Hasegawa, our designer, who is ex-Omron and Matsushita was busy drawing on a napkin. Our primary target is the office and a simplification of common tasks. Recently he had been trying to replace the schedulebook. 
 
-He opens up the napkin and start drawing flow diagrams and the rest of us look over. "In Japanese", he says "the days of the week are single characters. It's a nice shorthand." There's a key up in the left-hand side that says
-
-  Monday - M
-  Tuesday - T
-  Wednesday - W
-  tHursday - H
-  Friday - F
-  Saturday - S
-  sUnday - U
+He opens up the napkin and start drawing flow diagrams and the rest of us look over. "In Japanese", he says "the days of the week are single characters. It's a nice shorthand." There's a key up in the left-hand side that says "Monday - M, Tuesday - T, Wednesday - W, tHursday - H, Friday - F, Saturday - S, sUnday - U"
 
 "See you press one of the letters and then by default that's for all those days. Then you can follow it by a number for the time. So you can do "MWF1000" for 10 AM. Then you can enter details on the next screen..."
 
-"Ok so what", Orion strokes his beard, looking at it "it's just data entry without a purpose. How does it make your life easier?"
+"Ok so what", Orion strokes his beard, looking at it skeptically, "it's just data entry without a purpose. How does it make your life easier?"
 
 "Well" Hasegawa breathes in, "You can save your schedule to a disk. Then pass it to your colleagues, they can import your schedule, look for conflicts, know your availability..."
 
-The team looked back at me and I thought about it for a moment. "Wouldn't we see something like this already?" I paused for a second, "You could put a large communal calendar on a corkboard and each team could pencil in their meetings and then someone could refer to the common calendar for scheduling." I peered at Hasegawa's diagram, "what I'm trying to say is, we don't see this so you're proposing a new kind of behavior. What makes you think people will do in the digital world something they couldn't do easier in the analog one?"
+Orion tips his head in contemplation with a face that reads "maybe". The team looked back at me and I also thought about it for a moment. 
 
-This is one of the most vexxing questions I have. Doing what they are already doing, but on a computer is a much better pitch than asking them to do a new thing on a computer that they've never done before.
+"Wouldn't we see something like this already?" I pause, "I mean at a traditional office. You could put a large communal calendar on a corkboard and each team could pencil in their meetings and then someone could refer to the common calendar for scheduling." I peered at Hasegawa's diagram, "what I'm trying to say is, we don't see the communal calendar in the wild so you're proposing a new kind of behavior. What makes you think people will do in the digital world something they couldn't do easier in the analog one?"
 
-Like most conversations this dissappeared into the ether as fever dreams of future imaginaries fueled by fantasy and confusion.
+This is one of my most common analytical tools when I'm trying to assess product viability in the marketplace. Selling a product where people do what they are already doing, but on a computer is a much easier sale than asking them to do a new thing on a computer that they've never done before.
+
+But like most of our Saturday night conversations this dissappeared into the ether as fever dreams of future imaginaries fueled by fantasy and confusion.
 
 ## On the road
-
-The drive on Sunday to Vegas was a bit much for the 1973 Winnebego. It was the only vehicle we could rent that we could plug a power strip into. Going to Comdex is kinda like camping. Ok, not really. It's actually crucial. If you miss it, then you might as well just go out of business.
+The drive on Sunday to Vegas was a bit much for the 1973 Winnebego. It was the only vehicle we could rent that could take a power. Going to Comdex is kinda like camping. Ok, not really, we had a hotel. It's actually a crucial convention for the tech industry. If you miss it, then you might as well just go out of business.
 
 It's the one time a year that companies are foolish enough to demo unannouced products and on top of that, send the actual engineers that are working on them. They get exactly zero training on what not to say. If you showered them with enough attention, they'd probably give you their SYSOP password to show how clever they were.
 
-Among engineers the only skill required for spycraft is smiles and flattery.
+Among engineers the only skill required for spycraft is smiles and flattery. The biggest bets in Vegas that week are placed on the floor of the Convention Center.
 
 The back of the Winnebego has Hasegawa, Orion, Gilda and a fourth member, Thomas, sitting around 3 microcomputers as I drive down the I-5 past fields of food and cows. So many fragrant cows. Almost makes me want to go Vegetarian.
 
-If you haven't had the chance to use a computer yet, let me introduce you to the strangeness. You get a 40 pound box that you place on a table and plug into a wall. Then you flip a switch and the it gets increasingly noisy until the box sounds like it needs muffler. The machine chirps a beep as the screen or television you plugged into turns on and, usually, you see an incrementing number in the top left. It will go up into the hundreds in increments of 16. This checks what is known as volatile memory, it's what the computer needs to shuffle things around in its brain.
+If you haven't had the chance to use a computer yet, let me introduce you to the strangeness. You get a 40 pound box that you place on a table and plug into a wall. Then you flip a switch and it gets increasingly noisy until the box sounds like it needs muffler. The machine chirps a beep as the screen or television you plugged into turns on and, usually, you see an incrementing number in the top left. It will go up into the hundreds in increments of 16. This checks what is known as volatile memory, it's what the computer needs to shuffle things around in its brain.
 
-A top of the line computer these days will go up to 640, which is about the size in computer terms, of a paperback novel. This takes minutes. Enough for you to make a cup of coffee. 
+A top of the line computer these days will go up to 640, which is about the size in computer terms of a paperback novel. This takes minutes. Enough for you to make a cup of coffee. 
 
-And then the diskette drives make a disturbing crunching sound as their lights go red, looking to see if anything is in there. If it's not, then the default system loads. 
+And then the diskette drives make a disturbing crunching sound as their lights go red, looking to see if anything is in there. If it's not, then the default system loads or maybe you have to have something in there to start.  Depends on the computer.
 
-Regardless of the computer this is eventually a prompt which consists of a series of characters followed by a blinking rectangle called a cursor.  Now it's your turn: you instruct the computer what to do through terse languages inside of the default software with names like "CP/M" and "MS-DOS". Yes, it's all caps with characters in between them. For the first name you just say the letters and omit the slash. The second name is not a fair maiden named Ms. Dos nor do you say all the letters. Instead the "MS" is letters and the "DOS" part rhymes with loss.
+Regardless, this is eventually followed by a prompt which consists of a series of characters followed by a blinking rectangle called a cursor.  Now it's your turn: you instruct the computer what to do through terse languages inside of that default software, which has names like "CP/M" and "MS-DOS". Yes, it's all caps with symbols in between them. For the first name you just say the letters and omit the slash. The second name is not a fair maiden named Ms. Dos nor do you say all the letters. Instead the "MS" is letters and the "DOS" part rhymes with loss.
 
-And these machines, costing thousands of dollars each, are, eventually, supposed to replace the back-office and be orchestrated by the general public.
+These machines, costing thousands of dollars each, are, eventually, supposed to replace the back-office and be orchestrated by the general public.
 
-Everyone assumes this will be inevitable and people will do all kinds of things on the micro: look up recipes, casually chat with friends, maybe even fall in love or store home videos and their record collection. All this and more on the black screen with the blinking rectangle.
+Everyone assumes this will be inevitable and people will do all kinds of things on the microcomputer: look up recipes, casually chat with friends, maybe even fall in love or store home videos and their record collection. All this and more on the black screen with the blinking rectangle.
 
-As I cut across to Bakersfield I adjust the rear view mirror to see the young engineers fully bought into this implausible future. But little did I know, that in 48 hours, a single demo on the floor of the Las Vegas Convention center would make me believe it as well.
+As I cut across to Bakersfield I adjust the rear view mirror to see the young engineers fully bought into this implausible future. But little did I know, that in 24 hours, a single demo on the floor of the Las Vegas Convention center would make me believe it as well.
 
 ## Visi-on Vision
 
@@ -74,47 +67,53 @@ Comdex isn't open to the public but that hasn't stopped it from becoming one of 
 
 Gilda loops back up with me first: "DEC has a bunch of their new Rainbows on display. Bad command or file name". That's a bit of shop talk.
 
-Let's back up for a second. In order to understand things you need to know a bit more about these computers. The terse language that you type while running the MS-DOS softare can generate a variety of common errors. It's worth taking the time to provide a glossary here:
+Let's back up for a second. In order to understand things you need to know a bit more about these computers. The terse language that you type while running the MS-DOS software can generate a variety of common errors. Here's the glossary:
 
  * "Abort, Retry, Fail?"
    *MS-DOS*: When the computer expects to read data from a computer disk but is unable to (perhaps the disk got damaged or was removed).
-   *To Us*: This is the primary business question. Should we abort the effort and pivot to something else, retry with more resources, or admit failure and roll it up. An associated error here is.
+   *To Us*: This is the primary business question. Should we abort the effort and pivot to something else, retry with more resources, or admit failure and roll it up. 
 
  * "Disk not ready in Drive A"
    *MS-DOS*: This is the first part of the two line error with "Abort, Retry, Fail?", nominally to inform the user what they are supposed to do.
-   *To Us*: The software isn't ready yet or is full of bugs. If the software glitches, this is relevant
+   *To Us*: The software isn't ready yet or is full of bugs. If the software glitches, this is usually how we describe it.
 
  * "Bad command or file name"
-   *MS-DOS*: It means you tried to command the computer at the prompt in a way it didn't understand. Usually this happens through a typo. Either way the computer balks at you and say "nope".
+   *MS-DOS*: You tried to issue a command in a way the computer does not understand. Usually this happens through a typo. Either way the computer balks at you with this message.
    *To Us*: The product doesn't work. It doesn't feel right or engage the user in a meaningful way. It could also mean it's too slow or exorbitantly expensive. Regardless, it lacks viability.
 
  * "Press any key to continue"
    *MS-DOS*: The computer has performed an operation or is expecting something and is waiting for the user to engage with it before continuing. 
-   *To Us*: It's a call for action, to end conversation, adjourn the meeting and do something. It's basically an exasperated "do something!" request.
+   *To Us*: It's a call for action, to end conversation, adjourn the meeting and do something else, often something that is obvious and needs attention. 
 
-It's worth noting these are mostly negative. We don't really have aphorisms for success. I think there's a tendency to break bad news with a bit of humor in a hope that it lands lighter. 
+It's worth noting these aphorisms are mostly negative. We don't really have any for success. I think there's a tendency to break bad news with a bit of humor in a hope that it lands lighter.  I don't know if it works, but we do it anyway.
 
-Hasegawa comes running over to me. He's still too far away for me to hear him but has he gets closer I hear "they did it, they did it". He's flustered, surprised, almost nervous. Gilda and I give him a confused look. "They're called VisiCorp", come look. 
+I respond to Gilda, "it doesn't look like they're going to PDP IBM again" - a reference to their gangbuster microcomputer in the 1960s that made them successful. All their efforts in the world of microcomputers have felt like a circus without substance.
 
-We follow him through the maze of stalls and see a large crowd around a number of IBM PCs. I'm a fairly tall guy so I peaked over and see a black 3 button mouse hooked up to a screen with a cascade of graphical boxes. One of them is a bar graph and another looks like a Lotus-123 screen, no - that's their own version. 
+Just at that moment, Hasegawa comes running over to me catching his breath. He's still too far away for me to hear him but has he gets closer I hear "they did it, they did it". He's flustered, surprised, almost nervous. Gilda and I give him a confused look. "They're called VisiCorp", come look. 
 
-The employee clicks on one of the boxes with a region hidden and it comes to the front, almost as if it's a stack. Inside it is a number of words in a horizontal strip. The employee moves the mouse over the item and clicks on it. No hotkeys, no Wordperfect function strip. And then the text redraws as slanted italics. 
+We follow him through the maze of stalls and see a large crowd around a number of IBM PCs. I'm a fairly tall guy so I peak over and see a black 3 button mouse hooked up to a screen displaying a cascade of black boxes in a monochrome graphics mode. In one of the boxes is a bar graph and another looks like a Lotus-123 screen, no - that's their own spreadsheet. 
 
-People applaud like they just saw ng Harry Houdini break out of a safe. No jargon. I peer down the aisle and see Orion at the Commodore booth looking at some new portables and motion him to come over.  Hasegawa's mouth is open in shock. The employee changes a value in the spreadsheet and then the bar-graph redraws itself automatically.
+The employee clicks on one of the boxes with a region hidden and it comes to the front, almost as if it's a stack of applications. Inside this box is a number of words in a horizontal strip. The employee moves the mouse over the item labeled "Italics" and clicks on it. No hotkeys, no Wordperfect function strip. And then the text redraws as slanted italics. 
 
-He moves the mouse over to the word print and clicks the mouse button and then a few moments later, his Okidata printer head starts moving and produces exactly what we see on screen. "Holy shit" Orion blurts out, "can I buy that here?"
+People applaud like they just saw Harry Houdini break out of a safe. No jargon, no manuals. You just point and click. I peer down the aisle and see Orion at the Commodore booth looking at some new portables and motion him to come over.  Hasegawa's mouth continues to be open in shock. The employee changes a value in the spreadsheet and then the bar-graph redraws itself automatically. It's stunning.
 
-The answer was irrelevant. Everyone that day was sold. We saw the future. It was like the Xerox experience machine but on a microcomputer. This is what Boston was waving their hands about but nobody had known what it looked like.
+He moves the mouse arrow over to the word "Print" and clicks the mouse button and then a few moments later, an Okidata printer head starts moving and produces exactly what we see on screen. "Holy shit" Orion blurts out, "can I buy that here?"
 
-Hasegawa took his camera and put in a new roll of film and started snapping pictures of the demo. I looked at him, "I'm sure they won't mind" he says.
+The answer was irrelevant. Everyone that day was sold. We saw the future. It was like the Xerox experience but on a microcomputer. This is what Boston was waving their hands about. Nobody had known what it looked like.
 
-The rest of the day we tried not to look too auspicious as we hanged around the VisiCorp table like groupies. Thomas, who comes from 15 years of ERP software, filled up his entire notebook full of diagrams and notes in pitman shorthand which I assure you, none of us but him could read.
+Hasegawa takes his camera and puts in a new roll of film and starts snapping pictures of the demo. I look at him, "I'm sure they won't mind" he says.
 
-Closing time hit and by then we had buttered up the VisiCorp engineers through our flattery and got more details on the implementation than I feel at liberty to disclose. I even tried to buy them dinner but was rebuffed.
+The rest of the day we try not to look too auspicious as we hang around the VisiCorp booth like groupies. Thomas, who comes from 15 years of ERP software, fills up his entire notebook full of diagrams and pitman shorthand which I assure you, none of us but him can read.
 
-As we hopped into the Winnebego to go off and find some place to eat and were exchanging notes, Orion looked around and said "Press any to continue?"
+Closing time hits and by then I have buttered up the VisiCorp engineers through flattery and got more details on the implementation than I feel at liberty to disclose. I even try to buy them dinner but am rebuffed.
 
-I looked back and we all agreed. We don't need to stay in Vegas another day. Fuck the food, we got what we came for. It's time to go back to Menlo Park.
+As we hop into the Winnebego to go off and find some place to eat, my team can't stop talking as they  exchange notes. Orion looks around and said "Press any to continue?"
+
+I look back and we are at a consensus. We don't need to stay in Vegas another day. Forget the food, we got what we came for. It's time to go back to Menlo Park.
+
+## Version 0.0
+
+"We can't just clone them" Thomas gripes as he looks over his notes. "We need to be finishing races they're still lacing up for." 
 
 ---
 
