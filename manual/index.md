@@ -152,11 +152,11 @@ I shrug my shoulders and look around the room, "Alright, fuck it." I pause and l
 Orion murmurs in disbelief, "We should get the security guard in here and see if that drawing makes sense to her as well".
 
 ## Claude's world
-January 1984 wasn't really a time of significance. It's hard to explain but not all times are equally accessible. There's a topology and the distances are very non-euclidean. It's just as uneven and entropic as everything else this universe creates. For whatever reason, the next easily accessible date that requires under 50KW and wasn't millions of years ago is January 1984, 15 years before I was born. I have about a 5 minute window at 3:32am tonight to catch it otherwise I will be sent off to somewhere in the Proterozoic.
-
 Everyone thinks time travel is going to be glamorous but really, you go back to a time before you were born as nobody. 
 
 No friends, bank account, connections, place to live... 
+
+January 1984 wasn't really a time of significance. It's hard to explain but not all times are equally accessible. There's a topology and the distances are very non-euclidean. It's just as uneven and entropic as everything else this universe creates. For whatever reason, the next easily accessible date that requires under 50KW and wasn't millions of years ago is January 1984, 20 years before I was born. I have about a 5 minute window at 3:32am tonight to catch it otherwise I will be sent off to somewhere in the Proterozoic.
 
 The best way to travel isn't to get vintage currency, that's expensive. What I do is purchase jewelry at estate sales. Then I pawn it off. At least that way I'll have a few hundred bucks. 
 
@@ -178,7 +178,7 @@ There's all these details nobody talks about and you don't realize until you're 
 
 Even the lights are different. They have harsh bright glows and buzzing sounds, flickering like the lights in some kind of video game. And then there's the lack of phones of course. I've got mine back at the hotel room, sure, along with my modern laptop and USB power brick ... I wasn't going to travel completely empty-handed.
 
-But it's not just phones, it's screens in general. Small CRTs flicker everywhere with washed out color and have this high pitched squeal when you turn them on. 40 years ago can feel so familiar yet at the same time, so foreign. The NES version of Super Mario Bros is still 18 months in the future.
+But it's not just phones, it's screens in general. Small CRTs flicker everywhere with washed out color and have this high pitched squeal when you turn them on. 50 years ago can feel so familiar yet at the same time, so foreign. The NES version of Super Mario Bros is still 18 months in the future.
 
 
 ---
