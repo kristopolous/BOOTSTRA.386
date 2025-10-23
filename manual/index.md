@@ -8,7 +8,7 @@ This is our story.
 
 ## Planning Party
 
-When Nolan Bushnell sold Atari to start Chuck-E-Cheese a few years ago, we joked he was just going lower in the stack - providing the fuel to the fire on Sandhill Road. At least fuel to a team of kids, the oldest of which was 24, who I was eating late night pizza in Menlo Park on a Saturday night around New Year.
+When Nolan Bushnell sold Atari to start Chuck-E-Cheese a few years ago, we joked he was just going lower in the stack - providing the fuel to the fire on Sandhill Road. At least fuel to a team of ambitious engineers who I was eating late night pizza in Menlo Park on a Saturday night around New Year with.
 
 We were talking about the future of computing and how it was going to change the office of the 1990s. We had been passing around this book, Smalltalk-80, describing some personal office computers by Xerox, unrelated to their 500 series minicomputers, to be used by just a single non-technical person to do work in a way that obsoletes the mail room, switchboard, and even the secretary.
 
@@ -70,20 +70,20 @@ Gilda loops back up with me first: "DEC has a bunch of their new Rainbows on dis
 Let's back up for a second. In order to understand things you need to know a bit more about these computers. The terse language that you type while running the MS-DOS software can generate a variety of common errors. Here's the glossary:
 
  * "Abort, Retry, Fail?"
-   *MS-DOS*: When the computer expects to read data from a computer disk but is unable to (perhaps the disk got damaged or was removed).
-   *To Us*: This is the primary business question. Should we abort the effort and pivot to something else, retry with more resources, or admit failure and roll it up. 
+   * *MS-DOS*: When the computer expects to read data from a computer disk but is unable to (perhaps the disk got damaged or was removed).
+   * *To Us*: This is the primary business question. Should we abort the effort and pivot to something else, retry with more resources, or admit failure and roll it up. 
 
  * "Disk not ready in Drive A"
-   *MS-DOS*: This is the first part of the two line error with "Abort, Retry, Fail?", nominally to inform the user what they are supposed to do.
-   *To Us*: The software isn't ready yet or is full of bugs. If the software glitches, this is usually how we describe it.
+   * *MS-DOS*: This is the first part of the two line error with "Abort, Retry, Fail?", nominally to inform the user what they are supposed to do.
+   * *To Us*: The software isn't ready yet or is full of bugs. If the software glitches, this is usually how we describe it.
 
  * "Bad command or file name"
-   *MS-DOS*: You tried to issue a command in a way the computer does not understand. Usually this happens through a typo. Either way the computer balks at you with this message.
-   *To Us*: The product doesn't work. It doesn't feel right or engage the user in a meaningful way. It could also mean it's too slow or exorbitantly expensive. Regardless, it lacks viability.
+   * *MS-DOS*: You tried to issue a command in a way the computer does not understand. Usually this happens through a typo. Either way the computer balks at you with this message.
+   * *To Us*: The product doesn't work. It doesn't feel right or engage the user in a meaningful way. It could also mean it's too slow or exorbitantly expensive. Regardless, it lacks viability.
 
  * "Press any key to continue"
-   *MS-DOS*: The computer has performed an operation or is expecting something and is waiting for the user to engage with it before continuing. 
-   *To Us*: It's a call for action, to end conversation, adjourn the meeting and do something else, often something that is obvious and needs attention. 
+   * *MS-DOS*: The computer has performed an operation or is expecting something and is waiting for the user to engage with it before continuing. 
+   * *To Us*: It's a call for action, to end conversation, adjourn the meeting and do something else, often something that is obvious and needs attention. 
 
 It's worth noting these aphorisms are mostly negative. We don't really have any for success. I think there's a tendency to break bad news with a bit of humor in a hope that it lands lighter.  I don't know if it works, but we do it anyway.
 
@@ -111,9 +111,74 @@ As we hop into the Winnebego to go off and find some place to eat, my team can't
 
 I look back and we are at a consensus. We don't need to stay in Vegas another day. Forget the food, we got what we came for. It's time to go back to Menlo Park.
 
+## Menlo Return 
+
+I was tired. Probably too tired for the all night drive back through the desert and up the I-5. The Winnebego had two beds and luckily Hasegawa was up for trading off on the drive. I can't sleep though. I hear everyone talking as my head fills with anxiety.
+
+We blaze past Barstow as I see a sky full of stars out the back window. "We can't just clone them" Thomas gripes as he looks over his notes. "We need to be finishing races they're still lacing up for." 
+
+"Yeah sure, I mean sure" Gilda agrees, "but are we really going to get into the game with Wordstar and Multimate? Isn't that a crowded marketplace? And is that really our product?"
+
+Orion sips some cold green tea he's been nursing since Vegas as he lays on the other mattress, "What we really need to be is a graphical DOS. Like swap out all the services, clone them, but do so graphically. The applications are stupid, they are just function calling, we just make those functions do something else. Call us instead." 
+
+"Yea but to do what?" Gilda asks rubbing her temples. "I mean look, if WordPerfect is looking for like Alt-F2, we can't just translate that into a mouse or display a box on the screen, every application is different in how that exists internally. The applications themselves have to be aware of the difference in a way in order to have the affordances."
+
+Hasegawa shouts back "Hey, I need to stop for gas. But also I've got something to say". As the Winnebego slides off the highway in a town called Tehachapi that closes at 8pm except for a single Texaco and a Denny's, I give up on sleeping. Maybe we should go get some food after all. 
+
+I pull myself out of bed, "Mind if I buy you Denny's?" It's always nice not to have to ask twice. 
+
+Monday night at Dennys in Tehachapi is downright pleasant. It was us, some long haul truckers and a couple that looks like they'd been there since the WPA during the new deal. Hasegawa asks for extra napkins and a set of crayons. The waitress just brings him pen and paper. Nice place.
+
+I order eggs and hash browns. I am still a bit nauseous from the smell of cows from the I-5 less than 24 hours ago. "Ok so here's the deal" I start. "We've got a runway until Q4, latest. We need a deliverable by then and it has to be compelling. Boston has more money than patience so I've got money but not time to burn. All this talk about rewriting DOS, it's too ambitious, we can't do it by then. We need something else."
+
+Hasegawa mumbles "toolkit" loud enough for Thomas to hear. "A tool-kit?" I say. "Yes, SDK. We need to have an easy way for developers to plug into our GUI. Maybe it can be a fall-back, you don't have to use us. So the customer they don't need our tool, they can still use the program without us."
+
+"But we enhance the experience" I finish. "Yes, the worst experience is the current paradigm"
+
+Gilda looks down, "well we need something more concrete than that" 
+
+I respond, "We have time. Not much. But we have some. At least enough to finish this food". 
+
+And so we did. And then I slept for real and woke up Tuesday morning in our office parking lot in the back of the Winnebego in the chilly 7am January weather of Northern California. Everyone else had gone home and let me sleep, very kind of them. I suppose I'm dressed well enough for the office. It was time to get to work.
+
 ## Version 0.0
 
-"We can't just clone them" Thomas gripes as he looks over his notes. "We need to be finishing races they're still lacing up for." 
+## The problem with Thomas 
+
+## Boston Tea Party
+
+## The Hail Mary
+
+Everyone has read mythical man-month, the idea that adding another developer too late in the game actually makes the product take longer.  The problem is it's March and we're basically right where we were at in the Tehachapi Denny's - not willing to clone them and trying to move ahead. And now we not only have the Apple Lisa to deal with but thanks to Thomas we know that Microsoft is working on a graphical system as well. I'm sure IBM and Digital Research is in the game as well. 
+
+I feel asphyxiated before taking the first breath. I lean back in my chair. On the edge of my desk sit a pile of Resumes. We get a trickle in constantly regardless of whether we have a job posted and it's my job to go through them so I do on occasion. 
+
+Going through resumes is hard. The method I've landed on is "do I want to talk to this person?". I'm not really interested if they are "good at the job" in as much as I'm interested in can they help define the space. Orion's "resume", for instance, was just a hand written note from Steve Wozniak, "Hire Orion. Woz" followed by his name and a phone number.
+
+It worked. That's all he needed. 
+
+As I shuffle through I see one by a guy named "Claude". It's strange, almost like he was living in the walls. Again, not in any typical resume format.
+
+  Hey Chuck,
+
+  I know you're leaning back in your chair reading this trying to get yourself out of a jam. Nobody reads resumes unless
+  they need somebody. I also know there's a lot of sharks in the waters your swimming in. IBM, Apple, Microsoft. How will 
+  you break ahead and how can I help? 
+
+  Let me convince you with a little innovation I call marching ants. You have a selection area and you could just draw a box.
+  The problem is you can't choose white, you can't choose black all the time, and inverting things doesn't look right either.
+  What about a light show? Alternate the colors and then cycle them, providing an animated rectangle to delineate a selection,
+  like ants maching.
+
+  The code is easy. Your team probably has it written, they just need to call it. 
+
+  Plenty more where that came from
+  ~claude
+
+It was like an alien in a UFO had just landed in my backyard. I have no idea who he is but I've got the money and project is on its last legs with respect to time. So why not?
+
+I picked up the phone and dialed the number.
+
 
 ---
 
@@ -156,7 +221,7 @@ Everyone thinks time travel is going to be glamorous but really, you go back to 
 
 No friends, bank account, connections, place to live... 
 
-March 1984 wasn't really a time of significance. It's hard to explain but not all times are equally accessible. There's a topology and the distances are very non-euclidean. It's just as uneven and entropic as everything else this universe creates. For whatever reason, the next easily accessible date that requires under 50KW and wasn't millions of years ago is January 1984, 20 years before I was born. I have about a 5 minute window at 3:32am tonight to catch it otherwise I will be sent off to somewhere in the Proterozoic.
+March 1983 wasn't really a time of significance. It's hard to explain but not all times are equally accessible. There's a topology and the distances are very non-euclidean. It's just as uneven and entropic as everything else this universe creates. For whatever reason, the next easily accessible date that requires under 50KW and wasn't millions of years ago is March 1983, 25 years before I was born. I have about a 5 minute window at 3:32am tonight to catch it otherwise I will be sent off to somewhere in the Proterozoic.
 
 The best way to travel isn't to get vintage currency, that's expensive. What I do is purchase jewelry at estate sales. Then I pawn it off. At least that way I'll have a few hundred bucks. 
 
@@ -170,7 +235,7 @@ I wanted to be there, on those team, in those rooms, involved in those conversat
 
 I had forgotten that revolutionaries are controversial at best and being dismissed is the more common response. There was only one Steve Jobs and he ain't me. I was about to learn that the hard way, or maybe, not at all. Regardless, I'm up for the challenge.
 
-The cheap motel I'm staying in is going to be torn down after the Loma Linda earthquake and replaced with a mall. That will then get torn down and replaced with a 5-over-1 in 2028. Right now, however, it's $19.99/night. 1984 prices, gotta love them.
+The cheap motel I'm staying in is going to be torn down after the Loma Linda earthquake and replaced with a mall. That will then get torn down and replaced with a 5-over-1 in 2028. Right now, however, it's $19.99/night. 1983 prices, gotta love them.
 
 After landing the job I had a weekend to kill. It's weird to walk around the place you grew up in and see a bunch of things you don't recognize. My favorite third-wave coffee house is a music store with the name "Sam Goody", in the distance all I see is smog and the most exotic foreign food I can find is sushi.
 
@@ -202,7 +267,7 @@ That's always the problem with time-travel, did I become my future reality? Was 
 
 Our negotiation with time is the most powerful relationship we ostensibly have control over. And yet, it will always have control over us.
 
-I came empty-handed and now I will leave them empty, a mystery of the ages. We were always going to be eclipsed by the Macintosh. That was unavoidable. Building the most legendary forgotten empire with all but a floppy disk and this story to show are my two vast and trunkless legs of stones in the desert. For a glimmer of the past, I was ozymandias, king of kings.
+I came empty-handed and now I will leave them empty, a mystery of the ages. We were always going to be eclipsed by the Mintosh. That was unavoidable. Building the most legendary forgotten empire with all but a floppy disk and this story to show are my two vast and trunkless legs of stones in the desert. For a glimmer of the past, I was ozymandias, king of kings.
 
 But now, I look on my own works, however mighty, and all they fill me with is dispair.
 
@@ -215,7 +280,7 @@ From Left to Right: Claude, Hasagawa, Orion, Gilda, and Chuck
 
 
 <img width="495" height="480" alt="Untitled" src="https://github.com/user-attachments/assets/fd98acbc-f325-43c6-b852-f1f49a37f5fe" />
-Here's the now famous September 1984 'Claude-box' demo photo by Hasegawa, originally included in his 1991 text "Pen Computing Design" which coined multi-touch rotation, pinch-zoming, and gestural swipes.
+Here's the now famous September 1983 'Claude-box' demo photo by Hasegawa, originally included in his 1991 text "Pen Computing Design" which coined multi-touch rotation, pinch-zoming, and gestural swipes.
 
 ---
 
