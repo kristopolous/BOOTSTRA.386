@@ -1,8 +1,8 @@
 ## Preface
 
-When the headquarters in Boston tasked us with a full-screen interface that supported pointing devices connected through any bus, full color displays, and to work on everything from palmtops to mainframes, and then to have it all fit on a 1.44MB 3.5" floppy, we knew we had our work cut out for us.
+It was late 1982, headquarters in Boston tasked us with a bringing the microcomputer to the general public. Their fever dream was a full-screen interface supporting pointing devices connected through any bus, full color displays, and running on everything from future palmtops to today's mainframes. Also, it has to fit on a single floppy and a non-technical person should be able to use it in minutes.
 
-Luckily we got together our global team of software developers with resumes from Ashton-Tate to Quarterdeck and everywhere in between was up for the challenge.
+The problem is nobody has built this. knows how to build that. We don't even know if today's micros are capable of such a feat. We were going to try it anyway.
 
 This is our story.
 
@@ -141,15 +141,22 @@ I respond, "We have time. Not much. But we have some. At least enough to finish 
 
 And so we did. And then I slept for real and woke up Tuesday morning in our office parking lot in the back of the Winnebago in the chilly 7am January weather of Northern California. Everyone else had gone home and let me sleep, very kind of them. I suppose I'm dressed well enough for the office. It was time to get to work.
 
-## Version 0.0
+## Version 0.0: Potemkin
+
+MS-DOS function requests are done in 2 bytes. There's a catalog of what each of these codes mean. 09H (that's in base-16, don't ask) for instance, is "Display string" where "string" means a string of characters, as in some sentence. 16H is "Create file" and so on. What our team is trying to do is map each of these to their graphical equivalent. What would that look like in a VisiCorp like system? The idea is that then our traditional DOS program will, if we can say, magically transform to a graphical one with our technology.
+
+We called in project Potemkin because we are really just scaffolding friendlier front doors and hopefully getting more people to open them.
+
+We widely agreed this is the only viable way forward. We aren't large enough to command a position in every meaningful place in the marketplace so we must carve out our own. 
 
 ## The problem with Thomas 
 
 ## Boston Tea Party
+90 days is hard enough time to finish a complex computer program but it is enough to expect to see some movement. 
 
 ## The Hail Mary
 
-Everyone has read mythical man-month, the idea that adding another developer too late in the game actually makes the product take longer.  The problem is it's March and we're basically right where we were at in the Tehachapi Denny's - not willing to clone VisiCorp and trying to move ahead. And now we not only have the Apple Lisa to deal with but thanks to Thomas we know that Microsoft is working on a graphical system as well. I'm sure IBM and Digital Research is in the game as well. 
+Everyone has read mythical man-month, the idea that adding another developer too late in the game actually makes the product take longer.  The problem is it's April and we're basically right where we were at in the Tehachapi Denny's - not willing to clone VisiCorp and trying to move ahead. And now we not only have the Apple Lisa to deal with but thanks to Thomas we know that Microsoft is working on a graphical system as well. I'm sure IBM and Digital Research is in the game as well. 
 
 I feel asphyxiated before taking the first breath. I lean back in my chair. On the edge of my desk sit a pile of resumes. We get a trickle in constantly regardless of whether we have a job posted and it's my job to go through them and I do, sometimes, do my job on occasion. 
 
@@ -222,7 +229,7 @@ Everyone thinks time travel is going to be glamorous but really, you go back to 
 
 No friends, bank account, connections, place to live... 
 
-March 1983 wasn't really a time of significance. It's hard to explain but not all times are equally accessible. There's a topology and the distances are very non-euclidean. It's just as uneven and entropic as everything else this universe creates. For whatever reason, the next easily accessible date that requires under 50KW and wasn't millions of years ago is March 1983, 25 years before I was born. I have about a 5 minute window at 3:32am tonight to catch it otherwise I will be sent off to somewhere in the Proterozoic.
+April 1983 wasn't really a time of significance. It's hard to explain but not all times are equally accessible. There's a topology and the distances are very non-euclidean. It's just as uneven and entropic as everything else this universe creates. For whatever reason, the next easily accessible date that requires under 50KW and wasn't millions of years ago is April 1983, 25 years before I was born. I have about a 5 minute window at 3:32am tonight to catch it otherwise I will be sent off to somewhere in the Proterozoic.
 
 The best way to travel isn't to get vintage currency, that's expensive. What I do is purchase jewelry at estate sales. Then I pawn it off. At least that way I'll have a few hundred bucks. 
 
