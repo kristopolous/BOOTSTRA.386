@@ -299,6 +299,25 @@ McBride shakes his hands exasperated, "your software? where's the computer?"
 
 Chuck looks over and responds "We are."
 
+I enrolled to butcher paper onto the mahogany desk showing the default view of our spreadsheet application. 
+
+McBride says "all right I have the same task, a pie chart".
+
+he looks over the menu bar and the button ribbon and sees the graph button. he moves his finger over to it "all right that one"
+
+I open up the Rolodex looking for the graph index card and slap it on the table in the middle of the butcher paper. It has drawings of various charts, one of which is a pie chart.
+
+McBride raises his eyebrows "very good gentleman" and points at the pie chart. a few minutes later his choose your own adventure game is complete and he has his pie chart, or at least an index card of it. 
+
+the executives look at each other around the table and then all of them but one reach in to their pockets and and remove a wad of cash. They push it over to the head sales woman. 
+
+"we all lost a bet today." Sheryl says as she raises a pack of manila envelopes flapping them back and forth. "These are your pink slips. We were sure we were going to need them.
+
+She drops them in a nearby trash can.
+
+You've earned your 6 months. Go build this."
+
+
 
 ---
 
