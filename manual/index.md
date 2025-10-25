@@ -152,11 +152,41 @@ We widely agreed this is the only viable way forward. We aren't large enough to 
 ## The problem with Thomas 
 
 ## Boston Tea Party
-90 days is hard enough time to finish a complex computer program but it is enough to expect to see some movement. 
+90 days is hardly enough time to finish a complex computer program but it is enough to expect to see some movement. The difference between doing something and getting things done is the direction of that movement. The path taken makes the product as much as the people taking it. As a porject manager in a corporate structure my job is not to choose the destination but instead, to try to find a way to get there. 
+
+This all sounds abstract and it is. Fred Brooks, of IBM OS/360 fame, coined software as "pure thought stuff". Building is making manifest things imagined. There's tons of ambiguities, problems, and miscommunications. Engineers are the ultimate Monkey's Paw and we find out how some ideas are only compelling as long as they remain imagined but once they become real, we have no interest. 
+
+The problem is these sentiments can only be derived experientially, not abstractly. You can certainly theorize what ought to be compelling, but ultimately you hae to build it to find out.
+
+I know this is a lot of musings but I'm on a TWA flight from SFO to Boston with a couple copies of Project Potemkin in my bag and frankly I'm nervous. 
+
+We like the technology, it is genuinely something new. But we built it, it's our natural proclivity. The other people at the office, not so much. How much of a problem this is I'm about to find out.
+
+---
+
+"Look, I'm doing the same thing I usually do, just now with cartoon symbols"  McBride says. "I had no idea how to build a pie graph in Lotus 123 and having a bunch of words splattered on the screen with drawings isn't clearing things up."
+
+"I am losing faith that these are products we should be building" McBride raises his eyebrows as hs shakes his head.
+
+"I heard Lisa sales are terrible" Sheryl responds. 
+
+I focus my eyes on an existential plane, feeling myself astral project, like I'm leaving the my corpial form. This is become a memory before an experience. My lips start moving, words start coming out but I have no recollection of the thoughts being generated: "Pretend you sleep for 20 years and wake up. You walk into the office of the 21st century. Everyone is using a computer. Are they manipulating things on the screen or using a command line?"
+
+And then, I commit a heresy.
+
+"If everyone is to have a computer, are there more people or companies? What will the demands be for a $500,000 BOOTSTRA 7000-DS series minicomputer be in the year 2000 in a world of $500 micros?" 
+
+I swear someone scoffed at me and to this day I'll never know who. 
+
+McBride stares at me agressively, "You will be back here in 28 days. You will come with something better. Have a good day." 
+
+The meeting was over.  28 days is brutal.
+
+I should probably use that health insurance while I still have it.
 
 ## The Hail Mary
 
-Everyone has read mythical man-month, the idea that adding another developer too late in the game actually makes the product take longer.  The problem is it's April and we're basically right where we were at in the Tehachapi Denny's - not willing to clone VisiCorp and trying to move ahead. And now we not only have the Apple Lisa to deal with but thanks to Thomas we know that Microsoft is working on a graphical system as well. I'm sure IBM and Digital Research is in the game as well. 
+Everyone has read Mythical Man-month, the idea that adding another developer too late in the game actually makes the product take longer.  The problem is it's April and we're basically right where we were at in the Tehachapi Denny's - not willing to clone VisiCorp and trying to move ahead. And now we not only have the Apple Lisa to deal with but thanks to Thomas we know that Microsoft is working on a graphical system as well. I'm sure IBM and Digital Research is in the game as well. 
 
 I feel asphyxiated before taking the first breath. I lean back in my chair. On the edge of my desk sit a pile of resumes. We get a trickle in constantly regardless of whether we have a job posted and it's my job to go through them and I do, sometimes, do my job on occasion. 
 
@@ -258,6 +288,17 @@ But it's not just phones, it's screens in general. Small CRTs flicker everywhere
 
 
 Knowing history doesn't give you the ability to change the future, only to become needlessly invested in the futility of your ability to affect it.
+
+## Boston returns
+
+Silicon Valley didn't really become tech center until the 1990s. The corporate office is in a neoclassical brick building off Route 128 where everyone still dresses in suits, even on Friday. We enter the executive conference room with our duffelbag
+
+McBride stands up "Chuck, what the hell is that?" as we pull out the butcher paper and rolodex. He looks at me and I respond, "it's our software."
+
+McBride shakes his hands exasperated, "your software? where's the computer?"
+
+Chuck looks over and responds "We are."
+
 
 ---
 
