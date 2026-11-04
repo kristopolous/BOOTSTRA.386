@@ -50,10 +50,10 @@
     margin-left: .5rem;
   }
 
-  // Buttons
+  // Buttons keep the row below them for their shadow
   > .btn,
   > .btn-group {
-    margin: 0 $space-width 0 0;
+    margin: 0 $space-width $line-height 0;
   }
   > .btn-toolbar + .btn-toolbar {
     margin-top: $line-height;

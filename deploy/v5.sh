@@ -54,7 +54,7 @@ push_site() {
   git push origin HEAD
 }
 
-todo=${1:-make_build build_site push_site}
+todo=${*:-make_build build_site push_site}
 for i in $todo; do
   $i
 done

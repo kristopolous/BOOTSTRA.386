@@ -44,7 +44,7 @@
   text-align: center;
   text-decoration: none;
   white-space: $btn-white-space;
-  vertical-align: middle;
+  vertical-align: top; // middle would round the row up a pixel
   cursor: if($enable-button-pointers, pointer, null);
   user-select: none;
   background-color: var(--#{$prefix}btn-bg);
@@ -78,16 +78,17 @@
     outline: 0;
   }
 
-  // Pressed: the block moves into its shadow
+  // Pressed: the block moves into its shadow. A transform, not a margin,
+  // so the row it sits on does not move with it.
   .btn-check:checked + &,
   :not(.btn-check) + &:active,
   &:first-child:active,
   &.active,
   &.show {
-    margin: ($line-height * .5) 0 ($line-height * .5) $space-width;
     color: var(--#{$prefix}btn-active-color);
     background-color: var(--#{$prefix}btn-active-bg);
     box-shadow: none;
+    transform: translate($space-width, $line-height * .5);
   }
 
   &:disabled,
@@ -209,7 +210,7 @@
   &:first-child:active,
   &.active,
   &.show {
-    margin: 0;
+    transform: none;
   }
 }
 
@@ -218,7 +219,7 @@
 .toast .btn-check:checked + .btn,
 .alert .btn-check:checked + .btn,
 .dropdown-menu .btn-check:checked + .btn {
-  margin: 0;
+  transform: none;
 }
 
 .modal-footer .btn {
