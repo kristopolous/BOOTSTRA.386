@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Convey meaning through background-color and add decoration with gradients.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Hugo 0.115.4">
+<meta name="generator" content="Hugo 0.169.0">
 
 <title>Background · Bootstrap v5.3</title>
 
@@ -16,6 +16,9 @@
 <link href="/BOOTSTRA.386/v5.3.1/docs/5.3/dist/css/bootstrap.css" rel="stylesheet">
 
 <link href="/BOOTSTRA.386/v5.3.1/docs/5.3/assets/css/docs.css" rel="stylesheet">
+
+<style>body { visibility: hidden; }</style>
+<noscript><style>body { visibility: visible; }</style></noscript>
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/BOOTSTRA.386/v5.3.1/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -498,7 +501,7 @@ Background utilities like <code>.bg-*</code> that generated from our original <c
 </span></span></span><span class="line"><span class="cl"><span class="c1">// BOOTSTRA/386: the 16 color EGA/CGA palette. Colors are 4 bits: IRGB.
 </span></span></span><span class="line"><span class="cl"><span class="c1">// The &#34;bright&#34; variants are what you get when the intensity bit is set.
 </span></span></span><span class="line"><span class="cl"><span class="c1">//
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$black</span><span class="o">:</span>         <span class="mh">#000000</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl"><span class="nv">$black</span><span class="o">:</span>         <span class="mh">#000000</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$blue</span><span class="o">:</span>          <span class="mh">#0000aa</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$green</span><span class="o">:</span>         <span class="mh">#00aa00</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$cyan</span><span class="o">:</span>          <span class="mh">#00aaaa</span><span class="p">;</span>
@@ -516,7 +519,7 @@ Background utilities like <code>.bg-*</code> that generated from our original <c
 </span></span><span class="line"><span class="cl"><span class="nv">$white</span><span class="o">:</span>         <span class="mh">#ffffff</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// Bootstrap&#39;s named colors, approximated onto the palette
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$indigo</span><span class="o">:</span>  <span class="nv">$blueBright</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl"><span class="nv">$indigo</span><span class="o">:</span>  <span class="nv">$blueBright</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$purple</span><span class="o">:</span>  <span class="nv">$magenta</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$pink</span><span class="o">:</span>    <span class="nv">$magentaBright</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$orange</span><span class="o">:</span>  <span class="nv">$redBright</span><span class="p">;</span>
@@ -755,14 +758,14 @@ Background utilities like <code>.bg-*</code> that generated from our original <c
     </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// Horizontal gradient, from left to right
 </span></span></span><span class="line"><span class="cl"><span class="c1">//
 </span></span></span><span class="line"><span class="cl"><span class="c1">// Creates two color stops, start and end, by specifying a color and position for each color stop.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@mixin</span><span class="nf"> gradient-x</span><span class="p">(</span><span class="nv">$start-color</span><span class="o">:</span> <span class="nv">$gray-700</span><span class="o">,</span> <span class="nv">$end-color</span><span class="o">:</span> <span class="nv">$gray-800</span><span class="o">,</span> <span class="nv">$start-percent</span><span class="o">:</span> <span class="mi">0</span><span class="kt">%</span><span class="o">,</span> <span class="nv">$end-percent</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">)</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">@mixin</span><span class="nf"> gradient-x</span><span class="p">(</span><span class="nv">$start-color</span><span class="o">:</span> <span class="nv">$gray-700</span><span class="o">,</span> <span class="nv">$end-color</span><span class="o">:</span> <span class="nv">$gray-800</span><span class="o">,</span> <span class="nv">$start-percent</span><span class="o">:</span> <span class="mi">0</span><span class="kt">%</span><span class="o">,</span> <span class="nv">$end-percent</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="na">background-image</span><span class="o">:</span> <span class="nf">linear-gradient</span><span class="p">(</span><span class="n">to</span> <span class="ni">right</span><span class="o">,</span> <span class="nv">$start-color</span> <span class="nv">$start-percent</span><span class="o">,</span> <span class="nv">$end-color</span> <span class="nv">$end-percent</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// Vertical gradient, from top to bottom
 </span></span></span><span class="line"><span class="cl"><span class="c1">//
 </span></span></span><span class="line"><span class="cl"><span class="c1">// Creates two color stops, start and end, by specifying a color and position for each color stop.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@mixin</span><span class="nf"> gradient-y</span><span class="p">(</span><span class="nv">$start-color</span><span class="o">:</span> <span class="nv">$gray-700</span><span class="o">,</span> <span class="nv">$end-color</span><span class="o">:</span> <span class="nv">$gray-800</span><span class="o">,</span> <span class="nv">$start-percent</span><span class="o">:</span> <span class="n">null</span><span class="o">,</span> <span class="nv">$end-percent</span><span class="o">:</span> <span class="n">null</span><span class="p">)</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">@mixin</span><span class="nf"> gradient-y</span><span class="p">(</span><span class="nv">$start-color</span><span class="o">:</span> <span class="nv">$gray-700</span><span class="o">,</span> <span class="nv">$end-color</span><span class="o">:</span> <span class="nv">$gray-800</span><span class="o">,</span> <span class="nv">$start-percent</span><span class="o">:</span> <span class="n">null</span><span class="o">,</span> <span class="nv">$end-percent</span><span class="o">:</span> <span class="n">null</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="na">background-image</span><span class="o">:</span> <span class="nf">linear-gradient</span><span class="p">(</span><span class="n">to</span> <span class="ni">bottom</span><span class="o">,</span> <span class="nv">$start-color</span> <span class="nv">$start-percent</span><span class="o">,</span> <span class="nv">$end-color</span> <span class="nv">$end-percent</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">

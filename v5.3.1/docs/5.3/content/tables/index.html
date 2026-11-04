@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Documentation and examples for opt-in styling of tables (given their prevalent use in JavaScript plugins) with Bootstrap.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Hugo 0.115.4">
+<meta name="generator" content="Hugo 0.169.0">
 
 <title>Tables · Bootstrap v5.3</title>
 
@@ -16,6 +16,9 @@
 <link href="/BOOTSTRA.386/v5.3.1/docs/5.3/dist/css/bootstrap.css" rel="stylesheet">
 
 <link href="/BOOTSTRA.386/v5.3.1/docs/5.3/assets/css/docs.css" rel="stylesheet">
+
+<style>body { visibility: hidden; }</style>
+<noscript><style>body { visibility: visible; }</style></noscript>
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/BOOTSTRA.386/v5.3.1/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -971,7 +974,7 @@
     </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">//
 </span></span></span><span class="line"><span class="cl"><span class="c1">// A colored table is the color with readable text on it. Striped rows go
 </span></span></span><span class="line"><span class="cl"><span class="c1">// to black with the bright color, hovered and selected rows go to white.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@mixin</span><span class="nf"> table-variant</span><span class="p">(</span><span class="nv">$state</span><span class="o">,</span> <span class="nv">$background</span><span class="p">)</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">@mixin</span><span class="nf"> table-variant</span><span class="p">(</span><span class="nv">$state</span><span class="o">,</span> <span class="nv">$background</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="nc">.table-</span><span class="si">#{</span><span class="nv">$state</span><span class="si">}</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="nv">$color</span><span class="o">:</span> <span class="nf">color-contrast</span><span class="p">(</span><span class="nv">$background</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="nv">$hover-bg</span><span class="o">:</span> <span class="nf">if</span><span class="p">(</span><span class="nv">$background</span> <span class="o">==</span> <span class="nv">$white</span><span class="o">,</span> <span class="nv">$black</span><span class="o">,</span> <span class="nv">$white</span><span class="p">);</span>
@@ -1664,7 +1667,7 @@
 <p>Responsive tables allow tables to be scrolled horizontally with ease. Make any table responsive across all viewports by wrapping a <code>.table</code> with <code>.table-responsive</code>. Or, pick a maximum breakpoint with which to have a responsive table up to by using <code>.table-responsive{-sm|-md|-lg|-xl|-xxl}</code>.</p>
 <div class="bd-callout bd-callout-warning">
 <h5 id="vertical-clippingtruncation">Vertical clipping/truncation <a class="anchor-link" href="#vertical-clippingtruncation" aria-label="Link to this section: Vertical clipping/truncation"></a></h5>
-<p>Responsive tables make use of <code>overflow-y: hidden</code>, which clips off any content that goes beyond the bottom or top edges of the table. In particular, this can clip off dropdown menus and other third-party widgets.
+<p>Responsive tables make use of <code>overflow-y: hidden</code>, which clips off any content that goes beyond the bottom or top edges of the table. In particular, this can clip off dropdown menus and other third-party widgets.</p>
 </div>
 
 <h3 id="always-responsive">Always responsive <a class="anchor-link" href="#always-responsive" aria-label="Link to this section: Always responsive"></a></h3>

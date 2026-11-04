@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Bootstrap now supports color modes, or themes, as of v5.3.0. Explore our default light color mode and the new dark mode, or create your own using our styles as your template.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Hugo 0.115.4">
+<meta name="generator" content="Hugo 0.169.0">
 
 <title>Color modes · Bootstrap v5.3</title>
 
@@ -16,6 +16,9 @@
 <link href="/BOOTSTRA.386/v5.3.1/docs/5.3/dist/css/bootstrap.css" rel="stylesheet">
 
 <link href="/BOOTSTRA.386/v5.3.1/docs/5.3/assets/css/docs.css" rel="stylesheet">
+
+<style>body { visibility: hidden; }</style>
+<noscript><style>body { visibility: visible; }</style></noscript>
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/BOOTSTRA.386/v5.3.1/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -447,9 +450,9 @@
 <li>
 <p>For each color mode you wish to support, you&rsquo;ll need to add new overrides for the shared global CSS variables. We do this already in our <code>_root.scss</code> stylesheet for dark mode, with light mode being the default values. In writing color mode specific styles, use the mixin:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// Color mode variables in _root.scss
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@include</span><span class="nd"> color-mode</span><span class="p">(</span><span class="ni">dark</span><span class="p">)</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">@include</span><span class="nd"> color-mode</span><span class="p">(</span><span class="ni">dark</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="c1">// CSS variable overrides here...
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div></li>
 <li>
 <p>We use a custom <code>_variables-dark.scss</code> to power those shared global CSS variable overrides for dark mode. This file isn&rsquo;t required for your own custom color modes, but it&rsquo;s required for our dark mode for two reasons. First, it&rsquo;s better to have a single place to reset global colors. Second, some Sass variables had to be overridden for background images embedded in our CSS for accordions, form components, and more.</p>
@@ -649,12 +652,12 @@
 <p>Adding a new color in <code>$theme-colors</code> is not enough for some of our components like <a href="/BOOTSTRA.386/v5.3.1/docs/5.3/components/alerts/">alerts</a> and <a href="/BOOTSTRA.386/v5.3.1/docs/5.3/components/list-group/">list groups</a>. New colors must also be defined in <code>$theme-colors-text</code>, <code>$theme-colors-bg-subtle</code>, and <code>$theme-colors-border-subtle</code> for light theme; but also in <code>$theme-colors-text-dark</code>, <code>$theme-colors-bg-subtle-dark</code>, and <code>$theme-colors-border-subtle-dark</code> for dark theme.</p>
 <p>This is a manual process because Sass cannot generate its own Sass variables from an existing variable or map. In future versions of Bootstrap, we&rsquo;ll revisit this setup to reduce the duplication.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// Required
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;functions&#34;</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;functions&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;variables&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;variables-dark&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// Add a custom color to $theme-colors
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$custom-colors</span><span class="o">:</span> <span class="p">(</span>
+</span></span></span><span class="line"><span class="cl"><span class="nv">$custom-colors</span><span class="o">:</span> <span class="p">(</span>
 </span></span><span class="line"><span class="cl">  <span class="s2">&#34;custom-color&#34;</span><span class="o">:</span> <span class="mh">#712cf9</span>
 </span></span><span class="line"><span class="cl"><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$theme-colors</span><span class="o">:</span> <span class="nf">map-merge</span><span class="p">(</span><span class="nv">$theme-colors</span><span class="o">,</span> <span class="nv">$custom-colors</span><span class="p">);</span>
@@ -664,9 +667,9 @@
 </span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;utilities&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// Add a custom color to new theme maps
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// Light mode
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$custom-colors-text</span><span class="o">:</span> <span class="p">(</span><span class="s2">&#34;custom-color&#34;</span><span class="o">:</span> <span class="mh">#712cf9</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl"><span class="nv">$custom-colors-text</span><span class="o">:</span> <span class="p">(</span><span class="s2">&#34;custom-color&#34;</span><span class="o">:</span> <span class="mh">#712cf9</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$custom-colors-bg-subtle</span><span class="o">:</span> <span class="p">(</span><span class="s2">&#34;custom-color&#34;</span><span class="o">:</span> <span class="mh">#e1d2fe</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$custom-colors-border-subtle</span><span class="o">:</span> <span class="p">(</span><span class="s2">&#34;custom-color&#34;</span><span class="o">:</span> <span class="mh">#bfa1fc</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
@@ -675,7 +678,7 @@
 </span></span><span class="line"><span class="cl"><span class="nv">$theme-colors-border-subtle</span><span class="o">:</span> <span class="nf">map-merge</span><span class="p">(</span><span class="nv">$theme-colors-border-subtle</span><span class="o">,</span> <span class="nv">$custom-colors-border-subtle</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// Dark mode
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$custom-colors-text-dark</span><span class="o">:</span> <span class="p">(</span><span class="s2">&#34;custom-color&#34;</span><span class="o">:</span> <span class="mh">#e1d2f2</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl"><span class="nv">$custom-colors-text-dark</span><span class="o">:</span> <span class="p">(</span><span class="s2">&#34;custom-color&#34;</span><span class="o">:</span> <span class="mh">#e1d2f2</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$custom-colors-bg-subtle-dark</span><span class="o">:</span> <span class="p">(</span><span class="s2">&#34;custom-color&#34;</span><span class="o">:</span> <span class="mh">#8951fa</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$custom-colors-border-subtle-dark</span><span class="o">:</span> <span class="p">(</span><span class="s2">&#34;custom-color&#34;</span><span class="o">:</span> <span class="mh">#e1d2f2</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
@@ -684,7 +687,7 @@
 </span></span><span class="line"><span class="cl"><span class="nv">$theme-colors-border-subtle-dark</span><span class="o">:</span> <span class="nf">map-merge</span><span class="p">(</span><span class="nv">$theme-colors-border-subtle-dark</span><span class="o">,</span> <span class="nv">$custom-colors-border-subtle-dark</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// Remainder of Bootstrap imports
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;root&#34;</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;root&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;reboot&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="c1">// etc
 </span></span></span></code></pre></div><h2 id="css">CSS <a class="anchor-link" href="#css" aria-label="Link to this section: CSS"></a></h2>
@@ -800,7 +803,7 @@
 </span></span><span class="line"><span class="cl"><span class="c1">//
 </span></span></span><span class="line"><span class="cl"><span class="c1">// Forms
 </span></span></span><span class="line"><span class="cl"><span class="c1">//
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nv">$form-select-indicator-color-dark</span><span class="o">:</span>  <span class="nv">$form-select-indicator-color</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$form-select-indicator-dark</span><span class="o">:</span>        <span class="nv">$form-select-indicator</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
@@ -816,7 +819,7 @@
 </span></span><span class="line"><span class="cl"><span class="c1">//
 </span></span></span><span class="line"><span class="cl"><span class="c1">// Accordion
 </span></span></span><span class="line"><span class="cl"><span class="c1">//
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nv">$accordion-icon-color-dark</span><span class="o">:</span>         <span class="nv">$accordion-icon-color</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$accordion-icon-active-color-dark</span><span class="o">:</span>  <span class="nv">$accordion-icon-active-color</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">

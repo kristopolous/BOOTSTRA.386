@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Documentation and examples for Bootstrap typography, including global settings, headings, body text, lists, and more.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Hugo 0.115.4">
+<meta name="generator" content="Hugo 0.169.0">
 
 <title>Typography · Bootstrap v5.3</title>
 
@@ -16,6 +16,9 @@
 <link href="/BOOTSTRA.386/v5.3.1/docs/5.3/dist/css/bootstrap.css" rel="stylesheet">
 
 <link href="/BOOTSTRA.386/v5.3.1/docs/5.3/assets/css/docs.css" rel="stylesheet">
+
+<style>body { visibility: hidden; }</style>
+<noscript><style>body { visibility: visible; }</style></noscript>
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/BOOTSTRA.386/v5.3.1/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -385,38 +388,38 @@
 <h2 id="headings">Headings <a class="anchor-link" href="#headings" aria-label="Link to this section: Headings"></a></h2>
 <p>All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>, are available.</p>
 <div class="table-responsive"><table class="table">
-<thead>
-<tr>
-<th>Heading</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>&lt;h1&gt;&lt;/h1&gt;</code></td>
-<td><span class="h1">h1. Bootstrap heading</span></td>
-</tr>
-<tr>
-<td><code>&lt;h2&gt;&lt;/h2&gt;</code></td>
-<td><span class="h2">h2. Bootstrap heading</span></td>
-</tr>
-<tr>
-<td><code>&lt;h3&gt;&lt;/h3&gt;</code></td>
-<td><span class="h3">h3. Bootstrap heading</span></td>
-</tr>
-<tr>
-<td><code>&lt;h4&gt;&lt;/h4&gt;</code></td>
-<td><span class="h4">h4. Bootstrap heading</span></td>
-</tr>
-<tr>
-<td><code>&lt;h5&gt;&lt;/h5&gt;</code></td>
-<td><span class="h5">h5. Bootstrap heading</span></td>
-</tr>
-<tr>
-<td><code>&lt;h6&gt;&lt;/h6&gt;</code></td>
-<td><span class="h6">h6. Bootstrap heading</span></td>
-</tr>
-</tbody>
+	<thead>
+			<tr>
+					<th>Heading</th>
+					<th>Example</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>&lt;h1&gt;&lt;/h1&gt;</code></td>
+					<td><span class="h1">h1. Bootstrap heading</span></td>
+			</tr>
+			<tr>
+					<td><code>&lt;h2&gt;&lt;/h2&gt;</code></td>
+					<td><span class="h2">h2. Bootstrap heading</span></td>
+			</tr>
+			<tr>
+					<td><code>&lt;h3&gt;&lt;/h3&gt;</code></td>
+					<td><span class="h3">h3. Bootstrap heading</span></td>
+			</tr>
+			<tr>
+					<td><code>&lt;h4&gt;&lt;/h4&gt;</code></td>
+					<td><span class="h4">h4. Bootstrap heading</span></td>
+			</tr>
+			<tr>
+					<td><code>&lt;h5&gt;&lt;/h5&gt;</code></td>
+					<td><span class="h5">h5. Bootstrap heading</span></td>
+			</tr>
+			<tr>
+					<td><code>&lt;h6&gt;&lt;/h6&gt;</code></td>
+					<td><span class="h6">h6. Bootstrap heading</span></td>
+			</tr>
+	</tbody>
 </table></div>
 
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>h1. Bootstrap heading<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
@@ -776,9 +779,9 @@
 </span></span><span class="line"><span class="cl"><span class="nv">$sub-sup-font-size</span><span class="o">:</span> <span class="mi">1</span><span class="kt">em</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// fusv-disable
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$text-muted</span><span class="o">:</span>                  <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">secondary-color</span><span class="p">);</span> <span class="c1">// Deprecated in 5.3.0
+</span></span></span><span class="line"><span class="cl"><span class="nv">$text-muted</span><span class="o">:</span>                  <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">secondary-color</span><span class="p">);</span> <span class="c1">// Deprecated in 5.3.0
 </span></span></span><span class="line"><span class="cl"><span class="c1">// fusv-enable
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nv">$initialism-font-size</span><span class="o">:</span> <span class="mi">1</span><span class="kt">em</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nv">$blockquote-margin-y</span><span class="o">:</span> <span class="nv">$line-height</span><span class="p">;</span>
@@ -790,12 +793,12 @@
 </span></span><span class="line"><span class="cl"><span class="nv">$hr-color</span><span class="o">:</span>                    <span class="ni">inherit</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// fusv-disable
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$hr-bg-color</span><span class="o">:</span>                 <span class="n">null</span><span class="p">;</span> <span class="c1">// Deprecated in v5.2.0
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$hr-height</span><span class="o">:</span>                   <span class="n">null</span><span class="p">;</span> <span class="c1">// Deprecated in v5.2.0
+</span></span></span><span class="line"><span class="cl"><span class="nv">$hr-bg-color</span><span class="o">:</span>                 <span class="n">null</span><span class="p">;</span> <span class="c1">// Deprecated in v5.2.0
+</span></span></span><span class="line"><span class="cl"><span class="nv">$hr-height</span><span class="o">:</span>                   <span class="n">null</span><span class="p">;</span> <span class="c1">// Deprecated in v5.2.0
 </span></span></span><span class="line"><span class="cl"><span class="c1">// fusv-enable
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nv">$hr-border-color</span><span class="o">:</span>             <span class="n">null</span><span class="p">;</span> <span class="c1">// Allows for inherited colors
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$hr-border-width</span><span class="o">:</span> <span class="mi">2</span><span class="kt">px</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl"><span class="nv">$hr-border-width</span><span class="o">:</span> <span class="mi">2</span><span class="kt">px</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$hr-opacity</span><span class="o">:</span> <span class="mi">1</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nv">$vr-border-width</span><span class="o">:</span> <span class="mi">2</span><span class="kt">px</span><span class="p">;</span>

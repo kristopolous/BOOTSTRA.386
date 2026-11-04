@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Track and review changes to the Bootstrap source files, documentation, and components to help you migrate from v4 to v5.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Hugo 0.115.4">
+<meta name="generator" content="Hugo 0.169.0">
 
 <title>Migrating to v5 · Bootstrap v5.3</title>
 
@@ -16,6 +16,9 @@
 <link href="/BOOTSTRA.386/v5.3.1/docs/5.3/dist/css/bootstrap.css" rel="stylesheet">
 
 <link href="/BOOTSTRA.386/v5.3.1/docs/5.3/assets/css/docs.css" rel="stylesheet">
+
+<style>body { visibility: hidden; }</style>
+<noscript><style>body { visibility: visible; }</style></noscript>
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/BOOTSTRA.386/v5.3.1/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -506,14 +509,14 @@
 <p>Adds new <code>_variables-dark.scss</code> stylesheet to house dark-mode specific overrides. This stylesheet should be imported immediately after the existing <code>_variables.scss</code> file in your import stack.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff"><span class="line"><span class="cl"><span class="gh">diff --git a/scss/bootstrap.scss b/scss/bootstrap.scss
 </span></span></span><span class="line"><span class="cl"><span class="gh">index 8f8296def..449d70487 100644
-</span></span></span><span class="line"><span class="cl"><span class="gh"></span><span class="gd">--- a/scss/bootstrap.scss
-</span></span></span><span class="line"><span class="cl"><span class="gd"></span><span class="gi">+++ b/scss/bootstrap.scss
-</span></span></span><span class="line"><span class="cl"><span class="gi"></span><span class="gu">@@ -6,6 +6,7 @@
-</span></span></span><span class="line"><span class="cl"><span class="gu"></span> // Configuration
+</span></span></span><span class="line"><span class="cl"><span class="gd">--- a/scss/bootstrap.scss
+</span></span></span><span class="line"><span class="cl"><span class="gi">+++ b/scss/bootstrap.scss
+</span></span></span><span class="line"><span class="cl"><span class="gu">@@ -6,6 +6,7 @@
+</span></span></span><span class="line"><span class="cl"> // Configuration
 </span></span><span class="line"><span class="cl"> @import &#34;functions&#34;;
 </span></span><span class="line"><span class="cl"> @import &#34;variables&#34;;
 </span></span><span class="line"><span class="cl"><span class="gi">+@import &#34;variables-dark&#34;;
-</span></span></span><span class="line"><span class="cl"><span class="gi"></span> @import &#34;maps&#34;;
+</span></span></span><span class="line"><span class="cl"> @import &#34;maps&#34;;
 </span></span><span class="line"><span class="cl"> @import &#34;mixins&#34;;
 </span></span><span class="line"><span class="cl"> @import &#34;utilities&#34;;
 </span></span></code></pre></div></li>
@@ -670,7 +673,7 @@
 </span></span></span><span class="line"><span class="cl"><span class="gi">+ $custom-theme-colors: (
 </span></span></span><span class="line"><span class="cl"><span class="gi">+   &#34;custom&#34;: $custom-color
 </span></span></span><span class="line"><span class="cl"><span class="gi">+ );
-</span></span></span><span class="line"><span class="cl"><span class="gi"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  // Variables come next
 </span></span><span class="line"><span class="cl">  @import &#34;variables&#34;;
 </span></span><span class="line"><span class="cl">
@@ -680,7 +683,7 @@
 </span></span></span><span class="line"><span class="cl"><span class="gi">+ // Followed by our default maps
 </span></span></span><span class="line"><span class="cl"><span class="gi">+ @import &#34;maps&#34;;
 </span></span></span><span class="line"><span class="cl"><span class="gi">+
-</span></span></span><span class="line"><span class="cl"><span class="gi"></span>  // Rest of our imports
+</span></span></span><span class="line"><span class="cl">  // Rest of our imports
 </span></span><span class="line"><span class="cl">  @import &#34;mixins&#34;;
 </span></span><span class="line"><span class="cl">  @import &#34;utilities&#34;;
 </span></span><span class="line"><span class="cl">  @import &#34;root&#34;;

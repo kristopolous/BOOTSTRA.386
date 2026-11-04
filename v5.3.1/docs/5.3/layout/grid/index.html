@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Use our powerful mobile-first flexbox grid to build layouts of all shapes and sizes thanks to a twelve column system, six default responsive tiers, Sass variables and mixins, and dozens of predefined classes.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Hugo 0.115.4">
+<meta name="generator" content="Hugo 0.169.0">
 
 <title>Grid system · Bootstrap v5.3</title>
 
@@ -16,6 +16,9 @@
 <link href="/BOOTSTRA.386/v5.3.1/docs/5.3/dist/css/bootstrap.css" rel="stylesheet">
 
 <link href="/BOOTSTRA.386/v5.3.1/docs/5.3/assets/css/docs.css" rel="stylesheet">
+
+<style>body { visibility: hidden; }</style>
+<noscript><style>body { visibility: visible; }</style></noscript>
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/BOOTSTRA.386/v5.3.1/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -906,10 +909,10 @@
 <p>You can also use the accompanying Sass mixin, <code>row-cols()</code>:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nc">.element</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="c1">// Three columns to start
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="k">@include</span><span class="nd"> row-cols</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">  <span class="k">@include</span><span class="nd"> row-cols</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="c1">// Five columns from medium breakpoint up
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="k">@include</span><span class="nd"> media-breakpoint-up</span><span class="p">(</span><span class="n">md</span><span class="p">)</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl">  <span class="k">@include</span><span class="nd"> media-breakpoint-up</span><span class="p">(</span><span class="n">md</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="k">@include</span><span class="nd"> row-cols</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
@@ -996,24 +999,24 @@
 <h3 id="sass-mixins">Sass mixins <a class="anchor-link" href="#sass-mixins" aria-label="Link to this section: Sass mixins"></a></h3>
 <p>Mixins are used in conjunction with the grid variables to generate semantic CSS for individual grid columns.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// Creates a wrapper for a series of columns
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@include</span><span class="nd"> make-row</span><span class="p">();</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">@include</span><span class="nd"> make-row</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// Make the element grid-ready (applying everything but the width)
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@include</span><span class="nd"> make-col-ready</span><span class="p">();</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">@include</span><span class="nd"> make-col-ready</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// Without optional size values, the mixin will create equal columns (similar to using .col)
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@include</span><span class="nd"> make-col</span><span class="p">();</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">@include</span><span class="nd"> make-col</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl"><span class="k">@include</span><span class="nd"> make-col</span><span class="p">(</span><span class="nv">$size</span><span class="o">,</span> <span class="nv">$columns</span><span class="o">:</span> <span class="nv">$grid-columns</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// Offset with margins
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@include</span><span class="nd"> make-col-offset</span><span class="p">(</span><span class="nv">$size</span><span class="o">,</span> <span class="nv">$columns</span><span class="o">:</span> <span class="nv">$grid-columns</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">@include</span><span class="nd"> make-col-offset</span><span class="p">(</span><span class="nv">$size</span><span class="o">,</span> <span class="nv">$columns</span><span class="o">:</span> <span class="nv">$grid-columns</span><span class="p">);</span>
 </span></span></code></pre></div><h3 id="example-usage">Example usage <a class="anchor-link" href="#example-usage" aria-label="Link to this section: Example usage"></a></h3>
 <p>You can modify the variables to your own custom values, or just use the mixins with their default values. Here&rsquo;s an example of using the default settings to create a two-column layout with a gap between.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nc">.example-container</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="k">@include</span><span class="nd"> make-container</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">  <span class="c1">// Make sure to define this width after the mixin to override
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="c1">// `width: 100%` generated by `make-container()`
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">width</span><span class="o">:</span> <span class="mi">800</span><span class="kt">px</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl">  <span class="c1">// `width: 100%` generated by `make-container()`
+</span></span></span><span class="line"><span class="cl">  <span class="na">width</span><span class="o">:</span> <span class="mi">800</span><span class="kt">px</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nc">.example-row</span> <span class="p">{</span>

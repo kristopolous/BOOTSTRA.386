@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Push notifications to your visitors with a toast, a lightweight and easily customizable alert message.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Hugo 0.115.4">
+<meta name="generator" content="Hugo 0.169.0">
 
 <title>Toasts · Bootstrap v5.3</title>
 
@@ -16,6 +16,9 @@
 <link href="/BOOTSTRA.386/v5.3.1/docs/5.3/dist/css/bootstrap.css" rel="stylesheet">
 
 <link href="/BOOTSTRA.386/v5.3.1/docs/5.3/assets/css/docs.css" rel="stylesheet">
+
+<style>body { visibility: hidden; }</style>
+<noscript><style>body { visibility: visible; }</style></noscript>
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/BOOTSTRA.386/v5.3.1/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -894,39 +897,39 @@ Previously, our scripts dynamically added the <code>.hide</code> class to comple
 </span></span></code></pre></div><p>or on a button <strong>outside the toast</strong> using the additional <code>data-bs-target</code> as demonstrated below:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn-close&#34;</span> <span class="na">data-bs-dismiss</span><span class="o">=</span><span class="s">&#34;toast&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#my-toast&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Close&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 </span></span></code></pre></div><h3 id="options">Options <a class="anchor-link" href="#options" aria-label="Link to this section: Options"></a></h3>
-<p>As options can be passed via data attributes or JavaScript, you can append an option name to <code>data-bs-</code>, as in <code>data-bs-animation=&quot;{value}&quot;</code>. Make sure to change the case type of the option name from &ldquo;<em>camelCase</em>&rdquo; to &ldquo;<em>kebab-case</em>&rdquo; when passing the options via data attributes. For example, use <code>data-bs-custom-class=&quot;beautifier&quot;</code> instead of <code>data-bs-customClass=&quot;beautifier&quot;</code>.</p>
-<p>As of Bootstrap 5.2.0, all components support an <strong>experimental</strong> reserved data attribute <code>data-bs-config</code> that can house simple component configuration as a JSON string. When an element has <code>data-bs-config='{&quot;delay&quot;:0, &quot;title&quot;:123}'</code> and <code>data-bs-title=&quot;456&quot;</code> attributes, the final <code>title</code> value will be <code>456</code> and the separate data attributes will override values given on <code>data-bs-config</code>. In addition, existing data attributes are able to house JSON values like <code>data-bs-delay='{&quot;show&quot;:0,&quot;hide&quot;:150}'</code>.</p>
+<p>As options can be passed via data attributes or JavaScript, you can append an option name to <code>data-bs-</code>, as in <code>data-bs-animation=&amp;#34;{value}&amp;#34;</code>. Make sure to change the case type of the option name from &quot;<em>camelCase</em>&quot; to &quot;<em>kebab-case</em>&quot; when passing the options via data attributes. For example, use <code>data-bs-custom-class=&amp;#34;beautifier&amp;#34;</code> instead of <code>data-bs-customClass=&amp;#34;beautifier&amp;#34;</code>.</p>
+<p>As of Bootstrap 5.2.0, all components support an <strong>experimental</strong> reserved data attribute <code>data-bs-config</code> that can house simple component configuration as a JSON string. When an element has <code>data-bs-config=&amp;#39;{&amp;#34;delay&amp;#34;:0, &amp;#34;title&amp;#34;:123}&amp;#39;</code> and <code>data-bs-title=&amp;#34;456&amp;#34;</code> attributes, the final <code>title</code> value will be <code>456</code> and the separate data attributes will override values given on <code>data-bs-config</code>. In addition, existing data attributes are able to house JSON values like <code>data-bs-delay=&amp;#39;{&amp;#34;show&amp;#34;:0,&amp;#34;hide&amp;#34;:150}&amp;#39;</code>.</p>
 <p>The final configuration object is the merged result of <code>data-bs-config</code>, <code>data-bs-</code>, and <code>js object</code> where the latest given key-value overrides the others.</p>
 
 <div class="table-responsive"><table class="table">
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>animation</code></td>
-<td>boolean</td>
-<td><code>true</code></td>
-<td>Apply a CSS fade transition to the toast.</td>
-</tr>
-<tr>
-<td><code>autohide</code></td>
-<td>boolean</td>
-<td><code>true</code></td>
-<td>Automatically hide the toast after the delay.</td>
-</tr>
-<tr>
-<td><code>delay</code></td>
-<td>number</td>
-<td><code>5000</code></td>
-<td>Delay in milliseconds before hiding the toast.</td>
-</tr>
-</tbody>
+	<thead>
+			<tr>
+					<th>Name</th>
+					<th>Type</th>
+					<th>Default</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>animation</code></td>
+					<td>boolean</td>
+					<td><code>true</code></td>
+					<td>Apply a CSS fade transition to the toast.</td>
+			</tr>
+			<tr>
+					<td><code>autohide</code></td>
+					<td>boolean</td>
+					<td><code>true</code></td>
+					<td>Automatically hide the toast after the delay.</td>
+			</tr>
+			<tr>
+					<td><code>delay</code></td>
+					<td>number</td>
+					<td><code>5000</code></td>
+					<td>Delay in milliseconds before hiding the toast.</td>
+			</tr>
+	</tbody>
 </table></div>
 
 <h3 id="methods">Methods <a class="anchor-link" href="#methods" aria-label="Link to this section: Methods"></a></h3>
@@ -935,72 +938,72 @@ Previously, our scripts dynamically added the <code>.hide</code> class to comple
 </div>
 
 <div class="table-responsive"><table class="table">
-<thead>
-<tr>
-<th>Method</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>dispose</code></td>
-<td>Hides an element&rsquo;s toast. Your toast will remain on the DOM but won&rsquo;t show anymore.</td>
-</tr>
-<tr>
-<td><code>getInstance</code></td>
-<td><em>Static</em> method which allows you to get the toast instance associated with a DOM element. <br> For example: <code>const myToastEl = document.getElementById('myToastEl')</code> <code>const myToast = bootstrap.Toast.getInstance(myToastEl)</code> Returns a Bootstrap toast instance.</td>
-</tr>
-<tr>
-<td><code>getOrCreateInstance</code></td>
-<td><em>Static</em> method which allows you to get the toast instance associated with a DOM element, or create a new one, in case it wasn&rsquo;t initialized. <br><code>const myToastEl = document.getElementById('myToastEl')</code> <code>const myToast = bootstrap.Toast.getOrCreateInstance(myToastEl)</code> Returns a Bootstrap toast instance.</td>
-</tr>
-<tr>
-<td><code>hide</code></td>
-<td>Hides an element&rsquo;s toast. <strong>Returns to the caller before the toast has actually been hidden</strong> (i.e. before the <code>hidden.bs.toast</code> event occurs). You have to manually call this method if you made <code>autohide</code> to <code>false</code>.</td>
-</tr>
-<tr>
-<td><code>isShown</code></td>
-<td>Returns a boolean according to toast&rsquo;s visibility state.</td>
-</tr>
-<tr>
-<td><code>show</code></td>
-<td>Reveals an element&rsquo;s toast. <strong>Returns to the caller before the toast has actually been shown</strong> (i.e. before the <code>shown.bs.toast</code> event occurs). You have to manually call this method, instead your toast won&rsquo;t show.</td>
-</tr>
-</tbody>
+	<thead>
+			<tr>
+					<th>Method</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>dispose</code></td>
+					<td>Hides an element&rsquo;s toast. Your toast will remain on the DOM but won&rsquo;t show anymore.</td>
+			</tr>
+			<tr>
+					<td><code>getInstance</code></td>
+					<td><em>Static</em> method which allows you to get the toast instance associated with a DOM element. <br> For example: <code>const myToastEl = document.getElementById('myToastEl')</code> <code>const myToast = bootstrap.Toast.getInstance(myToastEl)</code> Returns a Bootstrap toast instance.</td>
+			</tr>
+			<tr>
+					<td><code>getOrCreateInstance</code></td>
+					<td><em>Static</em> method which allows you to get the toast instance associated with a DOM element, or create a new one, in case it wasn&rsquo;t initialized. <br><code>const myToastEl = document.getElementById('myToastEl')</code> <code>const myToast = bootstrap.Toast.getOrCreateInstance(myToastEl)</code> Returns a Bootstrap toast instance.</td>
+			</tr>
+			<tr>
+					<td><code>hide</code></td>
+					<td>Hides an element&rsquo;s toast. <strong>Returns to the caller before the toast has actually been hidden</strong> (i.e. before the <code>hidden.bs.toast</code> event occurs). You have to manually call this method if you made <code>autohide</code> to <code>false</code>.</td>
+			</tr>
+			<tr>
+					<td><code>isShown</code></td>
+					<td>Returns a boolean according to toast&rsquo;s visibility state.</td>
+			</tr>
+			<tr>
+					<td><code>show</code></td>
+					<td>Reveals an element&rsquo;s toast. <strong>Returns to the caller before the toast has actually been shown</strong> (i.e. before the <code>shown.bs.toast</code> event occurs). You have to manually call this method, instead your toast won&rsquo;t show.</td>
+			</tr>
+	</tbody>
 </table></div>
 
 <h3 id="events">Events <a class="anchor-link" href="#events" aria-label="Link to this section: Events"></a></h3>
 <div class="table-responsive"><table class="table">
-<thead>
-<tr>
-<th>Event</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>hide.bs.toast</code></td>
-<td>This event is fired immediately when the <code>hide</code> instance method has been called.</td>
-</tr>
-<tr>
-<td><code>hidden.bs.toast</code></td>
-<td>This event is fired when the toast has finished being hidden from the user.</td>
-</tr>
-<tr>
-<td><code>show.bs.toast</code></td>
-<td>This event fires immediately when the <code>show</code> instance method is called.</td>
-</tr>
-<tr>
-<td><code>shown.bs.toast</code></td>
-<td>This event is fired when the toast has been made visible to the user.</td>
-</tr>
-</tbody>
+	<thead>
+			<tr>
+					<th>Event</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>hide.bs.toast</code></td>
+					<td>This event is fired immediately when the <code>hide</code> instance method has been called.</td>
+			</tr>
+			<tr>
+					<td><code>hidden.bs.toast</code></td>
+					<td>This event is fired when the toast has finished being hidden from the user.</td>
+			</tr>
+			<tr>
+					<td><code>show.bs.toast</code></td>
+					<td>This event fires immediately when the <code>show</code> instance method is called.</td>
+			</tr>
+			<tr>
+					<td><code>shown.bs.toast</code></td>
+					<td>This event is fired when the toast has been made visible to the user.</td>
+			</tr>
+	</tbody>
 </table></div>
 
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">myToastEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;myToast&#39;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="nx">myToastEl</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;hidden.bs.toast&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="c1">// do something...
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">})</span>
+</span></span></span><span class="line"><span class="cl"><span class="p">})</span>
 </span></span></code></pre></div>
         </div>
       </main>

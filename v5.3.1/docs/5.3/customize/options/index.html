@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Quickly customize Bootstrap with built-in variables to easily toggle global CSS preferences for controlling style and behavior.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Hugo 0.115.4">
+<meta name="generator" content="Hugo 0.169.0">
 
 <title>Options · Bootstrap v5.3</title>
 
@@ -16,6 +16,9 @@
 <link href="/BOOTSTRA.386/v5.3.1/docs/5.3/dist/css/bootstrap.css" rel="stylesheet">
 
 <link href="/BOOTSTRA.386/v5.3.1/docs/5.3/assets/css/docs.css" rel="stylesheet">
+
+<style>body { visibility: hidden; }</style>
+<noscript><style>body { visibility: visible; }</style></noscript>
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/BOOTSTRA.386/v5.3.1/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -375,100 +378,100 @@
           <p>Customize Bootstrap with our built-in custom variables file and easily toggle global CSS preferences with new <code>$enable-*</code> Sass variables. Override a variable&rsquo;s value and recompile with <code>npm run test</code> as needed.</p>
 <p>You can find and customize these variables for key global options in Bootstrap&rsquo;s <code>scss/_variables.scss</code> file.</p>
 <div class="table-responsive"><table class="table table-options">
-<thead>
-<tr>
-<th>Variable</th>
-<th>Values</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>$spacer</code></td>
-<td><code>1rem</code> (default), or any value &gt; 0</td>
-<td>Specifies the default spacer value to programmatically generate our <a href="/BOOTSTRA.386/v5.3.1/docs/5.3/utilities/spacing/">spacer utilities</a>.</td>
-</tr>
-<tr>
-<td><code>$enable-dark-mode</code></td>
-<td><code>true</code> (default) or <code>false</code></td>
-<td>Enables built-in <a href="/BOOTSTRA.386/v5.3.1/docs/5.3/customize/color-modes/#dark-mode">dark mode support</a> across the project and its components.</td>
-</tr>
-<tr>
-<td><code>$enable-rounded</code></td>
-<td><code>true</code> (default) or <code>false</code></td>
-<td>Enables predefined <code>border-radius</code> styles on various components.</td>
-</tr>
-<tr>
-<td><code>$enable-shadows</code></td>
-<td><code>true</code> or <code>false</code> (default)</td>
-<td>Enables predefined decorative <code>box-shadow</code> styles on various components. Does not affect <code>box-shadow</code>s used for focus states.</td>
-</tr>
-<tr>
-<td><code>$enable-gradients</code></td>
-<td><code>true</code> or <code>false</code> (default)</td>
-<td>Enables predefined gradients via <code>background-image</code> styles on various components.</td>
-</tr>
-<tr>
-<td><code>$enable-transitions</code></td>
-<td><code>true</code> (default) or <code>false</code></td>
-<td>Enables predefined <code>transition</code>s on various components.</td>
-</tr>
-<tr>
-<td><code>$enable-reduced-motion</code></td>
-<td><code>true</code> (default) or <code>false</code></td>
-<td>Enables the <a href="/BOOTSTRA.386/v5.3.1/docs/5.3/getting-started/accessibility/#reduced-motion"><code>prefers-reduced-motion</code> media query</a>, which suppresses certain animations/transitions based on the users&rsquo; browser/operating system preferences.</td>
-</tr>
-<tr>
-<td><code>$enable-grid-classes</code></td>
-<td><code>true</code> (default) or <code>false</code></td>
-<td>Enables the generation of CSS classes for the grid system (e.g. <code>.row</code>, <code>.col-md-1</code>, etc.).</td>
-</tr>
-<tr>
-<td><code>$enable-container-classes</code></td>
-<td><code>true</code> (default) or <code>false</code></td>
-<td>Enables the generation of CSS classes for layout containers. (New in v5.2.0)</td>
-</tr>
-<tr>
-<td><code>$enable-caret</code></td>
-<td><code>true</code> (default) or <code>false</code></td>
-<td>Enables pseudo element caret on <code>.dropdown-toggle</code>.</td>
-</tr>
-<tr>
-<td><code>$enable-button-pointers</code></td>
-<td><code>true</code> (default) or <code>false</code></td>
-<td>Add &ldquo;hand&rdquo; cursor to non-disabled button elements.</td>
-</tr>
-<tr>
-<td><code>$enable-rfs</code></td>
-<td><code>true</code> (default) or <code>false</code></td>
-<td>Globally enables <a href="/BOOTSTRA.386/v5.3.1/docs/5.3/getting-started/rfs/">RFS</a>.</td>
-</tr>
-<tr>
-<td><code>$enable-validation-icons</code></td>
-<td><code>true</code> (default) or <code>false</code></td>
-<td>Enables <code>background-image</code> icons within textual inputs and some custom forms for validation states.</td>
-</tr>
-<tr>
-<td><code>$enable-negative-margins</code></td>
-<td><code>true</code> or <code>false</code> (default)</td>
-<td>Enables the generation of <a href="/BOOTSTRA.386/v5.3.1/docs/5.3/utilities/spacing/#negative-margin">negative margin utilities</a>.</td>
-</tr>
-<tr>
-<td><code>$enable-deprecation-messages</code></td>
-<td><code>true</code> (default) or <code>false</code></td>
-<td>Set to <code>false</code> to hide warnings when using any of the deprecated mixins and functions that are planned to be removed in <code>v6</code>.</td>
-</tr>
-<tr>
-<td><code>$enable-important-utilities</code></td>
-<td><code>true</code> (default) or <code>false</code></td>
-<td>Enables the <code>!important</code> suffix in utility classes.</td>
-</tr>
-<tr>
-<td><code>$enable-smooth-scroll</code></td>
-<td><code>true</code> (default) or <code>false</code></td>
-<td>Applies <code>scroll-behavior: smooth</code> globally, except for users asking for reduced motion through <a href="/BOOTSTRA.386/v5.3.1/docs/5.3/getting-started/accessibility/#reduced-motion"><code>prefers-reduced-motion</code> media query</a></td>
-</tr>
-</tbody>
+	<thead>
+			<tr>
+					<th>Variable</th>
+					<th>Values</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>$spacer</code></td>
+					<td><code>1rem</code> (default), or any value &gt; 0</td>
+					<td>Specifies the default spacer value to programmatically generate our <a href="/BOOTSTRA.386/v5.3.1/docs/5.3/utilities/spacing/">spacer utilities</a>.</td>
+			</tr>
+			<tr>
+					<td><code>$enable-dark-mode</code></td>
+					<td><code>true</code> (default) or <code>false</code></td>
+					<td>Enables built-in <a href="/BOOTSTRA.386/v5.3.1/docs/5.3/customize/color-modes/#dark-mode">dark mode support</a> across the project and its components.</td>
+			</tr>
+			<tr>
+					<td><code>$enable-rounded</code></td>
+					<td><code>true</code> (default) or <code>false</code></td>
+					<td>Enables predefined <code>border-radius</code> styles on various components.</td>
+			</tr>
+			<tr>
+					<td><code>$enable-shadows</code></td>
+					<td><code>true</code> or <code>false</code> (default)</td>
+					<td>Enables predefined decorative <code>box-shadow</code> styles on various components. Does not affect <code>box-shadow</code>s used for focus states.</td>
+			</tr>
+			<tr>
+					<td><code>$enable-gradients</code></td>
+					<td><code>true</code> or <code>false</code> (default)</td>
+					<td>Enables predefined gradients via <code>background-image</code> styles on various components.</td>
+			</tr>
+			<tr>
+					<td><code>$enable-transitions</code></td>
+					<td><code>true</code> (default) or <code>false</code></td>
+					<td>Enables predefined <code>transition</code>s on various components.</td>
+			</tr>
+			<tr>
+					<td><code>$enable-reduced-motion</code></td>
+					<td><code>true</code> (default) or <code>false</code></td>
+					<td>Enables the <a href="/BOOTSTRA.386/v5.3.1/docs/5.3/getting-started/accessibility/#reduced-motion"><code>prefers-reduced-motion</code> media query</a>, which suppresses certain animations/transitions based on the users&rsquo; browser/operating system preferences.</td>
+			</tr>
+			<tr>
+					<td><code>$enable-grid-classes</code></td>
+					<td><code>true</code> (default) or <code>false</code></td>
+					<td>Enables the generation of CSS classes for the grid system (e.g. <code>.row</code>, <code>.col-md-1</code>, etc.).</td>
+			</tr>
+			<tr>
+					<td><code>$enable-container-classes</code></td>
+					<td><code>true</code> (default) or <code>false</code></td>
+					<td>Enables the generation of CSS classes for layout containers. (New in v5.2.0)</td>
+			</tr>
+			<tr>
+					<td><code>$enable-caret</code></td>
+					<td><code>true</code> (default) or <code>false</code></td>
+					<td>Enables pseudo element caret on <code>.dropdown-toggle</code>.</td>
+			</tr>
+			<tr>
+					<td><code>$enable-button-pointers</code></td>
+					<td><code>true</code> (default) or <code>false</code></td>
+					<td>Add &ldquo;hand&rdquo; cursor to non-disabled button elements.</td>
+			</tr>
+			<tr>
+					<td><code>$enable-rfs</code></td>
+					<td><code>true</code> (default) or <code>false</code></td>
+					<td>Globally enables <a href="/BOOTSTRA.386/v5.3.1/docs/5.3/getting-started/rfs/">RFS</a>.</td>
+			</tr>
+			<tr>
+					<td><code>$enable-validation-icons</code></td>
+					<td><code>true</code> (default) or <code>false</code></td>
+					<td>Enables <code>background-image</code> icons within textual inputs and some custom forms for validation states.</td>
+			</tr>
+			<tr>
+					<td><code>$enable-negative-margins</code></td>
+					<td><code>true</code> or <code>false</code> (default)</td>
+					<td>Enables the generation of <a href="/BOOTSTRA.386/v5.3.1/docs/5.3/utilities/spacing/#negative-margin">negative margin utilities</a>.</td>
+			</tr>
+			<tr>
+					<td><code>$enable-deprecation-messages</code></td>
+					<td><code>true</code> (default) or <code>false</code></td>
+					<td>Set to <code>false</code> to hide warnings when using any of the deprecated mixins and functions that are planned to be removed in <code>v6</code>.</td>
+			</tr>
+			<tr>
+					<td><code>$enable-important-utilities</code></td>
+					<td><code>true</code> (default) or <code>false</code></td>
+					<td>Enables the <code>!important</code> suffix in utility classes.</td>
+			</tr>
+			<tr>
+					<td><code>$enable-smooth-scroll</code></td>
+					<td><code>true</code> (default) or <code>false</code></td>
+					<td>Applies <code>scroll-behavior: smooth</code> globally, except for users asking for reduced motion through <a href="/BOOTSTRA.386/v5.3.1/docs/5.3/getting-started/accessibility/#reduced-motion"><code>prefers-reduced-motion</code> media query</a></td>
+			</tr>
+	</tbody>
 </table></div>
 
 

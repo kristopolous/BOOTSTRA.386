@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Bring Bootstrap to life with our optional JavaScript plugins. Learn about each plugin, our data and programmatic API options, and more.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Hugo 0.115.4">
+<meta name="generator" content="Hugo 0.169.0">
 
 <title>JavaScript · Bootstrap v5.3</title>
 
@@ -16,6 +16,9 @@
 <link href="/BOOTSTRA.386/v5.3.1/docs/5.3/dist/css/bootstrap.css" rel="stylesheet">
 
 <link href="/BOOTSTRA.386/v5.3.1/docs/5.3/assets/css/docs.css" rel="stylesheet">
+
+<style>body { visibility: hidden; }</style>
+<noscript><style>body { visibility: visible; }</style></noscript>
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/BOOTSTRA.386/v5.3.1/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -440,8 +443,8 @@
 <p>Our dropdowns, popovers, and tooltips also depend on <a href="https://popper.js.org/">Popper</a>.</p>
 <h2 id="data-attributes">Data attributes <a class="anchor-link" href="#data-attributes" aria-label="Link to this section: Data attributes"></a></h2>
 <p>Nearly all Bootstrap plugins can be enabled and configured through HTML alone with data attributes (our preferred way of using JavaScript functionality). Be sure to <strong>only use one set of data attributes on a single element</strong> (e.g., you cannot trigger a tooltip and modal from the same button.)</p>
-<p>As options can be passed via data attributes or JavaScript, you can append an option name to <code>data-bs-</code>, as in <code>data-bs-animation=&quot;{value}&quot;</code>. Make sure to change the case type of the option name from &ldquo;<em>camelCase</em>&rdquo; to &ldquo;<em>kebab-case</em>&rdquo; when passing the options via data attributes. For example, use <code>data-bs-custom-class=&quot;beautifier&quot;</code> instead of <code>data-bs-customClass=&quot;beautifier&quot;</code>.</p>
-<p>As of Bootstrap 5.2.0, all components support an <strong>experimental</strong> reserved data attribute <code>data-bs-config</code> that can house simple component configuration as a JSON string. When an element has <code>data-bs-config='{&quot;delay&quot;:0, &quot;title&quot;:123}'</code> and <code>data-bs-title=&quot;456&quot;</code> attributes, the final <code>title</code> value will be <code>456</code> and the separate data attributes will override values given on <code>data-bs-config</code>. In addition, existing data attributes are able to house JSON values like <code>data-bs-delay='{&quot;show&quot;:0,&quot;hide&quot;:150}'</code>.</p>
+<p>As options can be passed via data attributes or JavaScript, you can append an option name to <code>data-bs-</code>, as in <code>data-bs-animation=&amp;#34;{value}&amp;#34;</code>. Make sure to change the case type of the option name from &quot;<em>camelCase</em>&quot; to &quot;<em>kebab-case</em>&quot; when passing the options via data attributes. For example, use <code>data-bs-custom-class=&amp;#34;beautifier&amp;#34;</code> instead of <code>data-bs-customClass=&amp;#34;beautifier&amp;#34;</code>.</p>
+<p>As of Bootstrap 5.2.0, all components support an <strong>experimental</strong> reserved data attribute <code>data-bs-config</code> that can house simple component configuration as a JSON string. When an element has <code>data-bs-config=&amp;#39;{&amp;#34;delay&amp;#34;:0, &amp;#34;title&amp;#34;:123}&amp;#39;</code> and <code>data-bs-title=&amp;#34;456&amp;#34;</code> attributes, the final <code>title</code> value will be <code>456</code> and the separate data attributes will override values given on <code>data-bs-config</code>. In addition, existing data attributes are able to house JSON values like <code>data-bs-delay=&amp;#39;{&amp;#34;show&amp;#34;:0,&amp;#34;hide&amp;#34;:150}&amp;#39;</code>.</p>
 <p>The final configuration object is the merged result of <code>data-bs-config</code>, <code>data-bs-</code>, and <code>js object</code> where the latest given key-value overrides the others.</p>
 
 <h2 id="selectors">Selectors <a class="anchor-link" href="#selectors" aria-label="Link to this section: Selectors"></a></h2>
@@ -453,12 +456,12 @@
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nx">myModal</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;show.bs.modal&#39;</span><span class="p">,</span> <span class="nx">event</span> <span class="p">=&gt;</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">()</span> <span class="c1">// stops modal from being shown
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">})</span>
+</span></span></span><span class="line"><span class="cl"><span class="p">})</span>
 </span></span></code></pre></div><h2 id="programmatic-api">Programmatic API <a class="anchor-link" href="#programmatic-api" aria-label="Link to this section: Programmatic API"></a></h2>
 <p>All constructors accept an optional options object or nothing (which initiates a plugin with its default behavior):</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">myModalEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#myModal&#39;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">modal</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Modal</span><span class="p">(</span><span class="nx">myModalEl</span><span class="p">)</span> <span class="c1">// initialized with defaults
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">configObject</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">keyboard</span><span class="o">:</span> <span class="kc">false</span> <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">modal1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Modal</span><span class="p">(</span><span class="nx">myModalEl</span><span class="p">,</span> <span class="nx">configObject</span><span class="p">)</span> <span class="c1">// initialized with no keyboard
 </span></span></span></code></pre></div><p>If you&rsquo;d like to get a particular plugin instance, each plugin exposes a <code>getInstance</code> method. For example, to retrieve an instance directly from an element:</p>
@@ -479,71 +482,71 @@
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nx">myCollapseEl</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;shown.bs.collapse&#39;</span><span class="p">,</span> <span class="nx">event</span> <span class="p">=&gt;</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="c1">// Action to execute once the collapsible area is expanded
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">})</span>
+</span></span></span><span class="line"><span class="cl"><span class="p">})</span>
 </span></span></code></pre></div><p>In addition, a method call on a <strong>transitioning component will be ignored</strong>.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">myCarouselEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#myCarousel&#39;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">carousel</span> <span class="o">=</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Carousel</span><span class="p">.</span><span class="nx">getInstance</span><span class="p">(</span><span class="nx">myCarouselEl</span><span class="p">)</span> <span class="c1">// Retrieve a Carousel instance
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nx">myCarouselEl</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;slid.bs.carousel&#39;</span><span class="p">,</span> <span class="nx">event</span> <span class="p">=&gt;</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">carousel</span><span class="p">.</span><span class="nx">to</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">)</span> <span class="c1">// Will slide to the slide 2 as soon as the transition to slide 1 is finished
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">})</span>
+</span></span></span><span class="line"><span class="cl"><span class="p">})</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nx">carousel</span><span class="p">.</span><span class="nx">to</span><span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">)</span> <span class="c1">// Will start sliding to the slide 1 and returns to the caller
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">carousel</span><span class="p">.</span><span class="nx">to</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">)</span> <span class="c1">// !! Will be ignored, as the transition to the slide 1 is not finished !!
+</span></span></span><span class="line"><span class="cl"><span class="nx">carousel</span><span class="p">.</span><span class="nx">to</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">)</span> <span class="c1">// !! Will be ignored, as the transition to the slide 1 is not finished !!
 </span></span></span></code></pre></div><h4 id="dispose-method"><code>dispose</code> method <a class="anchor-link" href="#dispose-method" aria-label="Link to this section: dispose method"></a></h4>
 <p>While it may seem correct to use the <code>dispose</code> method immediately after <code>hide()</code>, it will lead to incorrect results. Here&rsquo;s an example of the problem use:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">myModal</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#myModal&#39;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="nx">myModal</span><span class="p">.</span><span class="nx">hide</span><span class="p">()</span> <span class="c1">// it is asynchronous
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nx">myModal</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;shown.bs.hidden&#39;</span><span class="p">,</span> <span class="nx">event</span> <span class="p">=&gt;</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">myModal</span><span class="p">.</span><span class="nx">dispose</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="p">})</span>
 </span></span></code></pre></div><h3 id="default-settings">Default settings <a class="anchor-link" href="#default-settings" aria-label="Link to this section: Default settings"></a></h3>
 <p>You can change the default settings for a plugin by modifying the plugin&rsquo;s <code>Constructor.Default</code> object:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// changes default for the modal plugin&#39;s `keyboard` option to false
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Modal</span><span class="p">.</span><span class="nx">Default</span><span class="p">.</span><span class="nx">keyboard</span> <span class="o">=</span> <span class="kc">false</span>
+</span></span></span><span class="line"><span class="cl"><span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Modal</span><span class="p">.</span><span class="nx">Default</span><span class="p">.</span><span class="nx">keyboard</span> <span class="o">=</span> <span class="kc">false</span>
 </span></span></code></pre></div><h2 id="methods-and-properties">Methods and properties <a class="anchor-link" href="#methods-and-properties" aria-label="Link to this section: Methods and properties"></a></h2>
 <p>Every Bootstrap plugin exposes the following methods and static properties.</p>
 <div class="table-responsive"><table class="table">
-<thead>
-<tr>
-<th>Method</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>dispose</code></td>
-<td>Destroys an element&rsquo;s modal. (Removes stored data on the DOM element)</td>
-</tr>
-<tr>
-<td><code>getInstance</code></td>
-<td><em>Static</em> method which allows you to get the modal instance associated with a DOM element.</td>
-</tr>
-<tr>
-<td><code>getOrCreateInstance</code></td>
-<td><em>Static</em> method which allows you to get the modal instance associated with a DOM element, or create a new one in case it wasn&rsquo;t initialized.</td>
-</tr>
-</tbody>
+	<thead>
+			<tr>
+					<th>Method</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>dispose</code></td>
+					<td>Destroys an element&rsquo;s modal. (Removes stored data on the DOM element)</td>
+			</tr>
+			<tr>
+					<td><code>getInstance</code></td>
+					<td><em>Static</em> method which allows you to get the modal instance associated with a DOM element.</td>
+			</tr>
+			<tr>
+					<td><code>getOrCreateInstance</code></td>
+					<td><em>Static</em> method which allows you to get the modal instance associated with a DOM element, or create a new one in case it wasn&rsquo;t initialized.</td>
+			</tr>
+	</tbody>
 </table></div>
 
 <div class="table-responsive"><table class="table">
-<thead>
-<tr>
-<th>Static property</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>NAME</code></td>
-<td>Returns the plugin name. (Example: <code>bootstrap.Tooltip.NAME</code>)</td>
-</tr>
-<tr>
-<td><code>VERSION</code></td>
-<td>The version of each of Bootstrap&rsquo;s plugins can be accessed via the <code>VERSION</code> property of the plugin&rsquo;s constructor (Example: <code>bootstrap.Tooltip.VERSION</code>)</td>
-</tr>
-</tbody>
+	<thead>
+			<tr>
+					<th>Static property</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>NAME</code></td>
+					<td>Returns the plugin name. (Example: <code>bootstrap.Tooltip.NAME</code>)</td>
+			</tr>
+			<tr>
+					<td><code>VERSION</code></td>
+					<td>The version of each of Bootstrap&rsquo;s plugins can be accessed via the <code>VERSION</code> property of the plugin&rsquo;s constructor (Example: <code>bootstrap.Tooltip.VERSION</code>)</td>
+			</tr>
+	</tbody>
 </table></div>
 
 <h2 id="sanitizer">Sanitizer <a class="anchor-link" href="#sanitizer" aria-label="Link to this section: Sanitizer"></a></h2>
@@ -561,7 +564,7 @@
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">DefaultAllowlist</span> <span class="o">=</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="c1">// Global attributes allowed on any supplied element below.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="s1">&#39;*&#39;</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">,</span> <span class="s1">&#39;dir&#39;</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;lang&#39;</span><span class="p">,</span> <span class="s1">&#39;role&#39;</span><span class="p">,</span> <span class="nx">ARIA_ATTRIBUTE_PATTERN</span><span class="p">],</span>
+</span></span></span><span class="line"><span class="cl">  <span class="s1">&#39;*&#39;</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">,</span> <span class="s1">&#39;dir&#39;</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;lang&#39;</span><span class="p">,</span> <span class="s1">&#39;role&#39;</span><span class="p">,</span> <span class="nx">ARIA_ATTRIBUTE_PATTERN</span><span class="p">],</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">a</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;target&#39;</span><span class="p">,</span> <span class="s1">&#39;href&#39;</span><span class="p">,</span> <span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;rel&#39;</span><span class="p">],</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">area</span><span class="o">:</span> <span class="p">[],</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">b</span><span class="o">:</span> <span class="p">[],</span>
@@ -597,14 +600,14 @@
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">myDefaultAllowList</span> <span class="o">=</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Tooltip</span><span class="p">.</span><span class="nx">Default</span><span class="p">.</span><span class="nx">allowList</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// To allow table elements
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">myDefaultAllowList</span><span class="p">.</span><span class="nx">table</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span></span><span class="line"><span class="cl"><span class="nx">myDefaultAllowList</span><span class="p">.</span><span class="nx">table</span> <span class="o">=</span> <span class="p">[]</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// To allow td elements and data-bs-option attributes on td elements
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">myDefaultAllowList</span><span class="p">.</span><span class="nx">td</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;data-bs-option&#39;</span><span class="p">]</span>
+</span></span></span><span class="line"><span class="cl"><span class="nx">myDefaultAllowList</span><span class="p">.</span><span class="nx">td</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;data-bs-option&#39;</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// You can push your custom regex to validate your attributes.
 </span></span></span><span class="line"><span class="cl"><span class="c1">// Be careful about your regular expressions being too lax
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">myCustomRegex</span> <span class="o">=</span> <span class="sr">/^data-my-app-[\w-]+/</span>
+</span></span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">myCustomRegex</span> <span class="o">=</span> <span class="sr">/^data-my-app-[\w-]+/</span>
 </span></span><span class="line"><span class="cl"><span class="nx">myDefaultAllowList</span><span class="p">[</span><span class="s1">&#39;*&#39;</span><span class="p">].</span><span class="nx">push</span><span class="p">(</span><span class="nx">myCustomRegex</span><span class="p">)</span>
 </span></span></code></pre></div><p>If you want to bypass our sanitizer because you prefer to use a dedicated library, for example <a href="https://www.npmjs.com/package/dompurify">DOMPurify</a>, you should do the following:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">yourTooltipEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#yourTooltip&#39;</span><span class="p">)</span>
@@ -616,27 +619,27 @@
 </span></span></code></pre></div><h2 id="optionally-using-jquery">Optionally using jQuery <a class="anchor-link" href="#optionally-using-jquery" aria-label="Link to this section: Optionally using jQuery"></a></h2>
 <p><strong>You don&rsquo;t need jQuery in Bootstrap 5</strong>, but it&rsquo;s still possible to use our components with jQuery. If Bootstrap detects <code>jQuery</code> in the <code>window</code> object, it&rsquo;ll add all of our components in jQuery&rsquo;s plugin system. This allows you to do the following:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// to enable tooltips with the default configuration
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;[data-bs-toggle=&#34;tooltip&#34;]&#39;</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">()</span>
+</span></span></span><span class="line"><span class="cl"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;[data-bs-toggle=&#34;tooltip&#34;]&#39;</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// to initialize tooltips with given configuration
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;[data-bs-toggle=&#34;tooltip&#34;]&#39;</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">({</span>
+</span></span></span><span class="line"><span class="cl"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;[data-bs-toggle=&#34;tooltip&#34;]&#39;</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">({</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">boundary</span><span class="o">:</span> <span class="s1">&#39;clippingParents&#39;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">customClass</span><span class="o">:</span> <span class="s1">&#39;myClass&#39;</span>
 </span></span><span class="line"><span class="cl"><span class="p">})</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// to trigger the `show` method
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myTooltip&#39;</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="s1">&#39;show&#39;</span><span class="p">)</span>
+</span></span></span><span class="line"><span class="cl"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myTooltip&#39;</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="s1">&#39;show&#39;</span><span class="p">)</span>
 </span></span></code></pre></div><p>The same goes for our other components.</p>
 <h3 id="no-conflict">No conflict <a class="anchor-link" href="#no-conflict" aria-label="Link to this section: No conflict"></a></h3>
 <p>Sometimes it is necessary to use Bootstrap plugins with other UI frameworks. In these circumstances, namespace collisions can occasionally occur. If this happens, you may call <code>.noConflict</code> on the plugin you wish to revert the value of.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">bootstrapButton</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">button</span><span class="p">.</span><span class="nx">noConflict</span><span class="p">()</span> <span class="c1">// return $.fn.button to previously assigned value
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">bootstrapBtn</span> <span class="o">=</span> <span class="nx">bootstrapButton</span> <span class="c1">// give $().bootstrapBtn the Bootstrap functionality
+</span></span></span><span class="line"><span class="cl"><span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">bootstrapBtn</span> <span class="o">=</span> <span class="nx">bootstrapButton</span> <span class="c1">// give $().bootstrapBtn the Bootstrap functionality
 </span></span></span></code></pre></div><p>Bootstrap does not officially support third-party JavaScript libraries like Prototype or jQuery UI. Despite <code>.noConflict</code> and namespaced events, there may be compatibility problems that you need to fix on your own.</p>
 <h3 id="jquery-events">jQuery events <a class="anchor-link" href="#jquery-events" aria-label="Link to this section: jQuery events"></a></h3>
 <p>Bootstrap will detect jQuery if <code>jQuery</code> is present in the <code>window</code> object and there is no <code>data-bs-no-jquery</code> attribute set on <code>&lt;body&gt;</code>. If jQuery is found, Bootstrap will emit events thanks to jQuery&rsquo;s event system. So if you want to listen to Bootstrap&rsquo;s events, you&rsquo;ll have to use the jQuery methods (<code>.on</code>, <code>.one</code>) instead of <code>addEventListener</code>.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myTab a&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;shown.bs.tab&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="c1">// do something...
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">})</span>
+</span></span></span><span class="line"><span class="cl"><span class="p">})</span>
 </span></span></code></pre></div><h2 id="disabled-javascript">Disabled JavaScript <a class="anchor-link" href="#disabled-javascript" aria-label="Link to this section: Disabled JavaScript"></a></h2>
 <p>Bootstrap&rsquo;s plugins have no special fallback when JavaScript is disabled. If you care about the user experience in this case, use <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript"><code>&lt;noscript&gt;</code></a> to explain the situation (and how to re-enable JavaScript) to your users, and/or add your own custom fallbacks.</p>
 

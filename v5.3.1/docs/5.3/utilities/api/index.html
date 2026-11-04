@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="The utility API is a Sass-based tool to generate utility classes.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Hugo 0.115.4">
+<meta name="generator" content="Hugo 0.169.0">
 
 <title>Utility API · Bootstrap v5.3</title>
 
@@ -16,6 +16,9 @@
 <link href="/BOOTSTRA.386/v5.3.1/docs/5.3/dist/css/bootstrap.css" rel="stylesheet">
 
 <link href="/BOOTSTRA.386/v5.3.1/docs/5.3/assets/css/docs.css" rel="stylesheet">
+
+<style>body { visibility: hidden; }</style>
+<noscript><style>body { visibility: visible; }</style></noscript>
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/BOOTSTRA.386/v5.3.1/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -375,82 +378,82 @@
           <p>Bootstrap utilities are generated with our utility API and can be used to modify or extend our default set of utility classes via Sass. Our utility API is based on a series of Sass maps and functions for generating families of classes with various options. If you&rsquo;re unfamiliar with Sass maps, read up on the <a href="https://sass-lang.com/documentation/values/maps">official Sass docs</a> to get started.</p>
 <p>The <code>$utilities</code> map contains all our utilities and is later merged with your custom <code>$utilities</code> map, if present. The utility map contains a keyed list of utility groups which accept the following options:</p>
 <div class="table-responsive"><table class="table table-utilities">
-<thead>
-<tr>
-<th>Option</th>
-<th>Type</th>
-<th>Default value</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="#property"><code>property</code></a></td>
-<td><strong>Required</strong></td>
-<td>–</td>
-<td>Name of the property, this can be a string or an array of strings (e.g., horizontal paddings or margins).</td>
-</tr>
-<tr>
-<td><a href="#values"><code>values</code></a></td>
-<td><strong>Required</strong></td>
-<td>–</td>
-<td>List of values, or a map if you don&rsquo;t want the class name to be the same as the value. If <code>null</code> is used as map key, <code>class</code> is not prepended to the class name.</td>
-</tr>
-<tr>
-<td><a href="#class"><code>class</code></a></td>
-<td>Optional</td>
-<td>null</td>
-<td>Name of the generated class. If not provided and <code>property</code> is an array of strings, <code>class</code> will default to the first element of the <code>property</code> array. If not provided and <code>property</code> is a string, the <code>values</code> keys are used for the <code>class</code> names.</td>
-</tr>
-<tr>
-<td><a href="#css-variable-utilities"><code>css-var</code></a></td>
-<td>Optional</td>
-<td><code>false</code></td>
-<td>Boolean to generate CSS variables instead of CSS rules.</td>
-</tr>
-<tr>
-<td><a href="#css-variable-utilities"><code>css-variable-name</code></a></td>
-<td>Optional</td>
-<td>null</td>
-<td>Custom un-prefixed name for the CSS variable inside the ruleset.</td>
-</tr>
-<tr>
-<td><a href="#local-css-variables"><code>local-vars</code></a></td>
-<td>Optional</td>
-<td>null</td>
-<td>Map of local CSS variables to generate in addition to the CSS rules.</td>
-</tr>
-<tr>
-<td><a href="#states"><code>state</code></a></td>
-<td>Optional</td>
-<td>null</td>
-<td>List of pseudo-class variants (e.g., <code>:hover</code> or <code>:focus</code>) to generate.</td>
-</tr>
-<tr>
-<td><a href="#responsive"><code>responsive</code></a></td>
-<td>Optional</td>
-<td><code>false</code></td>
-<td>Boolean indicating if responsive classes should be generated.</td>
-</tr>
-<tr>
-<td><code>rfs</code></td>
-<td>Optional</td>
-<td><code>false</code></td>
-<td>Boolean to enable <a href="/BOOTSTRA.386/v5.3.1/docs/5.3/getting-started/rfs/">fluid rescaling with RFS</a>.</td>
-</tr>
-<tr>
-<td><a href="#print"><code>print</code></a></td>
-<td>Optional</td>
-<td><code>false</code></td>
-<td>Boolean indicating if print classes need to be generated.</td>
-</tr>
-<tr>
-<td><code>rtl</code></td>
-<td>Optional</td>
-<td><code>true</code></td>
-<td>Boolean indicating if utility should be kept in RTL.</td>
-</tr>
-</tbody>
+	<thead>
+			<tr>
+					<th>Option</th>
+					<th>Type</th>
+					<th>Default value</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><a href="#property"><code>property</code></a></td>
+					<td><strong>Required</strong></td>
+					<td>–</td>
+					<td>Name of the property, this can be a string or an array of strings (e.g., horizontal paddings or margins).</td>
+			</tr>
+			<tr>
+					<td><a href="#values"><code>values</code></a></td>
+					<td><strong>Required</strong></td>
+					<td>–</td>
+					<td>List of values, or a map if you don&rsquo;t want the class name to be the same as the value. If <code>null</code> is used as map key, <code>class</code> is not prepended to the class name.</td>
+			</tr>
+			<tr>
+					<td><a href="#class"><code>class</code></a></td>
+					<td>Optional</td>
+					<td>null</td>
+					<td>Name of the generated class. If not provided and <code>property</code> is an array of strings, <code>class</code> will default to the first element of the <code>property</code> array. If not provided and <code>property</code> is a string, the <code>values</code> keys are used for the <code>class</code> names.</td>
+			</tr>
+			<tr>
+					<td><a href="#css-variable-utilities"><code>css-var</code></a></td>
+					<td>Optional</td>
+					<td><code>false</code></td>
+					<td>Boolean to generate CSS variables instead of CSS rules.</td>
+			</tr>
+			<tr>
+					<td><a href="#css-variable-utilities"><code>css-variable-name</code></a></td>
+					<td>Optional</td>
+					<td>null</td>
+					<td>Custom un-prefixed name for the CSS variable inside the ruleset.</td>
+			</tr>
+			<tr>
+					<td><a href="#local-css-variables"><code>local-vars</code></a></td>
+					<td>Optional</td>
+					<td>null</td>
+					<td>Map of local CSS variables to generate in addition to the CSS rules.</td>
+			</tr>
+			<tr>
+					<td><a href="#states"><code>state</code></a></td>
+					<td>Optional</td>
+					<td>null</td>
+					<td>List of pseudo-class variants (e.g., <code>:hover</code> or <code>:focus</code>) to generate.</td>
+			</tr>
+			<tr>
+					<td><a href="#responsive"><code>responsive</code></a></td>
+					<td>Optional</td>
+					<td><code>false</code></td>
+					<td>Boolean indicating if responsive classes should be generated.</td>
+			</tr>
+			<tr>
+					<td><code>rfs</code></td>
+					<td>Optional</td>
+					<td><code>false</code></td>
+					<td>Boolean to enable <a href="/BOOTSTRA.386/v5.3.1/docs/5.3/getting-started/rfs/">fluid rescaling with RFS</a>.</td>
+			</tr>
+			<tr>
+					<td><a href="#print"><code>print</code></a></td>
+					<td>Optional</td>
+					<td><code>false</code></td>
+					<td>Boolean indicating if print classes need to be generated.</td>
+			</tr>
+			<tr>
+					<td><code>rtl</code></td>
+					<td>Optional</td>
+					<td><code>true</code></td>
+					<td>Boolean indicating if utility should be kept in RTL.</td>
+			</tr>
+	</tbody>
 </table></div>
 
 <h2 id="api-explained">API explained <a class="anchor-link" href="#api-explained" aria-label="Link to this section: API explained"></a></h2>
@@ -826,7 +829,7 @@
 </span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/utilities&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// Remove multiple utilities with a comma-separated list
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$utilities</span><span class="o">:</span> <span class="nf">map-remove</span><span class="p">(</span><span class="nv">$utilities</span><span class="o">,</span> <span class="s2">&#34;width&#34;</span><span class="o">,</span> <span class="s2">&#34;float&#34;</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl"><span class="nv">$utilities</span><span class="o">:</span> <span class="nf">map-remove</span><span class="p">(</span><span class="nv">$utilities</span><span class="o">,</span> <span class="s2">&#34;width&#34;</span><span class="o">,</span> <span class="s2">&#34;float&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/utilities/api&#34;</span><span class="p">;</span>
 </span></span></code></pre></div><p>You can also use the <a href="https://sass-lang.com/documentation/modules/map#merge"><code>map-merge()</code> Sass function</a> and set the group key to <code>null</code> to remove the utility.</p>

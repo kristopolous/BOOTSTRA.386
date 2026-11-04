@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Use Bootstrap&rsquo;s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Hugo 0.115.4">
+<meta name="generator" content="Hugo 0.169.0">
 
 <title>Modal · Bootstrap v5.3</title>
 
@@ -16,6 +16,9 @@
 <link href="/BOOTSTRA.386/v5.3.1/docs/5.3/dist/css/bootstrap.css" rel="stylesheet">
 
 <link href="/BOOTSTRA.386/v5.3.1/docs/5.3/assets/css/docs.css" rel="stylesheet">
+
+<style>body { visibility: hidden; }</style>
+<noscript><style>body { visibility: visible; }</style></noscript>
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/BOOTSTRA.386/v5.3.1/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -829,14 +832,14 @@ In the above static example, we use <code>&lt;h5&gt;</code>, to avoid issues wit
 </span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nx">exampleModal</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">exampleModal</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;show.bs.modal&#39;</span><span class="p">,</span> <span class="nx">event</span> <span class="p">=&gt;</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">// Button that triggered the modal
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kr">const</span> <span class="nx">button</span> <span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">relatedTarget</span>
+</span></span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">button</span> <span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">relatedTarget</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">// Extract info from data-bs-* attributes
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kr">const</span> <span class="nx">recipient</span> <span class="o">=</span> <span class="nx">button</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s1">&#39;data-bs-whatever&#39;</span><span class="p">)</span>
+</span></span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">recipient</span> <span class="o">=</span> <span class="nx">button</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s1">&#39;data-bs-whatever&#39;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">// If necessary, you could initiate an Ajax request here
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// and then do the updating in a callback.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">    <span class="c1">// and then do the updating in a callback.
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="c1">// Update the modal&#39;s content.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kr">const</span> <span class="nx">modalTitle</span> <span class="o">=</span> <span class="nx">exampleModal</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.modal-title&#39;</span><span class="p">)</span>
+</span></span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">modalTitle</span> <span class="o">=</span> <span class="nx">exampleModal</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.modal-title&#39;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">modalBodyInput</span> <span class="o">=</span> <span class="nx">exampleModal</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.modal-body input&#39;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="nx">modalTitle</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="sb">`New message to </span><span class="si">${</span><span class="nx">recipient</span><span class="si">}</span><span class="sb">`</span>
@@ -932,35 +935,35 @@ In the above static example, we use <code>&lt;h5&gt;</code>, to avoid issues wit
 <h2 id="optional-sizes">Optional sizes <a class="anchor-link" href="#optional-sizes" aria-label="Link to this section: Optional sizes"></a></h2>
 <p>Modals have three optional sizes, available via modifier classes to be placed on a <code>.modal-dialog</code>. These sizes kick in at certain breakpoints to avoid horizontal scrollbars on narrower viewports.</p>
 <div class="table-responsive"><table class="table">
-<thead>
-<tr>
-<th>Size</th>
-<th>Class</th>
-<th>Modal max-width</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Small</td>
-<td><code>.modal-sm</code></td>
-<td><code>300px</code></td>
-</tr>
-<tr>
-<td>Default</td>
-<td><span class="text-body-secondary">None</span></td>
-<td><code>500px</code></td>
-</tr>
-<tr>
-<td>Large</td>
-<td><code>.modal-lg</code></td>
-<td><code>800px</code></td>
-</tr>
-<tr>
-<td>Extra large</td>
-<td><code>.modal-xl</code></td>
-<td><code>1140px</code></td>
-</tr>
-</tbody>
+	<thead>
+			<tr>
+					<th>Size</th>
+					<th>Class</th>
+					<th>Modal max-width</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Small</td>
+					<td><code>.modal-sm</code></td>
+					<td><code>300px</code></td>
+			</tr>
+			<tr>
+					<td>Default</td>
+					<td><span class="text-body-secondary">None</span></td>
+					<td><code>500px</code></td>
+			</tr>
+			<tr>
+					<td>Large</td>
+					<td><code>.modal-lg</code></td>
+					<td><code>800px</code></td>
+			</tr>
+			<tr>
+					<td>Extra large</td>
+					<td><code>.modal-xl</code></td>
+					<td><code>1140px</code></td>
+			</tr>
+	</tbody>
 </table></div>
 
 <p>Our default modal without modifier class constitutes the &ldquo;medium&rdquo; size modal.</p>
@@ -1014,38 +1017,38 @@ In the above static example, we use <code>&lt;h5&gt;</code>, to avoid issues wit
 <h2 id="fullscreen-modal">Fullscreen Modal <a class="anchor-link" href="#fullscreen-modal" aria-label="Link to this section: Fullscreen Modal"></a></h2>
 <p>Another override is the option to pop up a modal that covers the user viewport, available via modifier classes that are placed on a <code>.modal-dialog</code>.</p>
 <div class="table-responsive"><table class="table">
-<thead>
-<tr>
-<th>Class</th>
-<th>Availability</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>.modal-fullscreen</code></td>
-<td>Always</td>
-</tr>
-<tr>
-<td><code>.modal-fullscreen-sm-down</code></td>
-<td><code>576px</code></td>
-</tr>
-<tr>
-<td><code>.modal-fullscreen-md-down</code></td>
-<td><code>768px</code></td>
-</tr>
-<tr>
-<td><code>.modal-fullscreen-lg-down</code></td>
-<td><code>992px</code></td>
-</tr>
-<tr>
-<td><code>.modal-fullscreen-xl-down</code></td>
-<td><code>1200px</code></td>
-</tr>
-<tr>
-<td><code>.modal-fullscreen-xxl-down</code></td>
-<td><code>1400px</code></td>
-</tr>
-</tbody>
+	<thead>
+			<tr>
+					<th>Class</th>
+					<th>Availability</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>.modal-fullscreen</code></td>
+					<td>Always</td>
+			</tr>
+			<tr>
+					<td><code>.modal-fullscreen-sm-down</code></td>
+					<td><code>576px</code></td>
+			</tr>
+			<tr>
+					<td><code>.modal-fullscreen-md-down</code></td>
+					<td><code>768px</code></td>
+			</tr>
+			<tr>
+					<td><code>.modal-fullscreen-lg-down</code></td>
+					<td><code>992px</code></td>
+			</tr>
+			<tr>
+					<td><code>.modal-fullscreen-xl-down</code></td>
+					<td><code>1200px</code></td>
+			</tr>
+			<tr>
+					<td><code>.modal-fullscreen-xxl-down</code></td>
+					<td><code>1400px</code></td>
+			</tr>
+	</tbody>
 </table></div>
 
 <div class="bd-example">
@@ -1183,7 +1186,7 @@ In the above static example, we use <code>&lt;h5&gt;</code>, to avoid issues wit
 </span></span><span class="line"><span class="cl"><span class="na">--#{$prefix}modal-header-padding-x</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$modal-header-padding-x</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="na">--#{$prefix}modal-header-padding-y</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$modal-header-padding-y</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="na">--#{$prefix}modal-header-padding</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$modal-header-padding</span><span class="si">}</span><span class="p">;</span> <span class="c1">// Todo in v6: Split this padding into x and y
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="na">--#{$prefix}modal-header-bg</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$magenta</span><span class="si">}</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl"><span class="na">--#{$prefix}modal-header-bg</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$magenta</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="na">--#{$prefix}modal-header-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$white</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="na">--#{$prefix}modal-header-border-color</span><span class="o">:</span> <span class="ni">transparent</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="na">--#{$prefix}modal-header-border-width</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
@@ -1238,7 +1241,7 @@ In the above static example, we use <code>&lt;h5&gt;</code>, to avoid issues wit
 </span></span><span class="line"><span class="cl"><span class="nv">$modal-header-padding-y</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$modal-header-padding-x</span><span class="o">:</span> <span class="nv">$space-width</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$modal-header-padding</span><span class="o">:</span>              <span class="nv">$modal-header-padding-y</span> <span class="nv">$modal-header-padding-x</span><span class="p">;</span> <span class="c1">// Keep this for backwards compatibility
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nv">$modal-footer-bg</span><span class="o">:</span>                   <span class="n">null</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$modal-footer-border-color</span><span class="o">:</span>         <span class="nv">$modal-header-border-color</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$modal-footer-border-width</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
@@ -1306,41 +1309,41 @@ While both ways to dismiss a modal are supported, keep in mind that dismissing f
 <p>Create a modal with a single line of JavaScript:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">myModal</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Modal</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;myModal&#39;</span><span class="p">),</span> <span class="nx">options</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="c1">// or
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">myModalAlternative</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Modal</span><span class="p">(</span><span class="s1">&#39;#myModal&#39;</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span>
+</span></span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">myModalAlternative</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Modal</span><span class="p">(</span><span class="s1">&#39;#myModal&#39;</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span>
 </span></span></code></pre></div><h3 id="options">Options <a class="anchor-link" href="#options" aria-label="Link to this section: Options"></a></h3>
-<p>As options can be passed via data attributes or JavaScript, you can append an option name to <code>data-bs-</code>, as in <code>data-bs-animation=&quot;{value}&quot;</code>. Make sure to change the case type of the option name from &ldquo;<em>camelCase</em>&rdquo; to &ldquo;<em>kebab-case</em>&rdquo; when passing the options via data attributes. For example, use <code>data-bs-custom-class=&quot;beautifier&quot;</code> instead of <code>data-bs-customClass=&quot;beautifier&quot;</code>.</p>
-<p>As of Bootstrap 5.2.0, all components support an <strong>experimental</strong> reserved data attribute <code>data-bs-config</code> that can house simple component configuration as a JSON string. When an element has <code>data-bs-config='{&quot;delay&quot;:0, &quot;title&quot;:123}'</code> and <code>data-bs-title=&quot;456&quot;</code> attributes, the final <code>title</code> value will be <code>456</code> and the separate data attributes will override values given on <code>data-bs-config</code>. In addition, existing data attributes are able to house JSON values like <code>data-bs-delay='{&quot;show&quot;:0,&quot;hide&quot;:150}'</code>.</p>
+<p>As options can be passed via data attributes or JavaScript, you can append an option name to <code>data-bs-</code>, as in <code>data-bs-animation=&amp;#34;{value}&amp;#34;</code>. Make sure to change the case type of the option name from &quot;<em>camelCase</em>&quot; to &quot;<em>kebab-case</em>&quot; when passing the options via data attributes. For example, use <code>data-bs-custom-class=&amp;#34;beautifier&amp;#34;</code> instead of <code>data-bs-customClass=&amp;#34;beautifier&amp;#34;</code>.</p>
+<p>As of Bootstrap 5.2.0, all components support an <strong>experimental</strong> reserved data attribute <code>data-bs-config</code> that can house simple component configuration as a JSON string. When an element has <code>data-bs-config=&amp;#39;{&amp;#34;delay&amp;#34;:0, &amp;#34;title&amp;#34;:123}&amp;#39;</code> and <code>data-bs-title=&amp;#34;456&amp;#34;</code> attributes, the final <code>title</code> value will be <code>456</code> and the separate data attributes will override values given on <code>data-bs-config</code>. In addition, existing data attributes are able to house JSON values like <code>data-bs-delay=&amp;#39;{&amp;#34;show&amp;#34;:0,&amp;#34;hide&amp;#34;:150}&amp;#39;</code>.</p>
 <p>The final configuration object is the merged result of <code>data-bs-config</code>, <code>data-bs-</code>, and <code>js object</code> where the latest given key-value overrides the others.</p>
 
 <div class="table-responsive"><table class="table">
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>backdrop</code></td>
-<td>boolean, <code>'static'</code></td>
-<td><code>true</code></td>
-<td>Includes a modal-backdrop element. Alternatively, specify <code>static</code> for a backdrop which doesn&rsquo;t close the modal when clicked.</td>
-</tr>
-<tr>
-<td><code>focus</code></td>
-<td>boolean</td>
-<td><code>true</code></td>
-<td>Puts the focus on the modal when initialized.</td>
-</tr>
-<tr>
-<td><code>keyboard</code></td>
-<td>boolean</td>
-<td><code>true</code></td>
-<td>Closes the modal when escape key is pressed.</td>
-</tr>
-</tbody>
+	<thead>
+			<tr>
+					<th>Name</th>
+					<th>Type</th>
+					<th>Default</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>backdrop</code></td>
+					<td>boolean, <code>'static'</code></td>
+					<td><code>true</code></td>
+					<td>Includes a modal-backdrop element. Alternatively, specify <code>static</code> for a backdrop which doesn&rsquo;t close the modal when clicked.</td>
+			</tr>
+			<tr>
+					<td><code>focus</code></td>
+					<td>boolean</td>
+					<td><code>true</code></td>
+					<td>Puts the focus on the modal when initialized.</td>
+			</tr>
+			<tr>
+					<td><code>keyboard</code></td>
+					<td>boolean</td>
+					<td><code>true</code></td>
+					<td>Closes the modal when escape key is pressed.</td>
+			</tr>
+	</tbody>
 </table></div>
 
 <h3 id="methods">Methods <a class="anchor-link" href="#methods" aria-label="Link to this section: Methods"></a></h3>
@@ -1354,81 +1357,81 @@ While both ways to dismiss a modal are supported, keep in mind that dismissing f
 </span></span><span class="line"><span class="cl">  <span class="nx">keyboard</span><span class="o">:</span> <span class="kc">false</span>
 </span></span><span class="line"><span class="cl"><span class="p">})</span>
 </span></span></code></pre></div><div class="table-responsive"><table class="table">
-<thead>
-<tr>
-<th>Method</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>dispose</code></td>
-<td>Destroys an element&rsquo;s modal. (Removes stored data on the DOM element)</td>
-</tr>
-<tr>
-<td><code>getInstance</code></td>
-<td><em>Static</em> method which allows you to get the modal instance associated with a DOM element.</td>
-</tr>
-<tr>
-<td><code>getOrCreateInstance</code></td>
-<td><em>Static</em> method which allows you to get the modal instance associated with a DOM element, or create a new one in case it wasn&rsquo;t initialized.</td>
-</tr>
-<tr>
-<td><code>handleUpdate</code></td>
-<td>Manually readjust the modal&rsquo;s position if the height of a modal changes while it is open (i.e. in case a scrollbar appears).</td>
-</tr>
-<tr>
-<td><code>hide</code></td>
-<td>Manually hides a modal. <strong>Returns to the caller before the modal has actually been hidden</strong> (i.e. before the <code>hidden.bs.modal</code> event occurs).</td>
-</tr>
-<tr>
-<td><code>show</code></td>
-<td>Manually opens a modal. <strong>Returns to the caller before the modal has actually been shown</strong> (i.e. before the <code>shown.bs.modal</code> event occurs). Also, you can pass a DOM element as an argument that can be received in the modal events (as the <code>relatedTarget</code> property). (i.e. <code>const modalToggle = document.getElementById('toggleMyModal'); myModal.show(modalToggle)</code>.</td>
-</tr>
-<tr>
-<td><code>toggle</code></td>
-<td>Manually toggles a modal. <strong>Returns to the caller before the modal has actually been shown or hidden</strong> (i.e. before the <code>shown.bs.modal</code> or <code>hidden.bs.modal</code> event occurs).</td>
-</tr>
-</tbody>
+	<thead>
+			<tr>
+					<th>Method</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>dispose</code></td>
+					<td>Destroys an element&rsquo;s modal. (Removes stored data on the DOM element)</td>
+			</tr>
+			<tr>
+					<td><code>getInstance</code></td>
+					<td><em>Static</em> method which allows you to get the modal instance associated with a DOM element.</td>
+			</tr>
+			<tr>
+					<td><code>getOrCreateInstance</code></td>
+					<td><em>Static</em> method which allows you to get the modal instance associated with a DOM element, or create a new one in case it wasn&rsquo;t initialized.</td>
+			</tr>
+			<tr>
+					<td><code>handleUpdate</code></td>
+					<td>Manually readjust the modal&rsquo;s position if the height of a modal changes while it is open (i.e. in case a scrollbar appears).</td>
+			</tr>
+			<tr>
+					<td><code>hide</code></td>
+					<td>Manually hides a modal. <strong>Returns to the caller before the modal has actually been hidden</strong> (i.e. before the <code>hidden.bs.modal</code> event occurs).</td>
+			</tr>
+			<tr>
+					<td><code>show</code></td>
+					<td>Manually opens a modal. <strong>Returns to the caller before the modal has actually been shown</strong> (i.e. before the <code>shown.bs.modal</code> event occurs). Also, you can pass a DOM element as an argument that can be received in the modal events (as the <code>relatedTarget</code> property). (i.e. <code>const modalToggle = document.getElementById('toggleMyModal'); myModal.show(modalToggle)</code>.</td>
+			</tr>
+			<tr>
+					<td><code>toggle</code></td>
+					<td>Manually toggles a modal. <strong>Returns to the caller before the modal has actually been shown or hidden</strong> (i.e. before the <code>shown.bs.modal</code> or <code>hidden.bs.modal</code> event occurs).</td>
+			</tr>
+	</tbody>
 </table></div>
 
 <h3 id="events">Events <a class="anchor-link" href="#events" aria-label="Link to this section: Events"></a></h3>
 <p>Bootstrap&rsquo;s modal class exposes a few events for hooking into modal functionality. All modal events are fired at the modal itself (i.e. at the <code>&lt;div class=&quot;modal&quot;&gt;</code>).</p>
 <div class="table-responsive"><table class="table">
-<thead>
-<tr>
-<th>Event</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>hide.bs.modal</code></td>
-<td>This event is fired immediately when the <code>hide</code> instance method has been called.</td>
-</tr>
-<tr>
-<td><code>hidden.bs.modal</code></td>
-<td>This event is fired when the modal has finished being hidden from the user (will wait for CSS transitions to complete).</td>
-</tr>
-<tr>
-<td><code>hidePrevented.bs.modal</code></td>
-<td>This event is fired when the modal is shown, its backdrop is <code>static</code> and a click outside of the modal is performed. The event is also fired when the escape key is pressed and the <code>keyboard</code> option is set to <code>false</code>.</td>
-</tr>
-<tr>
-<td><code>show.bs.modal</code></td>
-<td>This event fires immediately when the <code>show</code> instance method is called. If caused by a click, the clicked element is available as the <code>relatedTarget</code> property of the event.</td>
-</tr>
-<tr>
-<td><code>shown.bs.modal</code></td>
-<td>This event is fired when the modal has been made visible to the user (will wait for CSS transitions to complete). If caused by a click, the clicked element is available as the <code>relatedTarget</code> property of the event.</td>
-</tr>
-</tbody>
+	<thead>
+			<tr>
+					<th>Event</th>
+					<th>Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>hide.bs.modal</code></td>
+					<td>This event is fired immediately when the <code>hide</code> instance method has been called.</td>
+			</tr>
+			<tr>
+					<td><code>hidden.bs.modal</code></td>
+					<td>This event is fired when the modal has finished being hidden from the user (will wait for CSS transitions to complete).</td>
+			</tr>
+			<tr>
+					<td><code>hidePrevented.bs.modal</code></td>
+					<td>This event is fired when the modal is shown, its backdrop is <code>static</code> and a click outside of the modal is performed. The event is also fired when the escape key is pressed and the <code>keyboard</code> option is set to <code>false</code>.</td>
+			</tr>
+			<tr>
+					<td><code>show.bs.modal</code></td>
+					<td>This event fires immediately when the <code>show</code> instance method is called. If caused by a click, the clicked element is available as the <code>relatedTarget</code> property of the event.</td>
+			</tr>
+			<tr>
+					<td><code>shown.bs.modal</code></td>
+					<td>This event is fired when the modal has been made visible to the user (will wait for CSS transitions to complete). If caused by a click, the clicked element is available as the <code>relatedTarget</code> property of the event.</td>
+			</tr>
+	</tbody>
 </table></div>
 
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">myModalEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;myModal&#39;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="nx">myModalEl</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;hidden.bs.modal&#39;</span><span class="p">,</span> <span class="nx">event</span> <span class="p">=&gt;</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="c1">// do something...
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">})</span>
+</span></span></span><span class="line"><span class="cl"><span class="p">})</span>
 </span></span></code></pre></div>
         </div>
       </main>

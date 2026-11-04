@@ -7366,7 +7366,7 @@ textarea.form-control:disabled, textarea.form-control[readonly], textarea.form-c
   z-index: 9999999;
   width: 100%;
   height: 100%;
-  background: #0000aa;
+  background: var(--bs-body-bg);
 }
 
 #bar386 {
@@ -7375,7 +7375,7 @@ textarea.form-control:disabled, textarea.form-control[readonly], textarea.form-c
   height: 14px;
   margin-top: -14px;
   color: #ffffff;
-  background: #0000aa;
+  background: var(--bs-body-bg);
 }
 
 #cursor386 {

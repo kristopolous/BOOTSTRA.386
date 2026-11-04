@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="The official guide for how to include and bundle Bootstrap&rsquo;s CSS and JavaScript in your project using Webpack.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Hugo 0.115.4">
+<meta name="generator" content="Hugo 0.169.0">
 
 <title>Bootstrap and Webpack · Bootstrap v5.3</title>
 
@@ -16,6 +16,9 @@
 <link href="/BOOTSTRA.386/v5.3.1/docs/5.3/dist/css/bootstrap.css" rel="stylesheet">
 
 <link href="/BOOTSTRA.386/v5.3.1/docs/5.3/assets/css/docs.css" rel="stylesheet">
+
+<style>body { visibility: hidden; }</style>
+<noscript><style>body { visibility: visible; }</style></noscript>
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/BOOTSTRA.386/v5.3.1/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -464,13 +467,13 @@
 <p><strong>Now we need an npm script to run Webpack.</strong> Open <code>package.json</code> and add the <code>start</code> script shown below (you should already have the test script). We&rsquo;ll use this script to start our local Webpack dev server. You can also add a <code>build</code> script shown below to build your project.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="c1">// ...
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nt">&#34;scripts&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl">  <span class="nt">&#34;scripts&#34;</span><span class="p">:</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">&#34;start&#34;</span><span class="p">:</span> <span class="s2">&#34;webpack serve&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">&#34;build&#34;</span><span class="p">:</span> <span class="s2">&#34;webpack build --mode=production&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">&#34;test&#34;</span><span class="p">:</span> <span class="s2">&#34;echo \&#34;Error: no test specified\&#34; &amp;&amp; exit 1&#34;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">},</span>
 </span></span><span class="line"><span class="cl">  <span class="c1">// ...
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div></li>
 <li>
 <p><strong>And finally, we can start Webpack.</strong> From the <code>my-project</code> folder in your terminal, run that newly added npm script:</p>
@@ -512,15 +515,15 @@
 </span></span><span class="line"><span class="cl">        <span class="nx">use</span><span class="o">:</span> <span class="p">[</span>
 </span></span><span class="line"><span class="cl">          <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="c1">// Adds CSS to the DOM by injecting a `&lt;style&gt;` tag
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">loader</span><span class="o">:</span> <span class="s1">&#39;style-loader&#39;</span>
+</span></span></span><span class="line"><span class="cl">            <span class="nx">loader</span><span class="o">:</span> <span class="s1">&#39;style-loader&#39;</span>
 </span></span><span class="line"><span class="cl">          <span class="p">},</span>
 </span></span><span class="line"><span class="cl">          <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="c1">// Interprets `@import` and `url()` like `import/require()` and will resolve them
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">loader</span><span class="o">:</span> <span class="s1">&#39;css-loader&#39;</span>
+</span></span></span><span class="line"><span class="cl">            <span class="nx">loader</span><span class="o">:</span> <span class="s1">&#39;css-loader&#39;</span>
 </span></span><span class="line"><span class="cl">          <span class="p">},</span>
 </span></span><span class="line"><span class="cl">          <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="c1">// Loader for webpack to process CSS with PostCSS
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">loader</span><span class="o">:</span> <span class="s1">&#39;postcss-loader&#39;</span><span class="p">,</span>
+</span></span></span><span class="line"><span class="cl">            <span class="nx">loader</span><span class="o">:</span> <span class="s1">&#39;postcss-loader&#39;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">            <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">              <span class="nx">postcssOptions</span><span class="o">:</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">                <span class="nx">plugins</span><span class="o">:</span> <span class="p">[</span>
@@ -531,7 +534,7 @@
 </span></span><span class="line"><span class="cl">          <span class="p">},</span>
 </span></span><span class="line"><span class="cl">          <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="c1">// Loads a SASS/SCSS file and compiles it to CSS
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">loader</span><span class="o">:</span> <span class="s1">&#39;sass-loader&#39;</span>
+</span></span></span><span class="line"><span class="cl">            <span class="nx">loader</span><span class="o">:</span> <span class="s1">&#39;sass-loader&#39;</span>
 </span></span><span class="line"><span class="cl">          <span class="p">}</span>
 </span></span><span class="line"><span class="cl">        <span class="p">]</span>
 </span></span><span class="line"><span class="cl">      <span class="p">}</span>
@@ -543,23 +546,23 @@
 <li>
 <p><strong>Now, let&rsquo;s import Bootstrap&rsquo;s CSS.</strong> Add the following to <code>src/scss/styles.scss</code> to import all of Bootstrap&rsquo;s source Sass.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// Import all of Bootstrap&#39;s CSS
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/bootstrap&#34;</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/bootstrap&#34;</span><span class="p">;</span>
 </span></span></code></pre></div><p><em>You can also import our stylesheets individually if you want. <a href="/BOOTSTRA.386/v5.3.1/docs/5.3/customize/sass/#importing">Read our Sass import docs</a> for details.</em></p>
 </li>
 <li>
 <p><strong>Next we load the CSS and import Bootstrap&rsquo;s JavaScript.</strong> Add the following to <code>src/js/main.js</code> to load the CSS and import all of Bootstrap&rsquo;s JS. Popper will be imported automatically through Bootstrap.</p>
 <!-- eslint-skip -->
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// Import our custom CSS
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">import</span> <span class="s1">&#39;../scss/styles.scss&#39;</span>
+</span></span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="s1">&#39;../scss/styles.scss&#39;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// Import all of Bootstrap&#39;s JS
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">import</span> <span class="o">*</span> <span class="nx">as</span> <span class="nx">bootstrap</span> <span class="nx">from</span> <span class="s1">&#39;bootstrap&#39;</span>
+</span></span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="o">*</span> <span class="nx">as</span> <span class="nx">bootstrap</span> <span class="nx">from</span> <span class="s1">&#39;bootstrap&#39;</span>
 </span></span></code></pre></div><p>You can also import JavaScript plugins individually as needed to keep bundle sizes down:</p>
 <!-- eslint-skip -->
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">Alert</span> <span class="nx">from</span> <span class="s1">&#39;bootstrap/js/dist/alert&#39;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// or, specify which plugins you need:
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">Tooltip</span><span class="p">,</span> <span class="nx">Toast</span><span class="p">,</span> <span class="nx">Popover</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;bootstrap&#39;</span>
+</span></span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">Tooltip</span><span class="p">,</span> <span class="nx">Toast</span><span class="p">,</span> <span class="nx">Popover</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;bootstrap&#39;</span>
 </span></span></code></pre></div><p><em><a href="/BOOTSTRA.386/v5.3.1/docs/5.3/getting-started/javascript/">Read our JavaScript docs</a> for more information on how to use Bootstrap&rsquo;s plugins.</em></p>
 </li>
 <li>
@@ -577,53 +580,53 @@
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">npm install --save-dev mini-css-extract-plugin
 </span></span></code></pre></div><p>Then instantiate and use the plugin in the Webpack configuration:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff"><span class="line"><span class="cl"><span class="gd">--- a/webpack.config.js
-</span></span></span><span class="line"><span class="cl"><span class="gd"></span><span class="gi">+++ b/webpack.config.js
-</span></span></span><span class="line"><span class="cl"><span class="gi"></span><span class="gu">@@ -3,6 +3,7 @@
-</span></span></span><span class="line"><span class="cl"><span class="gu"></span> const path = require(&#39;path&#39;)
+</span></span></span><span class="line"><span class="cl"><span class="gi">+++ b/webpack.config.js
+</span></span></span><span class="line"><span class="cl"><span class="gu">@@ -3,6 +3,7 @@
+</span></span></span><span class="line"><span class="cl"> const path = require(&#39;path&#39;)
 </span></span><span class="line"><span class="cl"> const autoprefixer = require(&#39;autoprefixer&#39;)
 </span></span><span class="line"><span class="cl"> const HtmlWebpackPlugin = require(&#39;html-webpack-plugin&#39;)
 </span></span><span class="line"><span class="cl"><span class="gi">+const miniCssExtractPlugin = require(&#39;mini-css-extract-plugin&#39;)
-</span></span></span><span class="line"><span class="cl"><span class="gi"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"> module.exports = {
 </span></span><span class="line"><span class="cl">   mode: &#39;development&#39;,
 </span></span><span class="line"><span class="cl"><span class="gu">@@ -17,7 +18,8 @@ module.exports = {
-</span></span></span><span class="line"><span class="cl"><span class="gu"></span>     hot: true
+</span></span></span><span class="line"><span class="cl">     hot: true
 </span></span><span class="line"><span class="cl">   },
 </span></span><span class="line"><span class="cl">   plugins: [
 </span></span><span class="line"><span class="cl"><span class="gd">-    new HtmlWebpackPlugin({ template: &#39;./src/index.html&#39; })
-</span></span></span><span class="line"><span class="cl"><span class="gd"></span><span class="gi">+    new HtmlWebpackPlugin({ template: &#39;./src/index.html&#39; }),
+</span></span></span><span class="line"><span class="cl"><span class="gi">+    new HtmlWebpackPlugin({ template: &#39;./src/index.html&#39; }),
 </span></span></span><span class="line"><span class="cl"><span class="gi">+    new miniCssExtractPlugin()
-</span></span></span><span class="line"><span class="cl"><span class="gi"></span>   ],
+</span></span></span><span class="line"><span class="cl">   ],
 </span></span><span class="line"><span class="cl">   module: {
 </span></span><span class="line"><span class="cl">     rules: [
 </span></span><span class="line"><span class="cl"><span class="gu">@@ -25,8 +27,8 @@ module.exports = {
-</span></span></span><span class="line"><span class="cl"><span class="gu"></span>         test: /\.(scss)$/,
+</span></span></span><span class="line"><span class="cl">         test: /\.(scss)$/,
 </span></span><span class="line"><span class="cl">         use: [
 </span></span><span class="line"><span class="cl">           {
 </span></span><span class="line"><span class="cl"><span class="gd">-            // Adds CSS to the DOM by injecting a `&lt;style&gt;` tag
 </span></span></span><span class="line"><span class="cl"><span class="gd">-            loader: &#39;style-loader&#39;
-</span></span></span><span class="line"><span class="cl"><span class="gd"></span><span class="gi">+            // Extracts CSS for each JS file that includes CSS
+</span></span></span><span class="line"><span class="cl"><span class="gi">+            // Extracts CSS for each JS file that includes CSS
 </span></span></span><span class="line"><span class="cl"><span class="gi">+            loader: miniCssExtractPlugin.loader
-</span></span></span><span class="line"><span class="cl"><span class="gi"></span>           },
+</span></span></span><span class="line"><span class="cl">           },
 </span></span><span class="line"><span class="cl">           {
 </span></span></code></pre></div><p>After running <code>npm run build</code> again, there will be a new file <code>dist/main.css</code>, which will contain all of the CSS imported by <code>src/js/main.js</code>. If you view <code>dist/index.html</code> in your browser now, the style will be missing, as it is now in <code>dist/main.css</code>. You can include the generated CSS in <code>dist/index.html</code> like this:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff"><span class="line"><span class="cl"><span class="gd">--- a/dist/index.html
-</span></span></span><span class="line"><span class="cl"><span class="gd"></span><span class="gi">+++ b/dist/index.html
-</span></span></span><span class="line"><span class="cl"><span class="gi"></span><span class="gu">@@ -3,6 +3,7 @@
-</span></span></span><span class="line"><span class="cl"><span class="gu"></span>   &lt;head&gt;
+</span></span></span><span class="line"><span class="cl"><span class="gi">+++ b/dist/index.html
+</span></span></span><span class="line"><span class="cl"><span class="gu">@@ -3,6 +3,7 @@
+</span></span></span><span class="line"><span class="cl">   &lt;head&gt;
 </span></span><span class="line"><span class="cl">     &lt;meta charset=&#34;utf-8&#34;&gt;
 </span></span><span class="line"><span class="cl">     &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1&#34;&gt;
 </span></span><span class="line"><span class="cl"><span class="gi">+    &lt;link rel=&#34;stylesheet&#34; href=&#34;./main.css&#34;&gt;
-</span></span></span><span class="line"><span class="cl"><span class="gi"></span>     &lt;title&gt;Bootstrap w/ Webpack&lt;/title&gt;
+</span></span></span><span class="line"><span class="cl">     &lt;title&gt;Bootstrap w/ Webpack&lt;/title&gt;
 </span></span><span class="line"><span class="cl">   &lt;/head&gt;
 </span></span><span class="line"><span class="cl">   &lt;body&gt;
 </span></span></code></pre></div><h3 id="extracting-svg-files">Extracting SVG files <a class="anchor-link" href="#extracting-svg-files" aria-label="Link to this section: Extracting SVG files"></a></h3>
 <p>Bootstrap&rsquo;s CSS includes multiple references to SVG files via inline <code>data:</code> URIs. If you define a Content Security Policy for your project that blocks <code>data:</code> URIs for images, then these SVG files will not load. You can get around this problem by extracting the inline SVG files using Webpack&rsquo;s asset modules feature.</p>
 <p>Configure Webpack to extract inline SVG files like this:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff"><span class="line"><span class="cl"><span class="gd">--- a/webpack.config.js
-</span></span></span><span class="line"><span class="cl"><span class="gd"></span><span class="gi">+++ b/webpack.config.js
-</span></span></span><span class="line"><span class="cl"><span class="gi"></span><span class="gu">@@ -23,6 +23,14 @@ module.exports = {
-</span></span></span><span class="line"><span class="cl"><span class="gu"></span>   },
+</span></span></span><span class="line"><span class="cl"><span class="gi">+++ b/webpack.config.js
+</span></span></span><span class="line"><span class="cl"><span class="gu">@@ -23,6 +23,14 @@ module.exports = {
+</span></span></span><span class="line"><span class="cl">   },
 </span></span><span class="line"><span class="cl">   module: {
 </span></span><span class="line"><span class="cl">     rules: [
 </span></span><span class="line"><span class="cl"><span class="gi">+      {
@@ -634,12 +637,13 @@
 </span></span></span><span class="line"><span class="cl"><span class="gi">+          filename: &#39;icons/[hash].svg&#39;
 </span></span></span><span class="line"><span class="cl"><span class="gi">+        }
 </span></span></span><span class="line"><span class="cl"><span class="gi">+      },
-</span></span></span><span class="line"><span class="cl"><span class="gi"></span>       {
+</span></span></span><span class="line"><span class="cl">       {
 </span></span><span class="line"><span class="cl">         test: /\.(scss)$/,
 </span></span><span class="line"><span class="cl">         use: [
 </span></span></code></pre></div><p>After running <code>npm run build</code> again, you&rsquo;ll find the SVG files extracted into <code>dist/icons</code> and properly referenced from CSS.</p>
-<hr class="my-5">
-<p><em>See something wrong or out of date here? Please <a href="https://github.com/twbs/bootstrap/issues/new/choose">open an issue on GitHub</a>. Need help troubleshooting? <a href="https://github.com/twbs/bootstrap/discussions">Search or start a discussion</a> on GitHub.</em>
+<p>&lt;hr class=&quot;my-5&quot;&gt;</p>
+<p><em>See something wrong or out of date here? Please <a href="https://github.com/twbs/bootstrap/issues/new/choose">open an issue on GitHub</a>. Need help troubleshooting? <a href="https://github.com/twbs/bootstrap/discussions">Search or start a discussion</a> on GitHub.</em></p>
+
 
         </div>
       </main>

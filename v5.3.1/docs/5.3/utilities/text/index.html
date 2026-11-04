@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Documentation and examples for common text utilities to control alignment, wrapping, weight, and more.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Hugo 0.115.4">
+<meta name="generator" content="Hugo 0.169.0">
 
 <title>Text · Bootstrap v5.3</title>
 
@@ -16,6 +16,9 @@
 <link href="/BOOTSTRA.386/v5.3.1/docs/5.3/dist/css/bootstrap.css" rel="stylesheet">
 
 <link href="/BOOTSTRA.386/v5.3.1/docs/5.3/assets/css/docs.css" rel="stylesheet">
+
+<style>body { visibility: hidden; }</style>
+<noscript><style>body { visibility: visible; }</style></noscript>
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/BOOTSTRA.386/v5.3.1/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -549,15 +552,15 @@ Note that <a href="https://rtlstyling.com/posts/rtl-styling#3.-line-break">break
         </button>
       </div>
     </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// stylelint-disable value-keyword-case
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$font-family-sans-serif</span><span class="o">:</span> <span class="n">DOS</span><span class="o">,</span> <span class="n">Monaco</span><span class="o">,</span> <span class="n">Menlo</span><span class="o">,</span> <span class="n">Consolas</span><span class="o">,</span> <span class="s2">&#34;Courier New&#34;</span><span class="o">,</span> <span class="ni">monospace</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl"><span class="nv">$font-family-sans-serif</span><span class="o">:</span> <span class="n">DOS</span><span class="o">,</span> <span class="n">Monaco</span><span class="o">,</span> <span class="n">Menlo</span><span class="o">,</span> <span class="n">Consolas</span><span class="o">,</span> <span class="s2">&#34;Courier New&#34;</span><span class="o">,</span> <span class="ni">monospace</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$font-family-monospace</span><span class="o">:</span> <span class="n">DOS</span><span class="o">,</span> <span class="n">Monaco</span><span class="o">,</span> <span class="n">Menlo</span><span class="o">,</span> <span class="n">Consolas</span><span class="o">,</span> <span class="s2">&#34;Courier New&#34;</span><span class="o">,</span> <span class="ni">monospace</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="c1">// stylelint-enable value-keyword-case
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$font-family-base</span><span class="o">:</span>            <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">font-sans-serif</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl"><span class="nv">$font-family-base</span><span class="o">:</span>            <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">font-sans-serif</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$font-family-code</span><span class="o">:</span>            <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">font-monospace</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
 </span></span></span><span class="line"><span class="cl"><span class="c1">// $font-size-base affects the font size of the body text
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$font-size-root</span><span class="o">:</span>              <span class="n">null</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl"><span class="nv">$font-size-root</span><span class="o">:</span>              <span class="n">null</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$font-size-base</span><span class="o">:</span> <span class="nv">$font-size-px</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$font-size-sm</span><span class="o">:</span> <span class="nv">$font-size-base</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$font-size-lg</span><span class="o">:</span> <span class="nv">$font-size-base</span><span class="p">;</span>

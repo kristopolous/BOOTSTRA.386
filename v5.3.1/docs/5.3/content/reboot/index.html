@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Reboot, a collection of element-specific CSS changes in a single file, kickstart Bootstrap to provide an elegant, consistent, and simple baseline to build upon.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Hugo 0.115.4">
+<meta name="generator" content="Hugo 0.169.0">
 
 <title>Reboot · Bootstrap v5.3</title>
 
@@ -16,6 +16,9 @@
 <link href="/BOOTSTRA.386/v5.3.1/docs/5.3/dist/css/bootstrap.css" rel="stylesheet">
 
 <link href="/BOOTSTRA.386/v5.3.1/docs/5.3/assets/css/docs.css" rel="stylesheet">
+
+<style>body { visibility: hidden; }</style>
+<noscript><style>body { visibility: visible; }</style></noscript>
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/BOOTSTRA.386/v5.3.1/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -433,21 +436,21 @@
       </div>
     </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nt">body</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="na">margin</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// 1
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">font-family</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">body-font-family</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">  <span class="na">font-family</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">body-font-family</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">  <span class="k">@include</span><span class="nd"> font-size</span><span class="p">(</span><span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">body-font-size</span><span class="p">));</span>
 </span></span><span class="line"><span class="cl">  <span class="na">font-weight</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">body-font-weight</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">  <span class="na">line-height</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">body-line-height</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">  <span class="na">color</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">body-color</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">  <span class="na">text-align</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">body-text-align</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">  <span class="na">background-color</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">body-bg</span><span class="p">);</span> <span class="c1">// 2
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">-webkit-text-size-adjust</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span> <span class="c1">// 3
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">-webkit-tap-highlight-color</span><span class="o">:</span> <span class="nf">rgba</span><span class="p">(</span><span class="nv">$black</span><span class="o">,</span> <span class="mi">0</span><span class="p">);</span> <span class="c1">// 4
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">font-kerning</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span> <span class="c1">// 5
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">font-variant-ligatures</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span> <span class="c1">// 5
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">text-rendering</span><span class="o">:</span> <span class="ni">geometricPrecision</span><span class="p">;</span> <span class="c1">// 5
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">-webkit-font-smoothing</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span> <span class="c1">// 5
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">font-synthesis</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span> <span class="c1">// 6
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span></span><span class="line"><span class="cl">  <span class="na">-webkit-text-size-adjust</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span> <span class="c1">// 3
+</span></span></span><span class="line"><span class="cl">  <span class="na">-webkit-tap-highlight-color</span><span class="o">:</span> <span class="nf">rgba</span><span class="p">(</span><span class="nv">$black</span><span class="o">,</span> <span class="mi">0</span><span class="p">);</span> <span class="c1">// 4
+</span></span></span><span class="line"><span class="cl">  <span class="na">font-kerning</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span> <span class="c1">// 5
+</span></span></span><span class="line"><span class="cl">  <span class="na">font-variant-ligatures</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span> <span class="c1">// 5
+</span></span></span><span class="line"><span class="cl">  <span class="na">text-rendering</span><span class="o">:</span> <span class="ni">geometricPrecision</span><span class="p">;</span> <span class="c1">// 5
+</span></span></span><span class="line"><span class="cl">  <span class="na">-webkit-font-smoothing</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span> <span class="c1">// 5
+</span></span></span><span class="line"><span class="cl">  <span class="na">font-synthesis</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span> <span class="c1">// 6
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div></div>
 <p>Which allows you to make real-time customizations however you like:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;--bs-body-color: #333;&#34;</span><span class="p">&gt;</span>
@@ -491,38 +494,38 @@
 <h2 id="headings">Headings <a class="anchor-link" href="#headings" aria-label="Link to this section: Headings"></a></h2>
 <p>All heading elements—<code>&lt;h1&gt;</code>—<code>&lt;h6&gt;</code> have their <code>margin-top</code> removed, <code>margin-bottom: .5rem</code> set, and <code>line-height</code> tightened. While headings inherit their <code>color</code> by default, you can also override it via optional CSS variable, <code>--bs-heading-color</code>.</p>
 <div class="table-responsive"><table class="table">
-<thead>
-<tr>
-<th>Heading</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>&lt;h1&gt;&lt;/h1&gt;</code></td>
-<td><span class="h1">h1. Bootstrap heading</span></td>
-</tr>
-<tr>
-<td><code>&lt;h2&gt;&lt;/h2&gt;</code></td>
-<td><span class="h2">h2. Bootstrap heading</span></td>
-</tr>
-<tr>
-<td><code>&lt;h3&gt;&lt;/h3&gt;</code></td>
-<td><span class="h3">h3. Bootstrap heading</span></td>
-</tr>
-<tr>
-<td><code>&lt;h4&gt;&lt;/h4&gt;</code></td>
-<td><span class="h4">h4. Bootstrap heading</span></td>
-</tr>
-<tr>
-<td><code>&lt;h5&gt;&lt;/h5&gt;</code></td>
-<td><span class="h5">h5. Bootstrap heading</span></td>
-</tr>
-<tr>
-<td><code>&lt;h6&gt;&lt;/h6&gt;</code></td>
-<td><span class="h6">h6. Bootstrap heading</span></td>
-</tr>
-</tbody>
+	<thead>
+			<tr>
+					<th>Heading</th>
+					<th>Example</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>&lt;h1&gt;&lt;/h1&gt;</code></td>
+					<td><span class="h1">h1. Bootstrap heading</span></td>
+			</tr>
+			<tr>
+					<td><code>&lt;h2&gt;&lt;/h2&gt;</code></td>
+					<td><span class="h2">h2. Bootstrap heading</span></td>
+			</tr>
+			<tr>
+					<td><code>&lt;h3&gt;&lt;/h3&gt;</code></td>
+					<td><span class="h3">h3. Bootstrap heading</span></td>
+			</tr>
+			<tr>
+					<td><code>&lt;h4&gt;&lt;/h4&gt;</code></td>
+					<td><span class="h4">h4. Bootstrap heading</span></td>
+			</tr>
+			<tr>
+					<td><code>&lt;h5&gt;&lt;/h5&gt;</code></td>
+					<td><span class="h5">h5. Bootstrap heading</span></td>
+			</tr>
+			<tr>
+					<td><code>&lt;h6&gt;&lt;/h6&gt;</code></td>
+					<td><span class="h6">h6. Bootstrap heading</span></td>
+			</tr>
+	</tbody>
 </table></div>
 
 <h2 id="paragraphs">Paragraphs <a class="anchor-link" href="#paragraphs" aria-label="Link to this section: Paragraphs"></a></h2>

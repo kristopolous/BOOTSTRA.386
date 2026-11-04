@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Learn how and why we build nearly all our components responsively and with base and modifier classes.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Hugo 0.115.4">
+<meta name="generator" content="Hugo 0.169.0">
 
 <title>Components · Bootstrap v5.3</title>
 
@@ -16,6 +16,9 @@
 <link href="/BOOTSTRA.386/v5.3.1/docs/5.3/dist/css/bootstrap.css" rel="stylesheet">
 
 <link href="/BOOTSTRA.386/v5.3.1/docs/5.3/assets/css/docs.css" rel="stylesheet">
+
+<style>body { visibility: hidden; }</style>
+<noscript><style>body { visibility: visible; }</style></noscript>
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/BOOTSTRA.386/v5.3.1/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -418,7 +421,7 @@
 </span></span></span><span class="line"><span class="cl"><span class="c1">//
 </span></span></span><span class="line"><span class="cl"><span class="c1">// Add modifier classes to change text and background color on individual items.
 </span></span></span><span class="line"><span class="cl"><span class="c1">// Organizationally, this must come after the `:hover` states.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">@each</span> <span class="nv">$state</span> <span class="ow">in</span> <span class="nf">map-keys</span><span class="p">(</span><span class="nv">$theme-colors</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="nc">.list-group-item-</span><span class="si">#{</span><span class="nv">$state</span><span class="si">}</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="na">--#{$prefix}list-group-color</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}#{</span><span class="nv">$state</span><span class="si">}</span><span class="o">-</span><span class="ni">text</span><span class="o">-</span><span class="n">emphasis</span><span class="p">);</span>
@@ -446,7 +449,7 @@
       </div>
     </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// We deliberately hardcode the `bs-` prefix because we check
 </span></span></span><span class="line"><span class="cl"><span class="c1">// this custom property in JS to determine Popper&#39;s positioning
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">@each</span> <span class="nv">$breakpoint</span> <span class="ow">in</span> <span class="nf">map-keys</span><span class="p">(</span><span class="nv">$grid-breakpoints</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="k">@include</span><span class="nd"> media-breakpoint-up</span><span class="p">(</span><span class="nv">$breakpoint</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="nv">$infix</span><span class="o">:</span> <span class="nf">breakpoint-infix</span><span class="p">(</span><span class="nv">$breakpoint</span><span class="o">,</span> <span class="nv">$grid-breakpoints</span><span class="p">);</span>
@@ -500,10 +503,10 @@
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;callout&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span></code></pre></div><p>In your CSS, you&rsquo;d have something like the following where the bulk of the styling is done via <code>.callout</code>. Then, the unique styles between each variant is controlled via modifier class.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// Base class
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nc">.callout</span> <span class="p">{}</span>
+</span></span></span><span class="line"><span class="cl"><span class="nc">.callout</span> <span class="p">{}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// Modifier classes
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nc">.callout-info</span> <span class="p">{}</span>
+</span></span></span><span class="line"><span class="cl"><span class="nc">.callout-info</span> <span class="p">{}</span>
 </span></span><span class="line"><span class="cl"><span class="nc">.callout-warning</span> <span class="p">{}</span>
 </span></span><span class="line"><span class="cl"><span class="nc">.callout-danger</span> <span class="p">{}</span>
 </span></span></code></pre></div><p>For the callouts, that unique styling is just a <code>border-left-color</code>. When you combine that base class with one of those modifier classes, you get your complete component family:</p>

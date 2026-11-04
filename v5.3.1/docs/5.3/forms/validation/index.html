@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Provide valuable, actionable feedback to your users with HTML5 form validation, via browser default behaviors or custom styles and JavaScript.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Hugo 0.115.4">
+<meta name="generator" content="Hugo 0.169.0">
 
 <title>Validation · Bootstrap v5.3</title>
 
@@ -16,6 +16,9 @@
 <link href="/BOOTSTRA.386/v5.3.1/docs/5.3/dist/css/bootstrap.css" rel="stylesheet">
 
 <link href="/BOOTSTRA.386/v5.3.1/docs/5.3/assets/css/docs.css" rel="stylesheet">
+
+<style>body { visibility: hidden; }</style>
+<noscript><style>body { visibility: visible; }</style></noscript>
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/BOOTSTRA.386/v5.3.1/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -525,14 +528,14 @@ We are aware that currently the client-side custom validation styles and tooltip
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
 <div class="bd-example-snippet bd-code-snippet"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// Example starter JavaScript for disabling form submissions if there are invalid fields
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl"><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="s1">&#39;use strict&#39;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="c1">// Fetch all the forms we want to apply custom Bootstrap validation styles to
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kr">const</span> <span class="nx">forms</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;.needs-validation&#39;</span><span class="p">)</span>
+</span></span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">forms</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;.needs-validation&#39;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="c1">// Loop over them and prevent submission
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nb">Array</span><span class="p">.</span><span class="nx">from</span><span class="p">(</span><span class="nx">forms</span><span class="p">).</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">form</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl">  <span class="nb">Array</span><span class="p">.</span><span class="nx">from</span><span class="p">(</span><span class="nx">forms</span><span class="p">).</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">form</span> <span class="p">=&gt;</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">form</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;submit&#39;</span><span class="p">,</span> <span class="nx">event</span> <span class="p">=&gt;</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">form</span><span class="p">.</span><span class="nx">checkValidity</span><span class="p">())</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">()</span>
@@ -1073,7 +1076,7 @@ We are aware that currently the client-side custom validation styles and tooltip
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// A valid or invalid field shows it by the color of its text, and by the
 </span></span></span><span class="line"><span class="cl"><span class="c1">// feedback line under it.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@mixin</span><span class="nf"> form-validation-state</span><span class="p">(</span>
+</span></span></span><span class="line"><span class="cl"><span class="k">@mixin</span><span class="nf"> form-validation-state</span><span class="p">(</span>
 </span></span><span class="line"><span class="cl">  <span class="nv">$state</span><span class="o">,</span>
 </span></span><span class="line"><span class="cl">  <span class="nv">$color</span><span class="o">,</span>
 </span></span><span class="line"><span class="cl">  <span class="nv">$icon</span><span class="o">,</span>
@@ -1097,7 +1100,7 @@ We are aware that currently the client-side custom validation styles and tooltip
 </span></span><span class="line"><span class="cl">    <span class="na">z-index</span><span class="o">:</span> <span class="mi">5</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="na">display</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="na">max-width</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span> <span class="c1">// Contain to parent when possible
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="na">padding</span><span class="o">:</span> <span class="mi">0</span> <span class="nv">$space-width</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl">    <span class="na">padding</span><span class="o">:</span> <span class="mi">0</span> <span class="nv">$space-width</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="na">margin-top</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="k">@include</span><span class="nd"> font-size</span><span class="p">(</span><span class="nv">$form-feedback-tooltip-font-size</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="na">line-height</span><span class="o">:</span> <span class="nv">$form-feedback-tooltip-line-height</span><span class="p">;</span>
