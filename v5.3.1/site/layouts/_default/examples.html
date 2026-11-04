@@ -109,6 +109,7 @@
       <script src="/docs/{{ .Site.Params.docs_version }}/dist/js/bootstrap.bundle.js"></script>
       <script src="/docs/{{ .Site.Params.docs_version }}/dist/js/bootstrap-386.js"></script>
     {{- end }}
+    <script>_386.magicCursor()</script>
 
     {{ range .Page.Params.extra_js -}}
       <script{{ with .async }} async{{ end }} src="{{ .src }}"{{ with .integrity }} {{ printf "integrity=%q" . | safeHTMLAttr }} crossorigin="anonymous"{{ end }}></script>
