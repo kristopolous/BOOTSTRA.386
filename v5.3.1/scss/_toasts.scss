@@ -1,3 +1,5 @@
+// A toast is a little dialog: gray panel, magenta title bar, drop shadow.
+
 .toast {
   // scss-docs-start toast-css-vars
   --#{$prefix}toast-zindex: #{$zindex-toast};
@@ -8,13 +10,13 @@
   @include rfs($toast-font-size, --#{$prefix}toast-font-size);
   --#{$prefix}toast-color: #{$toast-color};
   --#{$prefix}toast-bg: #{$toast-background-color};
-  --#{$prefix}toast-border-width: #{$toast-border-width};
-  --#{$prefix}toast-border-color: #{$toast-border-color};
-  --#{$prefix}toast-border-radius: #{$toast-border-radius};
-  --#{$prefix}toast-box-shadow: #{$toast-box-shadow};
+  --#{$prefix}toast-border-width: 0;
+  --#{$prefix}toast-border-color: transparent;
+  --#{$prefix}toast-border-radius: 0;
+  --#{$prefix}toast-box-shadow: none;
   --#{$prefix}toast-header-color: #{$toast-header-color};
   --#{$prefix}toast-header-bg: #{$toast-header-background-color};
-  --#{$prefix}toast-header-border-color: #{$toast-header-border-color};
+  --#{$prefix}toast-header-border-color: transparent;
   // scss-docs-end toast-css-vars
 
   width: var(--#{$prefix}toast-max-width);
@@ -24,9 +26,9 @@
   pointer-events: auto;
   background-color: var(--#{$prefix}toast-bg);
   background-clip: padding-box;
-  border: var(--#{$prefix}toast-border-width) solid var(--#{$prefix}toast-border-color);
-  box-shadow: var(--#{$prefix}toast-box-shadow);
-  @include border-radius(var(--#{$prefix}toast-border-radius));
+  border: 0;
+  @include dos-shadow();
+  @include plain-headers();
 
   &.showing {
     opacity: 0;
@@ -34,6 +36,15 @@
 
   &:not(.show) {
     display: none;
+  }
+
+  a:not(.btn) {
+    color: $blue;
+
+    &:hover,
+    &:focus {
+      color: $white;
+    }
   }
 }
 
@@ -58,16 +69,25 @@
   color: var(--#{$prefix}toast-header-color);
   background-color: var(--#{$prefix}toast-header-bg);
   background-clip: padding-box;
-  border-bottom: var(--#{$prefix}toast-border-width) solid var(--#{$prefix}toast-header-border-color);
-  @include border-top-radius(calc(var(--#{$prefix}toast-border-radius) - var(--#{$prefix}toast-border-width)));
+  border-bottom: 0;
 
   .btn-close {
-    margin-right: calc(-.5 * var(--#{$prefix}toast-padding-x)); // stylelint-disable-line function-disallowed-list
+    margin-right: 0;
     margin-left: var(--#{$prefix}toast-padding-x);
+  }
+
+  img,
+  svg {
+    display: none;
+  }
+
+  .text-body-secondary,
+  .text-muted {
+    color: var(--#{$prefix}toast-header-color) !important; // stylelint-disable-line declaration-no-important
   }
 }
 
 .toast-body {
-  padding: var(--#{$prefix}toast-padding-x);
+  padding: $line-height var(--#{$prefix}toast-padding-x);
   word-wrap: break-word;
 }

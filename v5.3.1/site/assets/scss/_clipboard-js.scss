@@ -1,10 +1,10 @@
 // clipboard.js
 //
-// JS-based `Copy` buttons for code snippets.
+// `Copy` sits in the top row of the code block, at its right end.
 
-.bd-clipboard,
-.bd-edit {
+.bd-clipboard {
   position: relative;
+  z-index: 1;
   display: none;
   float: right;
 
@@ -17,28 +17,21 @@
   }
 }
 
-.btn-clipboard,
-.btn-edit {
-  display: block;
-  padding: .5em;
-  line-height: 1;
-  color: var(--bs-body-color);
-  background-color: var(--bd-pre-bg);
-  border: 0;
-  @include border-radius(.25rem);
-
-  &:hover {
-    color: var(--bs-link-hover-color);
-  }
-
-  &:focus {
-    z-index: 3;
-  }
-}
-
 .btn-clipboard {
-  position: relative;
-  z-index: 2;
-  margin-top: 1.25rem;
-  margin-right: .75rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  padding: 0 $space-width;
+  margin: 0;
+  line-height: $line-height;
+  color: $black;
+  background-color: $grayLight;
+  border: 0;
+
+  &:hover,
+  &:focus {
+    color: $white;
+    background-color: $black;
+  }
 }

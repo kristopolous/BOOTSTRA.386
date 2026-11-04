@@ -1,4 +1,8 @@
 // Utilities
+//
+// BOOTSTRA/386 edition. This file is generated from scss-ref/_utilities.scss
+// by build/setutils.py. Edit the overrides in that script, not this file.
+//
 
 $utilities: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -77,9 +81,9 @@ $utilities: map-merge(
       property: box-shadow,
       class: shadow,
       values: (
-        null: $box-shadow,
-        sm: $box-shadow-sm,
-        lg: $box-shadow-lg,
+        null: none,
+        sm: none,
+        lg: none,
         none: none,
       )
     ),
@@ -129,14 +133,14 @@ $utilities: map-merge(
     "border": (
       property: border,
       values: (
-        null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+        null: 0,
         0: 0,
       )
     ),
     "border-top": (
       property: border-top,
       values: (
-        null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+        null: 0,
         0: 0,
       )
     ),
@@ -144,14 +148,14 @@ $utilities: map-merge(
       property: border-right,
       class: border-end,
       values: (
-        null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+        null: 0,
         0: 0,
       )
     ),
     "border-bottom": (
       property: border-bottom,
       values: (
-        null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+        null: 0,
         0: 0,
       )
     ),
@@ -159,7 +163,7 @@ $utilities: map-merge(
       property: border-left,
       class: border-start,
       values: (
-        null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+        null: 0,
         0: 0,
       )
     ),
@@ -179,7 +183,13 @@ $utilities: map-merge(
     "border-width": (
       property: border-width,
       class: border,
-      values: $border-widths
+      values: (
+        1: 0,
+        2: 0,
+        3: 0,
+        4: 0,
+        5: 0,
+      )
     ),
     "border-opacity": (
       css-var: true,
@@ -359,37 +369,37 @@ $utilities: map-merge(
       responsive: true,
       property: margin-right margin-left,
       class: mx,
-      values: map-merge($spacers, (auto: auto))
+      values: map-merge($spacers-x, (auto: auto))
     ),
     "margin-y": (
       responsive: true,
       property: margin-top margin-bottom,
       class: my,
-      values: map-merge($spacers, (auto: auto))
+      values: map-merge($spacers-y, (auto: auto))
     ),
     "margin-top": (
       responsive: true,
       property: margin-top,
       class: mt,
-      values: map-merge($spacers, (auto: auto))
+      values: map-merge($spacers-y, (auto: auto))
     ),
     "margin-end": (
       responsive: true,
       property: margin-right,
       class: me,
-      values: map-merge($spacers, (auto: auto))
+      values: map-merge($spacers-x, (auto: auto))
     ),
     "margin-bottom": (
       responsive: true,
       property: margin-bottom,
       class: mb,
-      values: map-merge($spacers, (auto: auto))
+      values: map-merge($spacers-y, (auto: auto))
     ),
     "margin-start": (
       responsive: true,
       property: margin-left,
       class: ms,
-      values: map-merge($spacers, (auto: auto))
+      values: map-merge($spacers-x, (auto: auto))
     ),
     // Negative margin utilities
     "negative-margin": (
@@ -445,37 +455,37 @@ $utilities: map-merge(
       responsive: true,
       property: padding-right padding-left,
       class: px,
-      values: $spacers
+      values: $spacers-x
     ),
     "padding-y": (
       responsive: true,
       property: padding-top padding-bottom,
       class: py,
-      values: $spacers
+      values: $spacers-y
     ),
     "padding-top": (
       responsive: true,
       property: padding-top,
       class: pt,
-      values: $spacers
+      values: $spacers-y
     ),
     "padding-end": (
       responsive: true,
       property: padding-right,
       class: pe,
-      values: $spacers
+      values: $spacers-x
     ),
     "padding-bottom": (
       responsive: true,
       property: padding-bottom,
       class: pb,
-      values: $spacers
+      values: $spacers-y
     ),
     "padding-start": (
       responsive: true,
       property: padding-left,
       class: ps,
-      values: $spacers
+      values: $spacers-x
     ),
     // Gap utility
     "gap": (
@@ -488,13 +498,13 @@ $utilities: map-merge(
       responsive: true,
       property: row-gap,
       class: row-gap,
-      values: $spacers
+      values: $spacers-y
     ),
     "column-gap": (
       responsive: true,
       property: column-gap,
       class: column-gap,
-      values: $spacers
+      values: $spacers-x
     ),
     // scss-docs-end utils-spacing
     // Text
@@ -513,7 +523,7 @@ $utilities: map-merge(
     "font-style": (
       property: font-style,
       class: fst,
-      values: italic normal
+      values: normal normal
     ),
     "font-weight": (
       property: font-weight,
@@ -532,7 +542,7 @@ $utilities: map-merge(
       property: line-height,
       class: lh,
       values: (
-        1: 1,
+        1: $line-height-base,
         sm: $line-height-sm,
         base: $line-height-base,
         lg: $line-height-lg,
@@ -712,75 +722,75 @@ $utilities: map-merge(
       property: border-radius,
       class: rounded,
       values: (
-        null: var(--#{$prefix}border-radius),
+        null: 0,
         0: 0,
-        1: var(--#{$prefix}border-radius-sm),
-        2: var(--#{$prefix}border-radius),
-        3: var(--#{$prefix}border-radius-lg),
-        4: var(--#{$prefix}border-radius-xl),
-        5: var(--#{$prefix}border-radius-xxl),
-        circle: 50%,
-        pill: var(--#{$prefix}border-radius-pill)
+        1: 0,
+        2: 0,
+        3: 0,
+        4: 0,
+        5: 0,
+        circle: 0,
+        pill: 0,
       )
     ),
     "rounded-top": (
       property: border-top-left-radius border-top-right-radius,
       class: rounded-top,
       values: (
-        null: var(--#{$prefix}border-radius),
+        null: 0,
         0: 0,
-        1: var(--#{$prefix}border-radius-sm),
-        2: var(--#{$prefix}border-radius),
-        3: var(--#{$prefix}border-radius-lg),
-        4: var(--#{$prefix}border-radius-xl),
-        5: var(--#{$prefix}border-radius-xxl),
-        circle: 50%,
-        pill: var(--#{$prefix}border-radius-pill)
+        1: 0,
+        2: 0,
+        3: 0,
+        4: 0,
+        5: 0,
+        circle: 0,
+        pill: 0,
       )
     ),
     "rounded-end": (
       property: border-top-right-radius border-bottom-right-radius,
       class: rounded-end,
       values: (
-        null: var(--#{$prefix}border-radius),
+        null: 0,
         0: 0,
-        1: var(--#{$prefix}border-radius-sm),
-        2: var(--#{$prefix}border-radius),
-        3: var(--#{$prefix}border-radius-lg),
-        4: var(--#{$prefix}border-radius-xl),
-        5: var(--#{$prefix}border-radius-xxl),
-        circle: 50%,
-        pill: var(--#{$prefix}border-radius-pill)
+        1: 0,
+        2: 0,
+        3: 0,
+        4: 0,
+        5: 0,
+        circle: 0,
+        pill: 0,
       )
     ),
     "rounded-bottom": (
       property: border-bottom-right-radius border-bottom-left-radius,
       class: rounded-bottom,
       values: (
-        null: var(--#{$prefix}border-radius),
+        null: 0,
         0: 0,
-        1: var(--#{$prefix}border-radius-sm),
-        2: var(--#{$prefix}border-radius),
-        3: var(--#{$prefix}border-radius-lg),
-        4: var(--#{$prefix}border-radius-xl),
-        5: var(--#{$prefix}border-radius-xxl),
-        circle: 50%,
-        pill: var(--#{$prefix}border-radius-pill)
+        1: 0,
+        2: 0,
+        3: 0,
+        4: 0,
+        5: 0,
+        circle: 0,
+        pill: 0,
       )
     ),
     "rounded-start": (
       property: border-bottom-left-radius border-top-left-radius,
       class: rounded-start,
       values: (
-        null: var(--#{$prefix}border-radius),
+        null: 0,
         0: 0,
-        1: var(--#{$prefix}border-radius-sm),
-        2: var(--#{$prefix}border-radius),
-        3: var(--#{$prefix}border-radius-lg),
-        4: var(--#{$prefix}border-radius-xl),
-        5: var(--#{$prefix}border-radius-xxl),
-        circle: 50%,
-        pill: var(--#{$prefix}border-radius-pill)
+        1: 0,
+        2: 0,
+        3: 0,
+        4: 0,
+        5: 0,
+        circle: 0,
+        pill: 0,
       )
     ),
     // scss-docs-end utils-border-radius

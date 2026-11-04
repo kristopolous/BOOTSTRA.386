@@ -1,11 +1,20 @@
 //
 // Form text
 //
+// Help text is black on the blue screen and dark gray on the black one.
 
 .form-text {
+  --#{$prefix}form-text-color: #{$form-text-color};
+
   margin-top: $form-text-margin-top;
   @include font-size($form-text-font-size);
   font-style: $form-text-font-style;
   font-weight: $form-text-font-weight;
-  color: $form-text-color;
+  color: var(--#{$prefix}form-text-color);
+}
+
+@include color-mode(dark) {
+  .form-text {
+    --#{$prefix}form-text-color: #{$form-text-color-dark};
+  }
 }

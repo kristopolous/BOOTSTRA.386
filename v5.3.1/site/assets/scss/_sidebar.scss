@@ -1,64 +1,75 @@
+// The docs navigation: a gray box with a black frame and a drop shadow,
+// like the menu of a text mode program.
+
 .bd-sidebar {
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-up(md) {
     position: sticky;
-    top: 5rem;
-    // Override collapse behaviors
-    // stylelint-disable-next-line declaration-no-important
-    display: block !important;
-    height: subtract(100vh, 6rem);
-    // Prevent focus styles to be cut off:
-    padding-left: .25rem;
-    margin-left: -.25rem;
+    top: $line-height * 2;
+    max-height: subtract(100vh, $line-height * 2);
     overflow-y: auto;
   }
+}
 
-  @include media-breakpoint-down(lg) {
-    .offcanvas-lg {
-      border-right-color: var(--bs-border-color);
-      box-shadow: $box-shadow-lg;
-    }
-  }
+.bd-links {
+  @include dos-border-single($black, $character-space: 1);
+  @include dos-border-background($grayLight);
+  @include dos-shadow();
+  margin-right: $space-width + $dos-border-margin-x;
+  margin-bottom: $line-height;
+  color: $black;
+  background-color: $grayLight;
+}
+
+.bd-links-group + .bd-links-group {
+  margin-top: 0;
 }
 
 .bd-links-heading {
-  color: var(--bs-emphasis-color);
-}
+  display: block;
+  color: $black;
+  text-decoration: none;
 
-.bd-links-nav {
-  @include media-breakpoint-down(lg) {
-    font-size: .875rem;
-  }
-
-  @include media-breakpoint-between(xs, lg) {
-    column-count: 2;
-    column-gap: 1.5rem;
-
-    .bd-links-group {
-      break-inside: avoid;
-    }
-
-    .bd-links-span-all {
-      column-span: all;
-    }
-  }
-}
-
-.bd-links-link {
-  padding: .1875rem .5rem;
-  margin-top: .125rem;
-  margin-left: 1.125rem;
-  color: var(--bs-body-color);
-  text-decoration: if($link-decoration == none, null, none);
+  @include dos-hotkey($red);
 
   &:hover,
   &:focus,
   &.active {
-    color: var(--bs-emphasis-color);
-    text-decoration: if($link-hover-decoration == underline, none, null);
-    background-color: var(--bd-sidebar-link-bg);
+    color: $white;
+    background-color: $black;
+
+    &::first-letter {
+      color: $redBright;
+    }
   }
 
   &.active {
-    font-weight: 600;
+    background-color: $cyan;
+  }
+}
+
+.bd-sidenav {
+  display: none;
+  margin-bottom: 0;
+
+  .bd-links-group.active > & {
+    display: block;
+  }
+}
+
+.bd-links-link {
+  display: block;
+  padding-left: $space-width * 2;
+  color: $black;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $white;
+    background-color: $black;
+  }
+
+  &.active {
+    color: $white;
+    background-color: $cyan;
   }
 }

@@ -1,87 +1,118 @@
-let _386 = window._386 = window._386 || { options: {} }
-
-const height = 16
-var character = { height: height, width: 8 },
-    keyspace = 'hgdlaoybSru6x2vHsFvhoQ386'
-
-_386.magicCursor = function() {
-  if(!document.querySelector('.bootstra-cursor')) {
-    let b = document.body
-    const d = b.appendChild(document.createElement('div'))
-    const h = height - 2
-
-    b.classList.add('bootstra-enable-cursor')
-    d.className = 'bootstra-cursor'
-
-    b.onmousemove = function(e) {
-      d.style.left = Math.floor( e.pageX / character.width) * character.width + 'px'
-      d.style.top = Math.floor(e.pageY  / h) * h + 'px'
-    }
-  }
-}
-
-_386.scrollLock = function () {
-  function ev(e) {
-    document.body.style.paddingTop = _386.scrollLock.paddingStart + -(e.pageY % height) + "px";
-  }
-
-  if(_386.scrollLock.listener) {
-    window.removeEventListener(_386.scrollLock.listener)
-    _386.scrollLock.listener = false
-  } else {
-    if(!('paddingStart' in _386.scrollLock)) {
-      _386.scrollLock.paddingStart = parseInt(document.body.style.paddingTop, 10) || 0
-    }
-    window.addEventListener('scroll', ev, true)
-    _386.scrollLock.listener = ev
-  }
-}
-
-_386.centerNudger = function() {
-  // this is likely inefficient - oh well.
-  Array.from(document.querySelectorAll('*')).map(
-    l => [Window.getComputedStyle(l), l]
-  ).filter(row =>
-    row[0].textAlign == 'center' &&
-    row[0].display !== 'inline' &&
-    !row[1].dataset[keyspace + 'nudge'] &&
-    row[1].textContent.replace(/\s+/, ' ').length % 2 == 1
-  ).forEach(row => {
-    row.marginLeft = (parseInt(row[1].marginLeft) || 0) + character.width + 'px'
-    // make sure we don't do this again.
-    row[1].dataset[keyspace + 'nudge'] = 1
-  });
-}
-
-
-$(function () {
+/*!
+ * BOOTSTRA/386 v5.3.1 (https://kristopolous.github.io/BOOTSTRA.386/)
+ * The loading animation, the block cursor and a couple of helpers.
+ *
+ * Settings go in a global `_386` object declared before this script:
+ *
+ *   _386 = { fastLoad: false, onePass: false, speedFactor: 1.0 }
+ *
+ *   fastLoad     skip the animation entirely
+ *   onePass      skip the second, cursor only, pass
+ *   speedFactor  higher is faster
+ *
+ * For the full screen paint-in the page has to start out hidden:
+ *
+ *   <style>body { visibility: hidden }</style>
+ *
+ * Without that only the cursor fly-by runs.
+ */
+(function () {
   'use strict'
 
-  function loading () {
+  var _386 = window._386 = window._386 || {}
+  _386.options = _386.options || {}
 
-    if (window._386.fastLoad) {
-      document.body.style.visibility = 'visible'
+  // One character cell. See $space-width and $line-height in the scss.
+  var CELL = { width: 8, height: 14 }
+  var keyspace = 'hgdlaoybSru6x2vHsFvhoQ386'
+
+  // Replace the mouse pointer with a block cursor that snaps to the grid.
+  _386.magicCursor = function () {
+    if (document.querySelector('.bootstra-cursor')) {
       return
     }
 
-    var
-      onePass = window._386.onePass,
-      speedFactor = 1 / (window._386.speedFactor || 1) * 165000,
-      wrap = document.createElement('div'),
-      bar = wrap.appendChild(document.createElement('div')),
+    var body = document.body
+    var cursor = body.appendChild(document.createElement('div'))
 
-      cursor = document.createElement('div'),
-      // If the user specified that the visibility is hidden, then we
-      // start at the first pass ... otherwise we just do the
-      // cursor fly-by
-      pass = ($(document.body).css('visibility') == 'visible') ? 1 : 0,
-      height = $(window).height(),
-      width = $(window).width(),
+    body.classList.add('bootstra-enable-cursor')
+    cursor.className = 'bootstra-cursor'
 
-      // this makes the loading of the screen proportional to the real-estate of the window.
-      // it helps keep the cool sequence there while not making it waste too much time.
-      rounds = (height * width / speedFactor),
-      column = width, row = height - character.height
+    body.addEventListener('mousemove', function (e) {
+      cursor.style.left = Math.floor(e.pageX / CELL.width) * CELL.width + 'px'
+      cursor.style.top = Math.floor(e.pageY / CELL.height) * CELL.height + 'px'
+    })
+  }
+
+  // Keep the page scrolled in whole rows so text never sits between two
+  // of them. Call it again to turn it off.
+  _386.scrollLock = function () {
+    var lock = _386.scrollLock
+
+    function onScroll() {
+      document.body.style.paddingTop = lock.paddingStart + -(window.scrollY % CELL.height) + 'px'
+    }
+
+    if (lock.listener) {
+      window.removeEventListener('scroll', lock.listener, true)
+      lock.listener = false
+      document.body.style.paddingTop = lock.paddingStart + 'px'
+    } else {
+      if (!('paddingStart' in lock)) {
+        lock.paddingStart = parseInt(document.body.style.paddingTop, 10) || 0
+      }
+      window.addEventListener('scroll', onScroll, true)
+      lock.listener = onScroll
+    }
+  }
+
+  // Centered text with an odd number of characters lands half a cell off
+  // the grid. Nudge it over by one.
+  _386.centerNudger = function () {
+    Array.prototype.slice.call(document.querySelectorAll('*')).map(function (el) {
+      return [window.getComputedStyle(el), el]
+    }).filter(function (row) {
+      return row[0].textAlign === 'center' &&
+        row[0].display !== 'inline' &&
+        !row[1].dataset[keyspace + 'nudge'] &&
+        row[1].textContent.replace(/\s+/g, ' ').trim().length % 2 === 1
+    }).forEach(function (row) {
+      var el = row[1]
+      el.style.marginLeft = (parseInt(row[0].marginLeft, 10) || 0) + CELL.width + 'px'
+      // make sure we don't do this again.
+      el.dataset[keyspace + 'nudge'] = 1
+    })
+  }
+
+  // The loading animation: paint the page in from the bottom right the
+  // way a slow video card would, then fly a cursor over it.
+  function loading() {
+    var body = document.body
+    var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
+    if (_386.fastLoad || reduced) {
+      body.style.visibility = 'visible'
+      return
+    }
+
+    var onePass = _386.onePass
+    var speedFactor = 1 / (_386.speedFactor || 1) * 165000
+    var wrap = document.createElement('div')
+    var bar = wrap.appendChild(document.createElement('div'))
+    var cursor = document.createElement('div')
+    var character = { height: CELL.height, width: CELL.width }
+
+    // If the page started out hidden we do the full paint-in, otherwise
+    // just the cursor fly-by.
+    var pass = window.getComputedStyle(body).visibility === 'visible' ? 1 : 0
+    var height = window.innerHeight
+    var width = window.innerWidth
+
+    // this makes the loading of the screen proportional to the real-estate of the window.
+    // it helps keep the cool sequence there while not making it waste too much time.
+    var rounds = height * width / speedFactor
+    var column = width
+    var row = height - character.height
 
     wrap.id = 'wrap386'
     bar.id = 'bar386'
@@ -91,10 +122,10 @@ $(function () {
 
     // only inject the wrap if the pass is 0
     if (pass === 0) {
-      document.body.appendChild(wrap)
-      document.body.style.visibility = 'visible'
+      body.appendChild(wrap)
+      body.style.visibility = 'visible'
     } else {
-      document.body.appendChild(cursor)
+      body.appendChild(cursor)
       rounds /= 2
       character.height *= 4
     }
@@ -104,22 +135,27 @@ $(function () {
         column -= character.width
 
         if (column <= 0) {
-          column = width;
+          column = width
           row -= character.height
         }
+
         if (row <= 0) {
           pass++
           row = height - character.height
 
-          if (pass == 2) {
-            document.body.removeChild(cursor)
+          if (pass === 2) {
+            if (cursor.parentNode) {
+              body.removeChild(cursor)
+            }
             clearInterval(ival)
           } else {
-            wrap.parentNode.removeChild(wrap)
+            if (wrap.parentNode) {
+              wrap.parentNode.removeChild(wrap)
+            }
             if (onePass) {
               clearInterval(ival)
             } else {
-              document.body.appendChild(cursor)
+              body.appendChild(cursor)
               rounds /= 2
               character.height *= 4
             }
@@ -136,7 +172,12 @@ $(function () {
       }
     }, 1)
   }
-  loading()
-});
 
-export default _386
+  _386.loading = loading
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loading)
+  } else {
+    loading()
+  }
+})()

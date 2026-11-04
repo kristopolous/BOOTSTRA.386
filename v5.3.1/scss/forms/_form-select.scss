@@ -1,10 +1,9 @@
 // Select
 //
-// Replaces the browser default select with a custom one, mostly pulled from
-// https://primer.github.io/.
+// A gray block with a ▼ at the right hand end.
 
 .form-select {
-  --#{$prefix}form-select-bg-img: #{escape-svg($form-select-indicator)};
+  --#{$prefix}form-select-bg-img: #{$form-select-indicator};
 
   display: block;
   width: 100%;
@@ -20,32 +19,49 @@
   background-repeat: no-repeat;
   background-position: $form-select-bg-position;
   background-size: $form-select-bg-size;
-  border: $form-select-border-width solid $form-select-border-color;
-  @include border-radius($form-select-border-radius, 0);
-  @include box-shadow($form-select-box-shadow);
-  @include transition($form-select-transition);
+  border: 0;
+
+  // The native list is drawn by the browser; it is told the colors and
+  // kept out of the OS dark scheme so it stays on the palette.
+  color-scheme: light;
+
+  option,
+  optgroup {
+    color: $black;
+    background-color: $grayLight;
+  }
+
+  option:checked {
+    color: $white;
+    background-color: $black;
+  }
+
+  option:disabled {
+    color: $grayDark;
+  }
 
   &:focus {
-    border-color: $form-select-focus-border-color;
+    --#{$prefix}form-select-bg-img: #{dos-glyph("arrow-down", "white")};
     outline: 0;
-    @if $enable-shadows {
-      @include box-shadow($form-select-box-shadow, $form-select-focus-box-shadow);
-    } @else {
-      // Avoid using mixin so we can pass custom focus shadow properly
-      box-shadow: $form-select-focus-box-shadow;
-    }
   }
 
   &[multiple],
   &[size]:not([size="1"]) {
     padding-right: $form-select-padding-x;
     background-image: none;
+
+    option {
+      padding: 0 $space-width;
+      margin: 0;
+      line-height: $line-height;
+      min-height: $line-height;
+
+    }
   }
 
   &:disabled {
     color: $form-select-disabled-color;
     background-color: $form-select-disabled-bg;
-    border-color: $form-select-disabled-border-color;
   }
 
   // Remove outline from select box in FF
@@ -55,26 +71,31 @@
   }
 }
 
-.form-select-sm {
-  padding-top: $form-select-padding-y-sm;
-  padding-bottom: $form-select-padding-y-sm;
-  padding-left: $form-select-padding-x-sm;
-  @include font-size($form-select-font-size-sm);
-  @include border-radius($form-select-border-radius-sm);
-}
-
+.form-select-sm,
 .form-select-lg {
-  padding-top: $form-select-padding-y-lg;
-  padding-bottom: $form-select-padding-y-lg;
-  padding-left: $form-select-padding-x-lg;
-  @include font-size($form-select-font-size-lg);
-  @include border-radius($form-select-border-radius-lg);
+  padding-top: $form-select-padding-y;
+  padding-bottom: $form-select-padding-y;
+  padding-left: $form-select-padding-x;
+  @include font-size($form-select-font-size);
 }
 
-@if $enable-dark-mode {
-  @include color-mode(dark) {
-    .form-select {
-      --#{$prefix}form-select-bg-img: #{escape-svg($form-select-indicator-dark)};
+.card,
+.alert,
+.modal-content,
+.popover,
+.toast,
+.offcanvas,
+.accordion-item {
+  .form-select {
+    background-color: $white;
+
+    option,
+    optgroup {
+      background-color: $white;
+    }
+
+    option:checked {
+      background-color: $black;
     }
   }
 }

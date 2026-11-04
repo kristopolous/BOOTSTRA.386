@@ -1,6 +1,8 @@
 //
-// General form controls (plus a few specific high-level interventions)
+// General form controls (plus a few specific high-level interfaces)
 //
+// A text field is [text in brackets] on a gray block. A textarea is a
+// gray patch of the screen.
 
 .form-control {
   display: block;
@@ -13,17 +15,16 @@
   color: $input-color;
   appearance: none; // Fix appearance for date inputs in Safari
   background-color: $input-bg;
+  background-image: dos-glyph("left-brace", "black"), dos-glyph("right-brace", "black");
+  background-repeat: no-repeat;
+  background-position: left bottom, right bottom;
   background-clip: padding-box;
-  border: $input-border-width solid $input-border-color;
-
-  // Note: This has no effect on <select>s in some browsers, due to the limited stylability of `<select>`s in CSS.
-  @include border-radius($input-border-radius, 0);
-
-  @include box-shadow($input-box-shadow);
-  @include transition($input-transition);
+  border: 0;
+  height: $input-height; // browsers size a text input from the font's own metrics otherwise
 
   &[type="file"] {
     overflow: hidden; // prevent pseudo element button overlap
+    background-image: none;
 
     &:not(:disabled):not([readonly]) {
       cursor: pointer;
@@ -34,16 +35,13 @@
   &:focus {
     color: $input-focus-color;
     background-color: $input-focus-bg;
-    border-color: $input-focus-border-color;
+    background-image: dos-glyph("left-brace", "white"), dos-glyph("right-brace", "white");
     outline: 0;
-    @if $enable-shadows {
-      @include box-shadow($input-box-shadow, $input-focus-box-shadow);
-    } @else {
-      // Avoid using mixin so we can pass custom focus shadow properly
-      box-shadow: $input-focus-box-shadow;
-    }
   }
 
+  // Add some height to date inputs on iOS
+  // https://github.com/twbs/bootstrap/issues/23307
+  // TODO: we can remove this workaround once https://bugs.webkit.org/show_bug.cgi?id=198959 is resolved
   &::-webkit-date-and-time-value {
     // On Android Chrome, form-control's "width: 100%" makes the input width too small
     // Tested under Android 11 / Chrome 89, Android 12 / Chrome 100, Android 13 / Chrome 109
@@ -83,28 +81,25 @@
   // HTML5 says that controls under a fieldset > legend:first-child won't be
   // disabled if the fieldset is disabled. Due to implementation difficulty, we
   // don't honor that edge case; we style them as disabled anyway.
-  &:disabled {
+  &:disabled,
+  &[readonly] {
     color: $input-disabled-color;
     background-color: $input-disabled-bg;
-    border-color: $input-disabled-border-color;
+    background-image: dos-glyph("left-brace", "grayLight"), dos-glyph("right-brace", "grayLight");
     // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
     opacity: 1;
   }
 
   // File input buttons theming
   &::file-selector-button {
-    padding: $input-padding-y $input-padding-x;
-    margin: (-$input-padding-y) (-$input-padding-x);
-    margin-inline-end: $input-padding-x;
+    padding: 0 $space-width;
+    margin: 0;
+    margin-inline-end: $space-width;
     color: $form-file-button-color;
-    @include gradient-bg($form-file-button-bg);
+    background-color: $form-file-button-bg;
     pointer-events: none;
-    border-color: inherit;
-    border-style: solid;
-    border-width: 0;
-    border-inline-end-width: $input-border-width;
+    border: 0;
     border-radius: 0; // stylelint-disable-line property-disallowed-list
-    @include transition($btn-transition);
   }
 
   &:hover:not(:disabled):not([readonly])::file-selector-button {
@@ -120,72 +115,63 @@
 .form-control-plaintext {
   display: block;
   width: 100%;
-  padding: $input-padding-y 0;
+  padding: $input-padding-y $input-padding-x;
   margin-bottom: 0; // match inputs if this class comes on inputs with default margins
   line-height: $input-line-height;
   color: $input-plaintext-color;
   background-color: transparent;
-  border: solid transparent;
-  border-width: $input-border-width 0;
+  background-image: dos-glyph("left-brace", "grayLight"), dos-glyph("right-brace", "grayLight");
+  background-repeat: no-repeat;
+  background-position: left bottom, right bottom;
+  border: 0;
 
   &:focus {
     outline: 0;
-  }
-
-  &.form-control-sm,
-  &.form-control-lg {
-    padding-right: 0;
-    padding-left: 0;
   }
 }
 
 // Form control sizing
 //
-// Build on `.form-control` with modifier classes to decrease or increase the
-// height and font-size of form controls.
-//
-// Repeated in `_input_group.scss` to avoid Sass extend issues.
+// There is one size. The classes are kept so markup keeps working.
 
-.form-control-sm {
-  min-height: $input-height-sm;
-  padding: $input-padding-y-sm $input-padding-x-sm;
-  @include font-size($input-font-size-sm);
-  @include border-radius($input-border-radius-sm);
-
-  &::file-selector-button {
-    padding: $input-padding-y-sm $input-padding-x-sm;
-    margin: (-$input-padding-y-sm) (-$input-padding-x-sm);
-    margin-inline-end: $input-padding-x-sm;
-  }
-}
-
+.form-control-sm,
 .form-control-lg {
-  min-height: $input-height-lg;
-  padding: $input-padding-y-lg $input-padding-x-lg;
-  @include font-size($input-font-size-lg);
-  @include border-radius($input-border-radius-lg);
-
-  &::file-selector-button {
-    padding: $input-padding-y-lg $input-padding-x-lg;
-    margin: (-$input-padding-y-lg) (-$input-padding-x-lg);
-    margin-inline-end: $input-padding-x-lg;
-  }
+  min-height: $input-height;
+  padding: $input-padding-y $input-padding-x;
+  @include font-size($input-font-size);
 }
 
-// Make sure textareas don't shrink too much when resized
-// https://github.com/twbs/bootstrap/pull/29124
+// A textarea is a gray patch of the screen, like v2. Its height is a
+// whole number of rows.
 // stylelint-disable selector-no-qualifying-type
 textarea {
-  &.form-control {
-    min-height: $input-height;
-  }
-
-  &.form-control-sm {
-    min-height: $input-height-sm;
-  }
-
+  &.form-control,
+  &.form-control-sm,
   &.form-control-lg {
-    min-height: $input-height-lg;
+    height: auto;
+    min-height: $line-height * 3;
+    padding: 0 $space-width;
+    color: $black;
+    background-color: $grayLight;
+    background-image: none;
+
+    &::placeholder {
+      color: $grayDark;
+    }
+
+    // Focus changes nothing but the caret; a field never goes bright
+    &:focus {
+      color: $black;
+      background-color: $grayLight;
+      background-image: none;
+    }
+
+    &:disabled,
+    &[readonly] {
+      color: $grayLight;
+      background-color: $grayDark;
+      background-image: none;
+    }
   }
 }
 // stylelint-enable selector-no-qualifying-type
@@ -193,7 +179,8 @@ textarea {
 .form-control-color {
   width: $form-color-width;
   height: $input-height;
-  padding: $input-padding-y;
+  padding: 0;
+  background-image: none;
 
   &:not(:disabled):not([readonly]) {
     cursor: pointer;
@@ -201,14 +188,34 @@ textarea {
 
   &::-moz-color-swatch {
     border: 0 !important; // stylelint-disable-line declaration-no-important
-    @include border-radius($input-border-radius);
   }
 
   &::-webkit-color-swatch {
     border: 0 !important; // stylelint-disable-line declaration-no-important
-    @include border-radius($input-border-radius);
   }
 
-  &.form-control-sm { height: $input-height-sm; }
-  &.form-control-lg { height: $input-height-lg; }
+  &.form-control-sm { height: $input-height; }
+  &.form-control-lg { height: $input-height; }
+}
+
+// Text fields on a gray panel need dark brackets and a lighter field.
+.card,
+.alert,
+.modal-content,
+.popover,
+.toast,
+.offcanvas,
+.accordion-item {
+  .form-control:not(textarea) {
+    background-color: $white;
+
+    &:focus {
+      background-image: dos-glyph("left-brace", "grayDark"), dos-glyph("right-brace", "grayDark");
+    }
+  }
+
+  .form-control-plaintext {
+    color: $black;
+    background-image: dos-glyph("left-brace", "black"), dos-glyph("right-brace", "black");
+  }
 }

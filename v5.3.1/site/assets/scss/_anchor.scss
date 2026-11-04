@@ -1,10 +1,16 @@
+// The # link of a heading sits in the gutter to its left so it takes no
+// room inside the heading.
+
 .anchor-link {
-  padding: 0 .175rem;
+  position: absolute;
+  left: -$space-width * 2;
+  width: $space-width * 2;
+  padding: 0;
   font-weight: 400;
-  color: rgba($link-color, .5);
+  color: $grayDark;
+  text-align: left;
   text-decoration: none;
   opacity: 0;
-  @include transition(color .15s ease-in-out, opacity .15s ease-in-out);
 
   &::after {
     content: "#";
@@ -14,8 +20,16 @@
   &:hover,
   :hover > &,
   :target > & {
-    color: $link-color;
+    color: $yellow;
     text-decoration: none;
+    background-color: transparent;
     opacity: 1;
+  }
+}
+
+// Any heading that carries an anchor link positions it
+h1, h2, h3, h4, h5, h6 { // stylelint-disable-line selector-list-comma-newline-after
+  &:has(> .anchor-link) {
+    position: relative;
   }
 }

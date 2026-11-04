@@ -2,21 +2,25 @@
 //
 // Easily pump out default styles, as well as :hover, :focus, :active,
 // and disabled options for all buttons
+//
+// BOOTSTRA/386: a button is its color with readable text on it. Every
+// button highlights the same way, white on dark gray, like a menu item
+// under the cursor.
 
 // scss-docs-start btn-variant-mixin
 @mixin button-variant(
   $background,
   $border,
   $color: color-contrast($background),
-  $hover-background: if($color == $color-contrast-light, shade-color($background, $btn-hover-bg-shade-amount), tint-color($background, $btn-hover-bg-tint-amount)),
-  $hover-border: if($color == $color-contrast-light, shade-color($border, $btn-hover-border-shade-amount), tint-color($border, $btn-hover-border-tint-amount)),
-  $hover-color: color-contrast($hover-background),
-  $active-background: if($color == $color-contrast-light, shade-color($background, $btn-active-bg-shade-amount), tint-color($background, $btn-active-bg-tint-amount)),
-  $active-border: if($color == $color-contrast-light, shade-color($border, $btn-active-border-shade-amount), tint-color($border, $btn-active-border-tint-amount)),
-  $active-color: color-contrast($active-background),
+  $hover-background: if($background == $grayDark, $black, $grayDark),
+  $hover-border: transparent,
+  $hover-color: $white,
+  $active-background: $hover-background,
+  $active-border: transparent,
+  $active-color: $white,
   $disabled-background: $background,
-  $disabled-border: $border,
-  $disabled-color: color-contrast($disabled-background)
+  $disabled-border: transparent,
+  $disabled-color: if($background == $grayLight, $grayDark, $color)
 ) {
   --#{$prefix}btn-color: #{$color};
   --#{$prefix}btn-bg: #{$background};
@@ -24,17 +28,18 @@
   --#{$prefix}btn-hover-color: #{$hover-color};
   --#{$prefix}btn-hover-bg: #{$hover-background};
   --#{$prefix}btn-hover-border-color: #{$hover-border};
-  --#{$prefix}btn-focus-shadow-rgb: #{to-rgb(mix($color, $border, 15%))};
+  --#{$prefix}btn-focus-shadow-rgb: #{to-rgb($border)};
   --#{$prefix}btn-active-color: #{$active-color};
   --#{$prefix}btn-active-bg: #{$active-background};
   --#{$prefix}btn-active-border-color: #{$active-border};
-  --#{$prefix}btn-active-shadow: #{$btn-active-box-shadow};
+  --#{$prefix}btn-active-shadow: none;
   --#{$prefix}btn-disabled-color: #{$disabled-color};
   --#{$prefix}btn-disabled-bg: #{$disabled-background};
   --#{$prefix}btn-disabled-border-color: #{$disabled-border};
 }
 // scss-docs-end btn-variant-mixin
 
+// An outline button is the bright color on black. Hovering fills it in.
 // scss-docs-start btn-outline-variant-mixin
 @mixin button-outline-variant(
   $color,
@@ -43,19 +48,22 @@
   $active-border: $color,
   $active-color: color-contrast($active-background)
 ) {
-  --#{$prefix}btn-color: #{$color};
-  --#{$prefix}btn-border-color: #{$color};
+  $bg: if($color == $black, $grayLight, $black);
+
+  --#{$prefix}btn-color: #{dos-bright($color)};
+  --#{$prefix}btn-bg: #{$bg};
+  --#{$prefix}btn-border-color: transparent;
   --#{$prefix}btn-hover-color: #{$color-hover};
-  --#{$prefix}btn-hover-bg: #{$active-background};
-  --#{$prefix}btn-hover-border-color: #{$active-border};
+  --#{$prefix}btn-hover-bg: #{$color};
+  --#{$prefix}btn-hover-border-color: transparent;
   --#{$prefix}btn-focus-shadow-rgb: #{to-rgb($color)};
   --#{$prefix}btn-active-color: #{$active-color};
   --#{$prefix}btn-active-bg: #{$active-background};
-  --#{$prefix}btn-active-border-color: #{$active-border};
-  --#{$prefix}btn-active-shadow: #{$btn-active-box-shadow};
-  --#{$prefix}btn-disabled-color: #{$color};
-  --#{$prefix}btn-disabled-bg: transparent;
-  --#{$prefix}btn-disabled-border-color: #{$color};
+  --#{$prefix}btn-active-border-color: transparent;
+  --#{$prefix}btn-active-shadow: none;
+  --#{$prefix}btn-disabled-color: #{$grayDark};
+  --#{$prefix}btn-disabled-bg: #{$bg};
+  --#{$prefix}btn-disabled-border-color: transparent;
   --#{$prefix}gradient: none;
 }
 // scss-docs-end btn-outline-variant-mixin
@@ -65,6 +73,6 @@
   --#{$prefix}btn-padding-y: #{$padding-y};
   --#{$prefix}btn-padding-x: #{$padding-x};
   @include rfs($font-size, --#{$prefix}btn-font-size);
-  --#{$prefix}btn-border-radius: #{$border-radius};
+  --#{$prefix}btn-border-radius: 0;
 }
 // scss-docs-end btn-size-mixin

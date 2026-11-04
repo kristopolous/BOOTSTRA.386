@@ -1,6 +1,8 @@
 //
 // Basic Bootstrap table
 //
+// Rows are told apart by a white rule above each one, which makes a row
+// two text rows tall. `.table-bordered` boxes every cell in.
 
 .table {
   // Reset needed for nesting tables
@@ -35,7 +37,8 @@
     // Following the precept of cascades: https://codepen.io/miriamsuzanne/full/vYNgodb
     color: var(--#{$prefix}table-color-state, var(--#{$prefix}table-color-type, var(--#{$prefix}table-color)));
     background-color: var(--#{$prefix}table-bg);
-    border-bottom-width: $table-border-width;
+    border-top: $dos-border-width solid var(--#{$prefix}table-border-color);
+    border-bottom-width: 0;
     box-shadow: inset 0 0 0 9999px var(--#{$prefix}table-bg-state, var(--#{$prefix}table-bg-type, var(--#{$prefix}table-accent-bg)));
   }
 
@@ -46,10 +49,19 @@
   > thead {
     vertical-align: bottom;
   }
+
+  > thead th {
+    color: $white;
+  }
+
+  // The first row has nothing above it to be told apart from
+  > :first-child > :first-child > * {
+    border-top-color: transparent;
+  }
 }
 
 .table-group-divider {
-  border-top: calc(#{$table-border-width} * 2) solid $table-group-separator-color; // stylelint-disable-line function-disallowed-list
+  border-top: $dos-border-width solid $table-group-separator-color;
 }
 
 //
@@ -75,20 +87,18 @@
 
 // Border versions
 //
-// Add or remove borders all around the table and between all the columns.
-//
-// When borders are added on all sides of the cells, the corners can render odd when
-// these borders do not have the same color or if they are semi-transparent.
-// Therefor we add top and border bottoms to the `tr`s and left and right borders
-// to the `td`s or `th`s
+// Every cell in its own single line box.
 
 .table-bordered {
+  border-collapse: collapse;
+
   > :not(caption) > * {
-    border-width: $table-border-width 0;
+    border-width: 0;
 
     // stylelint-disable-next-line selector-max-universal
     > * {
-      border-width: 0 $table-border-width;
+      padding: $dos-border-margin-y ($dos-border-margin-x + $space-width);
+      border: $dos-border-width solid var(--#{$prefix}table-border-color);
     }
   }
 }
@@ -96,6 +106,7 @@
 .table-borderless {
   // stylelint-disable-next-line selector-max-universal
   > :not(caption) > * > * {
+    border-top-width: 0;
     border-bottom-width: 0;
   }
 
@@ -126,7 +137,7 @@
 
 // Active table
 //
-// The `.table-active` class can be added to highlight rows or cells
+// The `.table-active` class can be added to rows or cells to indicate the user's selection
 
 .table-active {
   --#{$prefix}table-color-state: var(--#{$prefix}table-active-color);
@@ -147,7 +158,7 @@
 
 // Table variants
 //
-// Table variants set the table cell backgrounds, border colors
+// Table variants set the table cell background, border colors
 // and the colors of the striped, hovered & active tables
 
 @each $color, $value in $table-variants {

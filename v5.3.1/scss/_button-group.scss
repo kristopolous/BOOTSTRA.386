@@ -1,3 +1,5 @@
+// stylelint-disable selector-no-qualifying-type
+
 // Make the div behave like a button
 .btn-group,
 .btn-group-vertical {
@@ -33,30 +35,11 @@
   }
 }
 
+// Buttons in a group touch, so their shadows run together into one bar
 .btn-group {
-  @include border-radius($btn-border-radius);
-
-  // Prevent double borders when buttons are next to each other
   > :not(.btn-check:first-child) + .btn,
   > .btn-group:not(:first-child) {
-    margin-left: calc(#{$btn-border-width} * -1); // stylelint-disable-line function-disallowed-list
-  }
-
-  // Reset rounded corners
-  > .btn:not(:last-child):not(.dropdown-toggle),
-  > .btn.dropdown-toggle-split:first-child,
-  > .btn-group:not(:last-child) > .btn {
-    @include border-end-radius(0);
-  }
-
-  // The left radius should be 0 if the button is:
-  // - the "third or more" child
-  // - the second child and the previous element isn't `.btn-check` (making it the first child visually)
-  // - part of a btn-group which isn't the first child
-  > .btn:nth-child(n + 3),
-  > :not(.btn-check) + .btn,
-  > .btn-group:not(:first-child) > .btn {
-    @include border-start-radius(0);
+    margin-left: 0;
   }
 }
 
@@ -73,8 +56,8 @@
 //
 
 .dropdown-toggle-split {
-  padding-right: $btn-padding-x * .75;
-  padding-left: $btn-padding-x * .75;
+  padding-right: 0;
+  padding-left: 0;
 
   &::after,
   .dropup &::after,
@@ -84,28 +67,6 @@
 
   .dropstart &::before {
     margin-right: 0;
-  }
-}
-
-.btn-sm + .dropdown-toggle-split {
-  padding-right: $btn-padding-x-sm * .75;
-  padding-left: $btn-padding-x-sm * .75;
-}
-
-.btn-lg + .dropdown-toggle-split {
-  padding-right: $btn-padding-x-lg * .75;
-  padding-left: $btn-padding-x-lg * .75;
-}
-
-
-// The clickable button for toggling the menu
-// Set the same inset shadow as the :active state
-.btn-group.show .dropdown-toggle {
-  @include box-shadow($btn-active-box-shadow);
-
-  // Show no shadow for `.btn-link` since it has no other button styles.
-  &.btn-link {
-    @include box-shadow(none);
   }
 }
 
@@ -126,17 +87,6 @@
 
   > .btn:not(:first-child),
   > .btn-group:not(:first-child) {
-    margin-top: calc(#{$btn-border-width} * -1); // stylelint-disable-line function-disallowed-list
-  }
-
-  // Reset rounded corners
-  > .btn:not(:last-child):not(.dropdown-toggle),
-  > .btn-group:not(:last-child) > .btn {
-    @include border-bottom-radius(0);
-  }
-
-  > .btn ~ .btn,
-  > .btn-group:not(:first-child) > .btn {
-    @include border-top-radius(0);
+    margin-top: 0;
   }
 }

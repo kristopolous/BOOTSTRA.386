@@ -1,75 +1,75 @@
 // Dark color mode variables
 //
-// Custom variables for the `[data-bs-theme="dark"]` theme. Use this as a starting point for your own custom color modes by creating a new theme-specific file like `_variables-dark.scss` and adding the variables you need.
-
-//
-// Global colors
-//
+// BOOTSTRA/386 has one palette, so `data-bs-theme="dark"` only swaps the
+// blue screen for a black one, the way a DOS prompt would look. The rest of
+// the variables exist so that code written against stock bootstrap keeps
+// compiling.
 
 // scss-docs-start sass-dark-mode-vars
 // scss-docs-start theme-text-dark-variables
-$primary-text-emphasis-dark:        tint-color($primary, 40%) !default;
-$secondary-text-emphasis-dark:      tint-color($secondary, 40%) !default;
-$success-text-emphasis-dark:        tint-color($success, 40%) !default;
-$info-text-emphasis-dark:           tint-color($info, 40%) !default;
-$warning-text-emphasis-dark:        tint-color($warning, 40%) !default;
-$danger-text-emphasis-dark:         tint-color($danger, 40%) !default;
-$light-text-emphasis-dark:          $gray-100 !default;
-$dark-text-emphasis-dark:           $gray-300 !default;
+$primary-text-emphasis-dark:        $primary-text-emphasis !default;
+$secondary-text-emphasis-dark:      $secondary-text-emphasis !default;
+$success-text-emphasis-dark:        $success-text-emphasis !default;
+$info-text-emphasis-dark:           $info-text-emphasis !default;
+$warning-text-emphasis-dark:        $warning-text-emphasis !default;
+$danger-text-emphasis-dark:         $danger-text-emphasis !default;
+$light-text-emphasis-dark:          $light-text-emphasis !default;
+$dark-text-emphasis-dark:           $dark-text-emphasis !default;
 // scss-docs-end theme-text-dark-variables
 
 // scss-docs-start theme-bg-subtle-dark-variables
-$primary-bg-subtle-dark:            shade-color($primary, 80%) !default;
-$secondary-bg-subtle-dark:          shade-color($secondary, 80%) !default;
-$success-bg-subtle-dark:            shade-color($success, 80%) !default;
-$info-bg-subtle-dark:               shade-color($info, 80%) !default;
-$warning-bg-subtle-dark:            shade-color($warning, 80%) !default;
-$danger-bg-subtle-dark:             shade-color($danger, 80%) !default;
-$light-bg-subtle-dark:              $gray-800 !default;
-$dark-bg-subtle-dark:               mix($gray-800, $black) !default;
+$primary-bg-subtle-dark:            $primary-bg-subtle !default;
+$secondary-bg-subtle-dark:          $secondary-bg-subtle !default;
+$success-bg-subtle-dark:            $success-bg-subtle !default;
+$info-bg-subtle-dark:               $info-bg-subtle !default;
+$warning-bg-subtle-dark:            $warning-bg-subtle !default;
+$danger-bg-subtle-dark:             $danger-bg-subtle !default;
+$light-bg-subtle-dark:              $light-bg-subtle !default;
+$dark-bg-subtle-dark:               $dark-bg-subtle !default;
 // scss-docs-end theme-bg-subtle-dark-variables
 
 // scss-docs-start theme-border-subtle-dark-variables
-$primary-border-subtle-dark:        shade-color($primary, 40%) !default;
-$secondary-border-subtle-dark:      shade-color($secondary, 40%) !default;
-$success-border-subtle-dark:        shade-color($success, 40%) !default;
-$info-border-subtle-dark:           shade-color($info, 40%) !default;
-$warning-border-subtle-dark:        shade-color($warning, 40%) !default;
-$danger-border-subtle-dark:         shade-color($danger, 40%) !default;
-$light-border-subtle-dark:          $gray-700 !default;
-$dark-border-subtle-dark:           $gray-800 !default;
+$primary-border-subtle-dark:        $primary-border-subtle !default;
+$secondary-border-subtle-dark:      $secondary-border-subtle !default;
+$success-border-subtle-dark:        $success-border-subtle !default;
+$info-border-subtle-dark:           $info-border-subtle !default;
+$warning-border-subtle-dark:        $warning-border-subtle !default;
+$danger-border-subtle-dark:         $danger-border-subtle !default;
+$light-border-subtle-dark:          $light-border-subtle !default;
+$dark-border-subtle-dark:           $dark-border-subtle !default;
 // scss-docs-end theme-border-subtle-dark-variables
 
-$body-color-dark:                   $gray-300 !default;
-$body-bg-dark:                      $gray-900 !default;
-$body-secondary-color-dark:         rgba($body-color-dark, .75) !default;
-$body-secondary-bg-dark:            $gray-800 !default;
-$body-tertiary-color-dark:          rgba($body-color-dark, .5) !default;
-$body-tertiary-bg-dark:             mix($gray-800, $gray-900, 50%) !default;
-$body-emphasis-color-dark:          $white !default;
-$border-color-dark:                 $gray-700 !default;
-$border-color-translucent-dark:     rgba($white, .15) !default;
-$headings-color-dark:               inherit !default;
-$link-color-dark:                   tint-color($primary, 40%) !default;
-$link-hover-color-dark:             $white !default;
-$code-color-dark:                   tint-color($code-color, 40%) !default;
+$body-color-dark:                   $body-color !default;
+$body-bg-dark:                      $black !default;
+$body-secondary-color-dark:         $grayDark !default;
+$form-text-color-dark:              $grayDark !default;
+$body-secondary-bg-dark:            $grayDark !default;
+$body-tertiary-color-dark:          $body-tertiary-color !default;
+$body-tertiary-bg-dark:             $grayDark !default;
+$body-emphasis-color-dark:          $body-emphasis-color !default;
+$border-color-dark:                 $border-color !default;
+$border-color-translucent-dark:     $border-color-translucent !default;
+$headings-color-dark:               $headings-color !default;
+$link-color-dark:                   $link-color !default;
+$link-hover-color-dark:             $link-hover-color !default;
+$code-color-dark:                   $code-color !default;
 
 
 //
 // Forms
 //
 
-$form-select-indicator-color-dark:  $body-color-dark !default;
-$form-select-indicator-dark:        url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='#{$form-select-indicator-color-dark}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/></svg>") !default;
+$form-select-indicator-color-dark:  $form-select-indicator-color !default;
+$form-select-indicator-dark:        $form-select-indicator !default;
 
-$form-switch-color-dark:            rgba($white, .25) !default;
-$form-switch-bg-image-dark:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$form-switch-color-dark}'/></svg>") !default;
+$form-switch-color-dark:            $form-switch-color !default;
+$form-switch-bg-image-dark:         $form-switch-bg-image !default;
 
 // scss-docs-start form-validation-colors-dark
-$form-valid-color-dark:             $green-300 !default;
-$form-valid-border-color-dark:      $green-300 !default;
-$form-invalid-color-dark:           $red-300 !default;
-$form-invalid-border-color-dark:    $red-300 !default;
+$form-valid-color-dark:             $form-valid-color !default;
+$form-valid-border-color-dark:      $form-valid-border-color !default;
+$form-invalid-color-dark:           $form-invalid-color !default;
+$form-invalid-border-color-dark:    $form-invalid-border-color !default;
 // scss-docs-end form-validation-colors-dark
 
 
@@ -77,9 +77,9 @@ $form-invalid-border-color-dark:    $red-300 !default;
 // Accordion
 //
 
-$accordion-icon-color-dark:         $primary-text-emphasis-dark !default;
-$accordion-icon-active-color-dark:  $primary-text-emphasis-dark !default;
+$accordion-icon-color-dark:         $accordion-icon-color !default;
+$accordion-icon-active-color-dark:  $accordion-icon-active-color !default;
 
-$accordion-button-icon-dark:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-color-dark}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !default;
-$accordion-button-active-icon-dark:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-active-color-dark}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !default;
+$accordion-button-icon-dark:        none !default;
+$accordion-button-active-icon-dark: none !default;
 // scss-docs-end sass-dark-mode-vars

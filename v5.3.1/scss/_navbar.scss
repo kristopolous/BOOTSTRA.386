@@ -2,6 +2,9 @@
 //
 // Provide a static navbar from which we expand to create full-width, fixed, and
 // other navbar variations.
+//
+// BOOTSTRA/386: a menu bar. One row tall, items a column apart, the first
+// letter of every item is its hot key. Give it a background with `.bg-*`.
 
 .navbar {
   // scss-docs-start navbar-css-vars
@@ -9,8 +12,12 @@
   --#{$prefix}navbar-padding-y: #{$navbar-padding-y};
   --#{$prefix}navbar-color: #{$navbar-light-color};
   --#{$prefix}navbar-hover-color: #{$navbar-light-hover-color};
+  --#{$prefix}navbar-hover-bg: #{$black};
   --#{$prefix}navbar-disabled-color: #{$navbar-light-disabled-color};
   --#{$prefix}navbar-active-color: #{$navbar-light-active-color};
+  --#{$prefix}navbar-active-bg: #{$black};
+  --#{$prefix}navbar-hotkey-color: #{$red};
+  --#{$prefix}navbar-hotkey-hover-color: #{$redBright};
   --#{$prefix}navbar-brand-padding-y: #{$navbar-brand-padding-y};
   --#{$prefix}navbar-brand-margin-end: #{$navbar-brand-margin-end};
   --#{$prefix}navbar-brand-font-size: #{$navbar-brand-font-size};
@@ -20,11 +27,11 @@
   --#{$prefix}navbar-toggler-padding-y: #{$navbar-toggler-padding-y};
   --#{$prefix}navbar-toggler-padding-x: #{$navbar-toggler-padding-x};
   --#{$prefix}navbar-toggler-font-size: #{$navbar-toggler-font-size};
-  --#{$prefix}navbar-toggler-icon-bg: #{escape-svg($navbar-light-toggler-icon-bg)};
-  --#{$prefix}navbar-toggler-border-color: #{$navbar-light-toggler-border-color};
-  --#{$prefix}navbar-toggler-border-radius: #{$navbar-toggler-border-radius};
-  --#{$prefix}navbar-toggler-focus-width: #{$navbar-toggler-focus-width};
-  --#{$prefix}navbar-toggler-transition: #{$navbar-toggler-transition};
+  --#{$prefix}navbar-toggler-icon-bg: none;
+  --#{$prefix}navbar-toggler-border-color: transparent;
+  --#{$prefix}navbar-toggler-border-radius: 0;
+  --#{$prefix}navbar-toggler-focus-width: 0;
+  --#{$prefix}navbar-toggler-transition: none;
   // scss-docs-end navbar-css-vars
 
   position: relative;
@@ -32,9 +39,7 @@
   flex-wrap: wrap; // allow us to do the line break for collapsing content
   align-items: center;
   justify-content: space-between; // space out brand from logo
-  padding: 0;
-  //padding: var(--#{$prefix}navbar-padding-y) var(--#{$prefix}navbar-padding-x);
-  //@include gradient-bg();
+  padding: var(--#{$prefix}navbar-padding-y) var(--#{$prefix}navbar-padding-x);
 
   // Because flex properties aren't inherited, we need to redeclare these first
   // few properties so that content nested within behave properly.
@@ -64,18 +69,18 @@
 // Used for brand, project, or site names.
 
 .navbar-brand {
-  padding-top: var(--#{$prefix}navbar-brand-padding-y);
-  padding-bottom: var(--#{$prefix}navbar-brand-padding-y);
+  padding: var(--#{$prefix}navbar-brand-padding-y) $space-width;
   margin-right: var(--#{$prefix}navbar-brand-margin-end);
   @include font-size(var(--#{$prefix}navbar-brand-font-size));
   color: var(--#{$prefix}navbar-brand-color);
-  text-decoration: if($link-decoration == none, null, none);
+  text-decoration: none;
   white-space: nowrap;
 
   &:hover,
   &:focus {
     color: var(--#{$prefix}navbar-brand-hover-color);
-    text-decoration: if($link-hover-decoration == underline, none, null);
+    text-decoration: none;
+    background-color: var(--#{$prefix}navbar-hover-bg);
   }
 }
 
@@ -86,12 +91,13 @@
 
 .navbar-nav {
   // scss-docs-start navbar-nav-css-vars
-  --#{$prefix}nav-link-padding-x: 0;
+  --#{$prefix}nav-link-padding-x: #{$space-width};
   --#{$prefix}nav-link-padding-y: #{$nav-link-padding-y};
   @include rfs($nav-link-font-size, --#{$prefix}nav-link-font-size);
   --#{$prefix}nav-link-font-weight: #{$nav-link-font-weight};
   --#{$prefix}nav-link-color: var(--#{$prefix}navbar-color);
   --#{$prefix}nav-link-hover-color: var(--#{$prefix}navbar-hover-color);
+  --#{$prefix}nav-link-hover-bg: var(--#{$prefix}navbar-hover-bg);
   --#{$prefix}nav-link-disabled-color: var(--#{$prefix}navbar-disabled-color);
   // scss-docs-end navbar-nav-css-vars
 
@@ -102,9 +108,25 @@
   list-style: none;
 
   .nav-link {
+    @include dos-hotkey(var(--#{$prefix}navbar-hotkey-color));
+
+    &:hover,
+    &:focus,
+    &.active,
+    &.show {
+      &::first-letter {
+        color: var(--#{$prefix}navbar-hotkey-hover-color);
+      }
+    }
+
     &.active,
     &.show {
       color: var(--#{$prefix}navbar-active-color);
+      background-color: var(--#{$prefix}navbar-active-bg);
+    }
+
+    &.disabled::first-letter {
+      color: var(--#{$prefix}navbar-disabled-color);
     }
   }
 
@@ -119,8 +141,7 @@
 //
 
 .navbar-text {
-  padding-top: $nav-link-padding-y;
-  padding-bottom: $nav-link-padding-y;
+  padding: $nav-link-padding-y $space-width;
   color: var(--#{$prefix}navbar-color);
 
   a,
@@ -151,35 +172,30 @@
 .navbar-toggler {
   padding: var(--#{$prefix}navbar-toggler-padding-y) var(--#{$prefix}navbar-toggler-padding-x);
   @include font-size(var(--#{$prefix}navbar-toggler-font-size));
-  line-height: 1;
+  line-height: inherit;
   color: var(--#{$prefix}navbar-color);
   background-color: transparent; // remove default button style
-  border: var(--#{$prefix}border-width) solid var(--#{$prefix}navbar-toggler-border-color); // remove default button style
-  @include border-radius(var(--#{$prefix}navbar-toggler-border-radius));
-  @include transition(var(--#{$prefix}navbar-toggler-transition));
+  border: 0;
 
-  &:hover {
-    text-decoration: none;
-  }
-
+  &:hover,
   &:focus {
+    color: var(--#{$prefix}navbar-hover-color);
     text-decoration: none;
+    background-color: var(--#{$prefix}navbar-hover-bg);
     outline: 0;
-    box-shadow: 0 0 0 var(--#{$prefix}navbar-toggler-focus-width);
   }
 }
 
-// Keep as a separate element so folks can easily override it with another icon
-// or image file as needed.
+// The ≡ glyph stands in for the hamburger.
 .navbar-toggler-icon {
   display: inline-block;
-  width: 1.5em;
-  height: 1.5em;
-  vertical-align: middle;
-  background-image: var(--#{$prefix}navbar-toggler-icon-bg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
+  width: $space-width;
+  height: $line-height;
+  vertical-align: top;
+
+  &::before {
+    content: "\2261";
+  }
 }
 
 .navbar-nav-scroll {
@@ -238,8 +254,7 @@
           background-color: transparent !important;
           border: 0 !important;
           transform: none !important;
-          @include box-shadow(none);
-          @include transition(none);
+          filter: none !important;
           // stylelint-enable declaration-no-important
 
           .offcanvas-header {
@@ -274,17 +289,19 @@
   --#{$prefix}navbar-hover-color: #{$navbar-dark-hover-color};
   --#{$prefix}navbar-disabled-color: #{$navbar-dark-disabled-color};
   --#{$prefix}navbar-active-color: #{$navbar-dark-active-color};
+  --#{$prefix}navbar-hotkey-color: #{$yellow};
   --#{$prefix}navbar-brand-color: #{$navbar-dark-brand-color};
   --#{$prefix}navbar-brand-hover-color: #{$navbar-dark-brand-hover-color};
-  --#{$prefix}navbar-toggler-border-color: #{$navbar-dark-toggler-border-color};
-  --#{$prefix}navbar-toggler-icon-bg: #{escape-svg($navbar-dark-toggler-icon-bg)};
+  --#{$prefix}navbar-toggler-border-color: transparent;
+  --#{$prefix}navbar-toggler-icon-bg: none;
   // scss-docs-end navbar-dark-css-vars
 }
 
-@if $enable-dark-mode {
-  @include color-mode(dark) {
-    .navbar-toggler-icon {
-      --#{$prefix}navbar-toggler-icon-bg: #{escape-svg($navbar-dark-toggler-icon-bg)};
-    }
-  }
+// A navbar sitting on the black background would hide its hover state.
+.navbar.bg-dark,
+.navbar.bg-black {
+  --#{$prefix}navbar-hover-bg: #{$grayLight};
+  --#{$prefix}navbar-active-bg: #{$grayLight};
+  --#{$prefix}navbar-hover-color: #{$black};
+  --#{$prefix}navbar-active-color: #{$black};
 }

@@ -1,0 +1,124 @@
+// BOOTSTRA/386 mixins
+//
+// Everything is laid out on a character grid: one cell is
+// $space-width (8px) wide and $line-height (14px) tall.
+//
+// A "single line" box border is drawn the way the box drawing characters
+// would draw it: a 2px line sitting in the middle of a cell. So a bordered
+// element gets margin + border + padding adding up to exactly one cell on
+// every side, keeping everything inside it on the grid.
+
+$dos-border-width:    2px !default;
+$dos-border-margin-x: 3px !default; // (8 - 2) / 2
+$dos-border-margin-y: 6px !default; // (14 - 2) / 2
+
+@mixin dos-margin-only($extra: 0, $character-space: 0) {
+  margin: $dos-border-margin-y $dos-border-margin-x;
+}
+
+@mixin dos-padding-only($extra: 0, $character-space: 0) {
+  padding: ($dos-border-margin-y + $extra * $line-height) ($dos-border-margin-x + $character-space * $space-width);
+}
+
+// A one cell thick frame around the element. $character-space adds that
+// many columns of padding on the left and right; $extra adds rows.
+@mixin dos-border-single($color: $black, $extra: 0, $character-space: 0) {
+  border: $dos-border-width solid $color;
+  @include dos-margin-only($extra, $character-space);
+  @include dos-padding-only($extra, $character-space);
+}
+
+// Borders eat into the margin area, so a bordered block level element
+// is 6px narrower than its container. This hands those pixels back.
+@mixin dos-uncollapse-margin($width: $dos-border-margin-x * 2) {
+  display: inline-block;
+  width: calc(100% - #{$width});
+}
+
+// The classic drop shadow of a dialog box: one column right, half a row down.
+@mixin dos-shadow($color: $black) {
+  filter: drop-shadow($space-width ($line-height * .5) 0 $color);
+}
+
+// Push the element into its shadow to show it is pressed.
+@mixin dos-border-active() {
+  filter: none;
+  position: relative;
+  top: $line-height * .5;
+  left: $space-width;
+}
+
+// A frame that is one whole cell thick.
+@mixin dos-border-solid($color: $white) {
+  border: $line-height solid $color;
+  border-right-width: $space-width;
+  border-left-width: $space-width;
+}
+
+// Fill the margin ring around a dos-border-single with a color so the
+// border looks drawn inside of a solid block. Four shifted copies of the
+// box via box-shadow cover the whole ring.
+@mixin dos-border-background($color: $grayLight) {
+  box-shadow:
+    (-$dos-border-margin-x) (-$dos-border-margin-y) 0 0 $color,
+    $dos-border-margin-x $dos-border-margin-y 0 0 $color,
+    (-$dos-border-margin-x) $dos-border-margin-y 0 0 $color,
+    $dos-border-margin-x (-$dos-border-margin-y) 0 0 $color;
+}
+
+@mixin dos-solid-border($color, $character-space: 0) {
+  @include dos-border-single($character-space: $character-space);
+  @include dos-border-background($color: $color);
+}
+
+@mixin dos-border-off($direction: "all") {
+  @if $direction == "bottom" {
+    margin-bottom: 0;
+    border-bottom: 0;
+    padding-bottom: 0;
+  } @else {
+    margin: 0;
+    border: 0;
+    padding: 0;
+  }
+  box-shadow: none;
+}
+
+// Headings inside of components (cards, modals, popovers) should be text,
+// not the big cyan bars.
+@mixin plain-headers() {
+  h1, h2, h3, h4, h5, h6,
+  .h1, .h2, .h3, .h4, .h5, .h6 {
+    display: block;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    text-indent: 0;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    animation: none;
+
+    &::before,
+    &::after {
+      content: none;
+    }
+  }
+}
+
+// Render a string of the DOS font as a background image. The svgs are
+// produced by build/icon-gen.py.
+@function dos-glyph($name, $color: "grayLight") {
+  @return url("#{$fp}#{$name}-#{$color}.svg");
+}
+
+// The hot key of a menu item: its first letter in another color. The
+// letter is floated so that browsers put it on the same row as the rest
+// of the word; left inline, ::first-letter boxes drift off the baseline.
+@mixin dos-hotkey($color) {
+  &::first-letter {
+    float: left;
+    color: $color;
+  }
+}

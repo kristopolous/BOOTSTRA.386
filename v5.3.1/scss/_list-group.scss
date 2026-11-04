@@ -1,14 +1,17 @@
 // Base class
 //
 // Easily usable on <ul>, <ol>, or <div>.
+//
+// A list group is a framed list. Items are one row each with a blank row
+// between them, the selected one is in reverse video.
 
 .list-group {
   // scss-docs-start list-group-css-vars
   --#{$prefix}list-group-color: #{$list-group-color};
   --#{$prefix}list-group-bg: #{$list-group-bg};
   --#{$prefix}list-group-border-color: #{$list-group-border-color};
-  --#{$prefix}list-group-border-width: #{$list-group-border-width};
-  --#{$prefix}list-group-border-radius: #{$list-group-border-radius};
+  --#{$prefix}list-group-border-width: 0;
+  --#{$prefix}list-group-border-radius: 0;
   --#{$prefix}list-group-item-padding-x: #{$list-group-item-padding-x};
   --#{$prefix}list-group-item-padding-y: #{$list-group-item-padding-y};
   --#{$prefix}list-group-action-color: #{$list-group-action-color};
@@ -25,11 +28,11 @@
 
   display: flex;
   flex-direction: column;
-
-  // No need to set list-style: none; since .list-group-item is block level
   padding-left: 0; // reset padding because ul and ol
   margin-bottom: 0;
-  @include border-radius(var(--#{$prefix}list-group-border-radius));
+  @include dos-border-single(var(--#{$prefix}list-group-border-color));
+  @include dos-uncollapse-margin();
+  display: flex; // stylelint-disable-line declare-no-duplicate-properties
 }
 
 .list-group-numbered {
@@ -37,7 +40,6 @@
   counter-reset: section;
 
   > .list-group-item::before {
-    // Increments only this instance of the section counter
     content: counters(section, ".") ". ";
     counter-increment: section;
   }
@@ -77,17 +79,10 @@
   display: block;
   padding: var(--#{$prefix}list-group-item-padding-y) var(--#{$prefix}list-group-item-padding-x);
   color: var(--#{$prefix}list-group-color);
-  text-decoration: if($link-decoration == none, null, none);
+  text-decoration: none;
   background-color: var(--#{$prefix}list-group-bg);
-  border: var(--#{$prefix}list-group-border-width) solid var(--#{$prefix}list-group-border-color);
-
-  &:first-child {
-    @include border-top-radius(inherit);
-  }
-
-  &:last-child {
-    @include border-bottom-radius(inherit);
-  }
+  border: 0;
+  @include plain-headers();
 
   &.disabled,
   &:disabled {
@@ -101,17 +96,11 @@
     z-index: 2; // Place active items above their siblings for proper border styling
     color: var(--#{$prefix}list-group-active-color);
     background-color: var(--#{$prefix}list-group-active-bg);
-    border-color: var(--#{$prefix}list-group-active-border-color);
   }
 
-  // stylelint-disable-next-line scss/selector-no-redundant-nesting-selector
-  & + .list-group-item {
-    border-top-width: 0;
-
-    &.active {
-      margin-top: calc(-1 * var(--#{$prefix}list-group-border-width)); // stylelint-disable-line function-disallowed-list
-      border-top-width: var(--#{$prefix}list-group-border-width);
-    }
+  // A badge on the right hand side of an item
+  .badge {
+    --#{$prefix}badge-bracket-color: inherit;
   }
 }
 
@@ -127,28 +116,9 @@
       flex-direction: row;
 
       > .list-group-item {
-        &:first-child:not(:last-child) {
-          @include border-bottom-start-radius(var(--#{$prefix}list-group-border-radius));
-          @include border-top-end-radius(0);
-        }
-
-        &:last-child:not(:first-child) {
-          @include border-top-end-radius(var(--#{$prefix}list-group-border-radius));
-          @include border-bottom-start-radius(0);
-        }
-
-        &.active {
-          margin-top: 0;
-        }
-
         + .list-group-item {
-          border-top-width: var(--#{$prefix}list-group-border-width);
-          border-left-width: 0;
-
-          &.active {
-            margin-left: calc(-1 * var(--#{$prefix}list-group-border-width)); // stylelint-disable-line function-disallowed-list
-            border-left-width: var(--#{$prefix}list-group-border-width);
-          }
+          margin-top: 0;
+          margin-left: $space-width;
         }
       }
     }
@@ -162,15 +132,9 @@
 // useful within other components (e.g., cards).
 
 .list-group-flush {
-  @include border-radius(0);
-
-  > .list-group-item {
-    border-width: 0 0 var(--#{$prefix}list-group-border-width);
-
-    &:last-child {
-      border-bottom-width: 0;
-    }
-  }
+  @include dos-border-off();
+  display: flex;
+  width: auto;
 }
 
 
@@ -185,10 +149,10 @@
     --#{$prefix}list-group-color: var(--#{$prefix}#{$state}-text-emphasis);
     --#{$prefix}list-group-bg: var(--#{$prefix}#{$state}-bg-subtle);
     --#{$prefix}list-group-border-color: var(--#{$prefix}#{$state}-border-subtle);
-    --#{$prefix}list-group-action-hover-color: var(--#{$prefix}emphasis-color);
-    --#{$prefix}list-group-action-hover-bg: var(--#{$prefix}#{$state}-border-subtle);
-    --#{$prefix}list-group-action-active-color: var(--#{$prefix}emphasis-color);
-    --#{$prefix}list-group-action-active-bg: var(--#{$prefix}#{$state}-border-subtle);
+    --#{$prefix}list-group-action-hover-color: var(--#{$prefix}#{$state}-bg-subtle);
+    --#{$prefix}list-group-action-hover-bg: var(--#{$prefix}#{$state}-text-emphasis);
+    --#{$prefix}list-group-action-active-color: var(--#{$prefix}#{$state}-bg-subtle);
+    --#{$prefix}list-group-action-active-bg: var(--#{$prefix}#{$state}-text-emphasis);
     --#{$prefix}list-group-active-color: var(--#{$prefix}#{$state}-bg-subtle);
     --#{$prefix}list-group-active-bg: var(--#{$prefix}#{$state}-text-emphasis);
     --#{$prefix}list-group-active-border-color: var(--#{$prefix}#{$state}-text-emphasis);

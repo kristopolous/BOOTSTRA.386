@@ -1,7 +1,7 @@
 // Base class
 //
-// Requires one of the contextual, color modifier classes for `color` and
-// `background-color`.
+// A badge is a word on a block of color, white on dark gray unless a
+// `.bg-*` or `.text-bg-*` utility says otherwise.
 
 .badge {
   // scss-docs-start badge-css-vars
@@ -10,20 +10,19 @@
   @include rfs($badge-font-size, --#{$prefix}badge-font-size);
   --#{$prefix}badge-font-weight: #{$badge-font-weight};
   --#{$prefix}badge-color: #{$badge-color};
-  --#{$prefix}badge-border-radius: #{$badge-border-radius};
+  --#{$prefix}badge-border-radius: 0;
   // scss-docs-end badge-css-vars
 
   display: inline-block;
   padding: var(--#{$prefix}badge-padding-y) var(--#{$prefix}badge-padding-x);
   @include font-size(var(--#{$prefix}badge-font-size));
   font-weight: var(--#{$prefix}badge-font-weight);
-  line-height: 1;
+  line-height: inherit;
   color: var(--#{$prefix}badge-color);
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
-  @include border-radius(var(--#{$prefix}badge-border-radius));
-  @include gradient-bg();
+  background-color: $grayDark;
 
   // Empty badges collapse automatically
   &:empty {
@@ -34,5 +33,13 @@
 // Quick fix for badges in buttons
 .btn .badge {
   position: relative;
-  top: -1px;
+  top: 0;
+}
+
+// A badge pinned to the corner of a button (`.position-absolute .top-0
+// .start-100 .translate-middle`) sits on the row above it, flush with
+// its right end, instead of half way over the corner.
+.badge.position-absolute.translate-middle,
+.position-absolute.translate-middle.rounded-circle {
+  transform: translate(0, -100%) !important; // stylelint-disable-line declaration-no-important
 }

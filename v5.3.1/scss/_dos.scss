@@ -1,34 +1,184 @@
+// BOOTSTRA/386
+//
+// Things that have no bootstrap equivalent: the loading animation, the
+// block cursor, text mode scrollbars and a few fixups for utilities that
+// would otherwise put gray text on a gray background.
+
+
+// Loading animation
+//
+// dos.js paints the page in from the bottom right like a slow VGA card.
+// `#wrap386` covers the page, `#bar386` is the partially drawn row and
+// `#cursor386` is the flying cursor of the second pass.
+
+#wrap386 {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 9999999;
+  width: 100%;
+  height: 100%;
+  background: $body-bg;
+}
+
+#bar386 {
+  float: right;
+  width: 100%;
+  height: $line-height;
+  margin-top: -$line-height;
+  color: $white;
+  background: $body-bg;
+}
+
+#cursor386 {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 9999999;
+  color: $white;
+}
+
+
+// The block cursor
+//
+// `_386.magicCursor()` replaces the mouse pointer with a cell sized block
+// that snaps to the character grid.
+
 .bootstra-cursor {
-  mix-blend-mode: difference;
   position: absolute;
-  background-color: #cbd448;
-  pointer-events: none;
+  z-index: 20000;
   width: $space-width;
   height: $line-height;
-  z-index: 20000;
+  pointer-events: none;
+  background-color: #cbd448;
+  mix-blend-mode: difference;
 }
 
 body.bootstra-enable-cursor,
 .bootstra-enable-cursor * {
-  cursor: none !important;
+  cursor: none !important; // stylelint-disable-line declaration-no-important
 }
 
-*::-webkit-scrollbar{
+
+// Scrollbars
+//
+// A text mode scrollbar is one column wide: a ▲ at the top, a ▼ at the
+// bottom, a ▒ track and a ■ thumb, drawn with glyphs from the font.
+
+// Browsers without the webkit pseudo elements (Firefox) get the colors
+// at least. Chrome honors these over its own pseudo elements, so they
+// are kept away from it.
+@supports not selector(::-webkit-scrollbar) {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: $black $grayLight;
+  }
+}
+
+*::-webkit-scrollbar {
   width: $space-width;
-  background: $black;
+  height: $line-height;
+  background: $grayLight;
 }
 
 *::-webkit-scrollbar-thumb {
   background: $black;
 }
+
 *::-webkit-scrollbar-track {
-  background: url('#{$fp}shade-50-grayLight.svg') repeat;
+  background: dos-glyph("shade-50", "grayLight") repeat;
 }
-*::-webkit-scrollbar-button:vertical:decrement {
-  background: url('#{$fp}arrow-up-black.svg') no-repeat;
+
+*::-webkit-scrollbar-button:single-button {
+  width: $space-width;
+  height: $line-height;
   background-color: $grayLight;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-*::-webkit-scrollbar-button:vertical:increment {
-  background: url('#{$fp}arrow-down-black.svg') no-repeat;
-  background-color: $grayLight;
+
+*::-webkit-scrollbar-button:single-button:vertical:decrement {
+  background-image: dos-glyph("arrow-up", "black");
 }
+
+*::-webkit-scrollbar-button:single-button:vertical:increment {
+  background-image: dos-glyph("arrow-down", "black");
+}
+
+*::-webkit-scrollbar-button:single-button:horizontal:decrement {
+  background-image: dos-glyph("arrow-left", "black");
+}
+
+*::-webkit-scrollbar-button:single-button:horizontal:increment {
+  background-image: dos-glyph("arrow-right", "black");
+}
+
+*::-webkit-scrollbar-corner {
+  background: $grayLight;
+}
+
+
+// Background utilities
+//
+// `.bg-*` only sets the background. The body text is light gray, which
+// vanishes on the light gray `.bg-primary`, so backgrounds also pick a
+// readable text color and point the body/link variables at it for anything
+// nested inside. `.text-*` utilities still win because they are `!important`.
+// The `<body>` itself is left alone: pages put `.bg-body-tertiary` on it
+// and then paint their own panels over it.
+
+@mixin dos-readable-on($bg) {
+  $fg: color-contrast($bg);
+  $link: if($fg == $black, $blue, $yellow);
+  --#{$prefix}body-color: #{$fg};
+  --#{$prefix}body-color-rgb: #{to-rgb($fg)};
+  --#{$prefix}emphasis-color: #{$fg};
+  --#{$prefix}emphasis-color-rgb: #{to-rgb($fg)};
+  --#{$prefix}heading-color: #{$fg};
+  --#{$prefix}link-color: #{$link};
+  --#{$prefix}link-color-rgb: #{to-rgb($link)};
+  --#{$prefix}link-hover-color: #{if($fg == $black, $white, $white)};
+  --#{$prefix}link-hover-color-rgb: #{to-rgb($white)};
+  --#{$prefix}secondary-color: #{if($fg == $black, $grayDark, $grayLight)};
+  --#{$prefix}secondary-color-rgb: #{to-rgb(if($fg == $black, $grayDark, $grayLight))};
+  color: var(--#{$prefix}body-color);
+}
+
+@each $color, $value in $theme-colors {
+  .bg-#{$color}:not(body) {
+    @include dos-readable-on($value);
+  }
+}
+
+.bg-body-tertiary:not(body) {
+  @include dos-readable-on($body-tertiary-bg);
+}
+
+.bg-body-secondary:not(body) {
+  @include dos-readable-on($body-secondary-bg);
+}
+
+.bg-white:not(body) {
+  @include dos-readable-on($white);
+}
+
+.bg-black:not(body) {
+  @include dos-readable-on($black);
+}
+
+// Translucency does not exist on a 16 color card.
+[class*="bg-opacity-"],
+[class*="text-opacity-"],
+[class*="border-opacity-"] {
+  --#{$prefix}bg-opacity: 1;
+  --#{$prefix}text-opacity: 1;
+  --#{$prefix}border-opacity: 1;
+}
+
+
+// The shade patterns as utilities, handy for dithered backgrounds.
+
+.bg-shade-25 { background-image: dos-glyph("shade-25", "grayLight"); }
+.bg-shade-50 { background-image: dos-glyph("shade-50", "grayLight"); }
+.bg-shade-75 { background-image: dos-glyph("shade-75", "grayLight"); }
+.bg-grid { background-image: dos-glyph("grid", "grayDark"); }

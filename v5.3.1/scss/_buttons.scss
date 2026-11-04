@@ -1,6 +1,10 @@
 //
 // Base styles
 //
+// A button is < a word > on a gray block with a black drop shadow one
+// column to the right and half a row down, the way a dialog button is
+// drawn in text mode. Pressing it pushes the block into its shadow. The
+// row below a button is left empty for the shadow to fall on.
 
 .btn {
   // scss-docs-start btn-css-vars
@@ -11,93 +15,79 @@
   --#{$prefix}btn-font-weight: #{$btn-font-weight};
   --#{$prefix}btn-line-height: #{$btn-line-height};
   --#{$prefix}btn-color: #{$btn-color};
-  --#{$prefix}btn-bg: transparent;
-  --#{$prefix}btn-border-width: #{$btn-border-width};
+  --#{$prefix}btn-bg: #{$grayLight};
+  --#{$prefix}btn-border-width: 0;
   --#{$prefix}btn-border-color: transparent;
-  --#{$prefix}btn-border-radius: #{$btn-border-radius};
+  --#{$prefix}btn-border-radius: 0;
+  --#{$prefix}btn-hover-color: #{$white};
+  --#{$prefix}btn-hover-bg: #{$grayDark};
   --#{$prefix}btn-hover-border-color: transparent;
-  --#{$prefix}btn-box-shadow: #{$btn-box-shadow};
+  --#{$prefix}btn-active-color: #{$white};
+  --#{$prefix}btn-active-bg: #{$grayDark};
+  --#{$prefix}btn-active-border-color: transparent;
+  --#{$prefix}btn-disabled-color: #{$grayDark};
+  --#{$prefix}btn-disabled-bg: #{$grayLight};
+  --#{$prefix}btn-disabled-border-color: transparent;
+  --#{$prefix}btn-box-shadow: #{$space-width} #{$line-height * .5} 0 #{$black};
   --#{$prefix}btn-disabled-opacity: #{$btn-disabled-opacity};
-  --#{$prefix}btn-focus-box-shadow: 0 0 0 #{$btn-focus-width} rgba(var(--#{$prefix}btn-focus-shadow-rgb), .5);
+  --#{$prefix}btn-focus-box-shadow: none;
   // scss-docs-end btn-css-vars
 
   display: inline-block;
   padding: var(--#{$prefix}btn-padding-y) var(--#{$prefix}btn-padding-x);
+  margin-bottom: $line-height; // the row the shadow falls on
   font-family: var(--#{$prefix}btn-font-family);
   @include font-size(var(--#{$prefix}btn-font-size));
   font-weight: var(--#{$prefix}btn-font-weight);
   line-height: var(--#{$prefix}btn-line-height);
   color: var(--#{$prefix}btn-color);
   text-align: center;
-  text-decoration: if($link-decoration == none, null, none);
+  text-decoration: none;
   white-space: $btn-white-space;
   vertical-align: middle;
   cursor: if($enable-button-pointers, pointer, null);
   user-select: none;
-  border: var(--#{$prefix}btn-border-width) solid var(--#{$prefix}btn-border-color);
-  @include border-radius(var(--#{$prefix}btn-border-radius));
-  @include gradient-bg(var(--#{$prefix}btn-bg));
-  @include box-shadow(var(--#{$prefix}btn-box-shadow));
-  @include transition($btn-transition);
+  background-color: var(--#{$prefix}btn-bg);
+  border: 0;
+  box-shadow: var(--#{$prefix}btn-box-shadow);
 
-  &:hover {
+  &::before {
+    content: "<\00a0";
+  }
+
+  &::after {
+    content: "\00a0>";
+  }
+
+  &:hover,
+  &:focus-visible {
     color: var(--#{$prefix}btn-hover-color);
-    text-decoration: if($link-hover-decoration == underline, none, null);
     background-color: var(--#{$prefix}btn-hover-bg);
-    border-color: var(--#{$prefix}btn-hover-border-color);
+    outline: 0;
   }
 
   .btn-check + &:hover {
     // override for the checkbox/radio buttons
     color: var(--#{$prefix}btn-color);
     background-color: var(--#{$prefix}btn-bg);
-    border-color: var(--#{$prefix}btn-border-color);
-  }
-
-  &:focus-visible {
-    color: var(--#{$prefix}btn-hover-color);
-    @include gradient-bg(var(--#{$prefix}btn-hover-bg));
-    border-color: var(--#{$prefix}btn-hover-border-color);
-    outline: 0;
-    // Avoid using mixin so we can pass custom focus shadow properly
-    @if $enable-shadows {
-      box-shadow: var(--#{$prefix}btn-box-shadow), var(--#{$prefix}btn-focus-box-shadow);
-    } @else {
-      box-shadow: var(--#{$prefix}btn-focus-box-shadow);
-    }
   }
 
   .btn-check:focus-visible + & {
-    border-color: var(--#{$prefix}btn-hover-border-color);
+    color: var(--#{$prefix}btn-hover-color);
+    background-color: var(--#{$prefix}btn-hover-bg);
     outline: 0;
-    // Avoid using mixin so we can pass custom focus shadow properly
-    @if $enable-shadows {
-      box-shadow: var(--#{$prefix}btn-box-shadow), var(--#{$prefix}btn-focus-box-shadow);
-    } @else {
-      box-shadow: var(--#{$prefix}btn-focus-box-shadow);
-    }
   }
 
+  // Pressed: the block moves into its shadow
   .btn-check:checked + &,
   :not(.btn-check) + &:active,
   &:first-child:active,
   &.active,
   &.show {
+    margin: ($line-height * .5) 0 ($line-height * .5) $space-width;
     color: var(--#{$prefix}btn-active-color);
     background-color: var(--#{$prefix}btn-active-bg);
-    // Remove CSS gradients if they're enabled
-    background-image: if($enable-gradients, none, null);
-    border-color: var(--#{$prefix}btn-active-border-color);
-    @include box-shadow(var(--#{$prefix}btn-active-shadow));
-
-    &:focus-visible {
-      // Avoid using mixin so we can pass custom focus shadow properly
-      @if $enable-shadows {
-        box-shadow: var(--#{$prefix}btn-active-shadow), var(--#{$prefix}btn-focus-box-shadow);
-      } @else {
-        box-shadow: var(--#{$prefix}btn-focus-box-shadow);
-      }
-    }
+    box-shadow: none;
   }
 
   &:disabled,
@@ -106,10 +96,35 @@
     color: var(--#{$prefix}btn-disabled-color);
     pointer-events: none;
     background-color: var(--#{$prefix}btn-disabled-bg);
-    background-image: if($enable-gradients, none, null);
-    border-color: var(--#{$prefix}btn-disabled-border-color);
+    box-shadow: none;
     opacity: var(--#{$prefix}btn-disabled-opacity);
-    @include box-shadow(none);
+  }
+}
+
+// The caret of a dropdown button sits inside the brackets
+.btn.dropdown-toggle {
+  &::after {
+    margin-left: 0;
+    content: "\00a0\25bc\00a0>";
+  }
+
+  .dropup &::after {
+    content: "\00a0\25b2\00a0>";
+  }
+
+  .dropend &::after {
+    content: "\00a0\25ba\00a0>";
+  }
+
+  .dropstart & {
+    &::before {
+      margin-right: 0;
+      content: "<\00a0\25c4\00a0";
+    }
+
+    &::after {
+      content: "\00a0>";
+    }
   }
 }
 
@@ -121,27 +136,7 @@
 // scss-docs-start btn-variant-loops
 @each $color, $value in $theme-colors {
   .btn-#{$color} {
-    @if $color == "light" {
-      @include button-variant(
-        $value,
-        $value,
-        $hover-background: shade-color($value, $btn-hover-bg-shade-amount),
-        $hover-border: shade-color($value, $btn-hover-border-shade-amount),
-        $active-background: shade-color($value, $btn-active-bg-shade-amount),
-        $active-border: shade-color($value, $btn-active-border-shade-amount)
-      );
-    } @else if $color == "dark" {
-      @include button-variant(
-        $value,
-        $value,
-        $hover-background: tint-color($value, $btn-hover-bg-tint-amount),
-        $hover-border: tint-color($value, $btn-hover-border-tint-amount),
-        $active-background: tint-color($value, $btn-active-bg-tint-amount),
-        $active-border: tint-color($value, $btn-active-border-tint-amount)
-      );
-    } @else {
-      @include button-variant($value, $value);
-    }
+    @include button-variant($value, $value);
   }
 }
 
@@ -157,40 +152,24 @@
 // Link buttons
 //
 
-// Make a button look and behave like a link
+// Make a button look and behave like a link: < text > with nothing behind it
 .btn-link {
   --#{$prefix}btn-font-weight: #{$font-weight-normal};
   --#{$prefix}btn-color: #{$btn-link-color};
   --#{$prefix}btn-bg: transparent;
   --#{$prefix}btn-border-color: transparent;
   --#{$prefix}btn-hover-color: #{$btn-link-hover-color};
+  --#{$prefix}btn-hover-bg: #{$green};
   --#{$prefix}btn-hover-border-color: transparent;
   --#{$prefix}btn-active-color: #{$btn-link-hover-color};
+  --#{$prefix}btn-active-bg: #{$green};
   --#{$prefix}btn-active-border-color: transparent;
   --#{$prefix}btn-disabled-color: #{$btn-link-disabled-color};
+  --#{$prefix}btn-disabled-bg: transparent;
   --#{$prefix}btn-disabled-border-color: transparent;
-  --#{$prefix}btn-box-shadow: 0 0 0 #000; // Can't use `none` as keyword negates all values when used with multiple shadows
-  --#{$prefix}btn-focus-shadow-rgb: #{to-rgb(mix(color-contrast($link-color), $link-color, 15%))};
+  --#{$prefix}btn-box-shadow: none;
 
   text-decoration: $link-decoration;
-  @if $enable-gradients {
-    background-image: none;
-  }
-
-  &:hover,
-  &:focus-visible {
-    text-decoration: $link-hover-decoration;
-  }
-
-  &:focus-visible {
-    color: var(--#{$prefix}btn-color);
-  }
-
-  &:hover {
-    color: var(--#{$prefix}btn-hover-color);
-  }
-
-  // No need for an active state here
 }
 
 
@@ -198,10 +177,50 @@
 // Button Sizes
 //
 
+// A large button is two rows tall
 .btn-lg {
-  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-border-radius-lg);
+  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, 0);
 }
 
+// A small button is <text> with no room around it
 .btn-sm {
-  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-border-radius-sm);
+  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, 0);
+}
+
+
+//
+// Buttons inside of other components
+//
+// Inside a bar or a field there is no room below for the shadow.
+
+.input-group > .btn,
+.navbar .btn,
+.toast .btn,
+.alert .btn,
+.offcanvas-header .btn,
+.modal-header .btn,
+.dropdown-menu .btn,
+.pagination .btn {
+  margin-bottom: 0;
+  box-shadow: none;
+
+  // With no shadow there is nothing to press into, so nothing moves
+  &:active,
+  &:first-child:active,
+  &.active,
+  &.show {
+    margin: 0;
+  }
+}
+
+.input-group > .btn-check:checked + .btn,
+.navbar .btn-check:checked + .btn,
+.toast .btn-check:checked + .btn,
+.alert .btn-check:checked + .btn,
+.dropdown-menu .btn-check:checked + .btn {
+  margin: 0;
+}
+
+.modal-footer .btn {
+  margin-bottom: 0;
 }

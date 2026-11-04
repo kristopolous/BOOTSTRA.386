@@ -1,4 +1,4 @@
-Bootstrap/386 is a Twitter bootstrap v2/3/4/5(in progress) theme to make webpages look like they are from the gentler, less distracting time of the 1980s. 
+Bootstrap/386 is a Twitter bootstrap v2/3/4/5 theme to make webpages look like they are from the gentler, less distracting time of the 1980s. 
 
 # [See A Demo By Clicking Here](http://kristopolous.github.io/BOOTSTRA.386/v2.3.1/)
 
@@ -8,7 +8,7 @@ Bootstrap/386 is a Twitter bootstrap v2/3/4/5(in progress) theme to make webpage
  * BOOTSTRA/386 ][ (2013) [demo](http://kristopolous.github.io/BOOTSTRA.386/) [144KB](https://github.com/kristopolous/BOOTSTRA.386/blob/master/bootstra.386-latest-v2.zip?raw=true)
  * BOOTSTRA/386 <i>iii</i> (2015) [423KB](https://github.com/kristopolous/BOOTSTRA.386/blob/master/bootstra.386-latest-v3.zip?raw=true)
  * BOOTSTRA/386 4 (2020) - [demo](http://kristopolous.github.io/BOOTSTRA.386/v4.4.1/) [remaining issues](https://github.com/kristopolous/BOOTSTRA.386/issues/85) - [current build](https://github.com/kristopolous/BOOTSTRA.386/blob/master/bootstra.386-latest-v4.zip?raw=true)
- * ブートストラップ/386 5.0 (2023) - In progress 
+ * BOOTSTRA/386 5.3.1 (2026) - [source](v5.3.1/) - [current build (1.0MB)](https://github.com/kristopolous/BOOTSTRA.386/blob/master/bootstra.386-latest-v5.zip?raw=true) - unzip, then `<link rel="stylesheet" href="bootstrap-5.3.1-dist/css/bootstrap.min.css">` plus `bootstrap.bundle.min.js` and `bootstrap-386.js` from `js/`
 
 https://github.com/kristopolous/BOOTSTRA.386/assets/231761/9d8f7c51-0ba7-4a45-996d-d9a36e00a6a3
 

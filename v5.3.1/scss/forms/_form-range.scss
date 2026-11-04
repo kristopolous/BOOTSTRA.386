@@ -1,23 +1,18 @@
 // Range
 //
-// Style range inputs the same across browsers. Vendor-specific rules for pseudo
+// A dashed track with a one cell thumb. Vendor-specific rules for pseudo
 // elements cannot be mixed. As such, there are no shared styles for focus or
 // active states on prefixed selectors.
 
 .form-range {
   width: 100%;
-  height: add($form-range-thumb-height, $form-range-thumb-focus-box-shadow-width * 2);
+  height: $line-height;
   padding: 0; // Need to reset padding
   appearance: none;
   background-color: transparent;
 
   &:focus {
     outline: 0;
-
-    // Pseudo-elements must be split across multiple rulesets to have an effect.
-    // No box-shadow() mixin for focus accessibility.
-    &::-webkit-slider-thumb { box-shadow: $form-range-thumb-focus-box-shadow; }
-    &::-moz-range-thumb     { box-shadow: $form-range-thumb-focus-box-shadow; }
   }
 
   &::-moz-focus-outer {
@@ -27,16 +22,13 @@
   &::-webkit-slider-thumb {
     width: $form-range-thumb-width;
     height: $form-range-thumb-height;
-    margin-top: ($form-range-track-height - $form-range-thumb-height) * .5; // Webkit specific
+    margin-top: 0;
     appearance: none;
-    @include gradient-bg($form-range-thumb-bg);
-    border: $form-range-thumb-border;
-    @include border-radius($form-range-thumb-border-radius);
-    @include box-shadow($form-range-thumb-box-shadow);
-    @include transition($form-range-thumb-transition);
+    background-color: $form-range-thumb-bg;
+    border: 0;
 
     &:active {
-      @include gradient-bg($form-range-thumb-active-bg);
+      background-color: $form-range-thumb-active-bg;
     }
   }
 
@@ -46,23 +38,22 @@
     color: transparent; // Why?
     cursor: $form-range-track-cursor;
     background-color: $form-range-track-bg;
-    border-color: transparent;
-    @include border-radius($form-range-track-border-radius);
-    @include box-shadow($form-range-track-box-shadow);
+    background-image: dos-glyph("hyphen", "black");
+    background-repeat: repeat-x;
+    background-position: left center;
+    border: 0;
   }
 
   &::-moz-range-thumb {
     width: $form-range-thumb-width;
     height: $form-range-thumb-height;
     appearance: none;
-    @include gradient-bg($form-range-thumb-bg);
-    border: $form-range-thumb-border;
-    @include border-radius($form-range-thumb-border-radius);
-    @include box-shadow($form-range-thumb-box-shadow);
-    @include transition($form-range-thumb-transition);
+    background-color: $form-range-thumb-bg;
+    border: 0;
+    border-radius: 0;
 
     &:active {
-      @include gradient-bg($form-range-thumb-active-bg);
+      background-color: $form-range-thumb-active-bg;
     }
   }
 
@@ -72,9 +63,10 @@
     color: transparent;
     cursor: $form-range-track-cursor;
     background-color: $form-range-track-bg;
-    border-color: transparent; // Firefox specific?
-    @include border-radius($form-range-track-border-radius);
-    @include box-shadow($form-range-track-box-shadow);
+    background-image: dos-glyph("hyphen", "black");
+    background-repeat: repeat-x;
+    background-position: left center;
+    border: 0;
   }
 
   &:disabled {

@@ -1,4 +1,7 @@
 // Base class
+//
+// A tooltip is white on black with a ▲▼◄► glyph pointing at its target.
+
 .tooltip {
   // scss-docs-start tooltip-css-vars
   --#{$prefix}tooltip-zindex: #{$zindex-tooltip};
@@ -9,7 +12,7 @@
   @include rfs($tooltip-font-size, --#{$prefix}tooltip-font-size);
   --#{$prefix}tooltip-color: #{$tooltip-color};
   --#{$prefix}tooltip-bg: #{$tooltip-bg};
-  --#{$prefix}tooltip-border-radius: #{$tooltip-border-radius};
+  --#{$prefix}tooltip-border-radius: 0;
   --#{$prefix}tooltip-opacity: #{$tooltip-opacity};
   --#{$prefix}tooltip-arrow-width: #{$tooltip-arrow-width};
   --#{$prefix}tooltip-arrow-height: #{$tooltip-arrow-height};
@@ -23,6 +26,7 @@
   // So reset our font and text properties to avoid inheriting weird values.
   @include reset-text();
   @include font-size(var(--#{$prefix}tooltip-font-size));
+  line-height: $line-height-base;
   // Allow breaking very long words so they don't overflow the tooltip's bounds
   word-wrap: break-word;
   opacity: 0;
@@ -33,12 +37,14 @@
     display: block;
     width: var(--#{$prefix}tooltip-arrow-width);
     height: var(--#{$prefix}tooltip-arrow-height);
+    line-height: var(--#{$prefix}tooltip-arrow-height);
+    color: var(--#{$prefix}tooltip-bg);
 
     &::before {
       position: absolute;
-      content: "";
-      border-color: transparent;
-      border-style: solid;
+      top: 0;
+      left: 0;
+      border: 0;
     }
   }
 }
@@ -47,22 +53,16 @@
   bottom: calc(-1 * var(--#{$prefix}tooltip-arrow-height)); // stylelint-disable-line function-disallowed-list
 
   &::before {
-    top: -1px;
-    border-width: var(--#{$prefix}tooltip-arrow-height) calc(var(--#{$prefix}tooltip-arrow-width) * .5) 0; // stylelint-disable-line function-disallowed-list
-    border-top-color: var(--#{$prefix}tooltip-bg);
+    content: "\25bc";
   }
 }
 
 /* rtl:begin:ignore */
 .bs-tooltip-end .tooltip-arrow {
-  left: calc(-1 * var(--#{$prefix}tooltip-arrow-height)); // stylelint-disable-line function-disallowed-list
-  width: var(--#{$prefix}tooltip-arrow-height);
-  height: var(--#{$prefix}tooltip-arrow-width);
+  left: calc(-1 * var(--#{$prefix}tooltip-arrow-width)); // stylelint-disable-line function-disallowed-list
 
   &::before {
-    right: -1px;
-    border-width: calc(var(--#{$prefix}tooltip-arrow-width) * .5) var(--#{$prefix}tooltip-arrow-height) calc(var(--#{$prefix}tooltip-arrow-width) * .5) 0; // stylelint-disable-line function-disallowed-list
-    border-right-color: var(--#{$prefix}tooltip-bg);
+    content: "\25c4";
   }
 }
 
@@ -72,22 +72,16 @@
   top: calc(-1 * var(--#{$prefix}tooltip-arrow-height)); // stylelint-disable-line function-disallowed-list
 
   &::before {
-    bottom: -1px;
-    border-width: 0 calc(var(--#{$prefix}tooltip-arrow-width) * .5) var(--#{$prefix}tooltip-arrow-height); // stylelint-disable-line function-disallowed-list
-    border-bottom-color: var(--#{$prefix}tooltip-bg);
+    content: "\25b2";
   }
 }
 
 /* rtl:begin:ignore */
 .bs-tooltip-start .tooltip-arrow {
-  right: calc(-1 * var(--#{$prefix}tooltip-arrow-height)); // stylelint-disable-line function-disallowed-list
-  width: var(--#{$prefix}tooltip-arrow-height);
-  height: var(--#{$prefix}tooltip-arrow-width);
+  right: calc(-1 * var(--#{$prefix}tooltip-arrow-width)); // stylelint-disable-line function-disallowed-list
 
   &::before {
-    left: -1px;
-    border-width: calc(var(--#{$prefix}tooltip-arrow-width) * .5) 0 calc(var(--#{$prefix}tooltip-arrow-width) * .5) var(--#{$prefix}tooltip-arrow-height); // stylelint-disable-line function-disallowed-list
-    border-left-color: var(--#{$prefix}tooltip-bg);
+    content: "\25ba";
   }
 }
 
@@ -115,5 +109,4 @@
   color: var(--#{$prefix}tooltip-color);
   text-align: center;
   background-color: var(--#{$prefix}tooltip-bg);
-  @include border-radius(var(--#{$prefix}tooltip-border-radius));
 }

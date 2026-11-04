@@ -1,4 +1,4 @@
-// stylelint-disable function-disallowed-list
+// An offcanvas is a dialog box pinned to the edge of the screen.
 
 %offcanvas-css-vars {
   // scss-docs-start offcanvas-css-vars
@@ -9,11 +9,13 @@
   --#{$prefix}offcanvas-padding-y: #{$offcanvas-padding-y};
   --#{$prefix}offcanvas-color: #{$offcanvas-color};
   --#{$prefix}offcanvas-bg: #{$offcanvas-bg-color};
-  --#{$prefix}offcanvas-border-width: #{$offcanvas-border-width};
-  --#{$prefix}offcanvas-border-color: #{$offcanvas-border-color};
-  --#{$prefix}offcanvas-box-shadow: #{$offcanvas-box-shadow};
-  --#{$prefix}offcanvas-transition: #{transform $offcanvas-transition-duration ease-in-out};
+  --#{$prefix}offcanvas-border-width: 0;
+  --#{$prefix}offcanvas-border-color: transparent;
+  --#{$prefix}offcanvas-box-shadow: none;
+  --#{$prefix}offcanvas-transition: none;
   --#{$prefix}offcanvas-title-line-height: #{$offcanvas-title-line-height};
+  --#{$prefix}offcanvas-header-bg: #{$magenta};
+  --#{$prefix}offcanvas-header-color: #{$white};
   // scss-docs-end offcanvas-css-vars
 }
 
@@ -43,14 +45,12 @@
       background-color: var(--#{$prefix}offcanvas-bg);
       background-clip: padding-box;
       outline: 0;
-      @include box-shadow(var(--#{$prefix}offcanvas-box-shadow));
-      @include transition(var(--#{$prefix}offcanvas-transition));
+      @include dos-shadow();
 
       &.offcanvas-start {
         top: 0;
         left: 0;
         width: var(--#{$prefix}offcanvas-width);
-        border-right: var(--#{$prefix}offcanvas-border-width) solid var(--#{$prefix}offcanvas-border-color);
         transform: translateX(-100%);
       }
 
@@ -58,7 +58,6 @@
         top: 0;
         right: 0;
         width: var(--#{$prefix}offcanvas-width);
-        border-left: var(--#{$prefix}offcanvas-border-width) solid var(--#{$prefix}offcanvas-border-color);
         transform: translateX(100%);
       }
 
@@ -68,7 +67,6 @@
         left: 0;
         height: var(--#{$prefix}offcanvas-height);
         max-height: 100%;
-        border-bottom: var(--#{$prefix}offcanvas-border-width) solid var(--#{$prefix}offcanvas-border-color);
         transform: translateY(-100%);
       }
 
@@ -77,7 +75,6 @@
         left: 0;
         height: var(--#{$prefix}offcanvas-height);
         max-height: 100%;
-        border-top: var(--#{$prefix}offcanvas-border-width) solid var(--#{$prefix}offcanvas-border-color);
         transform: translateY(100%);
       }
 
@@ -118,19 +115,22 @@
 
 .offcanvas-backdrop {
   @include overlay-backdrop($zindex-offcanvas-backdrop, $offcanvas-backdrop-bg, $offcanvas-backdrop-opacity);
+  background-color: transparent;
+  background-image: dos-glyph("shade-50", "black");
 }
 
 .offcanvas-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--#{$prefix}offcanvas-padding-y) var(--#{$prefix}offcanvas-padding-x);
+  padding: 0 $space-width;
+  color: var(--#{$prefix}offcanvas-header-color);
+  background-color: var(--#{$prefix}offcanvas-header-bg);
+  @include plain-headers();
 
   .btn-close {
-    padding: calc(var(--#{$prefix}offcanvas-padding-y) * .5) calc(var(--#{$prefix}offcanvas-padding-x) * .5);
-    margin-top: calc(-.5 * var(--#{$prefix}offcanvas-padding-y));
-    margin-right: calc(-.5 * var(--#{$prefix}offcanvas-padding-x));
-    margin-bottom: calc(-.5 * var(--#{$prefix}offcanvas-padding-y));
+    padding: 0;
+    margin: 0 0 0 auto;
   }
 }
 
@@ -143,4 +143,13 @@
   flex-grow: 1;
   padding: var(--#{$prefix}offcanvas-padding-y) var(--#{$prefix}offcanvas-padding-x);
   overflow-y: auto;
+
+  a:not(.btn):not(.nav-link):not(.dropdown-item) {
+    color: $blue;
+
+    &:hover,
+    &:focus {
+      color: $white;
+    }
+  }
 }

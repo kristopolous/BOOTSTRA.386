@@ -3,29 +3,14 @@
 //
 
 .bd-content {
-  > h2,
-  > h3,
-  > h4 {
-    --bs-heading-color: var(--bs-emphasis-color);
-  }
-
-  // Offset content from fixed navbar when jumping to headings
-  > h2:not(:first-child) {
-    margin-top: 3rem;
-  }
-
-  > h3 {
-    margin-top: 2rem;
-  }
-
   > ul li,
   > ol li {
-    margin-bottom: .25rem;
+    margin-bottom: 0;
 
     // stylelint-disable selector-max-type, selector-max-compound-selectors
     > p ~ ul {
-      margin-top: -.5rem;
-      margin-bottom: 1rem;
+      margin-top: 0;
+      margin-bottom: $line-height;
     }
     // stylelint-enable selector-max-type, selector-max-compound-selectors
   }
@@ -33,11 +18,8 @@
   // Override Bootstrap defaults
   > .table,
   > .table-responsive .table {
-    --bs-table-border-color: var(--bs-border-color);
-
     max-width: 100%;
-    margin-bottom: 1.5rem;
-    @include font-size(.875rem);
+    margin-bottom: $line-height;
 
     @include media-breakpoint-down(lg) {
       &.table-bordered {
@@ -45,31 +27,12 @@
       }
     }
 
-    thead {
-      border-bottom: 2px solid currentcolor;
-    }
-
-    tbody:not(:first-child) {
-      border-top: 2px solid currentcolor;
-    }
-
-    th,
-    td {
-      &:first-child {
-        padding-left: 0;
-      }
-
-      &:not(:last-child) {
-        padding-right: 1.5rem;
-      }
-    }
-
     th {
-      color: var(--bs-emphasis-color);
+      color: $white;
     }
 
     strong {
-      color: var(--bs-emphasis-color);
+      color: $white;
     }
 
     // Prevent breaking of code
@@ -94,22 +57,12 @@
 
 .table-swatches {
   th {
-    color: var(--bs-emphasis-color);
+    color: $white;
   }
 
   td code {
     white-space: nowrap;
   }
-}
-
-.bd-title {
-  --bs-heading-color: var(--bs-emphasis-color);
-  @include font-size(3rem);
-}
-
-.bd-lead {
-  @include font-size(1.5rem);
-  font-weight: 300;
 }
 
 .bi {

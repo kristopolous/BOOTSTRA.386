@@ -1,7 +1,8 @@
 // Base class
 //
-// Kickstart any navigation component with a set of style resets. Works with
-// `<nav>`s, `<ul>`s or `<ol>`s.
+// A nav is a gray menu bar. Each item is black text with its first
+// letter, the hot key, in red. The item under the cursor is white on
+// black.
 
 .nav {
   // scss-docs-start nav-css-vars
@@ -11,7 +12,11 @@
   --#{$prefix}nav-link-font-weight: #{$nav-link-font-weight};
   --#{$prefix}nav-link-color: #{$nav-link-color};
   --#{$prefix}nav-link-hover-color: #{$nav-link-hover-color};
+  --#{$prefix}nav-link-hover-bg: #{$black};
   --#{$prefix}nav-link-disabled-color: #{$nav-link-disabled-color};
+  --#{$prefix}nav-bg: #{$grayLight};
+  --#{$prefix}nav-hotkey-color: #{$red};
+  --#{$prefix}nav-hotkey-hover-color: #{$redBright};
   // scss-docs-end nav-css-vars
 
   display: flex;
@@ -19,6 +24,7 @@
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+  background-color: var(--#{$prefix}nav-bg);
 }
 
 .nav-link {
@@ -27,20 +33,25 @@
   @include font-size(var(--#{$prefix}nav-link-font-size));
   font-weight: var(--#{$prefix}nav-link-font-weight);
   color: var(--#{$prefix}nav-link-color);
-  text-decoration: if($link-decoration == none, null, none);
+  text-decoration: none;
   background: none;
   border: 0;
-  @include transition($nav-link-transition);
+
+  @include dos-hotkey(var(--#{$prefix}nav-hotkey-color));
 
   &:hover,
   &:focus {
     color: var(--#{$prefix}nav-link-hover-color);
-    text-decoration: if($link-hover-decoration == underline, none, null);
+    text-decoration: none;
+    background-color: var(--#{$prefix}nav-link-hover-bg);
+
+    &::first-letter {
+      color: var(--#{$prefix}nav-hotkey-hover-color);
+    }
   }
 
   &:focus-visible {
     outline: 0;
-    box-shadow: $nav-link-focus-box-shadow;
   }
 
   // Disabled state lightens text
@@ -49,51 +60,39 @@
     color: var(--#{$prefix}nav-link-disabled-color);
     pointer-events: none;
     cursor: default;
+
+    &::first-letter {
+      color: var(--#{$prefix}nav-link-disabled-color);
+    }
   }
 }
 
 //
 // Tabs
 //
+// The open tab is white on black.
 
 .nav-tabs {
   // scss-docs-start nav-tabs-css-vars
-  --#{$prefix}nav-tabs-border-width: #{$nav-tabs-border-width};
-  --#{$prefix}nav-tabs-border-color: #{$nav-tabs-border-color};
-  --#{$prefix}nav-tabs-border-radius: #{$nav-tabs-border-radius};
-  --#{$prefix}nav-tabs-link-hover-border-color: #{$nav-tabs-link-hover-border-color};
+  --#{$prefix}nav-tabs-border-width: 0;
+  --#{$prefix}nav-tabs-border-color: transparent;
+  --#{$prefix}nav-tabs-border-radius: 0;
+  --#{$prefix}nav-tabs-link-hover-border-color: transparent;
   --#{$prefix}nav-tabs-link-active-color: #{$nav-tabs-link-active-color};
   --#{$prefix}nav-tabs-link-active-bg: #{$nav-tabs-link-active-bg};
-  --#{$prefix}nav-tabs-link-active-border-color: #{$nav-tabs-link-active-border-color};
+  --#{$prefix}nav-tabs-link-active-border-color: transparent;
   // scss-docs-end nav-tabs-css-vars
 
-  border-bottom: var(--#{$prefix}nav-tabs-border-width) solid var(--#{$prefix}nav-tabs-border-color);
-
-  .nav-link {
-    margin-bottom: calc(-1 * var(--#{$prefix}nav-tabs-border-width)); // stylelint-disable-line function-disallowed-list
-    border: var(--#{$prefix}nav-tabs-border-width) solid transparent;
-    @include border-top-radius(var(--#{$prefix}nav-tabs-border-radius));
-
-    &:hover,
-    &:focus {
-      // Prevents active .nav-link tab overlapping focus outline of previous/next .nav-link
-      isolation: isolate;
-      border-color: var(--#{$prefix}nav-tabs-link-hover-border-color);
-    }
-  }
+  margin-bottom: $line-height;
 
   .nav-link.active,
   .nav-item.show .nav-link {
     color: var(--#{$prefix}nav-tabs-link-active-color);
     background-color: var(--#{$prefix}nav-tabs-link-active-bg);
-    border-color: var(--#{$prefix}nav-tabs-link-active-border-color);
-  }
 
-  .dropdown-menu {
-    // Make dropdown border overlap tab border
-    margin-top: calc(-1 * var(--#{$prefix}nav-tabs-border-width)); // stylelint-disable-line function-disallowed-list
-    // Remove the top rounded corners here since there is a hard edge above the menu
-    @include border-top-radius(0);
+    &::first-letter {
+      color: var(--#{$prefix}nav-hotkey-hover-color);
+    }
   }
 }
 
@@ -101,22 +100,23 @@
 //
 // Pills
 //
+// The active pill is black on yellow.
 
 .nav-pills {
   // scss-docs-start nav-pills-css-vars
-  --#{$prefix}nav-pills-border-radius: #{$nav-pills-border-radius};
+  --#{$prefix}nav-pills-border-radius: 0;
   --#{$prefix}nav-pills-link-active-color: #{$nav-pills-link-active-color};
   --#{$prefix}nav-pills-link-active-bg: #{$nav-pills-link-active-bg};
   // scss-docs-end nav-pills-css-vars
 
-  .nav-link {
-    @include border-radius(var(--#{$prefix}nav-pills-border-radius));
-  }
-
   .nav-link.active,
   .show > .nav-link {
     color: var(--#{$prefix}nav-pills-link-active-color);
-    @include gradient-bg(var(--#{$prefix}nav-pills-link-active-bg));
+    background-color: var(--#{$prefix}nav-pills-link-active-bg);
+
+    &::first-letter {
+      color: var(--#{$prefix}nav-pills-link-active-color);
+    }
   }
 }
 
@@ -124,6 +124,7 @@
 //
 // Underline
 //
+// The underline is drawn inside the row so the layout does not move.
 
 .nav-underline {
   // scss-docs-start nav-underline-css-vars
@@ -135,13 +136,9 @@
   gap: var(--#{$prefix}nav-underline-gap);
 
   .nav-link {
-    padding-right: 0;
-    padding-left: 0;
-    border-bottom: var(--#{$prefix}nav-underline-border-width) solid transparent;
-
     &:hover,
     &:focus {
-      border-bottom-color: currentcolor;
+      box-shadow: inset 0 calc(-1 * var(--#{$prefix}nav-underline-border-width)) 0 currentcolor; // stylelint-disable-line function-disallowed-list
     }
   }
 
@@ -149,7 +146,12 @@
   .show > .nav-link {
     font-weight: $font-weight-bold;
     color: var(--#{$prefix}nav-underline-link-active-color);
-    border-bottom-color: currentcolor;
+    background-color: $black;
+    box-shadow: inset 0 calc(-1 * var(--#{$prefix}nav-underline-border-width)) 0 currentcolor; // stylelint-disable-line function-disallowed-list
+
+    &::first-letter {
+      color: var(--#{$prefix}nav-underline-link-active-color);
+    }
   }
 }
 

@@ -1,6 +1,7 @@
 //
 // Base styles
 //
+// A card is a gray panel with a magenta title bar, like a window.
 
 .card {
   // scss-docs-start card-css-vars
@@ -8,12 +9,12 @@
   --#{$prefix}card-spacer-x: #{$card-spacer-x};
   --#{$prefix}card-title-spacer-y: #{$card-title-spacer-y};
   --#{$prefix}card-title-color: #{$card-title-color};
-  --#{$prefix}card-subtitle-color: #{$card-subtitle-color};
-  --#{$prefix}card-border-width: #{$card-border-width};
-  --#{$prefix}card-border-color: #{$card-border-color};
-  --#{$prefix}card-border-radius: #{$card-border-radius};
-  --#{$prefix}card-box-shadow: #{$card-box-shadow};
-  --#{$prefix}card-inner-border-radius: #{$card-inner-border-radius};
+  --#{$prefix}card-subtitle-color: #{$grayDark};
+  --#{$prefix}card-border-width: 0;
+  --#{$prefix}card-border-color: transparent;
+  --#{$prefix}card-border-radius: 0;
+  --#{$prefix}card-box-shadow: none;
+  --#{$prefix}card-inner-border-radius: 0;
   --#{$prefix}card-cap-padding-y: #{$card-cap-padding-y};
   --#{$prefix}card-cap-padding-x: #{$card-cap-padding-x};
   --#{$prefix}card-cap-bg: #{$card-cap-bg};
@@ -30,39 +31,35 @@
   flex-direction: column;
   min-width: 0; // See https://github.com/twbs/bootstrap/pull/22740#issuecomment-305868106
   height: var(--#{$prefix}card-height);
-  color: var(--#{$prefix}body-color);
+  color: var(--#{$prefix}card-color);
   word-wrap: break-word;
   background-color: var(--#{$prefix}card-bg);
   background-clip: border-box;
-  border: var(--#{$prefix}card-border-width) solid var(--#{$prefix}card-border-color);
-  @include border-radius(var(--#{$prefix}card-border-radius));
-  @include box-shadow(var(--#{$prefix}card-box-shadow));
+  border: 0;
 
   > hr {
     margin-right: 0;
     margin-left: 0;
+    border-top-color: $black;
   }
 
   > .list-group {
-    border-top: inherit;
-    border-bottom: inherit;
+    margin: 0;
+    border: 0;
 
-    &:first-child {
-      border-top-width: 0;
-      @include border-top-radius(var(--#{$prefix}card-inner-border-radius));
-    }
-
-    &:last-child  {
-      border-bottom-width: 0;
-      @include border-bottom-radius(var(--#{$prefix}card-inner-border-radius));
+    .list-group-item {
+      color: var(--#{$prefix}card-color);
     }
   }
 
-  // Due to specificity of the above selector (`.card > .list-group`), we must
-  // use a child selector here to prevent double borders.
-  > .card-header + .list-group,
-  > .list-group + .card-footer {
-    border-top: 0;
+  // Links on a gray panel are blue
+  a:not(.btn):not(.list-group-item):not(.nav-link):not(.dropdown-item):not(.card-link) {
+    color: $blue;
+
+    &:hover,
+    &:focus {
+      color: $white;
+    }
   }
 }
 
@@ -72,16 +69,28 @@
   flex: 1 1 auto;
   padding: var(--#{$prefix}card-spacer-y) var(--#{$prefix}card-spacer-x);
   color: var(--#{$prefix}card-color);
+  @include plain-headers();
 }
 
-.card-title {
+.card .card-title {
   margin-bottom: var(--#{$prefix}card-title-spacer-y);
   color: var(--#{$prefix}card-title-color);
+
+  &::before {
+    margin-right: $space-width;
+    content: ">>";
+  }
+
+  &::after {
+    margin-left: $space-width;
+    content: "<<";
+  }
 }
 
 .card-subtitle {
-  margin-top: calc(-.5 * var(--#{$prefix}card-title-spacer-y)); // stylelint-disable-line function-disallowed-list
+  margin-top: 0;
   margin-bottom: 0;
+  padding-left: $space-width * 3;
   color: var(--#{$prefix}card-subtitle-color);
 }
 
@@ -90,8 +99,12 @@
 }
 
 .card-link {
+  color: $blue;
+  text-decoration: none;
+
   &:hover {
-    text-decoration: if($link-hover-decoration == underline, none, null);
+    color: $white;
+    text-decoration: none;
   }
 
   + .card-link {
@@ -108,10 +121,20 @@
   margin-bottom: 0; // Removes the default margin-bottom of <hN>
   color: var(--#{$prefix}card-cap-color);
   background-color: var(--#{$prefix}card-cap-bg);
-  border-bottom: var(--#{$prefix}card-border-width) solid var(--#{$prefix}card-border-color);
+  border-bottom: 0;
+  @include plain-headers();
 
-  &:first-child {
-    @include border-radius(var(--#{$prefix}card-inner-border-radius) var(--#{$prefix}card-inner-border-radius) 0 0);
+  a:not(.btn) {
+    color: var(--#{$prefix}card-cap-color);
+  }
+}
+
+.card-header,
+.card-footer {
+  .text-body-secondary,
+  .text-body-tertiary,
+  .text-muted {
+    color: var(--#{$prefix}card-cap-color) !important; // stylelint-disable-line declaration-no-important
   }
 }
 
@@ -119,11 +142,7 @@
   padding: var(--#{$prefix}card-cap-padding-y) var(--#{$prefix}card-cap-padding-x);
   color: var(--#{$prefix}card-cap-color);
   background-color: var(--#{$prefix}card-cap-bg);
-  border-top: var(--#{$prefix}card-border-width) solid var(--#{$prefix}card-border-color);
-
-  &:last-child {
-    @include border-radius(0 0 var(--#{$prefix}card-inner-border-radius) var(--#{$prefix}card-inner-border-radius));
-  }
+  border-top: 0;
 }
 
 
@@ -132,20 +151,31 @@
 //
 
 .card-header-tabs {
-  margin-right: calc(-.5 * var(--#{$prefix}card-cap-padding-x)); // stylelint-disable-line function-disallowed-list
-  margin-bottom: calc(-1 * var(--#{$prefix}card-cap-padding-y)); // stylelint-disable-line function-disallowed-list
-  margin-left: calc(-.5 * var(--#{$prefix}card-cap-padding-x)); // stylelint-disable-line function-disallowed-list
+  margin: 0 calc(-1 * var(--#{$prefix}card-cap-padding-x)) 0; // stylelint-disable-line function-disallowed-list
+  padding-left: $space-width;
   border-bottom: 0;
 
+  .nav-link {
+    --#{$prefix}nav-link-color: var(--#{$prefix}card-cap-color);
+    --#{$prefix}nav-link-hover-color: var(--#{$prefix}card-cap-color);
+    --#{$prefix}nav-tabs-border-color: var(--#{$prefix}card-cap-color);
+  }
+
   .nav-link.active {
+    --#{$prefix}nav-tabs-link-active-color: var(--#{$prefix}card-color);
     background-color: var(--#{$prefix}card-bg);
     border-bottom-color: var(--#{$prefix}card-bg);
   }
 }
 
 .card-header-pills {
-  margin-right: calc(-.5 * var(--#{$prefix}card-cap-padding-x)); // stylelint-disable-line function-disallowed-list
-  margin-left: calc(-.5 * var(--#{$prefix}card-cap-padding-x)); // stylelint-disable-line function-disallowed-list
+  margin-right: calc(-1 * var(--#{$prefix}card-cap-padding-x)); // stylelint-disable-line function-disallowed-list
+  margin-left: calc(-1 * var(--#{$prefix}card-cap-padding-x)); // stylelint-disable-line function-disallowed-list
+
+  .nav-link {
+    --#{$prefix}nav-link-color: var(--#{$prefix}card-cap-color);
+    --#{$prefix}nav-link-hover-color: var(--#{$prefix}card-cap-color);
+  }
 }
 
 // Card image
@@ -156,7 +186,6 @@
   bottom: 0;
   left: 0;
   padding: var(--#{$prefix}card-img-overlay-padding);
-  @include border-radius(var(--#{$prefix}card-inner-border-radius));
 }
 
 .card-img,
@@ -164,17 +193,6 @@
 .card-img-bottom {
   width: 100%; // Required because we use flexbox and this inherently applies align-self: stretch
 }
-
-.card-img,
-.card-img-top {
-  @include border-top-radius(var(--#{$prefix}card-inner-border-radius));
-}
-
-.card-img,
-.card-img-bottom {
-  @include border-bottom-radius(var(--#{$prefix}card-inner-border-radius));
-}
-
 
 //
 // Card groups
@@ -198,41 +216,8 @@
       margin-bottom: 0;
 
       + .card {
-        margin-left: 0;
+        margin-left: var(--#{$prefix}card-group-margin);
         border-left: 0;
-      }
-
-      // Handle rounded corners
-      @if $enable-rounded {
-        &:not(:last-child) {
-          @include border-end-radius(0);
-
-          .card-img-top,
-          .card-header {
-            // stylelint-disable-next-line property-disallowed-list
-            border-top-right-radius: 0;
-          }
-          .card-img-bottom,
-          .card-footer {
-            // stylelint-disable-next-line property-disallowed-list
-            border-bottom-right-radius: 0;
-          }
-        }
-
-        &:not(:first-child) {
-          @include border-start-radius(0);
-
-          .card-img-top,
-          .card-header {
-            // stylelint-disable-next-line property-disallowed-list
-            border-top-left-radius: 0;
-          }
-          .card-img-bottom,
-          .card-footer {
-            // stylelint-disable-next-line property-disallowed-list
-            border-bottom-left-radius: 0;
-          }
-        }
       }
     }
   }

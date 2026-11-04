@@ -1,44 +1,103 @@
+// stylelint-disable declaration-no-important, selector-list-comma-newline-after
+
 //
 // Headings
 //
-.h1 {
-  @extend h1;
+// There is only one font size, so the heading levels are told apart by
+// decoration instead of scale:
+//
+//   h1  A CYAN BANNER
+//   h2  centered white text
+//   h3  >>> white text <<<
+//   h4  magenta text
+//   h5  white text
+//   h6  white text
+//
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  padding: 0;
+  margin: 0;
+  color: $white;
+
+  .text-muted,
+  .text-body-secondary {
+    color: $grayLight !important;
+  }
 }
 
-.h2 {
-  @extend h2;
+h1, .h1 {
+  padding: $line-height ($space-width * 2);
+  margin-bottom: $line-height;
+  color: $black;
+  text-transform: uppercase;
+  background: $cyan;
+
+  .text-muted,
+  .text-body-secondary {
+    color: $grayDark !important;
+  }
+
+  a {
+    color: $black;
+  }
 }
 
-.h3 {
-  @extend h3;
+h2, .h2 {
+  text-align: center;
+  white-space: nowrap;
 }
 
-.h4 {
-  @extend h4;
+// A flex row so that stray whitespace in the markup is trimmed and the
+// arrows sit exactly one column from the text; nowrap keeps it one row.
+h3, .h3 {
+  display: flex;
+  gap: $space-width;
+  white-space: nowrap;
+
+  &::before {
+    content: ">>>";
+  }
+
+  &::after {
+    content: "<<<";
+  }
 }
 
-.h5 {
-  @extend h5;
+h4, .h4 {
+  color: $magentaBright;
 }
 
-.h6 {
-  @extend h6;
-}
-
-
+// The lead is a paragraph in a gray frame
 .lead {
   @include font-size($lead-font-size);
   font-weight: $lead-font-weight;
+  color: $white;
+  @include dos-border-single($grayLight, $character-space: 1);
+  @include dos-uncollapse-margin();
 }
 
 // Type display classes
+//
+// Display headings are the same size as everything else. They get the
+// reverse video treatment instead.
 @each $display, $font-size in $display-font-sizes {
   .display-#{$display} {
+    display: inline-block;
+    padding: 0 $space-width;
+    margin-bottom: $line-height;
     @include font-size($font-size);
     font-family: $display-font-family;
     font-style: $display-font-style;
     font-weight: $display-font-weight;
     line-height: $display-line-height;
+    color: $black;
+    text-transform: uppercase;
+    background: $grayLight;
   }
 }
 
@@ -86,8 +145,11 @@
 
 // Blockquotes
 .blockquote {
+  padding-left: $space-width - $dos-border-width;
   margin-bottom: $blockquote-margin-y;
   @include font-size($blockquote-font-size);
+  color: $white;
+  border-left: $dos-border-width solid $grayLight;
 
   > :last-child {
     margin-bottom: 0;

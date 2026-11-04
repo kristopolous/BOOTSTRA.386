@@ -36,14 +36,11 @@ $enable-cssgrid: true;
 // Load docs components
 @import "variables";
 @import "navbar";
-@import "search";
 @import "masthead";
-@import "ads";
 @import "content";
 @import "skippy";
 @import "sidebar";
 @import "layout";
-@import "toc";
 @import "footer";
 @import "component-examples";
 @import "buttons";

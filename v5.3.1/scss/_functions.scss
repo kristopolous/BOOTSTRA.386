@@ -300,3 +300,19 @@ $_luminance-list: .0008 .001 .0011 .0013 .0015 .0017 .002 .0022 .0025 .0027 .003
   }
   @return $result;
 }
+
+// BOOTSTRA/386: the palette is 16 colors. Each color has an intensity bit;
+// these walk a color up or down that bit. Unknown colors are returned as is.
+@function dos-bright($color) {
+  @if map-has-key($brightMap, $color) {
+    @return map-get($brightMap, $color);
+  }
+  @return $color;
+}
+
+@function dos-dark($color) {
+  @if map-has-key($darkMap, $color) {
+    @return map-get($darkMap, $color);
+  }
+  @return $color;
+}

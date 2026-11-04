@@ -1,40 +1,40 @@
 //
 // Callouts
 //
+// A callout is a note on black with a thick colored rule down its left side.
 
 .bd-callout {
-  --#{$prefix}link-color-rgb: var(--bd-callout-link);
-  --#{$prefix}code-color: var(--bd-callout-code-color);
+  --#{$prefix}link-color-rgb: #{to-rgb($yellow)};
+  --#{$prefix}code-color: #{$cyanBright};
 
-  padding: 1.25rem;
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
-  color: var(--bd-callout-color, inherit);
-  background-color: var(--bd-callout-bg, var(--bs-gray-100));
-  border-left: .25rem solid var(--bd-callout-border, var(--bs-gray-300));
+  padding: $line-height $space-width * 2;
+  margin-top: 0;
+  margin-bottom: $line-height;
+  color: $white;
+  background-color: $black;
+  border-left: $space-width solid var(--bd-callout-border, #{$grayDark});
+  @include plain-headers();
 
   h4 {
-    margin-bottom: .25rem;
+    margin-bottom: 0;
   }
 
   > :last-child {
     margin-bottom: 0;
   }
 
-  + .bd-callout {
-    margin-top: -.25rem;
+  .highlight {
+    background-color: $grayDark;
   }
 
-  .highlight {
-    background-color: rgba($black, .05);
+  strong {
+    color: $white;
   }
 }
 
 // Variations
 @each $variant in $bd-callout-variants {
   .bd-callout-#{$variant} {
-    --bd-callout-color: var(--bs-#{$variant}-text-emphasis);
-    --bd-callout-bg: var(--bs-#{$variant}-bg-subtle);
-    --bd-callout-border: var(--bs-#{$variant}-border-subtle);
+    --bd-callout-border: var(--bs-#{$variant});
   }
 }

@@ -1,10 +1,14 @@
+// Placeholders are ▒ where the text will be. The glow steps through the
+// shades, the wave shuffles the pattern along.
+
 .placeholder {
   display: inline-block;
-  min-height: 1em;
+  min-height: $line-height;
   vertical-align: middle;
   cursor: wait;
-  background-color: currentcolor;
-  opacity: $placeholder-opacity-max;
+  background-color: transparent;
+  background-image: dos-glyph("shade-50", "grayLight");
+  opacity: 1;
 
   &.btn::before {
     display: inline-block;
@@ -14,38 +18,34 @@
 
 // Sizing
 .placeholder-xs {
-  min-height: .6em;
+  min-height: $line-height;
 }
 
 .placeholder-sm {
-  min-height: .8em;
+  min-height: $line-height;
 }
 
 .placeholder-lg {
-  min-height: 1.2em;
+  min-height: $line-height * 2;
 }
 
 // Animation
 .placeholder-glow {
   .placeholder {
-    animation: placeholder-glow 2s ease-in-out infinite;
+    animation: placeholder-glow 1.5s steps(1) infinite;
   }
 }
 
 @keyframes placeholder-glow {
-  50% {
-    opacity: $placeholder-opacity-min;
-  }
+  0% { background-image: dos-glyph("shade-25", "grayLight"); }
+  33% { background-image: dos-glyph("shade-50", "grayLight"); }
+  66% { background-image: dos-glyph("shade-75", "grayLight"); }
 }
 
 .placeholder-wave {
-  mask-image: linear-gradient(130deg, $black 55%, rgba(0, 0, 0, (1 - $placeholder-opacity-min)) 75%, $black 95%);
-  mask-size: 200% 100%;
-  animation: placeholder-wave 2s linear infinite;
+  animation: placeholder-wave 1s steps(2) infinite;
 }
 
 @keyframes placeholder-wave {
-  100% {
-    mask-position: -200% 0%;
-  }
+  100% { background-position-x: $space-width * 2; }
 }
