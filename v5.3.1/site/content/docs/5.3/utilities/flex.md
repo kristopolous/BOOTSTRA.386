@@ -22,7 +22,7 @@ Responsive variations also exist for `.d-flex` and `.d-inline-flex`.
 
 {{< markdown >}}
 {{< flex.inline >}}
-{{- range $.Site.Data.breakpoints }}
+{{- range hugo.Data.breakpoints }}
 - `.d{{ .abbr }}-flex`
 - `.d{{ .abbr }}-inline-flex`
 {{- end -}}
@@ -67,7 +67,7 @@ Responsive variations also exist for `flex-direction`.
 
 {{< markdown >}}
 {{< flex.inline >}}
-{{- range $.Site.Data.breakpoints }}
+{{- range hugo.Data.breakpoints }}
 - `.flex{{ .abbr }}-row`
 - `.flex{{ .abbr }}-row-reverse`
 - `.flex{{ .abbr }}-column`
@@ -126,7 +126,7 @@ Responsive variations also exist for `justify-content`.
 
 {{< markdown >}}
 {{< flex.inline >}}
-{{- range $.Site.Data.breakpoints }}
+{{- range hugo.Data.breakpoints }}
 - `.justify-content{{ .abbr }}-start`
 - `.justify-content{{ .abbr }}-end`
 - `.justify-content{{ .abbr }}-center`
@@ -181,7 +181,7 @@ Responsive variations also exist for `align-items`.
 
 {{< markdown >}}
 {{< flex.inline >}}
-{{- range $.Site.Data.breakpoints }}
+{{- range hugo.Data.breakpoints }}
 - `.align-items{{ .abbr }}-start`
 - `.align-items{{ .abbr }}-end`
 - `.align-items{{ .abbr }}-center`
@@ -235,7 +235,7 @@ Responsive variations also exist for `align-self`.
 
 {{< markdown >}}
 {{< flex.inline >}}
-{{- range $.Site.Data.breakpoints }}
+{{- range hugo.Data.breakpoints }}
 - `.align-self{{ .abbr }}-start`
 - `.align-self{{ .abbr }}-end`
 - `.align-self{{ .abbr }}-center`
@@ -261,7 +261,7 @@ Responsive variations also exist for `flex-fill`.
 
 {{< markdown >}}
 {{< flex.inline >}}
-{{- range $.Site.Data.breakpoints }}
+{{- range hugo.Data.breakpoints }}
 - `.flex{{ .abbr }}-fill`
 {{- end -}}
 {{< /flex.inline >}}
@@ -292,7 +292,7 @@ Responsive variations also exist for `flex-grow` and `flex-shrink`.
 
 {{< markdown >}}
 {{< flex.inline >}}
-{{- range $.Site.Data.breakpoints }}
+{{- range hugo.Data.breakpoints }}
 - `.flex{{ .abbr }}-{grow|shrink}-0`
 - `.flex{{ .abbr }}-{grow|shrink}-1`
 {{- end -}}
@@ -416,7 +416,7 @@ Responsive variations also exist for `flex-wrap`.
 
 {{< markdown >}}
 {{< flex.inline >}}
-{{- range $.Site.Data.breakpoints }}
+{{- range hugo.Data.breakpoints }}
 - `.flex{{ .abbr }}-nowrap`
 - `.flex{{ .abbr }}-wrap`
 - `.flex{{ .abbr }}-wrap-reverse`
@@ -440,7 +440,7 @@ Responsive variations also exist for `order`.
 
 {{< markdown >}}
 {{< flex.inline >}}
-{{- range $bp := $.Site.Data.breakpoints -}}
+{{- range $bp := hugo.Data.breakpoints -}}
 {{- range (seq 0 5) }}
 - `.order{{ $bp.abbr }}-{{ . }}`
 {{- end -}}
@@ -452,7 +452,7 @@ Additionally there are also responsive `.order-first` and `.order-last` classes 
 
 {{< markdown >}}
 {{< flex.inline >}}
-{{- range $bp := $.Site.Data.breakpoints -}}
+{{- range $bp := hugo.Data.breakpoints -}}
 {{- range (slice "first" "last") }}
 - `.order{{ $bp.abbr }}-{{ . }}`
 {{- end -}}
@@ -616,7 +616,7 @@ Responsive variations also exist for `align-content`.
 
 {{< markdown >}}
 {{< flex.inline >}}
-{{- range $.Site.Data.breakpoints }}
+{{- range hugo.Data.breakpoints }}
 - `.align-content{{ .abbr }}-start`
 - `.align-content{{ .abbr }}-end`
 - `.align-content{{ .abbr }}-center`

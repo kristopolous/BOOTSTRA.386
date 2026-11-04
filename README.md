@@ -6,7 +6,7 @@ Bootstrap/386 is a Twitter bootstrap v2/3/4/5 theme to make webpages look like t
 ### Download for your favorite bootstrap version with all the necessary JS and CSS to get started right away:
 
  * BOOTSTRA/386 ][ (2013) [demo](http://kristopolous.github.io/BOOTSTRA.386/) [144KB](https://github.com/kristopolous/BOOTSTRA.386/blob/master/bootstra.386-latest-v2.zip?raw=true)
- * BOOTSTRA/386 <i>iii</i> (2015) [423KB](https://github.com/kristopolous/BOOTSTRA.386/blob/master/bootstra.386-latest-v3.zip?raw=true)
+ * BOOTSTRA/386 <i>iii</i> (2015) - [demo](http://kristopolous.github.io/BOOTSTRA.386/v3.3.2/) - [current build (230KB)](https://github.com/kristopolous/BOOTSTRA.386/blob/master/bootstra.386-latest-v3.zip?raw=true)
  * BOOTSTRA/386 4 (2020) - [demo](http://kristopolous.github.io/BOOTSTRA.386/v4.4.1/) [remaining issues](https://github.com/kristopolous/BOOTSTRA.386/issues/85) - [current build](https://github.com/kristopolous/BOOTSTRA.386/blob/master/bootstra.386-latest-v4.zip?raw=true)
  * ブートストラップ/386 5.0 (2023-2026) - [demo](https://kristopolous.github.io/BOOTSTRA.386/v5.3.1/) [source](v5.3.1/) - [current build](https://github.com/kristopolous/BOOTSTRA.386/blob/master/bootstra.386-latest-v5.zip?raw=true) 
 

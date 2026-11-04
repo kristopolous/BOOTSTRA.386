@@ -16,7 +16,7 @@ Alerts are available for any length of text, as well as an optional close button
 
 {{< example >}}
 {{< alerts.inline >}}
-{{- range (index $.Site.Data "theme-colors") }}
+{{- range (index hugo.Data "theme-colors") }}
 <div class="alert alert-{{ .name }}" role="alert">
   A simple {{ .name }} alert—check it out!
 </div>{{- end -}}
@@ -46,7 +46,7 @@ Use the `.alert-link` utility class to quickly provide matching colored links wi
 
 {{< example >}}
 {{< alerts.inline >}}
-{{- range (index $.Site.Data "theme-colors") }}
+{{- range (index hugo.Data "theme-colors") }}
 <div class="alert alert-{{ .name }}" role="alert">
   A simple {{ .name }} alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
 </div>{{ end -}}

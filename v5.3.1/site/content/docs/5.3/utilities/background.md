@@ -20,7 +20,7 @@ Background utilities like `.bg-*` that generated from our original `$theme-color
 
 {{< example >}}
 {{< colors.inline >}}
-{{- range (index $.Site.Data "theme-colors") }}
+{{- range (index hugo.Data "theme-colors") }}
 <div class="p-3 mb-2 bg-{{ .name }}{{ if .contrast_color }} text-{{ .contrast_color }}{{ else }} text-white{{ end }}">.bg-{{ .name }}</div>
 <div class="p-3 mb-2 bg-{{ .name }}-subtle text-emphasis-{{ .name }}">.bg-{{ .name }}-subtle</div>
 {{- end -}}
@@ -42,7 +42,7 @@ Do you need a gradient in your custom CSS? Just add `background-image: var(--bs-
 
 {{< markdown >}}
 {{< colors.inline >}}
-{{- range (index $.Site.Data "theme-colors") }}
+{{- range (index hugo.Data "theme-colors") }}
 <div class="p-3 mb-2 bg-{{ .name }} bg-gradient{{ with .contrast_color }} text-{{ . }}{{ else }} text-white{{ end }}">.bg-{{ .name }}.bg-gradient</div>
 {{- end -}}
 {{< /colors.inline >}}

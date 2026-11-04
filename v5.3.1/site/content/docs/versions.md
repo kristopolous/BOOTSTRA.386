@@ -5,7 +5,7 @@ description: An appendix of hosted documentation for nearly every release of Boo
 
 {{< list-versions.inline >}}
 <div class="row">
-  {{- range $release := sort (index $.Site.Data "docs-versions") "group" "desc" }}
+  {{- range $release := sort (index hugo.Data "docs-versions") "group" "desc" }}
   <div class="col-md-6 col-lg-4 col-xl mb-4">
     <h2>{{ $release.group }}</h2>
     <p>{{ $release.description }}</p>

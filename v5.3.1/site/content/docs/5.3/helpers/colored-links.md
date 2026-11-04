@@ -16,7 +16,7 @@ You can use the `.link-*` classes to colorize links. Unlike the [`.text-*` class
 
 {{< example >}}
 {{< colored-links.inline >}}
-{{- range (index $.Site.Data "theme-colors") }}
+{{- range (index hugo.Data "theme-colors") }}
 <p><a href="#" class="link-{{ .name }}">{{ .name | title }} link</a></p>
 {{- end -}}
 {{< /colored-links.inline >}}
@@ -35,7 +35,7 @@ Colored links can also be modified by our [link utilities]({{< docsref "/utiliti
 
 {{< example >}}
 {{< colored-links.inline >}}
-{{- range (index $.Site.Data "theme-colors") }}
+{{- range (index hugo.Data "theme-colors") }}
 <p><a href="#" class="link-{{ .name }} link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">{{ .name | title }} link</a></p>
 {{- end -}}
 {{< /colored-links.inline >}}

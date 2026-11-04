@@ -370,7 +370,7 @@ We use a subset of all colors to create a smaller color palette for generating c
 
 <div class="row">
   {{< theme-colors.inline >}}
-  {{- range (index $.Site.Data "theme-colors") }}
+  {{- range (index hugo.Data "theme-colors") }}
     <div class="col-md-4">
       <div class="p-3 mb-3 text-bg-{{ .name }} rounded-3">{{ .name | title }}</div>
     </div>
@@ -392,7 +392,7 @@ Be sure to monitor contrast ratios as you customize colors. As shown below, we'v
 
 <div class="row font-monospace">
   {{< theme-colors.inline >}}
-  {{- range $color := $.Site.Data.colors }}
+  {{- range $color := hugo.Data.colors }}
     {{- if (and (not (eq $color.name "white")) (not (eq $color.name "gray")) (not (eq $color.name "gray-dark"))) }}
     <div class="col-md-4 mb-3">
       <div class="p-3 mb-2 position-relative swatch-{{ $color.name }}">
@@ -411,7 +411,7 @@ Be sure to monitor contrast ratios as you customize colors. As shown below, we'v
       <strong class="d-block">$gray-500</strong>
       #adb5bd
     </div>
-  {{- range $.Site.Data.grays }}
+  {{- range hugo.Data.grays }}
     <div class="p-3 bd-gray-{{ .name }}">$gray-{{ .name }}</div>
   {{ end -}}
   </div>

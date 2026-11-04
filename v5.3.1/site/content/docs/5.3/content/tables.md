@@ -38,7 +38,7 @@ Use contextual classes to color tables, table rows or individual cells.
         <td>Cell</td>
       </tr>
       {{< table.inline >}}
-      {{- range (index $.Site.Data "theme-colors") }}
+      {{- range (index hugo.Data "theme-colors") }}
         <tr class="table-{{ .name }}">
           <th scope="row">{{ .name | title }}</th>
           <td>Cell</td>
@@ -52,20 +52,20 @@ Use contextual classes to color tables, table rows or individual cells.
 
 {{< highlight html >}}
 <!-- On tables -->{{< table.inline >}}
-{{- range (index $.Site.Data "theme-colors") }}
+{{- range (index hugo.Data "theme-colors") }}
 <table class="table-{{ .name }}">...</table>
 {{- end -}}
 {{< /table.inline >}}
 
 <!-- On rows -->{{< table.inline >}}
-{{- range (index $.Site.Data "theme-colors") }}
+{{- range (index hugo.Data "theme-colors") }}
 <tr class="table-{{ .name }}">...</tr>
 {{- end -}}
 {{< /table.inline >}}
 
 <!-- On cells (`td` or `th`) -->
 <tr>{{< table.inline >}}
-{{- range (index $.Site.Data "theme-colors") }}
+{{- range (index hugo.Data "theme-colors") }}
   <td class="table-{{ .name }}">...</td>
 {{- end -}}
 {{< /table.inline >}}
@@ -749,7 +749,7 @@ Use `.table-responsive{-sm|-md|-lg|-xl|-xxl}` as needed to create responsive tab
 **These tables may appear broken until their responsive styles apply at specific viewport widths.**
 
 {{< tables.inline >}}
-{{ range $.Site.Data.breakpoints }}
+{{ range hugo.Data.breakpoints }}
 {{ if not (eq . "xs") }}
 <div class="bd-example">
   <div class="table-responsive{{ .abbr }}">
@@ -811,7 +811,7 @@ Use `.table-responsive{-sm|-md|-lg|-xl|-xxl}` as needed to create responsive tab
 
 {{< highlight html >}}
 {{< tables.inline >}}
-{{- range $.Site.Data.breakpoints -}}
+{{- range hugo.Data.breakpoints -}}
 {{- if not (eq . "xs") }}
 <div class="table-responsive{{ .abbr }}">
   <table class="table">

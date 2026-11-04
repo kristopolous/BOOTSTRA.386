@@ -1,9 +1,3 @@
-/*!
- * Bootstrap v3.3.2 (http://getbootstrap.com)
- * Copyright 2011-2016 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
-
 .btn-default .badge,
 .btn-primary .badge,
 .btn-success .badge,
@@ -41,106 +35,106 @@
 .btn-primary {
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   background-repeat: repeat-x;
-  border-color: #0aa;
+  border-color: #00AAAA;
 }
 .btn-primary:hover,
 .btn-primary:focus {
-  background-color: #0aa;
+  background-color: #00AAAA;
   background-position: 0 -15px;
 }
 .btn-primary:active,
 .btn-primary.active {
-  background-color: #0aa;
-  border-color: #0aa;
+  background-color: #00AAAA;
+  border-color: #00AAAA;
 }
 .btn-primary.disabled,
 .btn-primary:disabled,
 .btn-primary[disabled] {
-  background-color: #0aa;
+  background-color: #00AAAA;
   background-image: none;
 }
 .btn-success {
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   background-repeat: repeat-x;
-  border-color: #0a0;
+  border-color: #00AA00;
 }
 .btn-success:hover,
 .btn-success:focus {
-  background-color: #0a0;
+  background-color: #00AA00;
   background-position: 0 -15px;
 }
 .btn-success:active,
 .btn-success.active {
-  background-color: #0a0;
-  border-color: #0a0;
+  background-color: #00AA00;
+  border-color: #00AA00;
 }
 .btn-success.disabled,
 .btn-success:disabled,
 .btn-success[disabled] {
-  background-color: #0a0;
+  background-color: #00AA00;
   background-image: none;
 }
 .btn-info {
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   background-repeat: repeat-x;
-  border-color: #a50;
+  border-color: #AA5500;
 }
 .btn-info:hover,
 .btn-info:focus {
-  background-color: #a50;
+  background-color: #AA5500;
   background-position: 0 -15px;
 }
 .btn-info:active,
 .btn-info.active {
-  background-color: #a50;
-  border-color: #a50;
+  background-color: #AA5500;
+  border-color: #AA5500;
 }
 .btn-info.disabled,
 .btn-info:disabled,
 .btn-info[disabled] {
-  background-color: #a50;
+  background-color: #AA5500;
   background-image: none;
 }
 .btn-warning {
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   background-repeat: repeat-x;
-  border-color: #a0a;
+  border-color: #AA00AA;
 }
 .btn-warning:hover,
 .btn-warning:focus {
-  background-color: #a0a;
+  background-color: #AA00AA;
   background-position: 0 -15px;
 }
 .btn-warning:active,
 .btn-warning.active {
-  background-color: #a0a;
-  border-color: #a0a;
+  background-color: #AA00AA;
+  border-color: #AA00AA;
 }
 .btn-warning.disabled,
 .btn-warning:disabled,
 .btn-warning[disabled] {
-  background-color: #a0a;
+  background-color: #AA00AA;
   background-image: none;
 }
 .btn-danger {
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   background-repeat: repeat-x;
-  border-color: #a00;
+  border-color: #AA0000;
 }
 .btn-danger:hover,
 .btn-danger:focus {
-  background-color: #a00;
+  background-color: #AA0000;
   background-position: 0 -15px;
 }
 .btn-danger:active,
 .btn-danger.active {
-  background-color: #a00;
-  border-color: #a00;
+  background-color: #AA0000;
+  border-color: #AA0000;
 }
 .btn-danger.disabled,
 .btn-danger:disabled,
 .btn-danger[disabled] {
-  background-color: #a00;
+  background-color: #AA0000;
   background-image: none;
 }
 .dropdown-menu > li > a:hover,
@@ -166,13 +160,13 @@
   }
 }
 .alert-success {
-  border-color: #0a0;
+  border-color: #00AA00;
 }
 .alert-info {
-  border-color: #a50;
+  border-color: #AA5500;
 }
 .alert-warning {
-  border-color: #a0a;
+  border-color: #AA00AA;
 }
 .alert-danger {
   border-color: #000;
@@ -188,6 +182,5 @@
   text-shadow: none;
 }
 .well {
-  border-color: #0a0;
+  border-color: #00AA00;
 }
-/*# sourceMappingURL=bootstrap-theme.css.map */

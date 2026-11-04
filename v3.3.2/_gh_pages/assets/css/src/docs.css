@@ -1578,3 +1578,501 @@ h1[id] {
   -webkit-box-shadow: 0 0 8px rgba(82,168,236,.6);
           box-shadow: 0 0 8px rgba(82,168,236,.6);
 }
+
+
+/*
+ * BOOTSTRA/386
+ *
+ * The docs chrome in the 16 colors, after the v2.3.1 docs: a gray menu
+ * bar with red hot keys, a cyan page header, a boxed side navigation and
+ * examples sitting right on the blue. Everything above is stock and is
+ * overridden here rather than edited.
+ */
+
+/* Main navigation */
+.bs-docs-nav {
+  min-height: 19px;
+  background-color: #bbb;
+  border: 0;
+}
+.bs-docs-nav .navbar-brand,
+.bs-docs-nav .navbar-nav > li > a {
+  height: 19px;
+  padding: 0 10px;
+  font-weight: normal;
+  line-height: 19px;
+  color: #000;
+}
+.bs-docs-nav .navbar-brand {
+  color: #000084;
+}
+.bs-docs-nav .navbar-nav > li > a::first-letter {
+  float: left;
+  color: #aa0000;
+}
+.bs-docs-nav .navbar-nav > li > a:hover,
+.bs-docs-nav .navbar-nav > li > a:focus,
+.bs-docs-nav .navbar-nav > .active > a,
+.bs-docs-nav .navbar-nav > .active > a:hover,
+.bs-docs-nav .navbar-nav > .active > a:focus {
+  color: #fff;
+  background-color: #000;
+}
+.bs-docs-nav .navbar-nav > li > a:hover::first-letter,
+.bs-docs-nav .navbar-nav > .active > a::first-letter {
+  color: #ff5555;
+}
+.bs-docs-nav .navbar-toggle {
+  padding: 0 10px;
+  margin: 0;
+  color: #000;
+  border: 0;
+}
+.bs-docs-nav .navbar-toggle .icon-bar {
+  background-color: #000;
+}
+
+/* Page headers */
+.bs-docs-header,
+.bs-docs-masthead {
+  padding: 19px 0;
+  margin-bottom: 19px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #00aaaa;
+  background-image: none;
+  border: 0;
+}
+.bs-docs-header h1,
+.bs-docs-masthead h1 {
+  margin: 0 0 19px;
+  font-size: 18px;
+  line-height: 19px;
+  color: #000;
+  text-transform: uppercase;
+}
+.bs-docs-header p,
+.bs-docs-masthead .lead {
+  margin: 0;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 19px;
+  color: #fff;
+}
+@media (min-width: 768px) {
+  .bs-docs-header {
+    padding: 19px 0;
+    font-size: 18px;
+  }
+  .bs-docs-header h1 {
+    font-size: 18px;
+    line-height: 19px;
+  }
+}
+@media (min-width: 992px) {
+  .bs-docs-header h1,
+  .bs-docs-header p {
+    margin-right: 0;
+  }
+}
+.bs-docs-masthead .btn-outline-inverse {
+  color: #000;
+  background-color: #bbb;
+  border: 0;
+}
+
+/* Side navigation: a gray box with a black frame and a drop shadow */
+.bs-docs-sidebar {
+  padding-left: 0;
+}
+@media (min-width: 768px) {
+  .bs-docs-sidebar {
+    padding-left: 0;
+  }
+}
+.bs-docs-sidenav {
+  padding: 9px 10px;
+  margin: 10px 14px 19px 2px;
+  color: #000;
+  background-color: #bbb;
+  border: 2px solid #000;
+  box-shadow: 0 0 0 4px #bbb, 10px 10px 0 4px #000;
+}
+.bs-docs-sidebar .nav > li > a {
+  padding: 0 10px;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 19px;
+  color: #000;
+  border: 0;
+}
+.bs-docs-sidebar .nav > li > a::first-letter {
+  float: left;
+  color: #aa0000;
+}
+.bs-docs-sidebar .nav > li > a:hover,
+.bs-docs-sidebar .nav > li > a:focus {
+  padding-left: 10px;
+  color: #fff;
+  background-color: #000;
+  border: 0;
+}
+.bs-docs-sidebar .nav > .active > a,
+.bs-docs-sidebar .nav > .active:hover > a,
+.bs-docs-sidebar .nav > .active:focus > a {
+  padding-left: 10px;
+  font-weight: normal;
+  color: #fff;
+  background-color: #00aaaa;
+  border: 0;
+}
+.bs-docs-sidebar .nav > li > a:hover::first-letter,
+.bs-docs-sidebar .nav > .active > a::first-letter {
+  color: #ff5555;
+}
+.bs-docs-sidebar .nav .nav > li > a {
+  padding-left: 20px;
+  font-size: 18px;
+}
+.bs-docs-sidebar .nav .nav > li > a:hover,
+.bs-docs-sidebar .nav .nav > li > a:focus,
+.bs-docs-sidebar .nav .nav > .active > a,
+.bs-docs-sidebar .nav .nav > .active:hover > a,
+.bs-docs-sidebar .nav .nav > .active:focus > a {
+  padding-left: 20px;
+  font-weight: normal;
+}
+.bs-docs-sidebar .nav .nav > li > a::first-letter {
+  color: #000;
+}
+.bs-docs-sidebar .nav .nav > li > a:hover::first-letter,
+.bs-docs-sidebar .nav .nav > .active > a::first-letter {
+  color: #fff;
+}
+.back-to-top,
+.bs-docs-theme-toggle {
+  padding: 0 10px;
+  margin: 0;
+  font-size: 18px;
+  color: #000;
+}
+.back-to-top:hover,
+.bs-docs-theme-toggle:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* Docs sections */
+.bs-docs-section {
+  margin-bottom: 19px;
+}
+h1[id] {
+  padding-top: 0;
+}
+
+/* Callouts: a note on black with a thick rule down its left side */
+.bs-callout {
+  padding: 19px 20px;
+  margin: 19px 0;
+  color: #fff;
+  background-color: #000;
+  border: 0;
+  border-left: 10px solid #555;
+  border-radius: 0;
+}
+.bs-callout h4 {
+  margin: 0;
+  color: #fff;
+}
+.bs-callout a {
+  color: #fefe54;
+}
+.bs-callout code {
+  color: #55ffff;
+  background-color: transparent;
+}
+.bs-callout + .bs-callout {
+  margin-top: 0;
+}
+.bs-callout-danger  { border-left-color: #aa0000; }
+.bs-callout-danger h4 { color: #ff5555; }
+.bs-callout-warning { border-left-color: #aa5500; }
+.bs-callout-warning h4 { color: #fefe54; }
+.bs-callout-info    { border-left-color: #00aaaa; }
+.bs-callout-info h4 { color: #55ffff; }
+
+/* Examples sit on the page as they would in use */
+.bs-example {
+  position: relative;
+  padding: 0;
+  margin: 0 0 19px;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+}
+.bs-example:after {
+  content: none;
+}
+@media (min-width: 768px) {
+  .bs-example {
+    margin-right: 0;
+    margin-left: 0;
+    border-width: 0;
+    border-radius: 0;
+  }
+}
+.bs-example + .highlight,
+.bs-example + .bs-clipboard + .highlight {
+  margin-top: 0;
+}
+.bs-example-bg-classes p,
+.bs-example-type .table td,
+.bs-example-padded-bottom {
+  padding: 0;
+}
+.bs-example-type .table td {
+  color: #bbb;
+  border-color: #fff;
+}
+.bs-example-bg-classes p {
+  padding: 0 10px;
+}
+.bs-example > .alert:last-child,
+.bs-example > .navbar:last-child,
+.bs-example > .panel:last-child,
+.bs-example > .list-group:last-child,
+.bs-example > .well:last-child,
+.bs-example > .progress:last-child,
+.bs-example > .table:last-child,
+.bs-example > p:last-child,
+.bs-example > ul:last-child,
+.bs-example > ol:last-child,
+.bs-example > blockquote:last-child,
+.bs-example > .form-control:last-child,
+.bs-example > .table-responsive:last-child > .table,
+.bs-example > .jumbotron:last-child {
+  margin-bottom: 19px;
+}
+.bs-example-modal {
+  background-color: transparent;
+}
+.bs-example-modal .modal {
+  position: relative;
+}
+.bs-example-popover-static,
+.bs-example-tooltip-static {
+  background-color: transparent;
+}
+.bs-example-navbar .navbar,
+.bs-navbar-top-example,
+.bs-navbar-bottom-example {
+  margin: 0 0 19px;
+  border: 0;
+  border-radius: 0;
+}
+.show-grid [class^="col-"] {
+  padding-top: 0;
+  padding-bottom: 0;
+  color: #fff;
+  background-color: #555;
+  border: 2px solid #000;
+}
+.bs-example-row {
+  margin: 0;
+}
+
+/* Code snippets: black panels */
+.highlight {
+  padding: 19px 20px;
+  margin: 0 0 19px;
+  background-color: #000;
+  border: 0;
+  border-radius: 0;
+}
+@media (min-width: 768px) {
+  .highlight {
+    margin-right: 0;
+    margin-left: 0;
+    border-width: 0;
+    border-radius: 0;
+  }
+}
+.highlight pre {
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  line-height: 19px;
+  color: #bbb;
+  word-break: break-all;
+  white-space: pre-wrap;
+  background-color: transparent;
+  border: 0;
+}
+.highlight pre code {
+  font-size: inherit;
+  color: #bbb;
+}
+.highlight .nt { color: #ff5555; }
+.highlight .na { color: #ff55ff; }
+.highlight .s,
+.highlight .s1,
+.highlight .s2 { color: #55ffff; }
+.highlight .c,
+.highlight .c1,
+.highlight .cm { color: #555; }
+.highlight .k,
+.highlight .kd,
+.highlight .nx { color: #fefe54; }
+.highlight .p,
+.highlight .o { color: #bbb; }
+.zero-clipboard {
+  display: none;
+}
+.table code {
+  font-size: inherit;
+}
+
+/* Footer */
+.bs-docs-footer {
+  padding: 19px 0;
+  color: #bbb;
+  background-color: transparent;
+  border-top: 2px solid #fff;
+}
+.bs-docs-footer a {
+  color: #fefe54;
+}
+.bs-docs-footer-links {
+  padding: 0;
+  margin: 0;
+}
+.bs-docs-footer-links li {
+  display: inline-block;
+  padding: 0 10px 0 0;
+}
+.bs-docs-social {
+  display: none;
+}
+
+/* Home page */
+.bs-docs-featurette {
+  padding: 19px 0;
+  color: #bbb;
+  background-color: transparent;
+  border: 0;
+}
+.bs-docs-featurette-title,
+.bs-docs-featurette h3 {
+  color: #fff;
+}
+.bs-docs-featurette .img-responsive,
+.bs-docs-featured-sites,
+.bs-docs-featured-sites img {
+  border: 0;
+}
+.bs-docs-masthead .btn,
+.bs-docs-masthead .btn-outline-inverse {
+  margin-right: 10px;
+}
+.btn-outline,
+.btn-outline-inverse {
+  color: #000;
+  background-color: #bbb;
+  border: 0;
+}
+.btn-outline:hover,
+.btn-outline:focus,
+.btn-outline:active,
+.btn-outline-inverse:hover,
+.btn-outline-inverse:focus,
+.btn-outline-inverse:active {
+  color: #fff;
+  background-color: #555;
+  border: 0;
+}
+.bs-docs-browser-bugs td p,
+.bs-docs-glyphs .glyphicon,
+.bs-glyphicons-list {
+  color: inherit;
+}
+.bs-glyphicons li {
+  width: 110px;
+  height: 96px;
+  padding: 0;
+  margin: 0;
+  color: #bbb;
+  background-color: transparent;
+  border: 2px solid #555;
+}
+.bs-glyphicons .glyphicon,
+.bs-glyphicons .glyphicon-class {
+  margin: 0;
+  color: #fff;
+  font-size: 18px;
+}
+.bs-glyphicons .glyphicon-class {
+  font-size: 18px;
+  color: #bbb;
+  word-wrap: normal;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.bs-glyphicons li:hover {
+  color: #000;
+  background-color: #bbb;
+}
+#skippy {
+  background-color: #000;
+}
+
+/* The glyph list as rows of three: icon, then its class name */
+.bs-glyphicons-list {
+  padding: 0;
+  margin: 0 0 19px;
+  overflow: hidden;
+}
+.bs-glyphicons li {
+  float: left;
+  width: 50%;
+  height: 19px;
+  padding: 0 10px;
+  margin: 0;
+  overflow: hidden;
+  font-size: 18px;
+  line-height: 19px;
+  text-align: left;
+  white-space: nowrap;
+  border: 0;
+}
+.bs-glyphicons .glyphicon {
+  display: inline-block;
+  width: 20px;
+  margin: 0;
+  font-size: 18px;
+  line-height: 19px;
+  color: #fff;
+}
+.bs-glyphicons .glyphicon-class {
+  display: inline;
+  margin: 0;
+}
+
+/* Home page masthead */
+.bs-docs-booticon {
+  display: none;
+}
+.bs-docs-masthead .btn {
+  margin-bottom: 19px;
+}
+.bs-docs-masthead .version {
+  display: block;
+  margin: 0;
+  color: #000;
+}
+.bs-docs-featurette .lead {
+  color: #bbb;
+}
+.back-to-top,
+.bs-docs-theme-toggle {
+  color: #fefe54;
+}

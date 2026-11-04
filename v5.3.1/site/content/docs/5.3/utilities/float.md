@@ -34,7 +34,7 @@ Here are all the support classes:
 
 {{< markdown >}}
 {{< float.inline >}}
-{{- range $.Site.Data.breakpoints }}
+{{- range hugo.Data.breakpoints }}
 - `.float{{ .abbr }}-start`
 - `.float{{ .abbr }}-end`
 - `.float{{ .abbr }}-none`

@@ -26,7 +26,7 @@ Bootstrap includes several button variants, each serving its own semantic purpos
 
 {{< example >}}
 {{< buttons.inline >}}
-{{- range (index $.Site.Data "theme-colors") }}
+{{- range (index hugo.Data "theme-colors") }}
 <button type="button" class="btn btn-{{ .name }}">{{ .name | title }}</button>
 {{- end -}}
 {{< /buttons.inline >}}
@@ -62,7 +62,7 @@ In need of a button, but not the hefty background colors they bring? Replace the
 
 {{< example >}}
 {{< buttons.inline >}}
-{{- range (index $.Site.Data "theme-colors") }}
+{{- range (index hugo.Data "theme-colors") }}
 <button type="button" class="btn btn-outline-{{ .name }}">{{ .name | title }}</button>
 {{- end -}}
 {{< /buttons.inline >}}

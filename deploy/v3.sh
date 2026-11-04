@@ -1,40 +1,50 @@
 #!/bin/bash
+#
+# BOOTSTRA/386 v3: make the drop-in bundle and put the docs on the site.
+#
+#   deploy/v3.sh               # everything
+#   deploy/v3.sh make_build    # bootstra.386-latest-v3.zip at the repo root
+#   deploy/v3.sh build_site    # the docs into site/v3.3.2/
+#   deploy/v3.sh push_site     # commit and push site/ (the gh-pages checkout)
+
+set -e
+ver=3.3.2
+root=$(cd "$(dirname "$0")/.." && pwd)
 
 make_build() {
-  # we're going to make this stuff we keep out of the repo
-  build=build
-  rm -r $build
-  mkdir -p $build/{css,fonts,js}
-  ./update-icons.sh $build/fonts
-  for what in fonts css js; do
-    cp -puv v4.4.1/dist/$what/* $build/$what
-  done
-
-  [[ -e bootstra.386-latest-v4.zip ]] && rm bootstra.386-latest-v4.zip
-
-  zip -r bootstra.386-latest-v4.zip $build
+  # build-386.sh compiles the Less with a current lessc; no vagrant needed.
+  cd "$root/v$ver"
+  ./build-386.sh
+  rm -rf "bootstrap-$ver-dist" "$root/bootstra.386-latest-v3.zip"
+  mkdir -p "bootstrap-$ver-dist/css" "bootstrap-$ver-dist/js" "bootstrap-$ver-dist/fonts"
+  cp -pr dist/css/. "bootstrap-$ver-dist/css/"
+  cp -p dist/js/*.js "bootstrap-$ver-dist/js/"
+  cp -p dist/fonts/* "bootstrap-$ver-dist/fonts/"
+  zip -qr9 "$root/bootstra.386-latest-v3.zip" "bootstrap-$ver-dist"
+  rm -rf "bootstrap-$ver-dist"
+  ls -la "$root/bootstra.386-latest-v3.zip"
 }
 
-deploy_site(){
-  # I need to like inline sed some crap
-  # ug why ... ... ug! Also zsh does better replacers
-  cp -v v4.4.1/site/docs/4.4/demo.html site/
-  mkdir -p site/{css,fonts,js}
-  for what in fonts css js; do
-    cp -puv v4.4.1/dist/$what/* site/$what
-  done
+build_site() {
+  # The docs are the prebuilt jekyll output in _gh_pages/ with relative
+  # links, so they are copied as they are to the root of site/v3.3.2/.
+  cd "$root/v$ver"
+  ./build-386.sh
+  mkdir -p "$root/site/v$ver"
+  rm -rf "$root/site/v$ver/_gh_pages"
+  cp -pr _gh_pages/. "$root/site/v$ver/"
+  rm -f "$root/site/v$ver/CNAME"
+  du -sh "$root/site/v$ver"
+}
 
-  # Let's hope this doesn't break the planet ... all I need
-  # to do is make this shit local. 
-  sed -Ei s'/\/docs\/4.4\/dist\/(css|js)/\1/g' site/demo.html
-
-  cd site
-  git commit -am "updates"
+push_site() {
+  cd "$root/site"
+  git add -A "v$ver"
+  git commit -m "v$ver docs" || true
   git push origin HEAD
 }
 
-todo=${1:-make_build deploy_site}
+todo=${*:-make_build build_site push_site}
 for i in $todo; do
-  eval $i
+  $i
 done
-

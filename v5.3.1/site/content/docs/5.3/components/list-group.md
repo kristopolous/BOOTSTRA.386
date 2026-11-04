@@ -144,7 +144,7 @@ Add `.list-group-horizontal` to change the layout of list group items from verti
 
 {{< example >}}
 {{< list-group.inline >}}
-{{- range $.Site.Data.breakpoints }}
+{{- range hugo.Data.breakpoints }}
 <ul class="list-group list-group-horizontal{{ .abbr }}">
   <li class="list-group-item">An item</li>
   <li class="list-group-item">A second item</li>
@@ -166,7 +166,7 @@ Use contextual classes to style list items with a stateful background and color.
 <ul class="list-group">
   <li class="list-group-item">A simple default list group item</li>
 {{< list.inline >}}
-{{- range (index $.Site.Data "theme-colors") }}
+{{- range (index hugo.Data "theme-colors") }}
   <li class="list-group-item list-group-item-{{ .name }}">A simple {{ .name }} list group item</li>
 {{- end -}}
 {{< /list.inline >}}
@@ -181,7 +181,7 @@ Contextual classes also work with `.list-group-item-action` for `<a>` and `<butt
 <div class="list-group">
   <a href="#" class="list-group-item list-group-item-action">A simple default list group item</a>
 {{< list.inline >}}
-{{- range (index $.Site.Data "theme-colors") }}
+{{- range (index hugo.Data "theme-colors") }}
   <a href="#" class="list-group-item list-group-item-action list-group-item-{{ .name }}">A simple {{ .name }} list group item</a>
 {{- end -}}
 {{< /list.inline >}}

@@ -25,7 +25,7 @@ We've tested and used these icon sets ourselves as preferred alternatives to Boo
 {{< icons.inline >}}
 {{- $type := .Get "type" | default "preferred" -}}
 
-{{- range (index .Site.Data.icons $type) }}
+{{- range (index hugo.Data.icons $type) }}
 - [{{ .name }}]({{ .website }})
 {{- end }}
 {{< /icons.inline >}}

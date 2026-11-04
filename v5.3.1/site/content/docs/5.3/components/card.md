@@ -423,7 +423,7 @@ Set a `background-color` with contrasting foreground `color` with [our `.text-bg
 
 {{< example >}}
 {{< card.inline >}}
-{{- range (index $.Site.Data "theme-colors") }}
+{{- range (index hugo.Data "theme-colors") }}
 <div class="card text-bg-{{ .name }} mb-3" style="max-width: 18rem;">
   <div class="card-header">Header</div>
   <div class="card-body">
@@ -445,7 +445,7 @@ Use [border utilities]({{< docsref "/utilities/borders" >}}) to change just the 
 
 {{< example >}}
 {{< card.inline >}}
-{{- range (index $.Site.Data "theme-colors") }}
+{{- range (index hugo.Data "theme-colors") }}
 <div class="card border-{{ .name }} mb-3" style="max-width: 18rem;">
   <div class="card-header">Header</div>
   <div class="card-body{{ if not .contrast_color }} text-{{ .name }}{{ end }}">

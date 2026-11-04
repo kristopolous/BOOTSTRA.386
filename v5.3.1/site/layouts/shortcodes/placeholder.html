@@ -12,7 +12,7 @@
     * markup: If it should render `svg` or `img` tags - default: "svg"
 */ -}}
 
-{{- $grays := $.Site.Data.grays -}}
+{{- $grays := hugo.Data.grays -}}
 {{- $default_color := (index $grays 2).hex -}}
 {{- $default_background := (index $grays 5).hex -}}
 

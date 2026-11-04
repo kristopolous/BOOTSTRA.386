@@ -17,7 +17,7 @@ Color and background helpers combine the power of our [`.text-*` utilities]({{< 
 
 {{< example >}}
 {{< text-bg.inline >}}
-{{- range (index $.Site.Data "theme-colors") }}
+{{- range (index hugo.Data "theme-colors") }}
 <div class="text-bg-{{ .name }} p-3">{{ .name | title }} with contrasting color</div>
 {{- end -}}
 {{< /text-bg.inline >}}

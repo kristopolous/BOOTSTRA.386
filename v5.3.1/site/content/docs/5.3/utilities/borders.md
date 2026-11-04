@@ -44,7 +44,7 @@ Change the border color using utilities built on our theme colors.
 
 {{< example class="bd-example-border-utils" >}}
 {{< border.inline >}}
-{{- range (index $.Site.Data "theme-colors") }}
+{{- range (index hugo.Data "theme-colors") }}
 <span class="border border-{{ .name }}"></span>
 <span class="border border-{{ .name }}-subtle"></span>
 {{- end -}}

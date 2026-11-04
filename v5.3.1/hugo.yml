@@ -1,9 +1,11 @@
-languageCode:           "en"
+locale:                 "en"
 title:                  "Bootstrap"
 baseURL:                "https://getbootstrap.com"
 
 security:
   enableInlineShortcodes: true
+  allowContent:
+    - "! ^text/org$"
   funcs:
     getenv:
       - ^HUGO_

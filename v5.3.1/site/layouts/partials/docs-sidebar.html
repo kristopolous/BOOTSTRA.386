@@ -3,7 +3,7 @@
   {{- $page_slug := index $url (sub (len $url) 2) -}}
 
   <ul class="list-unstyled bd-links-nav mb-0">
-  {{- range $group := .Site.Data.sidebar -}}
+  {{- range $group := hugo.Data.sidebar -}}
     {{- $link := $group.title -}}
     {{- $link_slug := $link | urlize -}}
 

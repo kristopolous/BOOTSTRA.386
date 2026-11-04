@@ -37,7 +37,7 @@ Change the underline's color independent of the link text color.
 
 {{< example >}}
 {{< link-underline-colors.inline >}}
-{{- range (index $.Site.Data "theme-colors") }}
+{{- range (index hugo.Data "theme-colors") }}
 <p><a href="#" class="link-underline-{{ .name }}">{{ .name | title }} underline</a></p>
 {{- end -}}
 {{< /link-underline-colors.inline >}}
@@ -83,7 +83,7 @@ Just like the `.link-opacity-*-hover` utilities, `.link-offset` and `.link-under
 
 {{< example >}}
 {{< colored-links.inline >}}
-{{- range (index $.Site.Data "theme-colors") }}
+{{- range (index hugo.Data "theme-colors") }}
 <p><a href="#" class="link-{{ .name }} link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">{{ .name | title }} link</a></p>
 {{- end -}}
 {{< /colored-links.inline >}}

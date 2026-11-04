@@ -256,7 +256,7 @@ direction: rtl
             <td>خلية</td>
           </tr>
           {{< table.inline >}}
-          {{- range (index $.Site.Data "theme-colors") }}
+          {{- range (index hugo.Data "theme-colors") }}
           <tr class="table-{{ .name }}">
             <th scope="row">{{ .name | title }}</th>
             <td>خلية</td>
@@ -671,7 +671,7 @@ direction: rtl
       <div>
         {{< example show_markup="false" >}}
         {{< alerts.inline >}}
-        {{- range (index $.Site.Data "theme-colors") }}
+        {{- range (index hugo.Data "theme-colors") }}
         <div class="alert alert-{{ .name }} alert-dismissible fade show" role="alert">
           تنبيه {{ .name }} بسيط مع <a href="#" class="alert-link">رابط مثال</a>. أعطها نقرة إذا أردت.
           <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="قريب"></button>
@@ -709,7 +709,7 @@ direction: rtl
 
         {{< example show_markup="false" >}}
         {{< badge.inline >}}
-        {{- range (index $.Site.Data "theme-colors") }}
+        {{- range (index hugo.Data "theme-colors") }}
         <span class="badge rounded-pill {{ if or (eq .name "light") (eq .name "warning") (eq .name "info") }}text-{{ end }}bg-{{ .name }}">{{ .name | title }}</span>{{- end -}}
         {{< /badge.inline >}}
         {{< /example >}}
@@ -742,7 +742,7 @@ direction: rtl
       <div>
         {{< example show_markup="false" >}}
         {{< buttons.inline >}}
-        {{- range (index $.Site.Data "theme-colors") }}
+        {{- range (index hugo.Data "theme-colors") }}
         <button type="button" class="btn btn-{{ .name }}">{{ .name | title }}</button>
         {{- end -}}
         {{< /buttons.inline >}}
@@ -752,7 +752,7 @@ direction: rtl
 
         {{< example show_markup="false" >}}
         {{< buttons.inline >}}
-        {{- range (index $.Site.Data "theme-colors") }}
+        {{- range (index hugo.Data "theme-colors") }}
         <button type="button" class="btn btn-outline-{{ .name }}">{{ .name | title }}</button>
         {{- end -}}
         {{< /buttons.inline >}}
@@ -1125,7 +1125,7 @@ direction: rtl
         <div class="list-group">
           <a href="#" class="list-group-item list-group-item-action">عنصر مجموعة قائمة default بسيط</a>
           {{< list.inline >}}
-          {{- range (index $.Site.Data "theme-colors") }}
+          {{- range (index hugo.Data "theme-colors") }}
           <a href="#" class="list-group-item list-group-item-action list-group-item-{{ .name }}">عنصر مجموعة قائمة {{ .name }} بسيط</a>
           {{- end -}}
           {{< /list.inline >}}
@@ -1479,7 +1479,7 @@ direction: rtl
       <div>
         {{< example show_markup="false" >}}
         {{< spinner.inline >}}
-        {{- range (index $.Site.Data "theme-colors") }}
+        {{- range (index hugo.Data "theme-colors") }}
         <div class="spinner-border text-{{ .name }}" role="status">
           <span class="visually-hidden">جار التحميل...</span>
         </div>
@@ -1489,7 +1489,7 @@ direction: rtl
 
         {{< example show_markup="false" >}}
         {{< spinner.inline >}}
-        {{- range (index $.Site.Data "theme-colors") }}
+        {{- range (index hugo.Data "theme-colors") }}
         <div class="spinner-grow text-{{ .name }}" role="status">
           <span class="visually-hidden">جار التحميل...</span>
         </div>
