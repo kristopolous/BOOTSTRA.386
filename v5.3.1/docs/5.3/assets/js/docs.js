@@ -20,6 +20,11 @@
 (() => {
   'use strict'
 
+  // The block cursor that snaps to the character grid
+  if (window._386 && window._386.magicCursor) {
+    window._386.magicCursor()
+  }
+
   // Scroll the active sidebar link into view
   const sidenav = document.querySelector('.bd-sidebar')
   const sidenavActiveLink = document.querySelector('.bd-links-nav .active')
