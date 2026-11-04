@@ -3258,7 +3258,7 @@ textarea.form-control:disabled, textarea.form-control[readonly], textarea.form-c
   color: var(--bs-btn-color);
   text-align: center;
   text-decoration: none;
-  vertical-align: middle;
+  vertical-align: top;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -3288,10 +3288,10 @@ textarea.form-control:disabled, textarea.form-control[readonly], textarea.form-c
   outline: 0;
 }
 .btn-check:checked + .btn, :not(.btn-check) + .btn:active, .btn:first-child:active, .btn.active, .btn.show {
-  margin: 7px 0 7px 8px;
   color: var(--bs-btn-active-color);
   background-color: var(--bs-btn-active-bg);
   box-shadow: none;
+  transform: translate(8px, 7px);
 }
 .btn:disabled, .btn.disabled, fieldset:disabled .btn {
   color: var(--bs-btn-disabled-color);
@@ -3671,7 +3671,7 @@ textarea.form-control:disabled, textarea.form-control[readonly], textarea.form-c
 .pagination .btn:first-child:active,
 .pagination .btn.active,
 .pagination .btn.show {
-  margin: 0;
+  transform: none;
 }
 
 .input-group > .btn-check:checked + .btn,
@@ -3679,7 +3679,7 @@ textarea.form-control:disabled, textarea.form-control[readonly], textarea.form-c
 .toast .btn-check:checked + .btn,
 .alert .btn-check:checked + .btn,
 .dropdown-menu .btn-check:checked + .btn {
-  margin: 0;
+  transform: none;
 }
 
 .modal-footer .btn {
@@ -4028,7 +4028,7 @@ textarea.form-control:disabled, textarea.form-control[readonly], textarea.form-c
 .btn-group-vertical {
   position: relative;
   display: inline-flex;
-  vertical-align: middle;
+  vertical-align: top;
 }
 .btn-group > .btn,
 .btn-group-vertical > .btn {

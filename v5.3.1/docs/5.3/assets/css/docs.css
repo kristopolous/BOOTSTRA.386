@@ -813,7 +813,7 @@
 
 .bd-example > .btn,
 .bd-example > .btn-group {
-  margin: 0 8px 0 0;
+  margin: 0 8px 14px 0;
 }
 
 .bd-example > .btn-toolbar + .btn-toolbar {
