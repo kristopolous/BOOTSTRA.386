@@ -34,6 +34,9 @@ build_site() {
   rm -rf "$root/site/v$ver/_gh_pages"
   cp -pr _gh_pages/. "$root/site/v$ver/"
   rm -f "$root/site/v$ver/CNAME"
+  # The home page was rendered as if it lived one directory down, so its
+  # links climb out of v3.3.2/. Point them back at the page's own directory.
+  sed -i 's#\(href\|src\)="\.\./#\1="./#g' "$root/site/v$ver/index.html"
   du -sh "$root/site/v$ver"
 }
 

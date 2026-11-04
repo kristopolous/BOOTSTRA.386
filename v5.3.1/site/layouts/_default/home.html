@@ -1,42 +1,16 @@
 {{ define "main" }}
-  <main class="bd-masthead" id="content">
-    <div class="container-fluid bd-gutter bd-page">
-      <h1>BOOTSTRA/386</h1>
-      <p class="lead">Sleek, intuitive, and powerful front-end framework for faster and easier web development. Now in sixteen colors.</p>
-      <p>
-        <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/" class="btn btn-lg">Get started</a>
-        <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/download/" class="btn btn-lg">Download</a>
-      </p>
-      <ul>
-        <li><a href="{{ .Site.Params.repo }}">GitHub project</a></li>
-        <li><a href="/docs/{{ .Site.Params.docs_version }}/examples/">Examples</a></li>
-        <li><a href="/docs/{{ .Site.Params.docs_version }}/customize/overview/">Customize</a></li>
-        <li>Version {{ .Site.Params.current_version }}</li>
-      </ul>
-
-      <h3>Introducing BOOTSTRA/386.</h3>
-      <p>Bootstrap {{ .Site.Params.docs_version }}, drawn on an 8x14 character grid in the sixteen colors of an EGA card. Same markup, same classes, same JavaScript. Different decade.</p>
-
-      <div class="row">
-        <div class="col-md-4">
-          <h2>Built for 1989.</h2>
-          <p>One font, one size, one weight. Every row is fourteen pixels tall and every column is eight pixels wide, so everything lands where it would on a text mode screen.</p>
-        </div>
-        <div class="col-md-4">
-          <h2>Made for today.</h2>
-          <p>Markup written for stock Bootstrap {{ .Site.Params.docs_version }} drops in unchanged. Every component, utility and plugin is here, from <code>.btn</code> to the offcanvas.</p>
-        </div>
-        <div class="col-md-4">
-          <h2>Packed with features.</h2>
-          <p>Dialog shadows, hot keys in the menus, a blinking cursor, a loading animation, dithered backdrops and a black screen for the night shift.</p>
-        </div>
-      </div>
-
-      <h3>Get it</h3>
-      <p>Put <code>dist/</code> next to your page and link it like any other Bootstrap:</p>
-{{ highlight `<link rel="stylesheet" href="dist/css/bootstrap.min.css">
-<script src="dist/js/bootstrap.bundle.min.js"></script>
-<script src="dist/js/bootstrap-386.js"></script>` "html" "" }}
+  <main>
+    {{ partial "home/masthead" . }}
+    <div class="container-xxl bd-gutter masthead-followup">
+      {{ partial "home/get-started" . }}
+      {{ partial "home/customize" . }}
+      {{ partial "home/css-variables" . }}
+      {{ partial "home/components-utilities" . }}
+      {{ partial "home/plugins" . }}
+      {{ partial "home/icons" . }}
+      {{ partial "home/themes" . }}
     </div>
   </main>
+
+  {{ .Content }}
 {{ end }}
