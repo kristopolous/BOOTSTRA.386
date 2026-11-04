@@ -18,7 +18,7 @@
   z-index: 9999999;
   width: 100%;
   height: 100%;
-  background: $body-bg;
+  background: var(--#{$prefix}body-bg);
 }
 
 #bar386 {
@@ -27,7 +27,7 @@
   height: $line-height;
   margin-top: -$line-height;
   color: $white;
-  background: $body-bg;
+  background: var(--#{$prefix}body-bg);
 }
 
 #cursor386 {
