@@ -1,0 +1,159 @@
+/* BOOTSTRA/386 cheatsheet: a black menu bar, a plain list of contents and
+   the examples one after another. */
+
+body {
+  scroll-behavior: auto;
+}
+
+.bd-header {
+  padding: 0 !important;
+  background-color: #000 !important;
+  border: 0 !important;
+}
+
+.bd-header h1 {
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  background: transparent;
+}
+
+.bd-header h1 img {
+  display: none;
+}
+
+.bd-heading a::before {
+  content: "\25ba\00a0";
+}
+
+.bd-heading + div > * + * {
+  margin-top: 28px;
+}
+
+/* Table of contents */
+.bd-aside h2 {
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  text-align: right;
+}
+
+.bd-aside .btn,
+.bd-aside .btn:hover,
+.bd-aside .btn:focus {
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.bd-aside .btn::before {
+  content: "\25ba\00a0";
+}
+
+.bd-aside .btn[aria-expanded="true"]::before {
+  content: "\25bc\00a0";
+}
+
+.bd-aside .btn::after {
+  content: none;
+}
+
+.bd-aside a {
+  display: block;
+  padding: 0 8px;
+  margin: 0;
+  color: #ffff55;
+}
+
+.bd-aside a:hover,
+.bd-aside a:focus,
+.bd-aside .active {
+  color: #fff;
+  background-color: #000;
+}
+
+.bd-cheatsheet section > h2 {
+  padding: 14px 16px;
+  margin: 0;
+  color: #000;
+  text-align: right;
+  background: #00aaaa;
+}
+
+.bd-cheatsheet .bd-heading h3 {
+  margin: 0;
+}
+
+/* Examples */
+.scrollspy-example {
+  height: 196px;
+}
+
+[id="modal"] .bd-example .btn,
+[id="buttons"] .bd-example .btn,
+[id="tooltips"] .bd-example .btn,
+[id="popovers"] .bd-example .btn,
+[id="dropdowns"] .bd-example .btn-group,
+[id="dropdowns"] .bd-example .dropdown,
+[id="dropdowns"] .bd-example .dropup,
+[id="dropdowns"] .bd-example .dropend,
+[id="dropdowns"] .bd-example .dropstart {
+  margin: 0 0 14px 16px;
+}
+
+/* Layout */
+@media (min-width: 1200px) {
+  body {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 4fr 1fr;
+    gap: 16px;
+  }
+
+  .bd-header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    grid-column: 1 / span 3;
+  }
+
+  .bd-aside,
+  .bd-cheatsheet {
+    padding-top: 28px;
+  }
+
+  .bd-cheatsheet,
+  .bd-cheatsheet section,
+  .bd-cheatsheet article {
+    display: inherit;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 4fr;
+    grid-column: 1 / span 2;
+    gap: inherit;
+  }
+
+  .bd-aside {
+    grid-area: 1 / 3;
+    scroll-margin-top: 28px;
+  }
+
+  .bd-cheatsheet section,
+  .bd-cheatsheet section > h2 {
+    top: 14px;
+    scroll-margin-top: 14px;
+  }
+
+  .bd-cheatsheet article,
+  .bd-cheatsheet .bd-heading {
+    top: 84px;
+    scroll-margin-top: 84px;
+  }
+
+  .bd-cheatsheet .bd-heading {
+    z-index: 1;
+  }
+}
